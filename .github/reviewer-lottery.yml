@@ -1,0 +1,10 @@
+groups:
+  - name: reviewer
+    reviewers: 6
+    usernames:
+      - seheonnn
+      - bmryu0501
+      - fepick
+      - min-kim-oss
+      - knujhk
+      - yg654
