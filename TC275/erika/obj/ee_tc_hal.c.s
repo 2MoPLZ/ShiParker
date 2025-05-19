@@ -6,16 +6,16 @@
 	.type	osEE_cpu_startos, @function
 osEE_cpu_startos:
 .LFB102:
-	.file 1 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_tc_hal.c"
+	.file 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_hal.c"
 	.loc 1 108 0
 	mov.aa	%a14, %SP
 .LCFI0:
 .LBB15:
 .LBB16:
-	.file 2 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_hal.h"
+	.file 2 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 	.loc 2 367 0
 #APP
-	# 367 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d5, LO:65052
 	# 0 "" 2
 .LVL0:
@@ -38,7 +38,7 @@ osEE_cpu_startos:
 .LBB18:
 .LBB19:
 .LBB20:
-	.file 3 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_hal_internal.h"
+	.file 3 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_hal_internal.h"
 	.loc 3 421 0
 	and	%d5, %d5, 3
 .LVL2:
@@ -136,13 +136,13 @@ osEE_cpu_startos:
 .Letext0:
 	.file 4 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
 	.file 5 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
-	.file 6 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 7 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
-	.file 8 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 9 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_scheduler_types.h"
-	.file 10 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_kernel_types.h"
-	.file 11 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
-	.file 12 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_std_change_context.h"
+	.file 6 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
+	.file 7 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+	.file 8 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+	.file 9 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+	.file 10 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+	.file 11 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
+	.file 12 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_std_change_context.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
 	.uaword	0x1090
@@ -153,7 +153,7 @@ osEE_cpu_startos:
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\TUNNEL~1\\TC275\\erika\\src\\ee_tc_hal.c"
+	.string	"C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_hal.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0

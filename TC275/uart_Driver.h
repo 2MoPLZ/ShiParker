@@ -1,9 +1,10 @@
 /*
  * uart_Driver.h
  *
- *  Created on: May 7, 2025
+ *  Created on: May 19, 2025
  *      Author: 오동걸
- *
+ *      for shiParker Project, 1.0
+ *      
  *  TODO :
  *
  */
@@ -19,26 +20,18 @@
 #define TX_PIN &MODULE_P15, 2 // D1
 //  #define UART_TIMEOUT_TICK 20000000 // 100ms
 
-// #define SENSOR_PACKET_RECIEVE_MODE
-#define ACTUATOR_PACKET_RECIEVE_MODE
-
 /*******************************************     NO CHANGES AFTER THIS LINE      ****************************************************/
 
-extern struct ActuatorPacket g_RecievedActuatorPacket;
-extern struct SensorPacket g_RecievedSensorPacket;
+extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);
 void myprintfSerial(const char *fmt, ...);
 
-void sendActuatorPacket(const struct ActuatorPacket *packet);
-void sendSensorPacket(const struct SensorPacket *packet);
-void readActuatorPacket(struct ActuatorPacket *packet);
-void readSensorPacket(struct SensorPacket *packet);
+void sendPacket(const struct ParkingSystemPacket *packet);
+void readPacket(struct ParkingSystemPacket *packet);
 
-uint8 calculate_checksum(const uint8 *data, size_t length);
-void serialize_actuator_packet(const struct ActuatorPacket *packet, uint8 *buffer);
-void deserialize_actuator_packet(const uint8 *buffer, struct ActuatorPacket *packet);
-void serialize_sensor_packet(const struct SensorPacket *packet, uint8 *buffer);
-void deserialize_sensor_packet(const uint8 *buffer, struct SensorPacket *packet);
+uint8 calculateChecksum(const uint8 *data, size_t length);
+void serializePacket(const struct ParkingSystemPacket *packet, uint8 *buffer);
+void deserializePacket(const uint8 *buffer, struct ParkingSystemPacket *packet);
 
 #endif /* UART_DRIVER_H_ */

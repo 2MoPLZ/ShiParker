@@ -23,6 +23,7 @@
 #include "illd\src\Configuration.h"
 
 #define ECHO_TIMEOUT_TICK 7600000 //38ms
+//1176470으로 줄이면 1미터까지 탐지됨
 /*******************************************     NO CHANGES AFTER THIS LINE      ****************************************************/
 
 struct __attribute__((__packed__)) Ultrasonic
