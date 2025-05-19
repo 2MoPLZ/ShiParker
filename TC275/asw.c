@@ -2,56 +2,29 @@
 #include "uart_Driver.h"
 #include "ultrasonic_Driver.h"
 
-volatile uint8 g_buttonState;
-
-uint8 buf[11];
-struct ActuatorPacket testact=
+struct ParkingSystemPacket testPacket=
 {
     .start_byte=0xAA,
-    .packet_id=0x01,
-    .led_rgb=17,
-    .fan=1,
-    .led=1,
-    .buzzer=1,
-    .driving_mode=1,
-    .servo_chair=1,
-    .servo_window=1,
-    .servo_air=1,
-    // .crc=0xb3
-    .crc=1
+    .car_status=1,
+    .car_current_position.x=2,
+    .car_current_position.y=3,
+    .car_target_position.x=4,
+    .car_target_position.y=5,
+    .car_command=1,
+    .crc
 };
 
 TASK(SensorTask)
 {
-    int upperUltrasonicValue = getUltrasonic(&g_UpperUltrasonic);
-    int frontUltrasonicValue = getUltrasonic(&g_FrontUltrasonic);
-    int photoValue = getPhotoresiter();
-
-    struct SensorPacket packet = {
-        .start_byte     = 0xAA,
-        .packet_id      = 0x02,
-        .photo          = photoValue,
-        .ultra_sonic1   = upperUltrasonicValue,
-        .ultra_sonic2   = frontUltrasonicValue
-    };
-    sendSensorPacket(&packet);
-}
-
-TASK(DashboardButtonTask){
-    updateStateByButton(g_buttonState);
-    struct ActuatorPacket packet={};
-    setActuatorPacket(&packet);
-    sendActuatorPacket(&packet);
-}
-
-ISR2(ButtonISR)
-{
-    DisableAllInterrupts();
-    osEE_tc_delay(5000);// delay_us(25);
-    g_buttonState = readLcdButtons();
-    ActivateTask(DashboardButtonTask);
-    osEE_tc_delay(3000);// delay_us(10);
-    EnableAllInterrupts();
+    double ultrasonicValue_FL = getUltrasonic(&g_Ultrasonic_FL);
+    double ultrasonicValue_F = getUltrasonic(&g_Ultrasonic_F);
+    double ultrasonicValue_FR = getUltrasonic(&g_Ultrasonic_FR);
+    double ultrasonicValue_SL = getUltrasonic(&g_Ultrasonic_SL);
+    double ultrasonicValue_SR = getUltrasonic(&g_Ultrasonic_SR);
+    double ultrasonicValue_R = getUltrasonic(&g_Ultrasonic_R);
+    printfSerial("FL:%lf,F:%lf,FR:%lf,SL:%lf,SR:%lf,R:%lf",
+        ultrasonicValue_FL,ultrasonicValue_F,ultrasonicValue_FR,
+        ultrasonicValue_SL,ultrasonicValue_SR,ultrasonicValue_R)
 }
 
 ISR2(TimerISR)

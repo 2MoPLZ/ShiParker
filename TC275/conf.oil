@@ -53,12 +53,8 @@ CPU test_application {
 
         APP_SRC="bsw.c";
         APP_SRC="asw.c";
-        APP_SRC="Lcd_Driver.c";
         APP_SRC="ultrasonic_Driver.c";
         APP_SRC="uart_Driver.c";
-        APP_SRC="Button_Driver.c";
-        APP_SRC="infotainment_System.c";
-        APP_SRC="photoresistor_Driver.c";
     };
 
     ISR ASCLIN3_TX {
@@ -82,12 +78,6 @@ CPU test_application {
         SOURCE = "ASCLIN0TX";
     };
 
-    ISR ButtonISR {
-        CATEGORY = 2;
-        SOURCE = "SCUERU0";
-        PRIORITY = 5;
-    };
-
     ISR TimerISR {
         CATEGORY = 2;
         SOURCE = "STM0SR0";
@@ -102,11 +92,4 @@ CPU test_application {
         ACTIVATION = 1;
     };
 
-    TASK DashboardButtonTask{
-        PRIORITY = 5;
-        STACK = SHARED;
-        SCHEDULE = FULL;
-        AUTOSTART = FALSE;
-        ACTIVATION = 1;
-    };
 };
