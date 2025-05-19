@@ -8,6 +8,7 @@
 /*------------------------------FUNCTION------------------------------*/
 /*****************************************************************************/
 
+void printDouble(double value);
 void delay_ms(unsigned long delay);
 void delay_us(unsigned long delay);
 void UART_init(void);

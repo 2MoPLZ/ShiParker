@@ -6,7 +6,7 @@
 	.type	Ifx_CircularBuffer_get32, @function
 Ifx_CircularBuffer_get32:
 .LFB163:
-	.file 1 "C:\\TUNNEL~1\\TC275\\illd\\src\\Ifx_CircularBuffer.c"
+	.file 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\Ifx_CircularBuffer.c"
 	.loc 1 47 0
 .LVL0:
 	.loc 1 48 0
@@ -385,8 +385,8 @@ Ifx_CircularBuffer_write32:
 .LEFDE12:
 .section .text,"ax",@progbits
 .Letext0:
-	.file 2 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
-	.file 3 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h"
+	.file 2 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
+	.file 3 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
 	.uaword	0x588
@@ -397,7 +397,7 @@ Ifx_CircularBuffer_write32:
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\TUNNEL~1\\TC275\\illd\\src\\Ifx_CircularBuffer.c"
+	.string	"C:\\SHIPAR~1\\TC275\\illd\\src\\Ifx_CircularBuffer.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0

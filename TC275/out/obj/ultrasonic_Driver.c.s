@@ -6,32 +6,32 @@
 	.type	initUltrasonic, @function
 initUltrasonic:
 .LFB574:
-	.file 1 "C:\\TUNNEL~1\\TC275\\ultrasonic_Driver.c"
-	.loc 1 18 0
+	.file 1 "C:\\SHIPAR~1\\TC275\\ultrasonic_Driver.c"
+	.loc 1 54 0
 .LVL0:
-	.loc 1 19 0
+	.loc 1 55 0
 	ld.bu	%d15, [%a4] 1
 	ld.bu	%d3, [%a4]0
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
 	ld.bu	%d15, [%a4] 2
-	.loc 1 18 0
+	.loc 1 54 0
 	mov.aa	%a15, %a4
-	.loc 1 19 0
+	.loc 1 55 0
 	sh	%d15, %d15, 16
 	or	%d15, %d2
 	ld.bu	%d2, [%a4] 3
-.LBB32:
-.LBB33:
-	.file 2 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+.LBB30:
+.LBB31:
+	.file 2 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 	.loc 2 586 0
 	ld.bu	%d4, [%a15] 4
-.LBE33:
-.LBE32:
-	.loc 1 19 0
+.LBE31:
+.LBE30:
+	.loc 1 55 0
 	sh	%d2, %d2, 24
-.LBB35:
-.LBB34:
+.LBB33:
+.LBB32:
 	.loc 2 586 0
 	or	%d2, %d15
 	mov.a	%a4, %d2
@@ -39,41 +39,41 @@ initUltrasonic:
 	mov	%d5, 128
 	call	IfxPort_setPinMode
 .LVL2:
-.LBE34:
-.LBE35:
-	.loc 1 20 0
+.LBE32:
+.LBE33:
+	.loc 1 56 0
 	ld.bu	%d15, [%a15] 6
 	ld.bu	%d3, [%a15] 5
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
 	ld.bu	%d15, [%a15] 7
-.LBB36:
-.LBB37:
+.LBB34:
+.LBB35:
 	.loc 2 580 0
 	ld.bu	%d4, [%a15] 9
-.LBE37:
-.LBE36:
-	.loc 1 20 0
+.LBE35:
+.LBE34:
+	.loc 1 56 0
 	sh	%d15, %d15, 16
 	or	%d15, %d2
 	ld.bu	%d2, [%a15] 8
-.LBB40:
 .LBB38:
+.LBB36:
 	.loc 2 580 0
 	mov	%d5, 8
+.LBE36:
 .LBE38:
-.LBE40:
-	.loc 1 20 0
+	.loc 1 56 0
 	sh	%d2, %d2, 24
-.LBB41:
 .LBB39:
+.LBB37:
 	.loc 2 580 0
 	or	%d2, %d15
 	mov.a	%a4, %d2
 	j	IfxPort_setPinMode
 .LVL3:
+.LBE37:
 .LBE39:
-.LBE41:
 .LFE574:
 	.size	initUltrasonic, .-initUltrasonic
 	.align 1
@@ -81,73 +81,73 @@ initUltrasonic:
 	.type	sendTrigger, @function
 sendTrigger:
 .LFB576:
-	.loc 1 32 0
+	.loc 1 68 0
 .LVL4:
-	.loc 1 33 0
+	.loc 1 69 0
 	ld.bu	%d15, [%a4] 1
 	ld.bu	%d3, [%a4]0
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
 	ld.bu	%d15, [%a4] 2
+.LBB40:
+.LBB41:
 .LBB42:
-.LBB43:
-.LBB44:
 	.loc 2 592 0
 	ld.bu	%d3, [%a4] 4
-.LBE44:
-.LBE43:
 .LBE42:
-	.loc 1 33 0
+.LBE41:
+.LBE40:
+	.loc 1 69 0
 	sh	%d15, %d15, 16
 	or	%d15, %d2
 	ld.bu	%d2, [%a4] 3
-	.loc 1 34 0
+	.loc 1 70 0
 	mov	%d4, 10
-	.loc 1 33 0
+	.loc 1 69 0
 	sh	%d2, %d2, 24
 	or	%d2, %d15
 .LVL5:
-.LBB47:
-.LBB46:
 .LBB45:
+.LBB44:
+.LBB43:
 	.loc 2 592 0
 	mov.a	%a2, %d2
 	mov	%d15, 1
 	sh	%d3, %d15, %d3
 	st.w	[%a2] 4, %d3
 .LVL6:
+.LBE43:
+.LBE44:
 .LBE45:
-.LBE46:
-.LBE47:
-	.loc 1 32 0
+	.loc 1 68 0
 	mov.aa	%a15, %a4
-	.loc 1 34 0
+	.loc 1 70 0
 	call	delay_us
 .LVL7:
-	.loc 1 35 0
+	.loc 1 71 0
 	ld.bu	%d15, [%a15] 1
 	ld.bu	%d3, [%a15]0
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
 	ld.bu	%d15, [%a15] 2
+.LBB46:
+.LBB47:
 .LBB48:
-.LBB49:
-.LBB50:
 	.loc 2 592 0
 	movh	%d3, 1
-.LBE50:
-.LBE49:
 .LBE48:
-	.loc 1 35 0
+.LBE47:
+.LBE46:
+	.loc 1 71 0
 	sh	%d15, %d15, 16
 	or	%d15, %d2
 	ld.bu	%d2, [%a15] 3
 	sh	%d2, %d2, 24
 	or	%d2, %d15
 .LVL8:
-.LBB53:
-.LBB52:
 .LBB51:
+.LBB50:
+.LBB49:
 	.loc 2 592 0
 	ld.bu	%d15, [%a15] 4
 	mov.a	%a2, %d2
@@ -155,9 +155,9 @@ sendTrigger:
 	st.w	[%a2] 4, %d3
 .LVL9:
 	ret
+.LBE49:
+.LBE50:
 .LBE51:
-.LBE52:
-.LBE53:
 .LFE576:
 	.size	sendTrigger, .-sendTrigger
 	.align 1
@@ -165,11 +165,11 @@ sendTrigger:
 	.type	measureEchoTick, @function
 measureEchoTick:
 .LFB577:
-	.loc 1 39 0
+	.loc 1 75 0
 .LVL10:
-.LBB54:
-.LBB55:
-	.file 3 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+.LBB52:
+.LBB53:
+	.file 3 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 	.loc 3 580 0
 	ld.w	%d15, 0xf0000010
 .LVL11:
@@ -180,29 +180,29 @@ measureEchoTick:
 .LVL12:
 	.loc 3 581 0
 	or	%d4, %d15, 0
-.LBE55:
-.LBE54:
-	.loc 1 42 0
+.LBE53:
+.LBE52:
+	.loc 1 78 0
 	ld.bu	%d15, [%a4] 6
-.LBB57:
-.LBB56:
+.LBB55:
+.LBB54:
 	.loc 3 581 0
 	or	%d5, %d8, %d3
 .LVL13:
-.LBE56:
-.LBE57:
-	.loc 1 42 0
+.LBE54:
+.LBE55:
+	.loc 1 78 0
 	ld.bu	%d3, [%a4] 5
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
 	ld.bu	%d15, [%a4] 7
-.LBB58:
-.LBB59:
+.LBB56:
+.LBB57:
 	.loc 2 556 0
 	ld.bu	%d8, [%a4] 9
-.LBE59:
-.LBE58:
-	.loc 1 42 0
+.LBE57:
+.LBE56:
+	.loc 1 78 0
 	sh	%d15, %d15, 16
 	or	%d15, %d2
 	ld.bu	%d2, [%a4] 8
@@ -210,27 +210,27 @@ measureEchoTick:
 	sh	%d2, %d2, 24
 	or	%d2, %d15
 	mov.a	%a15, %d2
-	.loc 1 44 0
+	.loc 1 80 0
 	movh	%d10, 116
-	.loc 1 40 0
+	.loc 1 76 0
 	mov	%e2, 0
 	sh	%d9, %d9, %d8
-	.loc 1 44 0
+	.loc 1 80 0
 	addi	%d10, %d10, -2176
 .LVL14:
 .L4:
-.LBB61:
-.LBB60:
+.LBB59:
+.LBB58:
 	.loc 2 556 0
 	ld.w	%d15, [%a15] 36
 	and	%d15, %d9
-.LBE60:
-.LBE61:
-	.loc 1 42 0
+.LBE58:
+.LBE59:
+	.loc 1 78 0
 	jnz	%d15, .L12
 .LVL15:
-.LBB62:
-.LBB63:
+.LBB60:
+.LBB61:
 	.loc 3 580 0
 	ld.w	%d15, 0xf0000010
 	mul.u	%e2, %d15, 1
@@ -239,14 +239,14 @@ measureEchoTick:
 .LVL16:
 	or	%d0, %d15, 0
 	or	%d1, %d2, %d3
-.LBE63:
-.LBE62:
-	.loc 1 43 0
+.LBE61:
+.LBE60:
+	.loc 1 79 0
 	subx	%d2, %d0, %d4
 .LVL17:
 	subc	%d3, %d1, %d5
 .LVL18:
-	.loc 1 44 0
+	.loc 1 80 0
 	eq	%d15, %d3, 0
 	and.ge.u	%d15, %d2, %d10
 	or.ne	%d15, %d3, 0
@@ -254,8 +254,8 @@ measureEchoTick:
 	j	.L10
 .LVL19:
 .L12:
-.LBB64:
-.LBB65:
+.LBB62:
+.LBB63:
 	.loc 3 580 0
 	ld.w	%d15, 0xf0000010
 .LVL20:
@@ -267,34 +267,34 @@ measureEchoTick:
 	.loc 3 581 0
 	or	%d4, %d15, 0
 .LVL22:
-.LBE65:
-.LBE64:
-	.loc 1 49 0
+.LBE63:
+.LBE62:
+	.loc 1 85 0
 	movh	%d0, 116
 .LVL23:
-.LBB67:
-.LBB66:
+.LBB65:
+.LBB64:
 	.loc 3 581 0
 	or	%d5, %d9, %d1
 .LVL24:
-.LBE66:
-.LBE67:
-	.loc 1 49 0
+.LBE64:
+.LBE65:
+	.loc 1 85 0
 	addi	%d0, %d0, -2176
 .L7:
 .LVL25:
-.LBB68:
-.LBB69:
+.LBB66:
+.LBB67:
 	.loc 2 556 0
 	ld.w	%d15, [%a15] 36
-.LBE69:
-.LBE68:
-	.loc 1 47 0
+.LBE67:
+.LBE66:
+	.loc 1 83 0
 	extr.u	%d15, %d15, %d8, 1
 	jne	%d15, 1, .L13
 .LVL26:
-.LBB70:
-.LBB71:
+.LBB68:
+.LBB69:
 	.loc 3 580 0
 	ld.w	%d15, 0xf0000010
 	mul.u	%e2, %d15, 1
@@ -303,14 +303,14 @@ measureEchoTick:
 .LVL27:
 	or	%d6, %d15, 0
 	or	%d7, %d2, %d3
-.LBE71:
-.LBE70:
-	.loc 1 48 0
+.LBE69:
+.LBE68:
+	.loc 1 84 0
 	subx	%d2, %d6, %d4
 .LVL28:
 	subc	%d3, %d7, %d5
 .LVL29:
-	.loc 1 49 0
+	.loc 1 85 0
 	eq	%d15, %d3, 0
 	and.ge.u	%d15, %d2, %d0
 	or.ne	%d15, %d3, 0
@@ -318,90 +318,129 @@ measureEchoTick:
 	j	.L10
 .LVL30:
 .L13:
-	.loc 1 51 0
+	.loc 1 87 0
 	ret
 .LVL31:
 .L10:
-	.loc 1 44 0
+	.loc 1 80 0
 	mov	%d2, -1
 .LVL32:
-	.loc 1 52 0
+	.loc 1 88 0
 	ret
 .LFE577:
 	.size	measureEchoTick, .-measureEchoTick
-	.align 1
-	.global	getUltrasonic
-	.type	getUltrasonic, @function
-getUltrasonic:
-.LFB575:
-	.loc 1 23 0
-.LVL33:
-	.loc 1 23 0
-	mov.aa	%a15, %a4
-	.loc 1 24 0
-	call	sendTrigger
-.LVL34:
-	.loc 1 25 0
-	mov.aa	%a4, %a15
-	call	measureEchoTick
-.LVL35:
-	mov	%d15, %d2
-.LVL36:
-	.loc 1 26 0
-	mov	%d2, -1
-.LVL37:
-	jeq	%d15, -1, .L15
-.LVL38:
-.LBB72:
-.LBB73:
-	.loc 1 56 0
-	mov	%d2, 200
-	div	%e2, %d15, %d2
-	.loc 1 57 0
-	mov	%d15, 1000
-.LVL39:
-	mul	%d2, %d2, 17
-	div	%e2, %d2, %d15
-.LVL40:
-.L15:
-.LBE73:
-.LBE72:
-	.loc 1 29 0
-	ret
-.LFE575:
-	.size	getUltrasonic, .-getUltrasonic
+	.global	__floatsidf
+	.global	__divdf3
+	.global	__muldf3
 	.align 1
 	.global	calculateDistanceCm
 	.type	calculateDistanceCm, @function
 calculateDistanceCm:
 .LFB578:
-	.loc 1 55 0
-.LVL41:
-	.loc 1 56 0
-	mov	%d2, 200
-	div	%e4, %d4, %d2
-.LVL42:
-	.loc 1 57 0
-	mov	%d2, 1000
-	mul	%d4, %d4, 17
-	div	%e2, %d4, %d2
-	.loc 1 59 0
-	ret
+	.loc 1 91 0
+.LVL33:
+	.loc 1 92 0
+	call	__floatsidf
+.LVL34:
+	mov	%e4, %d3, %d2
+	mov	%d6, 0
+	movh	%d7, 16489
+	call	__divdf3
+.LVL35:
+	.loc 1 93 0
+	mov	%e4, %d3, %d2
+	mov	%d6, 0
+	movh	%d7, 16449
+	call	__muldf3
+.LVL36:
+	movh	%d7, 16527
+	mov	%e4, %d3, %d2
+	mov	%d6, 0
+	addi	%d7, %d7, 16384
+	call	__divdf3
+.LVL37:
+	imask	%e6, 0, 21, 9
+	mov	%e4, %d3, %d2
+	.loc 1 95 0
+	j	__muldf3
+.LVL38:
 .LFE578:
 	.size	calculateDistanceCm, .-calculateDistanceCm
-	.global	g_FrontUltrasonic
+	.align 1
+	.global	getUltrasonic
+	.type	getUltrasonic, @function
+getUltrasonic:
+.LFB575:
+	.loc 1 59 0
+.LVL39:
+	.loc 1 59 0
+	mov.aa	%a15, %a4
+	.loc 1 60 0
+	call	sendTrigger
+.LVL40:
+	.loc 1 61 0
+	mov.aa	%a4, %a15
+	call	measureEchoTick
+.LVL41:
+	.loc 1 62 0
+	jeq	%d2, -1, .L16
+	.loc 1 63 0
+	mov	%d4, %d2
+	j	calculateDistanceCm
+.LVL42:
+.L16:
+	.loc 1 65 0
+	mov	%d2, 0
+.LVL43:
+	movh	%d3, 49136
+	ret
+.LFE575:
+	.size	getUltrasonic, .-getUltrasonic
+	.global	g_Ultrasonic_R
 .section .data,"aw",@progbits
-	.type	g_FrontUltrasonic, @object
-	.size	g_FrontUltrasonic, 10
-g_FrontUltrasonic:
-	.uaword	-268197376
+	.type	g_Ultrasonic_R, @object
+	.size	g_Ultrasonic_R, 10
+g_Ultrasonic_R:
+	.uaword	-268193792
 	.byte	1
 	.uaword	-268193792
-	.byte	3
-	.global	g_UpperUltrasonic
-	.type	g_UpperUltrasonic, @object
-	.size	g_UpperUltrasonic, 10
-g_UpperUltrasonic:
+	.byte	2
+	.global	g_Ultrasonic_SR
+	.type	g_Ultrasonic_SR, @object
+	.size	g_Ultrasonic_SR, 10
+g_Ultrasonic_SR:
+	.uaword	-268193792
+	.byte	1
+	.uaword	-268193792
+	.byte	2
+	.global	g_Ultrasonic_SL
+	.type	g_Ultrasonic_SL, @object
+	.size	g_Ultrasonic_SL, 10
+g_Ultrasonic_SL:
+	.uaword	-268193792
+	.byte	1
+	.uaword	-268193792
+	.byte	2
+	.global	g_Ultrasonic_FR
+	.type	g_Ultrasonic_FR, @object
+	.size	g_Ultrasonic_FR, 10
+g_Ultrasonic_FR:
+	.uaword	-268193792
+	.byte	1
+	.uaword	-268193792
+	.byte	2
+	.global	g_Ultrasonic_F
+	.type	g_Ultrasonic_F, @object
+	.size	g_Ultrasonic_F, 10
+g_Ultrasonic_F:
+	.uaword	-268193792
+	.byte	1
+	.uaword	-268193792
+	.byte	2
+	.global	g_Ultrasonic_FL
+	.type	g_Ultrasonic_FL, @object
+	.size	g_Ultrasonic_FL, 10
+g_Ultrasonic_FL:
 	.uaword	-268193792
 	.byte	1
 	.uaword	-268193792
@@ -449,30 +488,30 @@ g_UpperUltrasonic:
 	.uaword	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.uaword	.Lframe0
-	.uaword	.LFB575
-	.uaword	.LFE575-.LFB575
+	.uaword	.LFB578
+	.uaword	.LFE578-.LFB578
 	.align 2
 .LEFDE6:
 .LSFDE8:
 	.uaword	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.uaword	.Lframe0
-	.uaword	.LFB578
-	.uaword	.LFE578-.LFB578
+	.uaword	.LFB575
+	.uaword	.LFE575-.LFB575
 	.align 2
 .LEFDE8:
 .section .text,"ax",@progbits
 .Letext0:
-	.file 4 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
-	.file 5 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
-	.file 6 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
-	.file 7 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
-	.file 8 "C:\\TUNNEL~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
-	.file 9 "C:\\TUNNEL~1\\TC275\\ultrasonic_Driver.h"
-	.file 10 "C:\\TUNNEL~1\\TC275\\bsw.h"
+	.file 4 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
+	.file 5 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+	.file 6 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
+	.file 7 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
+	.file 8 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+	.file 9 "C:\\SHIPAR~1\\TC275\\ultrasonic_Driver.h"
+	.file 10 "C:\\SHIPAR~1\\TC275\\bsw.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x4341
+	.uaword	0x4371
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -480,10 +519,14 @@ g_UpperUltrasonic:
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\TUNNEL~1\\TC275\\ultrasonic_Driver.c"
+	.string	"C:\\SHIPAR~1\\TC275\\ultrasonic_Driver.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0
+	.uleb128 0x2
+	.byte	0x8
+	.byte	0x4
+	.string	"double"
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x7
@@ -495,20 +538,20 @@ g_UpperUltrasonic:
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x5
+	.string	"int"
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x5
 	.string	"long int"
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
 	.string	"long unsigned int"
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x5
-	.string	"int"
 	.uleb128 0x3
 	.string	"boolean"
 	.byte	0x4
 	.byte	0x68
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
@@ -517,7 +560,7 @@ g_UpperUltrasonic:
 	.string	"uint8"
 	.byte	0x4
 	.byte	0x6c
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uleb128 0x2
 	.byte	0x2
 	.byte	0x7
@@ -526,7 +569,7 @@ g_UpperUltrasonic:
 	.string	"uint64"
 	.byte	0x4
 	.byte	0x79
-	.uaword	0x14a
+	.uaword	0x154
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x6
@@ -539,7 +582,7 @@ g_UpperUltrasonic:
 	.string	"sint32"
 	.byte	0x4
 	.byte	0x86
-	.uaword	0x174
+	.uaword	0x185
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x5
@@ -548,10 +591,6 @@ g_UpperUltrasonic:
 	.byte	0x4
 	.byte	0x4
 	.string	"float"
-	.uleb128 0x2
-	.byte	0x8
-	.byte	0x4
-	.string	"double"
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x6
@@ -575,7 +614,7 @@ g_UpperUltrasonic:
 	.string	"index"
 	.byte	0x5
 	.byte	0x8f
-	.uaword	0x209
+	.uaword	0x213
 	.byte	0x4
 	.byte	0
 	.uleb128 0x3
@@ -593,7 +632,7 @@ g_UpperUltrasonic:
 	.string	"EN0"
 	.byte	0x6
 	.byte	0x41
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -602,7 +641,7 @@ g_UpperUltrasonic:
 	.string	"EN1"
 	.byte	0x6
 	.byte	0x42
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -611,7 +650,7 @@ g_UpperUltrasonic:
 	.string	"EN2"
 	.byte	0x6
 	.byte	0x43
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -620,7 +659,7 @@ g_UpperUltrasonic:
 	.string	"EN3"
 	.byte	0x6
 	.byte	0x44
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -629,7 +668,7 @@ g_UpperUltrasonic:
 	.string	"EN4"
 	.byte	0x6
 	.byte	0x45
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -638,7 +677,7 @@ g_UpperUltrasonic:
 	.string	"EN5"
 	.byte	0x6
 	.byte	0x46
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -647,7 +686,7 @@ g_UpperUltrasonic:
 	.string	"EN6"
 	.byte	0x6
 	.byte	0x47
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -656,7 +695,7 @@ g_UpperUltrasonic:
 	.string	"EN7"
 	.byte	0x6
 	.byte	0x48
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -665,7 +704,7 @@ g_UpperUltrasonic:
 	.string	"EN8"
 	.byte	0x6
 	.byte	0x49
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -674,7 +713,7 @@ g_UpperUltrasonic:
 	.string	"EN9"
 	.byte	0x6
 	.byte	0x4a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -683,7 +722,7 @@ g_UpperUltrasonic:
 	.string	"EN10"
 	.byte	0x6
 	.byte	0x4b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -692,7 +731,7 @@ g_UpperUltrasonic:
 	.string	"EN11"
 	.byte	0x6
 	.byte	0x4c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -701,7 +740,7 @@ g_UpperUltrasonic:
 	.string	"EN12"
 	.byte	0x6
 	.byte	0x4d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -710,7 +749,7 @@ g_UpperUltrasonic:
 	.string	"EN13"
 	.byte	0x6
 	.byte	0x4e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -719,7 +758,7 @@ g_UpperUltrasonic:
 	.string	"EN14"
 	.byte	0x6
 	.byte	0x4f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -728,7 +767,7 @@ g_UpperUltrasonic:
 	.string	"EN15"
 	.byte	0x6
 	.byte	0x50
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -737,7 +776,7 @@ g_UpperUltrasonic:
 	.string	"EN16"
 	.byte	0x6
 	.byte	0x51
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xf
@@ -746,7 +785,7 @@ g_UpperUltrasonic:
 	.string	"EN17"
 	.byte	0x6
 	.byte	0x52
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xe
@@ -755,7 +794,7 @@ g_UpperUltrasonic:
 	.string	"EN18"
 	.byte	0x6
 	.byte	0x53
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xd
@@ -764,7 +803,7 @@ g_UpperUltrasonic:
 	.string	"EN19"
 	.byte	0x6
 	.byte	0x54
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -773,7 +812,7 @@ g_UpperUltrasonic:
 	.string	"EN20"
 	.byte	0x6
 	.byte	0x55
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -782,7 +821,7 @@ g_UpperUltrasonic:
 	.string	"EN21"
 	.byte	0x6
 	.byte	0x56
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -791,7 +830,7 @@ g_UpperUltrasonic:
 	.string	"EN22"
 	.byte	0x6
 	.byte	0x57
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x9
@@ -800,7 +839,7 @@ g_UpperUltrasonic:
 	.string	"EN23"
 	.byte	0x6
 	.byte	0x58
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -809,7 +848,7 @@ g_UpperUltrasonic:
 	.string	"EN24"
 	.byte	0x6
 	.byte	0x59
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x7
@@ -818,7 +857,7 @@ g_UpperUltrasonic:
 	.string	"EN25"
 	.byte	0x6
 	.byte	0x5a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x6
@@ -827,7 +866,7 @@ g_UpperUltrasonic:
 	.string	"EN26"
 	.byte	0x6
 	.byte	0x5b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x5
@@ -836,7 +875,7 @@ g_UpperUltrasonic:
 	.string	"EN27"
 	.byte	0x6
 	.byte	0x5c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -845,7 +884,7 @@ g_UpperUltrasonic:
 	.string	"EN28"
 	.byte	0x6
 	.byte	0x5d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
@@ -854,7 +893,7 @@ g_UpperUltrasonic:
 	.string	"EN29"
 	.byte	0x6
 	.byte	0x5e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -863,7 +902,7 @@ g_UpperUltrasonic:
 	.string	"EN30"
 	.byte	0x6
 	.byte	0x5f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1
@@ -872,7 +911,7 @@ g_UpperUltrasonic:
 	.string	"EN31"
 	.byte	0x6
 	.byte	0x60
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -893,7 +932,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x6
 	.byte	0x66
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -914,7 +953,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF1
 	.byte	0x6
 	.byte	0x6c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -935,7 +974,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF1
 	.byte	0x6
 	.byte	0x72
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -956,7 +995,7 @@ g_UpperUltrasonic:
 	.string	"DISR"
 	.byte	0x6
 	.byte	0x78
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -965,7 +1004,7 @@ g_UpperUltrasonic:
 	.string	"DISS"
 	.byte	0x6
 	.byte	0x79
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -974,7 +1013,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF2
 	.byte	0x6
 	.byte	0x7a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -983,7 +1022,7 @@ g_UpperUltrasonic:
 	.string	"EDIS"
 	.byte	0x6
 	.byte	0x7b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -992,7 +1031,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF3
 	.byte	0x6
 	.byte	0x7c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1c
 	.byte	0
@@ -1013,7 +1052,7 @@ g_UpperUltrasonic:
 	.string	"MSIZE0"
 	.byte	0x6
 	.byte	0x82
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x1b
@@ -1022,7 +1061,7 @@ g_UpperUltrasonic:
 	.string	"reserved_5"
 	.byte	0x6
 	.byte	0x83
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x18
@@ -1031,7 +1070,7 @@ g_UpperUltrasonic:
 	.string	"MSTART0"
 	.byte	0x6
 	.byte	0x84
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x13
@@ -1040,7 +1079,7 @@ g_UpperUltrasonic:
 	.string	"reserved_13"
 	.byte	0x6
 	.byte	0x85
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x10
@@ -1049,7 +1088,7 @@ g_UpperUltrasonic:
 	.string	"MSIZE1"
 	.byte	0x6
 	.byte	0x86
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0xb
@@ -1058,7 +1097,7 @@ g_UpperUltrasonic:
 	.string	"reserved_21"
 	.byte	0x6
 	.byte	0x87
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x8
@@ -1067,7 +1106,7 @@ g_UpperUltrasonic:
 	.string	"MSTART1"
 	.byte	0x6
 	.byte	0x88
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x3
@@ -1076,7 +1115,7 @@ g_UpperUltrasonic:
 	.string	"reserved_29"
 	.byte	0x6
 	.byte	0x89
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0
@@ -1097,7 +1136,7 @@ g_UpperUltrasonic:
 	.string	"CMPVAL"
 	.byte	0x6
 	.byte	0x8f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1118,7 +1157,7 @@ g_UpperUltrasonic:
 	.string	"CMP0EN"
 	.byte	0x6
 	.byte	0x95
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -1127,7 +1166,7 @@ g_UpperUltrasonic:
 	.string	"CMP0IR"
 	.byte	0x6
 	.byte	0x96
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -1136,7 +1175,7 @@ g_UpperUltrasonic:
 	.string	"CMP0OS"
 	.byte	0x6
 	.byte	0x97
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -1145,7 +1184,7 @@ g_UpperUltrasonic:
 	.string	"reserved_3"
 	.byte	0x6
 	.byte	0x98
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -1154,7 +1193,7 @@ g_UpperUltrasonic:
 	.string	"CMP1EN"
 	.byte	0x6
 	.byte	0x99
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -1163,7 +1202,7 @@ g_UpperUltrasonic:
 	.string	"CMP1IR"
 	.byte	0x6
 	.byte	0x9a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -1172,7 +1211,7 @@ g_UpperUltrasonic:
 	.string	"CMP1OS"
 	.byte	0x6
 	.byte	0x9b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -1181,7 +1220,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF4
 	.byte	0x6
 	.byte	0x9c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x19
 	.byte	0
@@ -1202,7 +1241,7 @@ g_UpperUltrasonic:
 	.string	"MODREV"
 	.byte	0x6
 	.byte	0xa2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x18
@@ -1211,7 +1250,7 @@ g_UpperUltrasonic:
 	.string	"MODTYPE"
 	.byte	0x6
 	.byte	0xa3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x10
@@ -1220,7 +1259,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF5
 	.byte	0x6
 	.byte	0xa4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -1241,7 +1280,7 @@ g_UpperUltrasonic:
 	.string	"CMP0IRR"
 	.byte	0x6
 	.byte	0xaa
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -1250,7 +1289,7 @@ g_UpperUltrasonic:
 	.string	"CMP0IRS"
 	.byte	0x6
 	.byte	0xab
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -1259,7 +1298,7 @@ g_UpperUltrasonic:
 	.string	"CMP1IRR"
 	.byte	0x6
 	.byte	0xac
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -1268,7 +1307,7 @@ g_UpperUltrasonic:
 	.string	"CMP1IRS"
 	.byte	0x6
 	.byte	0xad
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -1277,7 +1316,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF3
 	.byte	0x6
 	.byte	0xae
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1c
 	.byte	0
@@ -1298,7 +1337,7 @@ g_UpperUltrasonic:
 	.string	"RST"
 	.byte	0x6
 	.byte	0xb4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -1307,7 +1346,7 @@ g_UpperUltrasonic:
 	.string	"RSTSTAT"
 	.byte	0x6
 	.byte	0xb5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -1316,7 +1355,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF2
 	.byte	0x6
 	.byte	0xb6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1e
 	.byte	0
@@ -1337,7 +1376,7 @@ g_UpperUltrasonic:
 	.string	"RST"
 	.byte	0x6
 	.byte	0xbc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -1346,7 +1385,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF6
 	.byte	0x6
 	.byte	0xbd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1f
 	.byte	0
@@ -1367,7 +1406,7 @@ g_UpperUltrasonic:
 	.string	"CLR"
 	.byte	0x6
 	.byte	0xc3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -1376,7 +1415,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF6
 	.byte	0x6
 	.byte	0xc4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1f
 	.byte	0
@@ -1397,7 +1436,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x6
 	.byte	0xca
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x18
 	.byte	0x8
@@ -1406,7 +1445,7 @@ g_UpperUltrasonic:
 	.string	"SUS"
 	.byte	0x6
 	.byte	0xcb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x4
 	.byte	0x4
@@ -1415,7 +1454,7 @@ g_UpperUltrasonic:
 	.string	"SUS_P"
 	.byte	0x6
 	.byte	0xcc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
@@ -1424,7 +1463,7 @@ g_UpperUltrasonic:
 	.string	"SUSSTA"
 	.byte	0x6
 	.byte	0xcd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -1433,7 +1472,7 @@ g_UpperUltrasonic:
 	.string	"reserved_30"
 	.byte	0x6
 	.byte	0xce
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x2
 	.byte	0
@@ -1454,7 +1493,7 @@ g_UpperUltrasonic:
 	.string	"STM31_0"
 	.byte	0x6
 	.byte	0xd4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1475,7 +1514,7 @@ g_UpperUltrasonic:
 	.string	"STM31_0"
 	.byte	0x6
 	.byte	0xda
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1496,7 +1535,7 @@ g_UpperUltrasonic:
 	.string	"STM35_4"
 	.byte	0x6
 	.byte	0xe0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1517,7 +1556,7 @@ g_UpperUltrasonic:
 	.string	"STM39_8"
 	.byte	0x6
 	.byte	0xe6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1538,7 +1577,7 @@ g_UpperUltrasonic:
 	.string	"STM43_12"
 	.byte	0x6
 	.byte	0xec
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1559,7 +1598,7 @@ g_UpperUltrasonic:
 	.string	"STM47_16"
 	.byte	0x6
 	.byte	0xf2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1580,7 +1619,7 @@ g_UpperUltrasonic:
 	.string	"STM51_20"
 	.byte	0x6
 	.byte	0xf8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1601,7 +1640,7 @@ g_UpperUltrasonic:
 	.string	"STM63_32"
 	.byte	0x6
 	.byte	0xfe
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -1621,12 +1660,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x109
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x10a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1647,12 +1686,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x111
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x112
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1673,12 +1712,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x119
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x11a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1699,12 +1738,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x121
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x122
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1725,12 +1764,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x129
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x12a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1751,12 +1790,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x131
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x132
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1777,12 +1816,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x139
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x13a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1803,12 +1842,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x141
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x142
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1829,12 +1868,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x149
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x14a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1855,12 +1894,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x151
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x152
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1881,12 +1920,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x159
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x15a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1907,12 +1946,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x161
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x162
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1933,12 +1972,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x169
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x16a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1959,12 +1998,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x171
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x172
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -1985,12 +2024,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x179
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x17a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2011,12 +2050,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x181
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x182
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2037,12 +2076,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x189
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x18a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2063,12 +2102,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x191
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x192
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2089,12 +2128,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x199
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x19a
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2115,12 +2154,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x1a1
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x1a2
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2141,12 +2180,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x1a9
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x1aa
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2167,12 +2206,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x6
 	.uahalf	0x1b1
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x6
 	.uahalf	0x1b2
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x6
@@ -2348,7 +2387,7 @@ g_UpperUltrasonic:
 	.byte	0xfc
 	.byte	0
 	.uleb128 0x11
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uaword	0x13b3
 	.uleb128 0x12
 	.uaword	0x13b3
@@ -2366,14 +2405,14 @@ g_UpperUltrasonic:
 	.byte	0x1
 	.byte	0
 	.uleb128 0x11
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uaword	0x13df
 	.uleb128 0x12
 	.uaword	0x13b3
 	.byte	0xb
 	.byte	0
 	.uleb128 0x11
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uaword	0x13ef
 	.uleb128 0x12
 	.uaword	0x13b3
@@ -2387,14 +2426,14 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.uaword	0x1211
 	.uleb128 0x11
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uaword	0x1414
 	.uleb128 0x12
 	.uaword	0x13b3
 	.byte	0x7
 	.byte	0
 	.uleb128 0x11
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uaword	0x1424
 	.uleb128 0x12
 	.uaword	0x13b3
@@ -2428,7 +2467,7 @@ g_UpperUltrasonic:
 	.string	"EN0"
 	.byte	0x7
 	.byte	0x41
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -2437,7 +2476,7 @@ g_UpperUltrasonic:
 	.string	"EN1"
 	.byte	0x7
 	.byte	0x42
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -2446,7 +2485,7 @@ g_UpperUltrasonic:
 	.string	"EN2"
 	.byte	0x7
 	.byte	0x43
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -2455,7 +2494,7 @@ g_UpperUltrasonic:
 	.string	"EN3"
 	.byte	0x7
 	.byte	0x44
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -2464,7 +2503,7 @@ g_UpperUltrasonic:
 	.string	"EN4"
 	.byte	0x7
 	.byte	0x45
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -2473,7 +2512,7 @@ g_UpperUltrasonic:
 	.string	"EN5"
 	.byte	0x7
 	.byte	0x46
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -2482,7 +2521,7 @@ g_UpperUltrasonic:
 	.string	"EN6"
 	.byte	0x7
 	.byte	0x47
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -2491,7 +2530,7 @@ g_UpperUltrasonic:
 	.string	"EN7"
 	.byte	0x7
 	.byte	0x48
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -2500,7 +2539,7 @@ g_UpperUltrasonic:
 	.string	"EN8"
 	.byte	0x7
 	.byte	0x49
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -2509,7 +2548,7 @@ g_UpperUltrasonic:
 	.string	"EN9"
 	.byte	0x7
 	.byte	0x4a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -2518,7 +2557,7 @@ g_UpperUltrasonic:
 	.string	"EN10"
 	.byte	0x7
 	.byte	0x4b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -2527,7 +2566,7 @@ g_UpperUltrasonic:
 	.string	"EN11"
 	.byte	0x7
 	.byte	0x4c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -2536,7 +2575,7 @@ g_UpperUltrasonic:
 	.string	"EN12"
 	.byte	0x7
 	.byte	0x4d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -2545,7 +2584,7 @@ g_UpperUltrasonic:
 	.string	"EN13"
 	.byte	0x7
 	.byte	0x4e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -2554,7 +2593,7 @@ g_UpperUltrasonic:
 	.string	"EN14"
 	.byte	0x7
 	.byte	0x4f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -2563,7 +2602,7 @@ g_UpperUltrasonic:
 	.string	"EN15"
 	.byte	0x7
 	.byte	0x50
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -2572,7 +2611,7 @@ g_UpperUltrasonic:
 	.string	"EN16"
 	.byte	0x7
 	.byte	0x51
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xf
@@ -2581,7 +2620,7 @@ g_UpperUltrasonic:
 	.string	"EN17"
 	.byte	0x7
 	.byte	0x52
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xe
@@ -2590,7 +2629,7 @@ g_UpperUltrasonic:
 	.string	"EN18"
 	.byte	0x7
 	.byte	0x53
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xd
@@ -2599,7 +2638,7 @@ g_UpperUltrasonic:
 	.string	"EN19"
 	.byte	0x7
 	.byte	0x54
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -2608,7 +2647,7 @@ g_UpperUltrasonic:
 	.string	"EN20"
 	.byte	0x7
 	.byte	0x55
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -2617,7 +2656,7 @@ g_UpperUltrasonic:
 	.string	"EN21"
 	.byte	0x7
 	.byte	0x56
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -2626,7 +2665,7 @@ g_UpperUltrasonic:
 	.string	"EN22"
 	.byte	0x7
 	.byte	0x57
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x9
@@ -2635,7 +2674,7 @@ g_UpperUltrasonic:
 	.string	"EN23"
 	.byte	0x7
 	.byte	0x58
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -2644,7 +2683,7 @@ g_UpperUltrasonic:
 	.string	"EN24"
 	.byte	0x7
 	.byte	0x59
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x7
@@ -2653,7 +2692,7 @@ g_UpperUltrasonic:
 	.string	"EN25"
 	.byte	0x7
 	.byte	0x5a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x6
@@ -2662,7 +2701,7 @@ g_UpperUltrasonic:
 	.string	"EN26"
 	.byte	0x7
 	.byte	0x5b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x5
@@ -2671,7 +2710,7 @@ g_UpperUltrasonic:
 	.string	"EN27"
 	.byte	0x7
 	.byte	0x5c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -2680,7 +2719,7 @@ g_UpperUltrasonic:
 	.string	"EN28"
 	.byte	0x7
 	.byte	0x5d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
@@ -2689,7 +2728,7 @@ g_UpperUltrasonic:
 	.string	"EN29"
 	.byte	0x7
 	.byte	0x5e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -2698,7 +2737,7 @@ g_UpperUltrasonic:
 	.string	"EN30"
 	.byte	0x7
 	.byte	0x5f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1
@@ -2707,7 +2746,7 @@ g_UpperUltrasonic:
 	.string	"EN31"
 	.byte	0x7
 	.byte	0x60
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -2728,7 +2767,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0x66
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x20
 	.byte	0
@@ -2749,7 +2788,7 @@ g_UpperUltrasonic:
 	.string	"EN0"
 	.byte	0x7
 	.byte	0x6c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -2758,7 +2797,7 @@ g_UpperUltrasonic:
 	.string	"EN1"
 	.byte	0x7
 	.byte	0x6d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -2767,7 +2806,7 @@ g_UpperUltrasonic:
 	.string	"EN2"
 	.byte	0x7
 	.byte	0x6e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -2776,7 +2815,7 @@ g_UpperUltrasonic:
 	.string	"EN3"
 	.byte	0x7
 	.byte	0x6f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -2785,7 +2824,7 @@ g_UpperUltrasonic:
 	.string	"EN4"
 	.byte	0x7
 	.byte	0x70
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -2794,7 +2833,7 @@ g_UpperUltrasonic:
 	.string	"EN5"
 	.byte	0x7
 	.byte	0x71
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -2803,7 +2842,7 @@ g_UpperUltrasonic:
 	.string	"EN6"
 	.byte	0x7
 	.byte	0x72
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -2812,7 +2851,7 @@ g_UpperUltrasonic:
 	.string	"EN7"
 	.byte	0x7
 	.byte	0x73
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -2821,7 +2860,7 @@ g_UpperUltrasonic:
 	.string	"EN8"
 	.byte	0x7
 	.byte	0x74
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -2830,7 +2869,7 @@ g_UpperUltrasonic:
 	.string	"EN9"
 	.byte	0x7
 	.byte	0x75
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -2839,7 +2878,7 @@ g_UpperUltrasonic:
 	.string	"EN10"
 	.byte	0x7
 	.byte	0x76
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -2848,7 +2887,7 @@ g_UpperUltrasonic:
 	.string	"EN11"
 	.byte	0x7
 	.byte	0x77
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -2857,7 +2896,7 @@ g_UpperUltrasonic:
 	.string	"EN12"
 	.byte	0x7
 	.byte	0x78
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -2866,7 +2905,7 @@ g_UpperUltrasonic:
 	.string	"EN13"
 	.byte	0x7
 	.byte	0x79
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -2875,7 +2914,7 @@ g_UpperUltrasonic:
 	.string	"EN14"
 	.byte	0x7
 	.byte	0x7a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -2884,7 +2923,7 @@ g_UpperUltrasonic:
 	.string	"EN15"
 	.byte	0x7
 	.byte	0x7b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -2893,7 +2932,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0x7c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -2914,7 +2953,7 @@ g_UpperUltrasonic:
 	.string	"MODREV"
 	.byte	0x7
 	.byte	0x82
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x18
@@ -2923,7 +2962,7 @@ g_UpperUltrasonic:
 	.string	"MODTYPE"
 	.byte	0x7
 	.byte	0x83
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x10
@@ -2932,7 +2971,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF5
 	.byte	0x7
 	.byte	0x84
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -2953,7 +2992,7 @@ g_UpperUltrasonic:
 	.string	"P0"
 	.byte	0x7
 	.byte	0x8a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -2962,7 +3001,7 @@ g_UpperUltrasonic:
 	.string	"P1"
 	.byte	0x7
 	.byte	0x8b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -2971,7 +3010,7 @@ g_UpperUltrasonic:
 	.string	"P2"
 	.byte	0x7
 	.byte	0x8c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -2980,7 +3019,7 @@ g_UpperUltrasonic:
 	.string	"P3"
 	.byte	0x7
 	.byte	0x8d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -2989,7 +3028,7 @@ g_UpperUltrasonic:
 	.string	"P4"
 	.byte	0x7
 	.byte	0x8e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -2998,7 +3037,7 @@ g_UpperUltrasonic:
 	.string	"P5"
 	.byte	0x7
 	.byte	0x8f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -3007,7 +3046,7 @@ g_UpperUltrasonic:
 	.string	"P6"
 	.byte	0x7
 	.byte	0x90
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -3016,7 +3055,7 @@ g_UpperUltrasonic:
 	.string	"P7"
 	.byte	0x7
 	.byte	0x91
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -3025,7 +3064,7 @@ g_UpperUltrasonic:
 	.string	"P8"
 	.byte	0x7
 	.byte	0x92
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -3034,7 +3073,7 @@ g_UpperUltrasonic:
 	.string	"P9"
 	.byte	0x7
 	.byte	0x93
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -3043,7 +3082,7 @@ g_UpperUltrasonic:
 	.string	"P10"
 	.byte	0x7
 	.byte	0x94
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -3052,7 +3091,7 @@ g_UpperUltrasonic:
 	.string	"P11"
 	.byte	0x7
 	.byte	0x95
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -3061,7 +3100,7 @@ g_UpperUltrasonic:
 	.string	"P12"
 	.byte	0x7
 	.byte	0x96
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -3070,7 +3109,7 @@ g_UpperUltrasonic:
 	.string	"P13"
 	.byte	0x7
 	.byte	0x97
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -3079,7 +3118,7 @@ g_UpperUltrasonic:
 	.string	"P14"
 	.byte	0x7
 	.byte	0x98
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -3088,7 +3127,7 @@ g_UpperUltrasonic:
 	.string	"P15"
 	.byte	0x7
 	.byte	0x99
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -3097,7 +3136,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0x9a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -3118,7 +3157,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xa0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
@@ -3127,7 +3166,7 @@ g_UpperUltrasonic:
 	.string	"PC0"
 	.byte	0x7
 	.byte	0xa1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x18
@@ -3136,7 +3175,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF9
 	.byte	0x7
 	.byte	0xa2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x15
@@ -3145,7 +3184,7 @@ g_UpperUltrasonic:
 	.string	"PC1"
 	.byte	0x7
 	.byte	0xa3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x10
@@ -3154,7 +3193,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0xa4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0xd
@@ -3163,7 +3202,7 @@ g_UpperUltrasonic:
 	.string	"PC2"
 	.byte	0x7
 	.byte	0xa5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x8
@@ -3172,7 +3211,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF10
 	.byte	0x7
 	.byte	0xa6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x5
@@ -3181,7 +3220,7 @@ g_UpperUltrasonic:
 	.string	"PC3"
 	.byte	0x7
 	.byte	0xa7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0
@@ -3202,7 +3241,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xad
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
@@ -3211,7 +3250,7 @@ g_UpperUltrasonic:
 	.string	"PC12"
 	.byte	0x7
 	.byte	0xae
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x18
@@ -3220,7 +3259,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF9
 	.byte	0x7
 	.byte	0xaf
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x15
@@ -3229,7 +3268,7 @@ g_UpperUltrasonic:
 	.string	"PC13"
 	.byte	0x7
 	.byte	0xb0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x10
@@ -3238,7 +3277,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0xb1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0xd
@@ -3247,7 +3286,7 @@ g_UpperUltrasonic:
 	.string	"PC14"
 	.byte	0x7
 	.byte	0xb2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x8
@@ -3256,7 +3295,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF10
 	.byte	0x7
 	.byte	0xb3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x5
@@ -3265,7 +3304,7 @@ g_UpperUltrasonic:
 	.string	"PC15"
 	.byte	0x7
 	.byte	0xb4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0
@@ -3286,7 +3325,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xba
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
@@ -3295,7 +3334,7 @@ g_UpperUltrasonic:
 	.string	"PC4"
 	.byte	0x7
 	.byte	0xbb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x18
@@ -3304,7 +3343,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF9
 	.byte	0x7
 	.byte	0xbc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x15
@@ -3313,7 +3352,7 @@ g_UpperUltrasonic:
 	.string	"PC5"
 	.byte	0x7
 	.byte	0xbd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x10
@@ -3322,7 +3361,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0xbe
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0xd
@@ -3331,7 +3370,7 @@ g_UpperUltrasonic:
 	.string	"PC6"
 	.byte	0x7
 	.byte	0xbf
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x8
@@ -3340,7 +3379,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF10
 	.byte	0x7
 	.byte	0xc0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x5
@@ -3349,7 +3388,7 @@ g_UpperUltrasonic:
 	.string	"PC7"
 	.byte	0x7
 	.byte	0xc1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0
@@ -3370,7 +3409,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xc7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
@@ -3379,7 +3418,7 @@ g_UpperUltrasonic:
 	.string	"PC8"
 	.byte	0x7
 	.byte	0xc8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x18
@@ -3388,7 +3427,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF9
 	.byte	0x7
 	.byte	0xc9
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x15
@@ -3397,7 +3436,7 @@ g_UpperUltrasonic:
 	.string	"PC9"
 	.byte	0x7
 	.byte	0xca
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x10
@@ -3406,7 +3445,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0xcb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0xd
@@ -3415,7 +3454,7 @@ g_UpperUltrasonic:
 	.string	"PC10"
 	.byte	0x7
 	.byte	0xcc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x8
@@ -3424,7 +3463,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF10
 	.byte	0x7
 	.byte	0xcd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x5
@@ -3433,7 +3472,7 @@ g_UpperUltrasonic:
 	.string	"PC11"
 	.byte	0x7
 	.byte	0xce
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0
@@ -3454,7 +3493,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xd4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -3463,7 +3502,7 @@ g_UpperUltrasonic:
 	.string	"PS1"
 	.byte	0x7
 	.byte	0xd5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -3472,7 +3511,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF2
 	.byte	0x7
 	.byte	0xd6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1e
 	.byte	0
@@ -3493,7 +3532,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xdc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -3502,7 +3541,7 @@ g_UpperUltrasonic:
 	.string	"PS1"
 	.byte	0x7
 	.byte	0xdd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -3511,7 +3550,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF2
 	.byte	0x7
 	.byte	0xde
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1e
 	.byte	0
@@ -3532,7 +3571,7 @@ g_UpperUltrasonic:
 	.string	"RDIS_CTRL"
 	.byte	0x7
 	.byte	0xe4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -3541,7 +3580,7 @@ g_UpperUltrasonic:
 	.string	"RX_DIS"
 	.byte	0x7
 	.byte	0xe5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -3550,7 +3589,7 @@ g_UpperUltrasonic:
 	.string	"TERM"
 	.byte	0x7
 	.byte	0xe6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -3559,7 +3598,7 @@ g_UpperUltrasonic:
 	.string	"LRXTERM"
 	.byte	0x7
 	.byte	0xe7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x5
 	.byte	0x18
@@ -3568,7 +3607,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF9
 	.byte	0x7
 	.byte	0xe8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x18
 	.byte	0
@@ -3589,7 +3628,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xee
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x18
@@ -3598,7 +3637,7 @@ g_UpperUltrasonic:
 	.string	"LVDSR"
 	.byte	0x7
 	.byte	0xef
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -3607,7 +3646,7 @@ g_UpperUltrasonic:
 	.string	"LVDSRL"
 	.byte	0x7
 	.byte	0xf0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -3616,7 +3655,7 @@ g_UpperUltrasonic:
 	.string	"reserved_10"
 	.byte	0x7
 	.byte	0xf1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x2
 	.byte	0x14
@@ -3625,7 +3664,7 @@ g_UpperUltrasonic:
 	.string	"TDIS_CTRL"
 	.byte	0x7
 	.byte	0xf2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -3634,7 +3673,7 @@ g_UpperUltrasonic:
 	.string	"TX_DIS"
 	.byte	0x7
 	.byte	0xf3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -3643,7 +3682,7 @@ g_UpperUltrasonic:
 	.string	"TX_PD"
 	.byte	0x7
 	.byte	0xf4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -3652,7 +3691,7 @@ g_UpperUltrasonic:
 	.string	"TX_PWDPD"
 	.byte	0x7
 	.byte	0xf5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -3661,7 +3700,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.byte	0xf6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -3682,7 +3721,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0xfc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0x10
@@ -3691,7 +3730,7 @@ g_UpperUltrasonic:
 	.string	"PCL0"
 	.byte	0x7
 	.byte	0xfd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xf
@@ -3700,7 +3739,7 @@ g_UpperUltrasonic:
 	.string	"PCL1"
 	.byte	0x7
 	.byte	0xfe
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xe
@@ -3709,7 +3748,7 @@ g_UpperUltrasonic:
 	.string	"PCL2"
 	.byte	0x7
 	.byte	0xff
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xd
@@ -3718,7 +3757,7 @@ g_UpperUltrasonic:
 	.string	"PCL3"
 	.byte	0x7
 	.uahalf	0x100
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -3727,7 +3766,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF11
 	.byte	0x7
 	.uahalf	0x101
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0xc
 	.byte	0
@@ -3748,7 +3787,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x107
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1c
 	.byte	0x4
@@ -3757,7 +3796,7 @@ g_UpperUltrasonic:
 	.string	"PCL12"
 	.byte	0x7
 	.uahalf	0x108
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
@@ -3766,7 +3805,7 @@ g_UpperUltrasonic:
 	.string	"PCL13"
 	.byte	0x7
 	.uahalf	0x109
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -3775,7 +3814,7 @@ g_UpperUltrasonic:
 	.string	"PCL14"
 	.byte	0x7
 	.uahalf	0x10a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1
@@ -3784,7 +3823,7 @@ g_UpperUltrasonic:
 	.string	"PCL15"
 	.byte	0x7
 	.uahalf	0x10b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -3805,7 +3844,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x111
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x14
 	.byte	0xc
@@ -3814,7 +3853,7 @@ g_UpperUltrasonic:
 	.string	"PCL4"
 	.byte	0x7
 	.uahalf	0x112
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -3823,7 +3862,7 @@ g_UpperUltrasonic:
 	.string	"PCL5"
 	.byte	0x7
 	.uahalf	0x113
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -3832,7 +3871,7 @@ g_UpperUltrasonic:
 	.string	"PCL6"
 	.byte	0x7
 	.uahalf	0x114
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x9
@@ -3841,7 +3880,7 @@ g_UpperUltrasonic:
 	.string	"PCL7"
 	.byte	0x7
 	.uahalf	0x115
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -3850,7 +3889,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF10
 	.byte	0x7
 	.uahalf	0x116
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0
@@ -3871,7 +3910,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x11c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x18
 	.byte	0x8
@@ -3880,7 +3919,7 @@ g_UpperUltrasonic:
 	.string	"PCL8"
 	.byte	0x7
 	.uahalf	0x11d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x7
@@ -3889,7 +3928,7 @@ g_UpperUltrasonic:
 	.string	"PCL9"
 	.byte	0x7
 	.uahalf	0x11e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x6
@@ -3898,7 +3937,7 @@ g_UpperUltrasonic:
 	.string	"PCL10"
 	.byte	0x7
 	.uahalf	0x11f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x5
@@ -3907,7 +3946,7 @@ g_UpperUltrasonic:
 	.string	"PCL11"
 	.byte	0x7
 	.uahalf	0x120
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -3916,7 +3955,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF12
 	.byte	0x7
 	.uahalf	0x121
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x4
 	.byte	0
@@ -3937,7 +3976,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x127
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0x10
@@ -3946,7 +3985,7 @@ g_UpperUltrasonic:
 	.string	"PCL0"
 	.byte	0x7
 	.uahalf	0x128
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xf
@@ -3955,7 +3994,7 @@ g_UpperUltrasonic:
 	.string	"PCL1"
 	.byte	0x7
 	.uahalf	0x129
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xe
@@ -3964,7 +4003,7 @@ g_UpperUltrasonic:
 	.string	"PCL2"
 	.byte	0x7
 	.uahalf	0x12a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xd
@@ -3973,7 +4012,7 @@ g_UpperUltrasonic:
 	.string	"PCL3"
 	.byte	0x7
 	.uahalf	0x12b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -3982,7 +4021,7 @@ g_UpperUltrasonic:
 	.string	"PCL4"
 	.byte	0x7
 	.uahalf	0x12c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -3991,7 +4030,7 @@ g_UpperUltrasonic:
 	.string	"PCL5"
 	.byte	0x7
 	.uahalf	0x12d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -4000,7 +4039,7 @@ g_UpperUltrasonic:
 	.string	"PCL6"
 	.byte	0x7
 	.uahalf	0x12e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x9
@@ -4009,7 +4048,7 @@ g_UpperUltrasonic:
 	.string	"PCL7"
 	.byte	0x7
 	.uahalf	0x12f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -4018,7 +4057,7 @@ g_UpperUltrasonic:
 	.string	"PCL8"
 	.byte	0x7
 	.uahalf	0x130
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x7
@@ -4027,7 +4066,7 @@ g_UpperUltrasonic:
 	.string	"PCL9"
 	.byte	0x7
 	.uahalf	0x131
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x6
@@ -4036,7 +4075,7 @@ g_UpperUltrasonic:
 	.string	"PCL10"
 	.byte	0x7
 	.uahalf	0x132
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x5
@@ -4045,7 +4084,7 @@ g_UpperUltrasonic:
 	.string	"PCL11"
 	.byte	0x7
 	.uahalf	0x133
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -4054,7 +4093,7 @@ g_UpperUltrasonic:
 	.string	"PCL12"
 	.byte	0x7
 	.uahalf	0x134
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
@@ -4063,7 +4102,7 @@ g_UpperUltrasonic:
 	.string	"PCL13"
 	.byte	0x7
 	.uahalf	0x135
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -4072,7 +4111,7 @@ g_UpperUltrasonic:
 	.string	"PCL14"
 	.byte	0x7
 	.uahalf	0x136
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1
@@ -4081,7 +4120,7 @@ g_UpperUltrasonic:
 	.string	"PCL15"
 	.byte	0x7
 	.uahalf	0x137
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -4102,7 +4141,7 @@ g_UpperUltrasonic:
 	.string	"PS0"
 	.byte	0x7
 	.uahalf	0x13d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -4111,7 +4150,7 @@ g_UpperUltrasonic:
 	.string	"PS1"
 	.byte	0x7
 	.uahalf	0x13e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -4120,7 +4159,7 @@ g_UpperUltrasonic:
 	.string	"PS2"
 	.byte	0x7
 	.uahalf	0x13f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -4129,7 +4168,7 @@ g_UpperUltrasonic:
 	.string	"PS3"
 	.byte	0x7
 	.uahalf	0x140
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -4138,7 +4177,7 @@ g_UpperUltrasonic:
 	.string	"PS4"
 	.byte	0x7
 	.uahalf	0x141
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -4147,7 +4186,7 @@ g_UpperUltrasonic:
 	.string	"PS5"
 	.byte	0x7
 	.uahalf	0x142
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -4156,7 +4195,7 @@ g_UpperUltrasonic:
 	.string	"PS6"
 	.byte	0x7
 	.uahalf	0x143
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -4165,7 +4204,7 @@ g_UpperUltrasonic:
 	.string	"PS7"
 	.byte	0x7
 	.uahalf	0x144
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -4174,7 +4213,7 @@ g_UpperUltrasonic:
 	.string	"PS8"
 	.byte	0x7
 	.uahalf	0x145
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -4183,7 +4222,7 @@ g_UpperUltrasonic:
 	.string	"PS9"
 	.byte	0x7
 	.uahalf	0x146
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -4192,7 +4231,7 @@ g_UpperUltrasonic:
 	.string	"PS10"
 	.byte	0x7
 	.uahalf	0x147
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -4201,7 +4240,7 @@ g_UpperUltrasonic:
 	.string	"PS11"
 	.byte	0x7
 	.uahalf	0x148
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -4210,7 +4249,7 @@ g_UpperUltrasonic:
 	.string	"PS12"
 	.byte	0x7
 	.uahalf	0x149
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -4219,7 +4258,7 @@ g_UpperUltrasonic:
 	.string	"PS13"
 	.byte	0x7
 	.uahalf	0x14a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -4228,7 +4267,7 @@ g_UpperUltrasonic:
 	.string	"PS14"
 	.byte	0x7
 	.uahalf	0x14b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -4237,7 +4276,7 @@ g_UpperUltrasonic:
 	.string	"PS15"
 	.byte	0x7
 	.uahalf	0x14c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -4246,7 +4285,7 @@ g_UpperUltrasonic:
 	.string	"PCL0"
 	.byte	0x7
 	.uahalf	0x14d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xf
@@ -4255,7 +4294,7 @@ g_UpperUltrasonic:
 	.string	"PCL1"
 	.byte	0x7
 	.uahalf	0x14e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xe
@@ -4264,7 +4303,7 @@ g_UpperUltrasonic:
 	.string	"PCL2"
 	.byte	0x7
 	.uahalf	0x14f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xd
@@ -4273,7 +4312,7 @@ g_UpperUltrasonic:
 	.string	"PCL3"
 	.byte	0x7
 	.uahalf	0x150
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -4282,7 +4321,7 @@ g_UpperUltrasonic:
 	.string	"PCL4"
 	.byte	0x7
 	.uahalf	0x151
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -4291,7 +4330,7 @@ g_UpperUltrasonic:
 	.string	"PCL5"
 	.byte	0x7
 	.uahalf	0x152
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -4300,7 +4339,7 @@ g_UpperUltrasonic:
 	.string	"PCL6"
 	.byte	0x7
 	.uahalf	0x153
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x9
@@ -4309,7 +4348,7 @@ g_UpperUltrasonic:
 	.string	"PCL7"
 	.byte	0x7
 	.uahalf	0x154
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -4318,7 +4357,7 @@ g_UpperUltrasonic:
 	.string	"PCL8"
 	.byte	0x7
 	.uahalf	0x155
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x7
@@ -4327,7 +4366,7 @@ g_UpperUltrasonic:
 	.string	"PCL9"
 	.byte	0x7
 	.uahalf	0x156
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x6
@@ -4336,7 +4375,7 @@ g_UpperUltrasonic:
 	.string	"PCL10"
 	.byte	0x7
 	.uahalf	0x157
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x5
@@ -4345,7 +4384,7 @@ g_UpperUltrasonic:
 	.string	"PCL11"
 	.byte	0x7
 	.uahalf	0x158
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -4354,7 +4393,7 @@ g_UpperUltrasonic:
 	.string	"PCL12"
 	.byte	0x7
 	.uahalf	0x159
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x3
@@ -4363,7 +4402,7 @@ g_UpperUltrasonic:
 	.string	"PCL13"
 	.byte	0x7
 	.uahalf	0x15a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x2
@@ -4372,7 +4411,7 @@ g_UpperUltrasonic:
 	.string	"PCL14"
 	.byte	0x7
 	.uahalf	0x15b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1
@@ -4381,7 +4420,7 @@ g_UpperUltrasonic:
 	.string	"PCL15"
 	.byte	0x7
 	.uahalf	0x15c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -4402,7 +4441,7 @@ g_UpperUltrasonic:
 	.string	"PS0"
 	.byte	0x7
 	.uahalf	0x162
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -4411,7 +4450,7 @@ g_UpperUltrasonic:
 	.string	"PS1"
 	.byte	0x7
 	.uahalf	0x163
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -4420,7 +4459,7 @@ g_UpperUltrasonic:
 	.string	"PS2"
 	.byte	0x7
 	.uahalf	0x164
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -4429,7 +4468,7 @@ g_UpperUltrasonic:
 	.string	"PS3"
 	.byte	0x7
 	.uahalf	0x165
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -4438,7 +4477,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF3
 	.byte	0x7
 	.uahalf	0x166
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1c
 	.byte	0
@@ -4459,7 +4498,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x16c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0xc
 	.byte	0x14
@@ -4468,7 +4507,7 @@ g_UpperUltrasonic:
 	.string	"PS12"
 	.byte	0x7
 	.uahalf	0x16d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -4477,7 +4516,7 @@ g_UpperUltrasonic:
 	.string	"PS13"
 	.byte	0x7
 	.uahalf	0x16e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -4486,7 +4525,7 @@ g_UpperUltrasonic:
 	.string	"PS14"
 	.byte	0x7
 	.uahalf	0x16f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -4495,7 +4534,7 @@ g_UpperUltrasonic:
 	.string	"PS15"
 	.byte	0x7
 	.uahalf	0x170
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -4504,7 +4543,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.uahalf	0x171
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -4525,7 +4564,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x177
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x4
 	.byte	0x1c
@@ -4534,7 +4573,7 @@ g_UpperUltrasonic:
 	.string	"PS4"
 	.byte	0x7
 	.uahalf	0x178
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -4543,7 +4582,7 @@ g_UpperUltrasonic:
 	.string	"PS5"
 	.byte	0x7
 	.uahalf	0x179
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -4552,7 +4591,7 @@ g_UpperUltrasonic:
 	.string	"PS6"
 	.byte	0x7
 	.uahalf	0x17a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -4561,7 +4600,7 @@ g_UpperUltrasonic:
 	.string	"PS7"
 	.byte	0x7
 	.uahalf	0x17b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -4570,7 +4609,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF9
 	.byte	0x7
 	.uahalf	0x17c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x18
 	.byte	0
@@ -4591,7 +4630,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF0
 	.byte	0x7
 	.uahalf	0x182
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x18
@@ -4600,7 +4639,7 @@ g_UpperUltrasonic:
 	.string	"PS8"
 	.byte	0x7
 	.uahalf	0x183
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -4609,7 +4648,7 @@ g_UpperUltrasonic:
 	.string	"PS9"
 	.byte	0x7
 	.uahalf	0x184
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -4618,7 +4657,7 @@ g_UpperUltrasonic:
 	.string	"PS10"
 	.byte	0x7
 	.uahalf	0x185
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -4627,7 +4666,7 @@ g_UpperUltrasonic:
 	.string	"PS11"
 	.byte	0x7
 	.uahalf	0x186
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -4636,7 +4675,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF13
 	.byte	0x7
 	.uahalf	0x187
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x14
 	.byte	0
@@ -4657,7 +4696,7 @@ g_UpperUltrasonic:
 	.string	"PS0"
 	.byte	0x7
 	.uahalf	0x18d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -4666,7 +4705,7 @@ g_UpperUltrasonic:
 	.string	"PS1"
 	.byte	0x7
 	.uahalf	0x18e
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -4675,7 +4714,7 @@ g_UpperUltrasonic:
 	.string	"PS2"
 	.byte	0x7
 	.uahalf	0x18f
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -4684,7 +4723,7 @@ g_UpperUltrasonic:
 	.string	"PS3"
 	.byte	0x7
 	.uahalf	0x190
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -4693,7 +4732,7 @@ g_UpperUltrasonic:
 	.string	"PS4"
 	.byte	0x7
 	.uahalf	0x191
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -4702,7 +4741,7 @@ g_UpperUltrasonic:
 	.string	"PS5"
 	.byte	0x7
 	.uahalf	0x192
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -4711,7 +4750,7 @@ g_UpperUltrasonic:
 	.string	"PS6"
 	.byte	0x7
 	.uahalf	0x193
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -4720,7 +4759,7 @@ g_UpperUltrasonic:
 	.string	"PS7"
 	.byte	0x7
 	.uahalf	0x194
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -4729,7 +4768,7 @@ g_UpperUltrasonic:
 	.string	"PS8"
 	.byte	0x7
 	.uahalf	0x195
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -4738,7 +4777,7 @@ g_UpperUltrasonic:
 	.string	"PS9"
 	.byte	0x7
 	.uahalf	0x196
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -4747,7 +4786,7 @@ g_UpperUltrasonic:
 	.string	"PS10"
 	.byte	0x7
 	.uahalf	0x197
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -4756,7 +4795,7 @@ g_UpperUltrasonic:
 	.string	"PS11"
 	.byte	0x7
 	.uahalf	0x198
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -4765,7 +4804,7 @@ g_UpperUltrasonic:
 	.string	"PS12"
 	.byte	0x7
 	.uahalf	0x199
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -4774,7 +4813,7 @@ g_UpperUltrasonic:
 	.string	"PS13"
 	.byte	0x7
 	.uahalf	0x19a
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -4783,7 +4822,7 @@ g_UpperUltrasonic:
 	.string	"PS14"
 	.byte	0x7
 	.uahalf	0x19b
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -4792,7 +4831,7 @@ g_UpperUltrasonic:
 	.string	"PS15"
 	.byte	0x7
 	.uahalf	0x19c
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -4801,7 +4840,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.uahalf	0x19d
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -4822,7 +4861,7 @@ g_UpperUltrasonic:
 	.string	"P0"
 	.byte	0x7
 	.uahalf	0x1a3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -4831,7 +4870,7 @@ g_UpperUltrasonic:
 	.string	"P1"
 	.byte	0x7
 	.uahalf	0x1a4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -4840,7 +4879,7 @@ g_UpperUltrasonic:
 	.string	"P2"
 	.byte	0x7
 	.uahalf	0x1a5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -4849,7 +4888,7 @@ g_UpperUltrasonic:
 	.string	"P3"
 	.byte	0x7
 	.uahalf	0x1a6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -4858,7 +4897,7 @@ g_UpperUltrasonic:
 	.string	"P4"
 	.byte	0x7
 	.uahalf	0x1a7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -4867,7 +4906,7 @@ g_UpperUltrasonic:
 	.string	"P5"
 	.byte	0x7
 	.uahalf	0x1a8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -4876,7 +4915,7 @@ g_UpperUltrasonic:
 	.string	"P6"
 	.byte	0x7
 	.uahalf	0x1a9
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -4885,7 +4924,7 @@ g_UpperUltrasonic:
 	.string	"P7"
 	.byte	0x7
 	.uahalf	0x1aa
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -4894,7 +4933,7 @@ g_UpperUltrasonic:
 	.string	"P8"
 	.byte	0x7
 	.uahalf	0x1ab
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -4903,7 +4942,7 @@ g_UpperUltrasonic:
 	.string	"P9"
 	.byte	0x7
 	.uahalf	0x1ac
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -4912,7 +4951,7 @@ g_UpperUltrasonic:
 	.string	"P10"
 	.byte	0x7
 	.uahalf	0x1ad
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -4921,7 +4960,7 @@ g_UpperUltrasonic:
 	.string	"P11"
 	.byte	0x7
 	.uahalf	0x1ae
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -4930,7 +4969,7 @@ g_UpperUltrasonic:
 	.string	"P12"
 	.byte	0x7
 	.uahalf	0x1af
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -4939,7 +4978,7 @@ g_UpperUltrasonic:
 	.string	"P13"
 	.byte	0x7
 	.uahalf	0x1b0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -4948,7 +4987,7 @@ g_UpperUltrasonic:
 	.string	"P14"
 	.byte	0x7
 	.uahalf	0x1b1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -4957,7 +4996,7 @@ g_UpperUltrasonic:
 	.string	"P15"
 	.byte	0x7
 	.uahalf	0x1b2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -4966,7 +5005,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.uahalf	0x1b3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -4987,7 +5026,7 @@ g_UpperUltrasonic:
 	.string	"SEL0"
 	.byte	0x7
 	.uahalf	0x1b9
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -4996,7 +5035,7 @@ g_UpperUltrasonic:
 	.string	"SEL1"
 	.byte	0x7
 	.uahalf	0x1ba
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -5005,7 +5044,7 @@ g_UpperUltrasonic:
 	.string	"SEL2"
 	.byte	0x7
 	.uahalf	0x1bb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -5014,7 +5053,7 @@ g_UpperUltrasonic:
 	.string	"SEL3"
 	.byte	0x7
 	.uahalf	0x1bc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -5023,7 +5062,7 @@ g_UpperUltrasonic:
 	.string	"SEL4"
 	.byte	0x7
 	.uahalf	0x1bd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -5032,7 +5071,7 @@ g_UpperUltrasonic:
 	.string	"SEL5"
 	.byte	0x7
 	.uahalf	0x1be
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -5041,7 +5080,7 @@ g_UpperUltrasonic:
 	.string	"SEL6"
 	.byte	0x7
 	.uahalf	0x1bf
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -5050,7 +5089,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF4
 	.byte	0x7
 	.uahalf	0x1c0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x16
@@ -5059,7 +5098,7 @@ g_UpperUltrasonic:
 	.string	"SEL10"
 	.byte	0x7
 	.uahalf	0x1c1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -5068,7 +5107,7 @@ g_UpperUltrasonic:
 	.string	"SEL11"
 	.byte	0x7
 	.uahalf	0x1c2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -5077,7 +5116,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF13
 	.byte	0x7
 	.uahalf	0x1c3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x13
 	.byte	0x1
@@ -5086,7 +5125,7 @@ g_UpperUltrasonic:
 	.string	"LCK"
 	.byte	0x7
 	.uahalf	0x1c4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -5107,7 +5146,7 @@ g_UpperUltrasonic:
 	.string	"PDIS0"
 	.byte	0x7
 	.uahalf	0x1ca
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1f
@@ -5116,7 +5155,7 @@ g_UpperUltrasonic:
 	.string	"PDIS1"
 	.byte	0x7
 	.uahalf	0x1cb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1e
@@ -5125,7 +5164,7 @@ g_UpperUltrasonic:
 	.string	"PDIS2"
 	.byte	0x7
 	.uahalf	0x1cc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1d
@@ -5134,7 +5173,7 @@ g_UpperUltrasonic:
 	.string	"PDIS3"
 	.byte	0x7
 	.uahalf	0x1cd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -5143,7 +5182,7 @@ g_UpperUltrasonic:
 	.string	"PDIS4"
 	.byte	0x7
 	.uahalf	0x1ce
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1b
@@ -5152,7 +5191,7 @@ g_UpperUltrasonic:
 	.string	"PDIS5"
 	.byte	0x7
 	.uahalf	0x1cf
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1a
@@ -5161,7 +5200,7 @@ g_UpperUltrasonic:
 	.string	"PDIS6"
 	.byte	0x7
 	.uahalf	0x1d0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x19
@@ -5170,7 +5209,7 @@ g_UpperUltrasonic:
 	.string	"PDIS7"
 	.byte	0x7
 	.uahalf	0x1d1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -5179,7 +5218,7 @@ g_UpperUltrasonic:
 	.string	"PDIS8"
 	.byte	0x7
 	.uahalf	0x1d2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x17
@@ -5188,7 +5227,7 @@ g_UpperUltrasonic:
 	.string	"PDIS9"
 	.byte	0x7
 	.uahalf	0x1d3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x16
@@ -5197,7 +5236,7 @@ g_UpperUltrasonic:
 	.string	"PDIS10"
 	.byte	0x7
 	.uahalf	0x1d4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x15
@@ -5206,7 +5245,7 @@ g_UpperUltrasonic:
 	.string	"PDIS11"
 	.byte	0x7
 	.uahalf	0x1d5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -5215,7 +5254,7 @@ g_UpperUltrasonic:
 	.string	"PDIS12"
 	.byte	0x7
 	.uahalf	0x1d6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x13
@@ -5224,7 +5263,7 @@ g_UpperUltrasonic:
 	.string	"PDIS13"
 	.byte	0x7
 	.uahalf	0x1d7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x12
@@ -5233,7 +5272,7 @@ g_UpperUltrasonic:
 	.string	"PDIS14"
 	.byte	0x7
 	.uahalf	0x1d8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x11
@@ -5242,7 +5281,7 @@ g_UpperUltrasonic:
 	.string	"PDIS15"
 	.byte	0x7
 	.uahalf	0x1d9
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -5251,7 +5290,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF8
 	.byte	0x7
 	.uahalf	0x1da
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x10
 	.byte	0
@@ -5272,7 +5311,7 @@ g_UpperUltrasonic:
 	.string	"PD0"
 	.byte	0x7
 	.uahalf	0x1e0
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
@@ -5281,7 +5320,7 @@ g_UpperUltrasonic:
 	.string	"PL0"
 	.byte	0x7
 	.uahalf	0x1e1
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -5290,7 +5329,7 @@ g_UpperUltrasonic:
 	.string	"PD1"
 	.byte	0x7
 	.uahalf	0x1e2
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x19
@@ -5299,7 +5338,7 @@ g_UpperUltrasonic:
 	.string	"PL1"
 	.byte	0x7
 	.uahalf	0x1e3
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -5308,7 +5347,7 @@ g_UpperUltrasonic:
 	.string	"PD2"
 	.byte	0x7
 	.uahalf	0x1e4
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x15
@@ -5317,7 +5356,7 @@ g_UpperUltrasonic:
 	.string	"PL2"
 	.byte	0x7
 	.uahalf	0x1e5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -5326,7 +5365,7 @@ g_UpperUltrasonic:
 	.string	"PD3"
 	.byte	0x7
 	.uahalf	0x1e6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x11
@@ -5335,7 +5374,7 @@ g_UpperUltrasonic:
 	.string	"PL3"
 	.byte	0x7
 	.uahalf	0x1e7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -5344,7 +5383,7 @@ g_UpperUltrasonic:
 	.string	"PD4"
 	.byte	0x7
 	.uahalf	0x1e8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0xd
@@ -5353,7 +5392,7 @@ g_UpperUltrasonic:
 	.string	"PL4"
 	.byte	0x7
 	.uahalf	0x1e9
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -5362,7 +5401,7 @@ g_UpperUltrasonic:
 	.string	"PD5"
 	.byte	0x7
 	.uahalf	0x1ea
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x9
@@ -5371,7 +5410,7 @@ g_UpperUltrasonic:
 	.string	"PL5"
 	.byte	0x7
 	.uahalf	0x1eb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -5380,7 +5419,7 @@ g_UpperUltrasonic:
 	.string	"PD6"
 	.byte	0x7
 	.uahalf	0x1ec
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x5
@@ -5389,7 +5428,7 @@ g_UpperUltrasonic:
 	.string	"PL6"
 	.byte	0x7
 	.uahalf	0x1ed
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -5398,7 +5437,7 @@ g_UpperUltrasonic:
 	.string	"PD7"
 	.byte	0x7
 	.uahalf	0x1ee
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1
@@ -5407,7 +5446,7 @@ g_UpperUltrasonic:
 	.string	"PL7"
 	.byte	0x7
 	.uahalf	0x1ef
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -5428,7 +5467,7 @@ g_UpperUltrasonic:
 	.string	"PD8"
 	.byte	0x7
 	.uahalf	0x1f5
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1d
@@ -5437,7 +5476,7 @@ g_UpperUltrasonic:
 	.string	"PL8"
 	.byte	0x7
 	.uahalf	0x1f6
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x1c
@@ -5446,7 +5485,7 @@ g_UpperUltrasonic:
 	.string	"PD9"
 	.byte	0x7
 	.uahalf	0x1f7
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x19
@@ -5455,7 +5494,7 @@ g_UpperUltrasonic:
 	.string	"PL9"
 	.byte	0x7
 	.uahalf	0x1f8
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x18
@@ -5464,7 +5503,7 @@ g_UpperUltrasonic:
 	.string	"PD10"
 	.byte	0x7
 	.uahalf	0x1f9
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x15
@@ -5473,7 +5512,7 @@ g_UpperUltrasonic:
 	.string	"PL10"
 	.byte	0x7
 	.uahalf	0x1fa
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x14
@@ -5482,7 +5521,7 @@ g_UpperUltrasonic:
 	.string	"PD11"
 	.byte	0x7
 	.uahalf	0x1fb
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x11
@@ -5491,7 +5530,7 @@ g_UpperUltrasonic:
 	.string	"PL11"
 	.byte	0x7
 	.uahalf	0x1fc
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x10
@@ -5500,7 +5539,7 @@ g_UpperUltrasonic:
 	.string	"PD12"
 	.byte	0x7
 	.uahalf	0x1fd
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0xd
@@ -5509,7 +5548,7 @@ g_UpperUltrasonic:
 	.string	"PL12"
 	.byte	0x7
 	.uahalf	0x1fe
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xc
@@ -5518,7 +5557,7 @@ g_UpperUltrasonic:
 	.string	"PD13"
 	.byte	0x7
 	.uahalf	0x1ff
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x9
@@ -5527,7 +5566,7 @@ g_UpperUltrasonic:
 	.string	"PL13"
 	.byte	0x7
 	.uahalf	0x200
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x8
@@ -5536,7 +5575,7 @@ g_UpperUltrasonic:
 	.string	"PD14"
 	.byte	0x7
 	.uahalf	0x201
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x5
@@ -5545,7 +5584,7 @@ g_UpperUltrasonic:
 	.string	"PL14"
 	.byte	0x7
 	.uahalf	0x202
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0x4
@@ -5554,7 +5593,7 @@ g_UpperUltrasonic:
 	.string	"PD15"
 	.byte	0x7
 	.uahalf	0x203
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x3
 	.byte	0x1
@@ -5563,7 +5602,7 @@ g_UpperUltrasonic:
 	.string	"PL15"
 	.byte	0x7
 	.uahalf	0x204
-	.uaword	0x164
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0x1
 	.byte	0
@@ -5583,12 +5622,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x20f
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x210
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5609,12 +5648,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x217
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x218
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5635,12 +5674,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x21f
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x220
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5661,12 +5700,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x227
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x228
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5687,12 +5726,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x22f
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x230
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5713,12 +5752,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x237
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x238
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5739,12 +5778,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x23f
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x240
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5765,12 +5804,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x247
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x248
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5791,12 +5830,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x24f
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x250
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5817,12 +5856,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x257
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x258
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5843,12 +5882,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x25f
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x260
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5874,12 +5913,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x268
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x269
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5900,12 +5939,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x270
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x271
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5926,12 +5965,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x278
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x279
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5952,12 +5991,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x280
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x281
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -5978,12 +6017,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x288
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x289
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6004,12 +6043,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x290
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x291
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6030,12 +6069,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x298
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x299
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6056,12 +6095,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2a0
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2a1
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6082,12 +6121,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2a8
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2a9
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6108,12 +6147,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2b0
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2b1
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6134,12 +6173,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2b8
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2b9
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6160,12 +6199,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2c0
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2c1
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6186,12 +6225,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2c8
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2c9
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6212,12 +6251,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2d0
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2d1
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6238,12 +6277,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2d8
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2d9
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6264,12 +6303,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2e0
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2e1
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6290,12 +6329,12 @@ g_UpperUltrasonic:
 	.string	"U"
 	.byte	0x7
 	.uahalf	0x2e8
-	.uaword	0x164
+	.uaword	0x16e
 	.uleb128 0xc
 	.string	"I"
 	.byte	0x7
 	.uahalf	0x2e9
-	.uaword	0x195
+	.uaword	0x17e
 	.uleb128 0xc
 	.string	"B"
 	.byte	0x7
@@ -6531,7 +6570,7 @@ g_UpperUltrasonic:
 	.byte	0xfc
 	.byte	0
 	.uleb128 0x11
-	.uaword	0x1ab
+	.uaword	0x1b5
 	.uaword	0x36f9
 	.uleb128 0x12
 	.uaword	0x13b3
@@ -6723,31 +6762,31 @@ g_UpperUltrasonic:
 	.string	"Ultrasonic"
 	.byte	0xa
 	.byte	0x9
-	.byte	0x20
+	.byte	0x1c
 	.uaword	0x3cae
 	.uleb128 0x7
 	.string	"TRIG_PORT"
 	.byte	0x9
-	.byte	0x22
+	.byte	0x1e
 	.uaword	0x370c
 	.byte	0
 	.uleb128 0x7
 	.string	"TRIG_PIN"
 	.byte	0x9
-	.byte	0x23
-	.uaword	0x1bc
+	.byte	0x1f
+	.uaword	0x1c6
 	.byte	0x4
 	.uleb128 0x7
 	.string	"ECHO_PORT"
 	.byte	0x9
-	.byte	0x24
+	.byte	0x20
 	.uaword	0x370c
 	.byte	0x5
 	.uleb128 0x7
 	.string	"ECHO_PIN"
 	.byte	0x9
-	.byte	0x25
-	.uaword	0x1bc
+	.byte	0x21
+	.uaword	0x1c6
 	.byte	0x9
 	.byte	0
 	.uleb128 0x19
@@ -6766,7 +6805,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF15
 	.byte	0x2
 	.uahalf	0x24e
-	.uaword	0x1bc
+	.uaword	0x1c6
 	.uleb128 0x1b
 	.string	"action"
 	.byte	0x2
@@ -6789,7 +6828,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF15
 	.byte	0x2
 	.uahalf	0x248
-	.uaword	0x1bc
+	.uaword	0x1c6
 	.uleb128 0x1b
 	.string	"mode"
 	.byte	0x2
@@ -6817,7 +6856,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF15
 	.byte	0x2
 	.uahalf	0x242
-	.uaword	0x1bc
+	.uaword	0x1c6
 	.uleb128 0x1b
 	.string	"mode"
 	.byte	0x2
@@ -6840,7 +6879,7 @@ g_UpperUltrasonic:
 	.uaword	.LASF15
 	.byte	0x2
 	.uahalf	0x236
-	.uaword	0x1bc
+	.uaword	0x1c6
 	.byte	0
 	.uleb128 0x19
 	.string	"IfxPort_setPinLow"
@@ -6858,14 +6897,14 @@ g_UpperUltrasonic:
 	.uaword	.LASF15
 	.byte	0x2
 	.uahalf	0x23c
-	.uaword	0x1bc
+	.uaword	0x1c6
 	.byte	0
 	.uleb128 0x1c
 	.string	"IfxStm_get"
 	.byte	0x3
 	.uahalf	0x240
 	.byte	0x1
-	.uaword	0x1df
+	.uaword	0x1e9
 	.byte	0x3
 	.uaword	0x3e33
 	.uleb128 0x1b
@@ -6877,14 +6916,14 @@ g_UpperUltrasonic:
 	.string	"result"
 	.byte	0x3
 	.uahalf	0x242
-	.uaword	0x1df
+	.uaword	0x1e9
 	.byte	0
 	.uleb128 0x1c
 	.string	"IfxPort_getPinState"
 	.byte	0x2
 	.uahalf	0x22a
 	.byte	0x1
-	.uaword	0x19c
+	.uaword	0x1a6
 	.byte	0x3
 	.uaword	0x3e6e
 	.uleb128 0x1a
@@ -6896,74 +6935,49 @@ g_UpperUltrasonic:
 	.uaword	.LASF15
 	.byte	0x2
 	.uahalf	0x22a
-	.uaword	0x1bc
+	.uaword	0x1c6
 	.byte	0
 	.uleb128 0x1e
 	.byte	0x1
-	.string	"calculateDistanceCm"
-	.byte	0x1
-	.byte	0x36
-	.byte	0x1
-	.uaword	0x195
-	.byte	0x1
-	.uaword	0x3ebe
-	.uleb128 0x1f
-	.string	"elapsedTicks"
-	.byte	0x1
-	.byte	0x36
-	.uaword	0x174
-	.uleb128 0x20
-	.string	"timeUs"
-	.byte	0x1
-	.byte	0x38
-	.uaword	0x174
-	.uleb128 0x21
-	.uaword	.LASF16
-	.byte	0x1
-	.byte	0x39
-	.uaword	0x174
-	.byte	0
-	.uleb128 0x22
-	.byte	0x1
 	.string	"initUltrasonic"
 	.byte	0x1
-	.byte	0x11
+	.byte	0x35
 	.byte	0x1
 	.uaword	.LFB574
 	.uaword	.LFE574
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x3f6d
-	.uleb128 0x23
-	.uaword	.LASF17
+	.uaword	0x3f1d
+	.uleb128 0x1f
+	.uaword	.LASF16
 	.byte	0x1
-	.byte	0x11
-	.uaword	0x3f6d
+	.byte	0x35
+	.uaword	0x3f1d
 	.uaword	.LLST0
-	.uleb128 0x24
+	.uleb128 0x20
 	.uaword	0x3cf4
-	.uaword	.LBB32
+	.uaword	.LBB30
 	.uaword	.Ldebug_ranges0+0
 	.byte	0x1
-	.byte	0x13
-	.uaword	0x3f34
-	.uleb128 0x25
+	.byte	0x37
+	.uaword	0x3ee4
+	.uleb128 0x21
 	.uaword	0x3d3c
 	.sleb128 -128
-	.uleb128 0x25
+	.uleb128 0x21
 	.uaword	0x3d2f
 	.sleb128 -128
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3d23
 	.uaword	.LLST1
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3d17
 	.uaword	.LLST2
-	.uleb128 0x27
+	.uleb128 0x23
 	.uaword	.LVL2
-	.uaword	0x4301
-	.uleb128 0x28
+	.uaword	0x4331
+	.uleb128 0x24
 	.byte	0x1
 	.byte	0x55
 	.byte	0x2
@@ -6971,26 +6985,26 @@ g_UpperUltrasonic:
 	.byte	0x80
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x25
 	.uaword	0x3d4b
-	.uaword	.LBB36
+	.uaword	.LBB34
 	.uaword	.Ldebug_ranges0+0x18
 	.byte	0x1
-	.byte	0x14
-	.uleb128 0x2a
+	.byte	0x38
+	.uleb128 0x26
 	.uaword	0x3d85
 	.byte	0x8
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3d79
 	.uaword	.LLST3
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3d6d
 	.uaword	.LLST4
-	.uleb128 0x2b
+	.uleb128 0x27
 	.uaword	.LVL3
 	.byte	0x1
-	.uaword	0x4301
-	.uleb128 0x28
+	.uaword	0x4331
+	.uleb128 0x24
 	.byte	0x1
 	.byte	0x55
 	.byte	0x1
@@ -7001,378 +7015,412 @@ g_UpperUltrasonic:
 	.uleb128 0x4
 	.byte	0x4
 	.uaword	0x3c54
-	.uleb128 0x22
+	.uleb128 0x1e
 	.byte	0x1
 	.string	"sendTrigger"
 	.byte	0x1
-	.byte	0x1f
+	.byte	0x43
 	.byte	0x1
 	.uaword	.LFB576
 	.uaword	.LFE576
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x404f
-	.uleb128 0x23
-	.uaword	.LASF17
+	.uaword	0x3fff
+	.uleb128 0x1f
+	.uaword	.LASF16
 	.byte	0x1
-	.byte	0x1f
-	.uaword	0x3f6d
+	.byte	0x43
+	.uaword	0x3f1d
 	.uaword	.LLST5
-	.uleb128 0x24
+	.uleb128 0x20
 	.uaword	0x3d93
-	.uaword	.LBB42
+	.uaword	.LBB40
 	.uaword	.Ldebug_ranges0+0x38
 	.byte	0x1
-	.byte	0x21
-	.uaword	0x3ff1
-	.uleb128 0x26
+	.byte	0x45
+	.uaword	0x3fa1
+	.uleb128 0x22
 	.uaword	0x3dbc
 	.uaword	.LLST6
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3db0
 	.uaword	.LLST7
-	.uleb128 0x2c
+	.uleb128 0x28
 	.uaword	0x3cae
-	.uaword	.LBB43
+	.uaword	.LBB41
 	.uaword	.Ldebug_ranges0+0x38
 	.byte	0x2
 	.uahalf	0x238
-	.uleb128 0x2a
+	.uleb128 0x26
 	.uaword	0x3ce4
 	.byte	0x1
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3cd8
 	.uaword	.LLST6
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3ccc
 	.uaword	.LLST7
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x20
 	.uaword	0x3dc9
-	.uaword	.LBB48
+	.uaword	.LBB46
 	.uaword	.Ldebug_ranges0+0x50
 	.byte	0x1
-	.byte	0x23
-	.uaword	0x403f
-	.uleb128 0x26
+	.byte	0x47
+	.uaword	0x3fef
+	.uleb128 0x22
 	.uaword	0x3df1
 	.uaword	.LLST10
-	.uleb128 0x2d
+	.uleb128 0x29
 	.uaword	0x3de5
 	.byte	0x1
 	.byte	0x52
-	.uleb128 0x2c
+	.uleb128 0x28
 	.uaword	0x3cae
-	.uaword	.LBB49
+	.uaword	.LBB47
 	.uaword	.Ldebug_ranges0+0x50
 	.byte	0x2
 	.uahalf	0x23e
-	.uleb128 0x2e
+	.uleb128 0x2a
 	.uaword	0x3ce4
 	.uaword	0x10000
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3cd8
 	.uaword	.LLST10
-	.uleb128 0x2d
+	.uleb128 0x29
 	.uaword	0x3ccc
 	.byte	0x1
 	.byte	0x52
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x23
 	.uaword	.LVL7
-	.uaword	0x432f
-	.uleb128 0x28
+	.uaword	0x435f
+	.uleb128 0x24
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x3a
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.byte	0x1
 	.string	"measureEchoTick"
 	.byte	0x1
-	.byte	0x26
+	.byte	0x4a
 	.byte	0x1
-	.uaword	0x174
+	.uaword	0x185
 	.uaword	.LFB577
 	.uaword	.LFE577
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x41b0
-	.uleb128 0x30
-	.uaword	.LASF17
+	.uaword	0x4160
+	.uleb128 0x2c
+	.uaword	.LASF16
 	.byte	0x1
-	.byte	0x26
-	.uaword	0x3f6d
+	.byte	0x4a
+	.uaword	0x3f1d
 	.byte	0x1
 	.byte	0x64
-	.uleb128 0x31
+	.uleb128 0x2d
 	.string	"startTick"
 	.byte	0x1
-	.byte	0x28
-	.uaword	0x1df
+	.byte	0x4c
+	.uaword	0x1e9
 	.uaword	.LLST12
-	.uleb128 0x31
+	.uleb128 0x2d
 	.string	"elapsedTick"
 	.byte	0x1
-	.byte	0x28
-	.uaword	0x1df
+	.byte	0x4c
+	.uaword	0x1e9
 	.uaword	.LLST13
-	.uleb128 0x24
+	.uleb128 0x20
 	.uaword	0x3dfe
-	.uaword	.LBB54
+	.uaword	.LBB52
 	.uaword	.Ldebug_ranges0+0x68
 	.byte	0x1
-	.byte	0x29
-	.uaword	0x40dd
-	.uleb128 0x25
+	.byte	0x4d
+	.uaword	0x408d
+	.uleb128 0x21
 	.uaword	0x3e17
 	.sleb128 -268435456
-	.uleb128 0x32
+	.uleb128 0x2e
 	.uaword	.Ldebug_ranges0+0x68
-	.uleb128 0x33
+	.uleb128 0x2f
 	.uaword	0x3e23
 	.uaword	.LLST14
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x20
 	.uaword	0x3e33
-	.uaword	.LBB58
+	.uaword	.LBB56
 	.uaword	.Ldebug_ranges0+0x80
 	.byte	0x1
-	.byte	0x2a
-	.uaword	0x4101
-	.uleb128 0x2d
+	.byte	0x4e
+	.uaword	0x40b1
+	.uleb128 0x29
 	.uaword	0x3e61
 	.byte	0x2
 	.byte	0x84
 	.sleb128 9
-	.uleb128 0x2d
+	.uleb128 0x29
 	.uaword	0x3e55
 	.byte	0x2
 	.byte	0x84
 	.sleb128 5
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x30
 	.uaword	0x3dfe
-	.uaword	.LBB62
-	.uaword	.LBE62
+	.uaword	.LBB60
+	.uaword	.LBE60
 	.byte	0x1
-	.byte	0x2b
-	.uaword	0x4131
-	.uleb128 0x26
+	.byte	0x4f
+	.uaword	0x40e1
+	.uleb128 0x22
 	.uaword	0x3e17
 	.uaword	.LLST15
-	.uleb128 0x35
-	.uaword	.LBB63
-	.uaword	.LBE63
-	.uleb128 0x33
+	.uleb128 0x31
+	.uaword	.LBB61
+	.uaword	.LBE61
+	.uleb128 0x2f
 	.uaword	0x3e23
 	.uaword	.LLST16
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x20
 	.uaword	0x3dfe
-	.uaword	.LBB64
+	.uaword	.LBB62
 	.uaword	.Ldebug_ranges0+0x98
 	.byte	0x1
-	.byte	0x2e
-	.uaword	0x415d
-	.uleb128 0x26
+	.byte	0x52
+	.uaword	0x410d
+	.uleb128 0x22
 	.uaword	0x3e17
 	.uaword	.LLST17
-	.uleb128 0x32
+	.uleb128 0x2e
 	.uaword	.Ldebug_ranges0+0x98
-	.uleb128 0x33
+	.uleb128 0x2f
 	.uaword	0x3e23
 	.uaword	.LLST18
 	.byte	0
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x30
 	.uaword	0x3e33
-	.uaword	.LBB68
-	.uaword	.LBE68
+	.uaword	.LBB66
+	.uaword	.LBE66
 	.byte	0x1
-	.byte	0x2f
-	.uaword	0x4183
-	.uleb128 0x26
+	.byte	0x53
+	.uaword	0x4133
+	.uleb128 0x22
 	.uaword	0x3e61
 	.uaword	.LLST19
-	.uleb128 0x26
+	.uleb128 0x22
 	.uaword	0x3e55
 	.uaword	.LLST20
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x32
 	.uaword	0x3dfe
-	.uaword	.LBB70
-	.uaword	.LBE70
+	.uaword	.LBB68
+	.uaword	.LBE68
 	.byte	0x1
-	.byte	0x30
-	.uleb128 0x26
+	.byte	0x54
+	.uleb128 0x22
 	.uaword	0x3e17
 	.uaword	.LLST21
-	.uleb128 0x35
-	.uaword	.LBB71
-	.uaword	.LBE71
-	.uleb128 0x33
+	.uleb128 0x31
+	.uaword	.LBB69
+	.uaword	.LBE69
+	.uleb128 0x2f
 	.uaword	0x3e23
 	.uaword	.LLST22
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x33
+	.byte	0x1
+	.string	"calculateDistanceCm"
+	.byte	0x1
+	.byte	0x5a
+	.byte	0x1
+	.uaword	0x14a
+	.uaword	.LFB578
+	.uaword	.LFE578
+	.byte	0x1
+	.byte	0x9c
+	.uaword	0x41c5
+	.uleb128 0x34
+	.string	"elapsedTicks"
+	.byte	0x1
+	.byte	0x5a
+	.uaword	0x185
+	.uaword	.LLST23
+	.uleb128 0x2d
+	.string	"timeUs"
+	.byte	0x1
+	.byte	0x5c
+	.uaword	0x14a
+	.uaword	.LLST24
+	.uleb128 0x35
+	.uaword	.LASF17
+	.byte	0x1
+	.byte	0x5d
+	.uaword	0x14a
+	.uaword	.LLST25
+	.byte	0
+	.uleb128 0x2b
 	.byte	0x1
 	.string	"getUltrasonic"
 	.byte	0x1
-	.byte	0x17
+	.byte	0x3b
 	.byte	0x1
-	.uaword	0x195
+	.uaword	0x14a
 	.uaword	.LFB575
 	.uaword	.LFE575
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x425f
-	.uleb128 0x23
-	.uaword	.LASF17
-	.byte	0x1
-	.byte	0x17
-	.uaword	0x3f6d
-	.uaword	.LLST23
-	.uleb128 0x31
-	.string	"echoTicks"
-	.byte	0x1
-	.byte	0x19
-	.uaword	0x174
-	.uaword	.LLST24
-	.uleb128 0x21
+	.uaword	0x424d
+	.uleb128 0x1f
 	.uaword	.LASF16
 	.byte	0x1
-	.byte	0x1b
-	.uaword	0x195
-	.uleb128 0x34
-	.uaword	0x3e6e
-	.uaword	.LBB72
-	.uaword	.LBE72
-	.byte	0x1
-	.byte	0x1b
-	.uaword	0x423a
-	.uleb128 0x26
-	.uaword	0x3e90
-	.uaword	.LLST25
-	.uleb128 0x35
-	.uaword	.LBB73
-	.uaword	.LBE73
-	.uleb128 0x33
-	.uaword	0x3ea4
+	.byte	0x3b
+	.uaword	0x3f1d
 	.uaword	.LLST26
+	.uleb128 0x2d
+	.string	"echoTicks"
+	.byte	0x1
+	.byte	0x3d
+	.uaword	0x185
+	.uaword	.LLST27
+	.uleb128 0x36
+	.uaword	.LASF17
+	.byte	0x1
+	.byte	0x3f
+	.uaword	0x14a
 	.uleb128 0x37
-	.uaword	0x3eb2
+	.uaword	.LVL40
+	.uaword	0x3f23
+	.uaword	0x422e
+	.uleb128 0x24
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
 	.byte	0
+	.uleb128 0x37
+	.uaword	.LVL41
+	.uaword	0x3fff
+	.uaword	0x4242
+	.uleb128 0x24
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
 	.byte	0
 	.uleb128 0x38
-	.uaword	.LVL34
-	.uaword	0x3f73
-	.uaword	0x424e
-	.uleb128 0x28
+	.uaword	.LVL42
 	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x27
-	.uaword	.LVL35
-	.uaword	0x404f
-	.uleb128 0x28
-	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.byte	0
-	.uleb128 0x39
-	.uaword	0x3e6e
-	.uaword	.LFB578
-	.uaword	.LFE578
-	.byte	0x1
-	.byte	0x9c
-	.byte	0x1
-	.uaword	0x428f
-	.uleb128 0x26
-	.uaword	0x3e90
-	.uaword	.LLST27
-	.uleb128 0x33
-	.uaword	0x3ea4
-	.uaword	.LLST28
-	.uleb128 0x33
-	.uaword	0x3eb2
-	.uaword	.LLST29
+	.uaword	0x4160
 	.byte	0
 	.uleb128 0x11
 	.uaword	0x270
-	.uaword	0x429f
+	.uaword	0x425d
 	.uleb128 0x12
 	.uaword	0x13b3
 	.byte	0x2
 	.byte	0
-	.uleb128 0x3a
+	.uleb128 0x39
 	.string	"IfxCpu_cfg_indexMap"
 	.byte	0x8
 	.byte	0xa7
-	.uaword	0x42bc
+	.uaword	0x427a
 	.byte	0x1
 	.byte	0x1
+	.uleb128 0x3a
+	.uaword	0x424d
 	.uleb128 0x3b
-	.uaword	0x428f
-	.uleb128 0x3c
-	.string	"g_UpperUltrasonic"
+	.string	"g_Ultrasonic_FL"
 	.byte	0x1
 	.byte	0x4
 	.uaword	0x3c54
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
-	.uaword	g_UpperUltrasonic
-	.uleb128 0x3c
-	.string	"g_FrontUltrasonic"
+	.uaword	g_Ultrasonic_FL
+	.uleb128 0x3b
+	.string	"g_Ultrasonic_F"
 	.byte	0x1
 	.byte	0xa
 	.uaword	0x3c54
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
-	.uaword	g_FrontUltrasonic
-	.uleb128 0x3d
+	.uaword	g_Ultrasonic_F
+	.uleb128 0x3b
+	.string	"g_Ultrasonic_FR"
+	.byte	0x1
+	.byte	0x10
+	.uaword	0x3c54
+	.byte	0x1
+	.byte	0x5
+	.byte	0x3
+	.uaword	g_Ultrasonic_FR
+	.uleb128 0x3b
+	.string	"g_Ultrasonic_SL"
+	.byte	0x1
+	.byte	0x16
+	.uaword	0x3c54
+	.byte	0x1
+	.byte	0x5
+	.byte	0x3
+	.uaword	g_Ultrasonic_SL
+	.uleb128 0x3b
+	.string	"g_Ultrasonic_SR"
+	.byte	0x1
+	.byte	0x1c
+	.uaword	0x3c54
+	.byte	0x1
+	.byte	0x5
+	.byte	0x3
+	.uaword	g_Ultrasonic_SR
+	.uleb128 0x3b
+	.string	"g_Ultrasonic_R"
+	.byte	0x1
+	.byte	0x28
+	.uaword	0x3c54
+	.byte	0x1
+	.byte	0x5
+	.byte	0x3
+	.uaword	g_Ultrasonic_R
+	.uleb128 0x3c
 	.byte	0x1
 	.string	"IfxPort_setPinMode"
 	.byte	0x2
 	.uahalf	0x175
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x432f
-	.uleb128 0x3e
+	.uaword	0x435f
+	.uleb128 0x3d
 	.uaword	0x370c
-	.uleb128 0x3e
-	.uaword	0x1bc
-	.uleb128 0x3e
+	.uleb128 0x3d
+	.uaword	0x1c6
+	.uleb128 0x3d
 	.uaword	0x3a4b
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x3e
 	.byte	0x1
 	.string	"delay_us"
 	.byte	0xa
-	.byte	0xc
+	.byte	0xd
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x3e
-	.uaword	0x180
+	.uleb128 0x3d
+	.uaword	0x191
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits
@@ -7793,66 +7841,6 @@ g_UpperUltrasonic:
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x20
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x1f
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x20
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x21
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x22
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
@@ -7865,7 +7853,7 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x1f
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -7880,7 +7868,7 @@ g_UpperUltrasonic:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x20
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -7897,7 +7885,7 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x21
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -7906,7 +7894,7 @@ g_UpperUltrasonic:
 	.uleb128 0xd
 	.byte	0
 	.byte	0
-	.uleb128 0x26
+	.uleb128 0x22
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -7915,7 +7903,7 @@ g_UpperUltrasonic:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x23
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -7924,7 +7912,7 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x24
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -7933,7 +7921,7 @@ g_UpperUltrasonic:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x25
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -7948,7 +7936,7 @@ g_UpperUltrasonic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x26
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -7957,7 +7945,7 @@ g_UpperUltrasonic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x27
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -7968,7 +7956,7 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x28
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -7983,7 +7971,7 @@ g_UpperUltrasonic:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x29
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -7992,7 +7980,7 @@ g_UpperUltrasonic:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -8001,7 +7989,7 @@ g_UpperUltrasonic:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -8028,7 +8016,7 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2c
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -8043,7 +8031,7 @@ g_UpperUltrasonic:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x2d
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8058,14 +8046,14 @@ g_UpperUltrasonic:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x32
+	.uleb128 0x2e
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x55
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x2f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x31
@@ -8074,7 +8062,7 @@ g_UpperUltrasonic:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x30
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -8089,40 +8077,101 @@ g_UpperUltrasonic:
 	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.byte	0
+	.byte	0
+	.uleb128 0x32
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x33
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x34
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x35
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
 	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x36
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x37
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x38
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -8133,24 +8182,18 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x39
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0x4109
+	.byte	0
 	.uleb128 0x11
 	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x40
-	.uleb128 0xa
-	.uleb128 0x2117
+	.uleb128 0x2115
 	.uleb128 0xc
-	.uleb128 0x1
+	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3a
+	.uleb128 0x39
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8167,14 +8210,14 @@ g_UpperUltrasonic:
 	.uleb128 0xc
 	.byte	0
 	.byte	0
-	.uleb128 0x3b
+	.uleb128 0x3a
 	.uleb128 0x26
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8191,7 +8234,7 @@ g_UpperUltrasonic:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x3d
+	.uleb128 0x3c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -8210,14 +8253,14 @@ g_UpperUltrasonic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3d
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x3e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -8380,9 +8423,9 @@ g_UpperUltrasonic:
 	.byte	0x7f
 	.sleb128 0
 	.byte	0xf7
-	.uleb128 0x164
+	.uleb128 0x16e
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x9f
 	.uaword	.LVL12-.Ltext0
 	.uaword	.LVL13-.Ltext0
@@ -8422,17 +8465,17 @@ g_UpperUltrasonic:
 	.byte	0x72
 	.sleb128 0
 	.byte	0xf7
-	.uleb128 0x164
+	.uleb128 0x16e
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x8
 	.byte	0x20
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x24
 	.byte	0xf5
 	.uleb128 0x2
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x21
 	.byte	0x9f
 	.uaword	0
@@ -8455,9 +8498,9 @@ g_UpperUltrasonic:
 	.byte	0x7f
 	.sleb128 0
 	.byte	0xf7
-	.uleb128 0x164
+	.uleb128 0x16e
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x9f
 	.uaword	.LVL21-.Ltext0
 	.uaword	.LVL23-.Ltext0
@@ -8474,9 +8517,9 @@ g_UpperUltrasonic:
 	.byte	0x7f
 	.sleb128 0
 	.byte	0xf7
-	.uleb128 0x164
+	.uleb128 0x16e
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x9f
 	.uaword	.LVL24-.Ltext0
 	.uaword	.LVL31-.Ltext0
@@ -8522,17 +8565,17 @@ g_UpperUltrasonic:
 	.byte	0x72
 	.sleb128 0
 	.byte	0xf7
-	.uleb128 0x164
+	.uleb128 0x16e
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x8
 	.byte	0x20
 	.byte	0xf7
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x24
 	.byte	0xf5
 	.uleb128 0x2
-	.uleb128 0x14a
+	.uleb128 0x154
 	.byte	0x21
 	.byte	0x9f
 	.uaword	0
@@ -8541,49 +8584,8 @@ g_UpperUltrasonic:
 	.uaword	.LVL33-.Ltext0
 	.uaword	.LVL34-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL34-1-.Ltext0
-	.uaword	.LFE575-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	0
-	.uaword	0
-.LLST24:
-	.uaword	.LVL36-.Ltext0
-	.uaword	.LVL37-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL37-.Ltext0
-	.uaword	.LVL39-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST25:
-	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL39-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST26:
-	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL39-.Ltext0
-	.uahalf	0x6
-	.byte	0x7f
-	.sleb128 0
-	.byte	0x8
-	.byte	0xc8
-	.byte	0x1b
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST27:
-	.uaword	.LVL41-.Ltext0
-	.uaword	.LVL42-.Ltext0
-	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL34-1-.Ltext0
 	.uaword	.LFE578-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -8592,58 +8594,134 @@ g_UpperUltrasonic:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-.LLST28:
-	.uaword	.LVL41-.Ltext0
-	.uaword	.LVL42-.Ltext0
-	.uahalf	0x6
+.LLST24:
+	.uaword	.LVL33-.Ltext0
+	.uaword	.LVL34-1-.Ltext0
+	.uahalf	0x16
 	.byte	0x74
 	.sleb128 0
+	.byte	0xf7
+	.uleb128 0x17e
+	.byte	0xf7
+	.uleb128 0x14a
+	.byte	0xf4
+	.uleb128 0x14a
 	.byte	0x8
-	.byte	0xc8
+	.uaword	0
+	.uaword	0x40690000
 	.byte	0x1b
 	.byte	0x9f
-	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL34-1-.Ltext0
 	.uaword	.LFE578-.Ltext0
-	.uahalf	0x7
+	.uahalf	0x17
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x54
+	.byte	0xf7
+	.uleb128 0x17e
+	.byte	0xf7
+	.uleb128 0x14a
+	.byte	0xf4
+	.uleb128 0x14a
 	.byte	0x8
-	.byte	0xc8
+	.uaword	0
+	.uaword	0x40690000
 	.byte	0x1b
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-.LLST29:
-	.uaword	.LVL41-.Ltext0
-	.uaword	.LVL42-.Ltext0
-	.uahalf	0xc
+.LLST25:
+	.uaword	.LVL33-.Ltext0
+	.uaword	.LVL34-1-.Ltext0
+	.uahalf	0x3d
 	.byte	0x74
 	.sleb128 0
+	.byte	0xf7
+	.uleb128 0x17e
+	.byte	0xf7
+	.uleb128 0x14a
+	.byte	0xf4
+	.uleb128 0x14a
 	.byte	0x8
-	.byte	0xc8
+	.uaword	0
+	.uaword	0x40690000
 	.byte	0x1b
-	.byte	0x41
+	.byte	0xf4
+	.uleb128 0x14a
+	.byte	0x8
+	.uaword	0
+	.uaword	0x40410000
 	.byte	0x1e
-	.byte	0xa
-	.uahalf	0x3e8
+	.byte	0xf4
+	.uleb128 0x14a
+	.byte	0x8
+	.uaword	0
+	.uaword	0x408f4000
 	.byte	0x1b
+	.byte	0xf4
+	.uleb128 0x14a
+	.byte	0x8
+	.uaword	0
+	.uaword	0x3fe00000
+	.byte	0x1e
 	.byte	0x9f
-	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL34-1-.Ltext0
 	.uaword	.LFE578-.Ltext0
-	.uahalf	0xd
+	.uahalf	0x3e
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x54
+	.byte	0xf7
+	.uleb128 0x17e
+	.byte	0xf7
+	.uleb128 0x14a
+	.byte	0xf4
+	.uleb128 0x14a
 	.byte	0x8
-	.byte	0xc8
+	.uaword	0
+	.uaword	0x40690000
 	.byte	0x1b
-	.byte	0x41
+	.byte	0xf4
+	.uleb128 0x14a
+	.byte	0x8
+	.uaword	0
+	.uaword	0x40410000
 	.byte	0x1e
-	.byte	0xa
-	.uahalf	0x3e8
+	.byte	0xf4
+	.uleb128 0x14a
+	.byte	0x8
+	.uaword	0
+	.uaword	0x408f4000
 	.byte	0x1b
+	.byte	0xf4
+	.uleb128 0x14a
+	.byte	0x8
+	.uaword	0
+	.uaword	0x3fe00000
+	.byte	0x1e
 	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST26:
+	.uaword	.LVL39-.Ltext0
+	.uaword	.LVL40-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x64
+	.uaword	.LVL40-1-.Ltext0
+	.uaword	.LFE575-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	0
+	.uaword	0
+.LLST27:
+	.uaword	.LVL41-.Ltext0
+	.uaword	.LVL42-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL43-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
 	.uaword	0
 	.uaword	0
 .section .debug_aranges,"",@progbits
@@ -8660,48 +8738,48 @@ g_UpperUltrasonic:
 	.uaword	0
 .section .debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.uaword	.LBB32-.Ltext0
-	.uaword	.LBE32-.Ltext0
-	.uaword	.LBB35-.Ltext0
-	.uaword	.LBE35-.Ltext0
+	.uaword	.LBB30-.Ltext0
+	.uaword	.LBE30-.Ltext0
+	.uaword	.LBB33-.Ltext0
+	.uaword	.LBE33-.Ltext0
 	.uaword	0
 	.uaword	0
-	.uaword	.LBB36-.Ltext0
-	.uaword	.LBE36-.Ltext0
+	.uaword	.LBB34-.Ltext0
+	.uaword	.LBE34-.Ltext0
+	.uaword	.LBB38-.Ltext0
+	.uaword	.LBE38-.Ltext0
+	.uaword	.LBB39-.Ltext0
+	.uaword	.LBE39-.Ltext0
+	.uaword	0
+	.uaword	0
 	.uaword	.LBB40-.Ltext0
 	.uaword	.LBE40-.Ltext0
-	.uaword	.LBB41-.Ltext0
-	.uaword	.LBE41-.Ltext0
+	.uaword	.LBB45-.Ltext0
+	.uaword	.LBE45-.Ltext0
 	.uaword	0
 	.uaword	0
-	.uaword	.LBB42-.Ltext0
-	.uaword	.LBE42-.Ltext0
-	.uaword	.LBB47-.Ltext0
-	.uaword	.LBE47-.Ltext0
+	.uaword	.LBB46-.Ltext0
+	.uaword	.LBE46-.Ltext0
+	.uaword	.LBB51-.Ltext0
+	.uaword	.LBE51-.Ltext0
 	.uaword	0
 	.uaword	0
-	.uaword	.LBB48-.Ltext0
-	.uaword	.LBE48-.Ltext0
-	.uaword	.LBB53-.Ltext0
-	.uaword	.LBE53-.Ltext0
+	.uaword	.LBB52-.Ltext0
+	.uaword	.LBE52-.Ltext0
+	.uaword	.LBB55-.Ltext0
+	.uaword	.LBE55-.Ltext0
 	.uaword	0
 	.uaword	0
-	.uaword	.LBB54-.Ltext0
-	.uaword	.LBE54-.Ltext0
-	.uaword	.LBB57-.Ltext0
-	.uaword	.LBE57-.Ltext0
+	.uaword	.LBB56-.Ltext0
+	.uaword	.LBE56-.Ltext0
+	.uaword	.LBB59-.Ltext0
+	.uaword	.LBE59-.Ltext0
 	.uaword	0
 	.uaword	0
-	.uaword	.LBB58-.Ltext0
-	.uaword	.LBE58-.Ltext0
-	.uaword	.LBB61-.Ltext0
-	.uaword	.LBE61-.Ltext0
-	.uaword	0
-	.uaword	0
-	.uaword	.LBB64-.Ltext0
-	.uaword	.LBE64-.Ltext0
-	.uaword	.LBB67-.Ltext0
-	.uaword	.LBE67-.Ltext0
+	.uaword	.LBB62-.Ltext0
+	.uaword	.LBE62-.Ltext0
+	.uaword	.LBB65-.Ltext0
+	.uaword	.LBE65-.Ltext0
 	.uaword	0
 	.uaword	0
 .section .debug_line,"",@progbits
@@ -8721,7 +8799,7 @@ g_UpperUltrasonic:
 	.string	"reserved_8"
 .LASF7:
 	.string	"reserved_C"
-.LASF16:
+.LASF17:
 	.string	"distanceCm"
 .LASF15:
 	.string	"pinIndex"
@@ -8735,7 +8813,7 @@ g_UpperUltrasonic:
 	.string	"port"
 .LASF5:
 	.string	"MODNUMBER"
-.LASF17:
+.LASF16:
 	.string	"ultrasonic"
 .LASF11:
 	.string	"reserved_20"

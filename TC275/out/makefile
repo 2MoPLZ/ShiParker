@@ -98,12 +98,8 @@ OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/_Impl/IfxVadc_cfg.c
 OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Vadc/std/IfxVadc.c
 OS_EE_APP_CFG_SRCS += bsw.c
 OS_EE_APP_CFG_SRCS += asw.c
-OS_EE_APP_CFG_SRCS += Lcd_Driver.c
 OS_EE_APP_CFG_SRCS += ultrasonic_Driver.c
 OS_EE_APP_CFG_SRCS += uart_Driver.c
-OS_EE_APP_CFG_SRCS += Button_Driver.c
-OS_EE_APP_CFG_SRCS += infotainment_System.c
-OS_EE_APP_CFG_SRCS += photoresistor_Driver.c
 
 
 export OS_EE_APP_CFG_SRCS

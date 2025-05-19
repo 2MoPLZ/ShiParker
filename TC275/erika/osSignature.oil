@@ -39,11 +39,6 @@ CPU test_application {
 		HANDLER = "asclin0TxISR";
 		SOURCE = "ASCLIN0TX";
 	};
-	ISR ButtonISR {
-		CATEGORY = 2;
-		SOURCE = "SCUERU0";
-		PRIORITY = 5;
-	};
 	ISR TimerISR {
 		CATEGORY = 2;
 		SOURCE = "STM0SR0";
