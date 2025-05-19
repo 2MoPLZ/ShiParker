@@ -1,3 +1,6 @@
 *.launch
 */Debug
 *.ld
+out/*
+erika/*
+../.vscode/
