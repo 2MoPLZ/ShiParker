@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ifxsrc.h": "c",
+        "configuration.h": "c",
+        "configurationisr.h": "c"
+    }
+}
