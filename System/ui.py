@@ -8,6 +8,7 @@ vehicle_ids = ['00', '01']
 TOTAL_VEHICLES = len(vehicle_ids)
 vehicle_status = ['Waiting'] * TOTAL_VEHICLES
 completed_vehicles = 0
+current_vehicle_index = -1  # 현재 실행 중인 차량 인덱스 (-1이면 아직 시작 안 됨)
 
 # 상태 매핑
 status_map = {
@@ -43,6 +44,10 @@ def on_message(client, userdata, msg):
                 vehicle_status[vehicle_index] = status_str
                 update_vehicle_status()
                 update_progress()
+
+                # TERMINATED 상태인 경우 다음 차량에 START 전송
+                if status_str == "TERMINATED" and vehicle_index == current_vehicle_index:
+                    send_start_command_to_next()
         except Exception as e:
             print(f"[ERROR] MQTT 메시지 처리 실패: {e}")
 
@@ -52,11 +57,24 @@ def send_mqtt_command(command_code):
         mqtt_client.publish(topic, str(command_code))
         print(f"[MQTT] Sent to {topic} -> {command_code}")
 
+def send_start_command_to_next():
+    global current_vehicle_index
+    current_vehicle_index += 1
+    if current_vehicle_index < TOTAL_VEHICLES:
+        vehicle_id = vehicle_ids[current_vehicle_index]
+        topic = f"vehicle-{vehicle_id}/command"
+        mqtt_client.publish(topic, "1")  # START
+        print(f"[MQTT] START sent to {topic}")
+    else:
+        print("🚘 All vehicles have been started and terminated.")
+
 def forcestop_clicked():
     send_mqtt_command(0)  # FORCESTOP
 
 def start_clicked():
-    send_mqtt_command(1)  # START
+    global current_vehicle_index
+    current_vehicle_index = -1  # 초기화 후
+    send_start_command_to_next()  # 첫 차량부터 시작
 
 def stop_clicked():
     send_mqtt_command(2)  # STOP
@@ -70,27 +88,34 @@ def update_progress():
 
 def update_vehicle_status():
     color_map = {
-        "READY": "#87CEEB",      # 하늘색
-        "RUNNING": "#FFD700",    # 노랑
-        "STOP": "#FFA500",       # 주황
-        "TERMINATED": "#32CD32", # 연두
-        "ERROR": "#FF4C4C",      # 빨강
+        "READY": "#87CEEB",
+        "RUNNING": "#FFD700",
+        "STOP": "#FFA500",
+        "TERMINATED": "#32CD32",
+        "ERROR": "#FF4C4C",
         "RESERVED1": "gray",
         "RESERVED2": "gray",
-        "UNKNOWN": "black"
+        "UNKNOWN": "black",
+        "Waiting": "gray"
     }
 
     for i, status in enumerate(vehicle_status):
         color = color_map.get(status, "black")
         vehicle_labels[i].config(text=f"Vehicle {i+1}\n{status}", bg=color)
 
-
 # 카메라 보기
+# def open_camera_view():
+#     print("📷 Opening camera...")
+#     root.iconify()
+#     proc = subprocess.Popen(["libcamera-hello", "--timeout", "0"])
+#     root.after(1000, check_camera_closed, proc)
+
 def open_camera_view():
     print("📷 Opening camera...")
     root.iconify()
-    proc = subprocess.Popen(["libcamera-hello", "--timeout", "0"])
+    proc = subprocess.Popen(["libcamera-hello", "--qt-preview", "--timeout", "0"])
     root.after(1000, check_camera_closed, proc)
+
 
 def check_camera_closed(proc):
     if proc.poll() is None:
