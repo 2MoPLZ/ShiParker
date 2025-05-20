@@ -15,7 +15,7 @@ PubSubClient client(espClient);
 
 HardwareSerial& uart = Serial2; // UART2 사용
 
-typedef struct __attribute__((__packed__)) ActuatorPacket {
+typedef struct __attribute__((__packed__)) ParkingSystemPacket {
   uint8_t start_byte;       // 0xAA
   uint8_t car_status;       
   double car_current_x;     
@@ -24,9 +24,9 @@ typedef struct __attribute__((__packed__)) ActuatorPacket {
   double car_target_y;
   uint8_t car_command;      
   uint8_t crc;              // checksum
-} ActuatorPacket;
+} ParkingSystemPacket;
 
-ActuatorPacket currentPacket = {
+ParkingSystemPacket currentPacket = {
   0xAA, 0, 12.345, 67.890, 90.123, 45.678, 1, 0
 };
 
@@ -62,8 +62,8 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
     Serial.println(command);
     currentPacket.car_command = command;
     uint8_t* ptr = (uint8_t*)&currentPacket;
-    currentPacket.crc = calculate_checksum(ptr, sizeof(ActuatorPacket) - 1);
-    uart.write(ptr, sizeof(ActuatorPacket));
+    currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+    uart.write(ptr, sizeof(ParkingSystemPacket));
     Serial.println("[UART] 명령 전송됨 (루프백 기대)");
   }
 }
@@ -90,7 +90,7 @@ void publishMessage(const char* topic, const String& payload) {
   }
 }
 
-void processPacket(const ActuatorPacket& pkt) {
+void processPacket(const ParkingSystemPacket& pkt) {
   String status_topic = String(mqtt_client_id) + "/status";
   publishMessage(status_topic.c_str(), String(pkt.car_status));
 
@@ -120,16 +120,16 @@ void loop() {
   client.loop();
 
   // UART 수신 처리
-  static uint8_t buffer[sizeof(ActuatorPacket)];
+  static uint8_t buffer[sizeof(ParkingSystemPacket)];
   static size_t index = 0;
 
   while (uart.available()) {
     uint8_t b = uart.read();
     if (index == 0 && b != 0xAA) continue; // 시작 바이트 검사
     buffer[index++] = b;
-    if (index == sizeof(ActuatorPacket)) {
-      ActuatorPacket* pkt = (ActuatorPacket*)buffer;
-      uint8_t crc = calculate_checksum(buffer, sizeof(ActuatorPacket) - 1);
+    if (index == sizeof(ParkingSystemPacket)) {
+      ParkingSystemPacket* pkt = (ParkingSystemPacket*)buffer;
+      uint8_t crc = calculate_checksum(buffer, sizeof(ParkingSystemPacket) - 1);
       if (crc == pkt->crc) {
         Serial.println("[UART] 패킷 수신 완료");
         processPacket(*pkt);
@@ -146,8 +146,8 @@ void loop() {
   // if (millis() - lastTest > 10000) {
   //   currentPacket.car_status = (currentPacket.car_status + 1) % 4;
   //   uint8_t* ptr = (uint8_t*)&currentPacket;
-  //   currentPacket.crc = calculate_checksum(ptr, sizeof(ActuatorPacket) - 1);
-  //   uart.write(ptr, sizeof(ActuatorPacket));
+  //   currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+  //   uart.write(ptr, sizeof(ParkingSystemPacket));
   //   Serial.println("[UART] 테스트 패킷 전송됨");
   //   lastTest = millis();
   // }
