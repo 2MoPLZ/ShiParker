@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox  # ✅ 팝업 메시지박스 포함
 import subprocess
 import paho.mqtt.client as mqtt
 
@@ -45,11 +45,21 @@ def on_message(client, userdata, msg):
                 update_vehicle_status()
                 update_progress()
 
-                # TERMINATED 상태인 경우 다음 차량에 START 전송
+                # ⛔ ERROR 상태인 경우 팝업 띄우고 전체 STOP
+                if status_str == "ERROR":
+                    show_error_popup(vehicle_id)
+                    stop_clicked()
+                    return
+
+                # ✅ TERMINATED 상태면 다음 차량 시작
                 if status_str == "TERMINATED" and vehicle_index == current_vehicle_index:
                     send_start_command_to_next()
         except Exception as e:
             print(f"[ERROR] MQTT 메시지 처리 실패: {e}")
+
+def show_error_popup(vehicle_id):
+    root.deiconify()  # 혹시 UI가 최소화된 경우 복구
+    messagebox.showerror("🚨 Error", f"{vehicle_id} error.\nAll stopped.")
 
 def send_mqtt_command(command_code):
     for vehicle_id in vehicle_ids:
@@ -104,18 +114,24 @@ def update_vehicle_status():
         vehicle_labels[i].config(text=f"Vehicle {i+1}\n{status}", bg=color)
 
 # 카메라 보기
-# def open_camera_view():
-#     print("📷 Opening camera...")
-#     root.iconify()
-#     proc = subprocess.Popen(["libcamera-hello", "--timeout", "0"])
-#     root.after(1000, check_camera_closed, proc)
-
 def open_camera_view():
     print("📷 Opening camera...")
     root.iconify()
     proc = subprocess.Popen(["libcamera-hello", "--qt-preview", "--timeout", "0"])
     root.after(1000, check_camera_closed, proc)
 
+# def open_camera_view():
+#     print("📷 Opening camera...")
+#     root.iconify()
+#     proc = subprocess.Popen([
+#         "libcamera-hello",
+#         "--qt-preview",          # 안정적 프리뷰
+#         "--width", "640",        # 낮은 해상도
+#         "--height", "480",
+#         "--framerate", "30",     # 프레임 수 향상
+#         "--timeout", "0"         # 무제한 실행
+#     ])
+#     root.after(500, check_camera_closed, proc)
 
 def check_camera_closed(proc):
     if proc.poll() is None:
