@@ -1,67 +1,172 @@
 	.file	"asw.c"
 .section .text,"ax",@progbits
 .Ltext0:
+.section .rodata,"a",@progbits
+.LC0:
+	.string	"FRHall: %d FLHall: %d RRHall: %d RLHall: %d"
+.section .text,"ax",@progbits
 	.align 1
 	.global	FuncTestTask
 	.type	FuncTestTask, @function
 FuncTestTask:
 .LFB574:
-	.file 1 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\asw.c"
-	.loc 1 19 0
-	.loc 1 21 0
+	.file 1 "C:\\project\\SHIPAR~1\\TC275\\asw.c"
+	.loc 1 25 0
+	.loc 1 27 0
 	movh.a	%a4, hi:testSendPacket
 	lea	%a4, [%a4] lo:testSendPacket
-	.loc 1 20 0
+	.loc 1 26 0
 	ld.bu	%d15, [%a4] 1
+	.loc 1 25 0
+	sub.a	%SP, 16
+.LCFI0:
+	.loc 1 26 0
 	add	%d15, 1
-	.loc 1 21 0
+	.loc 1 27 0
 	and	%d15, %d15, 3
 	st.b	[%a4] 1, %d15
-	.loc 1 22 0
-	j	sendPacket
+	.loc 1 28 0
+	call	sendPacket
 .LVL0:
+	.loc 1 29 0
+	movh.a	%a15, hi:g_FRHallCnt
+	ld.hu	%d4, [%a15] lo:g_FRHallCnt
+	movh.a	%a15, hi:g_FLHallCnt
+	ld.hu	%d3, [%a15] lo:g_FLHallCnt
+	movh.a	%a15, hi:g_RRHallCnt
+	ld.hu	%d2, [%a15] lo:g_RRHallCnt
+	movh.a	%a15, hi:g_RLHallCnt
+	ld.hu	%d15, [%a15] lo:g_RLHallCnt
+	movh.a	%a4, hi:.LC0
+	st.w	[%SP]0, %d4
+	st.w	[%SP] 4, %d3
+	st.w	[%SP] 8, %d2
+	st.w	[%SP] 12, %d15
+	lea	%a4, [%a4] lo:.LC0
+	j	printfSerial
+.LVL1:
 .LFE574:
 	.size	FuncTestTask, .-FuncTestTask
+	.align 1
+	.global	FRHallISR
+	.type	FRHallISR, @function
+FRHallISR:
+.LFB575:
+	.loc 1 33 0
+	.loc 1 34 0
+	movh.a	%a15, hi:g_FRHallCnt
+	ld.hu	%d15, [%a15] lo:g_FRHallCnt
+	.loc 1 35 0
+	mov	%d4, 2
+	.loc 1 34 0
+	add	%d15, 1
+	extr.u	%d15, %d15, 0, 16
+	st.h	[%a15] lo:g_FRHallCnt, %d15
+	.loc 1 35 0
+	j	IfxScuEru_clearEventFlag
+.LVL2:
+.LFE575:
+	.size	FRHallISR, .-FRHallISR
+	.align 1
+	.global	FLHallISR
+	.type	FLHallISR, @function
+FLHallISR:
+.LFB576:
+	.loc 1 38 0
+	.loc 1 39 0
+	movh.a	%a15, hi:g_FLHallCnt
+	ld.hu	%d15, [%a15] lo:g_FLHallCnt
+	.loc 1 40 0
+	mov	%d4, 3
+	.loc 1 39 0
+	add	%d15, 1
+	extr.u	%d15, %d15, 0, 16
+	st.h	[%a15] lo:g_FLHallCnt, %d15
+	.loc 1 40 0
+	j	IfxScuEru_clearEventFlag
+.LVL3:
+.LFE576:
+	.size	FLHallISR, .-FLHallISR
+	.align 1
+	.global	RRHallISR
+	.type	RRHallISR, @function
+RRHallISR:
+.LFB577:
+	.loc 1 43 0
+	.loc 1 44 0
+	movh.a	%a15, hi:g_RRHallCnt
+	ld.hu	%d15, [%a15] lo:g_RRHallCnt
+	.loc 1 45 0
+	mov	%d4, 4
+	.loc 1 44 0
+	add	%d15, 1
+	extr.u	%d15, %d15, 0, 16
+	st.h	[%a15] lo:g_RRHallCnt, %d15
+	.loc 1 45 0
+	j	IfxScuEru_clearEventFlag
+.LVL4:
+.LFE577:
+	.size	RRHallISR, .-RRHallISR
+	.align 1
+	.global	RLHallISR
+	.type	RLHallISR, @function
+RLHallISR:
+.LFB578:
+	.loc 1 48 0
+	.loc 1 49 0
+	movh.a	%a15, hi:g_RLHallCnt
+	ld.hu	%d15, [%a15] lo:g_RLHallCnt
+	.loc 1 50 0
+	mov	%d4, 0
+	.loc 1 49 0
+	add	%d15, 1
+	extr.u	%d15, %d15, 0, 16
+	st.h	[%a15] lo:g_RLHallCnt, %d15
+	.loc 1 50 0
+	j	IfxScuEru_clearEventFlag
+.LVL5:
+.LFE578:
+	.size	RLHallISR, .-RLHallISR
 .section .rodata,"a",@progbits
-.LC0:
+.LC1:
 	.string	"\n%4ld: "
 .section .text,"ax",@progbits
 	.align 1
 	.global	TimerISR
 	.type	TimerISR, @function
 TimerISR:
-.LFB575:
-	.loc 1 26 0
-	.loc 1 28 0
+.LFB579:
+	.loc 1 54 0
+	.loc 1 56 0
 	movh	%d4, 15
-	.loc 1 26 0
+	.loc 1 54 0
 	sub.a	%SP, 8
-.LCFI0:
-	.loc 1 28 0
+.LCFI1:
+	.loc 1 56 0
 	addi	%d4, %d4, 16960
 	call	osEE_tc_stm_set_sr0_next_match
-.LVL1:
-	.loc 1 37 0
-	mov	%d4, 4
+.LVL6:
+	.loc 1 65 0
+	mov	%d4, 8
 	call	ActivateTask
-.LVL2:
-	.loc 1 41 0
-	movh.a	%a15, hi:c.16759
-	ld.w	%d15, [%a15] lo:c.16759
-	movh.a	%a4, hi:.LC0
+.LVL7:
+	.loc 1 69 0
+	movh.a	%a15, hi:c.16789
+	ld.w	%d15, [%a15] lo:c.16789
+	movh.a	%a4, hi:.LC1
 	st.w	[%SP]0, %d15
-	lea	%a4, [%a4] lo:.LC0
+	lea	%a4, [%a4] lo:.LC1
 	add	%d15, 1
-	st.w	[%a15] lo:c.16759, %d15
+	st.w	[%a15] lo:c.16789, %d15
 	j	printfSerial
-.LVL3:
-.LFE575:
+.LVL8:
+.LFE579:
 	.size	TimerISR, .-TimerISR
 .section .data,"aw",@progbits
 	.align 2
-	.type	c.16759, @object
-	.size	c.16759, 4
-c.16759:
+	.type	c.16789, @object
+	.size	c.16789, 4
+c.16789:
 	.word	-4
 	.global	testSendPacket
 	.type	testSendPacket, @object
@@ -100,6 +205,10 @@ testSendPacket:
 	.uaword	.Lframe0
 	.uaword	.LFB574
 	.uaword	.LFE574-.LFB574
+	.byte	0x4
+	.uaword	.LCFI0-.LFB574
+	.byte	0xe
+	.uleb128 0x10
 	.align 2
 .LEFDE0:
 .LSFDE2:
@@ -108,30 +217,63 @@ testSendPacket:
 	.uaword	.Lframe0
 	.uaword	.LFB575
 	.uaword	.LFE575-.LFB575
+	.align 2
+.LEFDE2:
+.LSFDE4:
+	.uaword	.LEFDE4-.LASFDE4
+.LASFDE4:
+	.uaword	.Lframe0
+	.uaword	.LFB576
+	.uaword	.LFE576-.LFB576
+	.align 2
+.LEFDE4:
+.LSFDE6:
+	.uaword	.LEFDE6-.LASFDE6
+.LASFDE6:
+	.uaword	.Lframe0
+	.uaword	.LFB577
+	.uaword	.LFE577-.LFB577
+	.align 2
+.LEFDE6:
+.LSFDE8:
+	.uaword	.LEFDE8-.LASFDE8
+.LASFDE8:
+	.uaword	.Lframe0
+	.uaword	.LFB578
+	.uaword	.LFE578-.LFB578
+	.align 2
+.LEFDE8:
+.LSFDE10:
+	.uaword	.LEFDE10-.LASFDE10
+.LASFDE10:
+	.uaword	.Lframe0
+	.uaword	.LFB579
+	.uaword	.LFE579-.LFB579
 	.byte	0x4
-	.uaword	.LCFI0-.LFB575
+	.uaword	.LCFI1-.LFB579
 	.byte	0xe
 	.uleb128 0x8
 	.align 2
-.LEFDE2:
+.LEFDE10:
 .section .text,"ax",@progbits
 .Letext0:
-	.file 2 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
-	.file 3 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+	.file 2 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
+	.file 3 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
 	.file 4 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
-	.file 5 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 6 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 7 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h"
-	.file 8 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\sys\\types.h"
-	.file 9 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\steering_Pid.h"
-	.file 10 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
-	.file 11 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\uart_Driver.h"
-	.file 12 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
-	.file 13 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
-	.file 14 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\bsw.h"
+	.file 5 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
+	.file 6 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+	.file 7 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+	.file 8 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h"
+	.file 9 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\sys\\types.h"
+	.file 10 "C:\\project\\SHIPAR~1\\TC275\\steering_Pid.h"
+	.file 11 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+	.file 12 "C:\\project\\SHIPAR~1\\TC275\\uart_Driver.h"
+	.file 13 "C:\\project\\SHIPAR~1\\TC275\\bsw.h"
+	.file 14 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
+	.file 15 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x7c6
+	.uaword	0xa1b
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -139,7 +281,7 @@ testSendPacket:
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\asw.c"
+	.string	"C:\\project\\SHIPAR~1\\TC275\\asw.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0
@@ -163,7 +305,12 @@ testSendPacket:
 	.string	"uint8"
 	.byte	0x2
 	.byte	0x6c
-	.uaword	0x180
+	.uaword	0x16c
+	.uleb128 0x3
+	.string	"uint16"
+	.byte	0x2
+	.byte	0x70
+	.uaword	0x198
 	.uleb128 0x2
 	.byte	0x2
 	.byte	0x7
@@ -184,7 +331,7 @@ testSendPacket:
 	.string	"sint32"
 	.byte	0x2
 	.byte	0x86
-	.uaword	0x158
+	.uaword	0x144
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x5
@@ -199,45 +346,45 @@ testSendPacket:
 	.string	"double"
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x222
+	.uaword	0x21c
 	.uleb128 0x5
-	.uaword	0x227
+	.uaword	0x221
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x6
 	.string	"char"
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x235
+	.uaword	0x22f
 	.uleb128 0x6
 	.uleb128 0x7
 	.byte	0x8
 	.byte	0x3
 	.byte	0x8c
-	.uaword	0x25c
+	.uaword	0x256
 	.uleb128 0x8
 	.string	"module"
 	.byte	0x3
 	.byte	0x8e
-	.uaword	0x22f
+	.uaword	0x229
 	.byte	0
 	.uleb128 0x8
 	.string	"index"
 	.byte	0x3
 	.byte	0x8f
-	.uaword	0x1ea
+	.uaword	0x1e4
 	.byte	0x4
 	.byte	0
 	.uleb128 0x3
 	.string	"IfxModule_IndexMap"
 	.byte	0x3
 	.byte	0x90
-	.uaword	0x236
+	.uaword	0x230
 	.uleb128 0x3
 	.string	"uint32_t"
 	.byte	0x4
 	.byte	0x50
-	.uaword	0x164
+	.uaword	0x150
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
@@ -246,17 +393,17 @@ testSendPacket:
 	.string	"OsEE_reg"
 	.byte	0x5
 	.byte	0x5b
-	.uaword	0x276
+	.uaword	0x270
 	.uleb128 0x3
 	.string	"TaskType"
 	.byte	0x6
 	.byte	0x78
-	.uaword	0x296
+	.uaword	0x290
 	.uleb128 0x9
 	.byte	0x1
 	.byte	0x6
 	.uahalf	0x2b1
-	.uaword	0x4d9
+	.uaword	0x4d3
 	.uleb128 0xa
 	.string	"E_OK"
 	.sleb128 0
@@ -349,76 +496,111 @@ testSendPacket:
 	.string	"OsEE_status_type"
 	.byte	0x6
 	.uahalf	0x2d4
-	.uaword	0x2b6
+	.uaword	0x2b0
 	.uleb128 0xb
 	.string	"StatusType"
 	.byte	0x6
 	.uahalf	0x2d9
-	.uaword	0x4d9
+	.uaword	0x4d3
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
 	.string	"sizetype"
 	.uleb128 0xc
-	.string	"Point"
-	.byte	0x10
-	.byte	0x7
-	.byte	0x58
-	.uaword	0x534
-	.uleb128 0x8
-	.string	"x"
+	.byte	0x1
 	.byte	0x7
 	.byte	0x5a
-	.uaword	0x212
+	.uaword	0x5ec
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_0"
+	.sleb128 0
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_1"
+	.sleb128 1
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_2"
+	.sleb128 2
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_3"
+	.sleb128 3
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_4"
+	.sleb128 4
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_5"
+	.sleb128 5
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_6"
+	.sleb128 6
+	.uleb128 0xa
+	.string	"IfxScuEru_InputChannel_7"
+	.sleb128 7
+	.byte	0
+	.uleb128 0x3
+	.string	"IfxScuEru_InputChannel"
+	.byte	0x7
+	.byte	0x63
+	.uaword	0x50b
+	.uleb128 0xd
+	.string	"Point"
+	.byte	0x10
+	.byte	0x8
+	.byte	0x58
+	.uaword	0x62d
+	.uleb128 0x8
+	.string	"x"
+	.byte	0x8
+	.byte	0x5a
+	.uaword	0x20c
 	.byte	0
 	.uleb128 0x8
 	.string	"y"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x5b
-	.uaword	0x212
+	.uaword	0x20c
 	.byte	0x8
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0xd
 	.string	"ParkingSystemPacket"
 	.byte	0x24
-	.byte	0x7
+	.byte	0x8
 	.byte	0x5e
-	.uaword	0x5d0
+	.uaword	0x6c9
 	.uleb128 0x8
 	.string	"start_byte"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x60
-	.uaword	0x191
+	.uaword	0x17d
 	.byte	0
 	.uleb128 0x8
 	.string	"car_status"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x61
-	.uaword	0x191
+	.uaword	0x17d
 	.byte	0x1
 	.uleb128 0x8
 	.string	"car_current_position"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x62
-	.uaword	0x511
+	.uaword	0x60a
 	.byte	0x2
 	.uleb128 0x8
 	.string	"car_target_position"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x63
-	.uaword	0x511
+	.uaword	0x60a
 	.byte	0x12
 	.uleb128 0x8
 	.string	"car_command"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x64
-	.uaword	0x191
+	.uaword	0x17d
 	.byte	0x22
 	.uleb128 0x8
 	.string	"crc"
-	.byte	0x7
+	.byte	0x8
 	.byte	0x65
-	.uaword	0x191
+	.uaword	0x17d
 	.byte	0x23
 	.byte	0
 	.uleb128 0x2
@@ -427,85 +609,195 @@ testSendPacket:
 	.string	"long double"
 	.uleb128 0x3
 	.string	"clock_t"
-	.byte	0x8
+	.byte	0x9
 	.byte	0x68
-	.uaword	0x164
-	.uleb128 0xd
+	.uaword	0x150
+	.uleb128 0xe
 	.byte	0x1
 	.string	"FuncTestTask"
 	.byte	0x1
-	.byte	0x13
+	.byte	0x19
 	.byte	0x1
 	.uaword	.LFB574
 	.uaword	.LFE574
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x624
-	.uleb128 0xe
-	.uaword	.LVL0
-	.byte	0x1
-	.uaword	0x737
+	.uaword	0x73b
 	.uleb128 0xf
+	.uaword	.LVL0
+	.uaword	0x963
+	.uaword	0x71f
+	.uleb128 0x10
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
 	.uaword	testSendPacket
 	.byte	0
+	.uleb128 0x11
+	.uaword	.LVL1
+	.byte	0x1
+	.uaword	0x989
+	.uleb128 0x10
+	.byte	0x1
+	.byte	0x64
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC0
+	.uleb128 0x10
+	.byte	0x2
+	.byte	0x8a
+	.sleb128 12
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
 	.byte	0
-	.uleb128 0xd
+	.byte	0
+	.uleb128 0xe
 	.byte	0x1
-	.string	"TimerISR"
+	.string	"FRHallISR"
 	.byte	0x1
-	.byte	0x19
+	.byte	0x20
 	.byte	0x1
 	.uaword	.LFB575
 	.uaword	.LFE575
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x696
+	.uaword	0x76a
+	.uleb128 0x11
+	.uaword	.LVL2
+	.byte	0x1
+	.uaword	0x9a7
 	.uleb128 0x10
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.byte	0x1
+	.string	"FLHallISR"
+	.byte	0x1
+	.byte	0x25
+	.byte	0x1
+	.uaword	.LFB576
+	.uaword	.LFE576
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x799
+	.uleb128 0x11
+	.uaword	.LVL3
+	.byte	0x1
+	.uaword	0x9a7
+	.uleb128 0x10
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.byte	0x1
+	.string	"RRHallISR"
+	.byte	0x1
+	.byte	0x2a
+	.byte	0x1
+	.uaword	.LFB577
+	.uaword	.LFE577
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x7c8
+	.uleb128 0x11
+	.uaword	.LVL4
+	.byte	0x1
+	.uaword	0x9a7
+	.uleb128 0x10
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x34
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.byte	0x1
+	.string	"RLHallISR"
+	.byte	0x1
+	.byte	0x2f
+	.byte	0x1
+	.uaword	.LFB578
+	.uaword	.LFE578
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x7f7
+	.uleb128 0x11
+	.uaword	.LVL5
+	.byte	0x1
+	.uaword	0x9a7
+	.uleb128 0x10
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.byte	0x1
+	.string	"TimerISR"
+	.byte	0x1
+	.byte	0x35
+	.byte	0x1
+	.uaword	.LFB579
+	.uaword	.LFE579
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x869
+	.uleb128 0x12
 	.string	"c"
 	.byte	0x1
-	.byte	0x1b
-	.uaword	0x158
+	.byte	0x37
+	.uaword	0x144
 	.byte	0x5
 	.byte	0x3
-	.uaword	c.16759
-	.uleb128 0x11
-	.uaword	.LVL1
-	.uaword	0x75d
-	.uaword	0x667
+	.uaword	c.16789
 	.uleb128 0xf
+	.uaword	.LVL6
+	.uaword	0x9d0
+	.uaword	0x83a
+	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
 	.byte	0x5
 	.byte	0xc
 	.uaword	0xf4240
 	.byte	0
-	.uleb128 0x11
-	.uaword	.LVL2
-	.uaword	0x78d
-	.uaword	0x67a
 	.uleb128 0xf
+	.uaword	.LVL7
+	.uaword	0xa00
+	.uaword	0x84d
+	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x34
+	.byte	0x38
 	.byte	0
-	.uleb128 0xe
-	.uaword	.LVL3
+	.uleb128 0x11
+	.uaword	.LVL8
 	.byte	0x1
-	.uaword	0x7af
-	.uleb128 0xf
+	.uaword	0x989
+	.uleb128 0x10
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
-	.uaword	.LC0
-	.uleb128 0xf
+	.uaword	.LC1
+	.uleb128 0x10
 	.byte	0x2
 	.byte	0x8a
 	.sleb128 0
@@ -514,102 +806,143 @@ testSendPacket:
 	.sleb128 -1
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x13
 	.string	"pid_prev_error"
-	.byte	0x9
+	.byte	0xa
 	.byte	0x14
-	.uaword	0x212
-	.byte	0x8
-	.uaword	0
-	.uaword	0
-	.uleb128 0x12
-	.string	"pid_integral"
-	.byte	0x9
-	.byte	0x15
-	.uaword	0x212
+	.uaword	0x20c
 	.byte	0x8
 	.uaword	0
 	.uaword	0
 	.uleb128 0x13
-	.string	"pid_last_time"
-	.byte	0x9
-	.byte	0x16
-	.uaword	0x5df
-	.byte	0
+	.string	"pid_integral"
+	.byte	0xa
+	.byte	0x15
+	.uaword	0x20c
+	.byte	0x8
+	.uaword	0
+	.uaword	0
 	.uleb128 0x14
-	.uaword	0x25c
-	.uaword	0x6f8
+	.string	"pid_last_time"
+	.byte	0xa
+	.byte	0x16
+	.uaword	0x6d8
+	.byte	0
 	.uleb128 0x15
-	.uaword	0x505
+	.uaword	0x256
+	.uaword	0x8cb
+	.uleb128 0x16
+	.uaword	0x4ff
 	.byte	0x2
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x17
 	.string	"IfxCpu_cfg_indexMap"
-	.byte	0xa
+	.byte	0xb
 	.byte	0xa7
-	.uaword	0x715
+	.uaword	0x8e8
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5
-	.uaword	0x6e8
+	.uaword	0x8bb
 	.uleb128 0x17
+	.string	"g_FRHallCnt"
+	.byte	0x1
+	.byte	0x7
+	.uaword	0x902
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x18
+	.uaword	0x18a
+	.uleb128 0x17
+	.string	"g_FLHallCnt"
+	.byte	0x1
+	.byte	0x8
+	.uaword	0x902
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x17
+	.string	"g_RRHallCnt"
+	.byte	0x1
+	.byte	0x9
+	.uaword	0x902
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x17
+	.string	"g_RLHallCnt"
+	.byte	0x1
+	.byte	0xa
+	.uaword	0x902
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x19
 	.string	"testSendPacket"
 	.byte	0x1
-	.byte	0x6
-	.uaword	0x534
+	.byte	0xc
+	.uaword	0x62d
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	testSendPacket
-	.uleb128 0x18
+	.uleb128 0x1a
 	.byte	0x1
 	.string	"sendPacket"
-	.byte	0xb
+	.byte	0xc
 	.byte	0x1e
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x752
-	.uleb128 0x19
-	.uaword	0x752
+	.uaword	0x97e
+	.uleb128 0x1b
+	.uaword	0x97e
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x758
+	.uaword	0x984
 	.uleb128 0x5
-	.uaword	0x534
+	.uaword	0x62d
 	.uleb128 0x1a
 	.byte	0x1
-	.string	"osEE_tc_stm_set_sr0_next_match"
-	.byte	0xc
-	.uahalf	0x3d8
-	.byte	0x1
-	.byte	0x1
-	.uaword	0x78d
-	.uleb128 0x19
-	.uaword	0x296
-	.byte	0
-	.uleb128 0x1b
-	.byte	0x1
-	.string	"ActivateTask"
-	.byte	0xd
-	.uahalf	0x178
-	.byte	0x1
-	.uaword	0x4f2
-	.byte	0x1
-	.uaword	0x7af
-	.uleb128 0x19
-	.uaword	0x2a6
-	.byte	0
-	.uleb128 0x1c
-	.byte	0x1
 	.string	"printfSerial"
-	.byte	0xe
+	.byte	0xd
 	.byte	0xf
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x19
-	.uaword	0x21c
+	.uaword	0x9a7
+	.uleb128 0x1b
+	.uaword	0x216
+	.uleb128 0x1c
+	.byte	0
+	.uleb128 0x1a
+	.byte	0x1
+	.string	"IfxScuEru_clearEventFlag"
+	.byte	0x7
+	.byte	0xba
+	.byte	0x1
+	.byte	0x1
+	.uaword	0x9d0
+	.uleb128 0x1b
+	.uaword	0x5ec
+	.byte	0
 	.uleb128 0x1d
+	.byte	0x1
+	.string	"osEE_tc_stm_set_sr0_next_match"
+	.byte	0xe
+	.uahalf	0x3d8
+	.byte	0x1
+	.byte	0x1
+	.uaword	0xa00
+	.uleb128 0x1b
+	.uaword	0x290
+	.byte	0
+	.uleb128 0x1e
+	.byte	0x1
+	.string	"ActivateTask"
+	.byte	0xf
+	.uahalf	0x178
+	.byte	0x1
+	.uaword	0x4ec
+	.byte	0x1
+	.uleb128 0x1b
+	.uaword	0x2a0
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits
@@ -740,6 +1073,19 @@ testSendPacket:
 	.byte	0
 	.byte	0
 	.uleb128 0xc
+	.uleb128 0x4
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xd
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -754,7 +1100,7 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xe
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -779,18 +1125,18 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0xf
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
-	.uleb128 0x2115
-	.uleb128 0xc
 	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0x10
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -799,29 +1145,14 @@ testSendPacket:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x10
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0xa
-	.byte	0
-	.byte	0
 	.uleb128 0x11
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x2115
+	.uleb128 0xc
 	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -836,7 +1167,7 @@ testSendPacket:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x1c
+	.uleb128 0x2
 	.uleb128 0xa
 	.byte	0
 	.byte	0
@@ -852,28 +1183,10 @@ testSendPacket:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x1c
-	.uleb128 0xb
+	.uleb128 0xa
 	.byte	0
 	.byte	0
 	.uleb128 0x14
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x15
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x16
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -884,10 +1197,26 @@ testSendPacket:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
+	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x15
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x16
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x17
@@ -903,34 +1232,32 @@ testSendPacket:
 	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0xc
-	.uleb128 0x2
-	.uleb128 0xa
+	.uleb128 0x3c
+	.uleb128 0xc
 	.byte	0
 	.byte	0
 	.uleb128 0x18
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
+	.uleb128 0x35
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x19
+	.uleb128 0x34
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x19
-	.uleb128 0x5
-	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x2
+	.uleb128 0xa
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
@@ -943,7 +1270,7 @@ testSendPacket:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
 	.uleb128 0x3c
@@ -953,6 +1280,37 @@ testSendPacket:
 	.byte	0
 	.byte	0
 	.uleb128 0x1b
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x1c
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x1d
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x1e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -969,30 +1327,6 @@ testSendPacket:
 	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x1c
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.byte	0
-	.byte	0
-	.uleb128 0x1d
-	.uleb128 0x18
-	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1011,8 +1345,13 @@ testSendPacket:
 .section .debug_line,"",@progbits
 .Ldebug_line0:
 .section .debug_str,"",@progbits
-	.extern	printfSerial,STT_FUNC,0
 	.extern	ActivateTask,STT_FUNC,0
 	.extern	osEE_tc_stm_set_sr0_next_match,STT_FUNC,0
+	.extern	IfxScuEru_clearEventFlag,STT_FUNC,0
+	.extern	printfSerial,STT_FUNC,0
+	.extern	g_RLHallCnt,STT_OBJECT,2
+	.extern	g_RRHallCnt,STT_OBJECT,2
+	.extern	g_FLHallCnt,STT_OBJECT,2
+	.extern	g_FRHallCnt,STT_OBJECT,2
 	.extern	sendPacket,STT_FUNC,0
 	.ident	"GCC: (HighTec Release HDP-v4.9.3.0-infineon-1.0-fb21a99) 4.9.4 build on 2019-06-07"

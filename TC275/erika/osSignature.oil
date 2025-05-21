@@ -44,4 +44,24 @@ CPU test_application {
 		SOURCE = "STM0SR0";
 		PRIORITY = 6;
 	};
+	ISR FRHallISR {
+		CATEGORY = 2;
+		PRIORITY = 10;
+		SOURCE = "SCUERU0";
+	};
+	ISR FLHallISR {
+		CATEGORY = 2;
+		PRIORITY = 11;
+		SOURCE = "SCUERU1";
+	};
+	ISR RRHallISR {
+		CATEGORY = 2;
+		PRIORITY = 12;
+		SOURCE = "SCUERU2";
+	};
+	ISR RLHallISR {
+		CATEGORY = 2;
+		PRIORITY = 15;
+		SOURCE = "SCUERU3";
+	};
 };

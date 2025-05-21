@@ -2,6 +2,12 @@
 #include "uart_Driver.h"
 #include "ultrasonic_Driver.h"
 #include "steering_Pid.h"
+#include "hall_Driver.h"
+
+extern volatile uint16 g_FRHallCnt;
+extern volatile uint16 g_FLHallCnt;
+extern volatile uint16 g_RRHallCnt;
+extern volatile uint16 g_RLHallCnt;
 
 struct ParkingSystemPacket testSendPacket = 
 {
@@ -20,6 +26,28 @@ TASK(TestTask){
     testSendPacket.car_status++;
     testSendPacket.car_status%=4;
     sendPacket(&testSendPacket);
+    printfSerial("FRHall: %d FLHall: %d RRHall: %d RLHall: %d",g_FRHallCnt,g_FLHallCnt,g_RRHallCnt,g_RLHallCnt);
+}
+
+ISR2(FRHallISR)
+{
+    g_FRHallCnt++;
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_2);
+}
+ISR2(FLHallISR)
+{
+    g_FLHallCnt++;
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_3);
+}
+ISR2(RRHallISR)
+{
+    g_RRHallCnt++;
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_4);
+}
+ISR2(RLHallISR)
+{
+    g_RLHallCnt++;
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_0);
 }
 
 ISR2(TimerISR)
