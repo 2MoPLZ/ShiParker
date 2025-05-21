@@ -22565,6 +22565,41 @@ typedef enum {
 typedef OsEE_task_status TaskStateType;
 
 typedef TaskStateType * TaskStateRefType;
+# 399 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg CounterType;
+# 414 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg TickType;
+
+
+
+
+typedef TickType * TickRefType;
+# 431 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_sreg TickDeltaType;
+
+
+
+
+
+
+
+typedef struct {
+
+  TickType maxallowedvalue;
+
+
+  TickType ticksperbase;
+
+
+
+
+
+} AlarmBaseType;
+
+
+typedef AlarmBaseType * AlarmBaseRefType;
+# 470 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg AlarmType;
 # 524 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ResourceType;
 # 567 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
@@ -22651,6 +22686,18 @@ typedef enum {
   OSServiceId_ClearEvent = (30),
   OSServiceId_GetEvent = (32),
   OSServiceId_WaitEvent = (34),
+
+
+  OSServiceId_GetAlarmBase = (36),
+  OSServiceId_GetAlarm = (38),
+  OSServiceId_SetRelAlarm = (40),
+  OSServiceId_SetAbsAlarm = (42),
+  OSServiceId_CancelAlarm = (44),
+
+
+  OSServiceId_IncrementCounter = (46),
+  OSServiceId_GetCounterValue = (48),
+  OSServiceId_GetElapsedValue = (50),
 # 804 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
   OSServiceId_GetActiveApplicationMode = (70),
   OSServiceId_ShutdownOS = (72),
@@ -22779,6 +22826,42 @@ StatusType
 (
   ResourceType ResID
 );
+# 659 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetRelAlarm
+(
+  AlarmType AlarmID,
+  TickType increment,
+  TickType cycle
+);
+# 705 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetAbsAlarm
+(
+  AlarmType AlarmID,
+  TickType start,
+  TickType cycle
+);
+# 733 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarm
+(
+  AlarmType AlarmID,
+  TickRefType Tick
+);
+# 761 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarmBase
+(
+  AlarmType AlarmID,
+  AlarmBaseRefType Info
+);
+# 786 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  CancelAlarm
+(
+  AlarmType AlarmID
+);
 # 818 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   WaitEvent
@@ -22804,6 +22887,27 @@ StatusType
   ClearEvent
 (
   EventMaskType Mask
+);
+# 1046 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetCounterValue
+(
+  CounterType CounterID,
+  TickRefType Value
+);
+# 1076 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetElapsedValue
+(
+  CounterType CounterID,
+  TickRefType Value,
+  TickRefType ElapsedValue
+);
+# 1115 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  IncrementCounter
+(
+  CounterType CounterID
 );
 # 1352 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
  ISRType
@@ -22895,6 +22999,8 @@ uint8_t osEE_assert_last(void);
 # 1 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h" 1
 # 35 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h"
 extern void FuncTestTask ( void );
+extern void FuncShiParkerAppTask ( void );
+extern void FuncPacketSendTask ( void );
 
 
 void asclin3TxISR(void);
@@ -23483,7 +23589,7 @@ double get_position(double adjusted_dist_a, double adjusted_dist_b);
 DriveCommand wall_follow_control(double dist_a, double dist_b);
 # 12 "C:\\SHIPAR~1\\TC275\\bsw.c" 2
 # 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 1
-# 20 "C:\\SHIPAR~1\\TC275\\shiparker_App.h"
+# 27 "C:\\SHIPAR~1\\TC275\\shiparker_App.h"
 # 1 "C:\\SHIPAR~1\\TC275\\bsw.h" 1
 # 11 "C:\\SHIPAR~1\\TC275\\bsw.h"
 void printDouble(const char* label, double value);
@@ -23494,7 +23600,7 @@ void printfSerial(const char *fmt,...);
 void initPeripheralsAndERU(void);
 void initADC(void);
 uint16 readADCValue(uint8 channel);
-# 21 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 28 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 1 3
 # 10 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 3
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\ieeefp.h" 1 3
@@ -23691,9 +23797,11 @@ extern long double wcstold (const wchar_t *, wchar_t **);
 
 
 
-# 22 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 29 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 
 
+
+extern boolean g_isAppRunning;
 
 
 typedef enum CAR_STATUS_TYPE_T{
@@ -23713,10 +23821,10 @@ typedef enum CAR_COMMAND_TYPE_T{
     CAR_COMMAND_RESERVED2
 }CAR_COMMAND_TYPE;
 typedef enum ERROR_CODE_TYPE_T{
-    ERROR_CODE_FORCESTOP,
+    ERROR_CODE_USER_CONTROL,
     ERROR_CODE_OBSTACLE,
-    ERROR_CODE_2,
-    ERROR_CODE_3,
+    ERROR_CODE_CONNECTION_LOST,
+    ERROR_CODE_UNDEFINED_STATUS,
     ERROR_CODE_4,
     ERROR_CODE_5,
     ERROR_CODE_6,
@@ -23737,27 +23845,28 @@ struct Position
 };
 
 static const char* errorMessages[16] = {
-    "Emergency force stop triggered.",
+    "User Control occured.",
     "Obstacle detected.",
-    "ERRORCODE 2",
-    "ERRORCODE 3",
-    "ERRORCODE 4",
-    "ERRORCODE 5",
-    "ERRORCODE 6",
-    "ERRORCODE 7",
-    "ERRORCODE 8",
-    "ERRORCODE 9",
-    "ERRORCODE 10",
-    "ERRORCODE 11",
-    "ERRORCODE 12",
-    "ERRORCODE 13",
-    "ERRORCODE 14",
-    "ERRORCODE 15"
+    "Connection Lost",
+    "Undefined Status",
+    "Hall_FL Error",
+    "Hall_FR Error",
+    "Hall_RL Error",
+    "Hall_RR Error",
+    "ULTRASONIC_FL Error",
+    "ULTRASONIC_F Error",
+    "ULTRASONIC_FR Error",
+    "ULTRASONIC_SL Error",
+    "ULTRASONIC_SR Error",
+    "ULTRASONIC_RL Error",
+    "ULTRASONIC_R Error",
+    "ULTRASONIC_RR Error"
 };
 
 
 void initShiParkerApp(void);
-int shiParkerApp(void);
+void makePacket(struct ParkingSystemPacket* dst);
+void updateStatus(const struct ParkingSystemPacket* packet);
 void handleError(ERROR_CODE_TYPE errorCode);
 # 13 "C:\\SHIPAR~1\\TC275\\bsw.c" 2
 # 21 "C:\\SHIPAR~1\\TC275\\bsw.c"

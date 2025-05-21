@@ -57,6 +57,8 @@
  *
  **************************************************************************/
 #define OSEE_ARCH_TRICORE
+#define OSEE_HAS_ALARMS
+#define OSEE_HAS_COUNTERS
 #define OSEE_HAS_EVENTS
 #define OSEE_HAS_RESOURCES
 #define OSEE_ISR2_MAX_HW_ASM_PRIO 17

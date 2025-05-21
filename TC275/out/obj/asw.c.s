@@ -41,27 +41,34 @@ TimerISR:
 	addi	%d4, %d4, 16960
 	call	osEE_tc_stm_set_sr0_next_match
 .LVL1:
-	.loc 1 36 0
-	mov	%d4, 4
-	call	ActivateTask
+	.loc 1 37 0
+	movh.a	%a15, hi:c.16806
+	ld.w	%d15, [%a15] lo:c.16806
+	mov	%d2, 10
+	div	%e2, %d15, %d2
+	jne	%d3, 5, .L3
+.LBB2:
+	.loc 1 38 0
+	call	startShiParkerApp
 .LVL2:
-	.loc 1 40 0
-	movh.a	%a15, hi:c.16759
-	ld.w	%d15, [%a15] lo:c.16759
+.L3:
+.LBE2:
+	.loc 1 42 0
+	ld.w	%d15, [%a15] lo:c.16806
 	movh.a	%a4, hi:.LC0
 	st.w	[%SP]0, %d15
 	lea	%a4, [%a4] lo:.LC0
 	add	%d15, 1
-	st.w	[%a15] lo:c.16759, %d15
+	st.w	[%a15] lo:c.16806, %d15
 	j	printfSerial
 .LVL3:
 .LFE575:
 	.size	TimerISR, .-TimerISR
 .section .data,"aw",@progbits
 	.align 2
-	.type	c.16759, @object
-	.size	c.16759, 4
-c.16759:
+	.type	c.16806, @object
+	.size	c.16806, 4
+c.16806:
 	.word	-4
 	.global	testSendPacket
 	.type	testSendPacket, @object
@@ -120,18 +127,16 @@ testSendPacket:
 	.file 3 "C:\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
 	.file 4 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
 	.file 5 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 6 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 7 "C:\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h"
-	.file 8 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\sys\\types.h"
-	.file 9 "C:\\SHIPAR~1\\TC275\\steering_Pid.h"
-	.file 10 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
-	.file 11 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
-	.file 12 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
-	.file 13 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
-	.file 14 "C:\\SHIPAR~1\\TC275\\bsw.h"
+	.file 6 "C:\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h"
+	.file 7 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\sys\\types.h"
+	.file 8 "C:\\SHIPAR~1\\TC275\\steering_Pid.h"
+	.file 9 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+	.file 10 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
+	.file 11 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
+	.file 12 "C:\\SHIPAR~1\\TC275\\bsw.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x7aa
+	.uaword	0x553
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -247,176 +252,68 @@ testSendPacket:
 	.byte	0x5
 	.byte	0x5b
 	.uaword	0x25a
-	.uleb128 0x3
-	.string	"TaskType"
-	.byte	0x6
-	.byte	0x78
-	.uaword	0x27a
-	.uleb128 0x9
-	.byte	0x1
-	.byte	0x6
-	.uahalf	0x2b1
-	.uaword	0x4bd
-	.uleb128 0xa
-	.string	"E_OK"
-	.sleb128 0
-	.uleb128 0xa
-	.string	"E_OS_ACCESS"
-	.sleb128 1
-	.uleb128 0xa
-	.string	"E_OS_CALLEVEL"
-	.sleb128 2
-	.uleb128 0xa
-	.string	"E_OS_ID"
-	.sleb128 3
-	.uleb128 0xa
-	.string	"E_OS_LIMIT"
-	.sleb128 4
-	.uleb128 0xa
-	.string	"E_OS_NOFUNC"
-	.sleb128 5
-	.uleb128 0xa
-	.string	"E_OS_RESOURCE"
-	.sleb128 6
-	.uleb128 0xa
-	.string	"E_OS_STATE"
-	.sleb128 7
-	.uleb128 0xa
-	.string	"E_OS_VALUE"
-	.sleb128 8
-	.uleb128 0xa
-	.string	"E_OS_SERVICEID"
-	.sleb128 9
-	.uleb128 0xa
-	.string	"E_OS_ILLEGAL_ADDRESS"
-	.sleb128 10
-	.uleb128 0xa
-	.string	"E_OS_MISSINGEND"
-	.sleb128 11
-	.uleb128 0xa
-	.string	"E_OS_DISABLEDINT"
-	.sleb128 12
-	.uleb128 0xa
-	.string	"E_OS_STACKFAULT"
-	.sleb128 13
-	.uleb128 0xa
-	.string	"E_OS_PARAM_POINTER"
-	.sleb128 14
-	.uleb128 0xa
-	.string	"E_OS_PROTECTION_MEMORY"
-	.sleb128 15
-	.uleb128 0xa
-	.string	"E_OS_PROTECTION_TIME"
-	.sleb128 16
-	.uleb128 0xa
-	.string	"E_OS_PROTECTION_ARRIVAL"
-	.sleb128 17
-	.uleb128 0xa
-	.string	"E_OS_PROTECTION_LOCKED"
-	.sleb128 18
-	.uleb128 0xa
-	.string	"E_OS_PROTECTION_EXCEPTION"
-	.sleb128 19
-	.uleb128 0xa
-	.string	"E_OS_SPINLOCK"
-	.sleb128 20
-	.uleb128 0xa
-	.string	"E_OS_INTERFERENCE_DEADLOCK"
-	.sleb128 21
-	.uleb128 0xa
-	.string	"E_OS_NESTING_DEADLOCK"
-	.sleb128 22
-	.uleb128 0xa
-	.string	"E_OS_CORE"
-	.sleb128 23
-	.uleb128 0xa
-	.string	"E_OS_SYS_INIT"
-	.sleb128 24
-	.uleb128 0xa
-	.string	"E_OS_SYS_SUSPEND_NESTING_LIMIT"
-	.sleb128 25
-	.uleb128 0xa
-	.string	"E_OS_SYS_TASK"
-	.sleb128 26
-	.uleb128 0xa
-	.string	"E_OS_SYS_STACK"
-	.sleb128 27
-	.uleb128 0xa
-	.string	"E_OS_SYS_ACT"
-	.sleb128 28
-	.byte	0
-	.uleb128 0xb
-	.string	"OsEE_status_type"
-	.byte	0x6
-	.uahalf	0x2d4
-	.uaword	0x29a
-	.uleb128 0xb
-	.string	"StatusType"
-	.byte	0x6
-	.uahalf	0x2d9
-	.uaword	0x4bd
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
 	.string	"sizetype"
-	.uleb128 0xc
+	.uleb128 0x9
 	.string	"Point"
 	.byte	0x10
-	.byte	0x7
+	.byte	0x6
 	.byte	0x58
-	.uaword	0x518
+	.uaword	0x2b9
 	.uleb128 0x8
 	.string	"x"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x5a
 	.uaword	0x1f6
 	.byte	0
 	.uleb128 0x8
 	.string	"y"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x5b
 	.uaword	0x1f6
 	.byte	0x8
 	.byte	0
-	.uleb128 0xc
+	.uleb128 0x9
 	.string	"ParkingSystemPacket"
 	.byte	0x24
-	.byte	0x7
+	.byte	0x6
 	.byte	0x5e
-	.uaword	0x5b4
+	.uaword	0x355
 	.uleb128 0x8
 	.string	"start_byte"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x60
 	.uaword	0x175
 	.byte	0
 	.uleb128 0x8
 	.string	"car_status"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x61
 	.uaword	0x175
 	.byte	0x1
 	.uleb128 0x8
 	.string	"car_current_position"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x62
-	.uaword	0x4f5
+	.uaword	0x296
 	.byte	0x2
 	.uleb128 0x8
 	.string	"car_target_position"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x63
-	.uaword	0x4f5
+	.uaword	0x296
 	.byte	0x12
 	.uleb128 0x8
 	.string	"car_command"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x64
 	.uaword	0x175
 	.byte	0x22
 	.uleb128 0x8
 	.string	"crc"
-	.byte	0x7
+	.byte	0x6
 	.byte	0x65
 	.uaword	0x175
 	.byte	0x23
@@ -427,10 +324,10 @@ testSendPacket:
 	.string	"long double"
 	.uleb128 0x3
 	.string	"clock_t"
-	.byte	0x8
+	.byte	0x7
 	.byte	0x68
 	.uaword	0x148
-	.uleb128 0xd
+	.uleb128 0xa
 	.byte	0x1
 	.string	"FuncTestTask"
 	.byte	0x1
@@ -441,12 +338,12 @@ testSendPacket:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x608
-	.uleb128 0xe
+	.uaword	0x3a9
+	.uleb128 0xb
 	.uaword	.LVL0
 	.byte	0x1
-	.uaword	0x71b
-	.uleb128 0xf
+	.uaword	0x4d3
+	.uleb128 0xc
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
@@ -454,7 +351,7 @@ testSendPacket:
 	.uaword	testSendPacket
 	.byte	0
 	.byte	0
-	.uleb128 0xd
+	.uleb128 0xa
 	.byte	0x1
 	.string	"TimerISR"
 	.byte	0x1
@@ -465,47 +362,55 @@ testSendPacket:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x67a
-	.uleb128 0x10
+	.uaword	0x432
+	.uleb128 0xd
 	.string	"c"
 	.byte	0x1
 	.byte	0x1a
 	.uaword	0x13c
 	.byte	0x5
 	.byte	0x3
-	.uaword	c.16759
-	.uleb128 0x11
-	.uaword	.LVL1
-	.uaword	0x741
-	.uaword	0x64b
+	.uaword	c.16806
+	.uleb128 0xe
+	.uaword	.LBB2
+	.uaword	.LBE2
+	.uaword	0x3ff
 	.uleb128 0xf
+	.byte	0x1
+	.uaword	.LASF0
+	.byte	0x1
+	.byte	0x26
+	.uaword	0x15d
+	.byte	0x1
+	.uaword	0x3f5
+	.uleb128 0x10
+	.byte	0
+	.uleb128 0x11
+	.uaword	.LVL2
+	.uaword	0x4f9
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL1
+	.uaword	0x50c
+	.uaword	0x416
+	.uleb128 0xc
 	.byte	0x1
 	.byte	0x54
 	.byte	0x5
 	.byte	0xc
 	.uaword	0xf4240
 	.byte	0
-	.uleb128 0x11
-	.uaword	.LVL2
-	.uaword	0x771
-	.uaword	0x65e
-	.uleb128 0xf
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x34
-	.byte	0
-	.uleb128 0xe
+	.uleb128 0xb
 	.uaword	.LVL3
 	.byte	0x1
-	.uaword	0x793
-	.uleb128 0xf
+	.uaword	0x53c
+	.uleb128 0xc
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
 	.uaword	.LC0
-	.uleb128 0xf
+	.uleb128 0xc
 	.byte	0x2
 	.byte	0x8a
 	.sleb128 0
@@ -514,102 +419,100 @@ testSendPacket:
 	.sleb128 -1
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x13
 	.string	"pid_prev_error"
-	.byte	0x9
+	.byte	0x8
 	.byte	0x20
 	.uaword	0x1f6
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x12
+	.uleb128 0x13
 	.string	"pid_integral"
-	.byte	0x9
+	.byte	0x8
 	.byte	0x21
 	.uaword	0x1f6
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x13
-	.string	"pid_last_time"
-	.byte	0x9
-	.byte	0x22
-	.uaword	0x5c3
-	.byte	0
 	.uleb128 0x14
-	.uaword	0x240
-	.uaword	0x6dc
+	.string	"pid_last_time"
+	.byte	0x8
+	.byte	0x22
+	.uaword	0x364
+	.byte	0
 	.uleb128 0x15
-	.uaword	0x4e9
+	.uaword	0x240
+	.uaword	0x494
+	.uleb128 0x16
+	.uaword	0x28a
 	.byte	0x2
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x17
 	.string	"IfxCpu_cfg_indexMap"
-	.byte	0xa
+	.byte	0x9
 	.byte	0xa7
-	.uaword	0x6f9
+	.uaword	0x4b1
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5
-	.uaword	0x6cc
-	.uleb128 0x17
+	.uaword	0x484
+	.uleb128 0x18
 	.string	"testSendPacket"
 	.byte	0x1
 	.byte	0x6
-	.uaword	0x518
+	.uaword	0x2b9
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	testSendPacket
-	.uleb128 0x18
+	.uleb128 0x19
 	.byte	0x1
 	.string	"sendPacket"
-	.byte	0xb
+	.byte	0xa
 	.byte	0x1e
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x736
-	.uleb128 0x19
-	.uaword	0x736
+	.uaword	0x4ee
+	.uleb128 0x1a
+	.uaword	0x4ee
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x73c
+	.uaword	0x4f4
 	.uleb128 0x5
-	.uaword	0x518
-	.uleb128 0x1a
+	.uaword	0x2b9
+	.uleb128 0xf
 	.byte	0x1
-	.string	"osEE_tc_stm_set_sr0_next_match"
-	.byte	0xc
-	.uahalf	0x3d8
+	.uaword	.LASF0
 	.byte	0x1
+	.byte	0x26
+	.uaword	0x15d
 	.byte	0x1
-	.uaword	0x771
-	.uleb128 0x19
-	.uaword	0x27a
+	.uaword	0x50c
+	.uleb128 0x10
 	.byte	0
 	.uleb128 0x1b
 	.byte	0x1
-	.string	"ActivateTask"
-	.byte	0xd
-	.uahalf	0x178
+	.string	"osEE_tc_stm_set_sr0_next_match"
+	.byte	0xb
+	.uahalf	0x3d8
 	.byte	0x1
-	.uaword	0x4d6
 	.byte	0x1
-	.uaword	0x793
-	.uleb128 0x19
-	.uaword	0x28a
+	.uaword	0x53c
+	.uleb128 0x1a
+	.uaword	0x27a
 	.byte	0
 	.uleb128 0x1c
 	.byte	0x1
 	.string	"printfSerial"
-	.byte	0xe
+	.byte	0xc
 	.byte	0xf
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x19
+	.uleb128 0x1a
 	.uaword	0x200
-	.uleb128 0x1d
+	.uleb128 0x10
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits
@@ -705,56 +608,21 @@ testSendPacket:
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.uleb128 0x4
+	.uleb128 0x13
 	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0xa
-	.uleb128 0x28
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x1c
-	.uleb128 0xd
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x16
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -779,7 +647,7 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xe
+	.uleb128 0xb
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -790,7 +658,7 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xf
+	.uleb128 0xc
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -799,7 +667,7 @@ testSendPacket:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0xd
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -814,7 +682,51 @@ testSendPacket:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
+	.uleb128 0xe
+	.uleb128 0xb
+	.byte	0x1
 	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x4109
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x12
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -825,7 +737,7 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x12
+	.uleb128 0x13
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -840,7 +752,7 @@ testSendPacket:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -855,7 +767,7 @@ testSendPacket:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -864,30 +776,13 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x16
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2f
 	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x16
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
 	.byte	0
 	.byte	0
 	.uleb128 0x17
@@ -903,11 +798,28 @@ testSendPacket:
 	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.uleb128 0x18
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0xc
 	.uleb128 0x2
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x19
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -923,32 +835,13 @@ testSendPacket:
 	.uleb128 0x3c
 	.uleb128 0xc
 	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x19
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x1a
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
 	.uleb128 0x5
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.uleb128 0x1
+	.byte	0
+	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -965,8 +858,6 @@ testSendPacket:
 	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0xc
 	.uleb128 0x1
@@ -988,11 +879,6 @@ testSendPacket:
 	.uleb128 0xc
 	.uleb128 0x3c
 	.uleb128 0xc
-	.byte	0
-	.byte	0
-	.uleb128 0x1d
-	.uleb128 0x18
-	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1011,8 +897,10 @@ testSendPacket:
 .section .debug_line,"",@progbits
 .Ldebug_line0:
 .section .debug_str,"",@progbits
+.LASF0:
+	.string	"startShiParkerApp"
 	.extern	printfSerial,STT_FUNC,0
-	.extern	ActivateTask,STT_FUNC,0
+	.extern	startShiParkerApp,STT_FUNC,0
 	.extern	osEE_tc_stm_set_sr0_next_match,STT_FUNC,0
 	.extern	sendPacket,STT_FUNC,0
 	.ident	"GCC: (HighTec Release HDP-v4.9.3.0-infineon-1.0-fb21a99) 4.9.4 build on 2019-06-07"

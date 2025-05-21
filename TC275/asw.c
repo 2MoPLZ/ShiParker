@@ -33,8 +33,10 @@ ISR2(TimerISR)
 
 
     /************** basic-TASK (every 1s) ********************/
-    ActivateTask(TestTask);
-
+    // ActivateTask(TestTask);
+    if(c%10==5){
+        startShiParkerApp();
+    }
     /************** basic-TASK for debugging ********************/
     
     printfSerial("\n%4ld: ", c++);

@@ -1,9 +1,9 @@
-# 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
+# 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
 # 1 "C:\\ShiParker\\TC275\\erika//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-# 53 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
+# 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
+# 54 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
 # 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_internal.h" 1
 # 55 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_internal.h"
 # 1 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_conf.h" 1
@@ -3166,1395 +3166,305 @@ static inline void osEE_stack_monitoring
   (void)p_cdb;
 }
 # 60 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_internal.h" 2
-# 54 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c" 2
-
-
-
-
+# 55 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c" 2
 
 void
-  DisableAllInterrupts
+  osEE_counter_insert_rel_trigger
 (
-  void
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_db,
+  TickType delta
 )
 {
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
-
-  osEE_hal_disableIRQ();
-
-  osEE_stack_monitoring(p_cdb);
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_DisableAllInterrupts);
-  p_ccb->d_isr_all_cnt = 1U;
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_DisableAllInterrupts);
-  return;
+  osEE_counter_insert_abs_trigger(p_counter_db, p_trigger_db,
+    osEE_counter_eval_when(p_counter_db, delta));
 }
 
 void
-  EnableAllInterrupts
+  osEE_counter_insert_abs_trigger
 (
-  void
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_db,
+  TickType when
 )
 {
+  OsEE_CounterCB * const
+    p_counter_cb = p_counter_db->p_counter_cb;
+  OsEE_TriggerDB *
+    p_previous = ((void *)0);
+  OsEE_TriggerDB *
+    p_current = p_counter_cb->trigger_queue;
+  TickType const
+    counter_value = p_counter_cb->value;
+  OsEE_bool
+    work_not_done = OSEE_TRUE;
+
+
+  p_trigger_db->p_trigger_cb->when = when;
+
+  while ((p_current != ((void *)0)) && work_not_done) {
+    TickType const current_when = p_current->p_trigger_cb->when;
+
+    if (current_when > counter_value) {
+
+      if ((when >= current_when) || (when <= counter_value)) {
+
+
+        p_previous = p_current;
+        p_current = p_current->p_trigger_cb->p_next;
+      } else {
+        work_not_done = OSEE_FALSE;
+      }
+    } else {
+
+      if ((when <= counter_value) && (when >= current_when)) {
 
 
 
-
-
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_EnableAllInterrupts);
-
-  osEE_stack_monitoring(p_cdb);
-
-  if (p_ccb->d_isr_all_cnt > 0U) {
-    p_ccb->d_isr_all_cnt = 0U;
-    osEE_hal_enableIRQ();
-  }
-
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_EnableAllInterrupts);
-
-  return;
-}
-
-static void
-  osEE_suspend_all_interrupts
-(
-  OsEE_CDB * const p_cdb,
-  OsEE_CCB * const p_ccb
-)
-{
-  if (p_ccb->s_isr_all_cnt == 0U) {
-    OsEE_reg const flags = osEE_hal_suspendIRQ();
-    p_ccb->prev_s_isr_all_status = flags;
-    ++p_ccb->s_isr_all_cnt;
-  } else if (p_ccb->s_isr_all_cnt < ((OsEE_byte)-1)) {
-    ++p_ccb->s_isr_all_cnt;
-  } else {
-
-
-
-    osEE_shutdown_os(p_cdb, E_OS_SYS_SUSPEND_NESTING_LIMIT);
-
-  }
-}
-
-void
-  SuspendAllInterrupts
-(
-  void
-)
-{
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_SuspendAllInterrupts);
-
-  osEE_stack_monitoring(p_cdb);
-
-  osEE_suspend_all_interrupts(p_cdb, p_ccb);
-
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_SuspendAllInterrupts);
-
-  return;
-}
-
-void
-  ResumeAllInterrupts
-(
-  void
-)
-{
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ResumeAllInterrupts);
-
-  osEE_stack_monitoring(p_cdb);
-
-  if (p_ccb->s_isr_all_cnt > 0U) {
-    --p_ccb->s_isr_all_cnt;
-
-    if (p_ccb->s_isr_all_cnt == 0U) {
-      osEE_hal_resumeIRQ(p_ccb->prev_s_isr_all_status);
+        p_previous = p_current;
+        p_current = p_current->p_trigger_cb->p_next;
+      } else {
+        work_not_done = OSEE_FALSE;
+      }
     }
   }
 
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_ResumeAllInterrupts);
-
-  return;
-}
-
-void
-  SuspendOSInterrupts
-(
-  void
-)
-{
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_SuspendOSInterrupts);
-
-  osEE_stack_monitoring(p_cdb);
-
-  if (p_ccb->s_isr_os_cnt == 0U) {
-    OsEE_reg const flags = osEE_hal_begin_nested_primitive();
-    p_ccb->prev_s_isr_os_status = flags;
-    ++p_ccb->s_isr_os_cnt;
-  } else if (p_ccb->s_isr_os_cnt < ((OsEE_byte)-1)) {
-    ++p_ccb->s_isr_os_cnt;
+  if (p_previous != ((void *)0)) {
+    p_previous->p_trigger_cb->p_next = p_trigger_db;
   } else {
-
-
-
-    osEE_shutdown_os(p_cdb, E_OS_SYS_SUSPEND_NESTING_LIMIT);
-
+    p_counter_cb->trigger_queue = p_trigger_db;
   }
 
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_SuspendOSInterrupts);
-
-  return;
+  p_trigger_db->p_trigger_cb->p_next = p_current;
 }
 
 void
-  ResumeOSInterrupts
+  osEE_counter_cancel_trigger
 (
-  void
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_db
 )
 {
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
+  OsEE_CounterCB * const
+    p_counter_cb = p_counter_db->p_counter_cb;
+  OsEE_TriggerCB const * const
+    p_trigger_cb = p_trigger_db->p_trigger_cb;
+  OsEE_TriggerDB *
+    p_current = p_counter_cb->trigger_queue;
 
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ResumeOSInterrupts);
+  if (p_current == p_trigger_db) {
 
-  osEE_stack_monitoring(p_cdb);
+    p_counter_cb->trigger_queue = p_trigger_cb->p_next;
+  } else {
+    OsEE_TriggerDB * p_previous;
+    do {
+      p_previous = p_current;
+      p_current = p_current->p_trigger_cb->p_next;
+    } while ((p_current != ((void *)0)) && (p_current != p_trigger_db));
 
-  if (p_ccb->s_isr_os_cnt > 0U) {
-    --p_ccb->s_isr_os_cnt;
+    if (p_current != ((void *)0)) {
 
-    if (p_ccb->s_isr_os_cnt == 0U) {
-      osEE_hal_end_nested_primitive(p_ccb->prev_s_isr_os_status);
+      p_previous->p_trigger_cb->p_next = p_trigger_cb->p_next;
     }
   }
-
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_ResumeOSInterrupts);
-
-  return;
 }
 
-StatusType
-  StartOS
+
+static StatusType
+  osEE_handle_action
 (
-  AppModeType Mode
+  OsEE_action * p_action
 )
 {
   StatusType ev = E_OK;
-  AppModeType real_mode = Mode;
-
-
-
-
-
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const p_ccb = p_cdb->p_ccb;
-  OsEE_reg const flags = osEE_begin_primitive();
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_StartOS);
-
-
-
-
-  if (p_ccb->os_status != OSEE_KERNEL_INITIALIZED) {
-
-
-
-    ev = E_OS_ACCESS;
-  } else
-
-
-
-
-    if (osEE_cpu_startos() == OSEE_FALSE) {
-
-
-
-      ev = E_OS_SYS_INIT;
-    } else {
-
-    }
-
-
-
-
-
-  if (ev == E_OK) {
-
-    OsEE_TDB * const
-      p_idle_tdb = p_cdb->p_idle_task;
-# 300 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    p_ccb->os_status = OSEE_KERNEL_STARTING;
-    p_ccb->app_mode = real_mode;
-# 389 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    osEE_call_startup_hook(p_ccb);
-# 527 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    if (p_ccb->os_status == OSEE_KERNEL_STARTING) {
-      p_ccb->os_status = OSEE_KERNEL_STARTED;
-    }
-
-
-
-
-    osEE_orti_trace_service_exit(p_ccb, OSServiceId_StartOS);
-
-
-    if (p_ccb->os_status == OSEE_KERNEL_STARTED) {
-      osEE_idle_task_start(p_idle_tdb);
-      osEE_task_end(p_idle_tdb);
-    }
-
-    osEE_hal_disableIRQ();
-    osEE_shutdown_os_extra();
-    osEE_call_shutdown_hook(p_ccb, p_ccb->last_error);
-    for(;;) {}
-# 572 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  }
-
-  if (ev != E_OK) {
-    osEE_set_service_id(p_ccb, OSServiceId_StartOS);
-    osEE_call_error_hook(p_ccb, ev);
-    osEE_orti_trace_service_exit(p_ccb, OSServiceId_StartOS);
-    osEE_end_primitive(flags);
-  }
-
-  return ev;
-}
-
-AppModeType
-  GetActiveApplicationMode
-(
-  void
-)
-{
-  AppModeType app_mode;
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetActiveApplicationMode);
-
-  osEE_stack_monitoring(p_cdb);
-
-  if (p_ccb->os_status >= OSEE_KERNEL_STARTING) {
-    app_mode = p_ccb->app_mode;
-  } else {
-    app_mode = ((AppModeType)-1);
-  }
-
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetActiveApplicationMode);
-
-  return app_mode;
-}
-
-StatusType
-  ActivateTask
-(
-  TaskType TaskID
-)
-{
-  StatusType ev;
-  OsEE_KDB * const p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ActivateTask);
-  osEE_stack_monitoring(p_cdb);
-# 655 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_tid(p_kdb, TaskID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_TDB * const
-      p_tdb_act = (*p_kdb->p_tdb_ptr_array)[TaskID];
-
-    if (p_tdb_act->task_type <= OSEE_TASK_TYPE_EXTENDED) {
-      OsEE_reg const flags = osEE_begin_primitive();
-
-      ev = osEE_task_activated(p_tdb_act);
-
-      if (ev == E_OK) {
-        (void)osEE_scheduler_task_activated(p_kdb, p_tdb_act);
-      }
-
-      osEE_end_primitive(flags);
-    } else {
-      ev = E_OS_ID;
-    }
-  }
-# 691 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  return ev;
-}
-
-StatusType
-  ChainTask
-(
-  TaskType TaskID
-)
-{
-  StatusType ev;
-  OsEE_KDB * const p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-
-
-
-  OsEE_CCB * const
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const
-    p_curr = p_ccb->p_curr;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ChainTask);
-  osEE_stack_monitoring(p_cdb);
-# 745 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_tid(p_kdb, TaskID)) {
-    ev = E_OS_ID;
-  } else {
-    OsEE_TDB * const
-      p_tdb_act = (*p_kdb->p_tdb_ptr_array)[TaskID];
-# 771 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    if (p_tdb_act->task_type <= OSEE_TASK_TYPE_EXTENDED) {
-      OsEE_reg flags;
-
-
-      if (p_ccb->s_isr_all_cnt > 0U) {
-        p_ccb->s_isr_all_cnt = 0U;
-        osEE_hal_resumeIRQ(p_ccb->prev_s_isr_all_status);
-      }
-      if (p_ccb->d_isr_all_cnt > 0U) {
-        p_ccb->d_isr_all_cnt = 0U;
-        osEE_hal_enableIRQ();
-      }
-
-
-      flags = osEE_begin_primitive();
-
-      if (p_tdb_act == p_curr) {
-
-        p_tdb_act->p_tcb->status = OSEE_TASK_CHAINED;
-        ev = E_OK;
-      } else {
-        ev = osEE_task_activated(p_tdb_act);
-        if (ev == E_OK) {
-          (void)osEE_scheduler_task_insert(p_kdb, p_tdb_act);
-        }
-      }
-      if (ev == E_OK) {
-
-        osEE_hal_terminate_activation(&osEE_get_curr_task()->hdb,
-          ((void *)0));
-      }
-      osEE_end_primitive(flags);
-    } else {
-      ev = E_OS_ID;
-    }
-  }
-# 819 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_ChainTask);
-
-  return ev;
-}
-
-StatusType
-  TerminateTask
-(
-  void
-)
-{
-  StatusType ev;
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-
-
-
-  OsEE_CCB * const
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const
-    p_curr = p_ccb->p_curr;
-# 898 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  {
-    OsEE_reg flags;
-
-
-      if (p_ccb->s_isr_all_cnt > 0U) {
-        p_ccb->s_isr_all_cnt = 0U;
-        osEE_hal_resumeIRQ(p_ccb->prev_s_isr_all_status);
-      }
-      if (p_ccb->d_isr_all_cnt > 0U) {
-        p_ccb->d_isr_all_cnt = 0U;
-        osEE_hal_enableIRQ();
-      }
-
-
-    flags = osEE_begin_primitive();
-
-
-    osEE_hal_terminate_activation(
-      &p_curr->hdb, ((void *)0)
-    );
-
-    osEE_end_primitive(flags);
-
-    ev = E_OK;
-  }
-# 934 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_TerminateTask);
-
-  return ev;
-}
-
-StatusType
-  Schedule
-(
-  void
-)
-{
-  StatusType ev;
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const p_curr = p_ccb->p_curr;
-  OsEE_TCB * const p_tcb = p_curr->p_tcb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_Schedule);
-
-  osEE_stack_monitoring(p_cdb);
-# 1003 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (p_tcb->current_prio == p_curr->dispatch_prio)
-  {
-
-    OsEE_reg const flags = osEE_begin_primitive();
-
-
-    p_tcb->current_prio = p_curr->ready_prio;
-
-    (void)osEE_scheduler_task_preemption_point(osEE_get_kernel());
-
-    p_tcb->current_prio = p_curr->dispatch_prio;
-
-
-    osEE_end_primitive(flags);
-
-    ev = E_OK;
-  } else {
-
-    ev = E_OK;
-  }
-# 1034 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_Schedule);
-
-  return ev;
-}
-
-
-StatusType
-  GetResource
-(
-  ResourceType ResID
-)
-{
-  StatusType ev;
-  OsEE_KDB * const p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const
-    p_curr = p_ccb->p_curr;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetResource);
-
-  osEE_stack_monitoring(p_cdb);
-# 1083 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_res_id(p_kdb, ResID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_ResourceDB * const
-      p_reso_db = (*p_kdb->p_res_ptr_array)[ResID];
-    OsEE_ResourceCB * const
-      p_reso_cb = p_reso_db->p_cb;
-    OsEE_TCB * const
-      p_curr_tcb = p_curr->p_tcb;
-    TaskPrio const
-      reso_prio = p_reso_db->prio;
-    TaskPrio const
-      current_prio = p_curr_tcb->current_prio;
-    OsEE_reg
-      flags = osEE_begin_primitive();
-# 1117 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
+  switch (p_action->type) {
+    case OSEE_ACTION_TASK:
     {
-      if (current_prio < reso_prio) {
-        p_curr_tcb->current_prio = reso_prio;
-        flags = osEE_hal_prepare_ipl(flags, reso_prio);
+      OsEE_TDB * const
+        p_tdb = p_action->param.p_tdb;
+
+      ev = osEE_task_activated(p_tdb);
+      if (ev == E_OK) {
+        (void)osEE_scheduler_task_insert(osEE_get_kernel(), p_tdb);
       }
+    }
+    break;
 
-      p_reso_cb->p_owner = p_curr;
+    case OSEE_ACTION_EVENT:
+    {
+      OsEE_SN *
+        p_sn;
+      OsEE_TDB * const
+        p_tdb = p_action->param.p_tdb;
+      EventMaskType const
+        mask = p_action->param.mask;
 
-      osEE_end_primitive(flags);
+      p_sn = osEE_task_event_set_mask(p_tdb, mask, &ev);
 
-      p_reso_cb->p_next = p_curr_tcb->p_last_m;
-      p_reso_cb->prev_prio = current_prio;
-      p_curr_tcb->p_last_m = p_reso_db;
+      if (p_sn != ((void *)0)) {
+
+        (void)osEE_scheduler_task_unblocked(osEE_get_kernel(), p_sn);
+      }
+    }
+    break;
+
+    case OSEE_ACTION_COUNTER:
+      osEE_counter_increment(p_action->param.p_counter_db);
+      ev = E_OK;
+    break;
+    case OSEE_ACTION_CALLBACK:
+    {
+# 210 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
+      p_action->param.f();
+
+
+
 
       ev = E_OK;
     }
-  }
-# 1146 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetResource);
-
-  return ev;
-}
-
-StatusType
-  ReleaseResource
-(
-  ResourceType ResID
-)
-{
-  StatusType ev;
-  OsEE_KDB * const p_kdb = osEE_get_kernel();
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const p_curr = p_ccb->p_curr;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ReleaseResource);
-  osEE_stack_monitoring(p_cdb);
-# 1191 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_res_id(p_kdb, ResID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_TCB * const
-      p_curr_tcb = p_curr->p_tcb;
-    OsEE_ResourceDB * const
-      p_reso_db = (*p_kdb->p_res_ptr_array)[ResID];
-    OsEE_ResourceCB * const
-      p_reso_cb = p_reso_db->p_cb;
-# 1213 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    {
-      OsEE_reg
-        flags = osEE_begin_primitive();
-
-
-      p_curr_tcb->p_last_m = p_curr_tcb->p_last_m->p_cb->p_next;
-
-      if (p_curr_tcb->p_last_m != ((void *)0)) {
-        TaskPrio const
-          prev_prio = p_reso_cb->prev_prio;
-
-        p_curr_tcb->current_prio = prev_prio;
-        flags = osEE_hal_prepare_ipl(flags, prev_prio);
-      } else {
-        TaskPrio const
-          dispatch_prio = p_curr->dispatch_prio;
-
-        p_curr_tcb->current_prio = dispatch_prio;
-        flags = osEE_hal_prepare_ipl(flags, dispatch_prio);
-      }
-
-      p_reso_cb->p_owner = ((void *)0);
-
-
-      (void)osEE_scheduler_task_preemption_point(p_kdb);
-
-      osEE_end_primitive(flags);
+    break;
+    default:
 
       ev = E_OK;
-    }
+    break;
   }
-# 1256 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_ReleaseResource);
-
+# 233 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
   return ev;
 }
 
 
-StatusType
-  ShutdownOS
+
+static void
+  osEE_counter_handle_alarm
 (
-  StatusType Error
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_to_be_handled_db
 )
 {
-  StatusType ev;
-  OsEE_CDB * const p_cdb = osEE_get_curr_core();
+  OsEE_CDB * p_cdb;
+  OsEE_TriggerCB * p_trigger_to_be_handled_cb;
 
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_reg const flags = osEE_begin_primitive();
-  OsEE_kernel_status const os_status = p_ccb->os_status;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ShutdownOS);
-  osEE_stack_monitoring(p_cdb);
-# 1304 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  {
-    if ((os_status == OSEE_KERNEL_STARTED) ||
-        (os_status == OSEE_KERNEL_STARTING))
-    {
-      osEE_shutdown_os(p_cdb, Error);
-    }
+  (void)osEE_handle_action(
+    &osEE_trigger_get_alarm_db(p_trigger_to_be_handled_db)->action
+  );
 
 
-    ev = E_OS_STATE;
-  }
-# 1323 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_ShutdownOS);
-  osEE_end_primitive(flags);
+  p_cdb = osEE_lock_and_get_curr_core();
 
-  return ev;
-}
+  p_trigger_to_be_handled_cb = p_trigger_to_be_handled_db->p_trigger_cb;
 
-StatusType
-  GetTaskID
-(
-  TaskRefType TaskID
-)
-{
-  StatusType ev;
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
+  if (p_trigger_to_be_handled_cb->status == OSEE_TRIGGER_EXPIRED) {
+    TickType const cycle = osEE_alarm_get_cb(
+        osEE_trigger_get_alarm_db(p_trigger_to_be_handled_db)
+      )->cycle;
+    if (cycle > 0U) {
 
 
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetTaskID);
-  osEE_stack_monitoring(p_cdb);
-# 1373 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (TaskID == ((void *)0)) {
-    ev = E_OS_PARAM_POINTER;
-  } else {
-    TaskType
-      tid = ((TaskType)-1);
-    OsEE_TDB * const
-      p_tdb = p_ccb->p_curr;
-# 1389 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    if (p_tdb->task_type <= OSEE_TASK_TYPE_EXTENDED) {
-
-      tid = p_tdb->tid;
-    } else if (p_tdb->task_type == OSEE_TASK_TYPE_ISR2) {
-
-
-      OsEE_SN const *
-        p_sn = p_ccb->p_stk_sn->p_next;
-
-      while (p_sn != ((void *)0)) {
-        OsEE_TDB * const
-          p_searched_tdb = p_sn->p_tdb;
-        if (p_searched_tdb->task_type <= OSEE_TASK_TYPE_EXTENDED) {
-          tid = p_searched_tdb->tid;
-          break;
-        } else {
-          p_sn = p_sn->p_next;
-        }
-      }
+      p_trigger_to_be_handled_cb->status = OSEE_TRIGGER_ACTIVE;
+      osEE_counter_insert_rel_trigger(p_counter_db,
+        p_trigger_to_be_handled_db, cycle);
     } else {
-
-
-    }
-
-    (*TaskID) = tid;
-    ev = E_OK;
-  }
-# 1428 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetTaskID);
-
-  return ev;
-}
-
-StatusType
-  GetTaskState
-(
-  TaskType TaskID,
-  TaskStateRefType State
-)
-{
-  StatusType ev;
-  OsEE_KDB * const p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetTaskState);
-  osEE_stack_monitoring(p_cdb);
-# 1479 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (State == ((void *)0)) {
-    ev = E_OS_PARAM_POINTER;
-  } else
-  if (!osEE_is_valid_tid(p_kdb, TaskID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_TDB * const
-      p_tdb = (*p_kdb->p_tdb_ptr_array)[TaskID];
-
-
-    OsEE_task_status const local_state = p_tdb->p_tcb->status;
-    switch (local_state) {
-      case OSEE_TASK_SUSPENDED:
-        (*State) = OSEE_TASK_SUSPENDED;
-        break;
-      case OSEE_TASK_READY:
-      case OSEE_TASK_READY_STACKED:
-        (*State) = OSEE_TASK_READY;
-        break;
-      case OSEE_TASK_WAITING:
-        (*State) = OSEE_TASK_WAITING;
-        break;
-      case OSEE_TASK_RUNNING:
-      case OSEE_TASK_CHAINED:
-        (*State) = OSEE_TASK_RUNNING;
-        break;
-      default:
-
-        ;
-        break;
-    }
-    ev = E_OK;
-  }
-# 1526 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetTaskState);
-
-  return ev;
-}
-
-
-StatusType
-  SetRelAlarm
-(
-  AlarmType AlarmID,
-  TickType increment,
-  TickType cycle
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_SetRelAlarm);
-  osEE_stack_monitoring(p_cdb);
-# 1575 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_alarm_id(p_kdb, AlarmID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_AlarmDB * const
-      p_alarm_db = (*p_kdb->p_alarm_ptr_array)[AlarmID];
-    OsEE_CounterDB * const
-      p_counter_db = osEE_alarm_get_trigger_db(p_alarm_db)->p_counter_db;
-# 1595 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    {
-      OsEE_reg const
-        flags = osEE_begin_primitive();
-
-      ev = osEE_alarm_set_rel(p_counter_db, p_alarm_db, increment, cycle);
-
-      osEE_end_primitive(flags);
+      p_trigger_to_be_handled_cb->status = OSEE_TRIGGER_INACTIVE;
     }
   }
-# 1618 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_SetRelAlarm);
 
-  return ev;
+  osEE_unlock_core(p_cdb);
 }
-
-StatusType
-  SetAbsAlarm
+# 464 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
+void
+  osEE_counter_increment
 (
-  AlarmType AlarmID,
-  TickType start,
-  TickType cycle
+  OsEE_CounterDB * p_counter_db
 )
 {
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_SetAbsAlarm);
-  osEE_stack_monitoring(p_cdb);
-# 1666 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_alarm_id(p_kdb, AlarmID)) {
-    ev = E_OS_ID;
-  } else
+  OsEE_CounterCB * const
+    p_counter_cb = p_counter_db->p_counter_cb;
+# 488 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
   {
-    OsEE_AlarmDB * const
-      p_alarm_db = (*p_kdb->p_alarm_ptr_array)[AlarmID];
-    OsEE_CounterDB * const
-      p_counter_db = osEE_alarm_get_trigger_db(p_alarm_db)->p_counter_db;
-# 1685 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    {
-      OsEE_reg const
-        flags = osEE_begin_primitive();
+    TickType counter_value;
+    OsEE_TriggerDB * p_triggered_db;
 
-      ev = osEE_alarm_set_abs(p_counter_db, p_alarm_db, start, cycle);
 
-      osEE_end_primitive(flags);
+
+    OsEE_CDB * const
+      p_cdb = osEE_get_curr_core();
+
+
+
+    if (p_counter_cb->value >= p_counter_db->info.maxallowedvalue) {
+      counter_value = 0U;
+      p_counter_cb->value = 0U;
+    } else {
+      ++p_counter_cb->value;
+      counter_value = p_counter_cb->value;
     }
-  }
-# 1708 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_SetAbsAlarm);
-
-  return ev;
-}
-
-StatusType
-  CancelAlarm
-(
-  AlarmType AlarmID
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_CancelAlarm);
-  osEE_stack_monitoring(p_cdb);
-# 1754 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_alarm_id(p_kdb, AlarmID)) {
-    ev = E_OS_ID;
-  } else {
-    OsEE_AlarmDB * const
-      p_alarm_db = (*p_kdb->p_alarm_ptr_array)[AlarmID];
-    OsEE_reg const
-      flags = osEE_begin_primitive();
-
-    ev = osEE_alarm_cancel(p_alarm_db);
-
-    osEE_end_primitive(flags);
-  }
-# 1778 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_CancelAlarm);
-
-  return ev;
-}
-
-StatusType
-  GetAlarm
-(
-  AlarmType AlarmID,
-  TickRefType Tick
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetAlarm);
-  osEE_stack_monitoring(p_cdb);
-# 1825 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_alarm_id(p_kdb, AlarmID)) {
-    ev = E_OS_ID;
-  } else
-  if (Tick == ((void *)0)) {
-    ev = E_OS_PARAM_POINTER;
-  } else
-  {
-    OsEE_AlarmDB * const
-      p_alarm_db = (*p_kdb->p_alarm_ptr_array)[AlarmID];
-    OsEE_reg const
-      flags = osEE_begin_primitive();
-
-    ev = osEE_alarm_get(p_alarm_db, Tick);
-
-    osEE_end_primitive(flags);
-  }
-# 1854 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetAlarm);
-
-  return ev;
-}
-
-StatusType
-  GetAlarmBase
-(
-  AlarmType AlarmID,
-  AlarmBaseRefType Info
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetAlarmBase);
-  osEE_stack_monitoring(p_cdb);
-# 1901 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_alarm_id(p_kdb, AlarmID)) {
-    ev = E_OS_ID;
-  } else
-  if (Info == ((void *)0)) {
-    ev = E_OS_PARAM_POINTER;
-  } else
-  {
-    OsEE_AlarmDB * const
-      p_alarm_db = (*p_kdb->p_alarm_ptr_array)[AlarmID];
-    OsEE_TriggerDB * const
-      p_trigger_db = osEE_alarm_get_trigger_db(p_alarm_db);
-    OsEE_CounterDB * const
-      p_counter_db = p_trigger_db->p_counter_db;
-
-    *Info = p_counter_db->info;
-
-    ev = E_OK;
-  }
-# 1932 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetAlarmBase);
-
-  return ev;
-}
 
 
 
 
-StatusType
-  WaitEvent
-(
-  EventMaskType Mask
-)
-{
-  StatusType ev;
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-  OsEE_CCB * const
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const
-    p_curr = p_ccb->p_curr;
-  OsEE_TCB * const
-    p_curr_tcb = p_curr->p_tcb;
 
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_WaitEvent);
-  osEE_stack_monitoring(p_cdb);
-# 2002 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  {
 
-    OsEE_reg const flags = osEE_begin_primitive();
+
     osEE_lock_core(p_cdb);
 
+    p_triggered_db = p_counter_cb->trigger_queue;
 
-    if ((p_curr_tcb->event_mask & Mask) == 0U) {
+    if (p_triggered_db != ((void *)0)) {
+      OsEE_TriggerCB const *
+        p_triggered_cb = p_triggered_db->p_trigger_cb;
 
-      p_curr_tcb->wait_mask = Mask;
+      if (p_triggered_cb->when == counter_value) {
 
-      p_curr_tcb->p_own_sn =
-        osEE_scheduler_core_pop_running(p_cdb, &p_ccb->rq);
+        OsEE_TriggerDB *
+          p_current = p_triggered_db;
+        OsEE_TriggerDB *
+          p_previous;
 
-      p_curr_tcb->status = OSEE_TASK_WAITING;
+        do {
 
-      osEE_unlock_core(p_cdb);
+          OsEE_TriggerCB * const
+            p_current_cb = p_current->p_trigger_cb;
+          p_previous = p_current;
 
-      osEE_change_context_from_running(p_curr, p_ccb->p_curr);
+          p_current_cb->status = OSEE_TRIGGER_EXPIRED;
+          p_current = p_current_cb->p_next;
+        } while ((p_current != ((void *)0)) &&
+          (p_current->p_trigger_cb->when == counter_value));
 
 
-      p_curr_tcb->wait_mask = 0U;
+        p_previous->p_trigger_cb->p_next = ((void *)0);
 
-      ev = E_OK;
+
+        p_counter_cb->trigger_queue = p_current;
+
+
+
+        osEE_unlock_core(p_cdb);
+
+
+        do {
+
+          OsEE_TriggerDB * const
+            p_trigger_to_be_handled_db = p_triggered_db;
+
+
+
+
+
+          p_triggered_db = p_triggered_db->p_trigger_cb->p_next;
+# 575 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_counter.c"
+          osEE_counter_handle_alarm(p_counter_db, p_trigger_to_be_handled_db);
+
+
+
+
+
+        } while (p_triggered_db != ((void *)0));
+      } else {
+        osEE_unlock_core(p_cdb);
+      }
     } else {
       osEE_unlock_core(p_cdb);
-      ev = E_OK;
-    }
-
-    osEE_end_primitive(flags);
-  }
-# 2044 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_WaitEvent);
-
-  return ev;
-}
-
-StatusType
-  SetEvent
-(
-  TaskType TaskID,
-  EventMaskType Mask
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-# 2101 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_stack_monitoring(p_cdb);
-
-  if (!osEE_is_valid_tid(p_kdb, TaskID)) {
-    ev = E_OS_ID;
-  } else {
-    OsEE_SN *
-      p_sn;
-    OsEE_TDB * const
-      p_tdb_waking_up = (*p_kdb->p_tdb_ptr_array)[TaskID];
-    OsEE_reg const
-      flags = osEE_begin_primitive();
-
-    p_sn = osEE_task_event_set_mask(p_tdb_waking_up, Mask, &ev);
-
-    if (p_sn != ((void *)0)) {
-
-      if (osEE_scheduler_task_unblocked(p_kdb, p_sn))
-      {
-        (void)osEE_scheduler_task_preemption_point(p_kdb);
-      }
-    }
-    osEE_end_primitive(flags);
-  }
-# 2140 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  return ev;
-}
-
-StatusType
-  GetEvent
-(
-  TaskType TaskID,
-  EventMaskRefType Event
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-# 2200 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_stack_monitoring(p_cdb);
-
-  if (!osEE_is_valid_tid(p_kdb, TaskID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_TDB * const
-      p_tdb_event = (*p_kdb->p_tdb_ptr_array)[TaskID];
-    OsEE_TCB const * const
-      p_tcb_event = p_tdb_event->p_tcb;
-# 2220 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    if (Event == ((void *)0)) {
-      ev = E_OS_PARAM_POINTER;
-    } else
-    {
-
-      (*Event) = p_tcb_event->event_mask;
-
-      ev = E_OK;
     }
   }
-# 2246 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  return ev;
-}
-
-StatusType
-  ClearEvent
-(
-  EventMaskType Mask
-)
-{
-  StatusType ev;
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-  OsEE_TDB * const
-    p_curr = p_ccb->p_curr;
-  OsEE_TCB * const
-    p_curr_tcb = p_curr->p_tcb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_ClearEvent);
-  osEE_stack_monitoring(p_cdb);
-# 2298 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  {
-
-    OsEE_reg const
-      flags = osEE_begin_primitive();
-    osEE_lock_core(p_cdb);
-
-
-    p_curr_tcb->event_mask &= ~Mask;
-
-    osEE_unlock_core(p_cdb);
-    osEE_end_primitive(flags);
-
-    ev = E_OK;
-  }
-# 2323 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_ClearEvent);
-
-  return ev;
-}
-
-
-
-StatusType
-  GetCounterValue
-(
-  CounterType CounterID,
-  TickRefType Value
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetCounterValue);
-  osEE_stack_monitoring(p_cdb);
-# 2374 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_counter_id(p_kdb, CounterID)) {
-    ev = E_OS_ID;
-  } else
-  if (Value == ((void *)0)) {
-    ev = E_OS_PARAM_POINTER;
-  } else
-  {
-    OsEE_CounterDB * const
-      p_counter_db = (*p_kdb->p_counter_ptr_array)[CounterID];
-# 2392 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    {
-# 2407 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-      (*Value) = p_counter_db->p_counter_cb->value;
-
-      ev = E_OK;
-    }
-  }
-# 2425 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetCounterValue);
-
-  return ev;
-}
-
-StatusType
-  GetElapsedValue
-(
-  CounterType CounterID,
-  TickRefType Value,
-  TickRefType ElapsedValue
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_GetElapsedValue);
-  osEE_stack_monitoring(p_cdb);
-# 2474 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_counter_id(p_kdb, CounterID)) {
-    ev = E_OS_ID;
-  } else
-  if ((Value == ((void *)0)) || (ElapsedValue == ((void *)0))) {
-    ev = E_OS_PARAM_POINTER;
-  } else
-  {
-    OsEE_CounterDB * const
-      p_counter_db = (*p_kdb->p_counter_ptr_array)[CounterID];
-    TickType const
-      local_value = (*Value);
-# 2503 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    {
-
-
-
-
-      TickType const
-        local_curr_value = p_counter_db->p_counter_cb->value;
-
-
-
-
-
-      (*ElapsedValue) = (local_curr_value >= local_value)?
-
-        (local_curr_value - local_value):
-
-        ((p_counter_db->info.maxallowedvalue -
-          (local_value - local_curr_value)) + 1U);
-
-
-
-      (*Value) = local_curr_value;
-
-      ev = E_OK;
-    }
-  }
-# 2543 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_GetElapsedValue);
-
-  return ev;
-}
-
-StatusType
-  IncrementCounter
-(
-  CounterType CounterID
-)
-{
-  StatusType ev;
-  OsEE_KDB * const
-    p_kdb = osEE_get_kernel();
-  OsEE_CDB * const
-    p_cdb = osEE_get_curr_core();
-
-  OsEE_CCB const * const
-
-
-
-    p_ccb = p_cdb->p_ccb;
-
-  osEE_orti_trace_service_entry(p_ccb, OSServiceId_IncrementCounter);
-  osEE_stack_monitoring(p_cdb);
-# 2592 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  if (!osEE_is_valid_counter_id(p_kdb, CounterID)) {
-    ev = E_OS_ID;
-  } else
-  {
-    OsEE_CounterDB * const
-      p_counter_db = (*p_kdb->p_counter_ptr_array)[CounterID];
-# 2607 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-    {
-# 2617 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-      OsEE_reg const flags = osEE_begin_primitive();
-
-
-
-
-      osEE_counter_increment(p_counter_db);
-
-
-
-      if (osEE_get_curr_task()->task_type <= OSEE_TASK_TYPE_EXTENDED) {
-        (void)osEE_scheduler_task_preemption_point(p_kdb);
-      }
-
-      osEE_end_primitive(flags);
-
-      ev = E_OK;
-    }
-  }
-# 2647 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-  osEE_orti_trace_service_exit(p_ccb, OSServiceId_IncrementCounter);
-
-  return ev;
-}
-# 3311 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
-ISRType
-  GetISRID
-(
-  void
-)
-{
-  ISRType isr_id;
-  OsEE_TDB * const
-    p_tdb = osEE_get_curr_task();
-
-  if (p_tdb->task_type == OSEE_TASK_TYPE_ISR2) {
-    isr_id = p_tdb->tid;
-  } else {
-    isr_id = ((TaskType)-1);
-  }
-
-  return isr_id;
 }

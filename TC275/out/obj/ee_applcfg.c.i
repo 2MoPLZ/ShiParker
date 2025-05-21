@@ -1333,6 +1333,41 @@ typedef enum {
 typedef OsEE_task_status TaskStateType;
 
 typedef TaskStateType * TaskStateRefType;
+# 399 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg CounterType;
+# 414 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg TickType;
+
+
+
+
+typedef TickType * TickRefType;
+# 431 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_sreg TickDeltaType;
+
+
+
+
+
+
+
+typedef struct {
+
+  TickType maxallowedvalue;
+
+
+  TickType ticksperbase;
+
+
+
+
+
+} AlarmBaseType;
+
+
+typedef AlarmBaseType * AlarmBaseRefType;
+# 470 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg AlarmType;
 # 524 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ResourceType;
 # 567 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
@@ -1419,6 +1454,18 @@ typedef enum {
   OSServiceId_ClearEvent = (30),
   OSServiceId_GetEvent = (32),
   OSServiceId_WaitEvent = (34),
+
+
+  OSServiceId_GetAlarmBase = (36),
+  OSServiceId_GetAlarm = (38),
+  OSServiceId_SetRelAlarm = (40),
+  OSServiceId_SetAbsAlarm = (42),
+  OSServiceId_CancelAlarm = (44),
+
+
+  OSServiceId_IncrementCounter = (46),
+  OSServiceId_GetCounterValue = (48),
+  OSServiceId_GetElapsedValue = (50),
 # 804 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
   OSServiceId_GetActiveApplicationMode = (70),
   OSServiceId_ShutdownOS = (72),
@@ -1547,6 +1594,42 @@ StatusType
 (
   ResourceType ResID
 );
+# 659 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetRelAlarm
+(
+  AlarmType AlarmID,
+  TickType increment,
+  TickType cycle
+);
+# 705 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetAbsAlarm
+(
+  AlarmType AlarmID,
+  TickType start,
+  TickType cycle
+);
+# 733 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarm
+(
+  AlarmType AlarmID,
+  TickRefType Tick
+);
+# 761 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarmBase
+(
+  AlarmType AlarmID,
+  AlarmBaseRefType Info
+);
+# 786 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  CancelAlarm
+(
+  AlarmType AlarmID
+);
 # 818 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   WaitEvent
@@ -1572,6 +1655,27 @@ StatusType
   ClearEvent
 (
   EventMaskType Mask
+);
+# 1046 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetCounterValue
+(
+  CounterType CounterID,
+  TickRefType Value
+);
+# 1076 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetElapsedValue
+(
+  CounterType CounterID,
+  TickRefType Value,
+  TickRefType ElapsedValue
+);
+# 1115 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  IncrementCounter
+(
+  CounterType CounterID
 );
 # 1352 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
  ISRType
@@ -1663,6 +1767,8 @@ uint8_t osEE_assert_last(void);
 # 1 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h" 1
 # 35 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h"
 extern void FuncTestTask ( void );
+extern void FuncShiParkerAppTask ( void );
+extern void FuncPacketSendTask ( void );
 
 
 void asclin3TxISR(void);
@@ -1815,6 +1921,110 @@ typedef struct {
 
   TaskFunc real_task_func;
 } const OsEE_TW;
+# 319 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+struct OsEE_TriggerDB_tag;
+# 336 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct OsEE_TriggerDB_tag const *
+  OsEE_TriggerQ;
+
+
+
+typedef struct {
+
+  OsEE_TriggerQ trigger_queue;
+
+  TickType value;
+
+
+
+
+} OsEE_CounterCB;
+# 367 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct {
+
+  OsEE_CounterCB * p_counter_cb;
+
+
+
+
+
+  AlarmBaseType info;
+
+
+
+
+} const OsEE_CounterDB;
+
+
+typedef enum {
+  OSEE_ACTION_TASK,
+  OSEE_ACTION_EVENT,
+  OSEE_ACTION_COUNTER,
+  OSEE_ACTION_CALLBACK
+} OsEE_action_type;
+
+
+
+
+typedef struct {
+
+  OsEE_kernel_cb f;
+
+  OsEE_TDB * p_tdb;
+
+  OsEE_CounterDB * p_counter_db;
+
+
+  EventMaskType mask;
+
+} OsEE_action_param;
+
+
+
+typedef struct {
+
+  OsEE_action_param param;
+
+  OsEE_action_type type;
+} const OsEE_action;
+# 555 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef enum {
+  OSEE_TRIGGER_INACTIVE,
+  OSEE_TRIGGER_CANCELED,
+  OSEE_TRIGGER_ACTIVE,
+  OSEE_TRIGGER_EXPIRED,
+  OSEE_TRIGGER_REENABLED
+} OsEE_trigger_status;
+# 578 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct {
+
+  struct OsEE_TriggerDB_tag const * p_next;
+
+
+  TickType when;
+
+  OsEE_trigger_status status;
+
+
+
+  TickType cycle;
+# 606 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+} OsEE_TriggerCB;
+# 617 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct OsEE_TriggerDB_tag {
+
+  OsEE_TriggerCB * p_trigger_cb;
+
+  OsEE_CounterDB * p_counter_db;
+# 635 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+  OsEE_action action;
+# 656 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+} const OsEE_TriggerDB;
+
+
+
+typedef OsEE_TriggerCB OsEE_AlarmCB;
+typedef OsEE_TriggerDB OsEE_AlarmDB;
 # 729 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
 typedef struct {
 
@@ -1881,6 +2091,17 @@ typedef struct {
   OsEE_ResourceDB * const (* p_res_ptr_array)[];
 
   MemSize res_array_size;
+
+
+
+  OsEE_CounterDB * const (* p_counter_ptr_array)[];
+
+  MemSize counter_array_size;
+
+
+  OsEE_AlarmDB * const (* p_alarm_ptr_array)[];
+
+  MemSize alarm_array_size;
 # 1020 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
 } const OsEE_KDB;
 # 1066 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
@@ -2055,7 +2276,7 @@ static OsEE_SDB osEE_sdb_array[(1U)] =
 };
 # 63 "ee_applcfg.c"
 static OsEE_TCB
-  osEE_tcb_array[6] =
+  osEE_tcb_array[8] =
 {
   {
                                 0U,
@@ -2095,6 +2316,24 @@ static OsEE_TCB
   },
   {
                                 0U,
+                                2U,
+                                OSEE_TASK_SUSPENDED,
+                                ((void *)0),
+                                0U,
+                                0U,
+                                ((void *)0)
+  },
+  {
+                                0U,
+                                1U,
+                                OSEE_TASK_SUSPENDED,
+                                ((void *)0),
+                                0U,
+                                0U,
+                                ((void *)0)
+  },
+  {
+                                0U,
                                 1U,
                                 OSEE_TASK_SUSPENDED,
                                 ((void *)0),
@@ -2111,9 +2350,9 @@ static OsEE_TCB
                                 0U,
                                 ((void *)0)}
 };
-# 128 "ee_applcfg.c"
+# 146 "ee_applcfg.c"
 static OsEE_TDB
-  osEE_tdb_array[6] =
+  osEE_tdb_array[8] =
 {
   {
                  {
@@ -2181,8 +2420,8 @@ static OsEE_TDB
                             4U,
                             OSEE_TASK_TYPE_BASIC,
                             FuncTestTask,
-                            1U,
-                            1U,
+                            2U,
+                            2U,
                             1U
   },
   {
@@ -2193,6 +2432,34 @@ static OsEE_TDB
     },
                             &osEE_tcb_array[5U],
                             5U,
+                            OSEE_TASK_TYPE_BASIC,
+                            FuncShiParkerAppTask,
+                            1U,
+                            1U,
+                            1U
+  },
+  {
+                 {
+                          &osEE_sdb_array[0U],
+                          &osEE_scb_array[0U],
+                          ((OsEE_isr_src_id)-1)
+    },
+                            &osEE_tcb_array[6U],
+                            6U,
+                            OSEE_TASK_TYPE_BASIC,
+                            FuncPacketSendTask,
+                            1U,
+                            1U,
+                            1U
+  },
+  {
+                 {
+                          &osEE_sdb_array[0U],
+                          &osEE_scb_array[0U],
+                          ((OsEE_isr_src_id)-1)
+    },
+                            &osEE_tcb_array[7U],
+                            7U,
                             OSEE_TASK_TYPE_IDLE,
                             osEE_idle_hook_wrapper,
                             0U,
@@ -2204,19 +2471,21 @@ static OsEE_TDB
 
 
 static OsEE_TDB * const
-  osEE_tdb_ptr_array[(5U) + (1U)] =
+  osEE_tdb_ptr_array[(7U) + (1U)] =
 {
   &osEE_tdb_array[0U],
   &osEE_tdb_array[1U],
   &osEE_tdb_array[2U],
   &osEE_tdb_array[3U],
   &osEE_tdb_array[4U],
-  &osEE_tdb_array[5U]
+  &osEE_tdb_array[5U],
+  &osEE_tdb_array[6U],
+  &osEE_tdb_array[7U]
 };
 
 
 
-static OsEE_SN osEE_sn_array[5] = {
+static OsEE_SN osEE_sn_array[7] = {
   {
                     &osEE_sn_array[1U],
                     ((void *)0)
@@ -2234,6 +2503,14 @@ static OsEE_SN osEE_sn_array[5] = {
                     ((void *)0)
   },
   {
+                    &osEE_sn_array[5U],
+                    ((void *)0)
+  },
+  {
+                    &osEE_sn_array[6U],
+                    ((void *)0)
+  },
+  {
                     ((void *)0),
                     ((void *)0)
   }
@@ -2248,7 +2525,7 @@ static OsEE_ResourceCB osEE_res_cb_array[1];
 static OsEE_ResourceDB osEE_res_db_array[1] = {
   {
                                &osEE_res_cb_array[0U],
-                               1U
+                               2U
   }
 };
 
@@ -2259,9 +2536,74 @@ static OsEE_ResourceDB * const
 {
   &osEE_res_db_array[0U]
 };
-# 285 "ee_applcfg.c"
+# 340 "ee_applcfg.c"
+static OsEE_CounterCB
+  osEE_counter_cb_array[1];
+
+
+
+static OsEE_CounterDB
+  osEE_counter_db_array[1] = {
+  {
+                             &osEE_counter_cb_array[0U],
+                             {
+                               (1000U),
+                               (1U)
+    } }
+};
+
+
+
+static OsEE_CounterDB * const
+  osEE_counter_db_ptr_array[(1U)] =
+{
+  &osEE_counter_db_array[0U]
+};
+# 370 "ee_applcfg.c"
+static OsEE_AlarmCB
+  osEE_alarm_cb_array[2];
+
+
+
+static OsEE_AlarmDB
+  osEE_alarm_db_array[2] = {
+  {
+                          &osEE_alarm_cb_array[0U],
+                          &osEE_counter_db_array[0U],
+                          {
+                            {
+                              ((void *)0),
+                              &osEE_tdb_array[5U],
+                              ((void *)0),
+                              0U},
+                          OSEE_ACTION_TASK
+    }
+  },
+  {
+                          &osEE_alarm_cb_array[1U],
+                          &osEE_counter_db_array[0U],
+                          {
+                            {
+                              ((void *)0),
+                              &osEE_tdb_array[6U],
+                              ((void *)0),
+                              0U},
+                          OSEE_ACTION_TASK
+    }
+  }
+};
+
+
+
+static OsEE_AlarmDB * const
+  osEE_alarm_db_ptr_array[(2U)] =
+{
+  &osEE_alarm_db_array[0],
+  &osEE_alarm_db_array[1]
+};
+# 420 "ee_applcfg.c"
 OsEE_CCB osEE_ccb_var = {
-                        &osEE_tdb_array[5U],
+                        &osEE_tdb_array[7U],
                         ((void *)0),
                         &osEE_sn_array[0U],
                         ((void *)0),
@@ -2274,10 +2616,10 @@ OsEE_CCB osEE_ccb_var = {
                                  0U,
                                  0U
 };
-# 307 "ee_applcfg.c"
+# 442 "ee_applcfg.c"
 OsEE_CDB osEE_cdb_var = {
                                          &osEE_ccb_var,
-                                         &osEE_tdb_array[5U]
+                                         &osEE_tdb_array[7U]
 };
 
 
@@ -2289,5 +2631,9 @@ OsEE_KDB osEE_kdb_var = {
                                (OsEE_TDB * const (* )[])&osEE_tdb_ptr_array,
                                (sizeof(osEE_tdb_ptr_array)/sizeof(0[(osEE_tdb_ptr_array)])),
                                (OsEE_ResourceDB * const (* )[])&osEE_res_db_ptr_array,
-                               (sizeof(osEE_res_db_ptr_array)/sizeof(0[(osEE_res_db_ptr_array)]))
+                               (sizeof(osEE_res_db_ptr_array)/sizeof(0[(osEE_res_db_ptr_array)])),
+                               (OsEE_CounterDB * const (* )[])&osEE_counter_db_ptr_array,
+                               (sizeof(osEE_counter_db_ptr_array)/sizeof(0[(osEE_counter_db_ptr_array)])),
+                               (OsEE_AlarmDB * const (* )[])&osEE_alarm_db_ptr_array,
+                               (sizeof(osEE_alarm_db_ptr_array)/sizeof(0[(osEE_alarm_db_ptr_array)]))
 };

@@ -4,9 +4,9 @@
 # 1 "<command-line>"
 # 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.c"
 # 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 1
-# 17 "C:\\SHIPAR~1\\TC275\\shiparker_App.h"
+# 24 "C:\\SHIPAR~1\\TC275\\shiparker_App.h"
 # 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 18 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 25 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 1
 
 
@@ -21296,7 +21296,7 @@ struct __attribute__((__packed__)) ParkingSystemPacket
     uint8 car_command;
     uint8 crc;
 };
-# 19 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 26 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 1
 # 25 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
@@ -21310,7 +21310,7 @@ void readPacket(struct ParkingSystemPacket *packet);
 uint8 calculateChecksum(const uint8 *data, size_t length);
 void serializePacket(const struct ParkingSystemPacket *packet, uint8 *buffer);
 void deserializePacket(const uint8 *buffer, struct ParkingSystemPacket *packet);
-# 20 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 27 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\SHIPAR~1\\TC275\\bsw.h" 1
 
 
@@ -22569,6 +22569,41 @@ typedef enum {
 typedef OsEE_task_status TaskStateType;
 
 typedef TaskStateType * TaskStateRefType;
+# 399 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg CounterType;
+# 414 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg TickType;
+
+
+
+
+typedef TickType * TickRefType;
+# 431 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_sreg TickDeltaType;
+
+
+
+
+
+
+
+typedef struct {
+
+  TickType maxallowedvalue;
+
+
+  TickType ticksperbase;
+
+
+
+
+
+} AlarmBaseType;
+
+
+typedef AlarmBaseType * AlarmBaseRefType;
+# 470 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg AlarmType;
 # 524 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ResourceType;
 # 567 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
@@ -22655,6 +22690,18 @@ typedef enum {
   OSServiceId_ClearEvent = (30),
   OSServiceId_GetEvent = (32),
   OSServiceId_WaitEvent = (34),
+
+
+  OSServiceId_GetAlarmBase = (36),
+  OSServiceId_GetAlarm = (38),
+  OSServiceId_SetRelAlarm = (40),
+  OSServiceId_SetAbsAlarm = (42),
+  OSServiceId_CancelAlarm = (44),
+
+
+  OSServiceId_IncrementCounter = (46),
+  OSServiceId_GetCounterValue = (48),
+  OSServiceId_GetElapsedValue = (50),
 # 804 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
   OSServiceId_GetActiveApplicationMode = (70),
   OSServiceId_ShutdownOS = (72),
@@ -22783,6 +22830,42 @@ StatusType
 (
   ResourceType ResID
 );
+# 659 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetRelAlarm
+(
+  AlarmType AlarmID,
+  TickType increment,
+  TickType cycle
+);
+# 705 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetAbsAlarm
+(
+  AlarmType AlarmID,
+  TickType start,
+  TickType cycle
+);
+# 733 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarm
+(
+  AlarmType AlarmID,
+  TickRefType Tick
+);
+# 761 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarmBase
+(
+  AlarmType AlarmID,
+  AlarmBaseRefType Info
+);
+# 786 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  CancelAlarm
+(
+  AlarmType AlarmID
+);
 # 818 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   WaitEvent
@@ -22808,6 +22891,27 @@ StatusType
   ClearEvent
 (
   EventMaskType Mask
+);
+# 1046 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetCounterValue
+(
+  CounterType CounterID,
+  TickRefType Value
+);
+# 1076 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetElapsedValue
+(
+  CounterType CounterID,
+  TickRefType Value,
+  TickRefType ElapsedValue
+);
+# 1115 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  IncrementCounter
+(
+  CounterType CounterID
 );
 # 1352 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
  ISRType
@@ -22899,6 +23003,8 @@ uint8_t osEE_assert_last(void);
 # 1 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h" 1
 # 35 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h"
 extern void FuncTestTask ( void );
+extern void FuncShiParkerAppTask ( void );
+extern void FuncPacketSendTask ( void );
 
 
 void asclin3TxISR(void);
@@ -22920,7 +23026,7 @@ void printfSerial(const char *fmt,...);
 void initPeripheralsAndERU(void);
 void initADC(void);
 uint16 readADCValue(uint8 channel);
-# 21 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 28 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 1 3
 # 10 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 3
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\ieeefp.h" 1 3
@@ -23117,9 +23223,11 @@ extern long double wcstold (const wchar_t *, wchar_t **);
 
 
 
-# 22 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 29 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 
 
+
+extern boolean g_isAppRunning;
 
 
 typedef enum CAR_STATUS_TYPE_T{
@@ -23139,10 +23247,10 @@ typedef enum CAR_COMMAND_TYPE_T{
     CAR_COMMAND_RESERVED2
 }CAR_COMMAND_TYPE;
 typedef enum ERROR_CODE_TYPE_T{
-    ERROR_CODE_FORCESTOP,
+    ERROR_CODE_USER_CONTROL,
     ERROR_CODE_OBSTACLE,
-    ERROR_CODE_2,
-    ERROR_CODE_3,
+    ERROR_CODE_CONNECTION_LOST,
+    ERROR_CODE_UNDEFINED_STATUS,
     ERROR_CODE_4,
     ERROR_CODE_5,
     ERROR_CODE_6,
@@ -23163,50 +23271,62 @@ struct Position
 };
 
 static const char* errorMessages[16] = {
-    "Emergency force stop triggered.",
+    "User Control occured.",
     "Obstacle detected.",
-    "ERRORCODE 2",
-    "ERRORCODE 3",
-    "ERRORCODE 4",
-    "ERRORCODE 5",
-    "ERRORCODE 6",
-    "ERRORCODE 7",
-    "ERRORCODE 8",
-    "ERRORCODE 9",
-    "ERRORCODE 10",
-    "ERRORCODE 11",
-    "ERRORCODE 12",
-    "ERRORCODE 13",
-    "ERRORCODE 14",
-    "ERRORCODE 15"
+    "Connection Lost",
+    "Undefined Status",
+    "Hall_FL Error",
+    "Hall_FR Error",
+    "Hall_RL Error",
+    "Hall_RR Error",
+    "ULTRASONIC_FL Error",
+    "ULTRASONIC_F Error",
+    "ULTRASONIC_FR Error",
+    "ULTRASONIC_SL Error",
+    "ULTRASONIC_SR Error",
+    "ULTRASONIC_RL Error",
+    "ULTRASONIC_R Error",
+    "ULTRASONIC_RR Error"
 };
 
 
 void initShiParkerApp(void);
-int shiParkerApp(void);
+void makePacket(struct ParkingSystemPacket* dst);
+void updateStatus(const struct ParkingSystemPacket* packet);
 void handleError(ERROR_CODE_TYPE errorCode);
 # 2 "C:\\SHIPAR~1\\TC275\\shiparker_App.c" 2
 
+boolean g_isAppRunning;
 static struct ParkingSystemPacket carStatusPacket = {};
 static CAR_STATUS_TYPE carStatus;
 static CAR_COMMAND_TYPE carCommand;
 static struct Position currentPosition;
 static struct Position targetPosition;
 
-void initShiParkerApp(void)
+void startShiParkerApp(void)
 {
+    if (g_isAppRunning == (1u))
+    {
+        printfSerial("restart ShiParker...\n");
+    }
+    else{
+        printfSerial("start ShiParker...\n");
+    }
+    g_isAppRunning = (1u);
     carStatus = CAR_STATUS_READY;
     currentPosition.x = 0;
     currentPosition.y = 0;
     targetPosition.x = -1;
     targetPosition.y = -1;
     carCommand = CAR_COMMAND_STOP;
+    CancelAlarm((0U));
+    SetRelAlarm((0U), 5, 1);
 }
 
-int shiParkerApp(void)
+void FuncShiParkerAppTask ( void )
 {
-    uint64 startTick = 0, elapsedTick = 0;
-    startTick = IfxStm_get(&(*(Ifx_STM*)0xF0000000u));
+    if(g_isAppRunning==(0u))
+        TerminateTask();
     switch (carStatus)
     {
     case CAR_STATUS_READY:
@@ -23221,6 +23341,7 @@ int shiParkerApp(void)
 
             carStatus = CAR_STATUS_RUNNING;
             carStatusPacket.car_status = carStatus;
+            makePacket(&carStatusPacket);
             sendPacket(&carStatusPacket);
 
 
@@ -23239,6 +23360,7 @@ int shiParkerApp(void)
 
             carStatus = CAR_STATUS_TERMINATED;
             carStatusPacket.car_status = carStatus;
+            makePacket(&carStatusPacket);
             sendPacket(&carStatusPacket);
 
             break;
@@ -23259,6 +23381,7 @@ int shiParkerApp(void)
 
             carStatus = CAR_STATUS_TERMINATED;
             carStatusPacket.car_status = carStatus;
+            makePacket(&carStatusPacket);
             sendPacket(&carStatusPacket);
 
             break;
@@ -23266,7 +23389,10 @@ int shiParkerApp(void)
 
             carStatus = CAR_STATUS_RUNNING;
             carStatusPacket.car_status = carStatus;
+            makePacket(&carStatusPacket);
             sendPacket(&carStatusPacket);
+            CancelAlarm((1U));
+            SetRelAlarm((1U),10,10);
 
 
             break;
@@ -23276,25 +23402,13 @@ int shiParkerApp(void)
         default:
             break;
         }
-
         break;
     case CAR_STATUS_TERMINATED:
-        switch (carCommand)
-        {
-        case CAR_COMMAND_FORCESTOP:
 
-
-
-            break;
-        case CAR_COMMAND_START:
-
-            break;
-        case CAR_COMMAND_STOP:
-
-            break;
-        default:
-            break;
-        }
+        g_isAppRunning = (0u);
+        CancelAlarm((1U));
+        CancelAlarm((0U));
+        TerminateTask();
         break;
     case CAR_STATUS_ERROR:
         switch (carCommand)
@@ -23303,6 +23417,7 @@ int shiParkerApp(void)
 
             carStatus = CAR_STATUS_TERMINATED;
             carStatusPacket.car_status = carStatus;
+            makePacket(&carStatusPacket);
             sendPacket(&carStatusPacket);
 
             break;
@@ -23310,9 +23425,10 @@ int shiParkerApp(void)
 
             carStatus = CAR_STATUS_RUNNING;
             carStatusPacket.car_status = carStatus;
+            makePacket(&carStatusPacket);
             sendPacket(&carStatusPacket);
-
-
+            CancelAlarm((1U));
+            SetRelAlarm((1U),10,100);
             break;
         case CAR_COMMAND_STOP:
 
@@ -23324,17 +23440,42 @@ int shiParkerApp(void)
         break;
     default:
 
+        handleError(ERROR_CODE_UNDEFINED_STATUS);
         break;
     }
 }
 
+void FuncPacketSendTask ( void ){
+    makePacket(&carStatusPacket);
+    sendPacket(&carStatusPacket);
+}
+
+void makePacket(struct ParkingSystemPacket* dst){
+    dst->car_status = carStatus;
+    dst->car_command = carCommand;
+    dst->car_current_position.x = currentPosition.x;
+    dst->car_current_position.y = currentPosition.y;
+    dst->car_target_position.x = targetPosition.x;
+    dst->car_target_position.y = targetPosition.y;
+}
+void updateStatus(const struct ParkingSystemPacket* packet)
+{
+    carStatus=packet->car_status;
+    carCommand=packet->car_command;
+    currentPosition.x=packet->car_current_position.x;
+    currentPosition.y=packet->car_current_position.y;
+    targetPosition.x=packet->car_target_position.x;
+    targetPosition.y=packet->car_target_position.y;
+}
+
 void handleError(ERROR_CODE_TYPE errorCode) {
+    carStatus = CAR_STATUS_ERROR;
     if (errorCode < 16) {
-        printfSerial("ERRORCODE %d: %s\n",errorCode,errorMessages[errorCode]);
+        printfSerial("ERROR: %s (%d)\n",errorMessages[errorCode],errorCode);
         switch (errorCode)
         {
-        case ERROR_CODE_FORCESTOP:
-            carStatus = CAR_STATUS_ERROR;
+        case ERROR_CODE_USER_CONTROL:
+
             break;
         case ERROR_CODE_OBSTACLE:
 

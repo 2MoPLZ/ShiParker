@@ -22575,6 +22575,41 @@ typedef enum {
 typedef OsEE_task_status TaskStateType;
 
 typedef TaskStateType * TaskStateRefType;
+# 399 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg CounterType;
+# 414 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg TickType;
+
+
+
+
+typedef TickType * TickRefType;
+# 431 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_sreg TickDeltaType;
+
+
+
+
+
+
+
+typedef struct {
+
+  TickType maxallowedvalue;
+
+
+  TickType ticksperbase;
+
+
+
+
+
+} AlarmBaseType;
+
+
+typedef AlarmBaseType * AlarmBaseRefType;
+# 470 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg AlarmType;
 # 524 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ResourceType;
 # 567 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
@@ -22661,6 +22696,18 @@ typedef enum {
   OSServiceId_ClearEvent = (30),
   OSServiceId_GetEvent = (32),
   OSServiceId_WaitEvent = (34),
+
+
+  OSServiceId_GetAlarmBase = (36),
+  OSServiceId_GetAlarm = (38),
+  OSServiceId_SetRelAlarm = (40),
+  OSServiceId_SetAbsAlarm = (42),
+  OSServiceId_CancelAlarm = (44),
+
+
+  OSServiceId_IncrementCounter = (46),
+  OSServiceId_GetCounterValue = (48),
+  OSServiceId_GetElapsedValue = (50),
 # 804 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
   OSServiceId_GetActiveApplicationMode = (70),
   OSServiceId_ShutdownOS = (72),
@@ -22789,6 +22836,42 @@ StatusType
 (
   ResourceType ResID
 );
+# 659 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetRelAlarm
+(
+  AlarmType AlarmID,
+  TickType increment,
+  TickType cycle
+);
+# 705 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetAbsAlarm
+(
+  AlarmType AlarmID,
+  TickType start,
+  TickType cycle
+);
+# 733 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarm
+(
+  AlarmType AlarmID,
+  TickRefType Tick
+);
+# 761 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarmBase
+(
+  AlarmType AlarmID,
+  AlarmBaseRefType Info
+);
+# 786 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  CancelAlarm
+(
+  AlarmType AlarmID
+);
 # 818 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   WaitEvent
@@ -22814,6 +22897,27 @@ StatusType
   ClearEvent
 (
   EventMaskType Mask
+);
+# 1046 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetCounterValue
+(
+  CounterType CounterID,
+  TickRefType Value
+);
+# 1076 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetElapsedValue
+(
+  CounterType CounterID,
+  TickRefType Value,
+  TickRefType ElapsedValue
+);
+# 1115 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  IncrementCounter
+(
+  CounterType CounterID
 );
 # 1352 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
  ISRType
@@ -22905,6 +23009,8 @@ uint8_t osEE_assert_last(void);
 # 1 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h" 1
 # 35 "C:\\SHIPAR~1\\TC275\\out/ee_declcfg.h"
 extern void FuncTestTask ( void );
+extern void FuncShiParkerAppTask ( void );
+extern void FuncPacketSendTask ( void );
 
 
 void asclin3TxISR(void);

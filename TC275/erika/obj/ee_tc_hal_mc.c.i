@@ -1332,6 +1332,41 @@ typedef enum {
 typedef OsEE_task_status TaskStateType;
 
 typedef TaskStateType * TaskStateRefType;
+# 399 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg CounterType;
+# 414 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg TickType;
+
+
+
+
+typedef TickType * TickRefType;
+# 431 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_sreg TickDeltaType;
+
+
+
+
+
+
+
+typedef struct {
+
+  TickType maxallowedvalue;
+
+
+  TickType ticksperbase;
+
+
+
+
+
+} AlarmBaseType;
+
+
+typedef AlarmBaseType * AlarmBaseRefType;
+# 470 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+typedef OsEE_reg AlarmType;
 # 524 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ResourceType;
 # 567 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
@@ -1418,6 +1453,18 @@ typedef enum {
   OSServiceId_ClearEvent = (30),
   OSServiceId_GetEvent = (32),
   OSServiceId_WaitEvent = (34),
+
+
+  OSServiceId_GetAlarmBase = (36),
+  OSServiceId_GetAlarm = (38),
+  OSServiceId_SetRelAlarm = (40),
+  OSServiceId_SetAbsAlarm = (42),
+  OSServiceId_CancelAlarm = (44),
+
+
+  OSServiceId_IncrementCounter = (46),
+  OSServiceId_GetCounterValue = (48),
+  OSServiceId_GetElapsedValue = (50),
 # 804 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
   OSServiceId_GetActiveApplicationMode = (70),
   OSServiceId_ShutdownOS = (72),
@@ -1546,6 +1593,42 @@ StatusType
 (
   ResourceType ResID
 );
+# 659 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetRelAlarm
+(
+  AlarmType AlarmID,
+  TickType increment,
+  TickType cycle
+);
+# 705 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  SetAbsAlarm
+(
+  AlarmType AlarmID,
+  TickType start,
+  TickType cycle
+);
+# 733 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarm
+(
+  AlarmType AlarmID,
+  TickRefType Tick
+);
+# 761 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetAlarmBase
+(
+  AlarmType AlarmID,
+  AlarmBaseRefType Info
+);
+# 786 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  CancelAlarm
+(
+  AlarmType AlarmID
+);
 # 818 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   WaitEvent
@@ -1571,6 +1654,27 @@ StatusType
   ClearEvent
 (
   EventMaskType Mask
+);
+# 1046 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetCounterValue
+(
+  CounterType CounterID,
+  TickRefType Value
+);
+# 1076 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  GetElapsedValue
+(
+  CounterType CounterID,
+  TickRefType Value,
+  TickRefType ElapsedValue
+);
+# 1115 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+StatusType
+  IncrementCounter
+(
+  CounterType CounterID
 );
 # 1352 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
  ISRType
@@ -1802,6 +1906,110 @@ typedef struct {
 
   TaskFunc real_task_func;
 } const OsEE_TW;
+# 319 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+struct OsEE_TriggerDB_tag;
+# 336 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct OsEE_TriggerDB_tag const *
+  OsEE_TriggerQ;
+
+
+
+typedef struct {
+
+  OsEE_TriggerQ trigger_queue;
+
+  TickType value;
+
+
+
+
+} OsEE_CounterCB;
+# 367 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct {
+
+  OsEE_CounterCB * p_counter_cb;
+
+
+
+
+
+  AlarmBaseType info;
+
+
+
+
+} const OsEE_CounterDB;
+
+
+typedef enum {
+  OSEE_ACTION_TASK,
+  OSEE_ACTION_EVENT,
+  OSEE_ACTION_COUNTER,
+  OSEE_ACTION_CALLBACK
+} OsEE_action_type;
+
+
+
+
+typedef struct {
+
+  OsEE_kernel_cb f;
+
+  OsEE_TDB * p_tdb;
+
+  OsEE_CounterDB * p_counter_db;
+
+
+  EventMaskType mask;
+
+} OsEE_action_param;
+
+
+
+typedef struct {
+
+  OsEE_action_param param;
+
+  OsEE_action_type type;
+} const OsEE_action;
+# 555 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef enum {
+  OSEE_TRIGGER_INACTIVE,
+  OSEE_TRIGGER_CANCELED,
+  OSEE_TRIGGER_ACTIVE,
+  OSEE_TRIGGER_EXPIRED,
+  OSEE_TRIGGER_REENABLED
+} OsEE_trigger_status;
+# 578 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct {
+
+  struct OsEE_TriggerDB_tag const * p_next;
+
+
+  TickType when;
+
+  OsEE_trigger_status status;
+
+
+
+  TickType cycle;
+# 606 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+} OsEE_TriggerCB;
+# 617 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+typedef struct OsEE_TriggerDB_tag {
+
+  OsEE_TriggerCB * p_trigger_cb;
+
+  OsEE_CounterDB * p_counter_db;
+# 635 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+  OsEE_action action;
+# 656 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+} const OsEE_TriggerDB;
+
+
+
+typedef OsEE_TriggerCB OsEE_AlarmCB;
+typedef OsEE_TriggerDB OsEE_AlarmDB;
 # 729 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
 typedef struct {
 
@@ -1868,6 +2076,17 @@ typedef struct {
   OsEE_ResourceDB * const (* p_res_ptr_array)[];
 
   MemSize res_array_size;
+
+
+
+  OsEE_CounterDB * const (* p_counter_ptr_array)[];
+
+  MemSize counter_array_size;
+
+
+  OsEE_AlarmDB * const (* p_alarm_ptr_array)[];
+
+  MemSize alarm_array_size;
 # 1020 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
 } const OsEE_KDB;
 # 1066 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
@@ -2757,6 +2976,185 @@ static inline void __attribute__((noreturn))
   for (;;) {
     ;
   }
+}
+
+
+
+static inline OsEE_bool
+  osEE_is_valid_counter_id
+(
+  OsEE_KDB * p_kdb,
+  CounterType counter_id
+)
+{
+
+
+
+  return (counter_id < p_kdb->counter_array_size);
+
+}
+
+void
+  osEE_counter_insert_rel_trigger
+(
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_db,
+  TickType delta
+);
+
+void
+  osEE_counter_insert_abs_trigger
+(
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_db,
+  TickType when
+);
+
+void
+  osEE_counter_cancel_trigger
+(
+  OsEE_CounterDB * p_counter_db,
+  OsEE_TriggerDB * p_trigger_db
+);
+
+void
+  osEE_counter_increment
+(
+  OsEE_CounterDB * p_counter_db
+);
+
+
+static inline TickType
+  osEE_counter_eval_when
+(
+  OsEE_CounterDB * p_counter_db,
+  TickType delta
+)
+{
+  TickType when;
+  OsEE_CounterCB const * const
+    p_counter_cb = p_counter_db->p_counter_cb;
+  TickType const
+    maxallowedvalue = p_counter_db->info.maxallowedvalue;
+  TickType const
+    value = p_counter_cb->value;
+
+  if ((maxallowedvalue - delta) >= value) {
+    when = value + delta;
+  } else {
+    when = delta - (maxallowedvalue - value) - 1U;
+  }
+
+  return when;
+}
+
+static inline TickType
+  osEE_counter_eval_delta
+(
+  OsEE_CounterDB * p_counter_db,
+  TickType when
+)
+{
+  TickType delta;
+  OsEE_CounterCB const * const
+    p_counter_cb = p_counter_db->p_counter_cb;
+  TickType const
+    maxallowedvalue = p_counter_db->info.maxallowedvalue;
+  TickType const
+    value = p_counter_cb->value;
+
+  if (when > value) {
+    delta = when - value;
+  } else {
+    delta = (maxallowedvalue - value) + when + 1U;
+  }
+
+  return delta;
+}
+
+
+StatusType
+  osEE_alarm_set_rel
+(
+  OsEE_CounterDB * p_counter_db,
+  OsEE_AlarmDB * p_alarm_db,
+  TickType increment,
+  TickType cycle
+);
+
+StatusType
+  osEE_alarm_set_abs
+(
+  OsEE_CounterDB * p_counter_db,
+  OsEE_AlarmDB * p_alarm_db,
+  TickType start,
+  TickType cycle
+);
+
+StatusType
+  osEE_alarm_cancel
+(
+  OsEE_AlarmDB * p_alarm_db
+);
+
+StatusType
+  osEE_alarm_get
+(
+  OsEE_AlarmDB * p_alarm_db,
+  TickType * p_tick
+);
+
+static inline OsEE_bool
+  osEE_is_valid_alarm_id
+(
+  OsEE_KDB * p_kdb,
+  AlarmType alarm_id
+)
+{
+
+
+
+  return (alarm_id < p_kdb->alarm_array_size);
+
+}
+
+static inline OsEE_TriggerDB *
+  osEE_alarm_get_trigger_db
+(
+  OsEE_AlarmDB * p_alarm_db
+)
+{
+
+
+
+  return p_alarm_db;
+
+}
+
+static inline OsEE_AlarmCB *
+  osEE_alarm_get_cb
+(
+  OsEE_AlarmDB * p_alarm_db
+)
+{
+
+
+
+  return p_alarm_db->p_trigger_cb;
+
+}
+
+static inline OsEE_AlarmDB *
+  osEE_trigger_get_alarm_db
+(
+  OsEE_TriggerDB * p_trigger_db
+)
+{
+
+
+
+  return p_trigger_db;
+
 }
 # 1005 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_kernel.h"
 static inline void osEE_stack_monitoring
