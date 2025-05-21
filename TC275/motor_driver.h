@@ -14,17 +14,21 @@
 /*------------------------------------------------------Macros-------------------------------------------------------*/
 /*********************************************************************************************************************/
 //각 모터의 en과 연결되는 pwm
-#define MOTOR_FL IfxGtm_TOM0_1_TOUT103_P10_1_OUT
-#define MOTOR_FR IfxGtm_TOM0_2_TOUT104_P10_2_OUT
+#define MOTOR_FL IfxGtm_TOM0_2_TOUT104_P10_2_OUT
+#define MOTOR_FR IfxGtm_TOM0_1_TOUT103_P10_1_OUT
 #define MOTOR_RL IfxGtm_TOM0_3_TOUT105_P10_3_OUT
 #define MOTOR_RR IfxGtm_TOM0_4_TOUT30_P33_8_OUT
 
 #define MOTOR_COUNT 4
 
 #define MOTOR_PERIOD 5000
-#define MOTOR_DUTY_MIN 4000
+#define MOTOR_DUTY_MAX 3500
+#define MOTOR_DUTY_MIN 3000
 #define MOTOR_DUTY_DEFAULT 0
-#define MOTOR_DUTY_UNIT ((MOTOR_PERIOD - MOTOR_DUTY_MIN) / 100)
+#define MOTOR_DUTY_UNIT ((MOTOR_DUTY_MAX - MOTOR_DUTY_MIN) / 100)
+//모터 출력은 0-100
+//정속주행시 출력 25
+//제자리 회전 시 출력 50 필요.
 
 //방향 설정용 디지털output 핀, 모터당 2개 - IN1, IN2
 #define IN1_FL IfxPort_P14_0
