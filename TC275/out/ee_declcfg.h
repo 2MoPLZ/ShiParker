@@ -32,14 +32,12 @@ extern "C" {
  * Declare tasks
  *
  **************************************************************************/
-DeclareTask(SensorTask);
-DeclareTask(DashboardButtonTask);
+DeclareTask(TestTask);
 
 
 ISR2(asclin3TxISR);
 ISR2(asclin0RxISR);
 ISR2(asclin0TxISR);
-ISR2(ButtonISR);
 ISR2(TimerISR);
 
 

@@ -36,10 +36,7 @@
 #define CHN_39 3                     /* Position of channel 7 group 4 (AN39) on the array of ADC channels    */
 
 #define UART_START_BYTE 0xAA
-#define ACTUATOR_PACKET_ID 0x01
-#define ACTUATOR_PACKET_SIZE 11
-#define SENSOR_PACKET_ID 0x02
-#define SENSOR_PACKET_SIZE 9 /* 1+1+2+2+2+1 = 9 bytes */
+#define PARKING_SYSTEM_PACKET_SIZE 36
 
 /******************************************************************************/
 /*-----------------------------Data Structures--------------------------------*/
@@ -88,50 +85,19 @@ typedef struct
 /*-------------------------------------------------Data Structures---------------------------------------------------*/
 /*********************************************************************************************************************/
 
-struct __attribute__((__packed__)) ActuatorPacket
+struct Point
 {
-    uint8 start_byte; /* Start of packet (UART_START_BYTE) */
-    uint8 packet_id;  /* Packet type ID (ACTUATOR_PACKET_ID) */
-
-    /* RGB field only (3 bits), independent from other flags */
-    union
-    {
-        struct
-        {
-            uint8 R : 1;
-            uint8 G : 1;
-            uint8 B : 1;
-        };
-        uint8 led_rgb : 3; /* Combined 3-bit RGB value */
-        uint8 : 5;         /* Padding for one full byte */
-    };
-
-    /* Other actuator flags and modes (1 byte total) */
-    uint8 fan : 2;          /* Fan speed (0–3) */
-    uint8 led : 1;          /* Headlight on/off */
-    uint8 buzzer : 1;       /* Buzzer on/off */
-    uint8 driving_mode : 4; /* Driving mode (0–15) */
-
-    /* Servo motors (12 bits each, using two 16-bit fields = 4 bytes) */
-    uint16 servo_chair;  /* Chair tilt angle */
-    uint16 servo_window; /* Window position */
-    uint16 servo_air;    /* Air control */
-
-    /* CRC (1 byte) */
-    uint8 crc; /* Checksum or CRC */
+    double x;
+    double y;
 };
 
-/* Sensor packet structure (packed, 9 bytes total) */
-struct __attribute__((__packed__)) SensorPacket
+struct __attribute__((__packed__)) ParkingSystemPacket
 {
     uint8 start_byte; /* Start of packet (UART_START_BYTE) */
-    uint8 packet_id;  /* Packet type ID (SENSOR_PACKET_ID) */
-
-    uint16 photo;        /* Brightness sensor (0–4095) */
-    uint16 ultra_sonic1; /* Ultrasonic sensor (0–65535) */
-    uint16 ultra_sonic2; /* Ultrasonic sensor (0–65535) */
-
-    uint8 crc; /* CRC or checksum */
+    uint8 car_status;
+    struct Point car_current_position;
+    struct Point car_target_position;
+    uint8 car_command;
+    uint8 crc;
 };
-
 #endif

@@ -57,6 +57,13 @@ void delay_us(unsigned long delay)
     while ((IfxStm_get(&MODULE_STM0) - start) < wait_ticks);
 }
 
+void printDouble(double value)
+{
+    int intPart = (int)value;
+    int fracPart = (int)((value - intPart) * 1000);
+    printfSerial("%d.%03d ",intPart, fracPart);
+}
+
 void UART_init(void)
 {
 

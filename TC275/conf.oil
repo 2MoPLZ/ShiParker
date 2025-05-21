@@ -84,12 +84,11 @@ CPU test_application {
         PRIORITY = 6;
     };
 
-    TASK SensorTask{ 
-        PRIORITY = 6;
-        STACK = SHARED;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+    TASK TestTask{
+        PRIORITY = 5;
+        STACK = SHARED;
         SCHEDULE = FULL;
         AUTOSTART = FALSE;
         ACTIVATION = 1;
     };
-
 };

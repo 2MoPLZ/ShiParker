@@ -23,16 +23,14 @@ __INTTAB0:
 	osEE_tc_isr_dummy_entry_4:
 	j .
 	.align  5
-	.globl osEE_tc_isr2_entry_5
-	osEE_tc_isr2_entry_5:
-	svlcx
-	mov %d4, 3
-	j osEE_tc_isr2_wrapper
-	.align 5
+	.globl osEE_tc_isr_dummy_entry_5
+	osEE_tc_isr_dummy_entry_5:
+	j .
+	.align  5
 	.globl osEE_tc_isr2_entry_6
 	osEE_tc_isr2_entry_6:
 	svlcx
-	mov %d4, 4
+	mov %d4, 3
 	j osEE_tc_isr2_wrapper
 	.align 5
 	.globl osEE_tc_isr_dummy_entry_7
@@ -1044,7 +1042,7 @@ __INTTAB0:
 	.type	osEE_tc_isr2_wrapper, @function
 osEE_tc_isr2_wrapper:
 .LFB102:
-	.file 1 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+	.file 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 	.loc 1 17033 0
 .LVL0:
 	mov.aa	%a14, %SP
@@ -1054,10 +1052,10 @@ osEE_tc_isr2_wrapper:
 .LVL1:
 .LBB6:
 .LBB7:
-	.file 2 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_hal.h"
+	.file 2 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 	.loc 2 232 0
 #APP
-	# 232 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 232 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	rslcx
 	# 0 "" 2
 #NO_APP
@@ -1067,7 +1065,7 @@ osEE_tc_isr2_wrapper:
 .LBB9:
 	.loc 2 237 0
 #APP
-	# 237 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 237 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	rfe
 	# 0 "" 2
 #NO_APP
@@ -1107,13 +1105,13 @@ osEE_tc_isr2_wrapper:
 .Letext0:
 	.file 3 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
 	.file 4 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
-	.file 5 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 6 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
-	.file 7 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 8 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_scheduler_types.h"
-	.file 9 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_kernel_types.h"
-	.file 10 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
-	.file 11 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_kernel.h"
+	.file 5 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
+	.file 6 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+	.file 7 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+	.file 8 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+	.file 9 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+	.file 10 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
+	.file 11 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_kernel.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
 	.uaword	0xe7a
@@ -1124,7 +1122,7 @@ osEE_tc_isr2_wrapper:
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\TUNNEL~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+	.string	"C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0

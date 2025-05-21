@@ -5,7 +5,7 @@
 	.type	osEE_tc_stm_us_ticks, @function
 osEE_tc_stm_us_ticks:
 .LFB104:
-	.file 1 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_tc_system.c"
+	.file 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_system.c"
 	.loc 1 635 0
 .LVL0:
 	mov.aa	%a14, %SP
@@ -468,10 +468,10 @@ osEE_tc_stm_set_sr0:
 .LBB34:
 .LBB35:
 .LBB36:
-	.file 2 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_hal.h"
+	.file 2 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 	.loc 2 367 0
 #APP
-	# 367 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d8, LO:65052
 	# 0 "" 2
 .LVL48:
@@ -497,7 +497,7 @@ osEE_tc_stm_set_sr0:
 .LVL51:
 .LBB39:
 .LBB40:
-	.file 3 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_tc_system.h"
+	.file 3 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 	.loc 3 902 0
 	ld.w	%d4, [%a15] 16
 .LBE40:
@@ -534,7 +534,7 @@ osEE_tc_stm_set_sr0:
 .LVL55:
 .LBB41:
 .LBB42:
-	.file 4 "C:\\TUNNEL~1\\TC275\\erika\\src\\ee_hal_internal.h"
+	.file 4 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_hal_internal.h"
 	.loc 4 421 0
 	mov.a	%a2, %d15
 	lea	%a15, [%a2] -31600
@@ -582,7 +582,7 @@ osEE_tc_stm_set_sr0_next_match:
 .LBB45:
 	.loc 2 367 0
 #APP
-	# 367 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d15, LO:65052
 	# 0 "" 2
 .LVL61:
@@ -619,7 +619,7 @@ osEE_tc_stm_set_sr1:
 .LBB48:
 	.loc 2 367 0
 #APP
-	# 367 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d8, LO:65052
 	# 0 "" 2
 .LVL65:
@@ -731,7 +731,7 @@ osEE_tc_stm_set_sr1_next_match:
 .LBB57:
 	.loc 2 367 0
 #APP
-	# 367 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d15, LO:65052
 	# 0 "" 2
 .LVL78:
@@ -767,7 +767,7 @@ osEE_tc_delay:
 .LBB60:
 	.loc 2 367 0
 #APP
-	# 367 "C:\TUNNEL~1\TC275\erika\inc/ee_hal.h" 1
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d15, LO:65052
 	# 0 "" 2
 .LVL82:
@@ -938,12 +938,12 @@ osEE_tc_stm_freq_khz:
 .Letext0:
 	.file 5 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
 	.file 6 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
-	.file 7 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 8 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
-	.file 9 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 10 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_scheduler_types.h"
-	.file 11 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_kernel_types.h"
-	.file 12 "C:\\TUNNEL~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
+	.file 7 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
+	.file 8 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+	.file 9 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
+	.file 10 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+	.file 11 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+	.file 12 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
 	.uaword	0x1d2f
@@ -954,7 +954,7 @@ osEE_tc_stm_freq_khz:
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\TUNNEL~1\\TC275\\erika\\src\\ee_tc_system.c"
+	.string	"C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_system.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0

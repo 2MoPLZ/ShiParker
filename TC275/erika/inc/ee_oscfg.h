@@ -116,18 +116,10 @@
 
 
 
-#define OSEE_TC_CORE0_5_ISR_CAT (2U)
-#define OSEE_TC_CORE0_5_ISR_TID 3
-
-#define OSEE_TC_CORE0_ButtonISR_ISR_TID   (3U)
-#define OSEE_TC_CORE0_ButtonISR_ISR_PRIO  (5U)
-
-
-
 #define OSEE_TC_CORE0_6_ISR_CAT (2U)
-#define OSEE_TC_CORE0_6_ISR_TID 4
+#define OSEE_TC_CORE0_6_ISR_TID 3
 
-#define OSEE_TC_CORE0_TimerISR_ISR_TID   (4U)
+#define OSEE_TC_CORE0_TimerISR_ISR_TID   (3U)
 #define OSEE_TC_CORE0_TimerISR_ISR_PRIO  (6U)
 
 
