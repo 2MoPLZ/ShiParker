@@ -56,10 +56,10 @@ void sendPacket(const struct ParkingSystemPacket *packet)
                  packet->car_status,
                  packet->car_command,
                  packet->crc);
-    printDouble(packet->car_current_position.x);
-    printDouble(packet->car_current_position.y);
-    printDouble(packet->car_target_position.x);
-    printDouble(packet->car_target_position.y);
+    printDouble("current_position_X: ", packet->car_current_position.x);
+    printDouble("current_position_Y: ", packet->car_current_position.y);
+    printDouble("target_position_X: ", packet->car_target_position.x);
+    printDouble("target_position_Y: ", packet->car_target_position.y);
     printfSerial("\n");
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &buf,
@@ -97,10 +97,10 @@ void readPacket(struct ParkingSystemPacket *packet)
                 packet->car_status,
                 packet->car_command,
                 packet->crc);
-            printDouble(packet->car_current_position.x);
-            printDouble(packet->car_current_position.y);
-            printDouble(packet->car_target_position.x);
-            printDouble(packet->car_target_position.y);
+            printDouble("current_position_X: ", packet->car_current_position.x);
+            printDouble("current_position_Y: ", packet->car_current_position.y);
+            printDouble("target_position_X: ", packet->car_target_position.x);
+            printDouble("target_position_Y: ", packet->car_target_position.y);
             printfSerial("\n");
         }
     }

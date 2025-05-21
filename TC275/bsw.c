@@ -8,6 +8,7 @@
 /* custom driver added start*/
 #include "ultrasonic_Driver.h"
 #include "uart_Driver.h"
+#include "steering_Pid.h"
 /* custom driver added end*/
 
 #include <string.h>
@@ -57,11 +58,11 @@ void delay_us(unsigned long delay)
     while ((IfxStm_get(&MODULE_STM0) - start) < wait_ticks);
 }
 
-void printDouble(double value)
+void printDouble(const char* label, double value)
 {
     int intPart = (int)value;
-    int fracPart = (int)((value - intPart) * 1000);
-    printfSerial("%d.%03d ",intPart, fracPart);
+    int fracPart = (int)((value - intPart) * 1000);  // 소수점 세 자리
+    printfSerial("%s: %d.%03d\n", label, intPart, fracPart);
 }
 
 void UART_init(void)
