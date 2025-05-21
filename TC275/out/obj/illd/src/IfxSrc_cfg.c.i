@@ -1,11 +1,11 @@
-# 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c"
-# 1 "C:\\ShiParker\\TC275\\out//"
+# 1 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c"
+# 1 "C:\\Users\\USER\\Desktop\\workspace\\ShiParker\\TC275\\out//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c"
-# 46 "C:\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c"
-# 1 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl\\IfxSrc_cfg.h" 1
-# 66 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl\\IfxSrc_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c"
+# 46 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c"
+# 1 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl\\IfxSrc_cfg.h" 1
+# 66 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl\\IfxSrc_cfg.h"
 typedef enum
 {
     IfxSrc_Tos_cpu0 = 0,
@@ -13,4 +13,4 @@ typedef enum
     IfxSrc_Tos_cpu2 = 2,
     IfxSrc_Tos_dma = 3
 } IfxSrc_Tos;
-# 47 "C:\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c" 2
+# 47 "C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc_cfg.c" 2

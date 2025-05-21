@@ -55,6 +55,7 @@ CPU test_application {
         APP_SRC="asw.c";
         APP_SRC="ultrasonic_Driver.c";
         APP_SRC="uart_Driver.c";
+        APP_SRC="steering_Pid.c";
     };
 
     ISR ASCLIN3_TX {
