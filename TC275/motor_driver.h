@@ -28,7 +28,7 @@
 #define MOTOR_DUTY_UNIT ((MOTOR_DUTY_MAX - MOTOR_DUTY_MIN) / 100)
 //모터 출력은 0-100
 //정속주행시 출력 25
-//제자리 회전 시 출력 50 필요
+//제자리 회전 시 출력 50 필요.
 
 //방향 설정용 디지털output 핀, 모터당 2개 - IN1, IN2
 #define IN1_FL IfxPort_P14_0
