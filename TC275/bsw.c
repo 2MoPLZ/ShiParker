@@ -16,7 +16,6 @@
 #define CHANNELS_NUM    4                       /* Number of used channels                                          */
 #define LEN_BUF 128
 
-
 void delay_ms(unsigned long delay);
 void delay_us(unsigned long delay);
 void UART_init(void);
@@ -251,8 +250,12 @@ int main(void)
     initPeripheralsAndERU();
     
     /* custom driver init() added start*/
-    ///initUltrasonic();
-    ///initUltrasonic();
+    initUltrasonic(&g_Ultrasonic_FL);
+    initUltrasonic(&g_Ultrasonic_F);
+    initUltrasonic(&g_Ultrasonic_FR);
+    initUltrasonic(&g_Ultrasonic_SL);
+    initUltrasonic(&g_Ultrasonic_SR);
+    initUltrasonic(&g_Ultrasonic_R);
     initUartDriver();
     /* custom driver added end*/
 
