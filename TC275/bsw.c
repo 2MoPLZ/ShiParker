@@ -9,6 +9,7 @@
 #include "ultrasonic_Driver.h"
 #include "uart_Driver.h"
 #include "steering_Pid.h"
+#include "hall_Driver.h"
 /* custom driver added end*/
 
 #include <string.h>
@@ -258,6 +259,7 @@ int main(void)
     initUltrasonic(&g_Ultrasonic_SR);
     initUltrasonic(&g_Ultrasonic_R);
     initUartDriver();
+    initHall();
     /* custom driver added end*/
 
     printfSerial("\n...............\n");

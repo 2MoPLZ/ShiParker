@@ -54,6 +54,7 @@ CPU test_application {
 		APP_SRC = "ultrasonic_Driver.c";
 		APP_SRC = "uart_Driver.c";
 		APP_SRC = "steering_Pid.c";
+		APP_SRC = "hall_Driver.c";
 	};
 	ISR ASCLIN3_TX {
 		CATEGORY = 2;
@@ -77,6 +78,26 @@ CPU test_application {
 		CATEGORY = 2;
 		SOURCE = "STM0SR0";
 		PRIORITY = 6;
+	};
+	ISR FRHallISR {
+		CATEGORY = 2;
+		PRIORITY = 10;
+		SOURCE = "SCUERU0";
+	};
+	ISR FLHallISR {
+		CATEGORY = 2;
+		PRIORITY = 11;
+		SOURCE = "SCUERU1";
+	};
+	ISR RRHallISR {
+		CATEGORY = 2;
+		PRIORITY = 40;
+		SOURCE = "SCUERU2";
+	};
+	ISR RLHallISR {
+		CATEGORY = 2;
+		PRIORITY = 50;
+		SOURCE = "SCUERU3";
 	};
 	TASK TestTask {
 		PRIORITY = 5;

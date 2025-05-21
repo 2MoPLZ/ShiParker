@@ -39,6 +39,10 @@ ISR2(asclin3TxISR);
 ISR2(asclin0RxISR);
 ISR2(asclin0TxISR);
 ISR2(TimerISR);
+ISR2(FRHallISR);
+ISR2(FLHallISR);
+ISR2(RRHallISR);
+ISR2(RLHallISR);
 
 
 /***************************************************************************
