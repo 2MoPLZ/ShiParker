@@ -54,6 +54,7 @@ CPU test_application {
 		APP_SRC = "ultrasonic_Driver.c";
 		APP_SRC = "uart_Driver.c";
 		APP_SRC = "steering_Pid.c";
+		APP_SRC = "shiparker_App.c";
 	};
 	ISR ASCLIN3_TX {
 		CATEGORY = 2;

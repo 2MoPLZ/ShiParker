@@ -9,6 +9,7 @@
 #include "ultrasonic_Driver.h"
 #include "uart_Driver.h"
 #include "steering_Pid.h"
+#include "shiparker_App.h"
 /* custom driver added end*/
 
 #include <string.h>

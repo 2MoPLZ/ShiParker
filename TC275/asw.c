@@ -15,7 +15,6 @@ struct ParkingSystemPacket testSendPacket =
     .crc=7
 };
 
-
 TASK(TestTask){
     testSendPacket.car_status++;
     testSendPacket.car_status%=4;

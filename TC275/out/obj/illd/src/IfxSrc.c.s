@@ -4,7 +4,7 @@
 .Letext0:
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x226
+	.uaword	0x20a
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -12,7 +12,7 @@
 	.ascii	"GNU C 4.9."
 	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\Users\\USER\\Desktop\\WORKSP~1\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc.c"
+	.string	"C:\\SHIPAR~1\\TC275\\illd\\src\\IfxSrc.c"
 	.uaword	.Ldebug_line0
 	.uleb128 0x2
 	.byte	0x4

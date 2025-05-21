@@ -1,108 +1,162 @@
 #include "shiparker_App.h"
 
-#include "bsw.h"
-#include "stdlib.h"
+static struct ParkingSystemPacket carStatusPacket = {};
+static CAR_STATUS_TYPE carStatus;
+static CAR_COMMAND_TYPE carCommand;
+static struct Position currentPosition;
+static struct Position targetPosition;
 
-uint8           carStatus       = 0;
-struct Position currentPosition = {x = 0, y = 0};
-struct Position targetPosition  = {x = 0, y = 0};
-uint8           carCommand      = 0;
-// command는 인터럽트로 들어올예정
+void initShiParkerApp(void)
+{
+    carStatus             = CAR_STATUS_READY;
+    currentPosition.x = 0;
+    currentPosition.y = 0;
+    targetPosition.x  = -1; // NULL 값을 따로 정의해줘야함
+    targetPosition.y  = -1; // NULL 값을 따로 정의해줘야함
+    carCommand            = CAR_COMMAND_STOP;
+}
 
-int app(void)
-{ // APP_TIME 당 1번의 app 실행
-    static uint8 cnt;
-    uint64       startTick = 0, elapsedTick = 0;
+int shiParkerApp(void)
+{
+    uint64 startTick = 0, elapsedTick = 0;
     startTick = IfxStm_get(&MODULE_STM0);
     switch (carStatus)
     {
     case CAR_STATUS_READY:
-        while (carCommand != CAR_COMMAND_START)
+        switch (carCommand)
         {
-            elapsedTick = IfxStm_get(&MODULE_STM0) - startTick;
-            if (elapsedTick >= (uint64)APP_TIME)
-                return 0; // 아무일없이 APP_TIME 지나면 정상종료
+        case CAR_COMMAND_FORCESTOP:
+            // READY일때 강제정지 -> 앱 종료
+            carStatus = CAR_STATUS_TERMINATED;
+            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
+            break;
+        case CAR_COMMAND_START:
+            // READY일때 시작 -> 주차 시작
+            carStatus = CAR_STATUS_RUNNING;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+            //  2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
+            //  500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
+            break;
+        case CAR_COMMAND_STOP:
+            // READY일때 일시정지 -> 변화없음
+            break;
+        default:
+            break;
         }
-        // START를 받았다면
-        carStatus = CAR_STATUS_RUNNING;
-        // 2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
-        // 500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
-        cnt = 0;
         break;
     case CAR_STATUS_RUNNING:
-        double xDifference     = abs(currentPosition.x - targetPosition.x);
-        double yDifference     = abs(currentPosition.y - targetPosition.y);
-        double xAllowableError = xDifference * 0.05;
-        double yAllowableError = yDifference * 0.05;
-
-        while ((carCommand == CAR_COMMAND_START)
-               && (currentPosition.y < (targetPosition.y - yAllowableError)
-                   || currentPosition.y > (targetPosition.y + yAllowableError)))
+        switch (carCommand)
         {
-            elapsedTick = IfxStm_get(&MODULE_STM0) - startTick;
-            if (elapsedTick >= (uint64)APP_TIME)
-                return 0; // 아무일없이 APP_TIME 지나면 정상종료
-            moveCar(dir);
+        case CAR_COMMAND_FORCESTOP:
+            // RUNNING일때 강제정지 -> 앱 종료
+            carStatus = CAR_STATUS_TERMINATED;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
+            break;
+        case CAR_COMMAND_START:
+            // RUNNING일때 시작 -> 변화없음
+            break;
+        case CAR_COMMAND_STOP:
+            // RUNNING일때 일시정지 -> 변화없음
+            break;
+        default:
+            break;
         }
-
-        while ((carCommand == CAR_COMMAND_START)
-               && (currentDegree != targetDegree))
-        {
-            elapsedTick = IfxStm_get(&MODULE_STM0) - startTick;
-            if (elapsedTick >= (uint64)APP_TIME)
-                return 0; // 아무일없이 APP_TIME 지나면 정상종료
-            rotateCar(dir);
-        }
-
-        while (
-            (carCommand == CAR_COMMAND_START)
-            && (currentPosition.x >= (targetPosition.x - xAllowableError)
-                || currentPosition.x <= (targetPosition.x + xAllowableError)
-                || currentPosition.y >= (targetPosition.y - yAllowableError)
-                || currentPosition.y <= (targetPosition.y + yAllowableError)))
-        {
-            elapsedTick = IfxStm_get(&MODULE_STM0) - startTick;
-            if (elapsedTick >= (uint64)APP_TIME)
-                return 0; // 아무일없이 APP_TIME 지나면 정상종료
-            moveCar();
-        }
-
-        carStatus = CAR_STATUS_TERMINATED;
-        sendPacket();
-        cnt = 0;
         break;
     case CAR_STATUS_STOP:
-        while (carCommand != CAR_COMMAND_START)
+        switch (carCommand)
         {
-            elapsedTick = IfxStm_get(&MODULE_STM0) - startTick;
-            if (elapsedTick >= (uint64)APP_TIME)
-                return 0; // 아무일없이 APP_TIME 지나면 정상종료
+        case CAR_COMMAND_FORCESTOP:
+            // STOP일때 강제정지 -> 앱 종료
+            carStatus = CAR_STATUS_TERMINATED;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
+            break;
+        case CAR_COMMAND_START:
+            // STOP일때 시작 -> 주차 재개
+            carStatus = CAR_STATUS_RUNNING;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+            //  2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
+            //  500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
+            break;
+        case CAR_COMMAND_STOP:
+            // STOP일때 일시정지 -> 변화없음
+            break;
+        default:
+            break;
         }
-        // START를 받았다면
-        carStatus = CAR_STATUS_RUNNING;
-        // 2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
-        // 500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
-        cnt = 0;
+
         break;
     case CAR_STATUS_TERMINATED:
-        while (carCommand != CAR_COMMAND_FORCESTOP)//이거맞냐?
+        switch (carCommand)
         {
-            elapsedTick = IfxStm_get(&MODULE_STM0) - startTick;
-            if (elapsedTick >= (uint64)APP_TIME)
-                return 0; // 아무일없이 APP_TIME 지나면 정상종료
+        case CAR_COMMAND_FORCESTOP:
+            // TERMINATED일때 강제정지 -> 변화없음
+
+            // 값들을 저장하고 앱을 나가는 코드를 여기 작성
+            break;
+        case CAR_COMMAND_START:
+            // TERMINATED일때 시작 -> 변화없음
+            break;
+        case CAR_COMMAND_STOP:
+            // TERMINATED일때 일시정지 -> 변화없음
+            break;
+        default:
+            break;
         }
-        // FORCESTOP를 받았다면
-        carStatus = CAR_STATUS_READY;
-        // 2500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
-        // 500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
         break;
     case CAR_STATUS_ERROR:
-        //에러핸들링이 될 때까지 자동차 운행 정지
-        //핸들링이 완료되면 READY상태가 됨
-        // 2500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
-        // 500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
+        switch (carCommand)
+        {
+        case CAR_COMMAND_FORCESTOP:
+            // STOP일때 강제정지 -> 앱 종료
+            carStatus = CAR_STATUS_TERMINATED;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
+            break;
+        case CAR_COMMAND_START:
+            // ERROR일때 시작 -> 주차 재개
+            carStatus = CAR_STATUS_RUNNING;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+            //  2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
+            //  500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
+            break;
+        case CAR_COMMAND_STOP:
+            // ERROR일때 일시정지 -> 변화없음
+            break;
+        default:
+            // UNDEFINED COMMAND FROM SYSTEM -> ERROR
+            break;
+        }
         break;
     default:
+        // UNDEFINED CAR STATUS -> FATAL ERROR
         break;
+    }
+}
+
+void handleError(ERROR_CODE_TYPE errorCode) {
+    if (errorCode < ERROR_CODE_MAX) {
+        printfSerial("ERRORCODE %d: %s\n",errorCode,errorMessages[errorCode]);
+        switch (errorCode)
+        {
+        case ERROR_CODE_FORCESTOP:
+            carStatus = CAR_STATUS_ERROR;
+            break;
+        case ERROR_CODE_OBSTACLE:
+            //ERROR HANDLING CODE
+            break;
+        default:
+            break;
+        }
+    }
+    else {
+        printfSerial("ERROR: Unknown error code (%d).\n", errorCode);
     }
 }

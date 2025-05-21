@@ -2,6 +2,7 @@
  * ultrasonic_Driver.h
  *
  *  Created on: May 19, 2025
+ *  Last Modify: May 21, 2025
  *      Author: 오동걸
  *
  *      getUltrasonic 호출간 주기는 최소 60ms로 할 것
@@ -22,8 +23,8 @@
 #include "illd\src\ConfigurationIsr.h"
 #include "illd\src\Configuration.h"
 
-#define ECHO_TIMEOUT_TICK 7600000 //38ms
-//1176470으로 줄이면 1미터까지 탐지됨
+// #define ECHO_TIMEOUT_TICK 7600000 //38ms
+#define ECHO_TIMEOUT_TICK 1200000   //최대 감지 거리를 대략 1미터로
 /*******************************************     NO CHANGES AFTER THIS LINE      ****************************************************/
 
 struct __attribute__((__packed__)) Ultrasonic

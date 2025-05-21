@@ -1,12 +1,12 @@
-# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.c"
+# 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.c"
 # 1 "C:\\ShiParker\\TC275\\out//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.c"
-# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 1
-# 16 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
+# 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.c"
+# 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 1
+# 17 "C:\\SHIPAR~1\\TC275\\shiparker_App.h"
 # 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 17 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 2
+# 18 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 1
 
 
@@ -21296,14 +21296,9 @@ struct __attribute__((__packed__)) ParkingSystemPacket
     uint8 car_command;
     uint8 crc;
 };
-# 18 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 2
-
-
-
-
-
-
-
+# 19 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 1
+# 25 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);
@@ -21315,8 +21310,7 @@ void readPacket(struct ParkingSystemPacket *packet);
 uint8 calculateChecksum(const uint8 *data, size_t length);
 void serializePacket(const struct ParkingSystemPacket *packet, uint8 *buffer);
 void deserializePacket(const uint8 *buffer, struct ParkingSystemPacket *packet);
-# 2 "C:\\SHIPAR~1\\TC275\\uart_Driver.c" 2
-
+# 20 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\SHIPAR~1\\TC275\\bsw.h" 1
 
 
@@ -22926,184 +22920,430 @@ void printfSerial(const char *fmt,...);
 void initPeripheralsAndERU(void);
 void initADC(void);
 uint16 readADCValue(uint8 channel);
-# 4 "C:\\SHIPAR~1\\TC275\\uart_Driver.c" 2
+# 21 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 1 3
+# 10 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 3
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\ieeefp.h" 1 3
+# 11 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 2 3
 
-App_AsclinAsc g_AsclinStm;
-struct ParkingSystemPacket g_RecievedParkingSystemPacket = {};
 
-void initUartDriver(void)
+
+
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
+# 16 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 2 3
+
+
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\stdlib.h" 1 3
+# 19 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 2 3
+
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\alloca.h" 1 3
+# 21 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 2 3
+
+
+
+
+
+
+
+
+typedef struct
 {
-    IfxAsclin_Asc_Config ascConfig;
-    IfxAsclin_Asc_initModuleConfig(&ascConfig, &(*(Ifx_ASCLIN*)0xF0000600u));
+  int quot;
+  int rem;
+} div_t;
 
-    ascConfig.baudrate.prescaler = 1;
-    ascConfig.baudrate.baudrate = 9600;
-    ascConfig.baudrate.oversampling = IfxAsclin_OversamplingFactor_4;
+typedef struct
+{
+  long quot;
+  long rem;
+} ldiv_t;
 
-    ascConfig.interrupt.rxPriority = 13;
-    ascConfig.interrupt.txPriority = 14;
-    ascConfig.interrupt.typeOfService = IfxSrc_Tos_cpu0;
 
-    ascConfig.txBuffer = g_AsclinStm.ascBuffer.tx;
-    ascConfig.txBufferSize = 258;
-    ascConfig.rxBuffer = g_AsclinStm.ascBuffer.rx;
-    ascConfig.rxBufferSize = 258;
+typedef struct
+{
+  long long int quot;
+  long long int rem;
+} lldiv_t;
+# 58 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 3
+extern int __mb_cur_max;
 
-    const IfxAsclin_Asc_Pins pins = {((void *)0),
-                                     IfxPort_InputMode_pullUp,
-                                     &IfxAsclin0_RXB_P15_3_IN,
-                                     IfxPort_InputMode_pullUp,
-                                     ((void *)0),
-                                     IfxPort_OutputMode_pushPull,
-                                     &IfxAsclin0_TX_P15_2_OUT,
-                                     IfxPort_OutputMode_pushPull,
-                                     IfxPort_PadDriver_cmosAutomotiveSpeed1};
-    ascConfig.pins = &pins;
 
-    IfxAsclin_Asc_initModule(&g_AsclinStm.drivers.asc, &ascConfig);
+
+void abort (void) __attribute__ ((noreturn));
+int abs (int);
+int atexit (void (*__func)(void));
+double atof (const char *__nptr);
+
+float atoff (const char *__nptr);
+
+int atoi (const char *__nptr);
+int _atoi_r (struct _reent *, const char *__nptr);
+long atol (const char *__nptr);
+long _atol_r (struct _reent *, const char *__nptr);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, int (* _compar) (const void *, const void *))
+
+
+
+                                                         ;
+void * calloc (size_t __nmemb, size_t __size) ;
+div_t div (int __numer, int __denom);
+void exit (int __status) __attribute__ ((noreturn));
+void free (void *) ;
+char * getenv (const char *__string);
+char * _getenv_r (struct _reent *, const char *__string);
+char * _findenv (const char *, int *);
+char * _findenv_r (struct _reent *, const char *, int *);
+long labs (long);
+ldiv_t ldiv (long __numer, long __denom);
+void * malloc (size_t __size) ;
+int mblen (const char *, size_t);
+int _mblen_r (struct _reent *, const char *, size_t, _mbstate_t *);
+int mbtowc (wchar_t *, const char *, size_t);
+int _mbtowc_r (struct _reent *, wchar_t *, const char *, size_t, _mbstate_t *);
+int wctomb (char *, wchar_t);
+int _wctomb_r (struct _reent *, char *, wchar_t, _mbstate_t *);
+size_t mbstowcs (wchar_t *, const char *, size_t);
+size_t _mbstowcs_r (struct _reent *, wchar_t *, const char *, size_t, _mbstate_t *);
+size_t wcstombs (char *, const wchar_t *, size_t);
+size_t _wcstombs_r (struct _reent *, char *, const wchar_t *, size_t, _mbstate_t *);
+
+
+char * mkdtemp (char *);
+int mkstemp (char *);
+int mkstemps (char *, int);
+char * mktemp (char *) __attribute__ ((warning ("the use of `mktemp' is dangerous; use `mkstemp' instead")));
+
+char * _mkdtemp_r (struct _reent *, char *);
+int _mkstemp_r (struct _reent *, char *);
+int _mkstemps_r (struct _reent *, char *, int);
+char * _mktemp_r (struct _reent *, char *) __attribute__ ((warning ("the use of `mktemp' is dangerous; use `mkstemp' instead")));
+
+void qsort (void * __base, size_t __nmemb, size_t __size, int(*_compar)(const void *, const void *));
+int rand (void);
+void * realloc (void * __r, size_t __size) ;
+
+void * reallocf (void * __r, size_t __size);
+
+void srand (unsigned __seed);
+double strtod (const char *__n, char **__end_PTR);
+double _strtod_r (struct _reent *,const char *__n, char **__end_PTR);
+float strtof (const char *__n, char **__end_PTR);
+
+
+
+
+
+
+long strtol (const char *__n, char **__end_PTR, int __base);
+long _strtol_r (struct _reent *,const char *__n, char **__end_PTR, int __base);
+unsigned long strtoul (const char *__n, char **__end_PTR, int __base);
+unsigned long _strtoul_r (struct _reent *,const char *__n, char **__end_PTR, int __base);
+
+int system (const char *__string);
+
+
+long a64l (const char *__input);
+char * l64a (long __input);
+char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
+void _Exit (int __status) __attribute__ ((noreturn));
+int putenv (char *__string);
+int _putenv_r (struct _reent *, char *__string);
+void * _reallocf_r (struct _reent *, void *, size_t);
+int setenv (const char *__string, const char *__value, int __overwrite);
+int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+int rand_r (unsigned *__seed);
+
+double drand48 (void);
+double _drand48_r (struct _reent *);
+double erand48 (unsigned short [3]);
+double _erand48_r (struct _reent *, unsigned short [3]);
+long jrand48 (unsigned short [3]);
+long _jrand48_r (struct _reent *, unsigned short [3]);
+void lcong48 (unsigned short [7]);
+void _lcong48_r (struct _reent *, unsigned short [7]);
+long lrand48 (void);
+long _lrand48_r (struct _reent *);
+long mrand48 (void);
+long _mrand48_r (struct _reent *);
+long nrand48 (unsigned short [3]);
+long _nrand48_r (struct _reent *, unsigned short [3]);
+unsigned short *
+       seed48 (unsigned short [3]);
+unsigned short *
+       _seed48_r (struct _reent *, unsigned short [3]);
+void srand48 (long);
+void _srand48_r (struct _reent *, long);
+long long atoll (const char *__nptr);
+long long _atoll_r (struct _reent *, const char *__nptr);
+long long llabs (long long);
+lldiv_t lldiv (long long __numer, long long __denom);
+long long strtoll (const char *__n, char **__end_PTR, int __base);
+long long _strtoll_r (struct _reent *, const char *__n, char **__end_PTR, int __base);
+unsigned long long strtoull (const char *__n, char **__end_PTR, int __base);
+unsigned long long _strtoull_r (struct _reent *, const char *__n, char **__end_PTR, int __base);
+
+
+void cfree (void *);
+int unsetenv (const char *__string);
+int _unsetenv_r (struct _reent *, const char *__string);
+# 198 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 3
+char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
+
+void * _malloc_r (struct _reent *, size_t) ;
+void * _calloc_r (struct _reent *, size_t, size_t) ;
+void _free_r (struct _reent *, void *) ;
+void * _realloc_r (struct _reent *, void *, size_t) ;
+void _mstats_r (struct _reent *, char *);
+
+int _system_r (struct _reent *, const char *);
+
+void __eprintf (const char *, const char *, unsigned int, const char *);
+
+
+
+extern long double strtold (const char *, char **);
+extern long double wcstold (const wchar_t *, wchar_t **);
+
+
+
+# 22 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
+
+
+
+
+typedef enum CAR_STATUS_TYPE_T{
+    CAR_STATUS_READY,
+    CAR_STATUS_RUNNING,
+    CAR_STATUS_STOP,
+    CAR_STATUS_TERMINATED,
+    CAR_STATUS_ERROR,
+    CAR_STATUS_RESERVED1,
+    CAR_STATUS_RESERVED2
+}CAR_STATUS_TYPE;
+typedef enum CAR_COMMAND_TYPE_T{
+    CAR_COMMAND_FORCESTOP,
+    CAR_COMMAND_START,
+    CAR_COMMAND_STOP,
+    CAR_COMMAND_RESERVED1,
+    CAR_COMMAND_RESERVED2
+}CAR_COMMAND_TYPE;
+typedef enum ERROR_CODE_TYPE_T{
+    ERROR_CODE_FORCESTOP,
+    ERROR_CODE_OBSTACLE,
+    ERROR_CODE_2,
+    ERROR_CODE_3,
+    ERROR_CODE_4,
+    ERROR_CODE_5,
+    ERROR_CODE_6,
+    ERROR_CODE_7,
+    ERROR_CODE_8,
+    ERROR_CODE_9,
+    ERROR_CODE_10,
+    ERROR_CODE_11,
+    ERROR_CODE_12,
+    ERROR_CODE_13,
+    ERROR_CODE_14,
+    ERROR_CODE_15
+}ERROR_CODE_TYPE;
+struct Position
+{
+    double x;
+    double y;
+};
+
+static const char* errorMessages[16] = {
+    "Emergency force stop triggered.",
+    "Obstacle detected.",
+    "ERRORCODE 2",
+    "ERRORCODE 3",
+    "ERRORCODE 4",
+    "ERRORCODE 5",
+    "ERRORCODE 6",
+    "ERRORCODE 7",
+    "ERRORCODE 8",
+    "ERRORCODE 9",
+    "ERRORCODE 10",
+    "ERRORCODE 11",
+    "ERRORCODE 12",
+    "ERRORCODE 13",
+    "ERRORCODE 14",
+    "ERRORCODE 15"
+};
+
+
+void initShiParkerApp(void);
+int shiParkerApp(void);
+void handleError(ERROR_CODE_TYPE errorCode);
+# 2 "C:\\SHIPAR~1\\TC275\\shiparker_App.c" 2
+
+static struct ParkingSystemPacket carStatusPacket = {};
+static CAR_STATUS_TYPE carStatus;
+static CAR_COMMAND_TYPE carCommand;
+static struct Position currentPosition;
+static struct Position targetPosition;
+
+void initShiParkerApp(void)
+{
+    carStatus = CAR_STATUS_READY;
+    currentPosition.x = 0;
+    currentPosition.y = 0;
+    targetPosition.x = -1;
+    targetPosition.y = -1;
+    carCommand = CAR_COMMAND_STOP;
 }
 
-void sendPacket(const struct ParkingSystemPacket *packet)
+int shiParkerApp(void)
 {
-    EnableAllInterrupts();
-    uint8 buf[36] = {};
-    serializePacket(packet, buf);
-    g_AsclinStm.count = 36;
-
-    printfSerial("\nsend:[ ");
-    int i;
-    for (i = 0; i < 36; i++)
+    uint64 startTick = 0, elapsedTick = 0;
+    startTick = IfxStm_get(&(*(Ifx_STM*)0xF0000000u));
+    switch (carStatus)
     {
-        printfSerial("%02x/", buf[i]);
-    }
-    printfSerial(" ]");
-    printfSerial("\n[send| start:%02x status:%02x command:%d crc:%d ]",
-                 packet->start_byte,
-                 packet->car_status,
-                 packet->car_command,
-                 packet->crc);
-    printDouble("current_position_X: ", packet->car_current_position.x);
-    printDouble("current_position_Y: ", packet->car_current_position.y);
-    printDouble("target_position_X: ", packet->car_target_position.x);
-    printDouble("target_position_Y: ", packet->car_target_position.y);
-    printfSerial("\n");
-    IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
-                        &buf,
-                        &g_AsclinStm.count,
-                        ((Ifx_TickTime)0x7FFFFFFFFFFFFFFFLL));
-}
-
-void readPacket(struct ParkingSystemPacket *packet)
-{
-    if (IfxAsclin_Asc_blockingRead(&g_AsclinStm.drivers.asc) == 0xAA)
-    {
-        uint8 buffer[36] = {};
-        buffer[0] = 0xAA;
-        uint8 pos = 1;
-        while (pos < 36)
+    case CAR_STATUS_READY:
+        switch (carCommand)
         {
-            buffer[pos] = IfxAsclin_Asc_blockingRead(&g_AsclinStm.drivers.asc);
-            pos++;
+        case CAR_COMMAND_FORCESTOP:
+
+            carStatus = CAR_STATUS_TERMINATED;
+
+            break;
+        case CAR_COMMAND_START:
+
+            carStatus = CAR_STATUS_RUNNING;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+
+
+            break;
+        case CAR_COMMAND_STOP:
+
+            break;
+        default:
+            break;
         }
-        printfSerial("\nrecieve:[ ");
-        int i;
-        for (i = 0; i < 36; i++)
+        break;
+    case CAR_STATUS_RUNNING:
+        switch (carCommand)
         {
-            printfSerial("%02x/", buffer[i]);
+        case CAR_COMMAND_FORCESTOP:
+
+            carStatus = CAR_STATUS_TERMINATED;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+
+            break;
+        case CAR_COMMAND_START:
+
+            break;
+        case CAR_COMMAND_STOP:
+
+            break;
+        default:
+            break;
         }
-        printfSerial(" ]");
-        if (calculateChecksum(buffer, 36 - 1)
-            == buffer[36 - 1])
+        break;
+    case CAR_STATUS_STOP:
+        switch (carCommand)
         {
-            printfSerial("(valid recieve)");
-            deserializePacket(buffer, packet);
-            printfSerial(
-                "\n[recieve| start:%02x status:%02x command:%d crc:%d ]",
-                packet->start_byte,
-                packet->car_status,
-                packet->car_command,
-                packet->crc);
-            printDouble("current_position_X: ", packet->car_current_position.x);
-            printDouble("current_position_Y: ", packet->car_current_position.y);
-            printDouble("target_position_X: ", packet->car_target_position.x);
-            printDouble("target_position_Y: ", packet->car_target_position.y);
-            printfSerial("\n");
+        case CAR_COMMAND_FORCESTOP:
+
+            carStatus = CAR_STATUS_TERMINATED;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+
+            break;
+        case CAR_COMMAND_START:
+
+            carStatus = CAR_STATUS_RUNNING;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+
+
+            break;
+        case CAR_COMMAND_STOP:
+
+            break;
+        default:
+            break;
+        }
+
+        break;
+    case CAR_STATUS_TERMINATED:
+        switch (carCommand)
+        {
+        case CAR_COMMAND_FORCESTOP:
+
+
+
+            break;
+        case CAR_COMMAND_START:
+
+            break;
+        case CAR_COMMAND_STOP:
+
+            break;
+        default:
+            break;
+        }
+        break;
+    case CAR_STATUS_ERROR:
+        switch (carCommand)
+        {
+        case CAR_COMMAND_FORCESTOP:
+
+            carStatus = CAR_STATUS_TERMINATED;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+
+            break;
+        case CAR_COMMAND_START:
+
+            carStatus = CAR_STATUS_RUNNING;
+            carStatusPacket.car_status = carStatus;
+            sendPacket(&carStatusPacket);
+
+
+            break;
+        case CAR_COMMAND_STOP:
+
+            break;
+        default:
+
+            break;
+        }
+        break;
+    default:
+
+        break;
+    }
+}
+
+void handleError(ERROR_CODE_TYPE errorCode) {
+    if (errorCode < 16) {
+        printfSerial("ERRORCODE %d: %s\n",errorCode,errorMessages[errorCode]);
+        switch (errorCode)
+        {
+        case ERROR_CODE_FORCESTOP:
+            carStatus = CAR_STATUS_ERROR;
+            break;
+        case ERROR_CODE_OBSTACLE:
+
+            break;
+        default:
+            break;
         }
     }
-}
-
-void myprintfSerial(const char *fmt, ...)
-{
-    EnableAllInterrupts();
-    char buf[128];
-    va_list args;
-    __builtin_va_start(args,fmt);
-    vsnprintf(buf, 128, fmt, args);
-    __builtin_va_end(args);
-
-    uint8 txData[100];
-    g_AsclinStm.count = strlen(buf);
-    unsigned int i = 0;
-    for (; i < strlen(buf); i++)
-    {
-        txData[i] = buf[i];
+    else {
+        printfSerial("ERROR: Unknown error code (%d).\n", errorCode);
     }
-
-    IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
-                        &txData,
-                        &g_AsclinStm.count,
-                        ((Ifx_TickTime)0x7FFFFFFFFFFFFFFFLL));
-}
-
-void asclin0RxISR(void)
-{
-
-    IfxAsclin_Asc_isrReceive(&g_AsclinStm.drivers.asc);
-    if (IfxAsclin_Asc_getReadCount(&g_AsclinStm.drivers.asc)
-        >= 36)
-    {
-        readPacket(&g_RecievedParkingSystemPacket);
-    }
-}
-
-void asclin0TxISR(void)
-{
-
-    IfxAsclin_Asc_isrTransmit(&g_AsclinStm.drivers.asc);
-}
-
-
-
-
-uint8 calculateChecksum(const uint8 *data, size_t length)
-{
-    uint8 checksumResult = 0;
-    size_t i = 0;
-    for (i = 0; i < length; ++i)
-    {
-        checksumResult ^= data[i];
-    }
-    return checksumResult;
-}
-
-
-void serializePacket(const struct ParkingSystemPacket *packet, uint8 *buffer)
-{
-
-    memcpy(buffer, packet, 36 - 1);
-
-    buffer[36 - 1] =
-        calculateChecksum(buffer, 36 - 1);
-}
-
-
-void deserializePacket(const uint8 *buffer, struct ParkingSystemPacket *packet)
-{
-
-    memcpy(packet, buffer, 36);
-
-
-
-
-
 }
