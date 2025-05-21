@@ -94,27 +94,17 @@ RRHallISR:
 .LFB577:
 	.loc 1 43 0
 	.loc 1 44 0
-	call	DisableAllInterrupts
-.LVL4:
-	.loc 1 45 0
-	mov	%d4, 5000
-	call	osEE_tc_delay
-.LVL5:
-	.loc 1 46 0
 	movh.a	%a15, hi:g_RRHallCnt
 	ld.hu	%d15, [%a15] lo:g_RRHallCnt
-	.loc 1 47 0
-	mov	%d4, 3000
-	.loc 1 46 0
+	.loc 1 45 0
+	mov	%d4, 4
+	.loc 1 44 0
 	add	%d15, 1
 	extr.u	%d15, %d15, 0, 16
 	st.h	[%a15] lo:g_RRHallCnt, %d15
-	.loc 1 47 0
-	call	osEE_tc_delay
-.LVL6:
-	.loc 1 48 0
-	j	EnableAllInterrupts
-.LVL7:
+	.loc 1 45 0
+	j	IfxScuEru_clearEventFlag
+.LVL4:
 .LFE577:
 	.size	RRHallISR, .-RRHallISR
 	.align 1
@@ -122,29 +112,19 @@ RRHallISR:
 	.type	RLHallISR, @function
 RLHallISR:
 .LFB578:
-	.loc 1 51 0
-	.loc 1 52 0
-	call	DisableAllInterrupts
-.LVL8:
-	.loc 1 53 0
-	mov	%d4, 5000
-	call	osEE_tc_delay
-.LVL9:
-	.loc 1 54 0
+	.loc 1 48 0
+	.loc 1 49 0
 	movh.a	%a15, hi:g_RLHallCnt
 	ld.hu	%d15, [%a15] lo:g_RLHallCnt
-	.loc 1 55 0
-	mov	%d4, 3000
-	.loc 1 54 0
+	.loc 1 50 0
+	mov	%d4, 0
+	.loc 1 49 0
 	add	%d15, 1
 	extr.u	%d15, %d15, 0, 16
 	st.h	[%a15] lo:g_RLHallCnt, %d15
-	.loc 1 55 0
-	call	osEE_tc_delay
-.LVL10:
-	.loc 1 56 0
-	j	EnableAllInterrupts
-.LVL11:
+	.loc 1 50 0
+	j	IfxScuEru_clearEventFlag
+.LVL5:
 .LFE578:
 	.size	RLHallISR, .-RLHallISR
 .section .rodata,"a",@progbits
@@ -156,21 +136,21 @@ RLHallISR:
 	.type	TimerISR, @function
 TimerISR:
 .LFB579:
-	.loc 1 60 0
-	.loc 1 62 0
+	.loc 1 54 0
+	.loc 1 56 0
 	movh	%d4, 15
-	.loc 1 60 0
+	.loc 1 54 0
 	sub.a	%SP, 8
 .LCFI1:
-	.loc 1 62 0
+	.loc 1 56 0
 	addi	%d4, %d4, 16960
 	call	osEE_tc_stm_set_sr0_next_match
-.LVL12:
-	.loc 1 71 0
+.LVL6:
+	.loc 1 65 0
 	mov	%d4, 8
 	call	ActivateTask
-.LVL13:
-	.loc 1 75 0
+.LVL7:
+	.loc 1 69 0
 	movh.a	%a15, hi:c.16789
 	ld.w	%d15, [%a15] lo:c.16789
 	movh.a	%a4, hi:.LC1
@@ -179,7 +159,7 @@ TimerISR:
 	add	%d15, 1
 	st.w	[%a15] lo:c.16789, %d15
 	j	printfSerial
-.LVL14:
+.LVL8:
 .LFE579:
 	.size	TimerISR, .-TimerISR
 .section .data,"aw",@progbits
@@ -293,7 +273,7 @@ testSendPacket:
 	.file 15 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0xac9
+	.uaword	0xa1b
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -646,7 +626,7 @@ testSendPacket:
 	.uaword	0x73b
 	.uleb128 0xf
 	.uaword	.LVL0
-	.uaword	0x9bd
+	.uaword	0x963
 	.uaword	0x71f
 	.uleb128 0x10
 	.byte	0x1
@@ -658,7 +638,7 @@ testSendPacket:
 	.uleb128 0x11
 	.uaword	.LVL1
 	.byte	0x1
-	.uaword	0x9e3
+	.uaword	0x989
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x64
@@ -689,7 +669,7 @@ testSendPacket:
 	.uleb128 0x11
 	.uaword	.LVL2
 	.byte	0x1
-	.uaword	0xa01
+	.uaword	0x9a7
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
@@ -712,7 +692,7 @@ testSendPacket:
 	.uleb128 0x11
 	.uaword	.LVL3
 	.byte	0x1
-	.uaword	0xa01
+	.uaword	0x9a7
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
@@ -731,103 +711,65 @@ testSendPacket:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x7f5
-	.uleb128 0x12
+	.uaword	0x7c8
+	.uleb128 0x11
 	.uaword	.LVL4
-	.uaword	0xa2a
-	.uleb128 0xf
-	.uaword	.LVL5
-	.uaword	0xa45
-	.uaword	0x7d5
+	.byte	0x1
+	.uaword	0x9a7
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
-	.byte	0x3
-	.byte	0xa
-	.uahalf	0x1388
-	.byte	0
-	.uleb128 0xf
-	.uaword	.LVL6
-	.uaword	0xa45
-	.uaword	0x7ea
-	.uleb128 0x10
 	.byte	0x1
-	.byte	0x54
-	.byte	0x3
-	.byte	0xa
-	.uahalf	0xbb8
+	.byte	0x34
 	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL7
-	.byte	0x1
-	.uaword	0xa64
 	.byte	0
 	.uleb128 0xe
 	.byte	0x1
 	.string	"RLHallISR"
 	.byte	0x1
-	.byte	0x32
+	.byte	0x2f
 	.byte	0x1
 	.uaword	.LFB578
 	.uaword	.LFE578
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x851
-	.uleb128 0x12
-	.uaword	.LVL8
-	.uaword	0xa2a
-	.uleb128 0xf
-	.uaword	.LVL9
-	.uaword	0xa45
-	.uaword	0x831
+	.uaword	0x7f7
+	.uleb128 0x11
+	.uaword	.LVL5
+	.byte	0x1
+	.uaword	0x9a7
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
-	.byte	0x3
-	.byte	0xa
-	.uahalf	0x1388
-	.byte	0
-	.uleb128 0xf
-	.uaword	.LVL10
-	.uaword	0xa45
-	.uaword	0x846
-	.uleb128 0x10
 	.byte	0x1
-	.byte	0x54
-	.byte	0x3
-	.byte	0xa
-	.uahalf	0xbb8
+	.byte	0x30
 	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL11
-	.byte	0x1
-	.uaword	0xa64
 	.byte	0
 	.uleb128 0xe
 	.byte	0x1
 	.string	"TimerISR"
 	.byte	0x1
-	.byte	0x3b
+	.byte	0x35
 	.byte	0x1
 	.uaword	.LFB579
 	.uaword	.LFE579
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x8c3
-	.uleb128 0x14
+	.uaword	0x869
+	.uleb128 0x12
 	.string	"c"
 	.byte	0x1
-	.byte	0x3d
+	.byte	0x37
 	.uaword	0x144
 	.byte	0x5
 	.byte	0x3
 	.uaword	c.16789
 	.uleb128 0xf
-	.uaword	.LVL12
-	.uaword	0xa7e
-	.uaword	0x894
+	.uaword	.LVL6
+	.uaword	0x9d0
+	.uaword	0x83a
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
@@ -836,9 +778,9 @@ testSendPacket:
 	.uaword	0xf4240
 	.byte	0
 	.uleb128 0xf
-	.uaword	.LVL13
-	.uaword	0xaae
-	.uaword	0x8a7
+	.uaword	.LVL7
+	.uaword	0xa00
+	.uaword	0x84d
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x54
@@ -846,9 +788,9 @@ testSendPacket:
 	.byte	0x38
 	.byte	0
 	.uleb128 0x11
-	.uaword	.LVL14
+	.uaword	.LVL8
 	.byte	0x1
-	.uaword	0x9e3
+	.uaword	0x989
 	.uleb128 0x10
 	.byte	0x1
 	.byte	0x64
@@ -864,7 +806,7 @@ testSendPacket:
 	.sleb128 -1
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x13
 	.string	"pid_prev_error"
 	.byte	0xa
 	.byte	0x14
@@ -872,7 +814,7 @@ testSendPacket:
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x15
+	.uleb128 0x13
 	.string	"pid_integral"
 	.byte	0xa
 	.byte	0x15
@@ -880,59 +822,59 @@ testSendPacket:
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x16
+	.uleb128 0x14
 	.string	"pid_last_time"
 	.byte	0xa
 	.byte	0x16
 	.uaword	0x6d8
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x15
 	.uaword	0x256
-	.uaword	0x925
-	.uleb128 0x18
+	.uaword	0x8cb
+	.uleb128 0x16
 	.uaword	0x4ff
 	.byte	0x2
 	.byte	0
-	.uleb128 0x19
+	.uleb128 0x17
 	.string	"IfxCpu_cfg_indexMap"
 	.byte	0xb
 	.byte	0xa7
-	.uaword	0x942
+	.uaword	0x8e8
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5
-	.uaword	0x915
-	.uleb128 0x19
+	.uaword	0x8bb
+	.uleb128 0x17
 	.string	"g_FRHallCnt"
 	.byte	0x1
 	.byte	0x7
-	.uaword	0x95c
+	.uaword	0x902
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x1a
+	.uleb128 0x18
 	.uaword	0x18a
-	.uleb128 0x19
+	.uleb128 0x17
 	.string	"g_FLHallCnt"
 	.byte	0x1
 	.byte	0x8
-	.uaword	0x95c
+	.uaword	0x902
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x19
+	.uleb128 0x17
 	.string	"g_RRHallCnt"
 	.byte	0x1
 	.byte	0x9
-	.uaword	0x95c
+	.uaword	0x902
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x19
+	.uleb128 0x17
 	.string	"g_RLHallCnt"
 	.byte	0x1
 	.byte	0xa
-	.uaword	0x95c
+	.uaword	0x902
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x1b
+	.uleb128 0x19
 	.string	"testSendPacket"
 	.byte	0x1
 	.byte	0xc
@@ -941,82 +883,57 @@ testSendPacket:
 	.byte	0x5
 	.byte	0x3
 	.uaword	testSendPacket
-	.uleb128 0x1c
+	.uleb128 0x1a
 	.byte	0x1
 	.string	"sendPacket"
 	.byte	0xc
 	.byte	0x1e
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x9d8
-	.uleb128 0x1d
-	.uaword	0x9d8
+	.uaword	0x97e
+	.uleb128 0x1b
+	.uaword	0x97e
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x9de
+	.uaword	0x984
 	.uleb128 0x5
 	.uaword	0x62d
-	.uleb128 0x1c
+	.uleb128 0x1a
 	.byte	0x1
 	.string	"printfSerial"
 	.byte	0xd
 	.byte	0xf
 	.byte	0x1
 	.byte	0x1
-	.uaword	0xa01
-	.uleb128 0x1d
+	.uaword	0x9a7
+	.uleb128 0x1b
 	.uaword	0x216
-	.uleb128 0x1e
-	.byte	0
 	.uleb128 0x1c
+	.byte	0
+	.uleb128 0x1a
 	.byte	0x1
 	.string	"IfxScuEru_clearEventFlag"
 	.byte	0x7
 	.byte	0xba
 	.byte	0x1
 	.byte	0x1
-	.uaword	0xa2a
-	.uleb128 0x1d
+	.uaword	0x9d0
+	.uleb128 0x1b
 	.uaword	0x5ec
 	.byte	0
-	.uleb128 0x1f
-	.byte	0x1
-	.string	"DisableAllInterrupts"
-	.byte	0xf
-	.byte	0x71
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x20
-	.byte	0x1
-	.string	"osEE_tc_delay"
-	.byte	0xe
-	.uahalf	0x3a9
-	.byte	0x1
-	.byte	0x1
-	.uaword	0xa64
 	.uleb128 0x1d
-	.uaword	0x290
-	.byte	0
-	.uleb128 0x1f
-	.byte	0x1
-	.string	"EnableAllInterrupts"
-	.byte	0xf
-	.byte	0x8a
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x20
 	.byte	0x1
 	.string	"osEE_tc_stm_set_sr0_next_match"
 	.byte	0xe
 	.uahalf	0x3d8
 	.byte	0x1
 	.byte	0x1
-	.uaword	0xaae
-	.uleb128 0x1d
+	.uaword	0xa00
+	.uleb128 0x1b
 	.uaword	0x290
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x1e
 	.byte	0x1
 	.string	"ActivateTask"
 	.byte	0xf
@@ -1024,7 +941,7 @@ testSendPacket:
 	.byte	0x1
 	.uaword	0x4ec
 	.byte	0x1
-	.uleb128 0x1d
+	.uleb128 0x1b
 	.uaword	0x2a0
 	.byte	0
 	.byte	0
@@ -1240,26 +1157,6 @@ testSendPacket:
 	.byte	0
 	.byte	0
 	.uleb128 0x12
-	.uleb128 0x4109
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x13
-	.uleb128 0x4109
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x2115
-	.uleb128 0xc
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x14
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1274,7 +1171,7 @@ testSendPacket:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x13
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1289,7 +1186,7 @@ testSendPacket:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x14
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1304,7 +1201,7 @@ testSendPacket:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x15
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -1313,13 +1210,37 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x16
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2f
 	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x17
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.uleb128 0x18
+	.uleb128 0x35
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x19
@@ -1335,35 +1256,11 @@ testSendPacket:
 	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.uleb128 0x35
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x1b
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0xc
 	.uleb128 0x2
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x1c
+	.uleb128 0x1a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1382,36 +1279,19 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x1b
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1e
+	.uleb128 0x1c
 	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x1f
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.byte	0
-	.byte	0
-	.uleb128 0x20
+	.uleb128 0x1d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1430,7 +1310,7 @@ testSendPacket:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x1e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1467,9 +1347,6 @@ testSendPacket:
 .section .debug_str,"",@progbits
 	.extern	ActivateTask,STT_FUNC,0
 	.extern	osEE_tc_stm_set_sr0_next_match,STT_FUNC,0
-	.extern	EnableAllInterrupts,STT_FUNC,0
-	.extern	osEE_tc_delay,STT_FUNC,0
-	.extern	DisableAllInterrupts,STT_FUNC,0
 	.extern	IfxScuEru_clearEventFlag,STT_FUNC,0
 	.extern	printfSerial,STT_FUNC,0
 	.extern	g_RLHallCnt,STT_OBJECT,2

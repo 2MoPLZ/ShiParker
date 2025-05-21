@@ -41,19 +41,13 @@ ISR2(FLHallISR)
 }
 ISR2(RRHallISR)
 {
-    DisableAllInterrupts();
-    osEE_tc_delay(5000);
     g_RRHallCnt++;
-    osEE_tc_delay(3000);
-    EnableAllInterrupts();
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_4);
 }
 ISR2(RLHallISR)
 {
-    DisableAllInterrupts();
-    osEE_tc_delay(5000);
     g_RLHallCnt++;
-    osEE_tc_delay(3000);
-    EnableAllInterrupts();
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_0);
 }
 
 ISR2(TimerISR)

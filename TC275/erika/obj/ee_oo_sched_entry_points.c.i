@@ -2327,10 +2327,10 @@ static inline OsEE_reg __attribute__((always_inline))
 {
   OsEE_icr icr = osEE_tc_get_icr();
 
-  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((177U))) {
+  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((144U))) {
     OsEE_icr icr_temp = icr;
 
-    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((177U));
+    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((144U));
     osEE_tc_set_icr(icr_temp);
   }
 

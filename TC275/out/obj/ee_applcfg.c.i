@@ -2117,7 +2117,7 @@ static OsEE_TCB
   },
   {
                                 0U,
-                                167U,
+                                139U,
                                 OSEE_TASK_SUSPENDED,
                                 ((void *)0),
                                 0U,
@@ -2126,7 +2126,7 @@ static OsEE_TCB
   },
   {
                                 0U,
-                                177U,
+                                142U,
                                 OSEE_TASK_SUSPENDED,
                                 ((void *)0),
                                 0U,
@@ -2249,8 +2249,8 @@ static OsEE_TDB
                             6U,
                             OSEE_TASK_TYPE_ISR2,
                             RRHallISR,
-                            167U,
-                            167U,
+                            139U,
+                            139U,
                             1U
   },
   {
@@ -2263,8 +2263,8 @@ static OsEE_TDB
                             7U,
                             OSEE_TASK_TYPE_ISR2,
                             RLHallISR,
-                            177U,
-                            177U,
+                            142U,
+                            142U,
                             1U
   },
   {

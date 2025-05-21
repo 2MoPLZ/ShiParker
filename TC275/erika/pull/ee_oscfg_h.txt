@@ -59,11 +59,11 @@
 #define OSEE_ARCH_TRICORE
 #define OSEE_HAS_EVENTS
 #define OSEE_HAS_RESOURCES
-#define OSEE_ISR2_MAX_HW_ASM_PRIO 50
-#define OSEE_ISR2_MAX_PRIO (177U)
+#define OSEE_ISR2_MAX_HW_ASM_PRIO 17
+#define OSEE_ISR2_MAX_PRIO (144U)
 #define OSEE_MONO_STACK
 #define OSEE_OC_ECC2
-#define OSEE_TC_CORE0_ISR_MAX_PRIO  (50U)
+#define OSEE_TC_CORE0_ISR_MAX_PRIO  (17U)
 #define OSEE_TC_TC27X
 #define OS_EE_GCC
 #define OS_EE_KERNEL_OSEK
@@ -140,19 +140,19 @@
 
 
 
-#define OSEE_TC_CORE0_40_ISR_CAT (2U)
-#define OSEE_TC_CORE0_40_ISR_TID 6
+#define OSEE_TC_CORE0_12_ISR_CAT (2U)
+#define OSEE_TC_CORE0_12_ISR_TID 6
 
 #define OSEE_TC_CORE0_RRHallISR_ISR_TID   (6U)
-#define OSEE_TC_CORE0_RRHallISR_ISR_PRIO  (40U)
+#define OSEE_TC_CORE0_RRHallISR_ISR_PRIO  (12U)
 
 
 
-#define OSEE_TC_CORE0_50_ISR_CAT (2U)
-#define OSEE_TC_CORE0_50_ISR_TID 7
+#define OSEE_TC_CORE0_15_ISR_CAT (2U)
+#define OSEE_TC_CORE0_15_ISR_TID 7
 
 #define OSEE_TC_CORE0_RLHallISR_ISR_TID   (7U)
-#define OSEE_TC_CORE0_RLHallISR_ISR_PRIO  (50U)
+#define OSEE_TC_CORE0_RLHallISR_ISR_PRIO  (15U)
 
 
 /***************************************************************************

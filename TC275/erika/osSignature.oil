@@ -56,12 +56,12 @@ CPU test_application {
 	};
 	ISR RRHallISR {
 		CATEGORY = 2;
-		PRIORITY = 40;
+		PRIORITY = 12;
 		SOURCE = "SCUERU2";
 	};
 	ISR RLHallISR {
 		CATEGORY = 2;
-		PRIORITY = 50;
+		PRIORITY = 15;
 		SOURCE = "SCUERU3";
 	};
 };

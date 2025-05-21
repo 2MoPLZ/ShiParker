@@ -196,8 +196,8 @@ osEE_tdb_array:
 	.byte	2
 	.zero	3
 	.word	RRHallISR
-	.byte	-89
-	.byte	-89
+	.byte	-117
+	.byte	-117
 	.byte	1
 	.zero	1
 	.word	osEE_sdb_array
@@ -209,8 +209,8 @@ osEE_tdb_array:
 	.byte	2
 	.zero	3
 	.word	RLHallISR
-	.byte	-79
-	.byte	-79
+	.byte	-114
+	.byte	-114
 	.byte	1
 	.zero	1
 	.word	osEE_sdb_array
@@ -293,7 +293,7 @@ osEE_tcb_array:
 	.word	0
 	.word	0
 	.byte	0
-	.byte	-89
+	.byte	-117
 	.byte	0
 	.zero	1
 	.word	0
@@ -301,7 +301,7 @@ osEE_tcb_array:
 	.word	0
 	.word	0
 	.byte	0
-	.byte	-79
+	.byte	-114
 	.byte	0
 	.zero	1
 	.word	0

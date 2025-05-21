@@ -23549,26 +23549,20 @@ void FLHallISR(void)
 }
 void RRHallISR(void)
 {
-    DisableAllInterrupts();
-    osEE_tc_delay(5000);
     g_RRHallCnt++;
-    osEE_tc_delay(3000);
-    EnableAllInterrupts();
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_4);
 }
 void RLHallISR(void)
 {
-    DisableAllInterrupts();
-    osEE_tc_delay(5000);
     g_RLHallCnt++;
-    osEE_tc_delay(3000);
-    EnableAllInterrupts();
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_0);
 }
 
 void TimerISR(void)
 {
     static long c = -4;
     osEE_tc_stm_set_sr0_next_match(1000000U);
-# 71 "C:\\project\\SHIPAR~1\\TC275\\asw.c"
+# 65 "C:\\project\\SHIPAR~1\\TC275\\asw.c"
     ActivateTask((8U));
 
 

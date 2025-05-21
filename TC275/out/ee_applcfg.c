@@ -119,7 +119,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 167U,
+    /* .current_prio       = */ 139U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -128,7 +128,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 177U,
+    /* .current_prio       = */ 142U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -258,8 +258,8 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .tid            = */ 6U,
     /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
     /* .task_func      = */ RRHallISR,
-    /* .ready_prio     = */ 167U,
-    /* .dispatch_prio  = */ 167U,
+    /* .ready_prio     = */ 139U,
+    /* .dispatch_prio  = */ 139U,
     /* .max_num_of_act = */ 1U
   },
   {
@@ -272,8 +272,8 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .tid            = */ 7U,
     /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
     /* .task_func      = */ RLHallISR,
-    /* .ready_prio     = */ 177U,
-    /* .dispatch_prio  = */ 177U,
+    /* .ready_prio     = */ 142U,
+    /* .dispatch_prio  = */ 142U,
     /* .max_num_of_act = */ 1U
   },
   {

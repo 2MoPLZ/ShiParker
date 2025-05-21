@@ -250,14 +250,14 @@ SuspendOSInterrupts:
 	.loc 3 365 0
 	and	%d15, %d2, 255
 .LVL20:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL21:
 	jnz	%d15, .L15
 .LBB566:
 	.loc 3 366 0
 	mov	%d15, %d2
 .LVL22:
-	mov	%d3, 50
+	mov	%d3, 17
 	insert	%d15, %d15, %d3, 0, 8
 .LVL23:
 .LBB567:
@@ -405,14 +405,14 @@ StartOS:
 	.loc 3 365 0
 	and	%d15, %d8, 255
 .LVL41:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL42:
 	jnz	%d15, .L22
 .LBB582:
 	.loc 3 366 0
 	mov	%d15, %d8
 .LVL43:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL44:
 .LBB583:
@@ -640,14 +640,14 @@ ActivateTask:
 	.loc 3 365 0
 	and	%d15, %d9, 255
 .LVL70:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL71:
 	jnz	%d15, .L40
 .LBB609:
 	.loc 3 366 0
 	mov	%d15, %d9
 .LVL72:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL73:
 .LBB610:
@@ -832,14 +832,14 @@ ChainTask:
 	.loc 3 365 0
 	and	%d15, %d8, 255
 .LVL91:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL92:
 	jnz	%d15, .L49
 .LBB668:
 	.loc 3 366 0
 	mov	%d15, %d8
 .LVL93:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL94:
 .LBB669:
@@ -1043,11 +1043,11 @@ TerminateTask:
 	.loc 3 365 0
 	and	%d2, %d15, 255
 .LVL120:
-	ge.u	%d2, %d2, 50
+	ge.u	%d2, %d2, 17
 .LVL121:
 	jnz	%d2, .L61
 .LVL122:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL123:
 .LBB717:
@@ -1122,14 +1122,14 @@ Schedule:
 	.loc 3 365 0
 	and	%d15, %d8, 255
 .LVL130:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL131:
 	jnz	%d15, .L64
 .LBB729:
 	.loc 3 366 0
 	mov	%d15, %d8
 .LVL132:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL133:
 .LBB730:
@@ -1277,14 +1277,14 @@ GetResource:
 	.loc 3 365 0
 	and	%d3, %d2, 255
 .LVL153:
-	ge.u	%d3, %d3, 50
+	ge.u	%d3, %d3, 17
 .LVL154:
 	jnz	%d3, .L68
 .LBB749:
 	.loc 3 366 0
 	mov	%d3, %d2
 .LVL155:
-	mov	%d5, 50
+	mov	%d5, 17
 	insert	%d3, %d3, %d5, 0, 8
 .LVL156:
 .LBB750:
@@ -1462,14 +1462,14 @@ ReleaseResource:
 	.loc 3 365 0
 	and	%d2, %d15, 255
 .LVL180:
-	ge.u	%d2, %d2, 50
+	ge.u	%d2, %d2, 17
 .LVL181:
 	jnz	%d2, .L76
 .LBB772:
 	.loc 3 366 0
 	mov	%d2, %d15
 .LVL182:
-	mov	%d3, 50
+	mov	%d3, 17
 	insert	%d2, %d2, %d3, 0, 8
 .LVL183:
 .LBB773:
@@ -1660,14 +1660,14 @@ ShutdownOS:
 	.loc 3 365 0
 	and	%d15, %d2, 255
 .LVL211:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL212:
 	jnz	%d15, .L86
 .LBB795:
 	.loc 3 366 0
 	mov	%d15, %d2
 .LVL213:
-	mov	%d3, 50
+	mov	%d3, 17
 	insert	%d15, %d15, %d3, 0, 8
 .LVL214:
 .LBB796:
@@ -1985,14 +1985,14 @@ WaitEvent:
 	.loc 3 365 0
 	and	%d15, %d8, 255
 .LVL261:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL262:
 	jnz	%d15, .L111
 .LBB819:
 	.loc 3 366 0
 	mov	%d15, %d8
 .LVL263:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL264:
 .LBB820:
@@ -2142,14 +2142,14 @@ SetEvent:
 	.loc 3 365 0
 	and	%d15, %d8, 255
 .LVL281:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL282:
 	jnz	%d15, .L117
 .LBB839:
 	.loc 3 366 0
 	mov	%d15, %d8
 .LVL283:
-	mov	%d2, 50
+	mov	%d2, 17
 	insert	%d15, %d15, %d2, 0, 8
 .LVL284:
 .LBB840:
@@ -2326,14 +2326,14 @@ ClearEvent:
 	.loc 3 365 0
 	and	%d15, %d2, 255
 .LVL306:
-	ge.u	%d15, %d15, 50
+	ge.u	%d15, %d15, 17
 .LVL307:
 	jnz	%d15, .L125
 .LBB860:
 	.loc 3 366 0
 	mov	%d15, %d2
 .LVL308:
-	mov	%d3, 50
+	mov	%d3, 17
 	insert	%d15, %d15, %d3, 0, 8
 .LVL309:
 .LBB861:
