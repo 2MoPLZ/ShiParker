@@ -34017,6 +34017,15 @@ DriveCommand wall_follow_control(double dist_a, double dist_b){
 
     double steering_angle = (0.1 * error + 0.001 * derivative );
 
+
+    if(steering_angle > 026){
+        steering_angle = 0.26;
+    }
+    else if(steering_angle < -0.26){
+        steering_angle = -0.26;
+    }
+
+
     double speed;
     if (fabsf(steering_angle) > 20.0f * (3.14159265359 / 180.0f))
         speed = 0.5f;

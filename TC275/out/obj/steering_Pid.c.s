@@ -98,6 +98,7 @@ get_position:
 .LC2:
 	.string	"dt1: "
 	.global	__gtdf2
+	.global	__ltdf2
 .LC3:
 	.string	"steering_angle: "
 .section .text,"ax",@progbits
@@ -262,15 +263,11 @@ wall_follow_control:
 .LVL40:
 	mov	%e6, %d11, %d10
 	mov	%e4, %d3, %d2
-	.loc 1 66 0
-	imask	%e10, 0, 21, 9
-.LVL41:
-	.loc 1 58 0
 	call	__divdf3
-.LVL42:
+.LVL41:
 	mov	%e4, %d3, %d2
 	call	__truncdfsf2
-.LVL43:
+.LVL42:
 	.loc 1 62 0
 	mov	%e4, %d9, %d8
 	movh	%d7, 16314
@@ -281,37 +278,70 @@ wall_follow_control:
 	st.d	[%a12]0, %e8
 	.loc 1 58 0
 	mov	%d15, %d2
-.LVL44:
+.LVL43:
 	.loc 1 62 0
 	call	__muldf3
-.LVL45:
+.LVL44:
 	mov	%d4, %d15
 	mov	%e8, %d3, %d2
-.LVL46:
+.LVL45:
 	call	__extendsfdf2
-.LVL47:
+.LVL46:
 	movh	%d7, 16208
 	mov	%e4, %d3, %d2
 	movh	%d6, 54002
 	addi	%d7, %d7, 25165
 	addi	%d6, %d6, -22020
 	call	__muldf3
-.LVL48:
+.LVL47:
 	mov	%e4, %d9, %d8
 	mov	%e6, %d3, %d2
 	call	__adddf3
-.LVL49:
+.LVL48:
 	.loc 1 65 0
 	mov	%e4, %d3, %d2
+	mov	%d6, 0
+	movh	%d7, 16438
 	.loc 1 62 0
 	mov	%e8, %d3, %d2
-.LVL50:
+.LVL49:
 	.loc 1 65 0
-	call	__truncdfsf2
+	call	__gtdf2
+.LVL50:
+	jgtz	%d2, .L8
+	.loc 1 68 0
+	movh	%d7, 49105
+	movh	%d6, 2621
+	mov	%e4, %d9, %d8
+	addi	%d7, %d7, -23593
+	addi	%d6, %d6, 28836
+	call	__ltdf2
 .LVL51:
+	jgez	%d2, .L5
+	.loc 1 69 0
+	movh	%d9, 49105
+	j	.L12
+.L8:
+	.loc 1 66 0
+	movh	%d9, 16337
+.L12:
+	movh	%d8, 2621
+.LVL52:
+	addi	%d9, %d9, -23593
+	addi	%d8, %d8, 28836
+.L5:
+.LVL53:
+	.loc 1 74 0
+	mov	%e4, %d9, %d8
+	.loc 1 75 0
+	imask	%e10, 0, 21, 9
+.LVL54:
+	.loc 1 74 0
+	call	__truncdfsf2
+.LVL55:
 	insert	%d4, %d2, 0, 31, 1
 	call	__extendsfdf2
-.LVL52:
+.LVL56:
 	movh	%d7, 16342
 	mov	%e4, %d3, %d2
 	movh	%d6, 19175
@@ -319,34 +349,34 @@ wall_follow_control:
 	addi	%d6, %d6, 17957
 	mov	%e12, %d3, %d2
 	call	__gtdf2
-.LVL53:
-	jgtz	%d2, .L5
-	.loc 1 67 0
+.LVL57:
+	jgtz	%d2, .L7
+	.loc 1 76 0
 	mov	%e4, %d13, %d12
 	movh	%d7, 16326
 	movh	%d6, 19175
 	addi	%d7, %d7, 22296
 	addi	%d6, %d6, 17957
 	call	__gtdf2
-.LVL54:
-	.loc 1 68 0
+.LVL58:
+	.loc 1 77 0
 	imask	%e10, 0, 20, 10
-	.loc 1 67 0
-	jgtz	%d2, .L5
-	.loc 1 70 0
+	.loc 1 76 0
+	jgtz	%d2, .L7
+	.loc 1 79 0
 	imask	%e10, 0, 19, 11
-.L5:
-.LVL55:
-	.loc 1 73 0
+.L7:
+.LVL59:
+	.loc 1 82 0
 	mov	%e4, %d9, %d8
 	movh.a	%a4, hi:.LC3
 	lea	%a4, [%a4] lo:.LC3
 	call	printDouble
-.LVL56:
-	.loc 1 74 0
+.LVL60:
+	.loc 1 83 0
 	st.d	[%a15]0, %e8
 	st.d	[%a15] 8, %e10
-	.loc 1 76 0
+	.loc 1 85 0
 	mov.aa	%a2, %a15
 	ret
 .LFE600:
@@ -2587,7 +2617,7 @@ pid_prev_error:
 	.uleb128 0x23
 	.string	"speed"
 	.byte	0x1
-	.byte	0x40
+	.byte	0x49
 	.uaword	0x14d
 	.byte	0x6
 	.byte	0x5a
@@ -2599,7 +2629,7 @@ pid_prev_error:
 	.uleb128 0x23
 	.string	"cmd"
 	.byte	0x1
-	.byte	0x48
+	.byte	0x51
 	.uaword	0x276
 	.byte	0xc
 	.byte	0x58
@@ -2715,7 +2745,7 @@ pid_prev_error:
 	.uaword	.LVL36
 	.uaword	0x154d
 	.uleb128 0x2f
-	.uaword	.LVL56
+	.uaword	.LVL60
 	.uaword	0x1849
 	.uleb128 0x2e
 	.byte	0x6
@@ -3730,7 +3760,7 @@ pid_prev_error:
 	.byte	0x93
 	.uleb128 0x4
 	.uaword	.LVL36-1-.Ltext0
-	.uaword	.LVL46-.Ltext0
+	.uaword	.LVL45-.Ltext0
 	.uahalf	0x6
 	.byte	0x58
 	.byte	0x93
@@ -3751,7 +3781,7 @@ pid_prev_error:
 	.byte	0x93
 	.uleb128 0x4
 	.uaword	.LVL38-1-.Ltext0
-	.uaword	.LVL41-.Ltext0
+	.uaword	.LVL54-.Ltext0
 	.uahalf	0x6
 	.byte	0x5a
 	.byte	0x93
@@ -3759,31 +3789,22 @@ pid_prev_error:
 	.byte	0x5b
 	.byte	0x93
 	.uleb128 0x4
-	.uaword	.LVL41-.Ltext0
-	.uaword	.LVL42-1-.Ltext0
-	.uahalf	0x6
-	.byte	0x56
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x57
-	.byte	0x93
-	.uleb128 0x4
 	.uaword	0
 	.uaword	0
 .LLST8:
-	.uaword	.LVL44-.Ltext0
-	.uaword	.LVL45-1-.Ltext0
+	.uaword	.LVL43-.Ltext0
+	.uaword	.LVL44-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
-	.uaword	.LVL45-1-.Ltext0
+	.uaword	.LVL44-1-.Ltext0
 	.uaword	.LFE600-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST9:
-	.uaword	.LVL50-.Ltext0
-	.uaword	.LVL51-1-.Ltext0
+	.uaword	.LVL49-.Ltext0
+	.uaword	.LVL50-1-.Ltext0
 	.uahalf	0x6
 	.byte	0x52
 	.byte	0x93
@@ -3791,7 +3812,16 @@ pid_prev_error:
 	.byte	0x53
 	.byte	0x93
 	.uleb128 0x4
-	.uaword	.LVL51-1-.Ltext0
+	.uaword	.LVL50-1-.Ltext0
+	.uaword	.LVL52-.Ltext0
+	.uahalf	0x6
+	.byte	0x58
+	.byte	0x93
+	.uleb128 0x4
+	.byte	0x59
+	.byte	0x93
+	.uleb128 0x4
+	.uaword	.LVL53-.Ltext0
 	.uaword	.LFE600-.Ltext0
 	.uahalf	0x6
 	.byte	0x58

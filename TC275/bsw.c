@@ -262,10 +262,7 @@ int main(void)
     initUltrasonic(&g_Ultrasonic_REAR);
     initMotor();
     initHall();
-    set_motor_power(INDEX_FL,0);
-    set_motor_power(INDEX_FR,0);
-    set_motor_power(INDEX_RL,0);
-    set_motor_power(INDEX_RR,0);
+    
     // motor_run_backward(0);
     // motor_run_backward(1);
     // motor_run_backward(2);

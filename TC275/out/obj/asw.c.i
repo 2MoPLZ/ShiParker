@@ -34008,7 +34008,7 @@ uint16 getFRHallCnt(void);
 void resetFRHallCnt(void);
 # 6 "C:\\project\\SHIPAR~1\\TC275\\asw.c" 2
 # 1 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.h" 1
-# 50 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.h"
+# 52 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.h"
 typedef enum motor_index{
     INDEX_FL = 0,
     INDEX_FR = 1,
@@ -34024,7 +34024,7 @@ void init_pwms(IfxGtm_Tom_Pwm_Driver* drivers[] , IfxGtm_Tom_Pwm_Config* configs
 void motor_run_forward(motor_index_t motor_index);
 void motor_run_backward(motor_index_t motor_index);
 void motor_stop(motor_index_t motor_index);
-void set_motor_power(motor_index_t motor_index, uint32 dutyPercent);
+void set_motor_power(motor_index_t motor_index, double dutyPercent);
 void _setDutyCycle(IfxGtm_Tom_Pwm_Driver* driver , IfxGtm_Tom_Pwm_Config* config, uint32 _dutyCycle);
 # 7 "C:\\project\\SHIPAR~1\\TC275\\asw.c" 2
 
@@ -34032,6 +34032,10 @@ extern volatile uint16 g_FRHallCnt;
 extern volatile uint16 g_FLHallCnt;
 extern volatile uint16 g_RRHallCnt;
 extern volatile uint16 g_RLHallCnt;
+
+
+const double motor_power_normal = 50.0L;
+const double Kp_rad_to_delta_power = 100.0L;
 
 volatile uint16 cnt=0;
 struct ParkingSystemPacket testSendPacket =
@@ -34047,7 +34051,7 @@ struct ParkingSystemPacket testSendPacket =
 };
 
 void FuncTestTask ( void ){
-# 40 "C:\\project\\SHIPAR~1\\TC275\\asw.c"
+# 44 "C:\\project\\SHIPAR~1\\TC275\\asw.c"
     double FrontLeftUltra = getUltrasonic(&g_Ultrasonic_FL);
     double RearLeftUltra = getUltrasonic(&g_Ultrasonic_RL);
     printDouble("FrontLeftUltra",FrontLeftUltra);
@@ -34055,7 +34059,20 @@ void FuncTestTask ( void ){
 
 
     DriveCommand cmd = wall_follow_control(FrontLeftUltra, RearLeftUltra);
-    printfSerial("FRHall: %d FLHall: %d RRHall: %d RLHall: %d",g_FRHallCnt,g_FLHallCnt,g_RRHallCnt,g_RLHallCnt);
+
+
+
+    double delta_p = cmd.steering_angle * Kp_rad_to_delta_power;
+
+    printDouble("power_left : ",motor_power_normal + (delta_p / 2));
+    printDouble("power_right : ",motor_power_normal - (delta_p / 2));
+
+    set_motor_power(INDEX_FL, motor_power_normal + (delta_p / 2));
+    set_motor_power(INDEX_RL, motor_power_normal + (delta_p / 2));
+    set_motor_power(INDEX_FR, motor_power_normal - (delta_p / 2));
+    set_motor_power(INDEX_RR, motor_power_normal - (delta_p / 2));
+
+
 
 }
 
@@ -34085,9 +34102,19 @@ void RLHallISR(void)
 void TimerISR(void)
 {
     static long c = -4;
-    osEE_tc_stm_set_sr0_next_match(1000000U);
-# 86 "C:\\project\\SHIPAR~1\\TC275\\asw.c"
-    ActivateTask((9U));
+
+
+    osEE_tc_stm_set_sr0_next_match(100000U);
+
+
+
+
+
+
+    if(c > -2){
+        ActivateTask((9U));
+    }
+
     cnt++;
 
 

@@ -22,9 +22,11 @@
 
 #define MOTOR_COUNT 4
 
+// 정속
+// 3100
 #define MOTOR_PERIOD 5000
-#define MOTOR_DUTY_MAX 3500
-#define MOTOR_DUTY_MIN 3000
+#define MOTOR_DUTY_MAX 4000
+#define MOTOR_DUTY_MIN 2200
 #define MOTOR_DUTY_DEFAULT 0
 #define MOTOR_DUTY_UNIT ((MOTOR_DUTY_MAX - MOTOR_DUTY_MIN) / 100)
 //모터 출력은 0-100
@@ -62,7 +64,7 @@ void init_pwms(IfxGtm_Tom_Pwm_Driver* drivers[] , IfxGtm_Tom_Pwm_Config* configs
 void motor_run_forward(motor_index_t motor_index);
 void motor_run_backward(motor_index_t motor_index);
 void motor_stop(motor_index_t motor_index);
-void set_motor_power(motor_index_t motor_index, uint32 dutyPercent);
+void set_motor_power(motor_index_t motor_index, double dutyPercent);
 void _setDutyCycle(IfxGtm_Tom_Pwm_Driver* driver , IfxGtm_Tom_Pwm_Config* config, uint32 _dutyCycle);
 
 #endif /* DRIVER_MOTOR_H_ */

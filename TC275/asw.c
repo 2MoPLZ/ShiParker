@@ -10,6 +10,12 @@ extern volatile uint16 g_FLHallCnt;
 extern volatile uint16 g_RRHallCnt;
 extern volatile uint16 g_RLHallCnt;
 
+////////follow the wall용 각도 -> 모터출력 가중치, 0.1라디안 = 5.7296도
+const double motor_power_normal = 50.0L;
+const double Kp_rad_to_delta_power = 120.0L;
+
+///바퀴 둘레 22cm -> 홀센서 값 5
+
 volatile uint16 cnt=0;
 struct ParkingSystemPacket testSendPacket = 
 {
@@ -44,8 +50,21 @@ TASK(TestTask){
     // printDouble("RightUltra",getUltrasonic(&g_Ultrasonic_RIGHT));
     // printDouble("RearUltra",getUltrasonic(&g_Ultrasonic_REAR));
     DriveCommand cmd = wall_follow_control(FrontLeftUltra, RearLeftUltra);
-    printfSerial("FRHall: %d FLHall: %d RRHall: %d RLHall: %d",g_FRHallCnt,g_FLHallCnt,g_RRHallCnt,g_RLHallCnt);
 
+    // //모터 출력 조정
+    // //각도는 double 타입 라디안 값, 왼쪽으로 가야하면 -, 오른쪽으로 가야하면 +
+    double delta_p = cmd.steering_angle * Kp_rad_to_delta_power;
+    // //델타p 양수 -> fl, rl 출력 상승
+    printDouble("power_left : ",motor_power_normal + (delta_p / 2));
+    printDouble("power_right : ",motor_power_normal - (delta_p / 2));
+
+    set_motor_power(INDEX_FL, motor_power_normal + (delta_p / 2));
+    set_motor_power(INDEX_RL, motor_power_normal + (delta_p / 2));
+    set_motor_power(INDEX_FR, motor_power_normal - (delta_p / 2));
+    set_motor_power(INDEX_RR, motor_power_normal - (delta_p / 2));
+
+    // //printfSerial("FRHall: %d FLHall: %d RRHall: %d RLHall: %d",g_FRHallCnt,g_FLHallCnt,g_RRHallCnt,g_RLHallCnt);
+    
 }
 
 ISR2(FRHallISR)
@@ -74,16 +93,19 @@ ISR2(RLHallISR)
 ISR2(TimerISR)
 {
     static long c = -4;
-    osEE_tc_stm_set_sr0_next_match(1000000U); //1초
+    // osEE_tc_stm_set_sr0_next_match(1000000U); //1초
     // osEE_tc_stm_set_sr0_next_match(250000U); //0.25초
-    // osEE_tc_stm_set_sr0_next_match(100000U); //0.1초
+    osEE_tc_stm_set_sr0_next_match(100000U); //0.1초
 
     /************** ONE-TIME-TASK ********************/
 
 
 
     /************** basic-TASK (every 1s) ********************/
-    ActivateTask(TestTask);
+    if(c > -2){
+        ActivateTask(TestTask);
+    }
+    
     cnt++;
     // if(c==0){
     //     startShiParkerApp();
