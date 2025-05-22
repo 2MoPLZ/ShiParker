@@ -149,6 +149,14 @@ CPU test_application {
         ACTIVATION = 1;
     };
 
+    TASK AvoidObstacleTask{
+        PRIORITY = 10;
+        STACK = SHARED;
+        SCHEDULE = FULL;
+        AUTOSTART = FALSE;
+        ACTIVATION = 1;
+    };
+
     COUNTER AppCounter {
       MINCYCLE = 1;
       MAXALLOWEDVALUE = 50;
@@ -163,5 +171,10 @@ CPU test_application {
     ALARM PacketSendAlarm {
       COUNTER = AppCounter;
       ACTION = ACTIVATETASK { TASK = PacketSendTask; };
+    };
+
+    ALARM AvoidObstacleAlarm {
+      COUNTER = AppCounter;
+      ACTION = ACTIVATETASK { TASK = AvoidObstacleTask; };
     };
 };
