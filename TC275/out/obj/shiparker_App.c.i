@@ -23011,6 +23011,7 @@ void asclin3TxISR(void);
 void asclin0RxISR(void);
 void asclin0TxISR(void);
 void TimerISR(void);
+void AppTimerISR(void);
 # 71 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 # 6 "C:\\SHIPAR~1\\TC275\\bsw.h" 2
 
@@ -23303,11 +23304,18 @@ static CAR_COMMAND_TYPE carCommand;
 static struct Position currentPosition;
 static struct Position targetPosition;
 
+void AppTimerISR(void){
+    osEE_tc_stm_set_sr1_next_match(50000U);
+    IncrementCounter((0U));
+}
+
 void startShiParkerApp(void)
 {
     if (g_isAppRunning == (1u))
     {
         printfSerial("restart ShiParker...\n");
+        CancelAlarm((1U));
+        CancelAlarm((0U));
     }
     else{
         printfSerial("start ShiParker...\n");
@@ -23319,12 +23327,13 @@ void startShiParkerApp(void)
     targetPosition.x = -1;
     targetPosition.y = -1;
     carCommand = CAR_COMMAND_STOP;
-    CancelAlarm((0U));
-    SetRelAlarm((0U), 5, 1);
+    SetRelAlarm((0U), 1, 10);
+    SetRelAlarm((1U), 2, 50);
 }
 
 void FuncShiParkerAppTask ( void )
 {
+    printfSerial("app");
     if(g_isAppRunning==(0u))
         TerminateTask();
     switch (carStatus)
@@ -23335,16 +23344,12 @@ void FuncShiParkerAppTask ( void )
         case CAR_COMMAND_FORCESTOP:
 
             carStatus = CAR_STATUS_TERMINATED;
-
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-
-
+            CancelAlarm((1U));
+            SetRelAlarm((1U), 0, 10);
             break;
         case CAR_COMMAND_STOP:
 
@@ -23359,16 +23364,14 @@ void FuncShiParkerAppTask ( void )
         case CAR_COMMAND_FORCESTOP:
 
             carStatus = CAR_STATUS_TERMINATED;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-
             break;
         case CAR_COMMAND_START:
 
             break;
         case CAR_COMMAND_STOP:
 
+            CancelAlarm((1U));
+            SetRelAlarm((1U), 0, 50);
             break;
         default:
             break;
@@ -23380,21 +23383,12 @@ void FuncShiParkerAppTask ( void )
         case CAR_COMMAND_FORCESTOP:
 
             carStatus = CAR_STATUS_TERMINATED;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
             CancelAlarm((1U));
-            SetRelAlarm((1U),10,10);
-
-
+            SetRelAlarm((1U),0,10);
             break;
         case CAR_COMMAND_STOP:
 
@@ -23405,6 +23399,8 @@ void FuncShiParkerAppTask ( void )
         break;
     case CAR_STATUS_TERMINATED:
 
+        printfSerial("Terminate ShiParker...\n");
+        ActivateTask((7U));
         g_isAppRunning = (0u);
         CancelAlarm((1U));
         CancelAlarm((0U));
@@ -23416,19 +23412,12 @@ void FuncShiParkerAppTask ( void )
         case CAR_COMMAND_FORCESTOP:
 
             carStatus = CAR_STATUS_TERMINATED;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
             CancelAlarm((1U));
-            SetRelAlarm((1U),10,100);
+            SetRelAlarm((1U),0,50);
             break;
         case CAR_COMMAND_STOP:
 
@@ -23446,11 +23435,13 @@ void FuncShiParkerAppTask ( void )
 }
 
 void FuncPacketSendTask ( void ){
+    printfSerial("sendpacket");
     makePacket(&carStatusPacket);
     sendPacket(&carStatusPacket);
 }
 
 void makePacket(struct ParkingSystemPacket* dst){
+    dst->start_byte = 0xAA;
     dst->car_status = carStatus;
     dst->car_command = carCommand;
     dst->car_current_position.x = currentPosition.x;
@@ -23478,6 +23469,9 @@ void handleError(ERROR_CODE_TYPE errorCode) {
 
             break;
         case ERROR_CODE_OBSTACLE:
+
+            break;
+        case ERROR_CODE_CONNECTION_LOST:
 
             break;
         default:

@@ -1,6 +1,23 @@
 	.file	"shiparker_App.c"
 .section .text,"ax",@progbits
 .Ltext0:
+	.align 1
+	.global	AppTimerISR
+	.type	AppTimerISR, @function
+AppTimerISR:
+.LFB574:
+	.file 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.c"
+	.loc 1 10 0
+	.loc 1 11 0
+	mov.u	%d4, 50000
+	call	osEE_tc_stm_set_sr1_next_match
+.LVL0:
+	.loc 1 12 0
+	mov	%d4, 0
+	j	IncrementCounter
+.LVL1:
+.LFE574:
+	.size	AppTimerISR, .-AppTimerISR
 .section .rodata,"a",@progbits
 .LC0:
 	.string	"restart ShiParker...\n"
@@ -11,85 +28,102 @@
 	.global	startShiParkerApp
 	.type	startShiParkerApp, @function
 startShiParkerApp:
-.LFB574:
-	.file 1 "C:\\SHIPAR~1\\TC275\\shiparker_App.c"
-	.loc 1 11 0
-	.loc 1 12 0
+.LFB575:
+	.loc 1 16 0
+	.loc 1 17 0
 	movh.a	%a15, hi:g_isAppRunning
 	ld.bu	%d15, [%a15] lo:g_isAppRunning
-	.loc 1 14 0
+	jne	%d15, 1, .L3
+	.loc 1 19 0
 	movh.a	%a4, hi:.LC0
 	lea	%a4, [%a4] lo:.LC0
-	.loc 1 12 0
-	jeq	%d15, 1, .L4
-	.loc 1 17 0
+	call	printfSerial
+.LVL2:
+	.loc 1 20 0
+	mov	%d4, 1
+	call	CancelAlarm
+.LVL3:
+	.loc 1 21 0
+	mov	%d4, 0
+	call	CancelAlarm
+.LVL4:
+	j	.L4
+.L3:
+	.loc 1 24 0
 	movh.a	%a4, hi:.LC1
 	lea	%a4, [%a4] lo:.LC1
-.L4:
 	call	printfSerial
-.LVL0:
-	.loc 1 19 0
+.LVL5:
+.L4:
+	.loc 1 26 0
 	mov	%d15, 1
 	st.b	[%a15] lo:g_isAppRunning, %d15
-	.loc 1 20 0
+	.loc 1 27 0
 	mov	%d15, 0
 	movh.a	%a15, hi:carStatus
-	.loc 1 21 0
+	.loc 1 28 0
 	mov	%e2, 0
-	.loc 1 20 0
+	.loc 1 27 0
 	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 21 0
+	.loc 1 28 0
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	st.d	[%a15]0, %e2
-	.loc 1 22 0
+	.loc 1 29 0
 	st.d	[%a15] 8, %e2
-	.loc 1 23 0
+	.loc 1 30 0
 	movh.a	%a15, hi:targetPosition
 	lea	%a15, [%a15] lo:targetPosition
 	mov	%d2, 0
 	movh	%d3, 49136
 	st.d	[%a15]0, %e2
-	.loc 1 24 0
+	.loc 1 31 0
 	st.d	[%a15] 8, %e2
-	.loc 1 26 0
+	.loc 1 33 0
 	mov	%d4, 0
-	.loc 1 25 0
+	mov	%d5, 1
+	mov	%d6, 10
+	.loc 1 32 0
 	mov	%d15, 2
 	movh.a	%a15, hi:carCommand
 	st.b	[%a15] lo:carCommand, %d15
-	.loc 1 26 0
-	call	CancelAlarm
-.LVL1:
-	.loc 1 27 0
-	mov	%d4, 0
-	mov	%d5, 5
-	mov	%d6, 1
+	.loc 1 33 0
+	call	SetRelAlarm
+.LVL6:
+	.loc 1 34 0
+	mov	%d4, 1
+	mov	%d5, 2
+	mov	%d6, 50
 	j	SetRelAlarm
-.LVL2:
-.LFE574:
+.LVL7:
+.LFE575:
 	.size	startShiParkerApp, .-startShiParkerApp
 	.align 1
 	.global	makePacket
 	.type	makePacket, @function
 makePacket:
-.LFB577:
-	.loc 1 157 0
-.LVL3:
-	.loc 1 158 0
+.LFB578:
+	.loc 1 146 0
+.LVL8:
+	.loc 1 147 0
+	mov	%d15, -86
+	.loc 1 148 0
 	movh.a	%a15, hi:carStatus
+	.loc 1 147 0
+	st.b	[%a4]0, %d15
+	.loc 1 148 0
 	ld.bu	%d15, [%a15] lo:carStatus
-	.loc 1 159 0
+	.loc 1 149 0
 	movh.a	%a15, hi:carCommand
-	.loc 1 158 0
+	.loc 1 148 0
 	st.b	[%a4] 1, %d15
-	.loc 1 159 0
+	.loc 1 149 0
 	ld.bu	%d15, [%a15] lo:carCommand
-	.loc 1 160 0
+	.loc 1 150 0
 	movh.a	%a2, hi:currentPosition
-	.loc 1 159 0
+	.loc 1 149 0
 	st.b	[%a4] 34, %d15
-	.loc 1 160 0
+	.loc 1 150 0
 	ld.w	%d15, [%a2] lo:currentPosition
 	lea	%a15, [%a2] lo:currentPosition
 	extr.u	%d2, %d15, 8, 8
@@ -106,11 +140,11 @@ makePacket:
 	extr.u	%d2, %d15, 16, 8
 	sh	%d15, %d15, -24
 	st.b	[%a4] 9, %d15
-	.loc 1 161 0
+	.loc 1 151 0
 	ld.w	%d15, [%a15] 8
-	.loc 1 160 0
+	.loc 1 150 0
 	st.b	[%a4] 8, %d2
-	.loc 1 161 0
+	.loc 1 151 0
 	extr.u	%d2, %d15, 8, 8
 	st.b	[%a4] 10, %d15
 	st.b	[%a4] 11, %d2
@@ -122,17 +156,17 @@ makePacket:
 	extr.u	%d2, %d15, 8, 8
 	st.b	[%a4] 14, %d15
 	st.b	[%a4] 15, %d2
-	.loc 1 162 0
+	.loc 1 152 0
 	movh.a	%a2, hi:targetPosition
-	.loc 1 161 0
+	.loc 1 151 0
 	extr.u	%d2, %d15, 16, 8
 	sh	%d15, %d15, -24
 	st.b	[%a4] 17, %d15
-	.loc 1 162 0
+	.loc 1 152 0
 	ld.w	%d15, [%a2] lo:targetPosition
-	.loc 1 161 0
+	.loc 1 151 0
 	st.b	[%a4] 16, %d2
-	.loc 1 162 0
+	.loc 1 152 0
 	extr.u	%d2, %d15, 8, 8
 	lea	%a15, [%a2] lo:targetPosition
 	st.b	[%a4] 18, %d15
@@ -149,7 +183,7 @@ makePacket:
 	sh	%d15, %d15, -24
 	st.b	[%a4] 24, %d2
 	st.b	[%a4] 25, %d15
-	.loc 1 163 0
+	.loc 1 153 0
 	ld.w	%d15, [%a15] 8
 	extr.u	%d2, %d15, 8, 8
 	st.b	[%a4] 26, %d15
@@ -167,50 +201,59 @@ makePacket:
 	st.b	[%a4] 32, %d2
 	st.b	[%a4] 33, %d15
 	ret
-.LFE577:
+.LFE578:
 	.size	makePacket, .-makePacket
+.section .rodata,"a",@progbits
+.LC2:
+	.string	"sendpacket"
+.section .text,"ax",@progbits
 	.align 1
 	.global	FuncPacketSendTask
 	.type	FuncPacketSendTask, @function
 FuncPacketSendTask:
-.LFB576:
-	.loc 1 152 0
-	.loc 1 153 0
+.LFB577:
+	.loc 1 140 0
+	.loc 1 141 0
+	movh.a	%a4, hi:.LC2
+	lea	%a4, [%a4] lo:.LC2
+	call	printfSerial
+.LVL9:
+	.loc 1 142 0
 	movh.a	%a15, hi:carStatusPacket
 	lea	%a15, [%a15] lo:carStatusPacket
 	mov.aa	%a4, %a15
 	call	makePacket
-.LVL4:
-	.loc 1 154 0
+.LVL10:
+	.loc 1 143 0
 	mov.aa	%a4, %a15
 	j	sendPacket
-.LVL5:
-.LFE576:
+.LVL11:
+.LFE577:
 	.size	FuncPacketSendTask, .-FuncPacketSendTask
 	.align 1
 	.global	updateStatus
 	.type	updateStatus, @function
 updateStatus:
-.LFB578:
-	.loc 1 166 0
-.LVL6:
-	.loc 1 167 0
+.LFB579:
+	.loc 1 156 0
+.LVL12:
+	.loc 1 157 0
 	ld.bu	%d15, [%a4] 1
 	movh.a	%a15, hi:carStatus
-	.loc 1 169 0
+	.loc 1 159 0
 	ld.bu	%d5, [%a4] 3
-	.loc 1 167 0
+	.loc 1 157 0
 	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 169 0
+	.loc 1 159 0
 	ld.bu	%d2, [%a4] 2
-	.loc 1 168 0
+	.loc 1 158 0
 	ld.bu	%d15, [%a4] 34
 	movh.a	%a15, hi:carCommand
-	.loc 1 169 0
+	.loc 1 159 0
 	sh	%d5, %d5, 8
-	.loc 1 168 0
+	.loc 1 158 0
 	st.b	[%a15] lo:carCommand, %d15
-	.loc 1 169 0
+	.loc 1 159 0
 	or	%d15, %d5, %d2
 	ld.bu	%d5, [%a4] 4
 	ld.bu	%d3, [%a4] 6
@@ -231,7 +274,7 @@ updateStatus:
 	or	%d3, %d4, %d15
 	lea	%a15, [%a15] lo:currentPosition
 	st.d	[%a15]0, %e2
-	.loc 1 170 0
+	.loc 1 160 0
 	ld.bu	%d5, [%a4] 11
 	ld.bu	%d2, [%a4] 10
 	sh	%d5, %d5, 8
@@ -253,7 +296,7 @@ updateStatus:
 	or	%d2, %d6, %d5
 	or	%d3, %d4, %d15
 	st.d	[%a15] 8, %e2
-	.loc 1 171 0
+	.loc 1 161 0
 	ld.bu	%d5, [%a4] 19
 	ld.bu	%d2, [%a4] 18
 	sh	%d5, %d5, 8
@@ -277,7 +320,7 @@ updateStatus:
 	or	%d3, %d4, %d15
 	lea	%a15, [%a15] lo:targetPosition
 	st.d	[%a15]0, %e2
-	.loc 1 172 0
+	.loc 1 162 0
 	ld.bu	%d5, [%a4] 27
 	ld.bu	%d2, [%a4] 26
 	sh	%d5, %d5, 8
@@ -300,72 +343,85 @@ updateStatus:
 	or	%d3, %d4, %d15
 	st.d	[%a15] 8, %e2
 	ret
-.LFE578:
+.LFE579:
 	.size	updateStatus, .-updateStatus
 .section .rodata,"a",@progbits
-.LC2:
-	.string	"ERROR: %s (%d)\n"
 .LC3:
+	.string	"ERROR: %s (%d)\n"
+.LC4:
 	.string	"ERROR: Unknown error code (%d).\n"
 .section .text,"ax",@progbits
 	.align 1
 	.global	handleError
 	.type	handleError, @function
 handleError:
-.LFB579:
-	.loc 1 175 0
-.LVL7:
-	.loc 1 176 0
+.LFB580:
+	.loc 1 165 0
+.LVL13:
+	.loc 1 166 0
 	mov	%d15, 4
 	movh.a	%a15, hi:carStatus
 	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 177 0
+	.loc 1 167 0
 	ge.u	%d15, %d4, 16
-	.loc 1 175 0
+	.loc 1 165 0
 	sub.a	%SP, 8
 .LCFI0:
-	.loc 1 177 0
+	.loc 1 167 0
 	jnz	%d15, .L10
-.LVL8:
+.LVL14:
 .LBB4:
 .LBB5:
-	.loc 1 178 0
+	.loc 1 168 0
 	movh.a	%a15, hi:errorMessages
 	lea	%a15, [%a15] lo:errorMessages
 	addsc.a	%a15, %a15, %d4, 2
-	movh.a	%a4, hi:.LC2
+	movh.a	%a4, hi:.LC3
 	ld.w	%d15, [%a15]0
 	st.w	[%SP] 4, %d4
 	st.w	[%SP]0, %d15
-	lea	%a4, [%a4] lo:.LC2
+	lea	%a4, [%a4] lo:.LC3
 	j	printfSerial
-.LVL9:
+.LVL15:
 .L10:
 .LBE5:
 .LBE4:
-	.loc 1 192 0
-	movh.a	%a4, hi:.LC3
+	.loc 1 185 0
+	movh.a	%a4, hi:.LC4
 	st.w	[%SP]0, %d4
-	lea	%a4, [%a4] lo:.LC3
+	lea	%a4, [%a4] lo:.LC4
 	j	printfSerial
-.LVL10:
-.LFE579:
+.LVL16:
+.LFE580:
 	.size	handleError, .-handleError
+.section .rodata,"a",@progbits
+.LC5:
+	.string	"app"
+.LC6:
+	.string	"Terminate ShiParker...\n"
+.section .text,"ax",@progbits
 	.align 1
 	.global	FuncShiParkerAppTask
 	.type	FuncShiParkerAppTask, @function
 FuncShiParkerAppTask:
-.LFB575:
-	.loc 1 31 0
-	.loc 1 32 0
+.LFB576:
+	.loc 1 38 0
+	.loc 1 39 0
+	movh.a	%a4, hi:.LC5
+	lea	%a4, [%a4] lo:.LC5
+	.loc 1 40 0
 	movh.a	%a12, hi:g_isAppRunning
+	.loc 1 39 0
+	call	printfSerial
+.LVL17:
+	.loc 1 40 0
 	ld.bu	%d15, [%a12] lo:g_isAppRunning
 	jnz	%d15, .L13
-	.loc 1 33 0
+	.loc 1 41 0
 	call	TerminateTask
-.LVL11:
+.LVL18:
 .L13:
-	.loc 1 34 0
+	.loc 1 42 0
 	movh.a	%a15, hi:carStatus
 	ld.bu	%d15, [%a15] lo:carStatus
 	jge.u	%d15, 5, .L14
@@ -387,135 +443,97 @@ FuncShiParkerAppTask:
 	.code32
 	j	.L20
 .L15:
-	.loc 1 37 0
+	.loc 1 45 0
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L22
-	jeq	%d15, 1, .L29
-	ret
-.L22:
-	.loc 1 41 0
-	mov	%d15, 3
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 43 0
+	jz	%d15, .L28
+	jeq	%d15, 1, .L27
 	ret
 .L17:
-	.loc 1 61 0
-	movh.a	%a2, hi:carCommand
-	ld.bu	%d15, [%a2] lo:carCommand
-	jnz	%d15, .L12
-.L30:
 	.loc 1 65 0
-	mov	%d15, 3
-.L29:
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 66 0
-	movh.a	%a15, hi:carStatusPacket
-	lea	%a15, [%a15] lo:carStatusPacket
-	.loc 1 67 0
-	mov.aa	%a4, %a15
-	.loc 1 66 0
-	st.b	[%a15] 1, %d15
-	.loc 1 67 0
-	call	makePacket
-.LVL12:
-	.loc 1 68 0
-	mov.aa	%a4, %a15
-	j	sendPacket
-.LVL13:
-.L18:
-	.loc 1 82 0
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L30
-	jeq	%d15, 1, .L26
+	jz	%d15, .L28
+	jeq	%d15, 2, .L25
 	ret
-.L26:
-	.loc 1 94 0
+.L29:
+	.loc 1 121 0
 	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 95 0
-	movh.a	%a15, hi:carStatusPacket
-	lea	%a15, [%a15] lo:carStatusPacket
-	.loc 1 96 0
-	mov.aa	%a4, %a15
-	.loc 1 95 0
-	st.b	[%a15] 1, %d15
-	.loc 1 96 0
-	call	makePacket
-.LVL14:
-	.loc 1 97 0
-	mov.aa	%a4, %a15
-	call	sendPacket
-.LVL15:
-	.loc 1 98 0
+.L25:
+	.loc 1 76 0
 	mov	%d4, 1
 	call	CancelAlarm
-.LVL16:
-	.loc 1 99 0
-	mov	%d5, 10
+.LVL19:
+	.loc 1 77 0
+	mov	%e4, 1
+	mov	%d6, 50
+.L30:
+	j	SetRelAlarm
+.LVL20:
+.L18:
+	.loc 1 84 0
+	movh.a	%a2, hi:carCommand
+	ld.bu	%d15, [%a2] lo:carCommand
+	jz	%d15, .L28
+	jeq	%d15, 1, .L27
+	ret
+.L27:
+	.loc 1 93 0
 	mov	%d4, 1
-	mov	%d6, %d5
-	j	.L31
+	.loc 1 92 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 93 0
+	call	CancelAlarm
+.LVL21:
+	.loc 1 94 0
+	mov	%e4, 1
+	mov	%d6, 10
+	j	.L30
 .L19:
-	.loc 1 112 0
+	.loc 1 105 0
+	movh.a	%a4, hi:.LC6
+	lea	%a4, [%a4] lo:.LC6
+	call	printfSerial
+.LVL22:
+	.loc 1 106 0
+	mov	%d4, 7
+	call	ActivateTask
+.LVL23:
+	.loc 1 107 0
 	mov	%d15, 0
-	.loc 1 113 0
+	.loc 1 108 0
 	mov	%d4, 1
-	.loc 1 112 0
+	.loc 1 107 0
 	st.b	[%a12] lo:g_isAppRunning, %d15
-	.loc 1 113 0
+	.loc 1 108 0
 	call	CancelAlarm
-.LVL17:
-	.loc 1 114 0
+.LVL24:
+	.loc 1 109 0
 	mov	%d4, 0
 	call	CancelAlarm
-.LVL18:
-	.loc 1 115 0
+.LVL25:
+	.loc 1 110 0
 	j	TerminateTask
-.LVL19:
+.LVL26:
 .L20:
-	.loc 1 118 0
+	.loc 1 113 0
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L30
-	jeq	%d15, 1, .L28
+	jz	%d15, .L28
+	jeq	%d15, 1, .L29
 	ret
 .L28:
-	.loc 1 130 0
+	.loc 1 117 0
+	mov	%d15, 3
 	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 131 0
-	movh.a	%a15, hi:carStatusPacket
-	lea	%a15, [%a15] lo:carStatusPacket
-	.loc 1 132 0
-	mov.aa	%a4, %a15
-	.loc 1 131 0
-	st.b	[%a15] 1, %d15
-	.loc 1 132 0
-	call	makePacket
-.LVL20:
-	.loc 1 133 0
-	mov.aa	%a4, %a15
-	call	sendPacket
-.LVL21:
-	.loc 1 134 0
-	mov	%d4, 1
-	call	CancelAlarm
-.LVL22:
-	.loc 1 135 0
-	mov	%d4, 1
-	mov	%d5, 10
-	mov	%d6, 100
-.L31:
-	j	SetRelAlarm
-.LVL23:
+	.loc 1 118 0
+	ret
 .L14:
-	.loc 1 147 0
+	.loc 1 135 0
 	mov	%d4, 3
 	j	handleError
-.LVL24:
-.L12:
-	ret
-.LFE575:
+.LVL27:
+.LFE576:
 	.size	FuncShiParkerAppTask, .-FuncShiParkerAppTask
 	.local	targetPosition
 .section .bss,"aw",@nobits
@@ -554,45 +572,42 @@ carStatusPacket:
 g_isAppRunning:
 	.zero	1
 .section .rodata,"a",@progbits
-.LC4:
-	.string	"User Control occured."
-.LC5:
-	.string	"Obstacle detected."
-.LC6:
-	.string	"Connection Lost"
 .LC7:
-	.string	"Undefined Status"
+	.string	"User Control occured."
 .LC8:
-	.string	"Hall_FL Error"
+	.string	"Obstacle detected."
 .LC9:
-	.string	"Hall_FR Error"
+	.string	"Connection Lost"
 .LC10:
-	.string	"Hall_RL Error"
+	.string	"Undefined Status"
 .LC11:
-	.string	"Hall_RR Error"
+	.string	"Hall_FL Error"
 .LC12:
-	.string	"ULTRASONIC_FL Error"
+	.string	"Hall_FR Error"
 .LC13:
-	.string	"ULTRASONIC_F Error"
+	.string	"Hall_RL Error"
 .LC14:
-	.string	"ULTRASONIC_FR Error"
+	.string	"Hall_RR Error"
 .LC15:
-	.string	"ULTRASONIC_SL Error"
+	.string	"ULTRASONIC_FL Error"
 .LC16:
-	.string	"ULTRASONIC_SR Error"
+	.string	"ULTRASONIC_F Error"
 .LC17:
-	.string	"ULTRASONIC_RL Error"
+	.string	"ULTRASONIC_FR Error"
 .LC18:
-	.string	"ULTRASONIC_R Error"
+	.string	"ULTRASONIC_SL Error"
 .LC19:
+	.string	"ULTRASONIC_SR Error"
+.LC20:
+	.string	"ULTRASONIC_RL Error"
+.LC21:
+	.string	"ULTRASONIC_R Error"
+.LC22:
 	.string	"ULTRASONIC_RR Error"
 	.align 2
 	.type	errorMessages, @object
 	.size	errorMessages, 64
 errorMessages:
-	.word	.LC4
-	.word	.LC5
-	.word	.LC6
 	.word	.LC7
 	.word	.LC8
 	.word	.LC9
@@ -606,6 +621,9 @@ errorMessages:
 	.word	.LC17
 	.word	.LC18
 	.word	.LC19
+	.word	.LC20
+	.word	.LC21
+	.word	.LC22
 .section .debug_frame,"",@progbits
 .Lframe0:
 	.uaword	.LECIE0-.LSCIE0
@@ -633,24 +651,24 @@ errorMessages:
 	.uaword	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.uaword	.Lframe0
-	.uaword	.LFB577
-	.uaword	.LFE577-.LFB577
+	.uaword	.LFB575
+	.uaword	.LFE575-.LFB575
 	.align 2
 .LEFDE2:
 .LSFDE4:
 	.uaword	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.uaword	.Lframe0
-	.uaword	.LFB576
-	.uaword	.LFE576-.LFB576
+	.uaword	.LFB578
+	.uaword	.LFE578-.LFB578
 	.align 2
 .LEFDE4:
 .LSFDE6:
 	.uaword	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.uaword	.Lframe0
-	.uaword	.LFB578
-	.uaword	.LFE578-.LFB578
+	.uaword	.LFB577
+	.uaword	.LFE577-.LFB577
 	.align 2
 .LEFDE6:
 .LSFDE8:
@@ -659,20 +677,28 @@ errorMessages:
 	.uaword	.Lframe0
 	.uaword	.LFB579
 	.uaword	.LFE579-.LFB579
-	.byte	0x4
-	.uaword	.LCFI0-.LFB579
-	.byte	0xe
-	.uleb128 0x8
 	.align 2
 .LEFDE8:
 .LSFDE10:
 	.uaword	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.uaword	.Lframe0
-	.uaword	.LFB575
-	.uaword	.LFE575-.LFB575
+	.uaword	.LFB580
+	.uaword	.LFE580-.LFB580
+	.byte	0x4
+	.uaword	.LCFI0-.LFB580
+	.byte	0xe
+	.uleb128 0x8
 	.align 2
 .LEFDE10:
+.LSFDE12:
+	.uaword	.LEFDE12-.LASFDE12
+.LASFDE12:
+	.uaword	.Lframe0
+	.uaword	.LFB576
+	.uaword	.LFE576-.LFB576
+	.align 2
+.LEFDE12:
 .section .text,"ax",@progbits
 .Letext0:
 	.file 2 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
@@ -683,12 +709,13 @@ errorMessages:
 	.file 7 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 	.file 8 "C:\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
 	.file 9 "C:\\SHIPAR~1\\TC275\\shiparker_App.h"
-	.file 10 "C:\\SHIPAR~1\\TC275\\bsw.h"
-	.file 11 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
-	.file 12 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
+	.file 10 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
+	.file 11 "C:\\SHIPAR~1\\TC275\\bsw.h"
+	.file 12 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+	.file 13 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0xd7a
+	.uaword	0xe8d
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -893,6 +920,16 @@ errorMessages:
 	.byte	0x6
 	.byte	0x5b
 	.uaword	0x2df
+	.uleb128 0x3
+	.string	"TaskType"
+	.byte	0x7
+	.byte	0x78
+	.uaword	0x3ae
+	.uleb128 0xc
+	.string	"CounterType"
+	.byte	0x7
+	.uahalf	0x18f
+	.uaword	0x3ae
 	.uleb128 0xc
 	.string	"TickType"
 	.byte	0x7
@@ -907,7 +944,7 @@ errorMessages:
 	.byte	0x1
 	.byte	0x7
 	.uahalf	0x2b1
-	.uaword	0x604
+	.uaword	0x628
 	.uleb128 0xa
 	.string	"E_OK"
 	.sleb128 0
@@ -1000,18 +1037,18 @@ errorMessages:
 	.string	"OsEE_status_type"
 	.byte	0x7
 	.uahalf	0x2d4
-	.uaword	0x3e1
+	.uaword	0x405
 	.uleb128 0xc
 	.string	"StatusType"
 	.byte	0x7
 	.uahalf	0x2d9
-	.uaword	0x604
+	.uaword	0x628
 	.uleb128 0xe
 	.string	"CAR_STATUS_TYPE_T"
 	.byte	0x1
 	.byte	0x9
 	.byte	0x23
-	.uaword	0x6de
+	.uaword	0x702
 	.uleb128 0xa
 	.string	"CAR_STATUS_READY"
 	.sleb128 0
@@ -1038,13 +1075,13 @@ errorMessages:
 	.string	"CAR_STATUS_TYPE"
 	.byte	0x9
 	.byte	0x2b
-	.uaword	0x630
+	.uaword	0x654
 	.uleb128 0xe
 	.string	"CAR_COMMAND_TYPE_T"
 	.byte	0x1
 	.byte	0x9
 	.byte	0x2c
-	.uaword	0x780
+	.uaword	0x7a4
 	.uleb128 0xa
 	.string	"CAR_COMMAND_FORCESTOP"
 	.sleb128 0
@@ -1065,13 +1102,13 @@ errorMessages:
 	.string	"CAR_COMMAND_TYPE"
 	.byte	0x9
 	.byte	0x32
-	.uaword	0x6f5
+	.uaword	0x719
 	.uleb128 0xe
 	.string	"ERROR_CODE_TYPE_T"
 	.byte	0x1
 	.byte	0x9
 	.byte	0x33
-	.uaword	0x8d8
+	.uaword	0x8fc
 	.uleb128 0xa
 	.string	"ERROR_CODE_USER_CONTROL"
 	.sleb128 0
@@ -1125,13 +1162,13 @@ errorMessages:
 	.string	"ERROR_CODE_TYPE"
 	.byte	0x9
 	.byte	0x44
-	.uaword	0x798
+	.uaword	0x7bc
 	.uleb128 0xb
 	.string	"Position"
 	.byte	0x10
 	.byte	0x9
 	.byte	0x45
-	.uaword	0x915
+	.uaword	0x939
 	.uleb128 0x8
 	.string	"x"
 	.byte	0x9
@@ -1149,19 +1186,19 @@ errorMessages:
 	.byte	0x1
 	.string	"handleError"
 	.byte	0x1
-	.byte	0xaf
+	.byte	0xa5
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x93d
+	.uaword	0x961
 	.uleb128 0x10
 	.string	"errorCode"
 	.byte	0x1
-	.byte	0xaf
-	.uaword	0x8d8
+	.byte	0xa5
+	.uaword	0x8fc
 	.byte	0
 	.uleb128 0x11
 	.byte	0x1
-	.string	"startShiParkerApp"
+	.string	"AppTimerISR"
 	.byte	0x1
 	.byte	0xa
 	.byte	0x1
@@ -1170,35 +1207,23 @@ errorMessages:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x99a
+	.uaword	0x9a7
 	.uleb128 0x12
 	.uaword	.LVL0
-	.uaword	0xcdf
+	.uaword	0xd7e
+	.uaword	0x996
 	.uleb128 0x13
-	.uaword	.LVL1
-	.uaword	0xcfd
-	.uaword	0x97f
-	.uleb128 0x14
 	.byte	0x1
 	.byte	0x54
-	.byte	0x1
-	.byte	0x30
+	.byte	0x3
+	.byte	0xa
+	.uahalf	0xc350
 	.byte	0
-	.uleb128 0x15
-	.uaword	.LVL2
-	.byte	0x1
-	.uaword	0xd1e
 	.uleb128 0x14
+	.uaword	.LVL1
 	.byte	0x1
-	.byte	0x56
-	.byte	0x1
-	.byte	0x31
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x55
-	.byte	0x1
-	.byte	0x35
-	.uleb128 0x14
+	.uaword	0xdae
+	.uleb128 0x13
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
@@ -1207,21 +1232,117 @@ errorMessages:
 	.byte	0
 	.uleb128 0x11
 	.byte	0x1
-	.string	"makePacket"
+	.string	"startShiParkerApp"
 	.byte	0x1
-	.byte	0x9d
+	.byte	0xf
 	.byte	0x1
-	.uaword	.LFB577
-	.uaword	.LFE577
+	.uaword	.LFB575
+	.uaword	.LFE575
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x9c7
-	.uleb128 0x16
+	.uaword	0xa5a
+	.uleb128 0x12
+	.uaword	.LVL2
+	.uaword	0xdd4
+	.uaword	0x9e4
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x64
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC0
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL3
+	.uaword	0xdf2
+	.uaword	0x9f7
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL4
+	.uaword	0xdf2
+	.uaword	0xa0a
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL5
+	.uaword	0xdd4
+	.uaword	0xa21
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x64
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC1
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL6
+	.uaword	0xe13
+	.uaword	0xa3e
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x56
+	.byte	0x1
+	.byte	0x3a
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x55
+	.byte	0x1
+	.byte	0x31
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x14
+	.uaword	.LVL7
+	.byte	0x1
+	.uaword	0xe13
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x56
+	.byte	0x2
+	.byte	0x8
+	.byte	0x32
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x55
+	.byte	0x1
+	.byte	0x32
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.byte	0x1
+	.string	"makePacket"
+	.byte	0x1
+	.byte	0x92
+	.byte	0x1
+	.uaword	.LFB578
+	.uaword	.LFE578
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0xa87
+	.uleb128 0x15
 	.string	"dst"
 	.byte	0x1
-	.byte	0x9d
-	.uaword	0x9c7
+	.byte	0x92
+	.uaword	0xa87
 	.byte	0x1
 	.byte	0x64
 	.byte	0
@@ -1232,30 +1353,41 @@ errorMessages:
 	.byte	0x1
 	.string	"FuncPacketSendTask"
 	.byte	0x1
-	.byte	0x98
+	.byte	0x8c
 	.byte	0x1
-	.uaword	.LFB576
-	.uaword	.LFE576
+	.uaword	.LFB577
+	.uaword	.LFE577
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0xa1a
+	.uaword	0xaf1
+	.uleb128 0x12
+	.uaword	.LVL9
+	.uaword	0xdd4
+	.uaword	0xacb
 	.uleb128 0x13
-	.uaword	.LVL4
-	.uaword	0x99a
-	.uaword	0xa08
-	.uleb128 0x14
+	.byte	0x1
+	.byte	0x64
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC2
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL10
+	.uaword	0xa5a
+	.uaword	0xadf
+	.uleb128 0x13
 	.byte	0x1
 	.byte	0x64
 	.byte	0x2
 	.byte	0x8f
 	.sleb128 0
 	.byte	0
-	.uleb128 0x15
-	.uaword	.LVL5
-	.byte	0x1
-	.uaword	0xd49
 	.uleb128 0x14
+	.uaword	.LVL11
+	.byte	0x1
+	.uaword	0xe3e
+	.uleb128 0x13
 	.byte	0x1
 	.byte	0x64
 	.byte	0x2
@@ -1267,58 +1399,58 @@ errorMessages:
 	.byte	0x1
 	.string	"updateStatus"
 	.byte	0x1
-	.byte	0xa5
+	.byte	0x9b
 	.byte	0x1
-	.uaword	.LFB578
-	.uaword	.LFE578
-	.byte	0x1
-	.byte	0x9c
-	.byte	0x1
-	.uaword	0xa4c
-	.uleb128 0x16
-	.string	"packet"
-	.byte	0x1
-	.byte	0xa5
-	.uaword	0xa4c
-	.byte	0x1
-	.byte	0x64
-	.byte	0
-	.uleb128 0x4
-	.byte	0x4
-	.uaword	0xa52
-	.uleb128 0x5
-	.uaword	0x312
-	.uleb128 0x17
-	.uaword	0x915
 	.uaword	.LFB579
 	.uaword	.LFE579
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0xabf
-	.uleb128 0x18
-	.uaword	0x92b
+	.uaword	0xb23
+	.uleb128 0x15
+	.string	"packet"
+	.byte	0x1
+	.byte	0x9b
+	.uaword	0xb23
+	.byte	0x1
+	.byte	0x64
+	.byte	0
+	.uleb128 0x4
+	.byte	0x4
+	.uaword	0xb29
+	.uleb128 0x5
+	.uaword	0x312
+	.uleb128 0x16
+	.uaword	0x939
+	.uaword	.LFB580
+	.uaword	.LFE580
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0xb96
+	.uleb128 0x17
+	.uaword	0x94f
 	.uaword	.LLST0
-	.uleb128 0x19
+	.uleb128 0x18
 	.uaword	.LBB4
 	.uaword	.LBE4
-	.uaword	0xa8b
-	.uleb128 0x18
-	.uaword	0x92b
+	.uaword	0xb62
+	.uleb128 0x17
+	.uaword	0x94f
 	.uaword	.LLST1
 	.byte	0
-	.uleb128 0x1a
-	.uaword	.LVL9
+	.uleb128 0x19
+	.uaword	.LVL15
 	.byte	0x1
-	.uaword	0xcdf
-	.uaword	0xaaa
-	.uleb128 0x14
+	.uaword	0xdd4
+	.uaword	0xb81
+	.uleb128 0x13
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
-	.uaword	.LC2
-	.uleb128 0x14
+	.uaword	.LC3
+	.uleb128 0x13
 	.byte	0x2
 	.byte	0x8a
 	.sleb128 0
@@ -1326,153 +1458,118 @@ errorMessages:
 	.byte	0x7f
 	.sleb128 0
 	.byte	0
-	.uleb128 0x15
-	.uaword	.LVL10
-	.byte	0x1
-	.uaword	0xcdf
 	.uleb128 0x14
+	.uaword	.LVL16
+	.byte	0x1
+	.uaword	0xdd4
+	.uleb128 0x13
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
-	.uaword	.LC3
+	.uaword	.LC4
 	.byte	0
 	.byte	0
 	.uleb128 0x11
 	.byte	0x1
 	.string	"FuncShiParkerAppTask"
 	.byte	0x1
-	.byte	0x1e
+	.byte	0x25
 	.byte	0x1
-	.uaword	.LFB575
-	.uaword	.LFE575
+	.uaword	.LFB576
+	.uaword	.LFE576
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0xbdb
+	.uaword	0xc7a
 	.uleb128 0x12
-	.uaword	.LVL11
-	.uaword	0xd64
+	.uaword	.LVL17
+	.uaword	0xdd4
+	.uaword	0xbd6
 	.uleb128 0x13
-	.uaword	.LVL12
-	.uaword	0x99a
-	.uaword	0xb05
-	.uleb128 0x14
 	.byte	0x1
 	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC5
 	.byte	0
 	.uleb128 0x1a
-	.uaword	.LVL13
-	.byte	0x1
-	.uaword	0xd49
-	.uaword	0xb1a
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL14
-	.uaword	0x99a
-	.uaword	0xb2e
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL15
-	.uaword	0xd49
-	.uaword	0xb42
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL16
-	.uaword	0xcfd
-	.uaword	0xb55
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL17
-	.uaword	0xcfd
-	.uaword	0xb68
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x13
 	.uaword	.LVL18
-	.uaword	0xcfd
-	.uaword	0xb7b
-	.uleb128 0x14
+	.uaword	0xe59
+	.uleb128 0x12
+	.uaword	.LVL19
+	.uaword	0xdf2
+	.uaword	0xbf2
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1b
+	.uaword	.LVL20
+	.byte	0x1
+	.uaword	0xe13
+	.uleb128 0x12
+	.uaword	.LVL21
+	.uaword	0xdf2
+	.uaword	0xc0f
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL22
+	.uaword	0xdd4
+	.uaword	0xc26
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x64
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC6
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL23
+	.uaword	0xe72
+	.uaword	0xc39
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x37
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL24
+	.uaword	0xdf2
+	.uaword	0xc4c
+	.uleb128 0x13
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x12
+	.uaword	.LVL25
+	.uaword	0xdf2
+	.uaword	0xc5f
+	.uleb128 0x13
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1b
-	.uaword	.LVL19
+	.uaword	.LVL26
 	.byte	0x1
-	.uaword	0xd64
+	.uaword	0xe59
+	.uleb128 0x14
+	.uaword	.LVL27
+	.byte	0x1
+	.uaword	0x939
 	.uleb128 0x13
-	.uaword	.LVL20
-	.uaword	0x99a
-	.uaword	0xb99
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL21
-	.uaword	0xd49
-	.uaword	0xbad
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x64
-	.byte	0x2
-	.byte	0x8f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x13
-	.uaword	.LVL22
-	.uaword	0xcfd
-	.uaword	0xbc0
-	.uleb128 0x14
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1b
-	.uaword	.LVL23
-	.byte	0x1
-	.uaword	0xd1e
-	.uleb128 0x15
-	.uaword	.LVL24
-	.byte	0x1
-	.uaword	0x915
-	.uleb128 0x14
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
@@ -1481,7 +1578,7 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1c
 	.uaword	0x219
-	.uaword	0xbeb
+	.uaword	0xc8a
 	.uleb128 0x1d
 	.uaword	0x283
 	.byte	0xf
@@ -1490,12 +1587,12 @@ errorMessages:
 	.string	"errorMessages"
 	.byte	0x9
 	.byte	0x4b
-	.uaword	0xc06
+	.uaword	0xca5
 	.byte	0x5
 	.byte	0x3
 	.uaword	errorMessages
 	.uleb128 0x5
-	.uaword	0xbdb
+	.uaword	0xc7a
 	.uleb128 0x1e
 	.string	"carStatusPacket"
 	.byte	0x1
@@ -1508,7 +1605,7 @@ errorMessages:
 	.string	"carStatus"
 	.byte	0x1
 	.byte	0x5
-	.uaword	0x6de
+	.uaword	0x702
 	.byte	0x5
 	.byte	0x3
 	.uaword	carStatus
@@ -1516,7 +1613,7 @@ errorMessages:
 	.string	"carCommand"
 	.byte	0x1
 	.byte	0x6
-	.uaword	0x780
+	.uaword	0x7a4
 	.byte	0x5
 	.byte	0x3
 	.uaword	carCommand
@@ -1524,7 +1621,7 @@ errorMessages:
 	.string	"currentPosition"
 	.byte	0x1
 	.byte	0x7
-	.uaword	0x8ef
+	.uaword	0x913
 	.byte	0x5
 	.byte	0x3
 	.uaword	currentPosition
@@ -1532,13 +1629,13 @@ errorMessages:
 	.string	"targetPosition"
 	.byte	0x1
 	.byte	0x8
-	.uaword	0x8ef
+	.uaword	0x913
 	.byte	0x5
 	.byte	0x3
 	.uaword	targetPosition
 	.uleb128 0x1c
 	.uaword	0x259
-	.uaword	0xca0
+	.uaword	0xd3f
 	.uleb128 0x1d
 	.uaword	0x283
 	.byte	0x2
@@ -1547,11 +1644,11 @@ errorMessages:
 	.string	"IfxCpu_cfg_indexMap"
 	.byte	0x8
 	.byte	0xa7
-	.uaword	0xcbd
+	.uaword	0xd5c
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5
-	.uaword	0xc90
+	.uaword	0xd2f
 	.uleb128 0x20
 	.string	"g_isAppRunning"
 	.byte	0x1
@@ -1563,63 +1660,97 @@ errorMessages:
 	.uaword	g_isAppRunning
 	.uleb128 0x21
 	.byte	0x1
-	.string	"printfSerial"
+	.string	"osEE_tc_stm_set_sr1_next_match"
 	.byte	0xa
+	.uahalf	0x3eb
+	.byte	0x1
+	.byte	0x1
+	.uaword	0xdae
+	.uleb128 0x22
+	.uaword	0x3ae
+	.byte	0
+	.uleb128 0x23
+	.byte	0x1
+	.string	"IncrementCounter"
+	.byte	0xc
+	.uahalf	0x45c
+	.byte	0x1
+	.uaword	0x641
+	.byte	0x1
+	.uaword	0xdd4
+	.uleb128 0x22
+	.uaword	0x3ce
+	.byte	0
+	.uleb128 0x24
+	.byte	0x1
+	.string	"printfSerial"
+	.byte	0xb
 	.byte	0xf
 	.byte	0x1
 	.byte	0x1
-	.uaword	0xcfd
+	.uaword	0xdf2
 	.uleb128 0x22
 	.uaword	0x219
-	.uleb128 0x23
+	.uleb128 0x25
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x23
 	.byte	0x1
 	.string	"CancelAlarm"
-	.byte	0xb
+	.byte	0xc
 	.uahalf	0x313
 	.byte	0x1
-	.uaword	0x61d
+	.uaword	0x641
 	.byte	0x1
-	.uaword	0xd1e
+	.uaword	0xe13
 	.uleb128 0x22
-	.uaword	0x3cf
+	.uaword	0x3f3
+	.byte	0
+	.uleb128 0x23
+	.byte	0x1
+	.string	"SetRelAlarm"
+	.byte	0xc
+	.uahalf	0x294
+	.byte	0x1
+	.uaword	0x641
+	.byte	0x1
+	.uaword	0xe3e
+	.uleb128 0x22
+	.uaword	0x3f3
+	.uleb128 0x22
+	.uaword	0x3e2
+	.uleb128 0x22
+	.uaword	0x3e2
 	.byte	0
 	.uleb128 0x24
 	.byte	0x1
-	.string	"SetRelAlarm"
-	.byte	0xb
-	.uahalf	0x294
-	.byte	0x1
-	.uaword	0x61d
-	.byte	0x1
-	.uaword	0xd49
-	.uleb128 0x22
-	.uaword	0x3cf
-	.uleb128 0x22
-	.uaword	0x3be
-	.uleb128 0x22
-	.uaword	0x3be
-	.byte	0
-	.uleb128 0x21
-	.byte	0x1
 	.string	"sendPacket"
-	.byte	0xc
+	.byte	0xd
 	.byte	0x1e
 	.byte	0x1
 	.byte	0x1
-	.uaword	0xd64
+	.uaword	0xe59
 	.uleb128 0x22
-	.uaword	0xa4c
+	.uaword	0xb23
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x26
 	.byte	0x1
 	.string	"TerminateTask"
-	.byte	0xb
+	.byte	0xc
 	.uahalf	0x1c9
 	.byte	0x1
-	.uaword	0x61d
+	.uaword	0x641
 	.byte	0x1
+	.uleb128 0x27
+	.byte	0x1
+	.string	"ActivateTask"
+	.byte	0xc
+	.uahalf	0x178
+	.byte	0x1
+	.uaword	0x641
+	.byte	0x1
+	.uleb128 0x22
+	.uaword	0x3be
+	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -1850,15 +1981,6 @@ errorMessages:
 	.byte	0
 	.uleb128 0x12
 	.uleb128 0x4109
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x13
-	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
@@ -1868,7 +1990,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -1877,7 +1999,7 @@ errorMessages:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x15
+	.uleb128 0x14
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -1888,7 +2010,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x15
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1903,7 +2025,7 @@ errorMessages:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -1920,7 +2042,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x18
+	.uleb128 0x17
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -1929,7 +2051,7 @@ errorMessages:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x19
+	.uleb128 0x18
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -1940,7 +2062,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x19
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -1950,6 +2072,15 @@ errorMessages:
 	.uleb128 0x31
 	.uleb128 0x13
 	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x1a
+	.uleb128 0x4109
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -2041,7 +2172,7 @@ errorMessages:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
 	.uleb128 0x3c
@@ -2058,11 +2189,6 @@ errorMessages:
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.byte	0
-	.uleb128 0x24
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2083,9 +2209,52 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0x24
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
 	.uleb128 0x25
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x26
 	.uleb128 0x2e
 	.byte	0
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.uleb128 0x27
+	.uleb128 0x2e
+	.byte	0x1
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3
@@ -2106,23 +2275,23 @@ errorMessages:
 .section .debug_loc,"",@progbits
 .Ldebug_loc0:
 .LLST0:
-	.uaword	.LVL7-.Ltext0
-	.uaword	.LVL9-1-.Ltext0
+	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL15-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL9-1-.Ltext0
-	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL15-1-.Ltext0
+	.uaword	.LVL15-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x54
 	.byte	0x9f
-	.uaword	.LVL9-.Ltext0
-	.uaword	.LVL10-1-.Ltext0
+	.uaword	.LVL15-.Ltext0
+	.uaword	.LVL16-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL10-1-.Ltext0
-	.uaword	.LFE579-.Ltext0
+	.uaword	.LVL16-1-.Ltext0
+	.uaword	.LFE580-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -2131,8 +2300,8 @@ errorMessages:
 	.uaword	0
 	.uaword	0
 .LLST1:
-	.uaword	.LVL8-.Ltext0
-	.uaword	.LVL9-1-.Ltext0
+	.uaword	.LVL14-.Ltext0
+	.uaword	.LVL15-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
 	.uaword	0
@@ -2152,9 +2321,12 @@ errorMessages:
 .section .debug_line,"",@progbits
 .Ldebug_line0:
 .section .debug_str,"",@progbits
+	.extern	ActivateTask,STT_FUNC,0
 	.extern	TerminateTask,STT_FUNC,0
 	.extern	sendPacket,STT_FUNC,0
 	.extern	SetRelAlarm,STT_FUNC,0
 	.extern	CancelAlarm,STT_FUNC,0
 	.extern	printfSerial,STT_FUNC,0
+	.extern	IncrementCounter,STT_FUNC,0
+	.extern	osEE_tc_stm_set_sr1_next_match,STT_FUNC,0
 	.ident	"GCC: (HighTec Release HDP-v4.9.3.0-infineon-1.0-fb21a99) 4.9.4 build on 2019-06-07"

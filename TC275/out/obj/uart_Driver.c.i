@@ -23017,6 +23017,7 @@ void asclin3TxISR(void);
 void asclin0RxISR(void);
 void asclin0TxISR(void);
 void TimerISR(void);
+void AppTimerISR(void);
 # 71 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 # 6 "C:\\SHIPAR~1\\TC275\\bsw.h" 2
 

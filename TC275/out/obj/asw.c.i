@@ -2043,6 +2043,7 @@ void asclin3TxISR(void);
 void asclin0RxISR(void);
 void asclin0TxISR(void);
 void TimerISR(void);
+void AppTimerISR(void);
 # 71 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 # 6 "C:\\SHIPAR~1\\TC275\\bsw.h" 2
 # 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 1
@@ -23611,17 +23612,19 @@ struct ParkingSystemPacket testSendPacket =
 };
 
 void FuncTestTask ( void ){
-    testSendPacket.car_status++;
-    testSendPacket.car_status%=4;
-    sendPacket(&testSendPacket);
+
+
+    static uint32 cnt;
+    printfSerial("%d ",++cnt);
+
 }
 
 void TimerISR(void)
 {
     static long c = -4;
     osEE_tc_stm_set_sr0_next_match(1000000U);
-# 37 "C:\\SHIPAR~1\\TC275\\asw.c"
-    if(c%10==5){
+# 39 "C:\\SHIPAR~1\\TC275\\asw.c"
+    if(c==0){
         startShiParkerApp();
     }
 

@@ -7,11 +7,18 @@ static CAR_COMMAND_TYPE carCommand;
 static struct Position currentPosition;
 static struct Position targetPosition;
 
+ISR2(AppTimerISR){
+    osEE_tc_stm_set_sr1_next_match(50000U);
+    IncrementCounter(AppCounter);
+}
+
 void startShiParkerApp(void)
 {
     if (g_isAppRunning == TRUE)
     {
         printfSerial("restart ShiParker...\n");
+        CancelAlarm(PacketSendAlarm);
+        CancelAlarm(AppAlarm);
     }
     else{
         printfSerial("start ShiParker...\n");
@@ -23,14 +30,16 @@ void startShiParkerApp(void)
     targetPosition.x  = -1; // NULL 값을 따로 정의해줘야함
     targetPosition.y  = -1; // NULL 값을 따로 정의해줘야함
     carCommand            = CAR_COMMAND_STOP;
-    CancelAlarm(AppAlarm);
-    SetRelAlarm(AppAlarm, 5, 1);
+    SetRelAlarm(AppAlarm, 1, 10);
+    SetRelAlarm(PacketSendAlarm, 2, 50);
 }
 
 TASK (ShiParkerAppTask)
 {
+    printfSerial("app");
     if(g_isAppRunning==FALSE)
         TerminateTask();
+    updateStatus(&g_RecievedParkingSystemPacket);
     switch (carStatus)
     {
     case CAR_STATUS_READY:
@@ -39,16 +48,12 @@ TASK (ShiParkerAppTask)
         case CAR_COMMAND_FORCESTOP:
             // READY일때 강제정지 -> 앱 종료
             carStatus = CAR_STATUS_TERMINATED;
-            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
             break;
         case CAR_COMMAND_START:
             // READY일때 시작 -> 주차 시작
             carStatus = CAR_STATUS_RUNNING;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-            //  2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
-            //  500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
+            CancelAlarm(PacketSendAlarm);
+            SetRelAlarm(PacketSendAlarm, 0, 10);
             break;
         case CAR_COMMAND_STOP:
             // READY일때 일시정지 -> 변화없음
@@ -63,16 +68,14 @@ TASK (ShiParkerAppTask)
         case CAR_COMMAND_FORCESTOP:
             // RUNNING일때 강제정지 -> 앱 종료
             carStatus = CAR_STATUS_TERMINATED;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
             break;
         case CAR_COMMAND_START:
             // RUNNING일때 시작 -> 변화없음
             break;
         case CAR_COMMAND_STOP:
-            // RUNNING일때 일시정지 -> 변화없음
+            // RUNNING일때 일시정지 -> 일시정지
+            CancelAlarm(PacketSendAlarm);
+            SetRelAlarm(PacketSendAlarm, 0, 50);
             break;
         default:
             break;
@@ -84,21 +87,12 @@ TASK (ShiParkerAppTask)
         case CAR_COMMAND_FORCESTOP:
             // STOP일때 강제정지 -> 앱 종료
             carStatus = CAR_STATUS_TERMINATED;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
             break;
         case CAR_COMMAND_START:
             // STOP일때 시작 -> 주차 재개
             carStatus = CAR_STATUS_RUNNING;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(PacketSendAlarm,10,10);//500ms
-            //  2500ms 주기의 sendPacket 알람을 비활성화하는 코드를 여기에
-            //  500ms 주기의 sendPacket 알람을 활성화하는 코드를 여기에
+            SetRelAlarm(PacketSendAlarm,0,10);
             break;
         case CAR_COMMAND_STOP:
             // STOP일때 일시정지 -> 변화없음
@@ -108,7 +102,9 @@ TASK (ShiParkerAppTask)
         }
         break;
     case CAR_STATUS_TERMINATED:
-        //command에 상관없이 앱을 종료하고 차량 제어권을 사용자에게 넘긴다
+        //앱을 종료하고 차량 제어권을 사용자에게 넘긴다
+        printfSerial("Terminate ShiParker...\n");
+        ActivateTask(PacketSendTask);
         g_isAppRunning = FALSE;
         CancelAlarm(PacketSendAlarm);
         CancelAlarm(AppAlarm);
@@ -120,19 +116,12 @@ TASK (ShiParkerAppTask)
         case CAR_COMMAND_FORCESTOP:
             // STOP일때 강제정지 -> 앱 종료
             carStatus = CAR_STATUS_TERMINATED;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
-            // 값들을 저장하고 앱을 나감 -> 제어권이 시스템에서 사람으로 넘어감
             break;
         case CAR_COMMAND_START:
             // ERROR일때 시작 -> 주차 재개
             carStatus = CAR_STATUS_RUNNING;
-            carStatusPacket.car_status = carStatus;
-            makePacket(&carStatusPacket);
-            sendPacket(&carStatusPacket);
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(PacketSendAlarm,10,100);//2500ms
+            SetRelAlarm(PacketSendAlarm,0,50);//2500ms
             break;
         case CAR_COMMAND_STOP:
             // ERROR일때 일시정지 -> 변화없음
@@ -150,11 +139,13 @@ TASK (ShiParkerAppTask)
 }
 
 TASK(PacketSendTask){
+    printfSerial("sendpacket");
     makePacket(&carStatusPacket);
     sendPacket(&carStatusPacket);
 }
 
 void makePacket(struct ParkingSystemPacket* dst){
+    dst->start_byte = 0xAA;
     dst->car_status = carStatus;
     dst->car_command = carCommand;
     dst->car_current_position.x = currentPosition.x;
@@ -182,6 +173,9 @@ void handleError(ERROR_CODE_TYPE errorCode) {
             //ERROR HANDLING CODE
             break;
         case ERROR_CODE_OBSTACLE:
+            //ERROR HANDLING CODE
+            break;
+        case ERROR_CODE_CONNECTION_LOST:
             //ERROR HANDLING CODE
             break;
         default:

@@ -33,10 +33,12 @@ __INTTAB0:
 	mov %d4, 3
 	j osEE_tc_isr2_wrapper
 	.align 5
-	.globl osEE_tc_isr_dummy_entry_7
-	osEE_tc_isr_dummy_entry_7:
-	j .
-	.align  5
+	.globl osEE_tc_isr2_entry_7
+	osEE_tc_isr2_entry_7:
+	svlcx
+	mov %d4, 4
+	j osEE_tc_isr2_wrapper
+	.align 5
 	.globl osEE_tc_isr_dummy_entry_8
 	osEE_tc_isr_dummy_entry_8:
 	j .

@@ -41,6 +41,7 @@ ISR2(asclin3TxISR);
 ISR2(asclin0RxISR);
 ISR2(asclin0TxISR);
 ISR2(TimerISR);
+ISR2(AppTimerISR);
 
 
 /***************************************************************************

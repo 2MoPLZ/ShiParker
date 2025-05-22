@@ -246,6 +246,7 @@ int main(void)
 {
     osEE_tc_stm_set_clockpersec();
     osEE_tc_stm_set_sr0(1000000U, 1U);
+    osEE_tc_stm_set_sr1(50000U, 2U);
 
     UART_init();
     initADC();

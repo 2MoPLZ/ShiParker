@@ -44,4 +44,9 @@ CPU test_application {
 		SOURCE = "STM0SR0";
 		PRIORITY = 6;
 	};
+	ISR AppTimerISR {
+		CATEGORY = 2;
+		SOURCE = "STM0SR1";
+		PRIORITY = 7;
+	};
 };

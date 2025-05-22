@@ -43,8 +43,8 @@ extern "C" {
  * Arrays size
  *
  **************************************************************************/
-#define OSEE_TASK_ARRAY_SIZE      (7U)
-#define OSEE_SN_ARRAY_SIZE        (7U)
+#define OSEE_TASK_ARRAY_SIZE      (8U)
+#define OSEE_SN_ARRAY_SIZE        (8U)
 #define OSEE_STACK_ARRAY_SIZE     (1U)
 #define OSEE_RESOURCE_ARRAY_SIZE  (1U)
 #define OSEE_COUNTERS_ARRAY_SIZE  (1U)
@@ -55,9 +55,9 @@ extern "C" {
  * TASKs declaration
  *
  **************************************************************************/
-#define TestTask (4U)
-#define ShiParkerAppTask (5U)
-#define PacketSendTask (6U)
+#define TestTask (5U)
+#define ShiParkerAppTask (6U)
+#define PacketSendTask (7U)
 
 /***************************************************************************
  *
@@ -79,10 +79,9 @@ extern "C" {
  **************************************************************************/
 #define AppCounter (0U)
 
-#define OSMAXALLOWEDVALUE_AppCounter (1000U)
+#define OSMAXALLOWEDVALUE_AppCounter (50U)
 #define OSTICKSPERBASE_AppCounter    (1U)
 #define OSMINCYCLE_AppCounter        (1U)
-#define OSTICKDURATION_AppCounter    (50000001U)
 
 /***************************************************************************
  *

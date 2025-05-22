@@ -61,7 +61,7 @@ static VAR(OsEE_SDB, OS_CONST) osEE_sdb_array[(1U)] =
  **************************************************************************/
 
 static VAR(OsEE_TCB, OS_VAR_INIT)
-  osEE_tcb_array[8] =
+  osEE_tcb_array[9] =
 {
   {
     /* .current_num_of_act = */ 0U,
@@ -101,6 +101,15 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
+    /* .current_prio       = */ 134U,
+    /* .status             = */ SUSPENDED,
+    /* .p_last_m           = */ NULL,
+    /* .wait_mask          = */ 0U,
+    /* .event_mask         = */ 0U,
+    /* .p_own_sn           = */ NULL
+  },
+  {
+    /* .current_num_of_act = */ 0U,
     /* .current_prio       = */ 2U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
@@ -119,7 +128,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 1U,
+    /* .current_prio       = */ 3U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -144,7 +153,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
  **************************************************************************/
 
 static VAR(OsEE_TDB, OS_CONST)
-  osEE_tdb_array[8]  =
+  osEE_tdb_array[9]  =
 {
   {
     /* .hdb = */ {
@@ -206,10 +215,24 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .hdb = */ {
       /* .p_sdb    = */   &osEE_sdb_array[0U],
       /* .p_scb    = */   &osEE_scb_array[0U],
-      /* .isr2_src  = */  OSEE_TC_SRC_INVALID
+      /* .isr2_src = */   OSEE_TC_SRC_STM0SR1
     },
     /* .p_tcb          = */ &osEE_tcb_array[4U],
     /* .tid            = */ 4U,
+    /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
+    /* .task_func      = */ AppTimerISR,
+    /* .ready_prio     = */ 134U,
+    /* .dispatch_prio  = */ 134U,
+    /* .max_num_of_act = */ 1U
+  },
+  {
+    /* .hdb = */ {
+      /* .p_sdb    = */   &osEE_sdb_array[0U],
+      /* .p_scb    = */   &osEE_scb_array[0U],
+      /* .isr2_src  = */  OSEE_TC_SRC_INVALID
+    },
+    /* .p_tcb          = */ &osEE_tcb_array[5U],
+    /* .tid            = */ 5U,
     /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
     /* .task_func      = */ TASK_FUNC(TestTask),
     /* .ready_prio     = */ 2U,
@@ -222,8 +245,8 @@ static VAR(OsEE_TDB, OS_CONST)
       /* .p_scb    = */   &osEE_scb_array[0U],
       /* .isr2_src  = */  OSEE_TC_SRC_INVALID
     },
-    /* .p_tcb          = */ &osEE_tcb_array[5U],
-    /* .tid            = */ 5U,
+    /* .p_tcb          = */ &osEE_tcb_array[6U],
+    /* .tid            = */ 6U,
     /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
     /* .task_func      = */ TASK_FUNC(ShiParkerAppTask),
     /* .ready_prio     = */ 1U,
@@ -236,12 +259,12 @@ static VAR(OsEE_TDB, OS_CONST)
       /* .p_scb    = */   &osEE_scb_array[0U],
       /* .isr2_src  = */  OSEE_TC_SRC_INVALID
     },
-    /* .p_tcb          = */ &osEE_tcb_array[6U],
-    /* .tid            = */ 6U,
+    /* .p_tcb          = */ &osEE_tcb_array[7U],
+    /* .tid            = */ 7U,
     /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
     /* .task_func      = */ TASK_FUNC(PacketSendTask),
-    /* .ready_prio     = */ 1U,
-    /* .dispatch_prio  = */ 1U,
+    /* .ready_prio     = */ 3U,
+    /* .dispatch_prio  = */ 3U,
     /* .max_num_of_act = */ 1U
   },
   {
@@ -250,8 +273,8 @@ static VAR(OsEE_TDB, OS_CONST)
       /* .p_scb    = */   &osEE_scb_array[0U],
       /* .isr_src  = */   OSEE_TC_SRC_INVALID
     },
-    /* .p_tcb          = */ &osEE_tcb_array[7U],
-    /* .tid            = */ 7U,
+    /* .p_tcb          = */ &osEE_tcb_array[8U],
+    /* .tid            = */ 8U,
     /* .task_type      = */ OSEE_TASK_TYPE_IDLE,
     /* .task_func      = */ osEE_idle_hook_wrapper,
     /* .ready_prio     = */ 0U,
@@ -272,12 +295,13 @@ static CONSTP2VAR(OsEE_TDB, OS_CONST, OS_APPL_DATA)
   &osEE_tdb_array[4U],
   &osEE_tdb_array[5U],
   &osEE_tdb_array[6U],
-  &osEE_tdb_array[7U]
+  &osEE_tdb_array[7U],
+  &osEE_tdb_array[8U]
 };
 
 
 
-static VAR(OsEE_SN, OS_VAR_INIT)  osEE_sn_array[7] = {
+static VAR(OsEE_SN, OS_VAR_INIT)  osEE_sn_array[8] = {
   {
     /* .p_next = */ &osEE_sn_array[1U],
     /* .p_tdb  = */ NULL
@@ -303,6 +327,10 @@ static VAR(OsEE_SN, OS_VAR_INIT)  osEE_sn_array[7] = {
     /* .p_tdb  = */ NULL
   },
   {
+    /* .p_next = */ &osEE_sn_array[7U],
+    /* .p_tdb  = */ NULL
+  },
+  {
     /* .p_next = */ NULL,
     /* .p_tdb  = */ NULL
   }
@@ -317,7 +345,7 @@ static VAR(OsEE_ResourceCB, OS_VAR_CLEARED) osEE_res_cb_array[1];
 static VAR(OsEE_ResourceDB, OS_CONST) osEE_res_db_array[1] = {
   {
     /* .p_cb              = */ &osEE_res_cb_array[0U],
-    /* .prio              = */ 2U
+    /* .prio              = */ 3U
   }
 };
 
@@ -347,7 +375,7 @@ static VAR(OsEE_CounterDB, OS_CONST)
   {
     /* .p_count_cb      = */ &osEE_counter_cb_array[0U],
     /* .info            = */ {
-      /* .maxallowedvalue = */ (1000U),
+      /* .maxallowedvalue = */ (50U),
       /* .ticksperbase    = */ (1U)
     }  }
 };
@@ -380,7 +408,7 @@ static VAR(OsEE_AlarmDB, OS_CONST)
     /* .action       = */ {
       /* .param      = */   {
         /* .f            = */ NULL,
-        /* .p_tdb        = */ &osEE_tdb_array[5U],
+        /* .p_tdb        = */ &osEE_tdb_array[6U],
         /* .p_counter_db = */ NULL,
         /* .mask         = */ 0U},
       /* .type       = */ OSEE_ACTION_TASK
@@ -392,7 +420,7 @@ static VAR(OsEE_AlarmDB, OS_CONST)
     /* .action       = */ {
       /* .param      = */   {
         /* .f            = */ NULL,
-        /* .p_tdb        = */ &osEE_tdb_array[6U],
+        /* .p_tdb        = */ &osEE_tdb_array[7U],
         /* .p_counter_db = */ NULL,
         /* .mask         = */ 0U},
       /* .type       = */ OSEE_ACTION_TASK
@@ -418,7 +446,7 @@ static CONSTP2VAR(OsEE_AlarmDB, OS_CONST, OS_APPL_DATA)
 
 
 VAR(OsEE_CCB, OS_VAR_INIT) osEE_ccb_var = {
-  /* .p_curr      = */  &osEE_tdb_array[7U],
+  /* .p_curr      = */  &osEE_tdb_array[8U],
   /* .rq          = */  NULL,
   /* .p_free_sn   = */  &osEE_sn_array[0U],
   /* .p_stk_sn    = */  NULL,
@@ -441,7 +469,7 @@ VAR(OsEE_CCB, OS_VAR_INIT) osEE_ccb_var = {
 
 VAR(OsEE_CDB, OS_CONST) osEE_cdb_var = {
   /* .p_ccb                         = */ &osEE_ccb_var,
-  /* .p_idle_task                   = */ &osEE_tdb_array[7U]
+  /* .p_idle_task                   = */ &osEE_tdb_array[8U]
 };
 
 

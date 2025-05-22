@@ -125,6 +125,14 @@
 #define OSEE_TC_CORE0_TimerISR_ISR_PRIO  (6U)
 
 
+
+#define OSEE_TC_CORE0_7_ISR_CAT (2U)
+#define OSEE_TC_CORE0_7_ISR_TID 4
+
+#define OSEE_TC_CORE0_AppTimerISR_ISR_TID   (4U)
+#define OSEE_TC_CORE0_AppTimerISR_ISR_PRIO  (7U)
+
+
 /***************************************************************************
  *
  * System Timer

@@ -79,6 +79,11 @@ CPU test_application {
 		SOURCE = "STM0SR0";
 		PRIORITY = 6;
 	};
+	ISR AppTimerISR {
+		CATEGORY = 2;
+		SOURCE = "STM0SR1";
+		PRIORITY = 7;
+	};
 	TASK TestTask {
 		PRIORITY = 5;
 		STACK = SHARED;
@@ -94,7 +99,7 @@ CPU test_application {
 		ACTIVATION = 1;
 	};
 	TASK PacketSendTask {
-		PRIORITY = 2;
+		PRIORITY = 9;
 		STACK = SHARED;
 		SCHEDULE = FULL;
 		AUTOSTART = FALSE;
@@ -102,9 +107,8 @@ CPU test_application {
 	};
 	COUNTER AppCounter {
 		MINCYCLE = 1;
-		MAXALLOWEDVALUE = 1000;
+		MAXALLOWEDVALUE = 50;
 		TICKSPERBASE = 1;
-		SECONDSPERTICK = 0.05;
 	};
 	ALARM AppAlarm {
 		COUNTER = AppCounter;
