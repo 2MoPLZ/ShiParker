@@ -784,7 +784,7 @@ IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT132_P22_6_OUT = {IfxGtm_Tom_2, IfxGtm_Tom_C
 IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT52_P21_1_OUT = {IfxGtm_Tom_2, IfxGtm_Tom_Ch_9, IfxGtm_ToutSel_b, 52, {&MODULE_P21, 1}, IfxPort_OutputIdx_alt1};
 IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT69_P20_13_OUT = {IfxGtm_Tom_2, IfxGtm_Tom_Ch_9, IfxGtm_ToutSel_b, 69, {&MODULE_P20,13}, IfxPort_OutputIdx_alt1};
 
-#include "IfxGtm_bf.h"
+#include "illd\Libraries\Infra\Sfr\TC27D\_Reg\IfxGtm_bf.h"
 
 void IfxGtm_PinMap_setTimTin(IfxGtm_Tim_TinMap *config, IfxPort_InputMode inputMode)
 {

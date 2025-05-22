@@ -23,7 +23,7 @@
 #define KI 0.005
 #define L 10
 #define SENSOR_DISTANCE 11.5
-#define MIN_DIST_LEFT 10
+#define MIN_DIST_LEFT 15
 #define PI 3.14159265359
 #define STM_FREQUENCY 100000000UL  // STM 주파수 (Hz) → 100 MHz이면 1초 = 100,000,000 ticks
 

@@ -50,6 +50,13 @@ CPU test_application {
         APP_SRC="illd/src/IfxVadc_Adc.c";
         APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/_Impl/IfxVadc_cfg.c";
         APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/Vadc/std/IfxVadc.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/_PinMap/IfxPort_PinMap.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/_PinMap/IfxGtm_PinMap.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/Gtm/Tom/Pwm/IfxGtm_Tom_Pwm.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Tom.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Cmu.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm.c";
+        APP_SRC="illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Dpll.c";
 
         APP_SRC="bsw.c";
         APP_SRC="asw.c";
@@ -57,6 +64,7 @@ CPU test_application {
         APP_SRC="uart_Driver.c";
         APP_SRC="steering_Pid.c";
         APP_SRC="hall_Driver.c";
+        APP_SRC="motor_driver.c";
         APP_SRC="shiparker_App.c";
     };
 

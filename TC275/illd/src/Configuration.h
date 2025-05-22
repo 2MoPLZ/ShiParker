@@ -16,6 +16,17 @@
 #include "illd\Libraries\iLLD\TC27D\Tricore\Scu\Std\IfxScuWdt.h"
 #include "illd\Libraries\iLLD\TC27D\Tricore\Port\Std\IfxPort.h"
 
+
+#include "illd\Libraries\iLLD\TC27D\Tricore\Gtm\Tom\Pwm\IfxGtm_Tom_Pwm.h"
+#include "illd\Libraries\iLLD\TC27D\Tricore\Gtm\Std\IfxGtm_Tom.h"
+
+#include "illd\Libraries\Infra\Sfr\TC27D\_Reg\IfxGtm_bf.h"
+#include "illd\Libraries\iLLD\TC27D\Tricore\Gtm\Std\IfxGtm_Dpll.h"
+#include "illd\Libraries\iLLD\TC27D\Tricore\Gtm\Std\IfxGtm_Cmu.h"
+#include "illd\Libraries\iLLD\TC27D\Tricore\_PinMap\IfxPort_PinMap.h"
+#include "illd\Libraries\iLLD\TC27D\Tricore\_PinMap\IfxGtm_PinMap.h"
+#include "illd\Libraries\iLLD\TC27D\Tricore\Gtm\Std\IfxGtm.h"
+
 #include <string.h>
 #include <stdarg.h>
 #include <stdint.h>

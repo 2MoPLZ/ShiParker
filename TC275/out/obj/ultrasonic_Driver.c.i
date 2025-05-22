@@ -1,30 +1,30 @@
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.c"
-# 1 "C:\\Users\\USER\\Desktop\\AutodriveSystem\\TC275\\out//"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.c"
+# 1 "C:\\project\\ShiParker\\TC275\\out//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.c"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.h" 1
-# 23 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 24 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 1
+# 1 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.c"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.h" 1
+# 23 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
+# 24 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 1
 
 
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Configurations\\Ifx_Cfg.h" 1
-# 7 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 8 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGlobal_cfg.h" 1
-# 9 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
-# 46 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 1
-# 81 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 1
-# 46 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Configurations\\Ifx_Cfg.h" 1
+# 7 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
+# 8 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGlobal_cfg.h" 1
+# 9 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
+# 46 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 1
+# 81 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 1
+# 46 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h"
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
 # 147 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
 typedef long int ptrdiff_t;
@@ -32,13 +32,13 @@ typedef long int ptrdiff_t;
 typedef long unsigned int size_t;
 # 324 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
 typedef int wchar_t;
-# 47 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 2
-# 82 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 2
-# 93 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
+# 47 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 2
+# 82 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 2
+# 93 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
 void Ifx_C_Init(void);
-# 47 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h" 1
-# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
+# 47 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h" 1
+# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
 typedef unsigned char boolean;
 
 
@@ -111,7 +111,7 @@ typedef float float32;
 
 
 typedef double float64;
-# 48 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
+# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
 
 
 
@@ -141,7 +141,7 @@ typedef struct
 } csint16;
 
 typedef sint64 Ifx_TickTime;
-# 89 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+# 89 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
 typedef sint16 Ifx_SizeT;
 
 
@@ -204,14 +204,14 @@ typedef struct
     Ifx_TickTime timestamp;
     uint8 data;
 }Ifx_DataBufferMode_TimeStampSingle;
-# 161 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+# 161 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
 typedef enum
 {
     Ifx_DataBufferMode_normal = 0,
     Ifx_DataBufferMode_timeStampSingle,
 
 }Ifx_DataBufferMode;
-# 175 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+# 175 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
 typedef enum
 {
     Ifx_Pwm_Mode_centerAligned = 0,
@@ -227,8 +227,8 @@ typedef enum
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h" 1
-# 44 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h" 1
+# 44 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h"
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\cint.h" 1 3
 # 24 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\cint.h" 3
 extern void _init_vectab (void);
@@ -261,7 +261,7 @@ extern int _remove_chained_int_handler (int intno, void *ptr);
 
 
 extern int _install_trap_handler (int trapno, void (*handler) (int));
-# 45 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h" 2
+# 45 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h" 2
 
 
 typedef long fract;
@@ -271,7 +271,7 @@ typedef long __packb;
 typedef unsigned long __upackb;
 typedef long __packhw;
 typedef unsigned long __upackhw;
-# 191 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
+# 191 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
 
 
 
@@ -288,22 +288,22 @@ typedef struct
     sfract real;
     sfract imag;
 } csfract;
-# 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 1
-# 136 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 1
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 1
-# 47 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 1
-# 48 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
+# 10 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 1
+# 136 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 1
+# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 1
+# 47 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 1
+# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
 
 
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 1
-# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 1
+# 59 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 1 3
 # 88 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
 static __inline__ __attribute__((__always_inline__))
@@ -408,8 +408,8 @@ void _restore (const int irqs_on)
 
 
 }
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 2
-# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 2
+# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) void Ifx__jump_and_link(void (*fun)(void))
 {
  __asm__ volatile ("jli %0"::"a"(fun));
@@ -451,7 +451,7 @@ static inline __attribute__ ((always_inline)) void Ifx__jumpBackToLink(void)
 {
  __asm__ volatile ("ji %a11");
 }
-# 148 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 148 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__max(sint32 a, sint32 b)
 {
     sint32 res;
@@ -502,7 +502,7 @@ static inline __attribute__ ((always_inline)) uint32 Ifx__minu(uint32 a, uint32 
     __asm__ volatile ("min.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
     return res;
 }
-# 238 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 238 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint16 Ifx__clssf(sfract a)
 {
     sint16 res;
@@ -685,7 +685,7 @@ static inline __attribute__ ((always_inline)) sfract Ifx__u16_to_sfract(uint16 a
 
     return res;
 }
-# 430 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 430 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__extr(sint32 a, uint32 p, uint32 w)
 {
     sint32 res;
@@ -707,7 +707,7 @@ static inline __attribute__ ((always_inline)) uint32 Ifx__extru(uint32 a, uint32
                       : "=d" (res) : "d" (a), "d" (p), "d" (w):"d14", "d15");
     return res;
 }
-# 468 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 468 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__ins(sint32 trg, const sint32 trgbit, sint32 src, const sint32 srcbit)
 {
     sint32 res;
@@ -735,7 +735,7 @@ static inline __attribute__ ((always_inline)) sint32 Ifx__insn(sint32 trg, const
     __asm__ volatile ("insn.t %0,%1,%2,%3,%4":"=d"(res):"d"(trg), "i"(trgbit), "d"(src), "i"(srcbit));
     return res;
 }
-# 520 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 520 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__disable_and_save(void)
 {
     sint32 res;
@@ -753,7 +753,7 @@ static inline __attribute__ ((always_inline)) void Ifx__restore(sint32 ie)
 {
     __asm__ volatile ("restore %0"::"d"(ie));
 }
-# 554 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 554 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) void Ifx__cacheawi(uint8* p)
 {
     __asm__ volatile("cachea.wi [%0]0"::"a"(p));
@@ -806,7 +806,7 @@ static inline __attribute__ ((always_inline)) uint32 Ifx__ror(uint32 operand, ui
                      :"=d"(res):"d"(operand), "d"(count):"memory");
     return res;
 }
-# 616 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 616 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) __packb Ifx__absb(__packb a)
 {
     __packb res;
@@ -1427,7 +1427,7 @@ static inline __attribute__ ((always_inline)) void Ifx__setuhw2(__upackhw* a, ui
 
                       ::"a"(a), "d"(b):"d15", "memory");
 }
-# 1251 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1251 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__absdif(sint32 a, sint32 b)
 {
     sint32 res;
@@ -1483,7 +1483,7 @@ static inline __attribute__ ((always_inline)) float Ifx__fabsf(float f)
     __asm__ volatile ("insert  %0,%1,0,31,1": "=d" (res) : "d" (f):"memory");
     return res;
 }
-# 1322 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1322 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__parity(sint32 a)
 {
     sint32 res;
@@ -1526,7 +1526,7 @@ static inline __attribute__ ((always_inline)) uint16 Ifx__sathu(sint32 a)
     __asm__ volatile ("sat.hu %0,%1":"=d"(res):"d"(a));
     return res;
 }
-# 1375 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1375 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) sint32 Ifx__adds(sint32 a, sint32 b)
 {
     sint32 res;
@@ -1560,7 +1560,7 @@ static inline __attribute__ ((always_inline)) uint32 Ifx__subsu(uint32 a, uint32
     __asm__ volatile ("subs.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
     return res;
 }
-# 1421 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1421 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) void Ifx__debug(void)
 {
     __asm__ volatile ("debug" : : : "memory");
@@ -1631,7 +1631,7 @@ static inline __attribute__ ((always_inline)) uint32 Ifx__swap(void* place, uint
     __asm__ volatile("swap.w [%1]0,%2":"=d"(res):"a"(place), "0"(value));
     return res;
 }
-# 1505 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1505 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) void Ifx__stopPerfCounters(void)
 {
     __asm__ volatile("mov %%d0,0\n                  mtcr 0xFC00,%%d0\n                  isync\n"
@@ -1659,7 +1659,7 @@ static inline __attribute__ ((always_inline)) unsigned int Ifx__cmpAndSwap (unsi
                         : "memory");
     return reg64;
 }
-# 1544 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1544 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
 static inline __attribute__ ((always_inline)) float32 Ifx__fixpoint_to_float32(fract value, sint32 shift)
 {
     float32 result;
@@ -1731,8 +1731,8 @@ static inline __attribute__ ((always_inline)) void Ifx__cacheai(uint8* p)
 {
     __asm__ volatile("cachea.i [%0]0"::"a"(p));
 }
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
-# 87 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
+# 87 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
 static inline __attribute__ ((always_inline)) void *__cx_to_addr(uint32 cx)
 {
     uint32 seg_nr = Ifx__extru(cx, 16, 4);
@@ -1810,13 +1810,13 @@ static inline __attribute__ ((always_inline)) void __st64_lu(void *addr, uint32 
     register uint64 value = ((uint64)valueUpper << 32) | valueLower;
     __st64(addr, value);
 }
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 1
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 2
+# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 1
+# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
+# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 2
 
 
 
@@ -2196,7 +2196,7 @@ typedef union
     signed int I;
     Ifx_STM_TIM6_Bits B;
 } Ifx_STM_TIM6;
-# 447 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
+# 447 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
 typedef volatile struct _Ifx_STM
 {
     Ifx_STM_CLC CLC;
@@ -2226,9 +2226,9 @@ typedef volatile struct _Ifx_STM
     Ifx_STM_ACCEN1 ACCEN1;
     Ifx_STM_ACCEN0 ACCEN0;
 } Ifx_STM;
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 2
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 2
-# 84 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
+# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 2
+# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 2
+# 84 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
 typedef enum
 {
     IfxStm_Index_none = -1,
@@ -2236,18 +2236,18 @@ typedef enum
     IfxStm_Index_1,
     IfxStm_Index_2
 } IfxStm_Index;
-# 101 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
+# 101 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
 extern const IfxModule_IndexMap IfxStm_cfg_indexMap[3];
-# 137 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
-# 122 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 1
-# 53 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_bf.h" 1
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_bf.h" 1
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
-# 1429 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
+# 137 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
+# 122 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 1
+# 53 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_bf.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_bf.h" 1
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
+# 1429 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
 typedef enum
 {
     IfxScu_CCUCON0_CLKSEL_fBack = 0,
@@ -2276,13 +2276,13 @@ typedef enum
     IfxScu_PMCSR_REQSLP_Sleep = 2U,
     IfxScu_PMCSR_REQSLP_Stby = 3U
 } IfxScu_PMCSR_REQSLP;
-# 123 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 1
-# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 1
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
+# 123 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 1
+# 65 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
 typedef struct _Ifx_SCU_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -4161,7 +4161,7 @@ typedef union
     signed int I;
     Ifx_SCU_WDTS_SR_Bits B;
 } Ifx_SCU_WDTS_SR;
-# 1951 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
+# 1951 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
 typedef volatile struct _Ifx_SCU_WDTCPU
 {
     Ifx_SCU_WDTCPU_CON0 CON0;
@@ -4176,7 +4176,7 @@ typedef volatile struct _Ifx_SCU_WDTS
     Ifx_SCU_WDTS_CON1 CON1;
     Ifx_SCU_WDTS_SR SR;
 } Ifx_SCU_WDTS;
-# 1977 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
+# 1977 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
 typedef volatile struct _Ifx_SCU
 {
     unsigned char reserved_0[8];
@@ -4284,11 +4284,11 @@ typedef volatile struct _Ifx_SCU
     Ifx_SCU_ACCEN1 ACCEN1;
     Ifx_SCU_ACCEN0 ACCEN0;
 } Ifx_SCU;
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 2
-# 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 2
+# 66 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h" 1
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h" 1
+# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h"
 static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_calculateLfsr(uint16 password);
 
 
@@ -4309,8 +4309,8 @@ static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_calculateLfsr(uin
     return res;
 
 }
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
-# 86 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 68 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
+# 86 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 typedef struct
 {
     uint16 password;
@@ -4323,29 +4323,29 @@ typedef struct
     boolean enableTimerCheckTolerance;
     boolean clrInternalResetFlag;
 } IfxScuWdt_Config;
-# 113 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 113 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_initConfig(IfxScuWdt_Config *config);
-# 126 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 126 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_initCpuWatchdog(Ifx_SCU_WDTCPU *wdt, const IfxScuWdt_Config *config);
-# 139 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 139 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_initSafetyWatchdog(Ifx_SCU_WDTS *wdt, const IfxScuWdt_Config *config);
-# 162 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 162 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 static inline __attribute__ ((always_inline)) void IfxScuWdt_clearCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password);
-# 175 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 175 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 static inline __attribute__ ((always_inline)) void IfxScuWdt_clearSafetyEndinitInline(uint16 password);
-# 187 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 187 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 static inline __attribute__ ((always_inline)) void IfxScuWdt_setCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password);
-# 198 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 198 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 static inline __attribute__ ((always_inline)) void IfxScuWdt_setSafetyEndinitInline(uint16 password);
-# 214 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 214 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_clearCpuEndinit(uint16 password);
-# 226 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 226 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_clearSafetyEndinit(uint16 password);
-# 236 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 236 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_setCpuEndinit(uint16 password);
-# 246 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 246 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_setSafetyEndinit(uint16 password);
-# 266 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 266 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getCpuWatchdogPasswordInline(Ifx_SCU_WDTCPU *watchdog);
 
 
@@ -4358,38 +4358,38 @@ static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getCpuWatchdogEn
 
 
 static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getSafetyWatchdogEndInit(void);
-# 287 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 287 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getSafetyWatchdogPasswordInline(void);
-# 301 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 301 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_changeCpuWatchdogPassword(uint16 password, uint16 newPassword);
-# 312 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 312 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_changeCpuWatchdogReload(uint16 password, uint16 reload);
-# 322 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 322 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_changeSafetyWatchdogPassword(uint16 password, uint16 newPassword);
-# 333 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 333 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_changeSafetyWatchdogReload(uint16 password, uint16 reload);
-# 343 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 343 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_disableCpuWatchdog(uint16 password);
-# 353 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 353 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_disableSafetyWatchdog(uint16 password);
-# 363 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 363 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_enableCpuWatchdog(uint16 password);
-# 373 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 373 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_enableSafetyWatchdog(uint16 password);
-# 382 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 382 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern uint16 IfxScuWdt_getCpuWatchdogPassword(void);
 
 
 
 
 extern boolean IfxScuWdt_getCpuWatchdogEndInit(void);
-# 396 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 396 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern uint16 IfxScuWdt_getSafetyWatchdogPassword(void);
-# 406 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 406 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_serviceCpuWatchdog(uint16 password);
-# 416 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 416 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern void IfxScuWdt_serviceSafetyWatchdog(uint16 password);
-# 428 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 428 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
 extern boolean IfxScuWdt_enableWatchdogWithDebugger(void);
 
 
@@ -4527,17 +4527,17 @@ static inline __attribute__ ((always_inline)) void IfxScuWdt_setSafetyEndinitInl
     while ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.ENDINIT == 0)
     {}
 }
-# 124 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 1
-# 67 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 1
-# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 2
+# 124 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 1
+# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 1
+# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
+# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 2
 
 
 
@@ -5762,7 +5762,7 @@ typedef union
     signed int I;
     Ifx_CPU_TRIG_ACC_Bits B;
 } Ifx_CPU_TRIG_ACC;
-# 1292 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
+# 1292 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
 typedef volatile struct _Ifx_CPU_CPR
 {
     Ifx_CPU_CPR_L CL;
@@ -5798,7 +5798,7 @@ typedef volatile struct _Ifx_CPU_TR
     Ifx_CPU_TR_EVT EVT;
     Ifx_CPU_TR_ADR ADR;
 } Ifx_CPU_TR;
-# 1339 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
+# 1339 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
 typedef volatile struct _Ifx_CPU
 {
     unsigned char reserved_0[4144];
@@ -5903,9 +5903,9 @@ typedef volatile struct _Ifx_CPU_SPROT
     Ifx_CPU_SPROT_ACCENB ACCENB;
     unsigned char reserved_E108[7928];
 } Ifx_CPU_SPROT;
-# 73 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 2
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 2
-# 116 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+# 73 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 2
+# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 2
+# 116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
 typedef enum
 {
     IfxCpu_DBGST_HALT_run = 0,
@@ -5958,11 +5958,11 @@ typedef enum
 
 
 extern const IfxModule_IndexMap IfxCpu_cfg_indexMap[(3)];
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 1
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 68 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef struct _Ifx_SRC_SRCR_Bits
 {
     unsigned int SRPN:8;
@@ -5994,7 +5994,7 @@ typedef union
     signed int I;
     Ifx_SRC_SRCR_Bits B;
 } Ifx_SRC_SRCR;
-# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef volatile struct _Ifx_SRC_AGBT
 {
     Ifx_SRC_SRCR SR;
@@ -6279,7 +6279,7 @@ typedef volatile struct _Ifx_SRC_XBAR
 {
     Ifx_SRC_SRCR SRC;
 } Ifx_SRC_XBAR;
-# 400 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 400 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef volatile struct _Ifx_SRC_GAGBT
 {
     Ifx_SRC_AGBT AGBT[1];
@@ -6485,7 +6485,7 @@ typedef volatile struct _Ifx_SRC_GXBAR
 {
     Ifx_SRC_XBAR XBAR;
 } Ifx_SRC_GXBAR;
-# 617 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 617 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef volatile struct _Ifx_SRC
 {
     Ifx_SRC_GCPU CPU;
@@ -6553,17 +6553,17 @@ typedef volatile struct _Ifx_SRC
     Ifx_SRC_GGTM GTM;
     unsigned char reserved_1F50[176];
 } Ifx_SRC;
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 2
-# 69 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 2
+# 69 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\_Utilities/Ifx_Assert.h" 1
-# 73 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\_Utilities/Ifx_Assert.h" 1
+# 73 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
-# 75 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-# 111 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
+# 75 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 111 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 typedef unsigned int IfxCpu_spinLock;
 
 
@@ -6573,7 +6573,7 @@ typedef unsigned int IfxCpu_mutexLock;
 
 
 typedef unsigned int IfxCpu_syncEvent;
-# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 129 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 typedef enum
 {
     IfxCpu_CoreMode_halt,
@@ -6591,7 +6591,7 @@ typedef enum
     IfxCpu_CounterMode_normal = 0,
     IfxCpu_CounterMode_task = 1
 } IfxCpu_CounterMode;
-# 157 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 157 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 typedef struct
 {
     uint32 counter;
@@ -6612,7 +6612,7 @@ typedef struct
     IfxCpu_Counter counter2;
     IfxCpu_Counter counter3;
 } IfxCpu_Perf;
-# 191 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 191 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) Ifx_CPU *IfxCpu_getAddress(IfxCpu_ResourceCpu cpu);
 
 
@@ -6627,7 +6627,7 @@ static inline __attribute__ ((always_inline)) IfxCpu_Id IfxCpu_getCoreId(void);
 
 
 static inline __attribute__ ((always_inline)) IfxCpu_ResourceCpu IfxCpu_getCoreIndex(void);
-# 214 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 214 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_initCSA(uint32 *csaBegin, uint32 *csaEnd);
 
 
@@ -6639,7 +6639,7 @@ static inline __attribute__ ((always_inline)) void IfxCpu_setSafetyTaskIdentifie
 
 
 static inline __attribute__ ((always_inline)) void IfxCpu_triggerSwReset(void);
-# 234 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 234 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern IfxCpu_CoreMode IfxCpu_getCoreMode(Ifx_CPU *cpu);
 
 
@@ -6647,15 +6647,15 @@ extern IfxCpu_CoreMode IfxCpu_getCoreMode(Ifx_CPU *cpu);
 
 
 extern IfxCpu_ResourceCpu IfxCpu_getIndex(Ifx_CPU *cpu);
-# 249 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 249 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern boolean IfxCpu_setCoreMode(Ifx_CPU *cpu, IfxCpu_CoreMode mode);
-# 258 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 258 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern boolean IfxCpu_setProgramCounter(Ifx_CPU *cpu, uint32 programCounter);
-# 267 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 267 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern boolean IfxCpu_startCore(Ifx_CPU *cpu, uint32 programCounter);
-# 284 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 284 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) boolean IfxCpu_areInterruptsEnabled(void);
-# 294 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 294 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) boolean IfxCpu_disableInterrupts(void);
 
 
@@ -6668,11 +6668,11 @@ static inline __attribute__ ((always_inline)) void IfxCpu_enableInterrupts(void)
 
 
 static inline __attribute__ ((always_inline)) void IfxCpu_forceDisableInterrupts(void);
-# 314 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 314 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_restoreInterrupts(boolean enabled);
-# 332 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 332 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificDataAccessCacheability(uint16 segmentNumberMask, boolean enable);
-# 341 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 341 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificInstructionAccessCacheability(uint16 segmentNumberMask, boolean enable);
 
 
@@ -6685,13 +6685,13 @@ static inline __attribute__ ((always_inline)) void IfxCpu_invalidateProgramCache
 
 
 static inline __attribute__ ((always_inline)) boolean IfxCpu_isAddressCachable(void *address);
-# 363 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 363 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_setDataCache(boolean enable);
-# 374 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 374 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_setProgramCache(boolean enable);
-# 391 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 391 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) uint32 IfxCpu_getClockCounter(void);
-# 404 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 404 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) boolean IfxCpu_getClockCounterStickyOverflow(void);
 
 
@@ -6701,7 +6701,7 @@ static inline __attribute__ ((always_inline)) boolean IfxCpu_getClockCounterStic
 
 
 static inline __attribute__ ((always_inline)) uint32 IfxCpu_getInstructionCounter(void);
-# 425 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 425 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) boolean IfxCpu_getInstructionCounterStickyOverflow(void);
 
 
@@ -6724,13 +6724,13 @@ static inline __attribute__ ((always_inline)) boolean IfxCpu_getPerformanceCount
 
 
 static inline __attribute__ ((always_inline)) void IfxCpu_resetAndStartCounters(IfxCpu_CounterMode mode);
-# 457 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 457 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_setPerformanceCountersEnableBit(uint32 enable);
-# 466 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 466 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) IfxCpu_Perf IfxCpu_stopCounters(void);
-# 476 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 476 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_updateClockCounter(uint32 count);
-# 485 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 485 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 static inline __attribute__ ((always_inline)) void IfxCpu_updateInstructionCounter(uint32 count);
 
 
@@ -6740,9 +6740,9 @@ static inline __attribute__ ((always_inline)) void IfxCpu_updateInstructionCount
 
 
 static inline __attribute__ ((always_inline)) void IfxCpu_updatePerformanceCounter(uint32 address, uint32 count);
-# 520 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 520 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern boolean IfxCpu_acquireMutex(IfxCpu_mutexLock *lock);
-# 538 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 538 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern void IfxCpu_releaseMutex(IfxCpu_mutexLock *lock);
 
 
@@ -6752,9 +6752,9 @@ extern void IfxCpu_releaseMutex(IfxCpu_mutexLock *lock);
 
 
 extern void IfxCpu_resetSpinLock(IfxCpu_spinLock *lock);
-# 565 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 565 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern boolean IfxCpu_setSpinLock(IfxCpu_spinLock *lock, uint32 timeoutCount);
-# 580 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 580 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern uint32 IfxCpu_getRandomValue(uint32 *seed);
 
 
@@ -6764,9 +6764,9 @@ extern uint32 IfxCpu_getRandomValue(uint32 *seed);
 
 
 extern uint32 IfxCpu_getRandomValueWithinRange(uint32 *seed, uint32 min, uint32 max);
-# 631 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 631 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern boolean IfxCpu_waitEvent(IfxCpu_syncEvent *event, uint32 timeoutMilliSec);
-# 640 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 640 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 extern void IfxCpu_emitEvent(IfxCpu_syncEvent *event);
 
 
@@ -7211,13 +7211,13 @@ static inline __attribute__ ((always_inline)) void IfxCpu_updatePerformanceCount
     cctrl.B.CE = enableBit;
     do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
 }
-# 125 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 125 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 1
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
 typedef struct _Ifx_FLASH_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -8112,7 +8112,7 @@ typedef union
     signed int I;
     Ifx_FLASH_UBAB_TOP_Bits B;
 } Ifx_FLASH_UBAB_TOP;
-# 967 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
+# 967 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
 typedef volatile struct _Ifx_FLASH_CBAB
 {
     Ifx_FLASH_CBAB_CFG CFG;
@@ -8135,7 +8135,7 @@ typedef volatile struct _Ifx_FLASH_UBAB
     Ifx_FLASH_UBAB_STAT STAT;
     Ifx_FLASH_UBAB_TOP TOP;
 } Ifx_FLASH_UBAB;
-# 1001 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
+# 1001 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
 typedef volatile struct _Ifx_FLASH
 {
     Ifx_FLASH_COMM0 COMM0;
@@ -8187,20 +8187,20 @@ typedef volatile struct _Ifx_FLASH
     Ifx_FLASH_ACCEN1 ACCEN1;
     Ifx_FLASH_ACCEN0 ACCEN0;
 } Ifx_FLASH;
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 2
-# 128 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 1
-# 50 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 1
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h" 1
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 1
-# 102 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 2
+# 128 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 1
+# 50 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 1
+# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h" 1
+# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 1
+# 102 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
 typedef struct _Ifx_P_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -8886,7 +8886,7 @@ typedef union
     signed int I;
     Ifx_P_PDR1_Bits B;
 } Ifx_P_PDR1;
-# 758 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
+# 758 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
 typedef volatile struct _Ifx_P
 {
     Ifx_P_OUT OUT;
@@ -8926,9 +8926,9 @@ typedef volatile struct _Ifx_P
     Ifx_P_ACCEN1 ACCEN1;
     Ifx_P_ACCEN0 ACCEN0;
 } Ifx_P;
-# 103 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 2
-# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
-# 76 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
+# 103 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 2
+# 59 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
+# 76 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
 typedef enum
 {
     IfxPort_Index_00 = 0,
@@ -8969,8 +8969,8 @@ typedef struct
 extern const IfxPort_Esr_Masks IfxPort_cfg_esrMasks[(16)];
 
 extern const IfxModule_IndexMap IfxPort_cfg_indexMap[(16)];
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 2
-# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 2
+# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 typedef enum
 {
     IfxPort_ControlledBy_port = 0,
@@ -9076,7 +9076,7 @@ typedef enum
     IfxPort_State_low = (1U << 16) | (0 << 0),
     IfxPort_State_toggled = (1U << 16) | (1U << 0)
 } IfxPort_State;
-# 188 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 188 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 typedef struct
 {
     Ifx_P *port;
@@ -9092,33 +9092,33 @@ typedef struct
     IfxPort_OutputIdx mode;
     IfxPort_PadDriver padDriver;
 } IfxPort_Pin_Config;
-# 226 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 226 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) boolean IfxPort_getPinState(Ifx_P *port, uint8 pinIndex);
-# 241 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 241 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinHigh(Ifx_P *port, uint8 pinIndex);
-# 256 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 256 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinLow(Ifx_P *port, uint8 pinIndex);
-# 270 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 270 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinModeInput(Ifx_P *port, uint8 pinIndex, IfxPort_InputMode mode);
-# 285 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 285 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinModeOutput(Ifx_P *port, uint8 pinIndex, IfxPort_OutputMode mode, IfxPort_OutputIdx index);
-# 301 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 301 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinState(Ifx_P *port, uint8 pinIndex, IfxPort_State action);
-# 316 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 316 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_togglePin(Ifx_P *port, uint8 pinIndex);
-# 339 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 339 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern boolean IfxPort_disableEmergencyStop(Ifx_P *port, uint8 pinIndex);
-# 357 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 357 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern boolean IfxPort_enableEmergencyStop(Ifx_P *port, uint8 pinIndex);
-# 373 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 373 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinMode(Ifx_P *port, uint8 pinIndex, IfxPort_Mode mode);
-# 388 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 388 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinPadDriver(Ifx_P *port, uint8 pinIndex, IfxPort_PadDriver padDriver);
-# 412 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 412 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) uint32 IfxPort_getGroupState(Ifx_P *port, uint8 pinIndex, uint16 mask);
-# 431 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 431 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setGroupState(Ifx_P *port, uint8 pinIndex, uint16 mask, uint16 data);
-# 441 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 441 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern Ifx_P *IfxPort_getAddress(IfxPort_Index port);
 
 
@@ -9126,19 +9126,19 @@ extern Ifx_P *IfxPort_getAddress(IfxPort_Index port);
 
 
 extern IfxPort_Index IfxPort_getIndex(Ifx_P *port);
-# 463 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 463 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setGroupModeInput(Ifx_P *port, uint8 pinIndex, uint16 mask, IfxPort_InputMode mode);
-# 480 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 480 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setGroupModeOutput(Ifx_P *port, uint8 pinIndex, uint16 mask, IfxPort_OutputMode mode, IfxPort_OutputIdx index);
-# 496 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 496 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setGroupPadDriver(Ifx_P *port, uint8 pinIndex, uint16 mask, IfxPort_PadDriver padDriver);
-# 505 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 505 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinModeLvdsHigh(Ifx_P *port, uint8 pinIndex, IfxPort_Mode mode, IfxPort_ControlledBy enablePortControlled);
-# 514 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 514 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinModeLvdsMedium(Ifx_P *port, uint8 pinIndex, IfxPort_PadDriver lvdsPadDriver, IfxPort_PadSupply padSupply);
-# 531 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 531 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_resetESR(Ifx_P *port, uint8 pinIndex);
-# 542 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 542 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setESR(Ifx_P *port, uint8 pinIndex);
 
 
@@ -9197,7 +9197,7 @@ static inline __attribute__ ((always_inline)) void IfxPort_togglePin(Ifx_P *port
 {
     IfxPort_setPinState(port, pinIndex, IfxPort_State_toggled);
 }
-# 51 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 2
+# 51 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 2
 
 
 
@@ -9295,7 +9295,7 @@ extern IfxScu_Wdtlck_Out IfxScu_WDT0LCK_P20_8_OUT;
 extern IfxScu_Wdtlck_Out IfxScu_WDT1LCK_P20_7_OUT;
 extern IfxScu_Wdtlck_Out IfxScu_WDT2LCK_P20_6_OUT;
 extern IfxScu_Wdtlck_Out IfxScu_WDTSLCK_P20_9_OUT;
-# 162 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
+# 162 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
 extern const IfxScu_Dcdcsync_Out *IfxScu_Dcdcsync_Out_pinTable[1][2];
 
 
@@ -9315,10 +9315,10 @@ extern const IfxScu_Req_In *IfxScu_Req_In_pinTable[1][8][4];
 
 
 extern const IfxScu_Wdtlck_Out *IfxScu_Wdtlck_Out_pinTable[1][4];
-# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-# 145 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 129 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 145 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 typedef void (*IfxScuCcu_PllStepsFunctionHook)(void);
-# 155 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 155 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 typedef enum
 {
     IfxScuCcu_K1divider_1 = 0,
@@ -9874,7 +9874,7 @@ typedef enum
     IfxScuCcu_Pdivider_15,
     IfxScuCcu_Pdivider_16
 } IfxScuCcu_Pdivider;
-# 721 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 721 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 typedef struct
 {
     uint32 value;
@@ -9956,7 +9956,7 @@ typedef struct
 {
     IfxScuCcu_InitialStepConfig pllInitialStep;
 } IfxScuCcu_ErayPllConfig;
-# 816 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 816 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getEvrFrequency(void);
 
 
@@ -9987,7 +9987,7 @@ static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getStmFrequency(
 
 
 static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getCanFrequency(void);
-# 855 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 855 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern float32 IfxScuCcu_getBaud1Frequency(void);
 
 
@@ -10121,9 +10121,9 @@ extern float32 IfxScuCcu_setSpbFrequency(float32 spbFreq);
 
 
 extern float32 IfxScuCcu_setSriFrequency(float32 sriFreq);
-# 1003 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1003 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern boolean IfxScuCcu_calculateSysPllDividers(IfxScuCcu_Config *cfg, uint32 fPll);
-# 1012 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1012 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern boolean IfxScuCcu_init(const IfxScuCcu_Config *cfg);
 
 
@@ -10131,7 +10131,7 @@ extern boolean IfxScuCcu_init(const IfxScuCcu_Config *cfg);
 
 
 extern void IfxScuCcu_initConfig(IfxScuCcu_Config *cfg);
-# 1027 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1027 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern boolean IfxScuCcu_initErayPll(const IfxScuCcu_ErayPllConfig *cfg);
 
 
@@ -10145,11 +10145,11 @@ extern void IfxScuCcu_initErayPllConfig(IfxScuCcu_ErayPllConfig *cfg);
 
 
 extern void IfxScuCcu_switchToBackupClock(const IfxScuCcu_Config *cfg);
-# 1052 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1052 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getGtmFrequency(void);
-# 1063 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1063 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern float32 IfxScuCcu_setGtmFrequency(float32 gtmFreq);
-# 1072 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1072 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern const IfxScuCcu_Config IfxScuCcu_defaultClockConfig;
 
 
@@ -10222,11 +10222,11 @@ static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getCanFrequency(
 
     return canFrequency;
 }
-# 138 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 1
-# 112 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h" 1
-# 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h"
+# 138 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 1
+# 112 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h" 1
+# 66 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h"
 typedef enum
 {
     IfxSrc_Tos_cpu0 = 0,
@@ -10234,24 +10234,24 @@ typedef enum
     IfxSrc_Tos_cpu2 = 2,
     IfxSrc_Tos_dma = 3
 } IfxSrc_Tos;
-# 113 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 2
-# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 113 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 2
+# 129 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_clearOverrun(volatile Ifx_SRC_SRCR *src);
-# 138 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 138 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_clearRequest(volatile Ifx_SRC_SRCR *src);
-# 147 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 147 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) boolean IfxSrc_isOverrun(volatile Ifx_SRC_SRCR *src);
-# 156 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 156 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) boolean IfxSrc_isRequested(volatile Ifx_SRC_SRCR *src);
-# 165 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 165 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_setRequest(volatile Ifx_SRC_SRCR *src);
-# 183 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 183 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_deinit(volatile Ifx_SRC_SRCR *src);
-# 192 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 192 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_disable(volatile Ifx_SRC_SRCR *src);
-# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 201 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_enable(volatile Ifx_SRC_SRCR *src);
-# 233 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 233 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_init(volatile Ifx_SRC_SRCR *src, IfxSrc_Tos typOfService, Ifx_Priority priority);
 
 
@@ -10314,11 +10314,11 @@ static inline __attribute__ ((always_inline)) void IfxSrc_setRequest(volatile If
 {
     src->B.SETR = 1;
 }
-# 139 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 1
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
+# 139 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
 typedef struct _Ifx_CBS_COMDATA_Bits
 {
     unsigned int DATA : 32;
@@ -11291,13 +11291,13 @@ typedef union
 
     Ifx_CBS_TRTGB_L_Bits B;
 } Ifx_CBS_TRTGB_L;
-# 1045 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
+# 1045 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
 typedef volatile struct _Ifx_CBS_TRTGB
 {
     Ifx_CBS_TRTGB_L LB;
     Ifx_CBS_TRTGB_H HB;
 } Ifx_CBS_TRTGB;
-# 1062 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
+# 1062 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
 typedef volatile struct _Ifx_CBS
 {
     unsigned char reserved_0[8];
@@ -11347,9 +11347,9 @@ typedef volatile struct _Ifx_CBS
     Ifx_CBS_TRIG TRIG[22];
     unsigned char reserved_158[168];
 } Ifx_CBS;
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 2
-# 140 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-# 157 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 2
+# 140 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 157 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 typedef enum
 {
     IfxStm_Comparator_0 = 0,
@@ -11457,7 +11457,7 @@ typedef enum
     IfxStm_SuspendMode_hard = 1,
     IfxStm_SuspendMode_soft = 2
 } IfxStm_SuspendMode;
-# 275 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 275 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 typedef struct
 {
     IfxStm_Comparator comparator;
@@ -11468,7 +11468,7 @@ typedef struct
     Ifx_Priority triggerPriority;
     IfxSrc_Tos typeOfService;
 } IfxStm_CompareConfig;
-# 299 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 299 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) uint64 IfxStm_get(Ifx_STM *stm);
 
 
@@ -11492,7 +11492,7 @@ static inline __attribute__ ((always_inline)) boolean IfxStm_isModuleSuspended(I
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_setSuspendMode(Ifx_STM *stm, IfxStm_SuspendMode mode);
-# 331 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 331 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_disableModule(Ifx_STM *stm);
 
 
@@ -11513,7 +11513,7 @@ extern Ifx_STM *IfxStm_getAddress(IfxStm_Index stm);
 
 
 extern IfxStm_Index IfxStm_getIndex(Ifx_STM *stm);
-# 365 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 365 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) uint32 IfxStm_getLower(Ifx_STM *stm);
 
 
@@ -11566,7 +11566,7 @@ static inline __attribute__ ((always_inline)) uint32 IfxStm_getOffsetTimer(Ifx_S
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_waitTicks(Ifx_STM *stm, uint32 ticks);
-# 432 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 432 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) uint32 IfxStm_getCompare(Ifx_STM *stm, IfxStm_Comparator comparator);
 
 
@@ -11598,7 +11598,7 @@ static inline __attribute__ ((always_inline)) void IfxStm_increaseCompare(Ifx_ST
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_updateCompare(Ifx_STM *stm, IfxStm_Comparator comparator, uint32 ticks);
-# 473 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 473 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_clearCompareFlag(Ifx_STM *stm, IfxStm_Comparator comparator);
 
 
@@ -11641,9 +11641,9 @@ extern void IfxStm_initCompareConfig(IfxStm_CompareConfig *config);
 
 
 extern boolean IfxStm_isCompareFlagSet(Ifx_STM *stm, IfxStm_Comparator comparator);
-# 524 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 524 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_setCompareControl(Ifx_STM *stm, IfxStm_Comparator comparator, IfxStm_ComparatorOffset offset, IfxStm_ComparatorSize size, IfxStm_ComparatorInterrupt interrupt);
-# 537 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 537 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) void IfxStm_setSleepMode(Ifx_STM *stm, IfxStm_SleepMode mode);
 
 
@@ -11668,7 +11668,7 @@ static inline __attribute__ ((always_inline)) boolean IfxStm_isDeadLine(sint64 d
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_wait(sint64 timeout);
-# 570 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 570 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_resetModule(Ifx_STM *stm);
 
 
@@ -11886,17 +11886,17 @@ static inline __attribute__ ((always_inline)) void IfxStm_wait(sint64 timeout)
     while (IfxStm_isDeadLine(deadLine) == (0u))
     {}
 }
-# 11 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 1
-# 238 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 1
-# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 1
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
+# 11 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 1
+# 238 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 1
+# 64 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 1
+# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
 typedef struct _Ifx_ASCLIN_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -12489,14 +12489,14 @@ typedef union
     signed int I;
     Ifx_ASCLIN_TXFIFOCON_Bits B;
 } Ifx_ASCLIN_TXFIFOCON;
-# 665 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
+# 665 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
 typedef volatile struct _Ifx_ASCLIN_LIN
 {
     Ifx_ASCLIN_LIN_CON CON;
     Ifx_ASCLIN_LIN_BTIMER BTIMER;
     Ifx_ASCLIN_LIN_HTIMER HTIMER;
 } Ifx_ASCLIN_LIN;
-# 683 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
+# 683 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
 typedef volatile struct _Ifx_ASCLIN
 {
     Ifx_ASCLIN_CLC CLC;
@@ -12526,9 +12526,9 @@ typedef volatile struct _Ifx_ASCLIN
     Ifx_ASCLIN_ACCEN1 ACCEN1;
     Ifx_ASCLIN_ACCEN0 ACCEN0;
 } Ifx_ASCLIN;
-# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 2
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 2
-# 77 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
+# 64 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 2
+# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 2
+# 77 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
 typedef enum
 {
     IfxAsclin_Index_none = -1,
@@ -12544,14 +12544,14 @@ typedef enum
 
 
 extern const IfxModule_IndexMap IfxAsclin_cfg_indexMap[(4)];
-# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
+# 65 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
 
 
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h" 1
-# 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h" 1
+# 56 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
 typedef const struct
 {
     Ifx_ASCLIN* module;
@@ -12706,7 +12706,7 @@ extern IfxAsclin_Tx_Out IfxAsclin3_TX_P22_0_OUT;
 extern IfxAsclin_Tx_Out IfxAsclin3_TX_P22_1_OUT;
 extern IfxAsclin_Tx_Out IfxAsclin3_TX_P32_2_OUT;
 extern IfxAsclin_Tx_Out IfxAsclin3_TX_P32_3_OUT;
-# 222 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
+# 222 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
 extern const IfxAsclin_Cts_In *IfxAsclin_Cts_In_pinTable[4][2];
 
 
@@ -12723,8 +12723,8 @@ extern const IfxAsclin_Slso_Out *IfxAsclin_Slso_Out_pinTable[4][6];
 
 
 extern const IfxAsclin_Tx_Out *IfxAsclin_Tx_Out_pinTable[4][13];
-# 71 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
-# 81 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 71 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
+# 81 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 typedef enum
 {
     IfxAsclin_Checksum_classic = 0,
@@ -13089,7 +13089,7 @@ typedef enum
     IfxAsclin_TxFifoInterruptLevel_14,
     IfxAsclin_TxFifoInterruptLevel_15
 } IfxAsclin_TxFifoInterruptLevel;
-# 459 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 459 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_clearAllFlags(Ifx_ASCLIN *asclin);
 
 
@@ -13473,7 +13473,7 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_setTxFifoInletWidth
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_setTxFifoInterruptLevel(Ifx_ASCLIN *asclin, IfxAsclin_TxFifoInterruptLevel level);
-# 856 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 856 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) boolean IfxAsclin_getBreakDetectedFlagStatus(Ifx_ASCLIN *asclin);
 
 
@@ -13668,7 +13668,7 @@ static inline __attribute__ ((always_inline)) boolean IfxAsclin_getTxResponseEnd
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_setSleepMode(Ifx_ASCLIN *asclin, IfxAsclin_SleepMode mode);
-# 1059 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1059 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern Ifx_ASCLIN *IfxAsclin_getAddress(IfxAsclin_Index asclin);
 
 
@@ -13705,7 +13705,7 @@ extern float32 IfxAsclin_getShiftFrequency(Ifx_ASCLIN *asclin);
 
 
 extern void IfxAsclin_resetModule(Ifx_ASCLIN *asclin);
-# 1109 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1109 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_disableAllFlags(Ifx_ASCLIN *asclin);
 
 
@@ -13968,9 +13968,9 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_setSlavePolarity(If
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_setSuspendMode(Ifx_ASCLIN *asclin, IfxAsclin_SuspendMode mode);
-# 1386 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1386 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern boolean IfxAsclin_setBitTiming(Ifx_ASCLIN *asclin, float32 baudrate, IfxAsclin_OversamplingFactor oversampling, IfxAsclin_SamplePointPosition samplepoint, IfxAsclin_SamplesPerBit medianFilter);
-# 1401 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1401 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern void IfxAsclin_disableModule(Ifx_ASCLIN *asclin);
 
 
@@ -14025,7 +14025,7 @@ extern uint32 IfxAsclin_read32(Ifx_ASCLIN *asclin, uint32 *data, uint32 count);
 
 
 extern uint32 IfxAsclin_read8(Ifx_ASCLIN *asclin, uint8 *data, uint32 count);
-# 1464 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1464 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern void IfxAsclin_setBaudrateBitFields(Ifx_ASCLIN *asclin, uint16 prescaler, uint16 numerator, uint16 denominator, IfxAsclin_OversamplingFactor oversampling);
 
 
@@ -14058,7 +14058,7 @@ extern uint32 IfxAsclin_write32(Ifx_ASCLIN *asclin, uint32 *data, uint32 count);
 
 
 extern uint32 IfxAsclin_write8(Ifx_ASCLIN *asclin, uint8 *data, uint32 count);
-# 1518 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1518 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_initCtsPin(const IfxAsclin_Cts_In *cts, IfxPort_InputMode inputMode, IfxPort_PadDriver padDriver);
 
 
@@ -14068,7 +14068,7 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_initCtsPin(const If
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_initRtsPin(const IfxAsclin_Rts_Out *rts, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
-# 1540 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1540 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_initRxPin(const IfxAsclin_Rx_In *rx, IfxPort_InputMode inputMode, IfxPort_PadDriver padDriver);
 
 
@@ -14094,7 +14094,7 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_initSlsoPin(const I
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_initTxPin(const IfxAsclin_Tx_Out *tx, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
-# 1576 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1576 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) uint32 IfxAsclin_readRxData(Ifx_ASCLIN *asclin);
 
 
@@ -14981,9 +14981,9 @@ static inline __attribute__ ((always_inline)) uint16 IfxAsclin_getAllErrorFlagsS
 {
     return (uint16)(asclin->FLAGS.U >> 16);
 }
-# 239 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 239 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 typedef struct
 {
     Ifx_SizeT count;
@@ -15008,9 +15008,9 @@ typedef struct _Fifo
     volatile boolean eventReader;
     volatile boolean eventWriter;
 } Ifx_Fifo;
-# 92 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 92 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern boolean Ifx_Fifo_canReadCount(Ifx_Fifo *fifo, Ifx_SizeT count, Ifx_TickTime timeout);
-# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern boolean Ifx_Fifo_canWriteCount(Ifx_Fifo *fifo, Ifx_SizeT count, Ifx_TickTime timeout);
 
 
@@ -15020,44 +15020,44 @@ extern boolean Ifx_Fifo_canWriteCount(Ifx_Fifo *fifo, Ifx_SizeT count, Ifx_TickT
 
 
 extern void Ifx_Fifo_clear(Ifx_Fifo *fifo);
-# 125 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 125 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_Fifo *Ifx_Fifo_create(Ifx_SizeT size, Ifx_SizeT elementSize);
-# 136 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 136 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern void Ifx_Fifo_destroy(Ifx_Fifo *fifo);
-# 151 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 151 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_Fifo *Ifx_Fifo_init(void *buffer, Ifx_SizeT size, Ifx_SizeT elementSize);
-# 165 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 165 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_SizeT Ifx_Fifo_read(Ifx_Fifo *fifo, void *data, Ifx_SizeT count, Ifx_TickTime timeout);
-# 177 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 177 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_SizeT Ifx_Fifo_write(Ifx_Fifo *fifo, const void *data, Ifx_SizeT count, Ifx_TickTime timeout);
-# 186 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 186 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) boolean Ifx_Fifo_flush(Ifx_Fifo *fifo, Ifx_TickTime timeout)
 {
     return Ifx_Fifo_canWriteCount(fifo, fifo->size, timeout);
 }
-# 203 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 203 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) Ifx_SizeT Ifx_Fifo_readCount(Ifx_Fifo *fifo)
 {
     return fifo->shared.count;
 }
-# 219 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 219 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) Ifx_SizeT Ifx_Fifo_writeCount(Ifx_Fifo *fifo)
 {
     return (Ifx_SizeT)(fifo->size - Ifx_Fifo_readCount(fifo));
 }
-# 232 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 232 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) boolean Ifx_Fifo_isEmpty(Ifx_Fifo *fifo)
 {
     return (Ifx_Fifo_readCount(fifo) != (0u)) ? (0u) : (1u);
 }
-# 240 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
+# 240 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 1
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h" 1
-# 115 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 1
+# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h" 1
+# 115 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h"
 typedef void *IfxStdIf_InterfaceDriver;
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 2
+# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 2
 
 
 
@@ -15068,9 +15068,9 @@ typedef struct IfxStdIf_DPipe_ IfxStdIf_DPipe;
 
 typedef volatile boolean *IfxStdIf_DPipe_WriteEvent;
 typedef volatile boolean *IfxStdIf_DPipe_ReadEvent;
-# 89 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 89 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_Write)(IfxStdIf_InterfaceDriver stdIf, void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
-# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_Read)(IfxStdIf_InterfaceDriver stdIf, void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
 
 
@@ -15120,11 +15120,11 @@ typedef sint32 (*IfxStdIf_DPipe_GetWriteCount)(IfxStdIf_InterfaceDriver stdIf);
 
 
 typedef IfxStdIf_DPipe_WriteEvent (*IfxStdIf_DPipe_GetWriteEvent)(IfxStdIf_InterfaceDriver stdIf);
-# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 163 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_CanReadCount)(IfxStdIf_InterfaceDriver stdIf, Ifx_SizeT count, Ifx_TickTime timeout);
-# 174 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 174 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_CanWriteCount)(IfxStdIf_InterfaceDriver stdIf, Ifx_SizeT count, Ifx_TickTime timeout);
-# 183 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 183 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_FlushTx)(IfxStdIf_InterfaceDriver stdIf, Ifx_TickTime timeout);
 
 
@@ -15336,7 +15336,7 @@ static inline __attribute__ ((always_inline)) void IfxStdIf_DPipe_resetSendCount
 
 
 extern void IfxStdIf_DPipe_print(IfxStdIf_DPipe *stdIf, pchar format, ...);
-# 242 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
+# 242 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
 
 
 
@@ -15476,7 +15476,7 @@ typedef struct
     boolean loopBack;
     Ifx_DataBufferMode dataBufferMode;
 } IfxAsclin_Asc_Config;
-# 399 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 399 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_isrError(IfxAsclin_Asc *asclin);
 
 
@@ -15492,11 +15492,11 @@ extern void IfxAsclin_Asc_isrReceive(IfxAsclin_Asc *asclin);
 
 
 extern void IfxAsclin_Asc_isrTransmit(IfxAsclin_Asc *asclin);
-# 431 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 431 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern uint8 IfxAsclin_Asc_blockingRead(IfxAsclin_Asc *asclin);
-# 441 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 441 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_blockingWrite(IfxAsclin_Asc *asclin, uint8 data);
-# 458 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 458 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_canReadCount(IfxAsclin_Asc *asclin, Ifx_SizeT count, Ifx_TickTime timeout);
 
 
@@ -15561,7 +15561,7 @@ extern sint32 IfxAsclin_Asc_getWriteCount(IfxAsclin_Asc *asclin);
 
 
 extern IfxStdIf_DPipe_WriteEvent IfxAsclin_Asc_getWriteEvent(IfxAsclin_Asc *asclin);
-# 534 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 534 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_read(IfxAsclin_Asc *asclin, void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
 
 
@@ -15569,15 +15569,15 @@ extern boolean IfxAsclin_Asc_read(IfxAsclin_Asc *asclin, void *data, Ifx_SizeT *
 
 
 extern void IfxAsclin_Asc_resetSendCount(IfxAsclin_Asc *asclin);
-# 553 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 553 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_write(IfxAsclin_Asc *asclin, const void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
-# 568 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 568 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_disableModule(IfxAsclin_Asc *asclin);
-# 578 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 578 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern IfxAsclin_Status IfxAsclin_Asc_initModule(IfxAsclin_Asc *asclin, const IfxAsclin_Asc_Config *config);
-# 588 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 588 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_initModuleConfig(IfxAsclin_Asc_Config *config, Ifx_ASCLIN *asclin);
-# 603 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 603 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_initiateTransmission(IfxAsclin_Asc *asclin);
 
 
@@ -15586,12 +15586,12 @@ extern void IfxAsclin_Asc_initiateTransmission(IfxAsclin_Asc *asclin);
 
 
 extern boolean IfxAsclin_Asc_stdIfDPipeInit(IfxStdIf_DPipe *stdif, IfxAsclin_Asc *asclin);
-# 12 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 12 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h" 1
-# 14 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 1
-# 79 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h" 1
+# 14 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 1
+# 79 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 typedef enum
 {
     IfxScuEru_ExternalInputSelection_0 = 0,
@@ -15653,11 +15653,11 @@ typedef enum
     IfxScuEru_OutputChannel_6,
     IfxScuEru_OutputChannel_7
 } IfxScuEru_OutputChannel;
-# 155 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 155 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 static inline __attribute__ ((always_inline)) void IfxScuEru_initReqPin(IfxScu_Req_In *req, IfxPort_InputMode inputMode);
-# 166 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 166 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 extern void IfxScuEru_selectExternalInput(IfxScuEru_InputChannel inputChannel, IfxScuEru_ExternalInputSelection inputSignal);
-# 180 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 180 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 extern void IfxScuEru_clearAllEventFlags(void);
 
 
@@ -15730,7 +15730,7 @@ extern uint32 IfxScuEru_getInputChannelConfiguration(IfxScuEru_InputChannel inpu
 
 
 extern void IfxScuEru_setEventFlag(IfxScuEru_InputChannel inputChannel);
-# 267 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 267 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 extern void IfxScuEru_connectTrigger(IfxScuEru_InputChannel inputChannel, IfxScuEru_InputNodePointer triggerSelect);
 
 
@@ -15744,9 +15744,9 @@ extern void IfxScuEru_disableTriggerPulse(IfxScuEru_InputChannel inputChannel);
 
 
 extern void IfxScuEru_enableTriggerPulse(IfxScuEru_InputChannel inputChannel);
-# 288 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 288 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 extern void IfxScuEru_setFlagPatternDetection(IfxScuEru_OutputChannel outputChannel, IfxScuEru_InputChannel inputChannel, boolean state);
-# 303 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+# 303 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
 extern void IfxScuEru_clearOutputChannelConfiguration(IfxScuEru_OutputChannel outputChannel);
 
 
@@ -15796,13 +15796,13 @@ static inline __attribute__ ((always_inline)) void IfxScuEru_initReqPin(IfxScu_R
     IfxPort_setPinModeInput(req->pin.port, req->pin.pinIndex, inputMode);
     IfxScuEru_selectExternalInput((IfxScuEru_InputChannel)req->channelId, (IfxScuEru_ExternalInputSelection)req->select);
 }
-# 15 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 1
-# 360 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 1
-# 70 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h" 1
-# 116 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h"
+# 15 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 1
+# 360 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 1
+# 70 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h" 1
+# 116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h"
 typedef enum
 {
     IfxVadc_GroupId_0,
@@ -15823,13 +15823,13 @@ typedef enum
 
 
 extern const uint32 IfxVadc_cfg_srcAddresses[((8) *4) + ((2) * 4) ];
-# 71 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 1
-# 48 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 1
-# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h" 1
-# 67 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
+# 71 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 1
+# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h" 1
+# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
 typedef struct _Ifx_VADC_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -17185,7 +17185,7 @@ typedef union
     signed int I;
     Ifx_VADC_OCS_Bits B;
 } Ifx_VADC_OCS;
-# 1432 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
+# 1432 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
 typedef volatile struct _Ifx_VADC_G
 {
     Ifx_VADC_G_ARBCFG ARBCFG;
@@ -17252,7 +17252,7 @@ typedef volatile struct _Ifx_VADC_G
     Ifx_VADC_G_RESD RESD[16];
     unsigned char reserved_340[192];
 } Ifx_VADC_G;
-# 1510 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
+# 1510 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
 typedef volatile struct _Ifx_VADC
 {
     Ifx_VADC_CLC CLC;
@@ -17299,8 +17299,8 @@ typedef volatile struct _Ifx_VADC
     Ifx_VADC_G G[8];
     unsigned char reserved_2480[7040];
 } Ifx_VADC;
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 2
-# 49 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 2
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 2
+# 49 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 2
 
 
 
@@ -17433,7 +17433,7 @@ extern IfxVadc_Vadcg_In IfxVadc_G7_2_P00_4_IN;
 extern IfxVadc_Vadcg_In IfxVadc_G7_3_P00_3_IN;
 extern IfxVadc_Vadcg_In IfxVadc_G7_4_P00_2_IN;
 extern IfxVadc_Vadcg_In IfxVadc_G7_5_P00_1_IN;
-# 191 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
+# 191 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
 extern const IfxVadc_Emux_Out *IfxVadc_Emux_Out_pinTable[1][12];
 
 
@@ -17441,16 +17441,16 @@ extern const IfxVadc_GxBfl_Out *IfxVadc_GxBfl_Out_pinTable[1][8][4];
 
 
 extern const IfxVadc_Vadcg_In *IfxVadc_Vadcg_In_pinTable[1][8][8];
-# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_bf.h" 1
-# 73 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_bf.h" 1
+# 73 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
 typedef struct _Ifx_CCU6_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -18368,7 +18368,7 @@ typedef union
     signed int I;
     Ifx_CCU6_TRPCTR_Bits B;
 } Ifx_CCU6_TRPCTR;
-# 990 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
+# 990 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
 typedef volatile struct _Ifx_CCU6
 {
     Ifx_CCU6_CLC CLC;
@@ -18424,11 +18424,11 @@ typedef volatile struct _Ifx_CCU6
     Ifx_CCU6_ACCEN1 ACCEN1;
     Ifx_CCU6_ACCEN0 ACCEN0;
 } Ifx_CCU6;
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 2
-# 77 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_bf.h" 1
-# 78 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 87 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 2
+# 77 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_bf.h" 1
+# 78 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 87 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 typedef enum
 {
     IfxVadc_AnalogConverterMode_off = 0,
@@ -18838,7 +18838,7 @@ typedef enum
     IfxVadc_TriggerSource_14,
     IfxVadc_TriggerSource_15
 } IfxVadc_TriggerSource;
-# 512 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 512 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_configureWaitForReadMode(Ifx_VADC_G *group, uint32 resultIdx, boolean waitForRead);
 
 
@@ -18896,7 +18896,7 @@ static inline __attribute__ ((always_inline)) IfxVadc_TriggerMode IfxVadc_getBac
 
 
 static inline __attribute__ ((always_inline)) IfxVadc_ChannelResolution IfxVadc_getGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum);
-# 598 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 598 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_GLOBRES IfxVadc_getGlobalResult(Ifx_VADC *vadc);
 
 
@@ -18906,9 +18906,9 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_GLOBRES IfxVadc_getGlobal
 
 
 static inline __attribute__ ((always_inline)) float32 IfxVadc_getGlobalSampleTime(Ifx_VADC *vadc, uint8 inputClassNum, float32 analogFrequency);
-# 642 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 642 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_getGroupResult(Ifx_VADC_G *group, Ifx_VADC_G_RES *results, uint32 resultOffset, uint32 numResults);
-# 676 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 676 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_getResult(Ifx_VADC_G *group, uint32 resultIdx);
 
 
@@ -18929,7 +18929,7 @@ static inline __attribute__ ((always_inline)) boolean IfxVadc_isRequestBackgroun
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setAutoBackgroundScan(Ifx_VADC *vadc, boolean autoBackgroundScanEnable);
-# 726 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 726 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setBackgroundScan(Ifx_VADC *vadc, IfxVadc_GroupId groupId, uint32 channels, uint32 mask);
 
 
@@ -18947,7 +18947,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setBackgroundScanSlot
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setBackgroundScanSlotTriggerConfig(Ifx_VADC *vadc, IfxVadc_TriggerMode triggerMode, IfxVadc_TriggerSource triggerSource);
-# 751 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 751 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_startBackgroundScan(Ifx_VADC *vadc);
 
 
@@ -18956,11 +18956,11 @@ static inline __attribute__ ((always_inline)) void IfxVadc_startBackgroundScan(I
 
 
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_getDebugResult(Ifx_VADC_G *group, uint32 resultIdx);
-# 768 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 768 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern IfxVadc_Status IfxVadc_getBackgroundScanStatus(Ifx_VADC *vadc);
-# 805 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 805 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern Ifx_VADC_G_RES IfxVadc_getResultBasedOnRequestSource(Ifx_VADC *vadc, Ifx_VADC_G *group, IfxVadc_ChannelId channel, IfxVadc_RequestSource sourceType);
-# 820 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 820 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_disableScanSlotExternalTrigger(Ifx_VADC_G *vadcG);
 
 
@@ -19039,13 +19039,13 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setScanSlotGatingConf
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setScanSlotTriggerConfig(Ifx_VADC_G *vadcG, IfxVadc_TriggerMode triggerMode, IfxVadc_TriggerSource triggerSource);
-# 906 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 906 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_startScan(Ifx_VADC_G *group);
-# 916 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 916 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern IfxVadc_Status IfxVadc_getScanStatus(Ifx_VADC_G *group);
-# 942 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 942 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_setScan(Ifx_VADC_G *group, uint32 channels, uint32 mask);
-# 971 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 971 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_addToQueue(Ifx_VADC_G *group, IfxVadc_ChannelId channel, uint32 options);
 
 
@@ -19130,9 +19130,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setQueueSlotTriggerOp
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_startQueue(Ifx_VADC_G *group);
-# 1070 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1070 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern IfxVadc_Status IfxVadc_getQueueStatus(Ifx_VADC_G *group);
-# 1087 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1087 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_initEmuxPin(const IfxVadc_Emux_Out *emux, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
 
 
@@ -19142,9 +19142,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_initEmuxPin(const Ifx
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_initGxBflPin(const IfxVadc_GxBfl_Out *gxBfl, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
-# 1111 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1111 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) uint32 IfxVadc_calculateSampleTime(float32 analogFrequency, float32 sampleTime);
-# 1121 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1121 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern float32 IfxVadc_getAdcAnalogFrequency(Ifx_VADC *vadc);
 
 
@@ -19152,7 +19152,7 @@ extern float32 IfxVadc_getAdcAnalogFrequency(Ifx_VADC *vadc);
 
 
 extern float32 IfxVadc_getAdcDigitalFrequency(Ifx_VADC *vadc);
-# 1142 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1142 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_clearAllResultRequests(Ifx_VADC_G *vadcG);
 
 
@@ -19212,7 +19212,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setArbitrationRoundLe
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setGroupResolution(Ifx_VADC_G *vadcG, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1209 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1209 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setGroupSampleTime(Ifx_VADC_G *vadcG, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19221,9 +19221,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setGroupSampleTime(If
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setMasterIndex(Ifx_VADC_G *vadcG, uint8 masterIndex);
-# 1230 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1230 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_setArbiterPriority(Ifx_VADC_G *vadcG, boolean slotEnable, IfxVadc_RequestSlotPriority prio, IfxVadc_RequestSlotStartMode mode, IfxVadc_RequestSource slot);
-# 1245 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1245 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_disableModule(Ifx_VADC *vadc);
 
 
@@ -19264,7 +19264,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_initiateStartupCalibr
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1293 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1293 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setGlobalSampleTime(Ifx_VADC *vadc, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19273,7 +19273,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setGlobalSampleTime(I
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setSleepMode(Ifx_VADC *vadc, IfxVadc_SleepMode mode);
-# 1311 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1311 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_disableAccess(Ifx_VADC *vadc, IfxVadc_Protection protectionSet);
 
 
@@ -19363,7 +19363,7 @@ extern void IfxVadc_selectPowerSupplyVoltage(Ifx_VADC *vadc, IfxVadc_LowSupplyVo
 
 
 extern void IfxVadc_startupCalibration(Ifx_VADC *vadc);
-# 1415 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1415 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_clearChannelRequest(Ifx_VADC_G *vadcG, IfxVadc_ChannelId channelId);
 
 
@@ -19533,9 +19533,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setUpperBoundary(Ifx_
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_storeGroupResult(Ifx_VADC_G *vadcG, IfxVadc_ChannelId channelIndex, IfxVadc_ChannelResult resultRegister);
-# 1598 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1598 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern float32 IfxVadc_getChannelConversionTime(Ifx_VADC *vadc, IfxVadc_GroupId group, IfxVadc_InputClasses inputClass, float32 analogFrequency, float32 moduleFrequency, IfxVadc_ConversionType conversionMode);
-# 1614 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1614 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) IfxVadc_ChannelResolution IfxVadc_getEmuxGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum);
 
 
@@ -19568,7 +19568,7 @@ static inline __attribute__ ((always_inline)) float32 IfxVadc_getEmuxGroupSample
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1654 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1654 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGlobalSampleTime(Ifx_VADC *vadc, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19578,7 +19578,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGlobalSampleTi
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGroupResolution(Ifx_VADC_G *vadcG, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1671 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1671 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGroupSampletime(Ifx_VADC_G *vadcG, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19588,7 +19588,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGroupSampletim
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxInterfaceForGroup(Ifx_VADC *vadc, IfxVadc_EmuxInterface emuxInterface, IfxVadc_GroupId group);
-# 1696 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1696 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_configExternalMultiplexerMode(Ifx_VADC *vadc, Ifx_VADC_G *vadcG, IfxVadc_ExternalMultiplexerMode mode, uint8 channels, IfxVadc_EmuxSelectValue startChannel, IfxVadc_EmuxCodingScheme code, IfxVadc_EmuxSampleTimeControl sampleTimeControl, IfxVadc_ChannelSelectionStyle channelSelectionStyle);
 
 
@@ -20343,7 +20343,7 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_getDebugRe
 
     return tmpResult;
 }
-# 361 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 2
+# 361 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 2
 
 
 
@@ -20351,7 +20351,7 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_getDebugRe
 
 
 typedef uint8 IfxVadc_Adc_SYNCTR_STSEL;
-# 377 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 377 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 typedef struct
 {
     Ifx_VADC *vadc;
@@ -20519,21 +20519,21 @@ typedef struct
     boolean disablePostCalibration;
     IfxVadc_Adc_ArbiterConfig arbiter;
 } IfxVadc_Adc_GroupConfig;
-# 561 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 561 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_deInitModule(IfxVadc_Adc *vadc);
-# 571 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 571 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_getModuleConfig(IfxVadc_Adc *vadc, IfxVadc_Adc_Config *config);
-# 639 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 639 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_Adc_getResultBasedOnRequestSource(IfxVadc_Adc_Group *group, IfxVadc_ChannelId channel, IfxVadc_RequestSource sourceType);
-# 649 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 649 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_disableModule(Ifx_VADC *vadc);
-# 659 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 659 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern IfxVadc_Status IfxVadc_Adc_initModule(IfxVadc_Adc *vadc, const IfxVadc_Adc_Config *config);
-# 669 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 669 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initModuleConfig(IfxVadc_Adc_Config *config, Ifx_VADC *vadc);
-# 710 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 710 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G *IfxVadc_Adc_getGroupRegsFromGroup(const IfxVadc_Adc_Group *group);
-# 797 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 797 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_getGroupResult(IfxVadc_Adc_Group *group, Ifx_VADC_G_RES *results, uint32 resultOffset, uint32 numResults);
 
 
@@ -20541,17 +20541,17 @@ static inline __attribute__ ((always_inline)) void IfxVadc_Adc_getGroupResult(If
 
 
 static inline __attribute__ ((always_inline)) Ifx_VADC *IfxVadc_Adc_getVadcFromGroup(const IfxVadc_Adc_Group *group);
-# 816 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 816 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_deInitGroup(IfxVadc_Adc_Group *group);
-# 826 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 826 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_getGroupConfig(IfxVadc_Adc_Group *group, IfxVadc_Adc_GroupConfig *config);
-# 836 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 836 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern IfxVadc_Status IfxVadc_Adc_initGroup(IfxVadc_Adc_Group *group, const IfxVadc_Adc_GroupConfig *config);
-# 846 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 846 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initGroupConfig(IfxVadc_Adc_GroupConfig *config, IfxVadc_Adc *vadc);
-# 865 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 865 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_configureWaitForReadMode(IfxVadc_Adc_Channel *channel, boolean waitForRead);
-# 874 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 874 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_Adc_getResult(IfxVadc_Adc_Channel *channel);
 
 
@@ -20559,7 +20559,7 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_Adc_getResu
 
 
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_Adc_getDebugResult(IfxVadc_Adc_Channel *channel);
-# 894 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 894 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_getChannelConfig(IfxVadc_Adc_Channel *channel, IfxVadc_Adc_ChannelConfig *config);
 
 
@@ -20568,11 +20568,11 @@ extern void IfxVadc_Adc_getChannelConfig(IfxVadc_Adc_Channel *channel, IfxVadc_A
 
 
 extern float32 IfxVadc_Adc_getChannelConversionTime(IfxVadc_Adc_Channel *channel, IfxVadc_ConversionType conversionMode);
-# 911 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 911 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern IfxVadc_Status IfxVadc_Adc_initChannel(IfxVadc_Adc_Channel *channel, const IfxVadc_Adc_ChannelConfig *config);
-# 921 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 921 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initChannelConfig(IfxVadc_Adc_ChannelConfig *config, const IfxVadc_Adc_Group *group);
-# 940 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 940 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_configureWaitForReadModeForGlobalResultRegister(IfxVadc_Adc *vadc, boolean waitForRead);
 
 
@@ -20580,27 +20580,27 @@ static inline __attribute__ ((always_inline)) void IfxVadc_Adc_configureWaitForR
 
 
 static inline __attribute__ ((always_inline)) IfxVadc_Status IfxVadc_Adc_getBackgroundScanStatus(IfxVadc_Adc *vadc);
-# 1035 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1035 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_GLOBRES IfxVadc_Adc_getGlobalResult(IfxVadc_Adc *vadc);
-# 1047 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1047 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_setBackgroundScan(IfxVadc_Adc *vadc, IfxVadc_Adc_Group *group, uint32 channels, uint32 mask);
-# 1056 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1056 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_startBackgroundScan(IfxVadc_Adc *vadc);
-# 1074 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1074 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) IfxVadc_Status IfxVadc_Adc_getScanStatus(IfxVadc_Adc_Group *group);
-# 1085 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1085 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_setScan(IfxVadc_Adc_Group *group, uint32 channels, uint32 mask);
-# 1094 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1094 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_startScan(IfxVadc_Adc_Group *group);
-# 1116 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_addToQueue(IfxVadc_Adc_Channel *channel, uint32 options);
-# 1125 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1125 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_clearQueue(IfxVadc_Adc_Group *group);
-# 1134 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1134 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) IfxVadc_Status IfxVadc_Adc_getQueueStatus(IfxVadc_Adc_Group *group);
-# 1143 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1143 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_startQueue(IfxVadc_Adc_Group *group);
-# 1159 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1159 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initExternalMultiplexerModeConfig(IfxVadc_Adc_EmuxControl *emuxConfig, Ifx_VADC *vadc);
 
 
@@ -20750,11 +20750,10412 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_Adc_getDeb
 {
     return IfxVadc_getDebugResult(channel->group->group, channel->resultreg);
 }
-# 16 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.h" 1
-# 17 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std\\IfxPort.h" 1
-# 18 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 16 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.h" 1
+# 17 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std\\IfxPort.h" 1
+# 18 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+
+
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h" 1
+# 123 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h" 1
+# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_reg.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_reg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_regdef.h" 1
+# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_regdef.h"
+typedef struct _Ifx_GTM_ACCEN0_Bits
+{
+    volatile unsigned int EN0:1;
+    volatile unsigned int EN1:1;
+    volatile unsigned int EN2:1;
+    volatile unsigned int EN3:1;
+    volatile unsigned int EN4:1;
+    volatile unsigned int EN5:1;
+    volatile unsigned int EN6:1;
+    volatile unsigned int EN7:1;
+    volatile unsigned int EN8:1;
+    volatile unsigned int EN9:1;
+    volatile unsigned int EN10:1;
+    volatile unsigned int EN11:1;
+    volatile unsigned int EN12:1;
+    volatile unsigned int EN13:1;
+    volatile unsigned int EN14:1;
+    volatile unsigned int EN15:1;
+    volatile unsigned int EN16:1;
+    volatile unsigned int EN17:1;
+    volatile unsigned int EN18:1;
+    volatile unsigned int EN19:1;
+    volatile unsigned int EN20:1;
+    volatile unsigned int EN21:1;
+    volatile unsigned int EN22:1;
+    volatile unsigned int EN23:1;
+    volatile unsigned int EN24:1;
+    volatile unsigned int EN25:1;
+    volatile unsigned int EN26:1;
+    volatile unsigned int EN27:1;
+    volatile unsigned int EN28:1;
+    volatile unsigned int EN29:1;
+    volatile unsigned int EN30:1;
+    volatile unsigned int EN31:1;
+} Ifx_GTM_ACCEN0_Bits;
+
+
+typedef struct _Ifx_GTM_ACCEN1_Bits
+{
+    volatile unsigned int reserved_0:32;
+} Ifx_GTM_ACCEN1_Bits;
+
+
+typedef struct _Ifx_GTM_ADCTRIG0OUT0_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int SEL1:4;
+    volatile unsigned int SEL2:4;
+    volatile unsigned int SEL3:4;
+    volatile unsigned int SEL4:4;
+    volatile unsigned int SEL5:4;
+    volatile unsigned int SEL6:4;
+    volatile unsigned int SEL7:4;
+} Ifx_GTM_ADCTRIG0OUT0_Bits;
+
+
+typedef struct _Ifx_GTM_ADCTRIG0OUT1_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_ADCTRIG0OUT1_Bits;
+
+
+typedef struct _Ifx_GTM_ADCTRIG1OUT0_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int SEL1:4;
+    volatile unsigned int SEL2:4;
+    volatile unsigned int SEL3:4;
+    volatile unsigned int SEL4:4;
+    volatile unsigned int SEL5:4;
+    volatile unsigned int SEL6:4;
+    volatile unsigned int SEL7:4;
+} Ifx_GTM_ADCTRIG1OUT0_Bits;
+
+
+typedef struct _Ifx_GTM_ADCTRIG1OUT1_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_ADCTRIG1OUT1_Bits;
+
+
+typedef struct _Ifx_GTM_AEI_ADDR_XPT_Bits
+{
+    volatile unsigned int TO_ADDR:20;
+    volatile unsigned int TO_W1R0:1;
+    volatile unsigned int reserved_21:11;
+} Ifx_GTM_AEI_ADDR_XPT_Bits;
+
+
+typedef struct _Ifx_GTM_AFD_CH_BUF_ACC_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_AFD_CH_BUF_ACC_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_ARU_ACCESS_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int RREQ:1;
+    volatile unsigned int WREQ:1;
+    volatile unsigned int reserved_14:18;
+} Ifx_GTM_ARU_ARU_ACCESS_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DATA_H_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ARU_DATA_H_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DATA_L_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ARU_DATA_L_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DBG_ACCESS0_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:23;
+} Ifx_GTM_ARU_DBG_ACCESS0_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DBG_ACCESS1_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:23;
+} Ifx_GTM_ARU_DBG_ACCESS1_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DBG_DATA0_H_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ARU_DBG_DATA0_H_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DBG_DATA0_L_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ARU_DBG_DATA0_L_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DBG_DATA1_H_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ARU_DBG_DATA1_H_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_DBG_DATA1_L_Bits
+{
+    volatile unsigned int DATA:29;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ARU_DBG_DATA1_L_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_IRQ_EN_Bits
+{
+    volatile unsigned int NEW_DATA0_IRQ_EN:1;
+    volatile unsigned int NEW_DATA1_IRQ_EN:1;
+    volatile unsigned int ACC_ACK_IRQ_EN:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_ARU_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_NEW_DATA0:1;
+    volatile unsigned int TRG_NEW_DATA:1;
+    volatile unsigned int TRG_ACC_ACK:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_ARU_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_ARU_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_ARU_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int NEW_DATA0:1;
+    volatile unsigned int NEW_DATA1:1;
+    volatile unsigned int ACC_ACK:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_ARU_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_ACT_TB_Bits
+{
+    volatile unsigned int ACT_TB:24;
+    volatile unsigned int TB_TRIG:1;
+    volatile unsigned int TBU_SEL:2;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_ATOM_AGC_ACT_TB_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_ENDIS_CTRL_Bits
+{
+    volatile unsigned int ENDIS_CTRL0:2;
+    volatile unsigned int ENDIS_CTRL1:2;
+    volatile unsigned int ENDIS_CTRL2:2;
+    volatile unsigned int ENDIS_CTRL3:2;
+    volatile unsigned int ENDIS_CTRL4:2;
+    volatile unsigned int ENDIS_CTRL5:2;
+    volatile unsigned int ENDIS_CTRL6:2;
+    volatile unsigned int ENDIS_CTRL7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_ATOM_AGC_ENDIS_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits
+{
+    volatile unsigned int ENDIS_STAT0:2;
+    volatile unsigned int ENDIS_STAT1:2;
+    volatile unsigned int ENDIS_STAT2:2;
+    volatile unsigned int ENDIS_STAT3:2;
+    volatile unsigned int ENDIS_STAT4:2;
+    volatile unsigned int ENDIS_STAT5:2;
+    volatile unsigned int ENDIS_STAT6:2;
+    volatile unsigned int ENDIS_STAT7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_FUPD_CTRL_Bits
+{
+    volatile unsigned int FUPD_CTRL0:2;
+    volatile unsigned int FUPD_CTRL1:2;
+    volatile unsigned int FUPD_CTRL2:2;
+    volatile unsigned int FUPD_CTRL3:2;
+    volatile unsigned int FUPD_CTRL4:2;
+    volatile unsigned int FUPD_CTRL5:2;
+    volatile unsigned int FUPD_CTRL6:2;
+    volatile unsigned int FUPD_CTRL7:2;
+    volatile unsigned int RSTCN0_CH0:2;
+    volatile unsigned int RSTCN0_CH1:2;
+    volatile unsigned int RSTCN0_CH2:2;
+    volatile unsigned int RSTCN0_CH3:2;
+    volatile unsigned int RSTCN0_CH4:2;
+    volatile unsigned int RSTCN0_CH5:2;
+    volatile unsigned int RSTCN0_CH6:2;
+    volatile unsigned int RSTCN0_CH7:2;
+} Ifx_GTM_ATOM_AGC_FUPD_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_GLB_CTRL_Bits
+{
+    volatile unsigned int HOST_TRIG:1;
+    volatile unsigned int reserved_1:7;
+    volatile unsigned int RST_CH0:1;
+    volatile unsigned int RST_CH1:1;
+    volatile unsigned int RST_CH2:1;
+    volatile unsigned int RST_CH3:1;
+    volatile unsigned int RST_CH4:1;
+    volatile unsigned int RST_CH5:1;
+    volatile unsigned int RST_CH6:1;
+    volatile unsigned int RST_CH7:1;
+    volatile unsigned int UPEN_CTRL0:2;
+    volatile unsigned int UPEN_CTRL1:2;
+    volatile unsigned int UPEN_CTRL2:2;
+    volatile unsigned int UPEN_CTRL3:2;
+    volatile unsigned int UPEN_CTRL4:2;
+    volatile unsigned int UPEN_CTRL5:2;
+    volatile unsigned int UPEN_CTRL6:2;
+    volatile unsigned int UPEN_CTRL7:2;
+} Ifx_GTM_ATOM_AGC_GLB_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_INT_TRIG_Bits
+{
+    volatile unsigned int INT_TRIG0:2;
+    volatile unsigned int INT_TRIG1:2;
+    volatile unsigned int INT_TRIG2:2;
+    volatile unsigned int INT_TRIG3:2;
+    volatile unsigned int INT_TRIG4:2;
+    volatile unsigned int INT_TRIG5:2;
+    volatile unsigned int INT_TRIG6:2;
+    volatile unsigned int INT_TRIG7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_ATOM_AGC_INT_TRIG_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_OUTEN_CTRL_Bits
+{
+    volatile unsigned int OUTEN_CTRL0:2;
+    volatile unsigned int OUTEN_CTRL1:2;
+    volatile unsigned int OUTEN_CTRL2:2;
+    volatile unsigned int OUTEN_CTRL3:2;
+    volatile unsigned int OUTEN_CTRL4:2;
+    volatile unsigned int OUTEN_CTRL5:2;
+    volatile unsigned int OUTEN_CTRL6:2;
+    volatile unsigned int OUTEN_CTRL7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_ATOM_AGC_OUTEN_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_AGC_OUTEN_STAT_Bits
+{
+    volatile unsigned int OUTEN_STAT0:2;
+    volatile unsigned int OUTEN_STAT1:2;
+    volatile unsigned int OUTEN_STAT2:2;
+    volatile unsigned int OUTEN_STAT3:2;
+    volatile unsigned int OUTEN_STAT4:2;
+    volatile unsigned int OUTEN_STAT5:2;
+    volatile unsigned int OUTEN_STAT6:2;
+    volatile unsigned int OUTEN_STAT7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_ATOM_AGC_OUTEN_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_CM0_Bits
+{
+    volatile unsigned int CM0:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_ATOM_CH_CM0_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_CM1_Bits
+{
+    volatile unsigned int CM1:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_ATOM_CH_CM1_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_CN0_Bits
+{
+    volatile unsigned int CN0:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_ATOM_CH_CN0_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_CTRL_Bits
+{
+    volatile unsigned int MODE:2;
+    volatile unsigned int TB12_SEL:1;
+    volatile unsigned int ARU_EN:1;
+    volatile unsigned int ACB:5;
+    volatile unsigned int CMP_CTRL:1;
+    volatile unsigned int reserved_10:1;
+    volatile unsigned int SL:1;
+    volatile unsigned int CLK_SRC:3;
+    volatile unsigned int reserved_15:1;
+    volatile unsigned int WR_REQ:1;
+    volatile unsigned int reserved_17:3;
+    volatile unsigned int RST_CCU0:1;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int TRIGOUT:1;
+    volatile unsigned int SLA:1;
+    volatile unsigned int OSM:1;
+    volatile unsigned int ABM:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_ATOM_CH_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_IRQ_EN_Bits
+{
+    volatile unsigned int CCU0TC_IRQ_EN:1;
+    volatile unsigned int CCU1TC_IRQ_EN:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_ATOM_CH_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_CCU0TC:1;
+    volatile unsigned int TRG_CCU1TC:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_ATOM_CH_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_ATOM_CH_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int CCU0TC:1;
+    volatile unsigned int CCU1TC:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_ATOM_CH_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_RDADDR_Bits
+{
+    volatile unsigned int RDADDR0:9;
+    volatile unsigned int reserved_9:7;
+    volatile unsigned int RDADDR1:9;
+    volatile unsigned int reserved_25:7;
+} Ifx_GTM_ATOM_CH_RDADDR_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_SOMC_Bits
+{
+    volatile unsigned int MODE:2;
+    volatile unsigned int TB12_SEL:1;
+    volatile unsigned int ARU_EN:1;
+    volatile unsigned int ACB10:2;
+    volatile unsigned int ACB42:3;
+    volatile unsigned int CMP_CTRL:1;
+    volatile unsigned int reserved_10:1;
+    volatile unsigned int SL:1;
+    volatile unsigned int reserved_12:4;
+    volatile unsigned int WR_REQ:1;
+    volatile unsigned int reserved_17:7;
+    volatile unsigned int TRIGOUT:1;
+    volatile unsigned int SLA:1;
+    volatile unsigned int reserved_26:1;
+    volatile unsigned int ABM:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_ATOM_CH_SOMC_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_SOMI_Bits
+{
+    volatile unsigned int MODE:2;
+    volatile unsigned int reserved_2:1;
+    volatile unsigned int ARU_EN:1;
+    volatile unsigned int ACB0:1;
+    volatile unsigned int reserved_5:6;
+    volatile unsigned int SL:1;
+    volatile unsigned int reserved_12:20;
+} Ifx_GTM_ATOM_CH_SOMI_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_SOMP_Bits
+{
+    volatile unsigned int MODE:2;
+    volatile unsigned int reserved_2:1;
+    volatile unsigned int ARU_EN:1;
+    volatile unsigned int ADL:2;
+    volatile unsigned int reserved_6:5;
+    volatile unsigned int SL:1;
+    volatile unsigned int CLK_SRC_SR:3;
+    volatile unsigned int reserved_15:5;
+    volatile unsigned int RST_CCU0:1;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int TRIGOUT:1;
+    volatile unsigned int reserved_25:1;
+    volatile unsigned int OSM:1;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_ATOM_CH_SOMP_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_SOMS_Bits
+{
+    volatile unsigned int MODE:2;
+    volatile unsigned int reserved_2:1;
+    volatile unsigned int ARU_EN:1;
+    volatile unsigned int ACB0:1;
+    volatile unsigned int reserved_5:6;
+    volatile unsigned int SL:1;
+    volatile unsigned int CLK_SRC:3;
+    volatile unsigned int reserved_15:11;
+    volatile unsigned int OSM:1;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_ATOM_CH_SOMS_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_SR0_Bits
+{
+    volatile unsigned int SR0:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_ATOM_CH_SR0_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_SR1_Bits
+{
+    volatile unsigned int SR1:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_ATOM_CH_SR1_Bits;
+
+
+typedef struct _Ifx_GTM_ATOM_CH_STAT_Bits
+{
+    volatile unsigned int OL:1;
+    volatile unsigned int reserved_1:15;
+    volatile unsigned int ACBI:5;
+    volatile unsigned int DV:1;
+    volatile unsigned int WRF:1;
+    volatile unsigned int reserved_23:1;
+    volatile unsigned int ACBO:5;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_ATOM_CH_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_EIRQ_EN_Bits
+{
+    volatile unsigned int DEST_ERR_EN:1;
+    volatile unsigned int DID_EN0:1;
+    volatile unsigned int DID_EN1:1;
+    volatile unsigned int DID_EN2:1;
+    volatile unsigned int DID_EN3:1;
+    volatile unsigned int DID_EN4:1;
+    volatile unsigned int DID_EN5:1;
+    volatile unsigned int DID_EN6:1;
+    volatile unsigned int DID_EN7:1;
+    volatile unsigned int DID_EN8:1;
+    volatile unsigned int DID_EN9:1;
+    volatile unsigned int DID_EN10:1;
+    volatile unsigned int DID_EN11:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_IRQ_EN_Bits
+{
+    volatile unsigned int DEST_ERR_EN:1;
+    volatile unsigned int DID_EN0:1;
+    volatile unsigned int DID_EN1:1;
+    volatile unsigned int DID_EN2:1;
+    volatile unsigned int DID_EN3:1;
+    volatile unsigned int DID_EN4:1;
+    volatile unsigned int DID_EN5:1;
+    volatile unsigned int DID_EN6:1;
+    volatile unsigned int DID_EN7:1;
+    volatile unsigned int DID_EN8:1;
+    volatile unsigned int DID_EN9:1;
+    volatile unsigned int DID_EN10:1;
+    volatile unsigned int DID_EN11:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_DEST_ERR:1;
+    volatile unsigned int TRG_DID0:1;
+    volatile unsigned int TRG_DID1:1;
+    volatile unsigned int TRG_DID2:1;
+    volatile unsigned int TRG_DID3:1;
+    volatile unsigned int TRG_DID4:1;
+    volatile unsigned int TRG_DID5:1;
+    volatile unsigned int TRG_DID6:1;
+    volatile unsigned int TRG_DID7:1;
+    volatile unsigned int TRG_DID8:1;
+    volatile unsigned int TRG_DID9:1;
+    volatile unsigned int TRG_DID10:1;
+    volatile unsigned int TRG_DID11:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_BRC_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int DEST_ERR:1;
+    volatile unsigned int DID0:1;
+    volatile unsigned int DID1:1;
+    volatile unsigned int DID2:1;
+    volatile unsigned int DID3:1;
+    volatile unsigned int DID4:1;
+    volatile unsigned int DID5:1;
+    volatile unsigned int DID6:1;
+    volatile unsigned int DID7:1;
+    volatile unsigned int DID8:1;
+    volatile unsigned int DID9:1;
+    volatile unsigned int DID10:1;
+    volatile unsigned int DID11:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_RST_Bits
+{
+    volatile unsigned int RST:1;
+    volatile unsigned int reserved_1:31;
+} Ifx_GTM_BRC_RST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC0_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC0_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC0_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC0_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC10_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC10_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC10_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC10_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC11_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC11_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC11_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC11_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC1_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC1_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC1_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC1_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC2_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC2_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC2_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC2_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC3_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC3_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC3_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC3_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC4_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC4_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC4_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC4_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC5_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC5_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC5_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC5_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC6_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC6_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC6_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC6_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC7_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC7_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC7_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC7_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC8_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC8_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC8_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC8_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC9_ADDR_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:3;
+    volatile unsigned int BRC_MODE:1;
+    volatile unsigned int reserved_13:19;
+} Ifx_GTM_BRC_SRC9_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_BRC_SRC9_DEST_Bits
+{
+    volatile unsigned int EN_DEST0:1;
+    volatile unsigned int EN_DEST1:1;
+    volatile unsigned int EN_DEST2:1;
+    volatile unsigned int EN_DEST3:1;
+    volatile unsigned int EN_DEST4:1;
+    volatile unsigned int EN_DEST5:1;
+    volatile unsigned int EN_DEST6:1;
+    volatile unsigned int EN_DEST7:1;
+    volatile unsigned int EN_DEST8:1;
+    volatile unsigned int EN_DEST9:1;
+    volatile unsigned int EN_DEST10:1;
+    volatile unsigned int EN_DEST11:1;
+    volatile unsigned int EN_DEST12:1;
+    volatile unsigned int EN_DEST13:1;
+    volatile unsigned int EN_DEST14:1;
+    volatile unsigned int EN_DEST15:1;
+    volatile unsigned int EN_DEST16:1;
+    volatile unsigned int EN_DEST17:1;
+    volatile unsigned int EN_DEST18:1;
+    volatile unsigned int EN_DEST19:1;
+    volatile unsigned int EN_DEST20:1;
+    volatile unsigned int EN_DEST21:1;
+    volatile unsigned int EN_TRASHBIN:1;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_BRC_SRC9_DEST_Bits;
+
+
+typedef struct _Ifx_GTM_BRIDGE_MODE_Bits
+{
+    volatile unsigned int BRG_MODE:1;
+    volatile unsigned int MSK_WR_RSP:1;
+    volatile unsigned int reserved_2:6;
+    volatile unsigned int MODE_UP_PGR:1;
+    volatile unsigned int BUFF_OVL:1;
+    volatile unsigned int reserved_10:2;
+    volatile unsigned int SYNC_INPUT_REG:1;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int BRG_RST:1;
+    volatile unsigned int reserved_17:7;
+    volatile unsigned int BUFF_DPT:8;
+} Ifx_GTM_BRIDGE_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_BRIDGE_PTR1_Bits
+{
+    volatile unsigned int NEW_TRAN_PTR:5;
+    volatile unsigned int FIRST_RSP_PTR:5;
+    volatile unsigned int TRAN_IN_PGR:5;
+    volatile unsigned int ABT_TRAN_PGR:5;
+    volatile unsigned int FBC:6;
+    volatile unsigned int RSP_TRAN_RDY:6;
+} Ifx_GTM_BRIDGE_PTR1_Bits;
+
+
+typedef struct _Ifx_GTM_BRIDGE_PTR2_Bits
+{
+    volatile unsigned int TRAN_IN_PGR2:5;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_BRIDGE_PTR2_Bits;
+
+
+typedef struct _Ifx_GTM_CLC_Bits
+{
+    volatile unsigned int DISR:1;
+    volatile unsigned int DISS:1;
+    volatile unsigned int reserved_2:1;
+    volatile unsigned int EDIS:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_CLC_Bits;
+
+
+typedef struct _Ifx_GTM_CMP_EIRQ_EN_Bits
+{
+    volatile unsigned int ABWC0_EN_EIRQ:1;
+    volatile unsigned int ABWC1_EN_EIRQ:1;
+    volatile unsigned int ABWC2_EN_EIRQ:1;
+    volatile unsigned int ABWC3_EN_EIRQ:1;
+    volatile unsigned int ABWC4_EN_EIRQ:1;
+    volatile unsigned int ABWC5_EN_EIRQ:1;
+    volatile unsigned int ABWC6_EN_EIRQ:1;
+    volatile unsigned int ABWC7_EN_EIRQ:1;
+    volatile unsigned int ABWC8_EN_EIRQ:1;
+    volatile unsigned int ABWC9_EN_EIRQ:1;
+    volatile unsigned int ABWC10_EN_EIRQ:1;
+    volatile unsigned int ABWC11_EN_EIRQ:1;
+    volatile unsigned int TBWC0_EN_EIRQ:1;
+    volatile unsigned int TBWC1_EN_EIRQ:1;
+    volatile unsigned int TBWC2_EN_EIRQ:1;
+    volatile unsigned int TBWC3_EN_EIRQ:1;
+    volatile unsigned int TBWC4_EN_EIRQ:1;
+    volatile unsigned int TBWC5_EN_EIRQ:1;
+    volatile unsigned int TBWC6_EN_EIRQ:1;
+    volatile unsigned int TBWC7_EN_EIRQ:1;
+    volatile unsigned int TBWC8_EN_EIRQ:1;
+    volatile unsigned int TBWC9_EN_EIRQ:1;
+    volatile unsigned int TBWC10_EN_EIRQ:1;
+    volatile unsigned int TBWC11_EN_EIRQ:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMP_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_CMP_EN_Bits
+{
+    volatile unsigned int ABWC0_EN:1;
+    volatile unsigned int ABWC1_EN:1;
+    volatile unsigned int ABWC2_EN:1;
+    volatile unsigned int ABWC3_EN:1;
+    volatile unsigned int ABWC4_EN:1;
+    volatile unsigned int ABWC5_EN:1;
+    volatile unsigned int ABWC6_EN:1;
+    volatile unsigned int ABWC7_EN:1;
+    volatile unsigned int ABWC8_EN:1;
+    volatile unsigned int ABWC9_EN:1;
+    volatile unsigned int ABWC10_EN:1;
+    volatile unsigned int ABWC11_EN:1;
+    volatile unsigned int TBWC0_EN:1;
+    volatile unsigned int TBWC1_EN:1;
+    volatile unsigned int TBWC2_EN:1;
+    volatile unsigned int TBWC3_EN:1;
+    volatile unsigned int TBWC4_EN:1;
+    volatile unsigned int TBWC5_EN:1;
+    volatile unsigned int TBWC6_EN:1;
+    volatile unsigned int TBWC7_EN:1;
+    volatile unsigned int TBWC8_EN:1;
+    volatile unsigned int TBWC9_EN:1;
+    volatile unsigned int TBWC10_EN:1;
+    volatile unsigned int TBWC11_EN:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMP_EN_Bits;
+
+
+typedef struct _Ifx_GTM_CMP_IRQ_EN_Bits
+{
+    volatile unsigned int ABWC0_EN_IRQ:1;
+    volatile unsigned int ABWC1_EN_IRQ:1;
+    volatile unsigned int ABWC2_EN_IRQ:1;
+    volatile unsigned int ABWC3_EN_IRQ:1;
+    volatile unsigned int ABWC4_EN_IRQ:1;
+    volatile unsigned int ABWC5_EN_IRQ:1;
+    volatile unsigned int ABWC6_EN_IRQ:1;
+    volatile unsigned int ABWC7_EN_IRQ:1;
+    volatile unsigned int ABWC8_EN_IRQ:1;
+    volatile unsigned int ABWC9_EN_IRQ:1;
+    volatile unsigned int ABWC10_EN_IRQ:1;
+    volatile unsigned int ABWC11_EN_IRQ:1;
+    volatile unsigned int TBWC0_EN_IRQ:1;
+    volatile unsigned int TBWC1_EN_IRQ:1;
+    volatile unsigned int TBWC2_EN_IRQ:1;
+    volatile unsigned int TBWC3_EN_IRQ:1;
+    volatile unsigned int TBWC4_EN_IRQ:1;
+    volatile unsigned int TBWC5_EN_IRQ:1;
+    volatile unsigned int TBWC6_EN_IRQ:1;
+    volatile unsigned int TBWC7_EN_IRQ:1;
+    volatile unsigned int TBWC8_EN_IRQ:1;
+    volatile unsigned int TBWC9_EN_IRQ:1;
+    volatile unsigned int TBWC10_EN_IRQ:1;
+    volatile unsigned int TBWC11_EN_IRQ:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMP_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_CMP_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_ABWC0:1;
+    volatile unsigned int TRG_ABWC1:1;
+    volatile unsigned int TRG_ABWC2:1;
+    volatile unsigned int TRG_ABWC3:1;
+    volatile unsigned int TRG_ABWC4:1;
+    volatile unsigned int TRG_ABWC5:1;
+    volatile unsigned int TRG_ABWC6:1;
+    volatile unsigned int TRG_ABWC7:1;
+    volatile unsigned int TRG_ABWC8:1;
+    volatile unsigned int TRG_ABWC9:1;
+    volatile unsigned int TRG_ABWC10:1;
+    volatile unsigned int TRG_ABWC11:1;
+    volatile unsigned int TRG_TBWC0:1;
+    volatile unsigned int TRG_TBWC1:1;
+    volatile unsigned int TRG_TBWC2:1;
+    volatile unsigned int TRG_TBWC3:1;
+    volatile unsigned int TRG_TBWC4:1;
+    volatile unsigned int TRG_TBWC5:1;
+    volatile unsigned int TRG_TBWC6:1;
+    volatile unsigned int TRG_TBWC7:1;
+    volatile unsigned int TRG_TBWC8:1;
+    volatile unsigned int TRG_TBWC9:1;
+    volatile unsigned int TRG_TBWC10:1;
+    volatile unsigned int TRG_TBWC11:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMP_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_CMP_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_CMP_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_CMP_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int ABWC0:1;
+    volatile unsigned int ABWC1:1;
+    volatile unsigned int ABWC2:1;
+    volatile unsigned int ABWC3:1;
+    volatile unsigned int ABWC4:1;
+    volatile unsigned int ABWC5:1;
+    volatile unsigned int ABWC6:1;
+    volatile unsigned int ABWC7:1;
+    volatile unsigned int ABWC8:1;
+    volatile unsigned int ABWC9:1;
+    volatile unsigned int ABWC10:1;
+    volatile unsigned int ABWC11:1;
+    volatile unsigned int TBWC0:1;
+    volatile unsigned int TBWC1:1;
+    volatile unsigned int TBWC2:1;
+    volatile unsigned int TBWC3:1;
+    volatile unsigned int TBWC4:1;
+    volatile unsigned int TBWC5:1;
+    volatile unsigned int TBWC6:1;
+    volatile unsigned int TBWC7:1;
+    volatile unsigned int TBWC8:1;
+    volatile unsigned int TBWC9:1;
+    volatile unsigned int TBWC10:1;
+    volatile unsigned int TBWC11:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMP_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_CLK0_5_CTRL_Bits
+{
+    volatile unsigned int CLK_CNT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMU_CLK0_5_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_CLK_6_CTRL_Bits
+{
+    volatile unsigned int CLK_CNT:24;
+    volatile unsigned int CLK6_SEL:1;
+    volatile unsigned int reserved_25:7;
+} Ifx_GTM_CMU_CLK_6_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_CLK_7_CTRL_Bits
+{
+    volatile unsigned int CLK_CNT:24;
+    volatile unsigned int CLK7_SEL:1;
+    volatile unsigned int reserved_25:7;
+} Ifx_GTM_CMU_CLK_7_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_CLK_EN_Bits
+{
+    volatile unsigned int EN_CLK0:2;
+    volatile unsigned int EN_CLK1:2;
+    volatile unsigned int EN_CLK2:2;
+    volatile unsigned int EN_CLK3:2;
+    volatile unsigned int EN_CLK4:2;
+    volatile unsigned int EN_CLK5:2;
+    volatile unsigned int EN_CLK6:2;
+    volatile unsigned int EN_CLK7:2;
+    volatile unsigned int EN_ECLK0:2;
+    volatile unsigned int EN_ECLK1:2;
+    volatile unsigned int EN_ECLK2:2;
+    volatile unsigned int EN_FXCLK:2;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMU_CLK_EN_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_ECLK_DEN_Bits
+{
+    volatile unsigned int ECLK_DEN:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMU_ECLK_DEN_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_ECLK_NUM_Bits
+{
+    volatile unsigned int ECLK_NUM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMU_ECLK_NUM_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_FXCLK_CTRL_Bits
+{
+    volatile unsigned int FXCLK_SEL:4;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_CMU_FXCLK_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_GCLK_DEN_Bits
+{
+    volatile unsigned int GCLK_DEN:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMU_GCLK_DEN_Bits;
+
+
+typedef struct _Ifx_GTM_CMU_GCLK_NUM_Bits
+{
+    volatile unsigned int GCLK_NUM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_CMU_GCLK_NUM_Bits;
+
+
+typedef struct _Ifx_GTM_CTRL_Bits
+{
+    volatile unsigned int RF_PROT:1;
+    volatile unsigned int TO_MODE:1;
+    volatile unsigned int reserved_2:2;
+    volatile unsigned int TO_VAL:5;
+    volatile unsigned int reserved_9:23;
+} Ifx_GTM_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_DATAIN_Bits
+{
+    volatile unsigned int DATA:32;
+} Ifx_GTM_DATAIN_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ACB_Bits
+{
+    volatile unsigned int ACB_0:5;
+    volatile unsigned int reserved_5:3;
+    volatile unsigned int ACB_1:5;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int ACB_2:5;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int ACB_3:5;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_DPLL_ACB_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ACT_STA_Bits
+{
+    volatile unsigned int ACT_Ni:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_ACT_STA_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ADD_IN_CAL1_Bits
+{
+    volatile unsigned int ADD_IN_CAL_1:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_ADD_IN_CAL1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ADD_IN_CAL2_Bits
+{
+    volatile unsigned int ADD_IN_CAL_2:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_ADD_IN_CAL2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ADD_IN_LD1_Bits
+{
+    volatile unsigned int ADD_IN_LD_1:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_ADD_IN_LD1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ADD_IN_LD2_Bits
+{
+    volatile unsigned int ADD_IN_LD_2:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_ADD_IN_LD2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ADT_S_Bits
+{
+    volatile unsigned int PD_S:16;
+    volatile unsigned int NS:6;
+    volatile unsigned int reserved_22:10;
+} Ifx_GTM_DPLL_ADT_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_AOSV_2_Bits
+{
+    volatile unsigned int AOSV_2A:8;
+    volatile unsigned int AOSV_2B:8;
+    volatile unsigned int AOSV_2C:8;
+    volatile unsigned int AOSV_2D:8;
+} Ifx_GTM_DPLL_AOSV_2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_APS_1C3_Bits
+{
+    volatile unsigned int reserved_0:2;
+    volatile unsigned int APS_1C3:6;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_DPLL_APS_1C3_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_APS_Bits
+{
+    volatile unsigned int reserved_0:1;
+    volatile unsigned int WAPS:1;
+    volatile unsigned int APS:6;
+    volatile unsigned int reserved_8:5;
+    volatile unsigned int WAPS_1C2:1;
+    volatile unsigned int APS_1C2:6;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_DPLL_APS_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_APS_SYNC_Bits
+{
+    volatile unsigned int APS_1C2_EXT:6;
+    volatile unsigned int APS_1C2_STATUS:1;
+    volatile unsigned int reserved_7:7;
+    volatile unsigned int APS_1C2_OLD:6;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_DPLL_APS_SYNC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_APT_2C_Bits
+{
+    volatile unsigned int reserved_0:2;
+    volatile unsigned int APT_2C:10;
+    volatile unsigned int reserved_12:20;
+} Ifx_GTM_DPLL_APT_2C_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_APT_Bits
+{
+    volatile unsigned int reserved_0:1;
+    volatile unsigned int WAPT:1;
+    volatile unsigned int APT:10;
+    volatile unsigned int reserved_12:1;
+    volatile unsigned int WAPT_2B:1;
+    volatile unsigned int APT_2B:10;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_APT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_APT_SYNC_Bits
+{
+    volatile unsigned int APT_2B_EXT:6;
+    volatile unsigned int APT_2B_STATUS:1;
+    volatile unsigned int reserved_7:7;
+    volatile unsigned int APT_2B_OLD:10;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_APT_SYNC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CDT_SX_Bits
+{
+    volatile unsigned int CDT_SX:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CDT_SX_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CDT_SX_NOM_Bits
+{
+    volatile unsigned int CDT_SX_NOM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CDT_SX_NOM_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CDT_TX_Bits
+{
+    volatile unsigned int CDT_TX:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CDT_TX_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CDT_TX_NOM_Bits
+{
+    volatile unsigned int CDT_TX_NOM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CDT_TX_NOM_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CNT_NUM1_Bits
+{
+    volatile unsigned int CNT_NUM_1:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CNT_NUM1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CNT_NUM2_Bits
+{
+    volatile unsigned int CNT_NUM_2:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CNT_NUM2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CRTL_1_SHADOW_STATE_Bits
+{
+    volatile unsigned int DMO:1;
+    volatile unsigned int reserved_1:2;
+    volatile unsigned int COA:1;
+    volatile unsigned int PIT:1;
+    volatile unsigned int SGE1:1;
+    volatile unsigned int DLM1:1;
+    volatile unsigned int PCM1:1;
+    volatile unsigned int SGE2:1;
+    volatile unsigned int DLM2:1;
+    volatile unsigned int PCM2:1;
+    volatile unsigned int SYN_NS:21;
+} Ifx_GTM_DPLL_CRTL_1_SHADOW_STATE_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_0_Bits
+{
+    volatile unsigned int MLT:10;
+    volatile unsigned int IFP:1;
+    volatile unsigned int SNU:5;
+    volatile unsigned int TNU:9;
+    volatile unsigned int AMS:1;
+    volatile unsigned int AMT:1;
+    volatile unsigned int IDS:1;
+    volatile unsigned int IDT:1;
+    volatile unsigned int SEN:1;
+    volatile unsigned int TEN:1;
+    volatile unsigned int RMO:1;
+} Ifx_GTM_DPLL_CTRL_0_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_0_SHADOW_STATE_Bits
+{
+    volatile unsigned int reserved_0:10;
+    volatile unsigned int IFP:1;
+    volatile unsigned int reserved_11:14;
+    volatile unsigned int AMS:1;
+    volatile unsigned int reserved_26:1;
+    volatile unsigned int IDS:1;
+    volatile unsigned int reserved_28:3;
+    volatile unsigned int RMO:1;
+} Ifx_GTM_DPLL_CTRL_0_SHADOW_STATE_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_0_SHADOW_TRIGGER_Bits
+{
+    volatile unsigned int MLT:10;
+    volatile unsigned int IFP:1;
+    volatile unsigned int reserved_11:15;
+    volatile unsigned int AMT:1;
+    volatile unsigned int IDS:1;
+    volatile unsigned int IDT:1;
+    volatile unsigned int reserved_29:2;
+    volatile unsigned int RMO:1;
+} Ifx_GTM_DPLL_CTRL_0_SHADOW_TRIGGER_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_1_Bits
+{
+    volatile unsigned int DMO:1;
+    volatile unsigned int DEN:1;
+    volatile unsigned int IDDS:1;
+    volatile unsigned int COA:1;
+    volatile unsigned int PIT:1;
+    volatile unsigned int SGE1:1;
+    volatile unsigned int DLM1:1;
+    volatile unsigned int PCM1:1;
+    volatile unsigned int SGE2:1;
+    volatile unsigned int DLM2:1;
+    volatile unsigned int PCM2:1;
+    volatile unsigned int SYN_NS:5;
+    volatile unsigned int SYN_NT:5;
+    volatile unsigned int reserved_21:1;
+    volatile unsigned int LCD:1;
+    volatile unsigned int SWR:1;
+    volatile unsigned int SYSF:1;
+    volatile unsigned int TS0_HRS:1;
+    volatile unsigned int TS0_HRT:1;
+    volatile unsigned int SMC:1;
+    volatile unsigned int SSL:2;
+    volatile unsigned int TSL:2;
+} Ifx_GTM_DPLL_CTRL_1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_1_SHADOW_TRIGGER_Bits
+{
+    volatile unsigned int DMO:1;
+    volatile unsigned int reserved_1:2;
+    volatile unsigned int COA:1;
+    volatile unsigned int PIT:1;
+    volatile unsigned int SGE1:1;
+    volatile unsigned int DLM1:1;
+    volatile unsigned int PCM1:1;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_DPLL_CTRL_1_SHADOW_TRIGGER_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_2_Bits
+{
+    volatile unsigned int reserved_0:8;
+    volatile unsigned int AEN0:1;
+    volatile unsigned int AEN1:1;
+    volatile unsigned int AEN2:1;
+    volatile unsigned int AEN3:1;
+    volatile unsigned int AEN4:1;
+    volatile unsigned int AEN5:1;
+    volatile unsigned int AEN6:1;
+    volatile unsigned int AEN7:1;
+    volatile unsigned int WAD0:1;
+    volatile unsigned int WAD1:1;
+    volatile unsigned int WAD2:1;
+    volatile unsigned int WAD3:1;
+    volatile unsigned int WAD4:1;
+    volatile unsigned int WAD5:1;
+    volatile unsigned int WAD6:1;
+    volatile unsigned int WAD7:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CTRL_2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_3_Bits
+{
+    volatile unsigned int reserved_0:8;
+    volatile unsigned int AEN8:1;
+    volatile unsigned int AEN9:1;
+    volatile unsigned int AEN10:1;
+    volatile unsigned int AEN11:1;
+    volatile unsigned int AEN12:1;
+    volatile unsigned int AEN13:1;
+    volatile unsigned int AEN14:1;
+    volatile unsigned int AEN15:1;
+    volatile unsigned int WAD8:1;
+    volatile unsigned int WAD9:1;
+    volatile unsigned int WAD10:1;
+    volatile unsigned int WAD11:1;
+    volatile unsigned int WAD12:1;
+    volatile unsigned int WAD13:1;
+    volatile unsigned int WAD14:1;
+    volatile unsigned int WAD15:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CTRL_3_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_CTRL_4_Bits
+{
+    volatile unsigned int reserved_0:8;
+    volatile unsigned int AEN16:1;
+    volatile unsigned int AEN17:1;
+    volatile unsigned int AEN18:1;
+    volatile unsigned int AEN19:1;
+    volatile unsigned int AEN20:1;
+    volatile unsigned int AEN21:1;
+    volatile unsigned int AEN22:1;
+    volatile unsigned int AEN23:1;
+    volatile unsigned int WAD16:1;
+    volatile unsigned int WAD17:1;
+    volatile unsigned int WAD18:1;
+    volatile unsigned int WAD19:1;
+    volatile unsigned int WAD20:1;
+    volatile unsigned int WAD21:1;
+    volatile unsigned int WAD22:1;
+    volatile unsigned int WAD23:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_CTRL_4_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_DLA_Bits
+{
+    volatile unsigned int DLA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_DLA_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_DT_S_ACT_Bits
+{
+    volatile unsigned int DT_S_ACT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_DT_S_ACT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_DT_S_Bits
+{
+    volatile unsigned int DT_S:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_DT_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_DT_T_ACT_Bits
+{
+    volatile unsigned int DT_T_ACT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_DT_T_ACT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_DTA_Bits
+{
+    volatile unsigned int DTA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_DTA_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_EDT_S_Bits
+{
+    volatile unsigned int EDT_S:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_EDT_S_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_EDT_T_Bits
+{
+    volatile unsigned int EDT_T:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_EDT_T_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_EIRQ_EN_Bits
+{
+    volatile unsigned int PDI_EIRQ_EN:1;
+    volatile unsigned int PEI_EIRQ_EN:1;
+    volatile unsigned int TINI_EIRQ_EN:1;
+    volatile unsigned int TAXI_EIRQ_EN:1;
+    volatile unsigned int SISI_EIRQ_EN:1;
+    volatile unsigned int TISI_EIRQ_EN:1;
+    volatile unsigned int MSI_EIRQ_EN:1;
+    volatile unsigned int MTI_EIRQ_EN:1;
+    volatile unsigned int SASI_EIRQ_EN:1;
+    volatile unsigned int TASI_EIRQ_EN:1;
+    volatile unsigned int PWI_EIRQ_EN:1;
+    volatile unsigned int W2I_EIRQ_EN:1;
+    volatile unsigned int W1I_EIRQ_EN:1;
+    volatile unsigned int GL1I_EIRQ_EN:1;
+    volatile unsigned int LL1I_EIRQ_EN:1;
+    volatile unsigned int EI_EIRQ_EN:1;
+    volatile unsigned int GL2I_EIRQ_EN:1;
+    volatile unsigned int LL2I_EIRQ_EN:1;
+    volatile unsigned int TE0I_EIRQ_EN:1;
+    volatile unsigned int TE1I_EIRQ_EN:1;
+    volatile unsigned int TE2I_EIRQ_EN:1;
+    volatile unsigned int TE3I_EIRQ_EN:1;
+    volatile unsigned int TE4I_EIRQ_EN:1;
+    volatile unsigned int CDTI_EIRQ_EN:1;
+    volatile unsigned int CDSI_EIRQ_EN:1;
+    volatile unsigned int TORI:1;
+    volatile unsigned int SORI:1;
+    volatile unsigned int DCGI:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_DPLL_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_FTV_S_Bits
+{
+    volatile unsigned int STATE_FT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_FTV_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_FTV_T_Bits
+{
+    volatile unsigned int TRIGGER_FT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_FTV_T_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_ID_PMTR_Bits
+{
+    volatile unsigned int ID_PMTR_x:9;
+    volatile unsigned int reserved_9:23;
+} Ifx_GTM_DPLL_ID_PMTR_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_INC_CNT1_Bits
+{
+    volatile unsigned int INC_CNT1:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_INC_CNT1_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_INC_CNT2_Bits
+{
+    volatile unsigned int INC_CNT2:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_INC_CNT2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_IRQ_EN_Bits
+{
+    volatile unsigned int PDI_IRQ_EN:1;
+    volatile unsigned int PEI_IRQ_EN:1;
+    volatile unsigned int TINI_IRQ_EN:1;
+    volatile unsigned int TAXI_IRQ_EN:1;
+    volatile unsigned int SISI_IRQ_EN:1;
+    volatile unsigned int TISI_IRQ_EN:1;
+    volatile unsigned int MSI_IRQ_EN:1;
+    volatile unsigned int MTI_IRQ_EN:1;
+    volatile unsigned int SASI_IRQ_EN:1;
+    volatile unsigned int TASI_IRQ_EN:1;
+    volatile unsigned int PWI_IRQ_EN:1;
+    volatile unsigned int W2I_IRQ_EN:1;
+    volatile unsigned int W1I_IRQ_EN:1;
+    volatile unsigned int GL1I_IRQ_EN:1;
+    volatile unsigned int LL1I_IRQ_EN:1;
+    volatile unsigned int EI_IRQ_EN:1;
+    volatile unsigned int GL2I_IRQ_EN:1;
+    volatile unsigned int LL2I_IRQ_EN:1;
+    volatile unsigned int TE0I_IRQ_EN:1;
+    volatile unsigned int TE1I_IRQ_EN:1;
+    volatile unsigned int TE2I_IRQ_EN:1;
+    volatile unsigned int TE3I_IRQ_EN:1;
+    volatile unsigned int TE4I_IRQ_EN:1;
+    volatile unsigned int CDTI_IRQ_EN:1;
+    volatile unsigned int CDSI_IRQ_EN:1;
+    volatile unsigned int TORI:1;
+    volatile unsigned int SORI:1;
+    volatile unsigned int DCGI:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_DPLL_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_PDI:1;
+    volatile unsigned int TRG_PEI:1;
+    volatile unsigned int TRG_TINI:1;
+    volatile unsigned int TRG_TAXI:1;
+    volatile unsigned int TRG_SISI:1;
+    volatile unsigned int TRG_TISI:1;
+    volatile unsigned int TRG_MSI:1;
+    volatile unsigned int TRG_MTI:1;
+    volatile unsigned int TRG_SASI:1;
+    volatile unsigned int TRG_TASI:1;
+    volatile unsigned int TRG_PWI:1;
+    volatile unsigned int TRG_W2I:1;
+    volatile unsigned int TRG_W1I:1;
+    volatile unsigned int TRG_GL1I:1;
+    volatile unsigned int TRG_LL1I:1;
+    volatile unsigned int TRG_EI:1;
+    volatile unsigned int TRG_GL2I:1;
+    volatile unsigned int TRG_LL2I:1;
+    volatile unsigned int TRG_TE0I:1;
+    volatile unsigned int TRG_TE1I:1;
+    volatile unsigned int TRG_TE2I:1;
+    volatile unsigned int TRG_TE3I:1;
+    volatile unsigned int TRG_TE4I:1;
+    volatile unsigned int TRG_CDTI:1;
+    volatile unsigned int TRG_CDSI:1;
+    volatile unsigned int TRG_TORI:1;
+    volatile unsigned int TRG_SORI:1;
+    volatile unsigned int TRG_DCGI:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_DPLL_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_DPLL_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int PDI:1;
+    volatile unsigned int PEI:1;
+    volatile unsigned int TINI:1;
+    volatile unsigned int TAXI:1;
+    volatile unsigned int SISI:1;
+    volatile unsigned int TISI:1;
+    volatile unsigned int MSI:1;
+    volatile unsigned int MTI:1;
+    volatile unsigned int SASI:1;
+    volatile unsigned int TASI:1;
+    volatile unsigned int PWI:1;
+    volatile unsigned int W2I:1;
+    volatile unsigned int W1I:1;
+    volatile unsigned int GL1I:1;
+    volatile unsigned int LL1I:1;
+    volatile unsigned int EI:1;
+    volatile unsigned int GL2I:1;
+    volatile unsigned int LL2I:1;
+    volatile unsigned int TE0I:1;
+    volatile unsigned int TE1I:1;
+    volatile unsigned int TE2I:1;
+    volatile unsigned int TE3I:1;
+    volatile unsigned int TE4I:1;
+    volatile unsigned int CDTI:1;
+    volatile unsigned int CDSI:1;
+    volatile unsigned int TORI:1;
+    volatile unsigned int SORI:1;
+    volatile unsigned int DCGI:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_DPLL_IRQ_NOTIFY_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_MEDT_S_Bits
+{
+    volatile unsigned int MEDT_S:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_MEDT_S_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_MEDT_T_Bits
+{
+    volatile unsigned int MEDT_T:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_MEDT_T_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_MLS1_Bits
+{
+    volatile unsigned int MLS1:18;
+    volatile unsigned int reserved_18:14;
+} Ifx_GTM_DPLL_MLS1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_MLS2_Bits
+{
+    volatile unsigned int MLS2:18;
+    volatile unsigned int reserved_18:14;
+} Ifx_GTM_DPLL_MLS2_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_MPVAL1_Bits
+{
+    volatile unsigned int MPVAL1:16;
+    volatile unsigned int SIX1:8;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_MPVAL1_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_MPVAL2_Bits
+{
+    volatile unsigned int MPVAL2:16;
+    volatile unsigned int SIX2:8;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_MPVAL2_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NA_Bits
+{
+    volatile unsigned int DB:10;
+    volatile unsigned int DW:10;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_DPLL_NA_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NMB_S_Bits
+{
+    volatile unsigned int NMB_S:20;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_DPLL_NMB_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NMB_S_TAR_Bits
+{
+    volatile unsigned int NMB_S_TAR:20;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_DPLL_NMB_S_TAR_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NMB_S_TAR_OLD_Bits
+{
+    volatile unsigned int NMB_S_TAR_OLD:20;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_DPLL_NMB_S_TAR_OLD_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NMB_T_Bits
+{
+    volatile unsigned int NMB_T:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_NMB_T_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NMB_T_TAR_Bits
+{
+    volatile unsigned int NMB_T_TAR:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_NMB_T_TAR_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NMB_T_TAR_OLD_Bits
+{
+    volatile unsigned int NMB_T_TAR_OLD:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_NMB_T_TAR_OLD_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NTI_CNT_Bits
+{
+    volatile unsigned int NTI_CNT:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_DPLL_NTI_CNT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NUSC_Bits
+{
+    volatile unsigned int NUSE:6;
+    volatile unsigned int FSS:1;
+    volatile unsigned int SYN_S:6;
+    volatile unsigned int SYN_S_OLD:6;
+    volatile unsigned int VSN:6;
+    volatile unsigned int reserved_25:4;
+    volatile unsigned int WNUS:1;
+    volatile unsigned int WSYN:1;
+    volatile unsigned int WVSN:1;
+} Ifx_GTM_DPLL_NUSC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_NUTC_Bits
+{
+    volatile unsigned int NUTE:10;
+    volatile unsigned int FST:1;
+    volatile unsigned int reserved_11:2;
+    volatile unsigned int SYN_T:3;
+    volatile unsigned int SYN_T_OLD:3;
+    volatile unsigned int VTN:6;
+    volatile unsigned int reserved_25:4;
+    volatile unsigned int WNUT:1;
+    volatile unsigned int WSYN:1;
+    volatile unsigned int WVTN:1;
+} Ifx_GTM_DPLL_NUTC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_OSW_Bits
+{
+    volatile unsigned int SWON_S:1;
+    volatile unsigned int SWON_T:1;
+    volatile unsigned int reserved_2:6;
+    volatile unsigned int OSS:2;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_DPLL_OSW_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PDT_T_Bits
+{
+    volatile unsigned int DB:14;
+    volatile unsigned int DW:10;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PDT_T_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSA_Bits
+{
+    volatile unsigned int PSA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSA_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSAC_Bits
+{
+    volatile unsigned int PSAC:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSAC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSSC_Bits
+{
+    volatile unsigned int PSSC:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSSC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSSM_0_Bits
+{
+    volatile unsigned int PSSM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSSM_0_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSSM_1_Bits
+{
+    volatile unsigned int PSSM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSSM_1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSTC_Bits
+{
+    volatile unsigned int PSTC:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSTC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSTM_0_Bits
+{
+    volatile unsigned int PSTM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSTM_0_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PSTM_1_Bits
+{
+    volatile unsigned int PSTM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PSTM_1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_PVT_Bits
+{
+    volatile unsigned int PVT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_PVT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_RAM_INI_Bits
+{
+    volatile unsigned int INIT_1A:1;
+    volatile unsigned int INIT_1B:1;
+    volatile unsigned int INIT_2:1;
+    volatile unsigned int reserved_3:1;
+    volatile unsigned int INIT_RAM:1;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_DPLL_RAM_INI_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_RCDT_SX_Bits
+{
+    volatile unsigned int RCDT_SX:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RCDT_SX_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_RCDT_SX_NOM_Bits
+{
+    volatile unsigned int RCDT_SX_NOM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RCDT_SX_NOM_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_RCDT_TX_Bits
+{
+    volatile unsigned int RCDT_TX:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RCDT_TX_Bits;
+
+
+
+typedef struct _Ifx_GTM_DPLL_RCDT_TX_NOM_Bits
+{
+    volatile unsigned int RCDT_TX_NOM:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RCDT_TX_NOM_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_RDT_S_ACT_Bits
+{
+    volatile unsigned int RDT_S_ACT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RDT_S_ACT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_RDT_S_Bits
+{
+    volatile unsigned int RDT_S:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RDT_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_RDT_T_ACT_Bits
+{
+    volatile unsigned int RDT_T_ACT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_RDT_T_ACT_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_SLR_Bits
+{
+    volatile unsigned int SLR:8;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_DPLL_SLR_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_STATUS_Bits
+{
+    volatile unsigned int reserved_0:1;
+    volatile unsigned int CSO:1;
+    volatile unsigned int reserved_2:1;
+    volatile unsigned int CTO:1;
+    volatile unsigned int CRO:1;
+    volatile unsigned int RCS:1;
+    volatile unsigned int RCT:1;
+    volatile unsigned int PSE:1;
+    volatile unsigned int SOR:1;
+    volatile unsigned int MS:1;
+    volatile unsigned int TOR:1;
+    volatile unsigned int MT:1;
+    volatile unsigned int RAM2_ERR:1;
+    volatile unsigned int reserved_13:2;
+    volatile unsigned int LOW_RES:1;
+    volatile unsigned int CSVS:1;
+    volatile unsigned int CSVT:1;
+    volatile unsigned int CAIP2:1;
+    volatile unsigned int CAIP1:1;
+    volatile unsigned int ISN:1;
+    volatile unsigned int ITN:1;
+    volatile unsigned int BWD2:1;
+    volatile unsigned int BWD1:1;
+    volatile unsigned int reserved_24:1;
+    volatile unsigned int LOCK2:1;
+    volatile unsigned int SYS:1;
+    volatile unsigned int SYT:1;
+    volatile unsigned int FSD:1;
+    volatile unsigned int FTD:1;
+    volatile unsigned int LOCK1:1;
+    volatile unsigned int ERR:1;
+} Ifx_GTM_DPLL_STATUS_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TBU_TS0_S_Bits
+{
+    volatile unsigned int TBU_TS0_S:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TBU_TS0_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TBU_TS0_T_Bits
+{
+    volatile unsigned int TBU_TS0_T:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TBU_TS0_T_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_THMA_Bits
+{
+    volatile unsigned int THMA:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_THMA_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_THMI_Bits
+{
+    volatile unsigned int THMI:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_THMI_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_THVAL_Bits
+{
+    volatile unsigned int THVAL:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_THVAL_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TLR_Bits
+{
+    volatile unsigned int TLR:8;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_DPLL_TLR_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TOV_Bits
+{
+    volatile unsigned int DB:10;
+    volatile unsigned int DW:6;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_TOV_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TOV_S_Bits
+{
+    volatile unsigned int DB:10;
+    volatile unsigned int DW:6;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_DPLL_TOV_S_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TS_S_0_Bits
+{
+    volatile unsigned int STATE_TS:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TS_S_0_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TS_S_1_Bits
+{
+    volatile unsigned int STATE_TS:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TS_S_1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TS_T_0_Bits
+{
+    volatile unsigned int TRIGGER_TS:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TS_T_0_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TS_T_1_Bits
+{
+    volatile unsigned int TRIGGER_TS:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TS_T_1_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TSAC_Bits
+{
+    volatile unsigned int TSAC:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TSAC_Bits;
+
+
+typedef struct _Ifx_GTM_DPLL_TSF_S_Bits
+{
+    volatile unsigned int TSF_S:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_DPLL_TSF_S_Bits;
+
+
+typedef struct _Ifx_GTM_DXINCON_Bits
+{
+    volatile unsigned int IN00:1;
+    volatile unsigned int IN01:1;
+    volatile unsigned int IN02:1;
+    volatile unsigned int IN03:1;
+    volatile unsigned int reserved_4:4;
+    volatile unsigned int IN10:1;
+    volatile unsigned int IN11:1;
+    volatile unsigned int IN12:1;
+    volatile unsigned int IN13:1;
+    volatile unsigned int reserved_12:4;
+    volatile unsigned int DSS00:1;
+    volatile unsigned int DSS01:1;
+    volatile unsigned int DSS02:1;
+    volatile unsigned int DSS03:1;
+    volatile unsigned int reserved_20:4;
+    volatile unsigned int DSS10:1;
+    volatile unsigned int DSS11:1;
+    volatile unsigned int DSS12:1;
+    volatile unsigned int DSS13:1;
+    volatile unsigned int reserved_28:4;
+} Ifx_GTM_DXINCON_Bits;
+
+
+typedef struct _Ifx_GTM_DXOUTCON_Bits
+{
+    volatile unsigned int OUT00:1;
+    volatile unsigned int OUT01:1;
+    volatile unsigned int OUT02:1;
+    volatile unsigned int OUT03:1;
+    volatile unsigned int reserved_4:4;
+    volatile unsigned int OUT10:1;
+    volatile unsigned int OUT11:1;
+    volatile unsigned int OUT12:1;
+    volatile unsigned int OUT13:1;
+    volatile unsigned int reserved_12:20;
+} Ifx_GTM_DXOUTCON_Bits;
+
+
+typedef struct _Ifx_GTM_EIRQ_EN_Bits
+{
+    volatile unsigned int AEI_TO_XPT_EIRQ_EN:1;
+    volatile unsigned int AEI_USP_ADDR_EIRQ_EN:1;
+    volatile unsigned int AEI_IM_ADDR_EIRQ_EN:1;
+    volatile unsigned int AEI_USP_BE_EIRQ_EN:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_F2A_ENABLE_Bits
+{
+    volatile unsigned int STR0_EN:2;
+    volatile unsigned int STR1_EN:2;
+    volatile unsigned int STR2_EN:2;
+    volatile unsigned int STR3_EN:2;
+    volatile unsigned int STR4_EN:2;
+    volatile unsigned int STR5_EN:2;
+    volatile unsigned int STR6_EN:2;
+    volatile unsigned int STR7_EN:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_F2A_ENABLE_Bits;
+
+
+typedef struct _Ifx_GTM_F2A_RD_CH_ARU_RD_FIFO_Bits
+{
+    volatile unsigned int ADDR:9;
+    volatile unsigned int reserved_9:23;
+} Ifx_GTM_F2A_RD_CH_ARU_RD_FIFO_Bits;
+
+
+typedef struct _Ifx_GTM_F2A_STR_CH_STR_CFG_Bits
+{
+    volatile unsigned int reserved_0:16;
+    volatile unsigned int TMODE:2;
+    volatile unsigned int DIR:1;
+    volatile unsigned int reserved_19:13;
+} Ifx_GTM_F2A_STR_CH_STR_CFG_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_CTRL_Bits
+{
+    volatile unsigned int RBM:1;
+    volatile unsigned int RAP:1;
+    volatile unsigned int FLUSH:1;
+    volatile unsigned int WULOCK:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_FIFO_CH_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_EIRQ_EN_Bits
+{
+    volatile unsigned int FIFO_EMPTY_EIRQ_EN:1;
+    volatile unsigned int FIFO_FULL_EIRQ_EN:1;
+    volatile unsigned int FIFO_LWM_EIRQ_EN:1;
+    volatile unsigned int FIFO_UWM_EIRQ_EN:1;
+    volatile unsigned int Reserved:28;
+} Ifx_GTM_FIFO_CH_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_END_ADDR_Bits
+{
+    volatile unsigned int ADDR:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_FIFO_CH_END_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_FILL_LEVEL_Bits
+{
+    volatile unsigned int LEVEL:11;
+    volatile unsigned int reserved_11:21;
+} Ifx_GTM_FIFO_CH_FILL_LEVEL_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_IRQ_EN_Bits
+{
+    volatile unsigned int FIFO_EMPTY_IRQ_EN:1;
+    volatile unsigned int FIFO_FULL_IRQ_EN:1;
+    volatile unsigned int FIFO_LWM_IRQ_EN:1;
+    volatile unsigned int FIFO_UWM_IRQ_EN:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_FIFO_CH_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_FIFO_EMPTY:1;
+    volatile unsigned int TRG_FIFO_FULL:1;
+    volatile unsigned int TRG_FIFO_LWM:1;
+    volatile unsigned int TRG_FIFO_UWM:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_FIFO_CH_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int DMA_HYSTERESIS:1;
+    volatile unsigned int DMA_HYST_DIR:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_FIFO_CH_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int FIFO_EMPTY:1;
+    volatile unsigned int FIFO_FULL:1;
+    volatile unsigned int FIFO_LWM:1;
+    volatile unsigned int FIFO_UWM:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_FIFO_CH_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_LOWER_WM_Bits
+{
+    volatile unsigned int ADDR:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_FIFO_CH_LOWER_WM_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_RD_PTR_Bits
+{
+    volatile unsigned int ADDR:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_FIFO_CH_RD_PTR_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_START_ADDR_Bits
+{
+    volatile unsigned int ADDR:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_FIFO_CH_START_ADDR_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_STATUS_Bits
+{
+    volatile unsigned int EMPTY:1;
+    volatile unsigned int FULL:1;
+    volatile unsigned int LOW_WM:1;
+    volatile unsigned int UP_WM:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_FIFO_CH_STATUS_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_UPPER_WM_Bits
+{
+    volatile unsigned int ADDR:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_FIFO_CH_UPPER_WM_Bits;
+
+
+typedef struct _Ifx_GTM_FIFO_CH_WR_PTR_Bits
+{
+    volatile unsigned int ADDR:10;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_FIFO_CH_WR_PTR_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_0_Bits
+{
+    volatile unsigned int ARU_NEW_DATA0_IRQ:1;
+    volatile unsigned int ARU_NEW_DATA1_IRQ:1;
+    volatile unsigned int ARU_ACC_ACK_IRQ:1;
+    volatile unsigned int BRC_IRQ:1;
+    volatile unsigned int AEI_IRQ:1;
+    volatile unsigned int CMP_IRQ:1;
+    volatile unsigned int SPE0_IRQ:1;
+    volatile unsigned int SPE1_IRQ:1;
+    volatile unsigned int reserved_8:8;
+    volatile unsigned int PSM0_CH0_IRQ:1;
+    volatile unsigned int PSM0_CH1_IRQ:1;
+    volatile unsigned int PSM0_CH2_IRQ:1;
+    volatile unsigned int PSM0_CH3_IRQ:1;
+    volatile unsigned int PSM0_CH4_IRQ:1;
+    volatile unsigned int PSM0_CH5_IRQ:1;
+    volatile unsigned int PSM0_CH6_IRQ:1;
+    volatile unsigned int PSM0_CH7_IRQ:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_ICM_IRQG_0_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_10_Bits
+{
+    volatile unsigned int ATOM4_CH0_IRQ:1;
+    volatile unsigned int ATOM4_CH1_IRQ:1;
+    volatile unsigned int ATOM4_CH2_IRQ:1;
+    volatile unsigned int ATOM4_CH3_IRQ:1;
+    volatile unsigned int ATOM4_CH4_IRQ:1;
+    volatile unsigned int ATOM4_CH5_IRQ:1;
+    volatile unsigned int ATOM4_CH6_IRQ:1;
+    volatile unsigned int ATOM4_CH7_IRQ:1;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_ICM_IRQG_10_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_1_Bits
+{
+    volatile unsigned int DPLL_DCG_IRQ:1;
+    volatile unsigned int DPLL_EDI_IRQ:1;
+    volatile unsigned int DPLL_TIN_IRQ:1;
+    volatile unsigned int DPLL_TAX_IRQ:1;
+    volatile unsigned int DPLL_SIS_IRQ:1;
+    volatile unsigned int DPLL_TIS_IRQ:1;
+    volatile unsigned int DPLL_MSI_IRQ:1;
+    volatile unsigned int DPLL_MTI_IRQ:1;
+    volatile unsigned int DPLL_SAS_IRQ:1;
+    volatile unsigned int DPLL_TAS_IRQ:1;
+    volatile unsigned int DPLL_PWI_IRQ:1;
+    volatile unsigned int DPLL_W2I_IRQ:1;
+    volatile unsigned int DPLL_W1I_IRQ:1;
+    volatile unsigned int DPLL_GLI_IRQ:1;
+    volatile unsigned int DPLL_LLI_IRQ:1;
+    volatile unsigned int DPLL_EI_IRQ:1;
+    volatile unsigned int DPLL_GL2I_IRQ:1;
+    volatile unsigned int DPLL_LL2I_IRQ:1;
+    volatile unsigned int DPLL_TE0_IRQ:1;
+    volatile unsigned int DPLL_TE1_IRQ:1;
+    volatile unsigned int DPLL_TE2_IRQ:1;
+    volatile unsigned int DPLL_TE3_IRQ:1;
+    volatile unsigned int DPLL_TE4_IRQ:1;
+    volatile unsigned int DPLL_CDIT_IRQ:1;
+    volatile unsigned int DPLL_CDIS_IRQ:1;
+    volatile unsigned int DPLL_TORI_IRQ:1;
+    volatile unsigned int DPLL_SORI_IRQ:1;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_ICM_IRQG_1_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_2_Bits
+{
+    volatile unsigned int TIM0_CH0_IRQ:1;
+    volatile unsigned int TIM0_CH1_IRQ:1;
+    volatile unsigned int TIM0_CH2_IRQ:1;
+    volatile unsigned int TIM0_CH3_IRQ:1;
+    volatile unsigned int TIM0_CH4_IRQ:1;
+    volatile unsigned int TIM0_CH5_IRQ:1;
+    volatile unsigned int TIM0_CH6_IRQ:1;
+    volatile unsigned int TIM0_CH7_IRQ:1;
+    volatile unsigned int TIM1_CH0_IRQ:1;
+    volatile unsigned int TIM1_CH1_IRQ:1;
+    volatile unsigned int TIM1_CH2_IRQ:1;
+    volatile unsigned int TIM1_CH3_IRQ:1;
+    volatile unsigned int TIM1_CH4_IRQ:1;
+    volatile unsigned int TIM1_CH5_IRQ:1;
+    volatile unsigned int TIM1_CH6_IRQ:1;
+    volatile unsigned int TIM1_CH7_IRQ:1;
+    volatile unsigned int TIM2_CH0_IRQ:1;
+    volatile unsigned int TIM2_CH1_IRQ:1;
+    volatile unsigned int TIM2_CH2_IRQ:1;
+    volatile unsigned int TIM2_CH3_IRQ:1;
+    volatile unsigned int TIM2_CH4_IRQ:1;
+    volatile unsigned int TIM2_CH5_IRQ:1;
+    volatile unsigned int TIM2_CH6_IRQ:1;
+    volatile unsigned int TIM2_CH7_IRQ:1;
+    volatile unsigned int TIM3_CH0_IRQ:1;
+    volatile unsigned int TIM3_CH1_IRQ:1;
+    volatile unsigned int TIM3_CH2_IRQ:1;
+    volatile unsigned int TIM3_CH3_IRQ:1;
+    volatile unsigned int TIM3_CH4_IRQ:1;
+    volatile unsigned int TIM3_CH5_IRQ:1;
+    volatile unsigned int TIM3_CH6_IRQ:1;
+    volatile unsigned int TIM3_CH7_IRQ:1;
+} Ifx_GTM_ICM_IRQG_2_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_4_Bits
+{
+    volatile unsigned int MCS0_CH0_IRQ:1;
+    volatile unsigned int MCS0_CH1_IRQ:1;
+    volatile unsigned int MCS0_CH2_IRQ:1;
+    volatile unsigned int MCS0_CH3_IRQ:1;
+    volatile unsigned int MCS0_CH4_IRQ:1;
+    volatile unsigned int MCS0_CH5_IRQ:1;
+    volatile unsigned int MCS0_CH6_IRQ:1;
+    volatile unsigned int MCS0_CH7_IRQ:1;
+    volatile unsigned int MCS1_CH0_IRQ:1;
+    volatile unsigned int MCS1_CH1_IRQ:1;
+    volatile unsigned int MCS1_CH2_IRQ:1;
+    volatile unsigned int MCS1_CH3_IRQ:1;
+    volatile unsigned int MCS1_CH4_IRQ:1;
+    volatile unsigned int MCS1_CH5_IRQ:1;
+    volatile unsigned int MCS1_CH6_IRQ:1;
+    volatile unsigned int MCS1_CH7_IRQ:1;
+    volatile unsigned int MCS2_CH0_IRQ:1;
+    volatile unsigned int MCS2_CH1_IRQ:1;
+    volatile unsigned int MCS2_CH2_IRQ:1;
+    volatile unsigned int MCS2_CH3_IRQ:1;
+    volatile unsigned int MCS2_CH4_IRQ:1;
+    volatile unsigned int MCS2_CH5_IRQ:1;
+    volatile unsigned int MCS2_CH6_IRQ:1;
+    volatile unsigned int MCS2_CH7_IRQ:1;
+    volatile unsigned int MCS3_CH0_IRQ:1;
+    volatile unsigned int MCS3_CH1_IRQ:1;
+    volatile unsigned int MCS3_CH2_IRQ:1;
+    volatile unsigned int MCS3_CH3_IRQ:1;
+    volatile unsigned int MCS3_CH4_IRQ:1;
+    volatile unsigned int MCS3_CH5_IRQ:1;
+    volatile unsigned int MCS3_CH6_IRQ:1;
+    volatile unsigned int MCS3_CH7_IRQ:1;
+} Ifx_GTM_ICM_IRQG_4_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_6_Bits
+{
+    volatile unsigned int TOM0_CH0_IRQ:1;
+    volatile unsigned int TOM0_CH1_IRQ:1;
+    volatile unsigned int TOM0_CH2_IRQ:1;
+    volatile unsigned int TOM0_CH3_IRQ:1;
+    volatile unsigned int TOM0_CH4_IRQ:1;
+    volatile unsigned int TOM0_CH5_IRQ:1;
+    volatile unsigned int TOM0_CH6_IRQ:1;
+    volatile unsigned int TOM0_CH7_IRQ:1;
+    volatile unsigned int TOM0_CH8_IRQ:1;
+    volatile unsigned int TOM0_CH9_IRQ:1;
+    volatile unsigned int TOM0_CH10_IRQ:1;
+    volatile unsigned int TOM0_CH11_IRQ:1;
+    volatile unsigned int TOM0_CH12_IRQ:1;
+    volatile unsigned int TOM0_CH13_IRQ:1;
+    volatile unsigned int TOM0_CH14_IRQ:1;
+    volatile unsigned int TOM0_CH15_IRQ:1;
+    volatile unsigned int TOM1_CH0_IRQ:1;
+    volatile unsigned int TOM1_CH1_IRQ:1;
+    volatile unsigned int TOM1_CH2_IRQ:1;
+    volatile unsigned int TOM1_CH3_IRQ:1;
+    volatile unsigned int TOM1_CH4_IRQ:1;
+    volatile unsigned int TOM1_CH5_IRQ:1;
+    volatile unsigned int TOM1_CH6_IRQ:1;
+    volatile unsigned int TOM1_CH7_IRQ:1;
+    volatile unsigned int TOM1_CH8_IRQ:1;
+    volatile unsigned int TOM1_CH9_IRQ:1;
+    volatile unsigned int TOM1_CH10_IRQ:1;
+    volatile unsigned int TOM1_CH11_IRQ:1;
+    volatile unsigned int TOM1_CH12_IRQ:1;
+    volatile unsigned int TOM1_CH13_IRQ:1;
+    volatile unsigned int TOM1_CH14_IRQ:1;
+    volatile unsigned int TOM1_CH15_IRQ:1;
+} Ifx_GTM_ICM_IRQG_6_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_7_Bits
+{
+    volatile unsigned int TOM2_CH0_IRQ:1;
+    volatile unsigned int TOM2_CH1_IRQ:1;
+    volatile unsigned int TOM2_CH2_IRQ:1;
+    volatile unsigned int TOM2_CH3_IRQ:1;
+    volatile unsigned int TOM2_CH4_IRQ:1;
+    volatile unsigned int TOM2_CH5_IRQ:1;
+    volatile unsigned int TOM2_CH6_IRQ:1;
+    volatile unsigned int TOM2_CH7_IRQ:1;
+    volatile unsigned int TOM2_CH8_IRQ:1;
+    volatile unsigned int TOM2_CH9_IRQ:1;
+    volatile unsigned int TOM2_CH10_IRQ:1;
+    volatile unsigned int TOM2_CH11_IRQ:1;
+    volatile unsigned int TOM2_CH12_IRQ:1;
+    volatile unsigned int TOM2_CH13_IRQ:1;
+    volatile unsigned int TOM2_CH14_IRQ:1;
+    volatile unsigned int TOM2_CH15_IRQ:1;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_ICM_IRQG_7_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_9_Bits
+{
+    volatile unsigned int ATOM0_CH0_IRQ:1;
+    volatile unsigned int ATOM0_CH1_IRQ:1;
+    volatile unsigned int ATOM0_CH2_IRQ:1;
+    volatile unsigned int ATOM0_CH3_IRQ:1;
+    volatile unsigned int ATOM0_CH4_IRQ:1;
+    volatile unsigned int ATOM0_CH5_IRQ:1;
+    volatile unsigned int ATOM0_CH6_IRQ:1;
+    volatile unsigned int ATOM0_CH7_IRQ:1;
+    volatile unsigned int ATOM1_CH0_IRQ:1;
+    volatile unsigned int ATOM1_CH1_IRQ:1;
+    volatile unsigned int ATOM1_CH2_IRQ:1;
+    volatile unsigned int ATOM1_CH3_IRQ:1;
+    volatile unsigned int ATOM1_CH4_IRQ:1;
+    volatile unsigned int ATOM1_CH5_IRQ:1;
+    volatile unsigned int ATOM1_CH6_IRQ:1;
+    volatile unsigned int ATOM1_CH7_IRQ:1;
+    volatile unsigned int ATOM2_CH0_IRQ:1;
+    volatile unsigned int ATOM2_CH1_IRQ:1;
+    volatile unsigned int ATOM2_CH2_IRQ:1;
+    volatile unsigned int ATOM2_CH3_IRQ:1;
+    volatile unsigned int ATOM2_CH4_IRQ:1;
+    volatile unsigned int ATOM2_CH5_IRQ:1;
+    volatile unsigned int ATOM2_CH6_IRQ:1;
+    volatile unsigned int ATOM2_CH7_IRQ:1;
+    volatile unsigned int ATOM3_CH0_IRQ:1;
+    volatile unsigned int ATOM3_CH1_IRQ:1;
+    volatile unsigned int ATOM3_CH2_IRQ:1;
+    volatile unsigned int ATOM3_CH3_IRQ:1;
+    volatile unsigned int ATOM3_CH4_IRQ:1;
+    volatile unsigned int ATOM3_CH5_IRQ:1;
+    volatile unsigned int ATOM3_CH6_IRQ:1;
+    volatile unsigned int ATOM3_CH7_IRQ:1;
+} Ifx_GTM_ICM_IRQG_9_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_CEI0_Bits
+{
+    volatile unsigned int FIFO0_CH0_EIRQ:1;
+    volatile unsigned int FIFO0_CH1_EIRQ:1;
+    volatile unsigned int FIFO0_CH2_EIRQ:1;
+    volatile unsigned int FIFO0_CH3_EIRQ:1;
+    volatile unsigned int FIFO0_CH4_EIRQ:1;
+    volatile unsigned int FIFO0_CH5_EIRQ:1;
+    volatile unsigned int FIFO0_CH6_EIRQ:1;
+    volatile unsigned int FIFO0_CH7_EIRQ:1;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_ICM_IRQG_CEI0_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_CEI1_Bits
+{
+    volatile unsigned int TIM0_CH0_EIRQ:1;
+    volatile unsigned int TIM0_CH1_EIRQ:1;
+    volatile unsigned int TIM0_CH2_EIRQ:1;
+    volatile unsigned int TIM0_CH3_EIRQ:1;
+    volatile unsigned int TIM0_CH4_EIRQ:1;
+    volatile unsigned int TIM0_CH5_EIRQ:1;
+    volatile unsigned int TIM0_CH6_EIRQ:1;
+    volatile unsigned int TIM0_CH7_EIRQ:1;
+    volatile unsigned int TIM1_CH0_EIRQ:1;
+    volatile unsigned int TIM1_CH1_EIRQ:1;
+    volatile unsigned int TIM1_CH2_EIRQ:1;
+    volatile unsigned int TIM1_CH3_EIRQ:1;
+    volatile unsigned int TIM1_CH4_EIRQ:1;
+    volatile unsigned int TIM1_CH5_EIRQ:1;
+    volatile unsigned int TIM1_CH6_EIRQ:1;
+    volatile unsigned int TIM1_CH7_EIRQ:1;
+    volatile unsigned int TIM2_CH0_EIRQ:1;
+    volatile unsigned int TIM2_CH1_EIRQ:1;
+    volatile unsigned int TIM2_CH2_EIRQ:1;
+    volatile unsigned int TIM2_CH3_EIRQ:1;
+    volatile unsigned int TIM2_CH4_EIRQ:1;
+    volatile unsigned int TIM2_CH5_EIRQ:1;
+    volatile unsigned int TIM2_CH6_EIRQ:1;
+    volatile unsigned int TIM2_CH7_EIRQ:1;
+    volatile unsigned int TIM3_CH0_EIRQ:1;
+    volatile unsigned int TIM3_CH1_EIRQ:1;
+    volatile unsigned int TIM3_CH2_EIRQ:1;
+    volatile unsigned int TIM3_CH3_EIRQ:1;
+    volatile unsigned int TIM3_CH4_EIRQ:1;
+    volatile unsigned int TIM3_CH5_IRQ:1;
+    volatile unsigned int TIM3_CH6_EIRQ:1;
+    volatile unsigned int TIM3_CH7_EIRQ:1;
+} Ifx_GTM_ICM_IRQG_CEI1_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_CEI3_Bits
+{
+    volatile unsigned int MCS0_CH0_EIRQ:1;
+    volatile unsigned int MCS0_CH1_EIRQ:1;
+    volatile unsigned int MCS0_CH2_EIRQ:1;
+    volatile unsigned int MCS0_CH3_EIRQ:1;
+    volatile unsigned int MCS0_CH4_EIRQ:1;
+    volatile unsigned int MCS0_CH5_EIRQ:1;
+    volatile unsigned int MCS0_CH6_EIRQ:1;
+    volatile unsigned int MCS0_CH7_EIRQ:1;
+    volatile unsigned int MCS1_CH0_EIRQ:1;
+    volatile unsigned int MCS1_CH1_EIRQ:1;
+    volatile unsigned int MCS1_CH2_EIRQ:1;
+    volatile unsigned int MCS1_CH3_EIRQ:1;
+    volatile unsigned int MCS1_CH4_EIRQ:1;
+    volatile unsigned int MCS1_CH5_EIRQ:1;
+    volatile unsigned int MCS1_CH6_EIRQ:1;
+    volatile unsigned int MCS1_CH7_EIRQ:1;
+    volatile unsigned int MCS2_CH0_EIRQ:1;
+    volatile unsigned int MCS2_CH1_EIRQ:1;
+    volatile unsigned int MCS2_CH2_EIRQ:1;
+    volatile unsigned int MCS2_CH3_EIRQ:1;
+    volatile unsigned int MCS2_CH4_EIRQ:1;
+    volatile unsigned int MCS2_CH5_EIRQ:1;
+    volatile unsigned int MCS2_CH6_EIRQ:1;
+    volatile unsigned int MCS2_CH7_EIRQ:1;
+    volatile unsigned int MCS3_CH0_EIRQ:1;
+    volatile unsigned int MCS3_CH1_EIRQ:1;
+    volatile unsigned int MCS3_CH2_EIRQ:1;
+    volatile unsigned int MCS3_CH3_EIRQ:1;
+    volatile unsigned int MCS3_CH4_EIRQ:1;
+    volatile unsigned int MCS3_CH5_EIRQ:1;
+    volatile unsigned int MCS3_CH6_EIRQ:1;
+    volatile unsigned int MCS3_CH7_EIRQ:1;
+} Ifx_GTM_ICM_IRQG_CEI3_Bits;
+
+
+typedef struct _Ifx_GTM_ICM_IRQG_MEI_Bits
+{
+    volatile unsigned int GTM_EIRQ:1;
+    volatile unsigned int BRC_EIRQ:1;
+    volatile unsigned int FIFO0_EIRQ:1;
+    volatile unsigned int reserved_3:1;
+    volatile unsigned int TIM0_EIRQ:1;
+    volatile unsigned int TIM1_EIRQ:1;
+    volatile unsigned int TIM2_EIRQ:1;
+    volatile unsigned int TIM3_EIRQ:1;
+    volatile unsigned int reserved_8:4;
+    volatile unsigned int MCS0_EIRQ:1;
+    volatile unsigned int MCS1_EIRQ:1;
+    volatile unsigned int MCS2_EIRQ:1;
+    volatile unsigned int MCS3_EIRQ:1;
+    volatile unsigned int reserved_16:4;
+    volatile unsigned int SPE0_EIRQ:1;
+    volatile unsigned int SPE1_EIRQ:1;
+    volatile unsigned int reserved_22:2;
+    volatile unsigned int CMP_EIRQ:1;
+    volatile unsigned int DPLL_EIRQ:1;
+    volatile unsigned int reserved_26:6;
+} Ifx_GTM_ICM_IRQG_MEI_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_CAN_OUTSEL_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int SEL1:4;
+    volatile unsigned int SEL2:4;
+    volatile unsigned int SEL3:4;
+    volatile unsigned int SEL4:4;
+    volatile unsigned int SEL5:4;
+    volatile unsigned int SEL6:4;
+    volatile unsigned int SEL7:4;
+} Ifx_GTM_INOUTSEL_CAN_OUTSEL_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_DSADC_INSEL_Bits
+{
+    volatile unsigned int INSEL0:4;
+    volatile unsigned int INSEL1:4;
+    volatile unsigned int INSEL2:4;
+    volatile unsigned int INSEL3:4;
+    volatile unsigned int INSEL4:4;
+    volatile unsigned int INSEL5:4;
+    volatile unsigned int INSEL6:4;
+    volatile unsigned int INSEL7:4;
+} Ifx_GTM_INOUTSEL_DSADC_INSEL_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_DSADC_OUTSEL0_Bits
+{
+    volatile unsigned int SEL0:3;
+    volatile unsigned int reserved_3:1;
+    volatile unsigned int SEL1:3;
+    volatile unsigned int reserved_7:1;
+    volatile unsigned int SEL2:3;
+    volatile unsigned int reserved_11:1;
+    volatile unsigned int SEL3:3;
+    volatile unsigned int reserved_15:1;
+    volatile unsigned int SEL4:3;
+    volatile unsigned int reserved_19:1;
+    volatile unsigned int SEL5:3;
+    volatile unsigned int reserved_23:9;
+} Ifx_GTM_INOUTSEL_DSADC_OUTSEL0_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_PSI5_OUTSEL0_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int SEL1:4;
+    volatile unsigned int SEL2:4;
+    volatile unsigned int SEL3:4;
+    volatile unsigned int SEL4:4;
+    volatile unsigned int SEL5:4;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_INOUTSEL_PSI5_OUTSEL0_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_PSI5S_OUTSEL_Bits
+{
+    volatile unsigned int SEL0:4;
+    volatile unsigned int SEL1:4;
+    volatile unsigned int SEL2:4;
+    volatile unsigned int SEL3:4;
+    volatile unsigned int SEL4:4;
+    volatile unsigned int SEL5:4;
+    volatile unsigned int SEL6:4;
+    volatile unsigned int SEL7:4;
+} Ifx_GTM_INOUTSEL_PSI5S_OUTSEL_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_T_OUTSEL_Bits
+{
+    volatile unsigned int SEL0:2;
+    volatile unsigned int SEL1:2;
+    volatile unsigned int SEL2:2;
+    volatile unsigned int SEL3:2;
+    volatile unsigned int SEL4:2;
+    volatile unsigned int SEL5:2;
+    volatile unsigned int SEL6:2;
+    volatile unsigned int SEL7:2;
+    volatile unsigned int SEL8:2;
+    volatile unsigned int SEL9:2;
+    volatile unsigned int SEL10:2;
+    volatile unsigned int SEL11:2;
+    volatile unsigned int SEL12:2;
+    volatile unsigned int SEL13:2;
+    volatile unsigned int SEL14:2;
+    volatile unsigned int SEL15:2;
+} Ifx_GTM_INOUTSEL_T_OUTSEL_Bits;
+
+
+typedef struct _Ifx_GTM_INOUTSEL_TIM_INSEL_Bits
+{
+    volatile unsigned int CH0SEL:4;
+    volatile unsigned int CH1SEL:4;
+    volatile unsigned int CH2SEL:4;
+    volatile unsigned int CH3SEL:4;
+    volatile unsigned int CH4SEL:4;
+    volatile unsigned int CH5SEL:4;
+    volatile unsigned int CH6SEL:4;
+    volatile unsigned int CH7SEL:4;
+} Ifx_GTM_INOUTSEL_TIM_INSEL_Bits;
+
+
+typedef struct _Ifx_GTM_IRQ_EN_Bits
+{
+    volatile unsigned int AEI_TO_XPT_IRQ_EN:1;
+    volatile unsigned int AEI_USP_ADDR_IRQ_EN:1;
+    volatile unsigned int AEI_IM_ADDR_IRQ_EN:1;
+    volatile unsigned int AEI_USP_BE_IRQ_EN:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_AEI_TO_XPT:1;
+    volatile unsigned int TRG_AEI_USP_ADDR:1;
+    volatile unsigned int TRG_AEI_IM_ADDR:1;
+    volatile unsigned int TRG_AEI_USP_BE:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int AEI_TO_XPT:1;
+    volatile unsigned int AEI_USP_ADDR:1;
+    volatile unsigned int AEI_IM_ADDR:1;
+    volatile unsigned int AEI_USP_BE:1;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_KRST0_Bits
+{
+    volatile unsigned int RST:1;
+    volatile unsigned int RSTSTAT:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_KRST0_Bits;
+
+
+typedef struct _Ifx_GTM_KRST1_Bits
+{
+    volatile unsigned int RST:1;
+    volatile unsigned int reserved_1:31;
+} Ifx_GTM_KRST1_Bits;
+
+
+typedef struct _Ifx_GTM_KRSTCLR_Bits
+{
+    volatile unsigned int CLR:1;
+    volatile unsigned int reserved_1:31;
+} Ifx_GTM_KRSTCLR_Bits;
+
+
+typedef struct _Ifx_GTM_MAP_CTRL_Bits
+{
+    volatile unsigned int TSEL:1;
+    volatile unsigned int SSL:3;
+    volatile unsigned int LSEL:1;
+    volatile unsigned int reserved_5:11;
+    volatile unsigned int TSPP0_EN:1;
+    volatile unsigned int TSPP0_DLD:1;
+    volatile unsigned int reserved_18:2;
+    volatile unsigned int TSPP0_I0V:1;
+    volatile unsigned int TSPP0_I1V:1;
+    volatile unsigned int TSPP0_I2V:1;
+    volatile unsigned int reserved_23:1;
+    volatile unsigned int TSPP1_EN:1;
+    volatile unsigned int TSPP1_DLD:1;
+    volatile unsigned int reserved_26:2;
+    volatile unsigned int TSPP1_I0V:1;
+    volatile unsigned int TSPP1_I1V:1;
+    volatile unsigned int TSPP1_I2V:1;
+    volatile unsigned int reserved_31:1;
+} Ifx_GTM_MAP_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_MCFG_CTRL_Bits
+{
+    volatile unsigned int MEM0:2;
+    volatile unsigned int MEM1:2;
+    volatile unsigned int MEM2:2;
+    volatile unsigned int MEM3:2;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_MCFG_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH0_CTRG_Bits
+{
+    volatile unsigned int TRG0:1;
+    volatile unsigned int TRG1:1;
+    volatile unsigned int TRG2:1;
+    volatile unsigned int TRG3:1;
+    volatile unsigned int TRG4:1;
+    volatile unsigned int TRG5:1;
+    volatile unsigned int TRG6:1;
+    volatile unsigned int TRG7:1;
+    volatile unsigned int TRG8:1;
+    volatile unsigned int TRG9:1;
+    volatile unsigned int TRG10:1;
+    volatile unsigned int TRG11:1;
+    volatile unsigned int TRG12:1;
+    volatile unsigned int TRG13:1;
+    volatile unsigned int TRG14:1;
+    volatile unsigned int TRG15:1;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_MCS_CH0_CTRG_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH0_STRG_Bits
+{
+    volatile unsigned int TRG0:1;
+    volatile unsigned int TRG1:1;
+    volatile unsigned int TRG2:1;
+    volatile unsigned int TRG3:1;
+    volatile unsigned int TRG4:1;
+    volatile unsigned int TRG5:1;
+    volatile unsigned int TRG6:1;
+    volatile unsigned int TRG7:1;
+    volatile unsigned int TRG8:1;
+    volatile unsigned int TRG9:1;
+    volatile unsigned int TRG10:1;
+    volatile unsigned int TRG11:1;
+    volatile unsigned int TRG12:1;
+    volatile unsigned int TRG13:1;
+    volatile unsigned int TRG14:1;
+    volatile unsigned int TRG15:1;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_MCS_CH0_STRG_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_ACB_Bits
+{
+    volatile unsigned int ACB0:1;
+    volatile unsigned int ACB1:1;
+    volatile unsigned int ACB2:1;
+    volatile unsigned int ACB3:1;
+    volatile unsigned int ACB4:1;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_MCS_CH_ACB_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_CTRL_Bits
+{
+    volatile unsigned int EN:1;
+    volatile unsigned int IRQ:1;
+    volatile unsigned int ERR:1;
+    volatile unsigned int reserved_3:1;
+    volatile unsigned int CY:1;
+    volatile unsigned int Z:1;
+    volatile unsigned int V:1;
+    volatile unsigned int N:1;
+    volatile unsigned int CAT:1;
+    volatile unsigned int CWT:1;
+    volatile unsigned int reserved_10:6;
+    volatile unsigned int SP_CNT:3;
+    volatile unsigned int reserved_19:13;
+} Ifx_GTM_MCS_CH_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_EIRQ_EN_Bits
+{
+    volatile unsigned int MCS_EIRQ_EN:1;
+    volatile unsigned int STK_ERR_EIRQ_EN:1;
+    volatile unsigned int MEM_ERR_EIRQ_EN:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_MCS_CH_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_IRQ_EN_Bits
+{
+    volatile unsigned int MCS_IRQ_EN:1;
+    volatile unsigned int STK_ERR_IRQ_EN:1;
+    volatile unsigned int MEM_ERR_IRQ_EN:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_MCS_CH_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_MCS_IRQ:1;
+    volatile unsigned int TRG_STK_ERR_IRQ:1;
+    volatile unsigned int TRG_MEM_ERR_IRQ:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_MCS_CH_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_MCS_CH_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int MCS_IRQ:1;
+    volatile unsigned int STK_ERR_IRQ:1;
+    volatile unsigned int MEM_ERR_IRQ:1;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_MCS_CH_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_PC_Bits
+{
+    volatile unsigned int PC:14;
+    volatile unsigned int reserved_14:18;
+} Ifx_GTM_MCS_CH_PC_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R0_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R0_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R1_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R1_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R2_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R2_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R3_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R3_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R4_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R4_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R5_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R5_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R6_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R6_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CH_R7_Bits
+{
+    volatile unsigned int DATA:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_CH_R7_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_CTRL_Bits
+{
+    volatile unsigned int SCHED:1;
+    volatile unsigned int HLT_SP_OFL:1;
+    volatile unsigned int reserved_2:14;
+    volatile unsigned int RAM_RST:1;
+    volatile unsigned int reserved_17:15;
+} Ifx_GTM_MCS_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_ERR_Bits
+{
+    volatile unsigned int ERR0:1;
+    volatile unsigned int ERR1:1;
+    volatile unsigned int ERR2:1;
+    volatile unsigned int ERR3:1;
+    volatile unsigned int ERR4:1;
+    volatile unsigned int ERR5:1;
+    volatile unsigned int ERR6:1;
+    volatile unsigned int ERR7:1;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_MCS_ERR_Bits;
+
+
+typedef struct _Ifx_GTM_MCS_RST_Bits
+{
+    volatile unsigned int RST0:1;
+    volatile unsigned int RST1:1;
+    volatile unsigned int RST2:1;
+    volatile unsigned int RST3:1;
+    volatile unsigned int RST4:1;
+    volatile unsigned int RST5:1;
+    volatile unsigned int RST6:1;
+    volatile unsigned int RST7:1;
+    volatile unsigned int CAT0:1;
+    volatile unsigned int CAT1:1;
+    volatile unsigned int CAT2:1;
+    volatile unsigned int CAT3:1;
+    volatile unsigned int CAT4:1;
+    volatile unsigned int CAT5:1;
+    volatile unsigned int CAT6:1;
+    volatile unsigned int CAT7:1;
+    volatile unsigned int CWT0:1;
+    volatile unsigned int CWT1:1;
+    volatile unsigned int CWT2:1;
+    volatile unsigned int CWT3:1;
+    volatile unsigned int CWT4:1;
+    volatile unsigned int CWT5:1;
+    volatile unsigned int CWT6:1;
+    volatile unsigned int CWT7:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MCS_RST_Bits;
+
+
+typedef struct _Ifx_GTM_MCSINTCLR_Bits
+{
+    volatile unsigned int MCS000:1;
+    volatile unsigned int MCS001:1;
+    volatile unsigned int MCS010:1;
+    volatile unsigned int MCS011:1;
+    volatile unsigned int MCS100:1;
+    volatile unsigned int MCS101:1;
+    volatile unsigned int MCS110:1;
+    volatile unsigned int MCS111:1;
+    volatile unsigned int MCS200:1;
+    volatile unsigned int MCS201:1;
+    volatile unsigned int MCS210:1;
+    volatile unsigned int MCS211:1;
+    volatile unsigned int MCS300:1;
+    volatile unsigned int MCS301:1;
+    volatile unsigned int MCS310:1;
+    volatile unsigned int MCS311:1;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_MCSINTCLR_Bits;
+
+
+typedef struct _Ifx_GTM_MCSINTSTAT_Bits
+{
+    volatile unsigned int MCS000:1;
+    volatile unsigned int MCS001:1;
+    volatile unsigned int MCS010:1;
+    volatile unsigned int MCS011:1;
+    volatile unsigned int MCS100:1;
+    volatile unsigned int MCS101:1;
+    volatile unsigned int MCS110:1;
+    volatile unsigned int MCS111:1;
+    volatile unsigned int MCS200:1;
+    volatile unsigned int MCS201:1;
+    volatile unsigned int MCS210:1;
+    volatile unsigned int MCS211:1;
+    volatile unsigned int MCS300:1;
+    volatile unsigned int MCS301:1;
+    volatile unsigned int MCS310:1;
+    volatile unsigned int MCS311:1;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_MCSINTSTAT_Bits;
+
+
+typedef struct _Ifx_GTM_MON_ACTIVITY_0_Bits
+{
+    volatile unsigned int MCA_0_0:1;
+    volatile unsigned int MCA_0_1:1;
+    volatile unsigned int MCA_0_2:1;
+    volatile unsigned int MCA_0_3:1;
+    volatile unsigned int MCA_0_4:1;
+    volatile unsigned int MCA_0_5:1;
+    volatile unsigned int MCA_0_6:1;
+    volatile unsigned int MCA_0_7:1;
+    volatile unsigned int MCA_1_0:1;
+    volatile unsigned int MCA_1_1:1;
+    volatile unsigned int MCA_1_2:1;
+    volatile unsigned int MCA_1_3:1;
+    volatile unsigned int MCA_1_4:1;
+    volatile unsigned int MCA_1_5:1;
+    volatile unsigned int MCA_1_6:1;
+    volatile unsigned int MCA_1_7:1;
+    volatile unsigned int MCA_2_0:1;
+    volatile unsigned int MCA_2_1:1;
+    volatile unsigned int MCA_2_2:1;
+    volatile unsigned int MCA_2_3:1;
+    volatile unsigned int MCA_2_4:1;
+    volatile unsigned int MCA_2_5:1;
+    volatile unsigned int MCA_2_6:1;
+    volatile unsigned int MCA_2_7:1;
+    volatile unsigned int MCA_3_0:1;
+    volatile unsigned int MCA_3_1:1;
+    volatile unsigned int MCA_3_2:1;
+    volatile unsigned int MCA_3_3:1;
+    volatile unsigned int MCA_3_4:1;
+    volatile unsigned int MCA_3_5:1;
+    volatile unsigned int MCA_3_6:1;
+    volatile unsigned int MCA_3_7:1;
+} Ifx_GTM_MON_ACTIVITY_0_Bits;
+
+
+typedef struct _Ifx_GTM_MON_STATUS_Bits
+{
+    volatile unsigned int ACT_CMU0:1;
+    volatile unsigned int ACT_CMU1:1;
+    volatile unsigned int ACT_CMU2:1;
+    volatile unsigned int ACT_CMU3:1;
+    volatile unsigned int ACT_CMU4:1;
+    volatile unsigned int ACT_CMU5:1;
+    volatile unsigned int ACT_CMU6:1;
+    volatile unsigned int ACT_CMU7:1;
+    volatile unsigned int ACT_CMUFX0:1;
+    volatile unsigned int ACT_CMUFX1:1;
+    volatile unsigned int ACT_CMUFX2:1;
+    volatile unsigned int ACT_CMUFX3:1;
+    volatile unsigned int ACT_CMUFX4:1;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int CMP_ERR:1;
+    volatile unsigned int reserved_17:3;
+    volatile unsigned int MCS0_ERR:1;
+    volatile unsigned int MCS1_ERR:1;
+    volatile unsigned int MCS2_ERR:1;
+    volatile unsigned int MCS3_ERR:1;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_MON_STATUS_Bits;
+
+
+typedef struct _Ifx_GTM_MSCIN_INHCON_Bits
+{
+    volatile unsigned int SEL0:2;
+    volatile unsigned int SEL1:2;
+    volatile unsigned int SEL2:2;
+    volatile unsigned int SEL3:2;
+    volatile unsigned int SEL4:2;
+    volatile unsigned int SEL5:2;
+    volatile unsigned int SEL6:2;
+    volatile unsigned int SEL7:2;
+    volatile unsigned int SEL8:2;
+    volatile unsigned int SEL9:2;
+    volatile unsigned int SEL10:2;
+    volatile unsigned int SEL11:2;
+    volatile unsigned int SEL12:2;
+    volatile unsigned int SEL13:2;
+    volatile unsigned int SEL14:2;
+    volatile unsigned int SEL15:2;
+} Ifx_GTM_MSCIN_INHCON_Bits;
+
+
+typedef struct _Ifx_GTM_MSCIN_INLCON_Bits
+{
+    volatile unsigned int SEL0:2;
+    volatile unsigned int SEL1:2;
+    volatile unsigned int SEL2:2;
+    volatile unsigned int SEL3:2;
+    volatile unsigned int SEL4:2;
+    volatile unsigned int SEL5:2;
+    volatile unsigned int SEL6:2;
+    volatile unsigned int SEL7:2;
+    volatile unsigned int SEL8:2;
+    volatile unsigned int SEL9:2;
+    volatile unsigned int SEL10:2;
+    volatile unsigned int SEL11:2;
+    volatile unsigned int SEL12:2;
+    volatile unsigned int SEL13:2;
+    volatile unsigned int SEL14:2;
+    volatile unsigned int SEL15:2;
+} Ifx_GTM_MSCIN_INLCON_Bits;
+
+
+typedef struct _Ifx_GTM_MSCSET_CON0_Bits
+{
+    volatile unsigned int SEL0:5;
+    volatile unsigned int reserved_5:3;
+    volatile unsigned int SEL1:5;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int SEL2:5;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int SEL3:5;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_MSCSET_CON0_Bits;
+
+
+typedef struct _Ifx_GTM_MSCSET_CON1_Bits
+{
+    volatile unsigned int SEL4:5;
+    volatile unsigned int reserved_5:3;
+    volatile unsigned int SEL5:5;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int SEL6:5;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int SEL7:5;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_MSCSET_CON1_Bits;
+
+
+typedef struct _Ifx_GTM_MSCSET_CON2_Bits
+{
+    volatile unsigned int SEL8:5;
+    volatile unsigned int reserved_5:3;
+    volatile unsigned int SEL9:5;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int SEL10:5;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int SEL11:5;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_MSCSET_CON2_Bits;
+
+
+typedef struct _Ifx_GTM_MSCSET_CON3_Bits
+{
+    volatile unsigned int SEL12:5;
+    volatile unsigned int reserved_5:3;
+    volatile unsigned int SEL13:5;
+    volatile unsigned int reserved_13:3;
+    volatile unsigned int SEL14:5;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int SEL15:5;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_MSCSET_CON3_Bits;
+
+
+typedef struct _Ifx_GTM_OCS_Bits
+{
+    volatile unsigned int reserved_0:24;
+    volatile unsigned int SUS:4;
+    volatile unsigned int SUS_P:1;
+    volatile unsigned int SUSSTA:1;
+    volatile unsigned int reserved_30:2;
+} Ifx_GTM_OCS_Bits;
+
+
+typedef struct _Ifx_GTM_ODA_Bits
+{
+    volatile unsigned int DDREN:1;
+    volatile unsigned int DREN:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_ODA_Bits;
+
+
+typedef struct _Ifx_GTM_OTBU0T_Bits
+{
+    volatile unsigned int CV:27;
+    volatile unsigned int reserved_27:1;
+    volatile unsigned int CM:2;
+    volatile unsigned int reserved_30:2;
+} Ifx_GTM_OTBU0T_Bits;
+
+
+typedef struct _Ifx_GTM_OTBU1T_Bits
+{
+    volatile unsigned int CV:24;
+    volatile unsigned int reserved_24:4;
+    volatile unsigned int EN:1;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_OTBU1T_Bits;
+
+
+typedef struct _Ifx_GTM_OTBU2T_Bits
+{
+    volatile unsigned int CV:24;
+    volatile unsigned int reserved_24:4;
+    volatile unsigned int EN:1;
+    volatile unsigned int reserved_29:3;
+} Ifx_GTM_OTBU2T_Bits;
+
+
+typedef struct _Ifx_GTM_OTSC0_Bits
+{
+    volatile unsigned int B0LMT:3;
+    volatile unsigned int reserved_3:1;
+    volatile unsigned int B0LMI:4;
+    volatile unsigned int B0HMT:3;
+    volatile unsigned int reserved_11:1;
+    volatile unsigned int B0HMI:4;
+    volatile unsigned int B1LMT:3;
+    volatile unsigned int reserved_19:1;
+    volatile unsigned int B1LMI:4;
+    volatile unsigned int B1HMT:3;
+    volatile unsigned int reserved_27:1;
+    volatile unsigned int B1HMI:4;
+} Ifx_GTM_OTSC0_Bits;
+
+
+typedef struct _Ifx_GTM_OTSC1_Bits
+{
+    volatile unsigned int MCS:4;
+    volatile unsigned int MI:4;
+    volatile unsigned int reserved_8:1;
+    volatile unsigned int MOE:1;
+    volatile unsigned int reserved_10:22;
+} Ifx_GTM_OTSC1_Bits;
+
+
+typedef struct _Ifx_GTM_OTSS_Bits
+{
+    volatile unsigned int OTGB0:4;
+    volatile unsigned int reserved_4:4;
+    volatile unsigned int OTGB1:4;
+    volatile unsigned int reserved_12:4;
+    volatile unsigned int OTGB2:4;
+    volatile unsigned int reserved_20:12;
+} Ifx_GTM_OTSS_Bits;
+
+
+typedef struct _Ifx_GTM_REV_Bits
+{
+    volatile unsigned int STEP:8;
+    volatile unsigned int NO:4;
+    volatile unsigned int MINOR:4;
+    volatile unsigned int MAJOR:4;
+    volatile unsigned int DEV_CODE0:4;
+    volatile unsigned int DEV_CODE1:4;
+    volatile unsigned int DEV_CODE2:4;
+} Ifx_GTM_REV_Bits;
+
+
+typedef struct _Ifx_GTM_RST_Bits
+{
+    volatile unsigned int RST:1;
+    volatile unsigned int reserved_1:31;
+} Ifx_GTM_RST_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_CMP_Bits
+{
+    volatile unsigned int CMP:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_SPE_CMP_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_CNT_Bits
+{
+    volatile unsigned int CNT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_SPE_CNT_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_CTRL_STAT_Bits
+{
+    volatile unsigned int SPE_EN:1;
+    volatile unsigned int SIE0:1;
+    volatile unsigned int SIE1:1;
+    volatile unsigned int SIE2:1;
+    volatile unsigned int TRIG_SEL:2;
+    volatile unsigned int TIM_SEL:1;
+    volatile unsigned int FSOM:1;
+    volatile unsigned int SPE_PAT_PTR:3;
+    volatile unsigned int reserved_11:1;
+    volatile unsigned int AIP:3;
+    volatile unsigned int ADIR:1;
+    volatile unsigned int PIP:3;
+    volatile unsigned int PDIR:1;
+    volatile unsigned int NIP:3;
+    volatile unsigned int reserved_23:1;
+    volatile unsigned int FSOL:8;
+} Ifx_GTM_SPE_CTRL_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_EIRQ_EN_Bits
+{
+    volatile unsigned int SPE_NIPD_EIRQ_EN:1;
+    volatile unsigned int SPE_DCHG_EIRQ_EN:1;
+    volatile unsigned int SPE_PERR_EIRQ_EN:1;
+    volatile unsigned int SPE_BIS_EIRQ_EN:1;
+    volatile unsigned int SPE_RCMP_EIRQ_EN:1;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_SPE_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_IRQ_EN_Bits
+{
+    volatile unsigned int SPE_NIPD_IRQ_EN:1;
+    volatile unsigned int SPE_DCHG_IRQ_EN:1;
+    volatile unsigned int SPE_PERR_IRQ_EN:1;
+    volatile unsigned int SPE_BIS_IRQ_EN:1;
+    volatile unsigned int SPE_RCMP_IRQ_EN:1;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_SPE_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_SPE_NIPD:1;
+    volatile unsigned int TRG_SPE_DCHG:1;
+    volatile unsigned int TRG_SPE_PERR:1;
+    volatile unsigned int TRG_SPE_BIS:1;
+    volatile unsigned int TRG_SPE_RCMP:1;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_SPE_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_SPE_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int SPE_NIPD:1;
+    volatile unsigned int SPE_DCHG:1;
+    volatile unsigned int SPE_PERR:1;
+    volatile unsigned int SPE_BIS:1;
+    volatile unsigned int SPE_RCMP:1;
+    volatile unsigned int reserved_5:27;
+} Ifx_GTM_SPE_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_OUT_CTRL_Bits
+{
+    volatile unsigned int SPE_OUT_CTRL:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_SPE_OUT_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_OUT_PAT_Bits
+{
+    volatile unsigned int SPE_OUT_PAT:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_SPE_OUT_PAT_Bits;
+
+
+typedef struct _Ifx_GTM_SPE_PAT_Bits
+{
+    volatile unsigned int IP0_VAL:1;
+    volatile unsigned int IP0_PAT:3;
+    volatile unsigned int IP1_VAL:1;
+    volatile unsigned int IP1_PAT:3;
+    volatile unsigned int IP2_VAL:1;
+    volatile unsigned int IP2_PAT:3;
+    volatile unsigned int IP3_VAL:1;
+    volatile unsigned int IP3_PAT:3;
+    volatile unsigned int IP4_VAL:1;
+    volatile unsigned int IP4_PAT:3;
+    volatile unsigned int IP5_VAL:1;
+    volatile unsigned int IP5_PAT:3;
+    volatile unsigned int IP6_VAL:1;
+    volatile unsigned int IP6_PAT:3;
+    volatile unsigned int IP7_VAL:1;
+    volatile unsigned int IP7_PAT:3;
+} Ifx_GTM_SPE_PAT_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CH0_BASE_Bits
+{
+    volatile unsigned int BASE:27;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_TBU_CH0_BASE_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CH0_CTRL_Bits
+{
+    volatile unsigned int LOW_RES:1;
+    volatile unsigned int CH_CLK_SRC:3;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_TBU_CH0_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CH1_BASE_Bits
+{
+    volatile unsigned int BASE:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_TBU_CH1_BASE_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CH1_CTRL_Bits
+{
+    volatile unsigned int CH_MODE:1;
+    volatile unsigned int CH_CLK_SRC:3;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_TBU_CH1_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CH2_BASE_Bits
+{
+    volatile unsigned int BASE:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_TBU_CH2_BASE_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CH2_CTRL_Bits
+{
+    volatile unsigned int CH_MODE:1;
+    volatile unsigned int CH_CLK_SRC:3;
+    volatile unsigned int reserved_4:28;
+} Ifx_GTM_TBU_CH2_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TBU_CHEN_Bits
+{
+    volatile unsigned int ENDIS_CH0:2;
+    volatile unsigned int ENDIS_CH1:2;
+    volatile unsigned int ENDIS_CH2:2;
+    volatile unsigned int reserved_6:26;
+} Ifx_GTM_TBU_CHEN_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_AUX_IN_SRC_Bits
+{
+    volatile unsigned int SRC_CH0:1;
+    volatile unsigned int SRC_CH1:1;
+    volatile unsigned int SRC_CH2:1;
+    volatile unsigned int SRC_CH3:1;
+    volatile unsigned int SRC_CH4:1;
+    volatile unsigned int SRC_CH5:1;
+    volatile unsigned int SRC_CH6:1;
+    volatile unsigned int SRC_CH7:1;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_TIM_AUX_IN_SRC_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_CNT_Bits
+{
+    volatile unsigned int CNT:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_TIM_CH_CNT_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_CNTS_Bits
+{
+    volatile unsigned int CNTS:24;
+    volatile unsigned int ECNT:8;
+} Ifx_GTM_TIM_CH_CNTS_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_CTRL_Bits
+{
+    volatile unsigned int TIM_EN:1;
+    volatile unsigned int TIM_MODE:3;
+    volatile unsigned int OSM:1;
+    volatile unsigned int ARU_EN:1;
+    volatile unsigned int CICTRL:1;
+    volatile unsigned int TBU0_SEL:1;
+    volatile unsigned int GPR0_SEL:2;
+    volatile unsigned int GPR1_SEL:2;
+    volatile unsigned int CNTS_SEL:1;
+    volatile unsigned int DSL:1;
+    volatile unsigned int ISL:1;
+    volatile unsigned int ECNT_RESET:1;
+    volatile unsigned int FLT_EN:1;
+    volatile unsigned int FLT_CNT_FRQ:2;
+    volatile unsigned int EXT_CAP_EN:1;
+    volatile unsigned int FLT_MODE_RE:1;
+    volatile unsigned int FLT_CTR_RE:1;
+    volatile unsigned int FLT_MODE_FE:1;
+    volatile unsigned int FLT_CTR_FE:1;
+    volatile unsigned int CLK_SEL:3;
+    volatile unsigned int FR_ECNT_OFL:1;
+    volatile unsigned int EGPR0_SEL:1;
+    volatile unsigned int EGPR1_SEL:1;
+    volatile unsigned int TOCTRL:2;
+} Ifx_GTM_TIM_CH_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_ECNT_Bits
+{
+    volatile unsigned int ECNT:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TIM_CH_ECNT_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_ECTRL_Bits
+{
+    volatile unsigned int EXT_CAP_SRC:3;
+    volatile unsigned int reserved_3:29;
+} Ifx_GTM_TIM_CH_ECTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_EIRQ_EN_Bits
+{
+    volatile unsigned int NEWVAL_EIRQ_EN:1;
+    volatile unsigned int ECNTOFL_EIRQ_EN:1;
+    volatile unsigned int CNTOFL_EIRQ_EN:1;
+    volatile unsigned int GPROFL_EIRQ_EN:1;
+    volatile unsigned int TODET_EIRQ_EN:1;
+    volatile unsigned int GLITCHDET_EIRQ_EN:1;
+    volatile unsigned int reserved_6:26;
+} Ifx_GTM_TIM_CH_EIRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_FLT_FE_Bits
+{
+    volatile unsigned int FLT_FE:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_TIM_CH_FLT_FE_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_FLT_RE_Bits
+{
+    volatile unsigned int FLT_RE:24;
+    volatile unsigned int reserved_24:8;
+} Ifx_GTM_TIM_CH_FLT_RE_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_GPR0_Bits
+{
+    volatile unsigned int GPR0:24;
+    volatile unsigned int ECNT:8;
+} Ifx_GTM_TIM_CH_GPR0_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_GPR1_Bits
+{
+    volatile unsigned int GPR1:24;
+    volatile unsigned int ECNT:8;
+} Ifx_GTM_TIM_CH_GPR1_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_IRQ_EN_Bits
+{
+    volatile unsigned int NEWVAL_IRQ_EN:1;
+    volatile unsigned int ECNTOFL_IRQ_EN:1;
+    volatile unsigned int CNTOFL_IRQ_EN:1;
+    volatile unsigned int GPROFL_IRQ_EN:1;
+    volatile unsigned int TODET_IRQ_EN:1;
+    volatile unsigned int GLITCHDET_IRQ_EN:1;
+    volatile unsigned int reserved_6:26;
+} Ifx_GTM_TIM_CH_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_NEWVAL:1;
+    volatile unsigned int TRG_ECNTOFL:1;
+    volatile unsigned int TRG_CNTOFL:1;
+    volatile unsigned int TRG_GPROFL:1;
+    volatile unsigned int TRG_TODET:1;
+    volatile unsigned int TRG_GLITCHDET:1;
+    volatile unsigned int reserved_6:26;
+} Ifx_GTM_TIM_CH_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_TIM_CH_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int NEWVAL:1;
+    volatile unsigned int ECNTOFL:1;
+    volatile unsigned int CNTOFL:1;
+    volatile unsigned int GPROFL:1;
+    volatile unsigned int TODET:1;
+    volatile unsigned int GLITCHDET:1;
+    volatile unsigned int reserved_6:26;
+} Ifx_GTM_TIM_CH_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_TDUC_Bits
+{
+    volatile unsigned int TO_CNT:8;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_TIM_CH_TDUC_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_CH_TDUV_Bits
+{
+    volatile unsigned int TOV:8;
+    volatile unsigned int reserved_8:20;
+    volatile unsigned int TCS:3;
+    volatile unsigned int reserved_31:1;
+} Ifx_GTM_TIM_CH_TDUV_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_IN_SRC_Bits
+{
+    volatile unsigned int VAL_0:2;
+    volatile unsigned int MODE_0:2;
+    volatile unsigned int VAL_1:2;
+    volatile unsigned int MODE_1:2;
+    volatile unsigned int VAL_2:2;
+    volatile unsigned int MODE_2:2;
+    volatile unsigned int VAL_3:2;
+    volatile unsigned int MODE_3:2;
+    volatile unsigned int VAL_4:2;
+    volatile unsigned int MODE_4:2;
+    volatile unsigned int VAL_5:2;
+    volatile unsigned int MODE_5:2;
+    volatile unsigned int VAL_6:2;
+    volatile unsigned int MODE_6:2;
+    volatile unsigned int VAL_7:2;
+    volatile unsigned int MODE_7:2;
+} Ifx_GTM_TIM_IN_SRC_Bits;
+
+
+typedef struct _Ifx_GTM_TIM_RST_Bits
+{
+    volatile unsigned int RST_CH0:1;
+    volatile unsigned int RST_CH1:1;
+    volatile unsigned int RST_CH2:1;
+    volatile unsigned int RST_CH3:1;
+    volatile unsigned int RST_CH4:1;
+    volatile unsigned int RST_CH5:1;
+    volatile unsigned int RST_CH6:1;
+    volatile unsigned int RST_CH7:1;
+    volatile unsigned int reserved_8:24;
+} Ifx_GTM_TIM_RST_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_CM0_Bits
+{
+    volatile unsigned int CM0:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_CH_CM0_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_CM1_Bits
+{
+    volatile unsigned int CM1:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_CH_CM1_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_CN0_Bits
+{
+    volatile unsigned int CN0:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_CH_CN0_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_CTRL_Bits
+{
+    volatile unsigned int reserved_0:11;
+    volatile unsigned int SL:1;
+    volatile unsigned int CLK_SRC_SR:3;
+    volatile unsigned int reserved_15:5;
+    volatile unsigned int RST_CCU0:1;
+    volatile unsigned int reserved_21:3;
+    volatile unsigned int TRIGOUT:1;
+    volatile unsigned int reserved_25:1;
+    volatile unsigned int OSM:1;
+    volatile unsigned int BITREV:1;
+    volatile unsigned int SPEM:1;
+    volatile unsigned int GCM:1;
+    volatile unsigned int reserved_30:2;
+} Ifx_GTM_TOM_CH_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_IRQ_EN_Bits
+{
+    volatile unsigned int CCU0TC_IRQ_EN:1;
+    volatile unsigned int CCU1TC_IRQ_EN:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_TOM_CH_IRQ_EN_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_IRQ_FORCINT_Bits
+{
+    volatile unsigned int TRG_CCU0TC0:1;
+    volatile unsigned int TRG_CCU1TC0:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_TOM_CH_IRQ_FORCINT_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_IRQ_MODE_Bits
+{
+    volatile unsigned int IRQ_MODE:2;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_TOM_CH_IRQ_MODE_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_IRQ_NOTIFY_Bits
+{
+    volatile unsigned int CCU0TC:1;
+    volatile unsigned int CCU1TC:1;
+    volatile unsigned int reserved_2:30;
+} Ifx_GTM_TOM_CH_IRQ_NOTIFY_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_SR0_Bits
+{
+    volatile unsigned int SR0:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_CH_SR0_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_SR1_Bits
+{
+    volatile unsigned int SR1:16;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_CH_SR1_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_CH_STAT_Bits
+{
+    volatile unsigned int OL:1;
+    volatile unsigned int reserved_1:31;
+} Ifx_GTM_TOM_CH_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_ACT_TB_Bits
+{
+    volatile unsigned int ACT_TB:24;
+    volatile unsigned int TB_TRIG:1;
+    volatile unsigned int TBU_SEL:2;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_TOM_TGC0_ACT_TB_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_ENDIS_CTRL_Bits
+{
+    volatile unsigned int ENDIS_CTRL0:2;
+    volatile unsigned int ENDIS_CTRL1:2;
+    volatile unsigned int ENDIS_CTRL2:2;
+    volatile unsigned int ENDIS_CTRL3:2;
+    volatile unsigned int ENDIS_CTRL4:2;
+    volatile unsigned int ENDIS_CTRL5:2;
+    volatile unsigned int ENDIS_CTRL6:2;
+    volatile unsigned int ENDIS_CTRL7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC0_ENDIS_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_ENDIS_STAT_Bits
+{
+    volatile unsigned int ENDIS_STAT0:2;
+    volatile unsigned int ENDIS_STAT1:2;
+    volatile unsigned int ENDIS_STAT2:2;
+    volatile unsigned int ENDIS_STAT3:2;
+    volatile unsigned int ENDIS_STAT4:2;
+    volatile unsigned int ENDIS_STAT5:2;
+    volatile unsigned int ENDIS_STAT6:2;
+    volatile unsigned int ENDIS_STAT7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC0_ENDIS_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_FUPD_CTRL_Bits
+{
+    volatile unsigned int FUPD_CTRL0:2;
+    volatile unsigned int FUPD_CTRL1:2;
+    volatile unsigned int FUPD_CTRL2:2;
+    volatile unsigned int FUPD_CTRL3:2;
+    volatile unsigned int FUPD_CTRL4:2;
+    volatile unsigned int FUPD_CTRL5:2;
+    volatile unsigned int FUPD_CTRL6:2;
+    volatile unsigned int FUPD_CTRL7:2;
+    volatile unsigned int RSTCN0_CH0:2;
+    volatile unsigned int RSTCN0_CH1:2;
+    volatile unsigned int RSTCN0_CH2:2;
+    volatile unsigned int RSTCN0_CH3:2;
+    volatile unsigned int RSTCN0_CH4:2;
+    volatile unsigned int RSTCN0_CH5:2;
+    volatile unsigned int RSTCN0_CH6:2;
+    volatile unsigned int RSTCN0_CH7:2;
+} Ifx_GTM_TOM_TGC0_FUPD_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_GLB_CTRL_Bits
+{
+    volatile unsigned int HOST_TRIG:1;
+    volatile unsigned int reserved_1:7;
+    volatile unsigned int RST_CH0:1;
+    volatile unsigned int RST_CH1:1;
+    volatile unsigned int RST_CH2:1;
+    volatile unsigned int RST_CH3:1;
+    volatile unsigned int RST_CH4:1;
+    volatile unsigned int RST_CH5:1;
+    volatile unsigned int RST_CH6:1;
+    volatile unsigned int RST_CH7:1;
+    volatile unsigned int UPEN_CTRL0:2;
+    volatile unsigned int UPEN_CTRL1:2;
+    volatile unsigned int UPEN_CTRL2:2;
+    volatile unsigned int UPEN_CTRL3:2;
+    volatile unsigned int UPEN_CTRL4:2;
+    volatile unsigned int UPEN_CTRL5:2;
+    volatile unsigned int UPEN_CTRL6:2;
+    volatile unsigned int UPEN_CTRL7:2;
+} Ifx_GTM_TOM_TGC0_GLB_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_INT_TRIG_Bits
+{
+    volatile unsigned int INT_TRIG0:2;
+    volatile unsigned int INT_TRIG1:2;
+    volatile unsigned int INT_TRIG2:2;
+    volatile unsigned int INT_TRIG3:2;
+    volatile unsigned int INT_TRIG4:2;
+    volatile unsigned int INT_TRIG5:2;
+    volatile unsigned int INT_TRIG6:2;
+    volatile unsigned int INT_TRIG7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC0_INT_TRIG_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_OUTEN_CTRL_Bits
+{
+    volatile unsigned int OUTEN_CTRL0:2;
+    volatile unsigned int OUTEN_CTRL1:2;
+    volatile unsigned int OUTEN_CTRL2:2;
+    volatile unsigned int OUTEN_CTRL3:2;
+    volatile unsigned int OUTEN_CTRL4:2;
+    volatile unsigned int OUTEN_CTRL5:2;
+    volatile unsigned int OUTEN_CTRL6:2;
+    volatile unsigned int OUTEN_CTRL7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC0_OUTEN_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC0_OUTEN_STAT_Bits
+{
+    volatile unsigned int OUTEN_STAT0:2;
+    volatile unsigned int OUTEN_STAT1:2;
+    volatile unsigned int OUTEN_STAT2:2;
+    volatile unsigned int OUTEN_STAT3:2;
+    volatile unsigned int OUTEN_STAT4:2;
+    volatile unsigned int OUTEN_STAT5:2;
+    volatile unsigned int OUTEN_STAT6:2;
+    volatile unsigned int OUTEN_STAT7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC0_OUTEN_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_ACT_TB_Bits
+{
+    volatile unsigned int ACT_TB:24;
+    volatile unsigned int TB_TRIG:1;
+    volatile unsigned int TBU_SEL:2;
+    volatile unsigned int reserved_27:5;
+} Ifx_GTM_TOM_TGC1_ACT_TB_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_ENDIS_CTRL_Bits
+{
+    volatile unsigned int ENDIS_CTRL0:2;
+    volatile unsigned int ENDIS_CTRL1:2;
+    volatile unsigned int ENDIS_CTRL2:2;
+    volatile unsigned int ENDIS_CTRL3:2;
+    volatile unsigned int ENDIS_CTRL4:2;
+    volatile unsigned int ENDIS_CTRL5:2;
+    volatile unsigned int ENDIS_CTRL6:2;
+    volatile unsigned int ENDIS_CTRL7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC1_ENDIS_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_ENDIS_STAT_Bits
+{
+    volatile unsigned int ENDIS_STAT0:2;
+    volatile unsigned int ENDIS_STAT1:2;
+    volatile unsigned int ENDIS_STAT2:2;
+    volatile unsigned int ENDIS_STAT3:2;
+    volatile unsigned int ENDIS_STAT4:2;
+    volatile unsigned int ENDIS_STAT5:2;
+    volatile unsigned int ENDIS_STAT6:2;
+    volatile unsigned int ENDIS_STAT7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC1_ENDIS_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_FUPD_CTRL_Bits
+{
+    volatile unsigned int FUPD_CTRL0:2;
+    volatile unsigned int FUPD_CTRL1:2;
+    volatile unsigned int FUPD_CTRL2:2;
+    volatile unsigned int FUPD_CTRL3:2;
+    volatile unsigned int FUPD_CTRL4:2;
+    volatile unsigned int FUPD_CTRL5:2;
+    volatile unsigned int FUPD_CTRL6:2;
+    volatile unsigned int FUPD_CTRL7:2;
+    volatile unsigned int RSTCN0_CH0:2;
+    volatile unsigned int RSTCN0_CH1:2;
+    volatile unsigned int RSTCN0_CH2:2;
+    volatile unsigned int RSTCN0_CH3:2;
+    volatile unsigned int RSTCN0_CH4:2;
+    volatile unsigned int RSTCN0_CH5:2;
+    volatile unsigned int RSTCN0_CH6:2;
+    volatile unsigned int RSTCN0_CH7:2;
+} Ifx_GTM_TOM_TGC1_FUPD_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_GLB_CTRL_Bits
+{
+    volatile unsigned int HOST_TRIG:1;
+    volatile unsigned int reserved_1:7;
+    volatile unsigned int RST_CH0:1;
+    volatile unsigned int RST_CH1:1;
+    volatile unsigned int RST_CH2:1;
+    volatile unsigned int RST_CH3:1;
+    volatile unsigned int RST_CH4:1;
+    volatile unsigned int RST_CH5:1;
+    volatile unsigned int RST_CH6:1;
+    volatile unsigned int RST_CH7:1;
+    volatile unsigned int UPEN_CTRL0:2;
+    volatile unsigned int UPEN_CTRL1:2;
+    volatile unsigned int UPEN_CTRL2:2;
+    volatile unsigned int UPEN_CTRL3:2;
+    volatile unsigned int UPEN_CTRL4:2;
+    volatile unsigned int UPEN_CTRL5:2;
+    volatile unsigned int UPEN_CTRL6:2;
+    volatile unsigned int UPEN_CTRL7:2;
+} Ifx_GTM_TOM_TGC1_GLB_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_INT_TRIG_Bits
+{
+    volatile unsigned int INT_TRIG0:2;
+    volatile unsigned int INT_TRIG1:2;
+    volatile unsigned int INT_TRIG2:2;
+    volatile unsigned int INT_TRIG3:2;
+    volatile unsigned int INT_TRIG4:2;
+    volatile unsigned int INT_TRIG5:2;
+    volatile unsigned int INT_TRIG6:2;
+    volatile unsigned int INT_TRIG7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC1_INT_TRIG_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_OUTEN_CTRL_Bits
+{
+    volatile unsigned int OUTEN_CTRL0:2;
+    volatile unsigned int OUTEN_CTRL1:2;
+    volatile unsigned int OUTEN_CTRL2:2;
+    volatile unsigned int OUTEN_CTRL3:2;
+    volatile unsigned int OUTEN_CTRL4:2;
+    volatile unsigned int OUTEN_CTRL5:2;
+    volatile unsigned int OUTEN_CTRL6:2;
+    volatile unsigned int OUTEN_CTRL7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC1_OUTEN_CTRL_Bits;
+
+
+typedef struct _Ifx_GTM_TOM_TGC1_OUTEN_STAT_Bits
+{
+    volatile unsigned int OUTEN_STAT0:2;
+    volatile unsigned int OUTEN_STAT1:2;
+    volatile unsigned int OUTEN_STAT2:2;
+    volatile unsigned int OUTEN_STAT3:2;
+    volatile unsigned int OUTEN_STAT4:2;
+    volatile unsigned int OUTEN_STAT5:2;
+    volatile unsigned int OUTEN_STAT6:2;
+    volatile unsigned int OUTEN_STAT7:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TOM_TGC1_OUTEN_STAT_Bits;
+
+
+typedef struct _Ifx_GTM_TRIGOUT_Bits
+{
+    volatile unsigned int INT0:2;
+    volatile unsigned int INT1:2;
+    volatile unsigned int TRIG0:2;
+    volatile unsigned int TRIG1:2;
+    volatile unsigned int TRIG2:2;
+    volatile unsigned int TRIG3:2;
+    volatile unsigned int TRIG4:2;
+    volatile unsigned int TRIG5:2;
+    volatile unsigned int reserved_16:16;
+} Ifx_GTM_TRIGOUT_Bits;
+
+
+
+
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ACCEN0_Bits B;
+} Ifx_GTM_ACCEN0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ACCEN1_Bits B;
+} Ifx_GTM_ACCEN1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ADCTRIG0OUT0_Bits B;
+} Ifx_GTM_ADCTRIG0OUT0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ADCTRIG0OUT1_Bits B;
+} Ifx_GTM_ADCTRIG0OUT1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ADCTRIG1OUT0_Bits B;
+} Ifx_GTM_ADCTRIG1OUT0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ADCTRIG1OUT1_Bits B;
+} Ifx_GTM_ADCTRIG1OUT1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_AEI_ADDR_XPT_Bits B;
+} Ifx_GTM_AEI_ADDR_XPT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_AFD_CH_BUF_ACC_Bits B;
+} Ifx_GTM_AFD_CH_BUF_ACC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_ARU_ACCESS_Bits B;
+} Ifx_GTM_ARU_ARU_ACCESS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DATA_H_Bits B;
+} Ifx_GTM_ARU_DATA_H;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DATA_L_Bits B;
+} Ifx_GTM_ARU_DATA_L;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DBG_ACCESS0_Bits B;
+} Ifx_GTM_ARU_DBG_ACCESS0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DBG_ACCESS1_Bits B;
+} Ifx_GTM_ARU_DBG_ACCESS1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DBG_DATA0_H_Bits B;
+} Ifx_GTM_ARU_DBG_DATA0_H;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DBG_DATA0_L_Bits B;
+} Ifx_GTM_ARU_DBG_DATA0_L;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DBG_DATA1_H_Bits B;
+} Ifx_GTM_ARU_DBG_DATA1_H;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_DBG_DATA1_L_Bits B;
+} Ifx_GTM_ARU_DBG_DATA1_L;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_IRQ_EN_Bits B;
+} Ifx_GTM_ARU_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_IRQ_FORCINT_Bits B;
+} Ifx_GTM_ARU_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_IRQ_MODE_Bits B;
+} Ifx_GTM_ARU_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ARU_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_ARU_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_ACT_TB_Bits B;
+} Ifx_GTM_ATOM_AGC_ACT_TB;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_ENDIS_CTRL_Bits B;
+} Ifx_GTM_ATOM_AGC_ENDIS_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_ENDIS_STAT_Bits B;
+} Ifx_GTM_ATOM_AGC_ENDIS_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_FUPD_CTRL_Bits B;
+} Ifx_GTM_ATOM_AGC_FUPD_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_GLB_CTRL_Bits B;
+} Ifx_GTM_ATOM_AGC_GLB_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_INT_TRIG_Bits B;
+} Ifx_GTM_ATOM_AGC_INT_TRIG;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_OUTEN_CTRL_Bits B;
+} Ifx_GTM_ATOM_AGC_OUTEN_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_AGC_OUTEN_STAT_Bits B;
+} Ifx_GTM_ATOM_AGC_OUTEN_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_CM0_Bits B;
+} Ifx_GTM_ATOM_CH_CM0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_CM1_Bits B;
+} Ifx_GTM_ATOM_CH_CM1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_CN0_Bits B;
+} Ifx_GTM_ATOM_CH_CN0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_CTRL_Bits B;
+} Ifx_GTM_ATOM_CH_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_IRQ_EN_Bits B;
+} Ifx_GTM_ATOM_CH_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_IRQ_FORCINT_Bits B;
+} Ifx_GTM_ATOM_CH_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_IRQ_MODE_Bits B;
+} Ifx_GTM_ATOM_CH_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_ATOM_CH_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_RDADDR_Bits B;
+} Ifx_GTM_ATOM_CH_RDADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_SOMC_Bits B;
+} Ifx_GTM_ATOM_CH_SOMC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_SOMI_Bits B;
+} Ifx_GTM_ATOM_CH_SOMI;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_SOMP_Bits B;
+} Ifx_GTM_ATOM_CH_SOMP;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_SOMS_Bits B;
+} Ifx_GTM_ATOM_CH_SOMS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_SR0_Bits B;
+} Ifx_GTM_ATOM_CH_SR0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_SR1_Bits B;
+} Ifx_GTM_ATOM_CH_SR1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ATOM_CH_STAT_Bits B;
+} Ifx_GTM_ATOM_CH_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_EIRQ_EN_Bits B;
+} Ifx_GTM_BRC_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_IRQ_EN_Bits B;
+} Ifx_GTM_BRC_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_IRQ_FORCINT_Bits B;
+} Ifx_GTM_BRC_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_IRQ_MODE_Bits B;
+} Ifx_GTM_BRC_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_BRC_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_RST_Bits B;
+} Ifx_GTM_BRC_RST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC0_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC0_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC0_DEST_Bits B;
+} Ifx_GTM_BRC_SRC0_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC10_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC10_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC10_DEST_Bits B;
+} Ifx_GTM_BRC_SRC10_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC11_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC11_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC11_DEST_Bits B;
+} Ifx_GTM_BRC_SRC11_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC1_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC1_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC1_DEST_Bits B;
+} Ifx_GTM_BRC_SRC1_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC2_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC2_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC2_DEST_Bits B;
+} Ifx_GTM_BRC_SRC2_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC3_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC3_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC3_DEST_Bits B;
+} Ifx_GTM_BRC_SRC3_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC4_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC4_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC4_DEST_Bits B;
+} Ifx_GTM_BRC_SRC4_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC5_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC5_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC5_DEST_Bits B;
+} Ifx_GTM_BRC_SRC5_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC6_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC6_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC6_DEST_Bits B;
+} Ifx_GTM_BRC_SRC6_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC7_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC7_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC7_DEST_Bits B;
+} Ifx_GTM_BRC_SRC7_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC8_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC8_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC8_DEST_Bits B;
+} Ifx_GTM_BRC_SRC8_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC9_ADDR_Bits B;
+} Ifx_GTM_BRC_SRC9_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRC_SRC9_DEST_Bits B;
+} Ifx_GTM_BRC_SRC9_DEST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRIDGE_MODE_Bits B;
+} Ifx_GTM_BRIDGE_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRIDGE_PTR1_Bits B;
+} Ifx_GTM_BRIDGE_PTR1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_BRIDGE_PTR2_Bits B;
+} Ifx_GTM_BRIDGE_PTR2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CLC_Bits B;
+} Ifx_GTM_CLC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMP_EIRQ_EN_Bits B;
+} Ifx_GTM_CMP_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMP_EN_Bits B;
+} Ifx_GTM_CMP_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMP_IRQ_EN_Bits B;
+} Ifx_GTM_CMP_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMP_IRQ_FORCINT_Bits B;
+} Ifx_GTM_CMP_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMP_IRQ_MODE_Bits B;
+} Ifx_GTM_CMP_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMP_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_CMP_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_CLK0_5_CTRL_Bits B;
+} Ifx_GTM_CMU_CLK0_5_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_CLK_6_CTRL_Bits B;
+} Ifx_GTM_CMU_CLK_6_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_CLK_7_CTRL_Bits B;
+} Ifx_GTM_CMU_CLK_7_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_CLK_EN_Bits B;
+} Ifx_GTM_CMU_CLK_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_ECLK_DEN_Bits B;
+} Ifx_GTM_CMU_ECLK_DEN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_ECLK_NUM_Bits B;
+} Ifx_GTM_CMU_ECLK_NUM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_FXCLK_CTRL_Bits B;
+} Ifx_GTM_CMU_FXCLK_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_GCLK_DEN_Bits B;
+} Ifx_GTM_CMU_GCLK_DEN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CMU_GCLK_NUM_Bits B;
+} Ifx_GTM_CMU_GCLK_NUM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_CTRL_Bits B;
+} Ifx_GTM_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DATAIN_Bits B;
+} Ifx_GTM_DATAIN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ACB_Bits B;
+} Ifx_GTM_DPLL_ACB;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ACT_STA_Bits B;
+} Ifx_GTM_DPLL_ACT_STA;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ADD_IN_CAL1_Bits B;
+} Ifx_GTM_DPLL_ADD_IN_CAL1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ADD_IN_CAL2_Bits B;
+} Ifx_GTM_DPLL_ADD_IN_CAL2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ADD_IN_LD1_Bits B;
+} Ifx_GTM_DPLL_ADD_IN_LD1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ADD_IN_LD2_Bits B;
+} Ifx_GTM_DPLL_ADD_IN_LD2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ADT_S_Bits B;
+} Ifx_GTM_DPLL_ADT_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_AOSV_2_Bits B;
+} Ifx_GTM_DPLL_AOSV_2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_APS_Bits B;
+} Ifx_GTM_DPLL_APS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_APS_1C3_Bits B;
+} Ifx_GTM_DPLL_APS_1C3;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_APS_SYNC_Bits B;
+} Ifx_GTM_DPLL_APS_SYNC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_APT_Bits B;
+} Ifx_GTM_DPLL_APT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_APT_2C_Bits B;
+} Ifx_GTM_DPLL_APT_2C;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_APT_SYNC_Bits B;
+} Ifx_GTM_DPLL_APT_SYNC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CDT_SX_Bits B;
+} Ifx_GTM_DPLL_CDT_SX;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CDT_SX_NOM_Bits B;
+} Ifx_GTM_DPLL_CDT_SX_NOM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CDT_TX_Bits B;
+} Ifx_GTM_DPLL_CDT_TX;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CDT_TX_NOM_Bits B;
+} Ifx_GTM_DPLL_CDT_TX_NOM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CNT_NUM1_Bits B;
+} Ifx_GTM_DPLL_CNT_NUM1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CNT_NUM2_Bits B;
+} Ifx_GTM_DPLL_CNT_NUM2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CRTL_1_SHADOW_STATE_Bits B;
+} Ifx_GTM_DPLL_CRTL_1_SHADOW_STATE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_0_Bits B;
+} Ifx_GTM_DPLL_CTRL_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_0_SHADOW_STATE_Bits B;
+} Ifx_GTM_DPLL_CTRL_0_SHADOW_STATE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_0_SHADOW_TRIGGER_Bits B;
+} Ifx_GTM_DPLL_CTRL_0_SHADOW_TRIGGER;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_1_Bits B;
+} Ifx_GTM_DPLL_CTRL_1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_1_SHADOW_TRIGGER_Bits B;
+} Ifx_GTM_DPLL_CTRL_1_SHADOW_TRIGGER;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_2_Bits B;
+} Ifx_GTM_DPLL_CTRL_2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_3_Bits B;
+} Ifx_GTM_DPLL_CTRL_3;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_CTRL_4_Bits B;
+} Ifx_GTM_DPLL_CTRL_4;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_DLA_Bits B;
+} Ifx_GTM_DPLL_DLA;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_DT_S_Bits B;
+} Ifx_GTM_DPLL_DT_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_DT_S_ACT_Bits B;
+} Ifx_GTM_DPLL_DT_S_ACT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_DT_T_ACT_Bits B;
+} Ifx_GTM_DPLL_DT_T_ACT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_DTA_Bits B;
+} Ifx_GTM_DPLL_DTA;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_EDT_S_Bits B;
+} Ifx_GTM_DPLL_EDT_S;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_EDT_T_Bits B;
+} Ifx_GTM_DPLL_EDT_T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_EIRQ_EN_Bits B;
+} Ifx_GTM_DPLL_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_FTV_S_Bits B;
+} Ifx_GTM_DPLL_FTV_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_FTV_T_Bits B;
+} Ifx_GTM_DPLL_FTV_T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_ID_PMTR_Bits B;
+} Ifx_GTM_DPLL_ID_PMTR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_INC_CNT1_Bits B;
+} Ifx_GTM_DPLL_INC_CNT1;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_INC_CNT2_Bits B;
+} Ifx_GTM_DPLL_INC_CNT2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_IRQ_EN_Bits B;
+} Ifx_GTM_DPLL_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_IRQ_FORCINT_Bits B;
+} Ifx_GTM_DPLL_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_IRQ_MODE_Bits B;
+} Ifx_GTM_DPLL_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_DPLL_IRQ_NOTIFY;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_MEDT_S_Bits B;
+} Ifx_GTM_DPLL_MEDT_S;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_MEDT_T_Bits B;
+} Ifx_GTM_DPLL_MEDT_T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_MLS1_Bits B;
+} Ifx_GTM_DPLL_MLS1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_MLS2_Bits B;
+} Ifx_GTM_DPLL_MLS2;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_MPVAL1_Bits B;
+} Ifx_GTM_DPLL_MPVAL1;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_MPVAL2_Bits B;
+} Ifx_GTM_DPLL_MPVAL2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NA_Bits B;
+} Ifx_GTM_DPLL_NA;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NMB_S_Bits B;
+} Ifx_GTM_DPLL_NMB_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NMB_S_TAR_Bits B;
+} Ifx_GTM_DPLL_NMB_S_TAR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NMB_S_TAR_OLD_Bits B;
+} Ifx_GTM_DPLL_NMB_S_TAR_OLD;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NMB_T_Bits B;
+} Ifx_GTM_DPLL_NMB_T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NMB_T_TAR_Bits B;
+} Ifx_GTM_DPLL_NMB_T_TAR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NMB_T_TAR_OLD_Bits B;
+} Ifx_GTM_DPLL_NMB_T_TAR_OLD;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NTI_CNT_Bits B;
+} Ifx_GTM_DPLL_NTI_CNT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NUSC_Bits B;
+} Ifx_GTM_DPLL_NUSC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_NUTC_Bits B;
+} Ifx_GTM_DPLL_NUTC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_OSW_Bits B;
+} Ifx_GTM_DPLL_OSW;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PDT_T_Bits B;
+} Ifx_GTM_DPLL_PDT_T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSA_Bits B;
+} Ifx_GTM_DPLL_PSA;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSAC_Bits B;
+} Ifx_GTM_DPLL_PSAC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSSC_Bits B;
+} Ifx_GTM_DPLL_PSSC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSSM_0_Bits B;
+} Ifx_GTM_DPLL_PSSM_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSSM_1_Bits B;
+} Ifx_GTM_DPLL_PSSM_1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSTC_Bits B;
+} Ifx_GTM_DPLL_PSTC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSTM_0_Bits B;
+} Ifx_GTM_DPLL_PSTM_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PSTM_1_Bits B;
+} Ifx_GTM_DPLL_PSTM_1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_PVT_Bits B;
+} Ifx_GTM_DPLL_PVT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RAM_INI_Bits B;
+} Ifx_GTM_DPLL_RAM_INI;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RCDT_SX_Bits B;
+} Ifx_GTM_DPLL_RCDT_SX;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RCDT_SX_NOM_Bits B;
+} Ifx_GTM_DPLL_RCDT_SX_NOM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RCDT_TX_Bits B;
+} Ifx_GTM_DPLL_RCDT_TX;
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RCDT_TX_NOM_Bits B;
+} Ifx_GTM_DPLL_RCDT_TX_NOM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RDT_S_Bits B;
+} Ifx_GTM_DPLL_RDT_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RDT_S_ACT_Bits B;
+} Ifx_GTM_DPLL_RDT_S_ACT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_RDT_T_ACT_Bits B;
+} Ifx_GTM_DPLL_RDT_T_ACT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_SLR_Bits B;
+} Ifx_GTM_DPLL_SLR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_STATUS_Bits B;
+} Ifx_GTM_DPLL_STATUS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TBU_TS0_S_Bits B;
+} Ifx_GTM_DPLL_TBU_TS0_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TBU_TS0_T_Bits B;
+} Ifx_GTM_DPLL_TBU_TS0_T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_THMA_Bits B;
+} Ifx_GTM_DPLL_THMA;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_THMI_Bits B;
+} Ifx_GTM_DPLL_THMI;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_THVAL_Bits B;
+} Ifx_GTM_DPLL_THVAL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TLR_Bits B;
+} Ifx_GTM_DPLL_TLR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TOV_Bits B;
+} Ifx_GTM_DPLL_TOV;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TOV_S_Bits B;
+} Ifx_GTM_DPLL_TOV_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TS_S_0_Bits B;
+} Ifx_GTM_DPLL_TS_S_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TS_S_1_Bits B;
+} Ifx_GTM_DPLL_TS_S_1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TS_T_0_Bits B;
+} Ifx_GTM_DPLL_TS_T_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TS_T_1_Bits B;
+} Ifx_GTM_DPLL_TS_T_1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TSAC_Bits B;
+} Ifx_GTM_DPLL_TSAC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DPLL_TSF_S_Bits B;
+} Ifx_GTM_DPLL_TSF_S;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DXINCON_Bits B;
+} Ifx_GTM_DXINCON;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_DXOUTCON_Bits B;
+} Ifx_GTM_DXOUTCON;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_EIRQ_EN_Bits B;
+} Ifx_GTM_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_F2A_ENABLE_Bits B;
+} Ifx_GTM_F2A_ENABLE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_F2A_RD_CH_ARU_RD_FIFO_Bits B;
+} Ifx_GTM_F2A_RD_CH_ARU_RD_FIFO;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_F2A_STR_CH_STR_CFG_Bits B;
+} Ifx_GTM_F2A_STR_CH_STR_CFG;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_CTRL_Bits B;
+} Ifx_GTM_FIFO_CH_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_EIRQ_EN_Bits B;
+} Ifx_GTM_FIFO_CH_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_END_ADDR_Bits B;
+} Ifx_GTM_FIFO_CH_END_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_FILL_LEVEL_Bits B;
+} Ifx_GTM_FIFO_CH_FILL_LEVEL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_IRQ_EN_Bits B;
+} Ifx_GTM_FIFO_CH_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_IRQ_FORCINT_Bits B;
+} Ifx_GTM_FIFO_CH_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_IRQ_MODE_Bits B;
+} Ifx_GTM_FIFO_CH_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_FIFO_CH_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_LOWER_WM_Bits B;
+} Ifx_GTM_FIFO_CH_LOWER_WM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_RD_PTR_Bits B;
+} Ifx_GTM_FIFO_CH_RD_PTR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_START_ADDR_Bits B;
+} Ifx_GTM_FIFO_CH_START_ADDR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_STATUS_Bits B;
+} Ifx_GTM_FIFO_CH_STATUS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_UPPER_WM_Bits B;
+} Ifx_GTM_FIFO_CH_UPPER_WM;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_FIFO_CH_WR_PTR_Bits B;
+} Ifx_GTM_FIFO_CH_WR_PTR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_0_Bits B;
+} Ifx_GTM_ICM_IRQG_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_1_Bits B;
+} Ifx_GTM_ICM_IRQG_1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_10_Bits B;
+} Ifx_GTM_ICM_IRQG_10;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_2_Bits B;
+} Ifx_GTM_ICM_IRQG_2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_4_Bits B;
+} Ifx_GTM_ICM_IRQG_4;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_6_Bits B;
+} Ifx_GTM_ICM_IRQG_6;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_7_Bits B;
+} Ifx_GTM_ICM_IRQG_7;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_9_Bits B;
+} Ifx_GTM_ICM_IRQG_9;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_CEI0_Bits B;
+} Ifx_GTM_ICM_IRQG_CEI0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_CEI1_Bits B;
+} Ifx_GTM_ICM_IRQG_CEI1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_CEI3_Bits B;
+} Ifx_GTM_ICM_IRQG_CEI3;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ICM_IRQG_MEI_Bits B;
+} Ifx_GTM_ICM_IRQG_MEI;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_CAN_OUTSEL_Bits B;
+} Ifx_GTM_INOUTSEL_CAN_OUTSEL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_DSADC_INSEL_Bits B;
+} Ifx_GTM_INOUTSEL_DSADC_INSEL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_DSADC_OUTSEL0_Bits B;
+} Ifx_GTM_INOUTSEL_DSADC_OUTSEL0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_PSI5_OUTSEL0_Bits B;
+} Ifx_GTM_INOUTSEL_PSI5_OUTSEL0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_PSI5S_OUTSEL_Bits B;
+} Ifx_GTM_INOUTSEL_PSI5S_OUTSEL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_T_OUTSEL_Bits B;
+} Ifx_GTM_INOUTSEL_T_OUTSEL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_INOUTSEL_TIM_INSEL_Bits B;
+} Ifx_GTM_INOUTSEL_TIM_INSEL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_IRQ_EN_Bits B;
+} Ifx_GTM_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_IRQ_FORCINT_Bits B;
+} Ifx_GTM_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_IRQ_MODE_Bits B;
+} Ifx_GTM_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_KRST0_Bits B;
+} Ifx_GTM_KRST0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_KRST1_Bits B;
+} Ifx_GTM_KRST1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_KRSTCLR_Bits B;
+} Ifx_GTM_KRSTCLR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MAP_CTRL_Bits B;
+} Ifx_GTM_MAP_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCFG_CTRL_Bits B;
+} Ifx_GTM_MCFG_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH0_CTRG_Bits B;
+} Ifx_GTM_MCS_CH0_CTRG;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH0_STRG_Bits B;
+} Ifx_GTM_MCS_CH0_STRG;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_ACB_Bits B;
+} Ifx_GTM_MCS_CH_ACB;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_CTRL_Bits B;
+} Ifx_GTM_MCS_CH_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_EIRQ_EN_Bits B;
+} Ifx_GTM_MCS_CH_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_IRQ_EN_Bits B;
+} Ifx_GTM_MCS_CH_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_IRQ_FORCINT_Bits B;
+} Ifx_GTM_MCS_CH_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_IRQ_MODE_Bits B;
+} Ifx_GTM_MCS_CH_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_MCS_CH_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_PC_Bits B;
+} Ifx_GTM_MCS_CH_PC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R0_Bits B;
+} Ifx_GTM_MCS_CH_R0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R1_Bits B;
+} Ifx_GTM_MCS_CH_R1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R2_Bits B;
+} Ifx_GTM_MCS_CH_R2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R3_Bits B;
+} Ifx_GTM_MCS_CH_R3;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R4_Bits B;
+} Ifx_GTM_MCS_CH_R4;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R5_Bits B;
+} Ifx_GTM_MCS_CH_R5;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R6_Bits B;
+} Ifx_GTM_MCS_CH_R6;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CH_R7_Bits B;
+} Ifx_GTM_MCS_CH_R7;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_CTRL_Bits B;
+} Ifx_GTM_MCS_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_ERR_Bits B;
+} Ifx_GTM_MCS_ERR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCS_RST_Bits B;
+} Ifx_GTM_MCS_RST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCSINTCLR_Bits B;
+} Ifx_GTM_MCSINTCLR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MCSINTSTAT_Bits B;
+} Ifx_GTM_MCSINTSTAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MON_ACTIVITY_0_Bits B;
+} Ifx_GTM_MON_ACTIVITY_0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MON_STATUS_Bits B;
+} Ifx_GTM_MON_STATUS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MSCIN_INHCON_Bits B;
+} Ifx_GTM_MSCIN_INHCON;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MSCIN_INLCON_Bits B;
+} Ifx_GTM_MSCIN_INLCON;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MSCSET_CON0_Bits B;
+} Ifx_GTM_MSCSET_CON0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MSCSET_CON1_Bits B;
+} Ifx_GTM_MSCSET_CON1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MSCSET_CON2_Bits B;
+} Ifx_GTM_MSCSET_CON2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_MSCSET_CON3_Bits B;
+} Ifx_GTM_MSCSET_CON3;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OCS_Bits B;
+} Ifx_GTM_OCS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_ODA_Bits B;
+} Ifx_GTM_ODA;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OTBU0T_Bits B;
+} Ifx_GTM_OTBU0T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OTBU1T_Bits B;
+} Ifx_GTM_OTBU1T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OTBU2T_Bits B;
+} Ifx_GTM_OTBU2T;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OTSC0_Bits B;
+} Ifx_GTM_OTSC0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OTSC1_Bits B;
+} Ifx_GTM_OTSC1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_OTSS_Bits B;
+} Ifx_GTM_OTSS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_REV_Bits B;
+} Ifx_GTM_REV;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_RST_Bits B;
+} Ifx_GTM_RST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_CMP_Bits B;
+} Ifx_GTM_SPE_CMP;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_CNT_Bits B;
+} Ifx_GTM_SPE_CNT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_CTRL_STAT_Bits B;
+} Ifx_GTM_SPE_CTRL_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_EIRQ_EN_Bits B;
+} Ifx_GTM_SPE_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_IRQ_EN_Bits B;
+} Ifx_GTM_SPE_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_IRQ_FORCINT_Bits B;
+} Ifx_GTM_SPE_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_IRQ_MODE_Bits B;
+} Ifx_GTM_SPE_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_SPE_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_OUT_CTRL_Bits B;
+} Ifx_GTM_SPE_OUT_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_OUT_PAT_Bits B;
+} Ifx_GTM_SPE_OUT_PAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_SPE_PAT_Bits B;
+} Ifx_GTM_SPE_PAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CH0_BASE_Bits B;
+} Ifx_GTM_TBU_CH0_BASE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CH0_CTRL_Bits B;
+} Ifx_GTM_TBU_CH0_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CH1_BASE_Bits B;
+} Ifx_GTM_TBU_CH1_BASE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CH1_CTRL_Bits B;
+} Ifx_GTM_TBU_CH1_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CH2_BASE_Bits B;
+} Ifx_GTM_TBU_CH2_BASE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CH2_CTRL_Bits B;
+} Ifx_GTM_TBU_CH2_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TBU_CHEN_Bits B;
+} Ifx_GTM_TBU_CHEN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_AUX_IN_SRC_Bits B;
+} Ifx_GTM_TIM_AUX_IN_SRC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_CNT_Bits B;
+} Ifx_GTM_TIM_CH_CNT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_CNTS_Bits B;
+} Ifx_GTM_TIM_CH_CNTS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_CTRL_Bits B;
+} Ifx_GTM_TIM_CH_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_ECNT_Bits B;
+} Ifx_GTM_TIM_CH_ECNT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_ECTRL_Bits B;
+} Ifx_GTM_TIM_CH_ECTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_EIRQ_EN_Bits B;
+} Ifx_GTM_TIM_CH_EIRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_FLT_FE_Bits B;
+} Ifx_GTM_TIM_CH_FLT_FE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_FLT_RE_Bits B;
+} Ifx_GTM_TIM_CH_FLT_RE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_GPR0_Bits B;
+} Ifx_GTM_TIM_CH_GPR0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_GPR1_Bits B;
+} Ifx_GTM_TIM_CH_GPR1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_IRQ_EN_Bits B;
+} Ifx_GTM_TIM_CH_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_IRQ_FORCINT_Bits B;
+} Ifx_GTM_TIM_CH_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_IRQ_MODE_Bits B;
+} Ifx_GTM_TIM_CH_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_TIM_CH_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_TDUC_Bits B;
+} Ifx_GTM_TIM_CH_TDUC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_CH_TDUV_Bits B;
+} Ifx_GTM_TIM_CH_TDUV;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_IN_SRC_Bits B;
+} Ifx_GTM_TIM_IN_SRC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TIM_RST_Bits B;
+} Ifx_GTM_TIM_RST;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_CM0_Bits B;
+} Ifx_GTM_TOM_CH_CM0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_CM1_Bits B;
+} Ifx_GTM_TOM_CH_CM1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_CN0_Bits B;
+} Ifx_GTM_TOM_CH_CN0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_CTRL_Bits B;
+} Ifx_GTM_TOM_CH_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_IRQ_EN_Bits B;
+} Ifx_GTM_TOM_CH_IRQ_EN;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_IRQ_FORCINT_Bits B;
+} Ifx_GTM_TOM_CH_IRQ_FORCINT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_IRQ_MODE_Bits B;
+} Ifx_GTM_TOM_CH_IRQ_MODE;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_IRQ_NOTIFY_Bits B;
+} Ifx_GTM_TOM_CH_IRQ_NOTIFY;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_SR0_Bits B;
+} Ifx_GTM_TOM_CH_SR0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_SR1_Bits B;
+} Ifx_GTM_TOM_CH_SR1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_CH_STAT_Bits B;
+} Ifx_GTM_TOM_CH_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_ACT_TB_Bits B;
+} Ifx_GTM_TOM_TGC0_ACT_TB;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_ENDIS_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC0_ENDIS_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_ENDIS_STAT_Bits B;
+} Ifx_GTM_TOM_TGC0_ENDIS_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_FUPD_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC0_FUPD_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_GLB_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC0_GLB_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_INT_TRIG_Bits B;
+} Ifx_GTM_TOM_TGC0_INT_TRIG;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_OUTEN_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC0_OUTEN_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC0_OUTEN_STAT_Bits B;
+} Ifx_GTM_TOM_TGC0_OUTEN_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_ACT_TB_Bits B;
+} Ifx_GTM_TOM_TGC1_ACT_TB;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_ENDIS_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC1_ENDIS_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_ENDIS_STAT_Bits B;
+} Ifx_GTM_TOM_TGC1_ENDIS_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_FUPD_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC1_FUPD_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_GLB_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC1_GLB_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_INT_TRIG_Bits B;
+} Ifx_GTM_TOM_TGC1_INT_TRIG;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_OUTEN_CTRL_Bits B;
+} Ifx_GTM_TOM_TGC1_OUTEN_CTRL;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TOM_TGC1_OUTEN_STAT_Bits B;
+} Ifx_GTM_TOM_TGC1_OUTEN_STAT;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_GTM_TRIGOUT_Bits B;
+} Ifx_GTM_TRIGOUT;
+# 7199 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_regdef.h"
+typedef volatile struct _Ifx_GTM_AFD_CH
+{
+    Ifx_GTM_AFD_CH_BUF_ACC BUF_ACC;
+    unsigned char reserved_4[12];
+} Ifx_GTM_AFD_CH;
+
+
+typedef volatile struct _Ifx_GTM_ATOM_AGC
+{
+    Ifx_GTM_ATOM_AGC_GLB_CTRL GLB_CTRL;
+    Ifx_GTM_ATOM_AGC_ENDIS_CTRL ENDIS_CTRL;
+    Ifx_GTM_ATOM_AGC_ENDIS_STAT ENDIS_STAT;
+    Ifx_GTM_ATOM_AGC_ACT_TB ACT_TB;
+    Ifx_GTM_ATOM_AGC_OUTEN_CTRL OUTEN_CTRL;
+    Ifx_GTM_ATOM_AGC_OUTEN_STAT OUTEN_STAT;
+    Ifx_GTM_ATOM_AGC_FUPD_CTRL FUPD_CTRL;
+    Ifx_GTM_ATOM_AGC_INT_TRIG INT_TRIG;
+    unsigned char reserved_20[32];
+} Ifx_GTM_ATOM_AGC;
+
+
+typedef volatile struct _Ifx_GTM_ATOM_CH
+{
+    Ifx_GTM_ATOM_CH_RDADDR RDADDR;
+    union
+    {
+        Ifx_GTM_ATOM_CH_CTRL CTRL;
+        Ifx_GTM_ATOM_CH_SOMC SOMC;
+        Ifx_GTM_ATOM_CH_SOMI SOMI;
+        Ifx_GTM_ATOM_CH_SOMP SOMP;
+        Ifx_GTM_ATOM_CH_SOMS SOMS;
+    };
+
+    Ifx_GTM_ATOM_CH_SR0 SR0;
+    Ifx_GTM_ATOM_CH_SR1 SR1;
+    Ifx_GTM_ATOM_CH_CM0 CM0;
+    Ifx_GTM_ATOM_CH_CM1 CM1;
+    Ifx_GTM_ATOM_CH_CN0 CN0;
+    Ifx_GTM_ATOM_CH_STAT STAT;
+    Ifx_GTM_ATOM_CH_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_ATOM_CH_IRQ_EN IRQ_EN;
+    Ifx_GTM_ATOM_CH_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_ATOM_CH_IRQ_MODE IRQ_MODE;
+    unsigned char reserved_30[16];
+} Ifx_GTM_ATOM_CH;
+
+
+typedef volatile struct _Ifx_GTM_CMU_CLK0_5
+{
+    Ifx_GTM_CMU_CLK0_5_CTRL CTRL;
+} Ifx_GTM_CMU_CLK0_5;
+
+
+typedef volatile struct _Ifx_GTM_CMU_CLK_6
+{
+    Ifx_GTM_CMU_CLK_6_CTRL CTRL;
+} Ifx_GTM_CMU_CLK_6;
+
+
+typedef volatile struct _Ifx_GTM_CMU_CLK_7
+{
+    Ifx_GTM_CMU_CLK_7_CTRL CTRL;
+} Ifx_GTM_CMU_CLK_7;
+
+
+typedef volatile struct _Ifx_GTM_CMU_ECLK
+{
+    Ifx_GTM_CMU_ECLK_NUM NUM;
+    Ifx_GTM_CMU_ECLK_DEN DEN;
+} Ifx_GTM_CMU_ECLK;
+
+
+typedef volatile struct _Ifx_GTM_CMU_FXCLK
+{
+    Ifx_GTM_CMU_FXCLK_CTRL CTRL;
+} Ifx_GTM_CMU_FXCLK;
+
+
+typedef volatile struct _Ifx_GTM_F2A_RD_CH
+{
+    Ifx_GTM_F2A_RD_CH_ARU_RD_FIFO ARU_RD_FIFO;
+} Ifx_GTM_F2A_RD_CH;
+
+
+typedef volatile struct _Ifx_GTM_F2A_STR_CH
+{
+    Ifx_GTM_F2A_STR_CH_STR_CFG STR_CFG;
+} Ifx_GTM_F2A_STR_CH;
+
+
+typedef volatile struct _Ifx_GTM_FIFO_CH
+{
+    Ifx_GTM_FIFO_CH_CTRL CTRL;
+    Ifx_GTM_FIFO_CH_END_ADDR END_ADDR;
+    Ifx_GTM_FIFO_CH_START_ADDR START_ADDR;
+    Ifx_GTM_FIFO_CH_UPPER_WM UPPER_WM;
+    Ifx_GTM_FIFO_CH_LOWER_WM LOWER_WM;
+    Ifx_GTM_FIFO_CH_STATUS STATUS;
+    Ifx_GTM_FIFO_CH_FILL_LEVEL FILL_LEVEL;
+    Ifx_GTM_FIFO_CH_WR_PTR WR_PTR;
+    Ifx_GTM_FIFO_CH_RD_PTR RD_PTR;
+    Ifx_GTM_FIFO_CH_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_FIFO_CH_IRQ_EN IRQ_EN;
+    Ifx_GTM_FIFO_CH_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_FIFO_CH_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_FIFO_CH_EIRQ_EN EIRQ_EN;
+    unsigned char reserved_38[8];
+} Ifx_GTM_FIFO_CH;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL_CAN
+{
+    Ifx_GTM_INOUTSEL_CAN_OUTSEL OUTSEL;
+} Ifx_GTM_INOUTSEL_CAN;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL_DSADC
+{
+    Ifx_GTM_INOUTSEL_DSADC_INSEL INSEL[3];
+    Ifx_GTM_INOUTSEL_DSADC_OUTSEL0 OUTSEL00;
+    unsigned char reserved_10[4];
+    Ifx_GTM_INOUTSEL_DSADC_OUTSEL0 OUTSEL10;
+} Ifx_GTM_INOUTSEL_DSADC;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL_PSI5
+{
+    Ifx_GTM_INOUTSEL_PSI5_OUTSEL0 OUTSEL0;
+} Ifx_GTM_INOUTSEL_PSI5;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL_PSI5S
+{
+    Ifx_GTM_INOUTSEL_PSI5S_OUTSEL OUTSEL;
+} Ifx_GTM_INOUTSEL_PSI5S;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL_T
+{
+    Ifx_GTM_INOUTSEL_T_OUTSEL OUTSEL[15];
+} Ifx_GTM_INOUTSEL_T;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL_TIM
+{
+    Ifx_GTM_INOUTSEL_TIM_INSEL INSEL;
+} Ifx_GTM_INOUTSEL_TIM;
+
+
+typedef volatile struct _Ifx_GTM_MCS_CH
+{
+    Ifx_GTM_MCS_CH_R0 R0;
+    Ifx_GTM_MCS_CH_R1 R1;
+    Ifx_GTM_MCS_CH_R2 R2;
+    Ifx_GTM_MCS_CH_R3 R3;
+    Ifx_GTM_MCS_CH_R4 R4;
+    Ifx_GTM_MCS_CH_R5 R5;
+    Ifx_GTM_MCS_CH_R6 R6;
+    Ifx_GTM_MCS_CH_R7 R7;
+    Ifx_GTM_MCS_CH_CTRL CTRL;
+    Ifx_GTM_MCS_CH_ACB ACB;
+    unsigned char reserved_28[24];
+    Ifx_GTM_MCS_CH_PC PC;
+    Ifx_GTM_MCS_CH_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_MCS_CH_IRQ_EN IRQ_EN;
+    Ifx_GTM_MCS_CH_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_MCS_CH_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_MCS_CH_EIRQ_EN EIRQ_EN;
+    unsigned char reserved_58[40];
+} Ifx_GTM_MCS_CH;
+
+
+typedef volatile struct _Ifx_GTM_MCS_CH0
+{
+    Ifx_GTM_MCS_CH_R0 R0;
+    Ifx_GTM_MCS_CH_R1 R1;
+    Ifx_GTM_MCS_CH_R2 R2;
+    Ifx_GTM_MCS_CH_R3 R3;
+    Ifx_GTM_MCS_CH_R4 R4;
+    Ifx_GTM_MCS_CH_R5 R5;
+    Ifx_GTM_MCS_CH_R6 R6;
+    Ifx_GTM_MCS_CH_R7 R7;
+    Ifx_GTM_MCS_CH_CTRL CTRL;
+    Ifx_GTM_MCS_CH_ACB ACB;
+    Ifx_GTM_MCS_CH0_CTRG CTRG;
+    Ifx_GTM_MCS_CH0_STRG STRG;
+    unsigned char reserved_30[16];
+    Ifx_GTM_MCS_CH_PC PC;
+    Ifx_GTM_MCS_CH_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_MCS_CH_IRQ_EN IRQ_EN;
+    Ifx_GTM_MCS_CH_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_MCS_CH_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_MCS_CH_EIRQ_EN EIRQ_EN;
+} Ifx_GTM_MCS_CH0;
+
+
+typedef volatile struct _Ifx_GTM_TIM_CH
+{
+    Ifx_GTM_TIM_CH_GPR0 GPR0;
+    Ifx_GTM_TIM_CH_GPR1 GPR1;
+    Ifx_GTM_TIM_CH_CNT CNT;
+    Ifx_GTM_TIM_CH_ECNT ECNT;
+    Ifx_GTM_TIM_CH_CNTS CNTS;
+    Ifx_GTM_TIM_CH_TDUC TDUC;
+    Ifx_GTM_TIM_CH_TDUV TDUV;
+    Ifx_GTM_TIM_CH_FLT_RE FLT_RE;
+    Ifx_GTM_TIM_CH_FLT_FE FLT_FE;
+    Ifx_GTM_TIM_CH_CTRL CTRL;
+    Ifx_GTM_TIM_CH_ECTRL ECTRL;
+    Ifx_GTM_TIM_CH_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_TIM_CH_IRQ_EN IRQ_EN;
+    Ifx_GTM_TIM_CH_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_TIM_CH_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_TIM_CH_EIRQ_EN EIRQ_EN;
+    unsigned char reserved_40[56];
+} Ifx_GTM_TIM_CH;
+
+
+typedef volatile struct _Ifx_GTM_TOM_CH
+{
+    Ifx_GTM_TOM_CH_CTRL CTRL;
+    Ifx_GTM_TOM_CH_SR0 SR0;
+    Ifx_GTM_TOM_CH_SR1 SR1;
+    Ifx_GTM_TOM_CH_CM0 CM0;
+    Ifx_GTM_TOM_CH_CM1 CM1;
+    Ifx_GTM_TOM_CH_CN0 CN0;
+    Ifx_GTM_TOM_CH_STAT STAT;
+    Ifx_GTM_TOM_CH_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_TOM_CH_IRQ_EN IRQ_EN;
+    Ifx_GTM_TOM_CH_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_TOM_CH_IRQ_MODE IRQ_MODE;
+    unsigned char reserved_2C[4];
+} Ifx_GTM_TOM_CH;
+# 7444 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_regdef.h"
+typedef volatile struct _Ifx_GTM_AFD
+{
+    Ifx_GTM_AFD_CH CH[8];
+} Ifx_GTM_AFD;
+
+
+typedef volatile struct _Ifx_GTM_ARU
+{
+    Ifx_GTM_ARU_ARU_ACCESS ARU_ACCESS;
+    Ifx_GTM_ARU_DATA_H DATA_H;
+    Ifx_GTM_ARU_DATA_L DATA_L;
+    Ifx_GTM_ARU_DBG_ACCESS0 DBG_ACCESS0;
+    Ifx_GTM_ARU_DBG_DATA0_H DBG_DATA0_H;
+    Ifx_GTM_ARU_DBG_DATA0_L DBG_DATA0_L;
+    Ifx_GTM_ARU_DBG_ACCESS1 DBG_ACCESS1;
+    Ifx_GTM_ARU_DBG_DATA1_H DBG_DATA1_H;
+    Ifx_GTM_ARU_DBG_DATA1_L DBG_DATA1_L;
+    Ifx_GTM_ARU_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_ARU_IRQ_EN IRQ_EN;
+    Ifx_GTM_ARU_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_ARU_IRQ_MODE IRQ_MODE;
+} Ifx_GTM_ARU;
+
+
+typedef volatile struct _Ifx_GTM_ATOM
+{
+    Ifx_GTM_ATOM_CH CH0;
+    Ifx_GTM_ATOM_AGC AGC;
+    Ifx_GTM_ATOM_CH CH1;
+    unsigned char reserved_C0[64];
+    Ifx_GTM_ATOM_CH CH2;
+    unsigned char reserved_140[64];
+    Ifx_GTM_ATOM_CH CH3;
+    unsigned char reserved_1C0[64];
+    Ifx_GTM_ATOM_CH CH4;
+    unsigned char reserved_240[64];
+    Ifx_GTM_ATOM_CH CH5;
+    unsigned char reserved_2C0[64];
+    Ifx_GTM_ATOM_CH CH6;
+    unsigned char reserved_340[64];
+    Ifx_GTM_ATOM_CH CH7;
+    unsigned char reserved_3C0[1088];
+} Ifx_GTM_ATOM;
+
+
+typedef volatile struct _Ifx_GTM_BRC
+{
+    Ifx_GTM_BRC_SRC0_ADDR SRC0_ADDR;
+    Ifx_GTM_BRC_SRC0_DEST SRC0_DEST;
+    Ifx_GTM_BRC_SRC1_ADDR SRC1_ADDR;
+    Ifx_GTM_BRC_SRC1_DEST SRC1_DEST;
+    Ifx_GTM_BRC_SRC2_ADDR SRC2_ADDR;
+    Ifx_GTM_BRC_SRC2_DEST SRC2_DEST;
+    Ifx_GTM_BRC_SRC3_ADDR SRC3_ADDR;
+    Ifx_GTM_BRC_SRC3_DEST SRC3_DEST;
+    Ifx_GTM_BRC_SRC4_ADDR SRC4_ADDR;
+    Ifx_GTM_BRC_SRC4_DEST SRC4_DEST;
+    Ifx_GTM_BRC_SRC5_ADDR SRC5_ADDR;
+    Ifx_GTM_BRC_SRC5_DEST SRC5_DEST;
+    Ifx_GTM_BRC_SRC6_ADDR SRC6_ADDR;
+    Ifx_GTM_BRC_SRC6_DEST SRC6_DEST;
+    Ifx_GTM_BRC_SRC7_ADDR SRC7_ADDR;
+    Ifx_GTM_BRC_SRC7_DEST SRC7_DEST;
+    Ifx_GTM_BRC_SRC8_ADDR SRC8_ADDR;
+    Ifx_GTM_BRC_SRC8_DEST SRC8_DEST;
+    Ifx_GTM_BRC_SRC9_ADDR SRC9_ADDR;
+    Ifx_GTM_BRC_SRC9_DEST SRC9_DEST;
+    Ifx_GTM_BRC_SRC10_ADDR SRC10_ADDR;
+    Ifx_GTM_BRC_SRC10_DEST SRC10_DEST;
+    Ifx_GTM_BRC_SRC11_ADDR SRC11_ADDR;
+    Ifx_GTM_BRC_SRC11_DEST SRC11_DEST;
+    Ifx_GTM_BRC_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_BRC_IRQ_EN IRQ_EN;
+    Ifx_GTM_BRC_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_BRC_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_BRC_RST RST;
+    Ifx_GTM_BRC_EIRQ_EN EIRQ_EN;
+} Ifx_GTM_BRC;
+
+
+typedef volatile struct _Ifx_GTM_BRIDGE
+{
+    Ifx_GTM_BRIDGE_MODE MODE;
+    Ifx_GTM_BRIDGE_PTR1 PTR1;
+    Ifx_GTM_BRIDGE_PTR2 PTR2;
+} Ifx_GTM_BRIDGE;
+
+
+typedef volatile struct _Ifx_GTM_CMP
+{
+    Ifx_GTM_CMP_EN EN;
+    Ifx_GTM_CMP_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_CMP_IRQ_EN IRQ_EN;
+    Ifx_GTM_CMP_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_CMP_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_CMP_EIRQ_EN EIRQ_EN;
+} Ifx_GTM_CMP;
+
+
+typedef volatile struct _Ifx_GTM_CMU
+{
+    Ifx_GTM_CMU_CLK_EN CLK_EN;
+    Ifx_GTM_CMU_GCLK_NUM GCLK_NUM;
+    Ifx_GTM_CMU_GCLK_DEN GCLK_DEN;
+    Ifx_GTM_CMU_CLK0_5 CLK0_5[6];
+    Ifx_GTM_CMU_CLK_6 CLK_6;
+    Ifx_GTM_CMU_CLK_7 CLK_7;
+    Ifx_GTM_CMU_ECLK ECLK[3];
+    Ifx_GTM_CMU_FXCLK FXCLK;
+} Ifx_GTM_CMU;
+
+
+typedef volatile struct _Ifx_GTM_DPLL
+{
+    Ifx_GTM_DPLL_CTRL_0 CTRL_0;
+    Ifx_GTM_DPLL_CTRL_1 CTRL_1;
+    Ifx_GTM_DPLL_CTRL_2 CTRL_2;
+    Ifx_GTM_DPLL_CTRL_3 CTRL_3;
+    Ifx_GTM_DPLL_CTRL_4 CTRL_4;
+    unsigned char reserved_14[4];
+    Ifx_GTM_DPLL_ACT_STA ACT_STA;
+    Ifx_GTM_DPLL_OSW OSW;
+    Ifx_GTM_DPLL_AOSV_2 AOSV_2;
+    Ifx_GTM_DPLL_APT APT;
+    Ifx_GTM_DPLL_APS APS;
+    Ifx_GTM_DPLL_APT_2C APT_2C;
+    Ifx_GTM_DPLL_APS_1C3 APS_1C3;
+    Ifx_GTM_DPLL_NUTC NUTC;
+    Ifx_GTM_DPLL_NUSC NUSC;
+    Ifx_GTM_DPLL_NTI_CNT NTI_CNT;
+    Ifx_GTM_DPLL_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_DPLL_IRQ_EN IRQ_EN;
+    Ifx_GTM_DPLL_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_DPLL_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_DPLL_EIRQ_EN EIRQ_EN;
+    unsigned char reserved_54[92];
+    Ifx_GTM_DPLL_INC_CNT1 INC_CNT1;
+    Ifx_GTM_DPLL_INC_CNT2 INC_CNT2;
+    Ifx_GTM_DPLL_APT_SYNC APT_SYNC;
+    Ifx_GTM_DPLL_APS_SYNC APS_SYNC;
+    Ifx_GTM_DPLL_TBU_TS0_T TBU_TS0_T;
+    Ifx_GTM_DPLL_TBU_TS0_S TBU_TS0_S;
+    Ifx_GTM_DPLL_ADD_IN_LD1 ADD_IN_LD1;
+    Ifx_GTM_DPLL_ADD_IN_LD2 ADD_IN_LD2;
+    unsigned char reserved_D0[44];
+    Ifx_GTM_DPLL_STATUS STATUS;
+    Ifx_GTM_DPLL_ID_PMTR ID_PMTR[24];
+    unsigned char reserved_160[128];
+    Ifx_GTM_DPLL_CTRL_0_SHADOW_TRIGGER CTRL_0_SHADOW_TRIGGER;
+    Ifx_GTM_DPLL_CTRL_0_SHADOW_STATE CTRL_0_SHADOW_STATE;
+    Ifx_GTM_DPLL_CTRL_1_SHADOW_TRIGGER CTRL_1_SHADOW_TRIGGER;
+    Ifx_GTM_DPLL_CRTL_1_SHADOW_STATE CRTL_1_SHADOW_STATE;
+    unsigned char reserved_1F0[12];
+    Ifx_GTM_DPLL_RAM_INI RAM_INI;
+    Ifx_GTM_DPLL_PSA PSA[24];
+    unsigned char reserved_260[32];
+    Ifx_GTM_DPLL_DLA DLA[24];
+    unsigned char reserved_2E0[32];
+    Ifx_GTM_DPLL_NA NA[24];
+    unsigned char reserved_360[32];
+    Ifx_GTM_DPLL_DTA DTA[24];
+    unsigned char reserved_3E0[32];
+    Ifx_GTM_DPLL_TS_T_0 TS_T_0;
+    Ifx_GTM_DPLL_TS_T_1 TS_T_1;
+    Ifx_GTM_DPLL_FTV_T FTV_T;
+    unsigned char reserved_40C[4];
+    Ifx_GTM_DPLL_TS_S_0 TS_S_0;
+    Ifx_GTM_DPLL_TS_S_1 TS_S_1;
+    Ifx_GTM_DPLL_FTV_S FTV_S;
+    unsigned char reserved_41C[4];
+    Ifx_GTM_DPLL_THMI THMI;
+    Ifx_GTM_DPLL_THMA THMA;
+    Ifx_GTM_DPLL_THVAL THVAL;
+    unsigned char reserved_42C[4];
+    Ifx_GTM_DPLL_TOV TOV;
+    Ifx_GTM_DPLL_TOV_S TOV_S;
+    Ifx_GTM_DPLL_ADD_IN_CAL1 ADD_IN_CAL1;
+    Ifx_GTM_DPLL_ADD_IN_CAL2 ADD_IN_CAL2;
+    Ifx_GTM_DPLL_MPVAL1 MPVAL1;
+    Ifx_GTM_DPLL_MPVAL2 MPVAL2;
+    Ifx_GTM_DPLL_NMB_T_TAR NMB_T_TAR;
+    Ifx_GTM_DPLL_NMB_T_TAR_OLD NMB_T_TAR_OLD;
+    Ifx_GTM_DPLL_NMB_S_TAR NMB_S_TAR;
+    Ifx_GTM_DPLL_NMB_S_TAR_OLD NMB_S_TAR_OLD;
+    unsigned char reserved_458[8];
+    Ifx_GTM_DPLL_RCDT_TX RCDT_TX;
+    Ifx_GTM_DPLL_RCDT_SX RCDT_SX;
+    Ifx_GTM_DPLL_RCDT_TX_NOM RCDT_TX_NOM;
+    Ifx_GTM_DPLL_RCDT_SX_NOM RCDT_SX_NOM;
+    Ifx_GTM_DPLL_RDT_T_ACT RDT_T_ACT;
+    Ifx_GTM_DPLL_RDT_S_ACT RDT_S_ACT;
+    Ifx_GTM_DPLL_DT_T_ACT DT_T_ACT;
+    Ifx_GTM_DPLL_DT_S_ACT DT_S_ACT;
+    Ifx_GTM_DPLL_EDT_T EDT_T;
+    Ifx_GTM_DPLL_MEDT_T MEDT_T;
+    Ifx_GTM_DPLL_EDT_S EDT_S;
+    Ifx_GTM_DPLL_MEDT_S MEDT_S;
+    Ifx_GTM_DPLL_CDT_TX CDT_TX;
+    Ifx_GTM_DPLL_CDT_SX CDT_SX;
+    Ifx_GTM_DPLL_CDT_TX_NOM CDT_TX_NOM;
+    Ifx_GTM_DPLL_CDT_SX_NOM CDT_SX_NOM;
+    Ifx_GTM_DPLL_TLR TLR;
+    Ifx_GTM_DPLL_SLR SLR;
+    unsigned char reserved_4A8[88];
+    Ifx_GTM_DPLL_PDT_T PDT_T[24];
+    unsigned char reserved_560[96];
+    Ifx_GTM_DPLL_MLS1 MLS1;
+    Ifx_GTM_DPLL_MLS2 MLS2;
+    Ifx_GTM_DPLL_CNT_NUM1 CNT_NUM1;
+    Ifx_GTM_DPLL_CNT_NUM2 CNT_NUM2;
+    Ifx_GTM_DPLL_PVT PVT;
+    unsigned char reserved_5D4[12];
+    Ifx_GTM_DPLL_PSTC PSTC;
+    Ifx_GTM_DPLL_PSSC PSSC;
+    Ifx_GTM_DPLL_PSTM_0 PSTM_0;
+    Ifx_GTM_DPLL_PSTM_1 PSTM_1;
+    Ifx_GTM_DPLL_PSSM_0 PSSM_0;
+    Ifx_GTM_DPLL_PSSM_1 PSSM_1;
+    Ifx_GTM_DPLL_NMB_T NMB_T;
+    Ifx_GTM_DPLL_NMB_S NMB_S;
+    Ifx_GTM_DPLL_RDT_S RDT_S[64];
+    Ifx_GTM_DPLL_TSF_S TSF_S[64];
+    Ifx_GTM_DPLL_ADT_S ADT_S[64];
+    Ifx_GTM_DPLL_DT_S DT_S[64];
+    unsigned char reserved_A00[1024];
+    Ifx_GTM_DPLL_TSAC TSAC[24];
+    unsigned char reserved_E60[32];
+    Ifx_GTM_DPLL_PSAC PSAC[24];
+    unsigned char reserved_EE0[32];
+    Ifx_GTM_DPLL_ACB ACB[6];
+} Ifx_GTM_DPLL;
+
+
+typedef volatile struct _Ifx_GTM_F2A
+{
+    Ifx_GTM_F2A_RD_CH RD_CH[8];
+    Ifx_GTM_F2A_STR_CH STR_CH[8];
+    Ifx_GTM_F2A_ENABLE ENABLE;
+} Ifx_GTM_F2A;
+
+
+typedef volatile struct _Ifx_GTM_FIFO
+{
+    Ifx_GTM_FIFO_CH CH[8];
+} Ifx_GTM_FIFO;
+
+
+typedef volatile struct _Ifx_GTM_ICM
+{
+    Ifx_GTM_ICM_IRQG_0 IRQG_0;
+    Ifx_GTM_ICM_IRQG_1 IRQG_1;
+    Ifx_GTM_ICM_IRQG_2 IRQG_2;
+    unsigned char reserved_C[4];
+    Ifx_GTM_ICM_IRQG_4 IRQG_4;
+    unsigned char reserved_14[4];
+    Ifx_GTM_ICM_IRQG_6 IRQG_6;
+    Ifx_GTM_ICM_IRQG_7 IRQG_7;
+    unsigned char reserved_20[4];
+    Ifx_GTM_ICM_IRQG_9 IRQG_9;
+    Ifx_GTM_ICM_IRQG_10 IRQG_10;
+    unsigned char reserved_2C[4];
+    Ifx_GTM_ICM_IRQG_MEI IRQG_MEI;
+    Ifx_GTM_ICM_IRQG_CEI0 IRQG_CEI0;
+    Ifx_GTM_ICM_IRQG_CEI1 IRQG_CEI1;
+    unsigned char reserved_3C[4];
+    Ifx_GTM_ICM_IRQG_CEI3 IRQG_CEI3;
+} Ifx_GTM_ICM;
+
+
+typedef volatile struct _Ifx_GTM_INOUTSEL
+{
+    Ifx_GTM_INOUTSEL_TIM TIM[4];
+    unsigned char reserved_10[16];
+    Ifx_GTM_INOUTSEL_T T;
+    unsigned char reserved_5C[16];
+    Ifx_GTM_INOUTSEL_DSADC DSADC;
+    unsigned char reserved_84[12];
+    Ifx_GTM_INOUTSEL_CAN CAN;
+    Ifx_GTM_INOUTSEL_PSI5 PSI5;
+    Ifx_GTM_INOUTSEL_PSI5S PSI5S;
+} Ifx_GTM_INOUTSEL;
+
+
+typedef volatile struct _Ifx_GTM_MCS
+{
+    Ifx_GTM_MCS_CH0 CH0;
+    unsigned char reserved_58[28];
+    Ifx_GTM_MCS_CTRL CTRL;
+    Ifx_GTM_MCS_RST RST;
+    Ifx_GTM_MCS_ERR ERR;
+    Ifx_GTM_MCS_CH CH1;
+    Ifx_GTM_MCS_CH CH2;
+    Ifx_GTM_MCS_CH CH3;
+    Ifx_GTM_MCS_CH CH4;
+    Ifx_GTM_MCS_CH CH5;
+    Ifx_GTM_MCS_CH CH6;
+    Ifx_GTM_MCS_CH CH7;
+    unsigned char reserved_400[3072];
+} Ifx_GTM_MCS;
+
+
+typedef volatile struct _Ifx_GTM_MON
+{
+    Ifx_GTM_MON_STATUS STATUS;
+    Ifx_GTM_MON_ACTIVITY_0 ACTIVITY_0;
+} Ifx_GTM_MON;
+
+
+typedef volatile struct _Ifx_GTM_MSCIN
+{
+    Ifx_GTM_MSCIN_INLCON INLCON;
+    Ifx_GTM_MSCIN_INHCON INHCON;
+} Ifx_GTM_MSCIN;
+
+
+typedef volatile struct _Ifx_GTM_MSCSET
+{
+    Ifx_GTM_MSCSET_CON0 CON0;
+    Ifx_GTM_MSCSET_CON1 CON1;
+    Ifx_GTM_MSCSET_CON2 CON2;
+    Ifx_GTM_MSCSET_CON3 CON3;
+} Ifx_GTM_MSCSET;
+
+
+typedef volatile struct _Ifx_GTM_SPE
+{
+    Ifx_GTM_SPE_CTRL_STAT CTRL_STAT;
+    Ifx_GTM_SPE_PAT PAT;
+    Ifx_GTM_SPE_OUT_PAT OUT_PAT[8];
+    Ifx_GTM_SPE_OUT_CTRL OUT_CTRL;
+    Ifx_GTM_SPE_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_SPE_IRQ_EN IRQ_EN;
+    Ifx_GTM_SPE_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_SPE_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_SPE_EIRQ_EN EIRQ_EN;
+    Ifx_GTM_SPE_CNT CNT;
+    Ifx_GTM_SPE_CMP CMP;
+    unsigned char reserved_48[56];
+} Ifx_GTM_SPE;
+
+
+typedef volatile struct _Ifx_GTM_TBU
+{
+    Ifx_GTM_TBU_CHEN CHEN;
+    Ifx_GTM_TBU_CH0_CTRL CH0_CTRL;
+    Ifx_GTM_TBU_CH0_BASE CH0_BASE;
+    Ifx_GTM_TBU_CH1_CTRL CH1_CTRL;
+    Ifx_GTM_TBU_CH1_BASE CH1_BASE;
+    Ifx_GTM_TBU_CH2_CTRL CH2_CTRL;
+    Ifx_GTM_TBU_CH2_BASE CH2_BASE;
+} Ifx_GTM_TBU;
+
+
+typedef volatile struct _Ifx_GTM_TIM
+{
+    Ifx_GTM_TIM_CH CH0;
+    Ifx_GTM_TIM_IN_SRC IN_SRC;
+    Ifx_GTM_TIM_RST RST;
+    Ifx_GTM_TIM_CH CH1;
+    unsigned char reserved_F8[8];
+    Ifx_GTM_TIM_CH CH2;
+    unsigned char reserved_178[8];
+    Ifx_GTM_TIM_CH CH3;
+    unsigned char reserved_1F8[8];
+    Ifx_GTM_TIM_CH CH4;
+    unsigned char reserved_278[8];
+    Ifx_GTM_TIM_CH CH5;
+    unsigned char reserved_2F8[8];
+    Ifx_GTM_TIM_CH CH6;
+    unsigned char reserved_378[8];
+    Ifx_GTM_TIM_CH CH7;
+    unsigned char reserved_3F8[1032];
+} Ifx_GTM_TIM;
+
+
+typedef volatile struct _Ifx_GTM_TOM
+{
+    Ifx_GTM_TOM_CH CH0;
+    Ifx_GTM_TOM_TGC0_GLB_CTRL TGC0_GLB_CTRL;
+    Ifx_GTM_TOM_TGC0_ACT_TB TGC0_ACT_TB;
+    Ifx_GTM_TOM_TGC0_FUPD_CTRL TGC0_FUPD_CTRL;
+    Ifx_GTM_TOM_TGC0_INT_TRIG TGC0_INT_TRIG;
+    Ifx_GTM_TOM_CH CH1;
+    Ifx_GTM_TOM_TGC0_ENDIS_CTRL TGC0_ENDIS_CTRL;
+    Ifx_GTM_TOM_TGC0_ENDIS_STAT TGC0_ENDIS_STAT;
+    Ifx_GTM_TOM_TGC0_OUTEN_CTRL TGC0_OUTEN_CTRL;
+    Ifx_GTM_TOM_TGC0_OUTEN_STAT TGC0_OUTEN_STAT;
+    Ifx_GTM_TOM_CH CH2;
+    unsigned char reserved_B0[16];
+    Ifx_GTM_TOM_CH CH3;
+    unsigned char reserved_F0[16];
+    Ifx_GTM_TOM_CH CH4;
+    unsigned char reserved_130[16];
+    Ifx_GTM_TOM_CH CH5;
+    unsigned char reserved_170[16];
+    Ifx_GTM_TOM_CH CH6;
+    unsigned char reserved_1B0[16];
+    Ifx_GTM_TOM_CH CH7;
+    unsigned char reserved_1F0[16];
+    Ifx_GTM_TOM_CH CH8;
+    Ifx_GTM_TOM_TGC1_GLB_CTRL TGC1_GLB_CTRL;
+    Ifx_GTM_TOM_TGC1_ACT_TB TGC1_ACT_TB;
+    Ifx_GTM_TOM_TGC1_FUPD_CTRL TGC1_FUPD_CTRL;
+    Ifx_GTM_TOM_TGC1_INT_TRIG TGC1_INT_TRIG;
+    Ifx_GTM_TOM_CH CH9;
+    Ifx_GTM_TOM_TGC1_ENDIS_CTRL TGC1_ENDIS_CTRL;
+    Ifx_GTM_TOM_TGC1_ENDIS_STAT TGC1_ENDIS_STAT;
+    Ifx_GTM_TOM_TGC1_OUTEN_CTRL TGC1_OUTEN_CTRL;
+    Ifx_GTM_TOM_TGC1_OUTEN_STAT TGC1_OUTEN_STAT;
+    Ifx_GTM_TOM_CH CH10;
+    unsigned char reserved_2B0[16];
+    Ifx_GTM_TOM_CH CH11;
+    unsigned char reserved_2F0[16];
+    Ifx_GTM_TOM_CH CH12;
+    unsigned char reserved_330[16];
+    Ifx_GTM_TOM_CH CH13;
+    unsigned char reserved_370[16];
+    Ifx_GTM_TOM_CH CH14;
+    unsigned char reserved_3B0[16];
+    Ifx_GTM_TOM_CH CH15;
+    unsigned char reserved_3F0[1040];
+} Ifx_GTM_TOM;
+# 7878 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_regdef.h"
+typedef volatile struct _Ifx_GTM
+{
+    Ifx_GTM_REV REV;
+    Ifx_GTM_RST RST;
+    Ifx_GTM_CTRL CTRL;
+    Ifx_GTM_AEI_ADDR_XPT AEI_ADDR_XPT;
+    Ifx_GTM_IRQ_NOTIFY IRQ_NOTIFY;
+    Ifx_GTM_IRQ_EN IRQ_EN;
+    Ifx_GTM_IRQ_FORCINT IRQ_FORCINT;
+    Ifx_GTM_IRQ_MODE IRQ_MODE;
+    Ifx_GTM_EIRQ_EN EIRQ_EN;
+    unsigned char reserved_24[12];
+    Ifx_GTM_BRIDGE BRIDGE;
+    unsigned char reserved_3C[4];
+    Ifx_GTM_TIM_AUX_IN_SRC TIM_AUX_IN_SRC[4];
+    unsigned char reserved_50[176];
+    Ifx_GTM_TBU TBU;
+    unsigned char reserved_11C[100];
+    Ifx_GTM_MON MON;
+    unsigned char reserved_188[120];
+    Ifx_GTM_CMP CMP;
+    unsigned char reserved_218[104];
+    Ifx_GTM_ARU ARU;
+    unsigned char reserved_2B4[76];
+    Ifx_GTM_CMU CMU;
+    unsigned char reserved_348[184];
+    Ifx_GTM_BRC BRC;
+    unsigned char reserved_478[392];
+    Ifx_GTM_ICM ICM;
+    unsigned char reserved_644[444];
+    Ifx_GTM_SPE SPE[2];
+    unsigned char reserved_900[1536];
+    Ifx_GTM_MAP_CTRL MAP_CTRL;
+    unsigned char reserved_F04[60];
+    Ifx_GTM_MCFG_CTRL MCFG_CTRL;
+    unsigned char reserved_F44[188];
+    Ifx_GTM_TIM TIM[4];
+    unsigned char reserved_3000[20480];
+    Ifx_GTM_TOM TOM[3];
+    unsigned char reserved_9800[14336];
+    Ifx_GTM_ATOM ATOM[5];
+    unsigned char reserved_F800[34816];
+    Ifx_GTM_F2A F2A0;
+    unsigned char reserved_18044[60];
+    Ifx_GTM_AFD AFD0;
+    unsigned char reserved_18100[768];
+    Ifx_GTM_FIFO FIFO0;
+    unsigned char reserved_18600[64000];
+    Ifx_GTM_DPLL DPLL;
+    unsigned char reserved_28F18[28904];
+    Ifx_GTM_MCS MCS[4];
+    unsigned char reserved_34000[441600];
+    Ifx_GTM_CLC CLC;
+    unsigned char reserved_9FD04[12];
+    Ifx_GTM_INOUTSEL INOUTSEL;
+    unsigned char reserved_9FDAC[4];
+    Ifx_GTM_ADCTRIG0OUT0 ADCTRIG0OUT0;
+    Ifx_GTM_ADCTRIG0OUT1 ADCTRIG0OUT1;
+    Ifx_GTM_ADCTRIG1OUT0 ADCTRIG1OUT0;
+    Ifx_GTM_ADCTRIG1OUT1 ADCTRIG1OUT1;
+    unsigned char reserved_9FDC0[4];
+    Ifx_GTM_OTBU0T OTBU0T;
+    Ifx_GTM_OTBU1T OTBU1T;
+    Ifx_GTM_OTBU2T OTBU2T;
+    Ifx_GTM_OTSS OTSS;
+    Ifx_GTM_OTSC0 OTSC0;
+    Ifx_GTM_OTSC1 OTSC1;
+    Ifx_GTM_ODA ODA;
+    unsigned char reserved_9FDE0[8];
+    Ifx_GTM_OCS OCS;
+    Ifx_GTM_KRSTCLR KRSTCLR;
+    Ifx_GTM_KRST1 KRST1;
+    Ifx_GTM_KRST0 KRST0;
+    Ifx_GTM_ACCEN1 ACCEN1;
+    Ifx_GTM_ACCEN0 ACCEN0;
+    Ifx_GTM_DXOUTCON DXOUTCON;
+    Ifx_GTM_TRIGOUT TRIGOUT0[4];
+    unsigned char reserved_9FE14[48];
+    Ifx_GTM_TRIGOUT TRIGOUT1[4];
+    unsigned char reserved_9FE54[28];
+    Ifx_GTM_MCSINTSTAT MCSINTSTAT;
+    Ifx_GTM_MCSINTCLR MCSINTCLR;
+    unsigned char reserved_9FE78[24];
+    Ifx_GTM_DXINCON DXINCON;
+    Ifx_GTM_DATAIN DATAIN0[4];
+    unsigned char reserved_9FEA4[48];
+    Ifx_GTM_DATAIN DATAIN1[4];
+    unsigned char reserved_9FEE4[28];
+    Ifx_GTM_MSCSET MSCSET_1S[4];
+    unsigned char reserved_9FF40[32];
+    Ifx_GTM_MSCIN MSCIN[2];
+    unsigned char reserved_9FF70[144];
+} Ifx_GTM;
+# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_reg.h" 2
+# 49 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGtm_cfg.h" 1
+# 199 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGtm_cfg.h"
+typedef volatile struct IfxGtm_Tom_TGC Ifx_GTM_TOM_TGC;
+# 209 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGtm_cfg.h"
+typedef enum
+{
+    IfxGtm_Atom_0,
+    IfxGtm_Atom_1,
+    IfxGtm_Atom_2,
+    IfxGtm_Atom_3,
+    IfxGtm_Atom_4
+} IfxGtm_Atom;
+
+
+
+typedef enum
+{
+    IfxGtm_Atom_Ch_none = -1,
+    IfxGtm_Atom_Ch_0,
+    IfxGtm_Atom_Ch_1,
+    IfxGtm_Atom_Ch_2,
+    IfxGtm_Atom_Ch_3,
+    IfxGtm_Atom_Ch_4,
+    IfxGtm_Atom_Ch_5,
+    IfxGtm_Atom_Ch_6,
+    IfxGtm_Atom_Ch_7
+} IfxGtm_Atom_Ch;
+
+
+
+typedef enum
+{
+    IfxGtm_Dpll_SubInc_1 = 0,
+    IfxGtm_Dpll_SubInc_2
+} IfxGtm_Dpll_SubInc;
+
+
+
+typedef enum
+{
+    IfxGtm_FeatureControl_disabled = 0,
+    IfxGtm_FeatureControl_disable = 1,
+    IfxGtm_FeatureControl_enable = 2,
+    IfxGtm_FeatureControl_enabled = 3
+} IfxGtm_FeatureControl;
+
+
+
+typedef enum
+{
+    IfxGtm_Tim_0,
+    IfxGtm_Tim_1,
+    IfxGtm_Tim_2,
+    IfxGtm_Tim_3
+} IfxGtm_Tim;
+
+
+
+typedef enum
+{
+    IfxGtm_Tim_Ch_0,
+    IfxGtm_Tim_Ch_1,
+    IfxGtm_Tim_Ch_2,
+    IfxGtm_Tim_Ch_3,
+    IfxGtm_Tim_Ch_4,
+    IfxGtm_Tim_Ch_5,
+    IfxGtm_Tim_Ch_6,
+    IfxGtm_Tim_Ch_7
+} IfxGtm_Tim_Ch;
+
+
+
+typedef enum
+{
+    IfxGtm_Tom_0,
+    IfxGtm_Tom_1,
+    IfxGtm_Tom_2
+} IfxGtm_Tom;
+
+
+
+typedef enum
+{
+    IfxGtm_Tom_Ch_none = -1,
+    IfxGtm_Tom_Ch_0,
+    IfxGtm_Tom_Ch_1,
+    IfxGtm_Tom_Ch_2,
+    IfxGtm_Tom_Ch_3,
+    IfxGtm_Tom_Ch_4,
+    IfxGtm_Tom_Ch_5,
+    IfxGtm_Tom_Ch_6,
+    IfxGtm_Tom_Ch_7,
+    IfxGtm_Tom_Ch_8,
+    IfxGtm_Tom_Ch_9,
+    IfxGtm_Tom_Ch_10,
+    IfxGtm_Tom_Ch_11,
+    IfxGtm_Tom_Ch_12,
+    IfxGtm_Tom_Ch_13,
+    IfxGtm_Tom_Ch_14,
+    IfxGtm_Tom_Ch_15
+} IfxGtm_Tom_Ch;
+
+
+
+typedef enum
+{
+    IfxGtm_Tom_Tgc_0,
+    IfxGtm_Tom_Tgc_1
+} IfxGtm_Tom_Tgc;
+# 325 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGtm_cfg.h"
+struct IfxGtm_Tom_TGC
+{
+    Ifx_GTM_TOM_TGC0_GLB_CTRL GLB_CTRL;
+    Ifx_GTM_TOM_TGC0_ACT_TB ACT_TB;
+    Ifx_GTM_TOM_TGC0_FUPD_CTRL FUPD_CTRL;
+    Ifx_GTM_TOM_TGC0_INT_TRIG INT_TRIG;
+    Ifx_GTM_TOM_CH xxxCH1;
+    Ifx_GTM_TOM_TGC0_ENDIS_CTRL ENDIS_CTRL;
+    Ifx_GTM_TOM_TGC0_ENDIS_STAT ENDIS_STAT;
+    Ifx_GTM_TOM_TGC0_OUTEN_CTRL OUTEN_CTRL;
+    Ifx_GTM_TOM_TGC0_OUTEN_STAT OUTEN_STAT;
+};
+# 50 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h" 2
+
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h" 1
+# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm.h" 1
+# 64 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm.h"
+typedef enum
+{
+    IfxGtm_IrqMode_level = 0,
+    IfxGtm_IrqMode_pulse = 1,
+    IfxGtm_IrqMode_pulseNotify = 2,
+    IfxGtm_IrqMode_singlePulse = 3
+} IfxGtm_IrqMode;
+
+
+
+typedef enum
+{
+    IfxGtm_SuspendMode_none = 0,
+    IfxGtm_SuspendMode_hard = 1,
+    IfxGtm_SuspendMode_soft = 2
+} IfxGtm_SuspendMode;
+# 94 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm.h"
+static inline __attribute__ ((always_inline)) boolean IfxGtm_isEnabled(Ifx_GTM *gtm);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_isModuleSuspended(Ifx_GTM *gtm);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_setSuspendMode(Ifx_GTM *gtm, IfxGtm_SuspendMode mode);
+# 120 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm.h"
+extern void IfxGtm_disable(Ifx_GTM *gtm);
+
+
+
+
+
+extern void IfxGtm_enable(Ifx_GTM *gtm);
+# 138 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm.h"
+extern float32 IfxGtm_getSysClkFrequency(void);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_isEnabled(Ifx_GTM *gtm)
+{
+    return gtm->CLC.B.DISS == 0;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_isModuleSuspended(Ifx_GTM *gtm)
+{
+    Ifx_GTM_OCS ocs;
+
+
+    ocs.U = gtm->OCS.U;
+
+
+    return ocs.B.SUSSTA;
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_setSuspendMode(Ifx_GTM *gtm, IfxGtm_SuspendMode mode)
+{
+    Ifx_GTM_OCS ocs;
+
+
+    ocs.B.SUS_P = 1;
+    ocs.B.SUS = mode;
+
+    gtm->OCS.U = ocs.U;
+}
+# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Tbu.h" 1
+# 66 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Tbu.h"
+typedef enum
+{
+    IfxGtm_Tbu_Ts_0,
+    IfxGtm_Tbu_Ts_1,
+    IfxGtm_Tbu_Ts_2
+} IfxGtm_Tbu_Ts;
+# 87 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Tbu.h"
+static inline __attribute__ ((always_inline)) void IfxGtm_Tbu_enableChannel(Ifx_GTM *gtm, IfxGtm_Tbu_Ts channel);
+# 96 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Tbu.h"
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tbu_isChannelEnabled(Ifx_GTM *gtm, IfxGtm_Tbu_Ts channel);
+# 107 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Tbu.h"
+extern float32 IfxGtm_Tbu_getClockFrequency(Ifx_GTM *gtm, IfxGtm_Tbu_Ts channel);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tbu_enableChannel(Ifx_GTM *gtm, IfxGtm_Tbu_Ts channel)
+{
+    uint32 shift = channel * 2;
+
+    __ldmst_c(&gtm->TBU.CHEN.U, (3U << shift), (IfxGtm_FeatureControl_enable << shift));
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tbu_isChannelEnabled(Ifx_GTM *gtm, IfxGtm_Tbu_Ts channel)
+{
+    uint32 shift = channel * 2;
+    uint32 enable_status = (gtm->TBU.CHEN.U & ((uint32)3 << shift)) >> shift;
+
+    return enable_status == (uint32)IfxGtm_FeatureControl_enabled;
+}
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h" 2
+
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Cmu.h" 1
+# 64 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Cmu.h"
+typedef enum
+{
+    IfxGtm_Cmu_Clk_0 = 0,
+    IfxGtm_Cmu_Clk_1,
+    IfxGtm_Cmu_Clk_2,
+    IfxGtm_Cmu_Clk_3,
+    IfxGtm_Cmu_Clk_4,
+    IfxGtm_Cmu_Clk_5,
+    IfxGtm_Cmu_Clk_6,
+    IfxGtm_Cmu_Clk_7
+} IfxGtm_Cmu_Clk;
+
+typedef enum
+{
+    IfxGtm_Cmu_Eclk_0 = 0,
+    IfxGtm_Cmu_Eclk_1,
+    IfxGtm_Cmu_Eclk_2
+} IfxGtm_Cmu_Eclk;
+
+typedef enum
+{
+    IfxGtm_Cmu_Fxclk_0 = 0,
+    IfxGtm_Cmu_Fxclk_1,
+    IfxGtm_Cmu_Fxclk_2,
+    IfxGtm_Cmu_Fxclk_3,
+    IfxGtm_Cmu_Fxclk_4
+} IfxGtm_Cmu_Fxclk;
+
+
+
+typedef enum
+{
+    IfxGtm_Cmu_Tim_Filter_Clk_0,
+    IfxGtm_Cmu_Tim_Filter_Clk_1,
+    IfxGtm_Cmu_Tim_Filter_Clk_6,
+    IfxGtm_Cmu_Tim_Filter_Clk_7
+} IfxGtm_Cmu_Tim_Filter_Clk;
+# 116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Cmu.h"
+extern void IfxGtm_Cmu_enableClocks(Ifx_GTM *gtm, uint32 clkMask);
+
+
+
+
+
+
+
+extern float32 IfxGtm_Cmu_getClkFrequency(Ifx_GTM *gtm, IfxGtm_Cmu_Clk clkIndex, boolean assumeEnabled);
+
+
+
+
+
+
+
+extern float32 IfxGtm_Cmu_getEclkFrequency(Ifx_GTM *gtm, IfxGtm_Cmu_Eclk clkIndex, boolean assumeEnabled);
+
+
+
+
+
+
+
+extern float32 IfxGtm_Cmu_getFxClkFrequency(Ifx_GTM *gtm, IfxGtm_Cmu_Fxclk clkIndex, boolean assumeEnabled);
+
+
+
+
+
+extern float32 IfxGtm_Cmu_getGclkFrequency(Ifx_GTM *gtm);
+
+
+
+
+
+
+extern float32 IfxGtm_Cmu_getModuleFrequency(Ifx_GTM *gtm);
+
+
+
+
+
+
+extern boolean IfxGtm_Cmu_isClkClockEnabled(Ifx_GTM *gtm, IfxGtm_Cmu_Clk clkIndex);
+
+
+
+
+
+
+extern boolean IfxGtm_Cmu_isEclkClockEnabled(Ifx_GTM *gtm, IfxGtm_Cmu_Eclk clkIndex);
+
+
+
+
+
+extern boolean IfxGtm_Cmu_isFxClockEnabled(Ifx_GTM *gtm);
+# 182 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Cmu.h"
+extern void IfxGtm_Cmu_selectClkInput(Ifx_GTM *gtm, IfxGtm_Cmu_Clk clkIndex, boolean useGlobal);
+
+
+
+
+
+
+
+extern void IfxGtm_Cmu_setClkFrequency(Ifx_GTM *gtm, IfxGtm_Cmu_Clk clkIndex, float32 frequency);
+
+
+
+
+
+
+
+extern void IfxGtm_Cmu_setEclkFrequency(Ifx_GTM *gtm, IfxGtm_Cmu_Eclk clkIndex, float32 frequency);
+
+
+
+
+
+
+extern void IfxGtm_Cmu_setGclkFrequency(Ifx_GTM *gtm, float32 frequency);
+# 65 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h" 2
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
+# 66 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h" 2
+# 75 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+typedef enum
+{
+    IfxGtm_Atom_Ch_OutputTrigger_forward = 0,
+    IfxGtm_Atom_Ch_OutputTrigger_generate = 1
+} IfxGtm_Atom_Ch_OutputTrigger;
+
+
+
+typedef enum
+{
+    IfxGtm_Atom_Ch_ResetEvent_onCm0 = 0,
+    IfxGtm_Atom_Ch_ResetEvent_onTrigger = 1
+} IfxGtm_Atom_Ch_ResetEvent;
+
+
+
+typedef enum
+{
+    IfxGtm_Atom_Mode_outputImmediate,
+    IfxGtm_Atom_Mode_outputCompare,
+    IfxGtm_Atom_Mode_outputPwm,
+    IfxGtm_Atom_Mode_outputSerial
+} IfxGtm_Atom_Mode;
+
+
+
+
+
+typedef enum
+{
+    IfxGtm_Atom_AruInput_disabled = 0,
+    IfxGtm_Atom_AruInput_enabled = 1
+} IfxGtm_Atom_AruInput;
+
+
+
+typedef enum
+{
+    IfxGtm_Atom_SomcControl_compareBoth = 0,
+    IfxGtm_Atom_SomcControl_compareBoth1 = 1,
+    IfxGtm_Atom_SomcControl_ccu0Ts0 = 2,
+    IfxGtm_Atom_SomcControl_ccu1Ts12 = 3,
+    IfxGtm_Atom_SomcControl_ccu0ccu1Ts0 = 4,
+    IfxGtm_Atom_SomcControl_ccu0ccu1Ts12 = 5,
+    IfxGtm_Atom_SomcControl_ccu0Ts0ccu1Ts12 = 6,
+    IfxGtm_Atom_SomcControl_cancelCompare = 7
+} IfxGtm_Atom_SomcControl;
+
+
+
+typedef enum
+{
+    IfxGtm_Atom_SomcSignalLevelControl_noChange = 0,
+    IfxGtm_Atom_SomcSignalLevelControl_sl0out1 = 1,
+    IfxGtm_Atom_SomcSignalLevelControl_sl0out0 = 2,
+    IfxGtm_Atom_SomcSignalLevelControl_toggle = 3
+} IfxGtm_Atom_SomcSignalLevelControl;
+# 145 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+static inline __attribute__ ((always_inline)) Ifx_GTM_ATOM_CH *IfxGtm_Atom_Ch_getChannelPointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+# 154 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+static inline __attribute__ ((always_inline)) void IfxGtm_Atom_Ch_setCompareShadow(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 shadowZero, uint32 shadowOne);
+# 165 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Ch_clearOneNotification(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_clearZeroNotification(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+# 183 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Ch_configurePwmMode(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Cmu_Clk clock, Ifx_ActiveState activeState, IfxGtm_Atom_Ch_ResetEvent resetEvent, IfxGtm_Atom_Ch_OutputTrigger trigger);
+
+
+
+
+
+
+
+extern float32 IfxGtm_Atom_Ch_getClockFrequency(Ifx_GTM *gtm, Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern IfxGtm_Cmu_Clk IfxGtm_Atom_Ch_getClockSource(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern uint32 IfxGtm_Atom_Ch_getCompareOne(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Atom_Ch_getCompareOnePointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern uint32 IfxGtm_Atom_Ch_getCompareZero(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Atom_Ch_getCompareZeroPointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern boolean IfxGtm_Atom_Ch_getOutputLevel(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+
+extern volatile Ifx_SRC_SRCR *IfxGtm_Atom_Ch_getSrcPointer(Ifx_GTM *gtm, IfxGtm_Atom atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Atom_Ch_getTimerPointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern boolean IfxGtm_Atom_Ch_isOneNotification(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern boolean IfxGtm_Atom_Ch_isZeroNotification(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_raiseInterruptOne(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_raiseInterruptZero(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setClockSource(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Cmu_Clk clock);
+# 293 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Ch_setCompare(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 compareZero, uint32 compareOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setCompareOne(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 compareOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setCompareOneShadow(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 shadowOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setCompareZero(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 compareZero);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setCompareZeroShadow(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 shadowZero);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setCounterValue(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 value);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setMode(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Atom_Mode mode);
+# 351 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Ch_setNotification(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_IrqMode mode, boolean interruptOnCompareZero, boolean interruptOnCompareOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setOneShotMode(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, boolean enabled);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setResetSource(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Atom_Ch_ResetEvent event);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setSignalLevel(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, Ifx_ActiveState activeState);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setTriggerOutput(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Atom_Ch_OutputTrigger trigger);
+
+
+
+
+
+
+extern uint32 IfxGtm_Atom_Ch_getCounterValue(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+# 406 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+static inline __attribute__ ((always_inline)) void IfxGtm_Atom_Agc_setChannelsUpdate(Ifx_GTM_ATOM_AGC *agc, uint32 value);
+# 418 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern uint32 IfxGtm_Atom_Agc_buildFeature(uint16 enableMask, uint16 disableMask, uint8 bitfieldOffset);
+
+
+
+
+
+
+
+extern uint32 IfxGtm_Atom_Agc_buildFeatureForChannel(IfxGtm_Atom_Ch channel, boolean enabled, uint8 bitfieldOffset);
+# 435 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Agc_enableChannel(Ifx_GTM_ATOM_AGC *agc, IfxGtm_Atom_Ch channel, boolean enabled, boolean immediate);
+# 444 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Agc_enableChannelOutput(Ifx_GTM_ATOM_AGC *agc, IfxGtm_Atom_Ch channel, boolean enabled, boolean immediate);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_enableChannelUpdate(Ifx_GTM_ATOM_AGC *agc, IfxGtm_Atom_Ch channel, boolean enabled);
+# 461 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Agc_enableChannels(Ifx_GTM_ATOM_AGC *agc, uint16 enableMask, uint16 disableMask, boolean immediate);
+# 470 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Agc_enableChannelsOutput(Ifx_GTM_ATOM_AGC *agc, uint16 enableMask, uint16 disableMask, boolean immediate);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_enableChannelsTrigger(Ifx_GTM_ATOM_AGC *agc, uint16 enableMask, uint16 disableMask);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_enableChannelsUpdate(Ifx_GTM_ATOM_AGC *agc, uint16 enableMask, uint16 disableMask);
+
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_enableTimeTrigger(Ifx_GTM_ATOM_AGC *agc, boolean enabled);
+
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_resetChannels(Ifx_GTM_ATOM_AGC *agc, uint32 resetMask);
+# 509 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Agc_setChannelForceUpdate(Ifx_GTM_ATOM_AGC *agc, IfxGtm_Atom_Ch channel, boolean enabled, boolean resetEnabled);
+# 519 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Agc_setChannelsForceUpdate(Ifx_GTM_ATOM_AGC *agc, uint16 enableMask, uint16 disableMask, uint16 resetEnableMask, uint16 resetDisableMask);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_setTimeTrigger(Ifx_GTM_ATOM_AGC *agc, IfxGtm_Tbu_Ts base, uint32 value);
+
+
+
+
+
+extern void IfxGtm_Atom_Agc_trigger(Ifx_GTM_ATOM_AGC *agc);
+# 547 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Atom.h"
+extern void IfxGtm_Atom_Ch_setAruInput(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, boolean enabled);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setSomcControl(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Atom_SomcControl control);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setSomcSignalLevelControl(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, IfxGtm_Atom_SomcSignalLevelControl ctrl);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setAruReadAddress0(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 address);
+
+
+
+
+
+
+
+extern void IfxGtm_Atom_Ch_setAruReadAddress1(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 address);
+
+
+
+
+
+
+extern uint32 IfxGtm_Atom_getShadowZero(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Atom_getShadowZeroPointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern uint32 IfxGtm_Atom_getShadowOne(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Atom_getShadowOnePointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) Ifx_GTM_ATOM_CH *IfxGtm_Atom_Ch_getChannelPointer(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel)
+{
+    return (Ifx_GTM_ATOM_CH *)((uint32)&atom->CH0.RDADDR.U + 0x80 * channel);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Atom_Ch_setCompareShadow(Ifx_GTM_ATOM *atom, IfxGtm_Atom_Ch channel, uint32 shadowZero, uint32 shadowOne)
+{
+    Ifx_GTM_ATOM_CH *atomCh = IfxGtm_Atom_Ch_getChannelPointer(atom, channel);
+
+    atomCh->SR0.U = shadowZero;
+    atomCh->SR1.U = shadowOne;
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Atom_Agc_setChannelsUpdate(Ifx_GTM_ATOM_AGC *agc, uint32 value)
+{
+    agc->GLB_CTRL.U = value;
+}
+# 52 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h" 1
+# 81 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+typedef enum
+{
+    IfxGtm_Tom_Ch_ClkSrc_cmuFxclk0 = 0,
+    IfxGtm_Tom_Ch_ClkSrc_cmuFxclk1 = 1,
+    IfxGtm_Tom_Ch_ClkSrc_cmuFxclk2 = 2,
+    IfxGtm_Tom_Ch_ClkSrc_cmuFxclk3 = 3,
+    IfxGtm_Tom_Ch_ClkSrc_cmuFxclk4 = 4,
+    IfxGtm_Tom_Ch_ClkSrc_noClock = 5
+} IfxGtm_Tom_Ch_ClkSrc;
+
+
+
+typedef enum
+{
+    IfxGtm_Tom_Ch_OutputTrigger_forward = 0,
+    IfxGtm_Tom_Ch_OutputTrigger_generate = 1
+} IfxGtm_Tom_Ch_OutputTrigger;
+
+
+
+typedef enum
+{
+    IfxGtm_Tom_Ch_ResetEvent_onCm0 = 0,
+    IfxGtm_Tom_Ch_ResetEvent_onTrigger = 1
+} IfxGtm_Tom_Ch_ResetEvent;
+# 121 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+static inline __attribute__ ((always_inline)) Ifx_GTM_TOM_CH *IfxGtm_Tom_Ch_getChannelPointer(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+# 132 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Ch_clearOneNotification(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_clearZeroNotification(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+
+extern float32 IfxGtm_Tom_Ch_getClockFrequency(Ifx_GTM *gtm, Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern IfxGtm_Tom_Ch_ClkSrc IfxGtm_Tom_Ch_getClockSource(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern uint32 IfxGtm_Tom_Ch_getCompareOne(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Tom_Ch_getCompareOnePointer(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern uint32 IfxGtm_Tom_Ch_getCompareZero(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Tom_Ch_getCompareZeroPointer(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern boolean IfxGtm_Tom_Ch_getOutputLevel(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+
+extern volatile Ifx_SRC_SRCR *IfxGtm_Tom_Ch_getSrcPointer(Ifx_GTM *gtm, IfxGtm_Tom tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern Ifx_GTM_TOM_TGC *IfxGtm_Tom_Ch_getTgcPointer(Ifx_GTM_TOM *tom, uint32 tgcIndex);
+
+
+
+
+
+
+extern volatile uint32 *IfxGtm_Tom_Ch_getTimerPointer(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern boolean IfxGtm_Tom_Ch_isOneNotification(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern boolean IfxGtm_Tom_Ch_isZeroNotification(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_raiseInterruptOne(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_raiseInterruptZero(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setClockSource(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, IfxGtm_Tom_Ch_ClkSrc clock);
+# 256 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Ch_setCompare(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 compareZero, uint32 compareOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setCompareOne(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 compareOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setCompareOneShadow(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 shadowOne);
+# 281 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Ch_setCompareShadow(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 shadowZero, uint32 shadowOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setCompareZero(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 compareZero);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setCompareZeroShadow(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 shadowZero);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setCounterValue(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, uint32 value);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setGatedCounter(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, boolean enabled);
+# 323 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Ch_setNotification(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, IfxGtm_IrqMode mode, boolean interruptOnCompareZero, boolean interruptOnCompareOne);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setOneShotMode(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, boolean enabled);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setPcm(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, boolean enabled);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setResetSource(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, IfxGtm_Tom_Ch_ResetEvent event);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setSignalLevel(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, Ifx_ActiveState activeState);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setSpe(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, boolean enabled);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Ch_setTriggerOutput(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel, IfxGtm_Tom_Ch_OutputTrigger trigger);
+# 387 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+static inline __attribute__ ((always_inline)) void IfxGtm_Tom_Tgc_writeGlobalControl(Ifx_GTM_TOM_TGC *tgc, uint32 control);
+# 399 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern uint32 IfxGtm_Tom_Tgc_buildFeature(uint16 enableMask, uint16 disableMask, uint8 bitfieldOffset);
+
+
+
+
+
+
+
+extern uint32 IfxGtm_Tom_Tgc_buildFeatureForChannel(IfxGtm_Tom_Ch channel, boolean enabled, uint8 bitfieldOffset);
+# 416 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Tgc_enableChannel(Ifx_GTM_TOM_TGC *tgc, IfxGtm_Tom_Ch channel, boolean enabled, boolean immediate);
+# 425 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Tgc_enableChannelOutput(Ifx_GTM_TOM_TGC *tgc, IfxGtm_Tom_Ch channel, boolean enabled, boolean immediate);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_enableChannelUpdate(Ifx_GTM_TOM_TGC *tgc, IfxGtm_Tom_Ch channel, boolean enabled);
+# 442 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Tgc_enableChannels(Ifx_GTM_TOM_TGC *tgc, uint16 enableMask, uint16 disableMask, boolean immediate);
+# 451 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Tgc_enableChannelsOutput(Ifx_GTM_TOM_TGC *tgc, uint16 enableMask, uint16 disableMask, boolean immediate);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_enableChannelsTrigger(Ifx_GTM_TOM_TGC *tgc, uint16 enableMask, uint16 disableMask);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_enableChannelsUpdate(Ifx_GTM_TOM_TGC *tgc, uint16 enableMask, uint16 disableMask);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_enableTimeTrigger(Ifx_GTM_TOM_TGC *tgc, boolean enabled);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_resetChannels(Ifx_GTM_TOM_TGC *tgc, uint32 resetMask);
+# 490 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Tgc_setChannelForceUpdate(Ifx_GTM_TOM_TGC *tgc, IfxGtm_Tom_Ch channel, boolean enabled, boolean resetEnabled);
+# 500 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tom.h"
+extern void IfxGtm_Tom_Tgc_setChannelsForceUpdate(Ifx_GTM_TOM_TGC *tgc, uint16 enableMask, uint16 disableMask, uint16 resetEnableMask, uint16 resetDisableMask);
+
+
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_setTimeTrigger(Ifx_GTM_TOM_TGC *tgc, IfxGtm_Tbu_Ts base, uint32 value);
+
+
+
+
+
+extern void IfxGtm_Tom_Tgc_trigger(Ifx_GTM_TOM_TGC *tgc);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) Ifx_GTM_TOM_CH *IfxGtm_Tom_Ch_getChannelPointer(Ifx_GTM_TOM *tom, IfxGtm_Tom_Ch channel)
+{
+    return (Ifx_GTM_TOM_CH *)((uint32)&tom->CH0.CTRL.U + 0x40 * channel);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tom_Tgc_writeGlobalControl(Ifx_GTM_TOM_TGC *tgc, uint32 control)
+{
+    tgc->GLB_CTRL.U = control;
+}
+# 53 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tim.h" 1
+# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tim.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxGtm_bf.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tim.h" 2
+
+
+
+
+
+
+
+typedef enum
+{
+    IfxGtm_Tim_CntsSel_cntReg = 0,
+    IfxGtm_Tim_CntsSel_tbuTs0
+} IfxGtm_Tim_CntsSel;
+
+
+
+typedef enum
+{
+    IfxGtm_Tim_FilterCounter_upDown = 0,
+    IfxGtm_Tim_FilterCounter_hold
+} IfxGtm_Tim_FilterCounter;
+
+
+
+typedef enum
+{
+    IfxGtm_Tim_FilterMode_immediateEdgePropagation = 0,
+    IfxGtm_Tim_FilterMode_individualDeglitchTime
+} IfxGtm_Tim_FilterMode;
+
+typedef enum
+{
+    IfxGtm_Tim_GprSel_tbuTs0 = 0,
+    IfxGtm_Tim_GprSel_tbuTs1,
+    IfxGtm_Tim_GprSel_tbuTs2,
+    IfxGtm_Tim_GprSel_cnts
+} IfxGtm_Tim_GprSel;
+
+typedef enum
+{
+    IfxGtm_Tim_Input_currentChannel = 0,
+    IfxGtm_Tim_Input_adjacentChannel
+} IfxGtm_Tim_Input;
+
+typedef enum
+{
+    IfxGtm_Tim_Mode_pwmMeasurement = 0,
+    IfxGtm_Tim_Mode_pulseIntegration,
+    IfxGtm_Tim_Mode_inputEvent,
+    IfxGtm_Tim_Mode_inputPrescaler,
+    IfxGtm_Tim_Mode_bitCompression
+} IfxGtm_Tim_Mode;
+
+
+
+typedef enum
+{
+    IfxGtm_Tim_Timeout_disabled,
+    IfxGtm_Tim_Timeout_risingEdge,
+    IfxGtm_Tim_Timeout_fallingEdge,
+    IfxGtm_Tim_Timeout_bothEdge
+} IfxGtm_Tim_Timeout;
+# 138 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tim.h"
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearCntOverflowEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearDataLostEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearEcntOverflowEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearGlitchEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearNewValueEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) volatile Ifx_SRC_SRCR *IfxGtm_Tim_Ch_getSrcPointer(Ifx_GTM *gtm, IfxGtm_Tim tim, IfxGtm_Tim_Ch channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isCntOverflowEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isDataLostEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isEcntOverflowEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isGlitchEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isNewValueEvent(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) Ifx_GTM_TIM_CH *IfxGtm_Tim_getChannel(Ifx_GTM_TIM *tim, IfxGtm_Tim_Ch channel);
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_resetChannel(Ifx_GTM_TIM *tim, IfxGtm_Tim_Ch channel);
+# 225 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tim.h"
+extern float32 IfxGtm_Tim_Ch_getCaptureClockFrequency(Ifx_GTM *gtm, Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+extern IfxGtm_Cmu_Clk IfxGtm_Tim_Ch_getCaptureClockSource(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+
+extern float32 IfxGtm_Tim_Ch_getFilterClockFrequency(Ifx_GTM *gtm, Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+extern IfxGtm_Cmu_Tim_Filter_Clk IfxGtm_Tim_Ch_getFilterClockSource(Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+
+extern float32 IfxGtm_Tim_Ch_getTimeoutClockFrequency(Ifx_GTM *gtm, Ifx_GTM_TIM_CH *channel);
+
+
+
+
+
+extern IfxGtm_Cmu_Clk IfxGtm_Tim_Ch_getTimeoutClockSource(Ifx_GTM_TIM_CH *channel);
+# 267 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Tim.h"
+extern void IfxGtm_Tim_Ch_setChannelNotification(Ifx_GTM_TIM_CH *channel, boolean irqOnNewVal, boolean irqOnCntOverflow, boolean irqOnEcntOverflow, boolean irqOnDatalost);
+
+
+
+
+
+
+extern void IfxGtm_Tim_Ch_setClockSource(Ifx_GTM_TIM_CH *channel, IfxGtm_Cmu_Clk clock);
+
+
+
+
+
+
+extern void IfxGtm_Tim_Ch_setFilterNotification(Ifx_GTM_TIM_CH *channel, boolean irqOnGlitch);
+
+
+
+
+
+
+extern void IfxGtm_Tim_Ch_setNotificationMode(Ifx_GTM_TIM_CH *channel, IfxGtm_IrqMode mode);
+
+
+
+
+
+
+extern void IfxGtm_Tim_Ch_setTimeoutNotification(Ifx_GTM_TIM_CH *channel, boolean irqOnTimeout);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearCntOverflowEvent(Ifx_GTM_TIM_CH *channel)
+{
+    channel->IRQ_NOTIFY.U = 0x1 << (2u);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearDataLostEvent(Ifx_GTM_TIM_CH *channel)
+{
+    channel->IRQ_NOTIFY.U = 0x1 << (3u);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearEcntOverflowEvent(Ifx_GTM_TIM_CH *channel)
+{
+    channel->IRQ_NOTIFY.U = 0x1 << (1u);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearGlitchEvent(Ifx_GTM_TIM_CH *channel)
+{
+    channel->IRQ_NOTIFY.U = 0x1 << (5u);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_clearNewValueEvent(Ifx_GTM_TIM_CH *channel)
+{
+    channel->IRQ_NOTIFY.U = 0x1 << (0u);
+}
+
+
+static inline __attribute__ ((always_inline)) volatile Ifx_SRC_SRCR *IfxGtm_Tim_Ch_getSrcPointer(Ifx_GTM *gtm, IfxGtm_Tim tim, IfxGtm_Tim_Ch channel)
+{
+    if(gtm){}
+    return &(*(Ifx_SRC*)0xF0038000u).GTM.GTM[0].TIM[tim][channel];
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isCntOverflowEvent(Ifx_GTM_TIM_CH *channel)
+{
+    return channel->IRQ_NOTIFY.B.CNTOFL == 1;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isDataLostEvent(Ifx_GTM_TIM_CH *channel)
+{
+    return channel->IRQ_NOTIFY.B.GPROFL == 1;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isEcntOverflowEvent(Ifx_GTM_TIM_CH *channel)
+{
+    return channel->IRQ_NOTIFY.B.ECNTOFL == 1;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isGlitchEvent(Ifx_GTM_TIM_CH *channel)
+{
+    return channel->IRQ_NOTIFY.B.GLITCHDET == 1;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxGtm_Tim_Ch_isNewValueEvent(Ifx_GTM_TIM_CH *channel)
+{
+    return channel->IRQ_NOTIFY.B.NEWVAL == 1;
+}
+
+
+static inline __attribute__ ((always_inline)) Ifx_GTM_TIM_CH *IfxGtm_Tim_getChannel(Ifx_GTM_TIM *tim, IfxGtm_Tim_Ch channel)
+{
+    return (Ifx_GTM_TIM_CH *)((uint32)&tim->CH0.GPR0.U + ((uint32)&tim->CH1 - (uint32)&tim->CH0) * channel);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxGtm_Tim_Ch_resetChannel(Ifx_GTM_TIM *tim, IfxGtm_Tim_Ch channel)
+{
+    tim->RST.U |= (uint32)1 << (uint32)channel;
+}
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxGtm_PinMap.h" 2
+
+
+
+
+
+typedef enum
+{
+    IfxGtm_ChXSel_a,
+    IfxGtm_ChXSel_b,
+    IfxGtm_ChXSel_c,
+    IfxGtm_ChXSel_d,
+
+    IfxGtm_ChXSel_e,
+    IfxGtm_ChXSel_f,
+    IfxGtm_ChXSel_g,
+    IfxGtm_ChXSel_h,
+
+    IfxGtm_ChXSel_i,
+    IfxGtm_ChXSel_j,
+    IfxGtm_ChXSel_k,
+    IfxGtm_ChXSel_l,
+
+    IfxGtm_ChXSel_m,
+    IfxGtm_ChXSel_n,
+    IfxGtm_ChXSel_o,
+    IfxGtm_ChXSel_p
+} IfxGtm_ChXSel;
+
+
+typedef enum
+{
+    IfxGtm_ToutSel_a,
+    IfxGtm_ToutSel_b,
+    IfxGtm_ToutSel_c,
+    IfxGtm_ToutSel_d,
+    IfxGtm_ToutSel_e
+} IfxGtm_ToutSel;
+
+
+typedef const struct
+{
+    IfxGtm_Tim tim;
+    IfxGtm_Tim_Ch channel;
+    IfxPort_Pin pin;
+    IfxGtm_ChXSel select;
+} IfxGtm_Tim_TinMap;
+
+
+typedef const struct
+{
+    IfxGtm_Atom atom;
+    IfxGtm_Atom_Ch channel;
+    IfxGtm_ToutSel toutSel;
+    uint32 toutn;
+    IfxPort_Pin pin;
+    IfxPort_OutputIdx select;
+} IfxGtm_Atom_ToutMap;
+
+
+typedef IfxGtm_Atom_ToutMap *IfxGtm_Atom_ToutMapP;
+
+
+typedef const struct
+{
+    IfxGtm_Tom tom;
+    IfxGtm_Tom_Ch channel;
+    IfxGtm_ToutSel toutSel;
+    uint32 toutn;
+    IfxPort_Pin pin;
+    IfxPort_OutputIdx select;
+} IfxGtm_Tom_ToutMap;
+
+
+typedef const struct
+{
+    Ifx_GTM* module;
+    IfxPort_Pin pin;
+    IfxPort_OutputIdx select;
+} IfxGtm_Clk_Out;
+
+
+typedef IfxGtm_Tom_ToutMap *IfxGtm_Tom_ToutMapP;
+
+extern void IfxGtm_PinMap_setTimTin(IfxGtm_Tim_TinMap *config, IfxPort_InputMode inputMode);
+extern void IfxGtm_PinMap_setAtomTout(IfxGtm_Atom_ToutMap *config, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
+extern void IfxGtm_PinMap_setTomTout(IfxGtm_Tom_ToutMap *config, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
+
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_0_TOUT0_P02_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_0_TOUT48_P22_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_0_TOUT53_P21_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_0_TOUT85_P14_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_0_TOUT8_P02_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_0_TOUT9_P00_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT10_P00_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT11_P00_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT1_P02_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT31_P33_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT47_P22_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT54_P21_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_1_TOUT84_P14_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_2_TOUT12_P00_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_2_TOUT2_P02_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_2_TOUT33_P33_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_2_TOUT46_P23_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_2_TOUT55_P21_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_2_TOUT83_P14_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT13_P00_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT38_P32_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT3_P02_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT49_P22_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT56_P21_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT60_P20_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_3_TOUT82_P14_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT14_P00_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT39_P32_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT4_P02_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT50_P22_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT57_P21_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT61_P20_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_4_TOUT81_P14_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_5_TOUT15_P00_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_5_TOUT23_P33_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_5_TOUT40_P32_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_5_TOUT41_P23_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_5_TOUT58_P21_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_5_TOUT5_P02_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_6_TOUT106_P10_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_6_TOUT16_P00_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_6_TOUT24_P33_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_6_TOUT42_P23_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_6_TOUT59_P20_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_6_TOUT6_P02_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_7_TOUT17_P00_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_7_TOUT25_P33_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_7_TOUT45_P23_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_7_TOUT64_P20_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM0_7_TOUT7_P02_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT0_P02_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT109_P10_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT68_P20_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT76_P15_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT77_P15_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT87_P14_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT8_P02_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_0_TOUT9_P00_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT103_P10_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT10_P00_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT11_P00_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT1_P02_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT31_P33_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT69_P20_13_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT78_P15_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT79_P15_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_1_TOUT86_P14_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT104_P10_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT107_P10_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT12_P00_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT2_P02_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT33_P33_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT70_P20_14_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_2_TOUT80_P14_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT105_P10_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT108_P10_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT13_P00_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT38_P32_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT3_P02_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT60_P20_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_3_TOUT71_P15_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_4_TOUT102_P10_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_4_TOUT14_P00_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_4_TOUT39_P32_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_4_TOUT4_P02_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_4_TOUT61_P20_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_4_TOUT72_P15_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT110_P10_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT15_P00_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT23_P33_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT40_P32_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT41_P23_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT5_P02_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT65_P20_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_5_TOUT73_P15_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_6_TOUT16_P00_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_6_TOUT24_P33_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_6_TOUT42_P23_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_6_TOUT66_P20_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_6_TOUT6_P02_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_6_TOUT74_P15_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_7_TOUT17_P00_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_7_TOUT25_P33_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_7_TOUT45_P23_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_7_TOUT67_P20_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_7_TOUT75_P15_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM1_7_TOUT7_P02_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_0_TOUT18_P00_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_0_TOUT26_P33_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_0_TOUT32_P33_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_0_TOUT94_P13_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_1_TOUT19_P00_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_1_TOUT27_P33_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_1_TOUT43_P23_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_1_TOUT95_P11_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_2_TOUT20_P00_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_2_TOUT28_P33_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_2_TOUT44_P23_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_2_TOUT88_P14_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_2_TOUT96_P11_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_3_TOUT21_P00_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_3_TOUT29_P33_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_3_TOUT89_P14_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_3_TOUT97_P11_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_4_TOUT22_P33_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_4_TOUT30_P33_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_4_TOUT34_P33_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_4_TOUT51_P21_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_4_TOUT90_P14_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_4_TOUT98_P11_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_5_TOUT138_P23_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_5_TOUT35_P33_13_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_5_TOUT52_P21_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_5_TOUT91_P13_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_5_TOUT99_P11_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_6_TOUT100_P11_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_6_TOUT139_P23_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_6_TOUT36_P32_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_6_TOUT62_P20_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_6_TOUT92_P13_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_7_TOUT101_P11_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_7_TOUT140_P32_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_7_TOUT63_P20_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM2_7_TOUT93_P13_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_0_TOUT18_P00_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_0_TOUT26_P33_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_0_TOUT32_P33_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_0_TOUT94_P13_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_1_TOUT111_P01_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_1_TOUT19_P00_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_1_TOUT27_P33_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_1_TOUT43_P23_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_1_TOUT95_P11_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_2_TOUT112_P01_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_2_TOUT20_P00_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_2_TOUT28_P33_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_2_TOUT44_P23_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_2_TOUT88_P14_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_2_TOUT96_P11_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_3_TOUT113_P01_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_3_TOUT21_P00_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_3_TOUT29_P33_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_3_TOUT89_P14_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_3_TOUT97_P11_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT114_P01_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT22_P33_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT30_P33_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT34_P33_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT51_P21_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT90_P14_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_4_TOUT98_P11_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_5_TOUT115_P01_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_5_TOUT35_P33_13_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_5_TOUT52_P21_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_5_TOUT91_P13_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_5_TOUT99_P11_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_6_TOUT100_P11_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_6_TOUT36_P32_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_6_TOUT62_P20_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_6_TOUT92_P13_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_7_TOUT101_P11_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_7_TOUT63_P20_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM3_7_TOUT93_P13_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT109_P10_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT48_P22_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT53_P21_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT68_P20_12_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT76_P15_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT77_P15_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT85_P14_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_0_TOUT87_P14_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT103_P10_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT47_P22_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT54_P21_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT69_P20_13_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT78_P15_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT79_P15_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT84_P14_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_1_TOUT86_P14_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT104_P10_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT107_P10_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT46_P23_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT55_P21_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT70_P20_14_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT80_P14_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_2_TOUT83_P14_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_3_TOUT105_P10_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_3_TOUT108_P10_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_3_TOUT49_P22_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_3_TOUT56_P21_5_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_3_TOUT71_P15_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_3_TOUT82_P14_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_4_TOUT102_P10_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_4_TOUT50_P22_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_4_TOUT57_P21_6_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_4_TOUT72_P15_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_4_TOUT81_P14_1_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_5_TOUT110_P10_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_5_TOUT116_P02_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_5_TOUT58_P21_7_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_5_TOUT65_P20_9_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_5_TOUT73_P15_2_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_6_TOUT106_P10_4_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_6_TOUT117_P02_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_6_TOUT59_P20_0_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_6_TOUT66_P20_10_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_6_TOUT74_P15_3_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_7_TOUT118_P02_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_7_TOUT64_P20_8_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_7_TOUT67_P20_11_OUT;
+extern IfxGtm_Atom_ToutMap IfxGtm_ATOM4_7_TOUT75_P15_4_OUT;
+extern IfxGtm_Clk_Out IfxGtm_CLK0_P23_1_OUT;
+extern IfxGtm_Clk_Out IfxGtm_CLK1_P32_4_OUT;
+extern IfxGtm_Clk_Out IfxGtm_CLK2_P11_12_OUT;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN0_P02_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN109_P10_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN18_P00_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN26_P33_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN32_P33_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN48_P22_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN53_P21_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN77_P15_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN85_P14_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_0_TIN87_P14_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN103_P10_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN19_P00_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN1_P02_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN27_P33_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN31_P33_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN47_P22_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN54_P21_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN78_P15_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_1_TIN86_P14_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN104_P10_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN107_P10_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN116_P02_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN20_P00_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN28_P33_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN2_P02_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN33_P33_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN46_P23_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN55_P21_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_2_TIN79_P15_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN105_P10_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN108_P10_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN117_P02_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN21_P00_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN29_P33_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN38_P32_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN3_P02_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN49_P22_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN56_P21_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_3_TIN80_P14_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN102_P10_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN22_P33_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN30_P33_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN39_P32_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN4_P02_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN50_P22_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN57_P21_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_4_TIN81_P14_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN110_P10_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN111_P01_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN23_P33_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN40_P32_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN41_P23_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN58_P21_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN5_P02_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_5_TIN82_P14_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN106_P10_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN112_P01_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN24_P33_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN42_P23_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN43_P23_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN59_P20_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN6_P02_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_6_TIN83_P14_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN118_P02_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN127_P11_15_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN25_P33_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN44_P23_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN45_P23_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN64_P20_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN7_P02_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM0_7_TIN84_P14_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN0_P02_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN109_P10_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN18_P00_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN26_P33_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN32_P33_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN48_P22_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN53_P21_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN77_P15_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN85_P14_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_0_TIN87_P14_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN103_P10_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN19_P00_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN1_P02_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN27_P33_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN31_P33_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN47_P22_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN54_P21_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN78_P15_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_1_TIN86_P14_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN104_P10_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN107_P10_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN138_P23_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN20_P00_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN28_P33_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN2_P02_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN33_P33_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN46_P23_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN55_P21_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_2_TIN79_P15_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN105_P10_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN108_P10_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN139_P23_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN21_P00_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN29_P33_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN38_P32_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN3_P02_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN49_P22_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN56_P21_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_3_TIN80_P14_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN102_P10_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN22_P33_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN30_P33_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN39_P32_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN4_P02_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN50_P22_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN57_P21_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_4_TIN81_P14_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN110_P10_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN23_P33_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN40_P32_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN41_P23_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN58_P21_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN5_P02_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_5_TIN82_P14_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN106_P10_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN24_P33_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN42_P23_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN43_P23_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN59_P20_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN6_P02_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_6_TIN83_P14_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_7_TIN25_P33_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_7_TIN44_P23_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_7_TIN45_P23_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_7_TIN64_P20_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_7_TIN7_P02_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM1_7_TIN84_P14_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN119_P11_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN143_P33_14_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN34_P33_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN68_P20_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN76_P15_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN8_P02_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN94_P13_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_0_TIN9_P00_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN10_P00_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN11_P00_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN120_P11_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN144_P33_15_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN35_P33_13_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN69_P20_13_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_1_TIN95_P11_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_2_TIN121_P11_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_2_TIN12_P00_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_2_TIN36_P32_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_2_TIN70_P20_14_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_2_TIN88_P14_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_2_TIN96_P11_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN113_P01_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN122_P11_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN13_P00_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN146_P34_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN60_P20_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN71_P15_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN89_P14_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_3_TIN97_P11_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN123_P11_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN147_P34_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN14_P00_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN51_P21_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN61_P20_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN72_P15_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN90_P14_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_4_TIN98_P11_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN114_P01_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN124_P11_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN148_P34_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN15_P00_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN52_P21_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN65_P20_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN73_P15_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN91_P13_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_5_TIN99_P11_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN100_P11_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN125_P11_13_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN149_P34_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN16_P00_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN62_P20_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN66_P20_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN74_P15_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_6_TIN92_P13_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN101_P11_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN115_P01_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN126_P11_14_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN150_P34_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN17_P00_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN63_P20_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN67_P20_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN75_P15_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM2_7_TIN93_P13_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN128_P12_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN130_P22_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN34_P33_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN68_P20_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN76_P15_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN8_P02_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN94_P13_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_0_TIN9_P00_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN10_P00_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN11_P00_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN129_P12_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN131_P22_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN35_P33_13_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN69_P20_13_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_1_TIN95_P11_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_2_TIN12_P00_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_2_TIN132_P22_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_2_TIN36_P32_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_2_TIN70_P20_14_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_2_TIN88_P14_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_2_TIN96_P11_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_3_TIN133_P22_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_3_TIN13_P00_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_3_TIN60_P20_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_3_TIN71_P15_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_3_TIN89_P14_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_3_TIN97_P11_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN134_P22_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN14_P00_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN51_P21_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN61_P20_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN72_P15_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN90_P14_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_4_TIN98_P11_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN135_P22_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN140_P32_5_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN15_P00_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN52_P21_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN65_P20_9_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN73_P15_2_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN91_P13_0_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_5_TIN99_P11_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN100_P11_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN136_P22_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN141_P32_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN16_P00_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN62_P20_6_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN66_P20_10_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN74_P15_3_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_6_TIN92_P13_1_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN101_P11_12_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN137_P22_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN142_P32_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN17_P00_8_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN63_P20_7_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN67_P20_11_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN75_P15_4_IN;
+extern IfxGtm_Tim_TinMap IfxGtm_TIM3_7_TIN93_P13_2_IN;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT109_P10_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT18_P00_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT26_P33_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT32_P33_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT53_P21_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT76_P15_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT77_P15_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT85_P14_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_0_TOUT87_P14_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_10_TOUT12_P00_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_10_TOUT2_P02_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_10_TOUT41_P23_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_10_TOUT46_P23_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_10_TOUT96_P11_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_11_TOUT13_P00_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_11_TOUT3_P02_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_11_TOUT43_P23_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_11_TOUT49_P22_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_11_TOUT97_P11_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_12_TOUT14_P00_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_12_TOUT44_P23_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_12_TOUT4_P02_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_12_TOUT50_P22_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_12_TOUT98_P11_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_13_TOUT15_P00_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_13_TOUT5_P02_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_13_TOUT99_P11_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_14_TOUT100_P11_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_14_TOUT16_P00_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_14_TOUT6_P02_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_15_TOUT101_P11_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_15_TOUT17_P00_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_15_TOUT42_P23_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_15_TOUT7_P02_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT103_P10_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT19_P00_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT27_P33_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT31_P33_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT54_P21_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT78_P15_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_1_TOUT86_P14_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT104_P10_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT107_P10_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT20_P00_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT28_P33_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT33_P33_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT55_P21_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT79_P15_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_2_TOUT88_P14_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT105_P10_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT108_P10_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT21_P00_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT29_P33_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT38_P32_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT56_P21_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT80_P14_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_3_TOUT89_P14_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT102_P10_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT22_P33_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT30_P33_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT39_P32_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT57_P21_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT81_P14_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_4_TOUT90_P14_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_5_TOUT110_P10_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_5_TOUT23_P33_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_5_TOUT40_P32_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_5_TOUT58_P21_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_5_TOUT82_P14_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_5_TOUT91_P13_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_6_TOUT106_P10_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_6_TOUT24_P33_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_6_TOUT42_P23_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_6_TOUT59_P20_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_6_TOUT83_P14_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_6_TOUT92_P13_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_7_TOUT25_P33_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_7_TOUT45_P23_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_7_TOUT84_P14_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_7_TOUT93_P13_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT0_P02_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT48_P22_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT51_P21_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT8_P02_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT94_P13_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT95_P11_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_8_TOUT9_P00_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_9_TOUT10_P00_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_9_TOUT11_P00_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_9_TOUT1_P02_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_9_TOUT47_P22_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM0_9_TOUT52_P21_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT18_P00_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT26_P33_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT32_P33_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT68_P20_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT76_P15_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT77_P15_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT85_P14_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT8_P02_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_0_TOUT9_P00_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_10_TOUT143_P33_14_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_10_TOUT2_P02_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_10_TOUT62_P20_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_11_TOUT144_P33_15_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_11_TOUT3_P02_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_11_TOUT60_P20_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_11_TOUT63_P20_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_12_TOUT34_P33_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_12_TOUT4_P02_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_12_TOUT61_P20_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_13_TOUT146_P34_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_13_TOUT35_P33_13_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_13_TOUT5_P02_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_13_TOUT65_P20_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_14_TOUT147_P34_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_14_TOUT36_P32_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_14_TOUT66_P20_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_14_TOUT6_P02_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_15_TOUT148_P34_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_15_TOUT150_P34_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_15_TOUT67_P20_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_15_TOUT7_P02_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT10_P00_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT11_P00_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT19_P00_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT27_P33_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT31_P33_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT69_P20_13_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT78_P15_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_1_TOUT86_P14_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_2_TOUT12_P00_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_2_TOUT20_P00_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_2_TOUT28_P33_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_2_TOUT33_P33_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_2_TOUT70_P20_14_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_2_TOUT79_P15_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_3_TOUT13_P00_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_3_TOUT21_P00_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_3_TOUT29_P33_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_3_TOUT38_P32_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_3_TOUT71_P15_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_3_TOUT80_P14_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_4_TOUT14_P00_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_4_TOUT22_P33_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_4_TOUT30_P33_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_4_TOUT39_P32_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_4_TOUT72_P15_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_4_TOUT81_P14_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_5_TOUT15_P00_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_5_TOUT23_P33_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_5_TOUT40_P32_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_5_TOUT41_P23_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_5_TOUT73_P15_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_5_TOUT82_P14_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_6_TOUT16_P00_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_6_TOUT24_P33_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_6_TOUT43_P23_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_6_TOUT74_P15_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_6_TOUT83_P14_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT17_P00_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT25_P33_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT44_P23_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT45_P23_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT64_P20_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT75_P15_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_7_TOUT84_P14_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_8_TOUT0_P02_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_8_TOUT128_P12_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_8_TOUT141_P32_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_9_TOUT129_P12_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_9_TOUT142_P32_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM1_9_TOUT1_P02_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_0_TOUT119_P11_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_0_TOUT48_P22_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_0_TOUT53_P21_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_0_TOUT87_P14_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_0_TOUT94_P13_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_10_TOUT104_P10_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_10_TOUT107_P10_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_10_TOUT133_P22_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_10_TOUT62_P20_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_10_TOUT70_P20_14_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_11_TOUT105_P10_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_11_TOUT108_P10_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_11_TOUT134_P22_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_11_TOUT63_P20_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_11_TOUT71_P15_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_12_TOUT102_P10_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_12_TOUT135_P22_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_12_TOUT34_P33_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_12_TOUT72_P15_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_13_TOUT110_P10_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_13_TOUT136_P22_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_13_TOUT35_P33_13_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_13_TOUT65_P20_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_13_TOUT73_P15_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_14_TOUT137_P22_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_14_TOUT36_P32_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_14_TOUT66_P20_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_14_TOUT74_P15_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_15_TOUT149_P34_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_15_TOUT67_P20_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_15_TOUT75_P15_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_1_TOUT120_P11_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_1_TOUT47_P22_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_1_TOUT54_P21_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_1_TOUT95_P11_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_2_TOUT121_P11_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_2_TOUT46_P23_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_2_TOUT55_P21_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_2_TOUT88_P14_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_2_TOUT96_P11_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_3_TOUT122_P11_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_3_TOUT49_P22_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_3_TOUT56_P21_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_3_TOUT60_P20_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_3_TOUT89_P14_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_3_TOUT97_P11_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_4_TOUT123_P11_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_4_TOUT50_P22_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_4_TOUT57_P21_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_4_TOUT61_P20_3_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_4_TOUT90_P14_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_4_TOUT98_P11_9_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_5_TOUT124_P11_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_5_TOUT58_P21_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_5_TOUT91_P13_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_5_TOUT99_P11_10_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_6_TOUT100_P11_11_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_6_TOUT106_P10_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_6_TOUT125_P11_13_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_6_TOUT59_P20_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_6_TOUT92_P13_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_7_TOUT101_P11_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_7_TOUT126_P11_14_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_7_TOUT130_P22_4_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_7_TOUT64_P20_8_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_7_TOUT93_P13_2_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_8_TOUT109_P10_7_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_8_TOUT127_P11_15_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_8_TOUT131_P22_5_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_8_TOUT51_P21_0_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_8_TOUT68_P20_12_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT103_P10_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT132_P22_6_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT52_P21_1_OUT;
+extern IfxGtm_Tom_ToutMap IfxGtm_TOM2_9_TOUT69_P20_13_OUT;
+# 124 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h" 2
+
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std/IfxGtm_Cmu.h" 1
+# 126 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h" 2
+# 136 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h"
+typedef struct
+{
+    boolean ccu0Enabled;
+    boolean ccu1Enabled;
+    IfxGtm_IrqMode mode;
+    IfxSrc_Tos isrProvider;
+    Ifx_Priority isrPriority;
+} IfxGtm_Tom_Pwm_Interrupt;
+
+
+
+
+
+typedef struct
+{
+    IfxGtm_Tom_ToutMap *outputPin;
+    IfxPort_OutputMode outputMode;
+    IfxPort_PadDriver padDriver;
+} IfxGtm_Tom_Pwm_pin;
+
+
+
+
+
+typedef struct
+{
+    Ifx_GTM *gtm;
+    IfxGtm_Tom tom;
+    IfxGtm_Tom_Ch tomChannel;
+    IfxGtm_Tom_Ch_ClkSrc clock;
+    uint32 period;
+    uint32 dutyCycle;
+    Ifx_ActiveState signalLevel;
+    boolean oneShotModeEnabled;
+    boolean synchronousUpdateEnabled;
+    IfxGtm_Tom_Pwm_Interrupt interrupt;
+    IfxGtm_Tom_Pwm_pin pin;
+    boolean immediateStartEnabled;
+} IfxGtm_Tom_Pwm_Config;
+
+
+
+typedef struct
+{
+    Ifx_GTM *gtm;
+    IfxGtm_Tom tomIndex;
+    IfxGtm_Tom_Ch tomChannel;
+    Ifx_GTM_TOM *tom;
+    Ifx_GTM_TOM_TGC *tgc[2];
+} IfxGtm_Tom_Pwm_Driver;
+# 201 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h"
+extern boolean IfxGtm_Tom_Pwm_init(IfxGtm_Tom_Pwm_Driver *driver, const IfxGtm_Tom_Pwm_Config *config);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Pwm_initConfig(IfxGtm_Tom_Pwm_Config *config, Ifx_GTM *gtm);
+# 221 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Tom\\Pwm\\IfxGtm_Tom_Pwm.h"
+extern void IfxGtm_Tom_Pwm_start(IfxGtm_Tom_Pwm_Driver *driver, boolean immediate);
+
+
+
+
+
+
+extern void IfxGtm_Tom_Pwm_stop(IfxGtm_Tom_Pwm_Driver *driver, boolean immediate);
+# 21 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Tom.h" 1
+# 22 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+
+
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Dpll.h" 1
+# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Gtm\\Std\\IfxGtm_Dpll.h"
+extern float32 IfxGtm_Dpll_getSubIncFrequency(Ifx_GTM *gtm, IfxGtm_Dpll_SubInc index);
+# 25 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap\\IfxPort_PinMap.h" 1
+# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap\\IfxPort_PinMap.h"
+extern IfxPort_Pin IfxPort_P00_0;
+extern IfxPort_Pin IfxPort_P00_1;
+extern IfxPort_Pin IfxPort_P00_10;
+extern IfxPort_Pin IfxPort_P00_11;
+extern IfxPort_Pin IfxPort_P00_12;
+extern IfxPort_Pin IfxPort_P00_2;
+extern IfxPort_Pin IfxPort_P00_3;
+extern IfxPort_Pin IfxPort_P00_4;
+extern IfxPort_Pin IfxPort_P00_5;
+extern IfxPort_Pin IfxPort_P00_6;
+extern IfxPort_Pin IfxPort_P00_7;
+extern IfxPort_Pin IfxPort_P00_8;
+extern IfxPort_Pin IfxPort_P00_9;
+extern IfxPort_Pin IfxPort_P01_3;
+extern IfxPort_Pin IfxPort_P01_4;
+extern IfxPort_Pin IfxPort_P01_5;
+extern IfxPort_Pin IfxPort_P01_6;
+extern IfxPort_Pin IfxPort_P01_7;
+extern IfxPort_Pin IfxPort_P02_0;
+extern IfxPort_Pin IfxPort_P02_1;
+extern IfxPort_Pin IfxPort_P02_10;
+extern IfxPort_Pin IfxPort_P02_11;
+extern IfxPort_Pin IfxPort_P02_2;
+extern IfxPort_Pin IfxPort_P02_3;
+extern IfxPort_Pin IfxPort_P02_4;
+extern IfxPort_Pin IfxPort_P02_5;
+extern IfxPort_Pin IfxPort_P02_6;
+extern IfxPort_Pin IfxPort_P02_7;
+extern IfxPort_Pin IfxPort_P02_8;
+extern IfxPort_Pin IfxPort_P02_9;
+extern IfxPort_Pin IfxPort_P10_0;
+extern IfxPort_Pin IfxPort_P10_1;
+extern IfxPort_Pin IfxPort_P10_2;
+extern IfxPort_Pin IfxPort_P10_3;
+extern IfxPort_Pin IfxPort_P10_4;
+extern IfxPort_Pin IfxPort_P10_5;
+extern IfxPort_Pin IfxPort_P10_6;
+extern IfxPort_Pin IfxPort_P10_7;
+extern IfxPort_Pin IfxPort_P10_8;
+extern IfxPort_Pin IfxPort_P11_0;
+extern IfxPort_Pin IfxPort_P11_1;
+extern IfxPort_Pin IfxPort_P11_10;
+extern IfxPort_Pin IfxPort_P11_11;
+extern IfxPort_Pin IfxPort_P11_12;
+extern IfxPort_Pin IfxPort_P11_13;
+extern IfxPort_Pin IfxPort_P11_14;
+extern IfxPort_Pin IfxPort_P11_15;
+extern IfxPort_Pin IfxPort_P11_2;
+extern IfxPort_Pin IfxPort_P11_3;
+extern IfxPort_Pin IfxPort_P11_4;
+extern IfxPort_Pin IfxPort_P11_5;
+extern IfxPort_Pin IfxPort_P11_6;
+extern IfxPort_Pin IfxPort_P11_7;
+extern IfxPort_Pin IfxPort_P11_8;
+extern IfxPort_Pin IfxPort_P11_9;
+extern IfxPort_Pin IfxPort_P12_0;
+extern IfxPort_Pin IfxPort_P12_1;
+extern IfxPort_Pin IfxPort_P13_0;
+extern IfxPort_Pin IfxPort_P13_1;
+extern IfxPort_Pin IfxPort_P13_2;
+extern IfxPort_Pin IfxPort_P13_3;
+extern IfxPort_Pin IfxPort_P14_0;
+extern IfxPort_Pin IfxPort_P14_1;
+extern IfxPort_Pin IfxPort_P14_10;
+extern IfxPort_Pin IfxPort_P14_2;
+extern IfxPort_Pin IfxPort_P14_3;
+extern IfxPort_Pin IfxPort_P14_4;
+extern IfxPort_Pin IfxPort_P14_5;
+extern IfxPort_Pin IfxPort_P14_6;
+extern IfxPort_Pin IfxPort_P14_7;
+extern IfxPort_Pin IfxPort_P14_8;
+extern IfxPort_Pin IfxPort_P14_9;
+extern IfxPort_Pin IfxPort_P15_0;
+extern IfxPort_Pin IfxPort_P15_1;
+extern IfxPort_Pin IfxPort_P15_2;
+extern IfxPort_Pin IfxPort_P15_3;
+extern IfxPort_Pin IfxPort_P15_4;
+extern IfxPort_Pin IfxPort_P15_5;
+extern IfxPort_Pin IfxPort_P15_6;
+extern IfxPort_Pin IfxPort_P15_7;
+extern IfxPort_Pin IfxPort_P15_8;
+extern IfxPort_Pin IfxPort_P20_0;
+extern IfxPort_Pin IfxPort_P20_1;
+extern IfxPort_Pin IfxPort_P20_10;
+extern IfxPort_Pin IfxPort_P20_11;
+extern IfxPort_Pin IfxPort_P20_12;
+extern IfxPort_Pin IfxPort_P20_13;
+extern IfxPort_Pin IfxPort_P20_14;
+extern IfxPort_Pin IfxPort_P20_3;
+extern IfxPort_Pin IfxPort_P20_6;
+extern IfxPort_Pin IfxPort_P20_7;
+extern IfxPort_Pin IfxPort_P20_8;
+extern IfxPort_Pin IfxPort_P20_9;
+extern IfxPort_Pin IfxPort_P21_0;
+extern IfxPort_Pin IfxPort_P21_1;
+extern IfxPort_Pin IfxPort_P21_2;
+extern IfxPort_Pin IfxPort_P21_3;
+extern IfxPort_Pin IfxPort_P21_4;
+extern IfxPort_Pin IfxPort_P21_5;
+extern IfxPort_Pin IfxPort_P21_6;
+extern IfxPort_Pin IfxPort_P21_7;
+extern IfxPort_Pin IfxPort_P22_0;
+extern IfxPort_Pin IfxPort_P22_1;
+extern IfxPort_Pin IfxPort_P22_10;
+extern IfxPort_Pin IfxPort_P22_11;
+extern IfxPort_Pin IfxPort_P22_2;
+extern IfxPort_Pin IfxPort_P22_3;
+extern IfxPort_Pin IfxPort_P22_4;
+extern IfxPort_Pin IfxPort_P22_5;
+extern IfxPort_Pin IfxPort_P22_6;
+extern IfxPort_Pin IfxPort_P22_7;
+extern IfxPort_Pin IfxPort_P22_8;
+extern IfxPort_Pin IfxPort_P22_9;
+extern IfxPort_Pin IfxPort_P23_0;
+extern IfxPort_Pin IfxPort_P23_1;
+extern IfxPort_Pin IfxPort_P23_2;
+extern IfxPort_Pin IfxPort_P23_3;
+extern IfxPort_Pin IfxPort_P23_4;
+extern IfxPort_Pin IfxPort_P23_5;
+extern IfxPort_Pin IfxPort_P23_6;
+extern IfxPort_Pin IfxPort_P23_7;
+extern IfxPort_Pin IfxPort_P32_0;
+extern IfxPort_Pin IfxPort_P32_2;
+extern IfxPort_Pin IfxPort_P32_3;
+extern IfxPort_Pin IfxPort_P32_4;
+extern IfxPort_Pin IfxPort_P32_5;
+extern IfxPort_Pin IfxPort_P32_6;
+extern IfxPort_Pin IfxPort_P32_7;
+extern IfxPort_Pin IfxPort_P33_0;
+extern IfxPort_Pin IfxPort_P33_1;
+extern IfxPort_Pin IfxPort_P33_10;
+extern IfxPort_Pin IfxPort_P33_11;
+extern IfxPort_Pin IfxPort_P33_12;
+extern IfxPort_Pin IfxPort_P33_13;
+extern IfxPort_Pin IfxPort_P33_14;
+extern IfxPort_Pin IfxPort_P33_15;
+extern IfxPort_Pin IfxPort_P33_2;
+extern IfxPort_Pin IfxPort_P33_3;
+extern IfxPort_Pin IfxPort_P33_4;
+extern IfxPort_Pin IfxPort_P33_5;
+extern IfxPort_Pin IfxPort_P33_6;
+extern IfxPort_Pin IfxPort_P33_7;
+extern IfxPort_Pin IfxPort_P33_8;
+extern IfxPort_Pin IfxPort_P33_9;
+extern IfxPort_Pin IfxPort_P34_1;
+extern IfxPort_Pin IfxPort_P34_2;
+extern IfxPort_Pin IfxPort_P34_3;
+extern IfxPort_Pin IfxPort_P34_4;
+extern IfxPort_Pin IfxPort_P34_5;
+extern IfxPort_Pin IfxPort_P40_0;
+extern IfxPort_Pin IfxPort_P40_1;
+extern IfxPort_Pin IfxPort_P40_2;
+extern IfxPort_Pin IfxPort_P40_3;
+extern IfxPort_Pin IfxPort_P40_4;
+extern IfxPort_Pin IfxPort_P40_5;
+extern IfxPort_Pin IfxPort_P40_6;
+extern IfxPort_Pin IfxPort_P40_7;
+extern IfxPort_Pin IfxPort_P40_8;
+extern IfxPort_Pin IfxPort_P40_9;
+
+
+
+
+
+
+
+extern const IfxPort_Pin *IfxPort_Pin_pinTable[41][16];
+# 27 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap\\IfxGtm_PinMap.h" 1
+# 28 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+
 
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\string.h" 1 3
 # 10 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\string.h" 3
@@ -21165,13 +31566,13 @@ char *strupr (char *);
 # 101 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\string.h" 2 3
 
 
-# 20 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 31 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stdarg.h" 1 3 4
 # 40 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
 # 98 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stdarg.h" 3 4
 typedef __gnuc_va_list va_list;
-# 21 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 32 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h" 1 3
 # 41 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h" 3
 typedef signed char int8_t ;
@@ -21234,10 +31635,10 @@ typedef uint64_t uint_least64_t;
 # 243 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h" 3
 typedef signed long int intptr_t;
 typedef unsigned long int uintptr_t;
-# 22 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 33 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
-# 23 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 45 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h"
+# 34 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 56 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h"
 typedef struct
 {
     Ifx_STM *stmSfr;
@@ -21296,7 +31697,7 @@ struct __attribute__((__packed__)) ParkingSystemPacket
     uint8 car_command;
     uint8 crc;
 };
-# 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.h" 2
+# 25 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.h" 2
 
 
 
@@ -21323,83 +31724,83 @@ double getUltrasonic(struct Ultrasonic* ultrasonic);
 void sendTrigger(struct Ultrasonic* ultrasonic);
 long measureEchoTick(struct Ultrasonic* ultrasonic);
 double calculateDistanceCm(long elapsedTicks);
-# 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.c" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h" 1
+# 2 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.c" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\bsw.h" 1
 
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
-# 5 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_cfg.h" 1
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_applcfg.h" 1
-# 28 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_applcfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oscfg.h" 1
-# 29 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_applcfg.h" 2
-# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_cfg.h" 2
-# 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_arch_override.h" 1
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h" 1
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_utils.h" 1
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler.h" 1
-# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler_cfg.h" 1
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler_cfg.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler_gcc.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler_gcc.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_arch_compiler_gcc.h" 1
-# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler_gcc.h" 2
-# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler_cfg.h" 2
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_compiler.h" 2
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
+# 5 "C:\\project\\SHIPAR~1\\TC275\\bsw.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 1
+# 55 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_cfg.h" 1
+# 58 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\out/ee_applcfg.h" 1
+# 28 "C:\\project\\SHIPAR~1\\TC275\\out/ee_applcfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oscfg.h" 1
+# 29 "C:\\project\\SHIPAR~1\\TC275\\out/ee_applcfg.h" 2
+# 59 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_cfg.h" 2
+# 56 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_arch_override.h" 1
+# 57 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h" 1
+# 60 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_utils.h" 1
+# 61 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler.h" 1
+# 59 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler_cfg.h" 1
+# 58 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler_cfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler_gcc.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler_gcc.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_arch_compiler_gcc.h" 1
+# 64 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler_gcc.h" 2
+# 59 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler_cfg.h" 2
+# 60 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_compiler.h" 2
+# 62 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include-fixed\\limits.h" 1 3 4
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
+# 63 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
-# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
-# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+# 64 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h" 2
+# 72 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
 typedef enum {
   OSEE_FALSE = (0!=0),
   OSEE_TRUE = (0==0)
 } OsEE_bool;
-# 90 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+# 90 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
 typedef void * OsEE_addr;
 typedef uint32_t OsEE_reg;
 typedef int32_t OsEE_sreg;
 typedef uint32_t OsEE_stack;
-# 109 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+# 109 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
 typedef enum {
   OS_CORE_ID_0 = 0,
   OS_CORE_ID_MASTER = OS_CORE_ID_0,
-# 128 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+# 128 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
   OS_CORE_ID_ARR_SIZE,
   OS_CODE_ID_INVALID = -1
 } OsEE_core_id;
-# 141 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+# 141 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
 typedef uint8_t OsEE_prio;
 
 
 
 
 typedef uint16_t OsEE_isr_src_id;
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+# 58 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h" 1
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_irq.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_trapvec.h" 1
-# 208 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_trapvec.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h" 1
+# 62 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_irq.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_trapvec.h" 1
+# 208 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_trapvec.h"
 typedef uint8_t OsEE_tc_tin;
 
 
 typedef void (* OsEE_tc_trap_handler)(OsEE_tc_tin par);
-# 225 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_trapvec.h"
+# 225 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_trapvec.h"
 static inline OsEE_tc_tin osEE_tc_get_tin(void)
 {
   OsEE_tc_tin tin;
@@ -21408,12 +31809,12 @@ static inline OsEE_tc_tin osEE_tc_get_tin(void)
 
   return tin;
 }
-# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h" 2
-# 139 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 64 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h" 2
+# 139 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline OsEE_reg __attribute__((always_inline)) osEE_tc_clz(OsEE_reg reg) {
   return (OsEE_reg)__builtin_clz(reg);
 }
-# 150 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 150 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline OsEE_stack * __attribute__((always_inline)) osEE_get_SP(void)
 {
   OsEE_stack * sp = ((void *)0);
@@ -21426,7 +31827,7 @@ static inline OsEE_stack * __attribute__((always_inline)) osEE_get_SP(void)
 static inline void __attribute__((always_inline)) osEE_tc_dsync(void) {
   __asm__ volatile ("dsync" : : : "memory");
 }
-# 211 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 211 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline void __attribute__((always_inline)) osEE_tc_debug(void) {
   __asm__ volatile ("debug" : : : "memory");
 }
@@ -21468,58 +31869,58 @@ static inline OsEE_reg __attribute__((always_inline))
   );
   return res;
 }
-# 278 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 278 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline void __attribute__((always_inline))
   osEE_mmio_write8(OsEE_reg addr, uint8_t value)
 {
   (*(uint8_t volatile *)addr) = value;
 }
-# 292 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 292 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline void __attribute__((always_inline))
   osEE_mmio_write16(OsEE_reg addr, uint16_t value)
 {
   (*(uint16_t volatile *)addr) = value;
 }
-# 306 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 306 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline void __attribute__((always_inline))
   osEE_mmio_write32(OsEE_reg addr, uint32_t value)
 {
   (*(uint32_t volatile *)addr) = value;
 }
-# 320 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 320 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline uint8_t __attribute__((always_inline))
   osEE_mmio_read8(OsEE_reg addr)
 {
   return (*(uint8_t volatile *)addr);
 }
-# 334 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 334 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline uint16_t __attribute__((always_inline))
   osEE_mmio_read16(OsEE_reg addr)
 {
   return (*(uint16_t volatile *)addr);
 }
-# 348 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 348 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline uint32_t __attribute__((always_inline))
   osEE_mmio_read32(OsEE_reg addr)
 {
   return (*(uint32_t volatile *)addr);
 }
-# 365 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
+# 365 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
 static inline OsEE_core_id __attribute__((always_inline)) osEE_get_curr_core_id(void)
 {
   return (OsEE_core_id)(__extension__({ OsEE_reg reg; __asm__ volatile ( "mfcr %0, LO:%1" : "=d" (reg) : "i" ((0xFE1CU)) : "memory" ); reg; }));
 }
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+# 61 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h" 1
-# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_csfr.h" 1
-# 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h" 1
-# 78 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h" 1
+# 55 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_csfr.h" 1
+# 56 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h" 1
+# 78 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
 typedef union {
   OsEE_reg reg;
-# 93 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+# 93 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
 struct {
     unsigned int cdc :7;
     unsigned int cde :1;
@@ -21625,7 +32026,7 @@ typedef union {
     unsigned int :8;
   } bits;
 } OsEE_icr;
-# 214 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+# 214 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
 typedef union {
   OsEE_reg reg;
   struct {
@@ -21644,7 +32045,7 @@ typedef union {
     unsigned int :7;
   } bits;
 } OsEE_syscon;
-# 243 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+# 243 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
 typedef struct OsEE_CTX_tag {
   struct OsEE_CTX_tag * p_ctx;
   OsEE_reg dummy;
@@ -21676,12 +32077,12 @@ typedef struct {
 
 
 } const OsEE_HDB;
-# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_src.h" 1
-# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h" 2
-# 102 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 57 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_src.h" 1
+# 58 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h" 2
+# 102 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef uint8_t OsEE_tc_isr_hw_prio;
-# 155 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 155 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct OsEE_tc_SCU_WDTCPU_CON0_bits_tag
 {
 
@@ -21854,7 +32255,7 @@ typedef struct OsEE_tc_SCU_WDTS_tag
 
   OsEE_tc_SCU_WDTS_SR sr;
 } OsEE_tc_SCU_WDTS;
-# 360 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 360 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline uint16_t __attribute__((always_inline))
   osEE_tc_get_cpu_wdt_pw(OsEE_reg core_index)
 {
@@ -21955,7 +32356,7 @@ static inline void __attribute__((always_inline))
     ;
   }
 }
-# 469 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 469 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline void __attribute__((always_inline))
   osEE_tc_disable_cpu_wdt(OsEE_reg core_index, uint16_t pw)
 {
@@ -21964,7 +32365,7 @@ static inline void __attribute__((always_inline))
   (*((OsEE_tc_SCU_WDTCPU volatile (*)[(3U)]) ((0xF0036000U) + (0x00000100U)) ) )[core_index].con1.bits.dr = 1U;
   osEE_tc_set_cpu_endinit(core_index, pw);
 }
-# 495 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 495 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline void __attribute__((always_inline))
   osEE_tc_clear_safety_endinit(uint16_t pw)
 {
@@ -22031,7 +32432,7 @@ static inline void __attribute__((always_inline))
     ;
   }
 }
-# 569 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 569 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline void __attribute__((always_inline))
   osEE_tc_disable_safety_wdt(uint16_t pw)
 {
@@ -22040,7 +32441,7 @@ static inline void __attribute__((always_inline))
   (*((OsEE_tc_SCU_WDTS volatile *) ((0xF0036000U) + (0x000000F0U)) ) ).con1.bits.dr = 1U;
   osEE_tc_set_safety_endinit(pw);
 }
-# 598 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 598 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline void __attribute__((always_inline)) osEE_tc_set_pcache(OsEE_bool enable)
 {
   uint16_t cpu_wdt_pw;
@@ -22100,7 +32501,7 @@ static inline void __attribute__((always_inline)) osEE_tc_set_dcache(OsEE_bool e
   __asm__ volatile ( "mtcr LO:%0, %1\n\t" "isync" : : "i" ((0x9040U)), "d" (dcon0) : "memory" );
   osEE_tc_set_cpu_endinit(core_index, cpu_wdt_pw);
 }
-# 667 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 667 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline void __attribute__((always_inline))
   osEE_tc_csa_init_inline
 (
@@ -22117,7 +32518,7 @@ static inline void __attribute__((always_inline))
 
 
   OsEE_reg pcxi_val = 0U;
-# 692 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 692 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
   OsEE_reg fcd_needed_csa = 6U;
 
   size_t i;
@@ -22156,7 +32557,7 @@ static inline void __attribute__((always_inline))
 
   __asm__ volatile ( "mtcr LO:%0, %1\n\t" "isync" : : "i" ((0xFE38U)), "d" (pcxi_val) : "memory" );
 }
-# 816 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 816 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct OsEE_tc_STM_CMCON_bits_tag
 {
 
@@ -22182,7 +32583,7 @@ typedef union OsEE_tc_STM_CMCON_tag {
   OsEE_reg reg;
   OsEE_tc_STM_CMCON_bits bits;
 } OsEE_tc_STM_CMCON;
-# 854 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 854 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct OsEE_tc_STM_ICR_bits_tag
 {
 
@@ -22208,19 +32609,19 @@ typedef union OsEE_tc_STM_ICR_tag {
   OsEE_reg reg;
   OsEE_tc_STM_ICR_bits bits;
 } OsEE_tc_STM_ICR;
-# 899 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 899 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline OsEE_reg __attribute__((always_inline))
   osEE_tc_stm_get_time_lower_word(OsEE_reg stm_id)
 {
   return (*(OsEE_reg volatile *)((0xF0000000U) + (((((OsEE_reg)(stm_id))) & (0x3U)) * 0x100U) + (((0x10U)) & 0xFFU)));
 }
-# 913 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 913 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline OsEE_reg __attribute__((always_inline))
   osEE_tc_stm_get_time_upper_word(OsEE_reg stm_id)
 {
   return (*(OsEE_reg volatile *)((0xF0000000U) + (((((OsEE_reg)(stm_id))) & (0x3U)) * 0x100U) + (((0x2CU)) & 0xFFU)));
 }
-# 926 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 926 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 static inline void __attribute__((always_inline))
   osEE_tc_stm_ocds_suspend_control(OsEE_reg stm_id)
 {
@@ -22233,9 +32634,9 @@ static inline void __attribute__((always_inline))
 
 
 void osEE_tc_delay(OsEE_reg usec);
-# 964 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 964 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 extern void osEE_tc_stm_set_clockpersec(void);
-# 977 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 977 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 void osEE_tc_stm_set_sr0(OsEE_reg usec, OsEE_tc_isr_hw_prio intvec);
 
 
@@ -22244,7 +32645,7 @@ void osEE_tc_stm_set_sr0(OsEE_reg usec, OsEE_tc_isr_hw_prio intvec);
 
 
 void osEE_tc_stm_set_sr0_next_match(OsEE_reg usec);
-# 996 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 996 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 void osEE_tc_stm_set_sr1(OsEE_reg usec, OsEE_tc_isr_hw_prio intvec);
 
 
@@ -22253,7 +32654,7 @@ void osEE_tc_stm_set_sr1(OsEE_reg usec, OsEE_tc_isr_hw_prio intvec);
 
 
 void osEE_tc_stm_set_sr1_next_match(OsEE_reg usec);
-# 1128 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1128 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct
 {
 
@@ -22324,7 +32725,7 @@ typedef union {
   OsEE_reg reg;
   OsEE_tc_SCU_PLLSTAT_bits bits;
 } OsEE_tc_SCU_PLLSTAT;
-# 1206 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1206 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct
 {
 
@@ -22364,7 +32765,7 @@ typedef union {
   OsEE_reg reg;
   OsEE_tc_SCU_PLLCON0_bits bits;
 } OsEE_tc_SCU_PLLCON0;
-# 1253 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1253 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct
 {
 
@@ -22386,7 +32787,7 @@ typedef union {
   OsEE_reg reg;
   OsEE_tc_SCU_PLLCON1_bits bits;
 } OsEE_tc_SCU_PLLCON1;
-# 1282 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1282 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct
 {
 
@@ -22414,7 +32815,7 @@ typedef struct
 
   unsigned int lck : 1;
 } OsEE_tc_SCU_CCUCON0_bits;
-# 1347 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1347 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef struct
 {
 
@@ -22438,28 +32839,28 @@ typedef struct
 
   unsigned int lck : 1;
 } OsEE_tc_SCU_CCUCON1_bits;
-# 1684 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1684 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef union {
   OsEE_reg reg;
   OsEE_tc_SCU_OSCCON_bits bits;
 } OsEE_tc_SCU_OSCCON;
-# 1716 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1716 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef union {
   OsEE_reg reg;
   OsEE_tc_SCU_CCUCON0_bits bits;
 } OsEE_tc_SCU_CCUCON0;
-# 1728 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1728 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 typedef union {
   OsEE_reg reg;
   OsEE_tc_SCU_CCUCON1_bits bits;
 } OsEE_tc_SCU_CCUCON1;
-# 1744 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1744 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
 OsEE_reg osEE_tc_get_fsource(void);
 
 
 
 static inline void __attribute__((always_inline)) osEE_tc_conf_clock_ctrl(void) {
-# 1763 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+# 1763 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_tc_system.h"
   (*(OsEE_tc_SCU_CCUCON0 volatile *) ((0xF0036000U) + ((0x30U))) ).reg = ((((OsEE_reg)(1U)) & (OsEE_reg)0xFU) | ((((OsEE_reg)(1U)) & (OsEE_reg)0xFU) << 8U) | (((((OsEE_reg)(2U)) & (OsEE_reg)0xFU) == 1U)? ((OsEE_reg)0x2U << 16U): ((((OsEE_reg)(2U)) & (OsEE_reg)0xFU) << 16U)) | ((((OsEE_reg)(2U)) & (OsEE_reg)0x3U) << 20U) | ((((OsEE_reg)(2U)) & (OsEE_reg)0x3U) << 24U) | ((((OsEE_reg)(1U)) & (OsEE_reg)0x1U) << 28U) );
 
 
@@ -22502,18 +32903,18 @@ static inline void __attribute__((always_inline)) osEE_tc_conf_osc_ctrl(void)
 
 
 void osEE_tc_set_pll_fsource(OsEE_reg fpll);
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+# 63 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_mc.h" 1
-# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 1
-# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h" 1
-# 96 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_mc.h" 1
+# 65 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 1
+# 59 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h" 1
+# 96 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef uint8_t AppModeType;
-# 120 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 120 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg TaskType;
-# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 129 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ISRType;
 
 
@@ -22521,21 +32922,21 @@ typedef OsEE_reg ISRType;
 
 
 typedef TaskType * TaskRefType;
-# 200 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 200 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_prio TaskPrio;
-# 231 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 231 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_isr_src_id ISRSource;
-# 244 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 244 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef uint8_t TaskActivation;
-# 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 259 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_core_id CoreIdType;
-# 282 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 282 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef uint8_t CoreNumType;
-# 298 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 298 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg CoreMaskType;
-# 314 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 314 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef void (* TaskFunc) ( void );
-# 325 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 325 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef enum {
 
 
@@ -22578,20 +32979,20 @@ typedef enum {
 
   OSEE_TASK_CHAINED
 } OsEE_task_status;
-# 382 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 382 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_task_status TaskStateType;
 
 typedef TaskStateType * TaskStateRefType;
-# 399 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 399 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg CounterType;
-# 414 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 414 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg TickType;
 
 
 
 
 typedef TickType * TickRefType;
-# 431 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 431 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_sreg TickDeltaType;
 
 
@@ -22615,11 +33016,11 @@ typedef struct {
 
 
 typedef AlarmBaseType * AlarmBaseRefType;
-# 470 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 470 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg AlarmType;
-# 524 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 524 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ResourceType;
-# 567 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 567 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg EventMaskType;
 
 
@@ -22629,11 +33030,11 @@ typedef OsEE_reg EventMaskType;
 
 
 typedef EventMaskType * EventMaskRefType;
-# 663 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 663 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef OsEE_reg ObjectIDType;
-# 675 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 675 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef size_t MemSize;
-# 689 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 689 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef enum {
   E_OK,
   E_OS_ACCESS,
@@ -22675,12 +33076,12 @@ typedef enum {
 
 
 typedef OsEE_status_type StatusType;
-# 742 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 742 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef union {
   ObjectIDType num_param;
   OsEE_addr p_param;
 } OsEE_api_param;
-# 756 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 756 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
 typedef enum {
   OSServiceId_ActivateTask = (0),
   OSServiceId_TerminateTask = (2),
@@ -22715,7 +33116,7 @@ typedef enum {
   OSServiceId_IncrementCounter = (46),
   OSServiceId_GetCounterValue = (48),
   OSServiceId_GetElapsedValue = (50),
-# 804 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+# 804 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
   OSServiceId_GetActiveApplicationMode = (70),
   OSServiceId_ShutdownOS = (72),
   OSServiceId_StartOS = (74),
@@ -22738,112 +33139,112 @@ typedef enum {
 
 
 typedef OsEE_service_id_type OSServiceIdType;
-# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h" 1
-# 112 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 60 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h" 1
+# 112 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 void
   DisableAllInterrupts
 (
   void
 );
-# 137 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 137 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 void
   EnableAllInterrupts
 (
   void
 );
-# 168 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 168 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 void
   SuspendAllInterrupts
 (
   void
 );
-# 196 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 196 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 void
   ResumeAllInterrupts
 (
   void
 );
-# 226 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 226 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 void
   SuspendOSInterrupts
 (
   void
 );
-# 253 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 253 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 void
   ResumeOSInterrupts
 (
   void
 );
-# 288 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 288 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   StartOS
 (
   AppModeType Mode
 );
-# 319 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 319 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   ShutdownOS
 (
   StatusType Error
 );
-# 339 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 339 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 AppModeType
   GetActiveApplicationMode
 (
   void
 );
-# 375 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 375 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   ActivateTask
 (
   TaskType TaskID
 );
-# 419 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 419 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   ChainTask
 (
   TaskType TaskID
 );
-# 456 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 456 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   TerminateTask
 (
   void
 );
-# 477 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 477 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetTaskID
 (
   TaskRefType TaskID
 );
-# 504 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 504 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetTaskState
 (
   TaskType TaskID,
   TaskStateRefType State
 );
-# 538 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 538 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   Schedule
 (
   void
 );
-# 581 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 581 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetResource
 (
   ResourceType ResID
 );
-# 612 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 612 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   ReleaseResource
 (
   ResourceType ResID
 );
-# 659 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 659 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   SetRelAlarm
 (
@@ -22851,7 +33252,7 @@ StatusType
   TickType increment,
   TickType cycle
 );
-# 705 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 705 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   SetAbsAlarm
 (
@@ -22859,60 +33260,60 @@ StatusType
   TickType start,
   TickType cycle
 );
-# 733 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 733 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetAlarm
 (
   AlarmType AlarmID,
   TickRefType Tick
 );
-# 761 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 761 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetAlarmBase
 (
   AlarmType AlarmID,
   AlarmBaseRefType Info
 );
-# 786 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 786 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   CancelAlarm
 (
   AlarmType AlarmID
 );
-# 818 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 818 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   WaitEvent
 (
   EventMaskType Mask
 );
-# 850 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 850 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   SetEvent
 (
   TaskType TaskID,
   EventMaskType Mask
 );
-# 881 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 881 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetEvent
 (
   TaskType TaskID,
   EventMaskRefType Event
 );
-# 908 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 908 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   ClearEvent
 (
   EventMaskType Mask
 );
-# 1046 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 1046 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetCounterValue
 (
   CounterType CounterID,
   TickRefType Value
 );
-# 1076 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 1076 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   GetElapsedValue
 (
@@ -22920,34 +33321,34 @@ StatusType
   TickRefType Value,
   TickRefType ElapsedValue
 );
-# 1115 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 1115 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 StatusType
   IncrementCounter
 (
   CounterType CounterID
 );
-# 1352 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
+# 1352 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
  ISRType
   GetISRID
 (
   void
 );
-# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_dynamic.h" 1
-# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_extension.h" 1
-# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h" 1
-# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+# 61 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_dynamic.h" 1
+# 62 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_oo_api_extension.h" 1
+# 63 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h" 1
+# 65 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 struct OsEE_TDB_tag;
-# 75 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+# 75 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 typedef struct OsEE_SN_tag {
 
   struct OsEE_SN_tag * p_next;
 
   struct OsEE_TDB_tag const * p_tdb;
 } OsEE_SN;
-# 92 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+# 92 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 static inline OsEE_SN *
   osEE_sn_alloc
 (
@@ -22962,7 +33363,7 @@ static inline OsEE_SN *
 
   return p_sn_allocated;
 }
-# 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+# 117 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 static inline void
   osEE_sn_release
 (
@@ -22973,7 +33374,7 @@ static inline void
   p_to_free->p_next = (*pp_first);
   (*pp_first) = p_to_free;
 }
-# 145 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+# 145 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 OsEE_bool
   osEE_sn_priority_insert
 (
@@ -22981,40 +33382,40 @@ OsEE_bool
   OsEE_SN * p_sn_new,
   OsEE_bool const as_ready
 );
-# 213 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+# 213 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 typedef OsEE_SN * OsEE_RQ;
-# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+# 64 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 66 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
-# 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
-# 118 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 2
-# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h" 1
+# 117 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 1
+# 118 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h" 2
+# 163 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
 extern uint8_t osEE_assertions[];
-# 182 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
+# 182 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert(OsEE_reg id,
            OsEE_bool test,
            OsEE_reg prev);
-# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
+# 201 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_or(OsEE_reg id,
         OsEE_reg prev1,
         OsEE_reg prev2);
-# 220 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
+# 220 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_and(OsEE_reg id,
          OsEE_reg prev1,
          OsEE_reg prev2);
-# 244 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
+# 244 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_range(OsEE_reg id,
            OsEE_reg begin,
            OsEE_reg end);
-# 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
+# 259 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_last(void);
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+# 68 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
 
 
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
-# 35 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h"
+# 1 "C:\\project\\SHIPAR~1\\TC275\\out/ee_declcfg.h" 1
+# 35 "C:\\project\\SHIPAR~1\\TC275\\out/ee_declcfg.h"
 extern void FuncTestTask ( void );
 extern void FuncShiParkerAppTask ( void );
 extern void FuncPacketSendTask ( void );
@@ -23029,8 +33430,8 @@ void FLHallISR(void);
 void RRHallISR(void);
 void RLHallISR(void);
 void AppTimerISR(void);
-# 71 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-# 6 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h" 2
+# 71 "C:\\project\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
+# 6 "C:\\project\\SHIPAR~1\\TC275\\bsw.h" 2
 
 
 
@@ -23044,7 +33445,7 @@ void printfSerial(const char *fmt,...);
 void initPeripheralsAndERU(void);
 void initADC(void);
 uint16 readADCValue(uint8 channel);
-# 3 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.c" 2
+# 3 "C:\\project\\SHIPAR~1\\TC275\\ultrasonic_Driver.c" 2
 
 struct Ultrasonic g_Ultrasonic_FL = {
     .TRIG_PORT = &(*(Ifx_P*)0xF003A200u),
