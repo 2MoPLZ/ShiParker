@@ -194,6 +194,10 @@ void updateStatus(const struct ParkingSystemPacket *packet)
 void handleError(ERROR_CODE_TYPE errorCode)
 {
     CancelAlarm(AvoidObstacleAlarm);
+    motor_stop(0);
+    motor_stop(1);
+    motor_stop(2);
+    motor_stop(3);
     if (errorCode < ERROR_CODE_MAX)
     {
         printfSerial("ERROR: %s (%d)\n", errorMessages[errorCode], errorCode);
