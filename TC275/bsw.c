@@ -11,6 +11,7 @@
 #include "steering_Pid.h"
 #include "hall_Driver.h"
 #include "shiparker_App.h"
+#include "motor_driver.h"
 /* custom driver added end*/
 
 #include <string.h>
@@ -259,7 +260,17 @@ int main(void)
     initUltrasonic(&g_Ultrasonic_RL);
     initUltrasonic(&g_Ultrasonic_RIGHT);
     initUltrasonic(&g_Ultrasonic_REAR);
+    initMotor();
     initHall();
+    set_motor_power(INDEX_FL,0);
+    set_motor_power(INDEX_FR,0);
+    set_motor_power(INDEX_RL,0);
+    set_motor_power(INDEX_RR,0);
+    // motor_run_backward(0);
+    // motor_run_backward(1);
+    // motor_run_backward(2);
+    // motor_run_backward(3);
+
     /* custom driver added end*/
 
     printfSerial("\n...............\n");

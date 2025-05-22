@@ -96,12 +96,20 @@ OS_EE_APP_CFG_SRCS += illd/src/IfxScuEru.c
 OS_EE_APP_CFG_SRCS += illd/src/IfxVadc_Adc.c
 OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/_Impl/IfxVadc_cfg.c
 OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Vadc/std/IfxVadc.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/_PinMap/IfxPort_PinMap.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/_PinMap/IfxGtm_PinMap.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Gtm/Tom/Pwm/IfxGtm_Tom_Pwm.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Tom.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Cmu.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm.c
+OS_EE_APP_CFG_SRCS += illd/Libraries/iLLD/TC27D/Tricore/Gtm/Std/IfxGtm_Dpll.c
 OS_EE_APP_CFG_SRCS += bsw.c
 OS_EE_APP_CFG_SRCS += asw.c
 OS_EE_APP_CFG_SRCS += ultrasonic_Driver.c
 OS_EE_APP_CFG_SRCS += uart_Driver.c
 OS_EE_APP_CFG_SRCS += steering_Pid.c
 OS_EE_APP_CFG_SRCS += hall_Driver.c
+OS_EE_APP_CFG_SRCS += motor_driver.c
 OS_EE_APP_CFG_SRCS += shiparker_App.c
 
 

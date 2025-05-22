@@ -59,7 +59,7 @@ DriveCommand  wall_follow_control(double dist_a, double dist_b){
     pid_prev_error = error;
 
     // 조향 각도 계산 (부호 반영)
-    double steering_angle = -(KP * error + KD * derivative /*+ KI * pid_integral*/ );
+    double steering_angle = (KP * error + KD * derivative /*+ KI * pid_integral*/ );
     // 속도 결정
     double speed;
     if (fabsf(steering_angle) > 20.0f * (PI / 180.0f))
@@ -70,6 +70,7 @@ DriveCommand  wall_follow_control(double dist_a, double dist_b){
         speed = 1.5f;
 
     DriveCommand cmd = { steering_angle, speed };
+    printDouble("steering_angle: ", cmd.steering_angle);
     return cmd;
 
 }
