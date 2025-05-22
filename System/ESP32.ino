@@ -142,13 +142,13 @@ void loop() {
   }
 
   // 테스트 패킷 전송 (10초 주기)
-  // static unsigned long lastTest = 0;
-  // if (millis() - lastTest > 10000) {
-  //   currentPacket.car_status = (currentPacket.car_status + 1) % 4;
-  //   uint8_t* ptr = (uint8_t*)&currentPacket;
-  //   currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
-  //   uart.write(ptr, sizeof(ParkingSystemPacket));
-  //   Serial.println("[UART] 테스트 패킷 전송됨");
-  //   lastTest = millis();
-  // }
+  static unsigned long lastTest = 0;
+  if (millis() - lastTest > 10000) {
+    currentPacket.car_status = (currentPacket.car_status + 1) % 7;
+    uint8_t* ptr = (uint8_t*)&currentPacket;
+    currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+    uart.write(ptr, sizeof(ParkingSystemPacket));
+    Serial.println("[UART] 테스트 패킷 전송됨");
+    lastTest = millis();
+  }
 }

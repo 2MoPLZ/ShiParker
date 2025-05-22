@@ -1,29 +1,42 @@
 import tkinter as tk
-from tkinter import ttk, messagebox  # ✅ 팝업 메시지박스 포함
+from tkinter import ttk, messagebox
 import subprocess
 import paho.mqtt.client as mqtt
+import csv
+from datetime import datetime
+import os
 
-# 설정 (현재 연결된 차량 2대)
+LOG_FILE = "mqtt_log.csv"
+
 vehicle_ids = ['00', '01']
 TOTAL_VEHICLES = len(vehicle_ids)
 vehicle_status = ['Waiting'] * TOTAL_VEHICLES
 completed_vehicles = 0
-current_vehicle_index = -1  # 현재 실행 중인 차량 인덱스 (-1이면 아직 시작 안 됨)
+current_vehicle_index = -1 
 
-# 상태 매핑
 status_map = {
     0: "READY",
     1: "RUNNING",
     2: "STOP",
     3: "TERMINATED",
-    4: "ERROR",
-    5: "RESERVED1",
-    6: "RESERVED2"
+    4: "ERROR_OBSTACLE",
+    5: "ERROR_BAD_CONNECTION",
+    6: "ERROR_HARDWARE"
 }
 
-# MQTT 설정
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883
+
+def log_mqtt_message(vehicle_id, topic, message, direction):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    log_row = [timestamp, vehicle_id, topic, message, direction]
+
+    write_header = not os.path.exists(LOG_FILE)
+    with open(LOG_FILE, "a", newline='') as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow(["Timestamp", "VehicleID", "Topic", "Message", "Direction"])
+        writer.writerow(log_row)
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code", rc)
@@ -38,34 +51,43 @@ def on_message(client, userdata, msg):
         try:
             vehicle_id = topic.split("/")[0].replace("vehicle-", "")
             if vehicle_id in vehicle_ids:
+                log_mqtt_message(vehicle_id, topic, payload, "receive")
+                
                 vehicle_index = vehicle_ids.index(vehicle_id)
                 status_code = int(payload)
                 status_str = status_map.get(status_code, "UNKNOWN")
                 vehicle_status[vehicle_index] = status_str
                 update_vehicle_status()
                 update_progress()
-
-                # ⛔ ERROR 상태인 경우 팝업 띄우고 전체 STOP
-                if status_str == "ERROR":
-                    show_error_popup(vehicle_id)
+                
+                if status_str == "ERROR_OBSTACLE":
+                    root.deiconify() 
+                    messagebox.showerror("Error", f"vehicle-{vehicle_id}\nERROR_OBSTACLE.\nAll stopped.")
+                    stop_clicked()
+                    return
+                elif status_str == "ERROR_BAD_CONNECTION":
+                    root.deiconify()  
+                    messagebox.showerror("Error", f"vehicle-{vehicle_id}\nBAD_CONNECTION.\nAll stopped.")
+                    stop_clicked()
+                    return
+                elif status_str == "ERROR_HARDWARE":
+                    root.deiconify()  
+                    messagebox.showerror("Error", f"vehicle-{vehicle_id}\nERROR_HARDWARE.\nAll stopped.")
                     stop_clicked()
                     return
 
-                # ✅ TERMINATED 상태면 다음 차량 시작
                 if status_str == "TERMINATED" and vehicle_index == current_vehicle_index:
                     send_start_command_to_next()
         except Exception as e:
             print(f"[ERROR] MQTT 메시지 처리 실패: {e}")
-
-def show_error_popup(vehicle_id):
-    root.deiconify()  # 혹시 UI가 최소화된 경우 복구
-    messagebox.showerror("🚨 Error", f"{vehicle_id} error.\nAll stopped.")
 
 def send_mqtt_command(command_code):
     for vehicle_id in vehicle_ids:
         topic = f"vehicle-{vehicle_id}/command"
         mqtt_client.publish(topic, str(command_code))
         print(f"[MQTT] Sent to {topic} -> {command_code}")
+        log_mqtt_message(vehicle_id, topic, str(command_code), "send") 
+
 
 def send_start_command_to_next():
     global current_vehicle_index
@@ -73,21 +95,22 @@ def send_start_command_to_next():
     if current_vehicle_index < TOTAL_VEHICLES:
         vehicle_id = vehicle_ids[current_vehicle_index]
         topic = f"vehicle-{vehicle_id}/command"
-        mqtt_client.publish(topic, "1")  # START
+        mqtt_client.publish(topic, "1")
         print(f"[MQTT] START sent to {topic}")
+        log_mqtt_message(vehicle_id, topic, "1", "send")
     else:
-        print("🚘 All vehicles have been started and terminated.")
+        print("All vehicles have been started and terminated.")
 
 def forcestop_clicked():
-    send_mqtt_command(0)  # FORCESTOP
+    send_mqtt_command(0) 
 
 def start_clicked():
     global current_vehicle_index
-    current_vehicle_index = -1  # 초기화 후
-    send_start_command_to_next()  # 첫 차량부터 시작
+    current_vehicle_index = -1 
+    send_start_command_to_next() 
 
 def stop_clicked():
-    send_mqtt_command(2)  # STOP
+    send_mqtt_command(2) 
 
 def update_progress():
     global completed_vehicles
@@ -96,15 +119,19 @@ def update_progress():
     progress_var.set(percent)
     progress_label.config(text=f"{completed_vehicles} / {TOTAL_VEHICLES} ({percent}%)")
 
+    if completed_vehicles == TOTAL_VEHICLES:
+        root.deiconify()
+        messagebox.showinfo("Complete", "Complete.")
+
 def update_vehicle_status():
     color_map = {
         "READY": "#87CEEB",
         "RUNNING": "#FFD700",
         "STOP": "#FFA500",
         "TERMINATED": "#32CD32",
-        "ERROR": "#FF4C4C",
-        "RESERVED1": "gray",
-        "RESERVED2": "gray",
+        "ERROR_OBSTACLE": "#FF4C4C",
+        "ERROR_BAD_CONNECTION": "#FF4C4C",
+        "ERROR_HARDWARE": "#FF4C4C",
         "UNKNOWN": "black",
         "Waiting": "gray"
     }
@@ -113,25 +140,18 @@ def update_vehicle_status():
         color = color_map.get(status, "black")
         vehicle_labels[i].config(text=f"Vehicle {i+1}\n{status}", bg=color)
 
-# 카메라 보기
 def open_camera_view():
     print("📷 Opening camera...")
     root.iconify()
-    proc = subprocess.Popen(["libcamera-hello", "--qt-preview", "--timeout", "0"])
-    root.after(1000, check_camera_closed, proc)
-
-# def open_camera_view():
-#     print("📷 Opening camera...")
-#     root.iconify()
-#     proc = subprocess.Popen([
-#         "libcamera-hello",
-#         "--qt-preview",          # 안정적 프리뷰
-#         "--width", "640",        # 낮은 해상도
-#         "--height", "480",
-#         "--framerate", "30",     # 프레임 수 향상
-#         "--timeout", "0"         # 무제한 실행
-#     ])
-#     root.after(500, check_camera_closed, proc)
+    proc = subprocess.Popen([
+        "libcamera-hello",
+        "--qt-preview",          # 안정적 프리뷰
+        "--width", "640",        # 낮은 해상도
+        "--height", "480",
+        "--framerate", "30",     # 프레임 수 향상
+        "--timeout", "0"         # 무제한 실행
+    ])
+    root.after(500, check_camera_closed, proc)
 
 def check_camera_closed(proc):
     if proc.poll() is None:
