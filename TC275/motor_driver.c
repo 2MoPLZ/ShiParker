@@ -311,7 +311,7 @@ void motor_stop(motor_index_t motor_index)
 }
 
 //0~100
-void set_motor_power(motor_index_t motor_index, uint32 dutyPercent)
+void set_motor_power(motor_index_t motor_index, double dutyPercent)
 {
     //dutyPercent
     // 0 : 정지가 아니라 최소 파워 의미
@@ -326,11 +326,12 @@ void set_motor_power(motor_index_t motor_index, uint32 dutyPercent)
     else
     {
         //calculate dutycycle from Percent
-        dutyCycle = MOTOR_DUTY_MIN + MOTOR_DUTY_UNIT * dutyPercent;
+        dutyCycle = MOTOR_DUTY_MIN + (uint32)(MOTOR_DUTY_UNIT * dutyPercent);
 
         switch(motor_index)
         {
             case INDEX_FL:
+                printfSerial("set power on fl");
                 _setDutyCycle(&motor_fr_tomDriver, &motor_fr_tomConfig, dutyCycle);
                 break;
             case INDEX_FR:

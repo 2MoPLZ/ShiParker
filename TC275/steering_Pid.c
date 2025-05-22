@@ -60,6 +60,15 @@ DriveCommand  wall_follow_control(double dist_a, double dist_b){
 
     // 조향 각도 계산 (부호 반영)
     double steering_angle = (KP * error + KD * derivative /*+ KI * pid_integral*/ );
+
+    //최대 최소 조향 각도 +- 15도도
+    if(steering_angle > 026){
+        steering_angle = 0.26;
+    }
+    else if(steering_angle < -0.26){
+        steering_angle = -0.26;
+    }
+
     // 속도 결정
     double speed;
     if (fabsf(steering_angle) > 20.0f * (PI / 180.0f))

@@ -33420,7 +33420,7 @@ void initPeripheralsAndERU(void);
 void initADC(void);
 uint16 readADCValue(uint8 channel);
 # 13 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.h" 2
-# 50 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.h"
+# 52 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.h"
 typedef enum motor_index{
     INDEX_FL = 0,
     INDEX_FR = 1,
@@ -33436,7 +33436,7 @@ void init_pwms(IfxGtm_Tom_Pwm_Driver* drivers[] , IfxGtm_Tom_Pwm_Config* configs
 void motor_run_forward(motor_index_t motor_index);
 void motor_run_backward(motor_index_t motor_index);
 void motor_stop(motor_index_t motor_index);
-void set_motor_power(motor_index_t motor_index, uint32 dutyPercent);
+void set_motor_power(motor_index_t motor_index, double dutyPercent);
 void _setDutyCycle(IfxGtm_Tom_Pwm_Driver* driver , IfxGtm_Tom_Pwm_Config* config, uint32 _dutyCycle);
 # 10 "C:\\project\\SHIPAR~1\\TC275\\motor_driver.c" 2
 
@@ -33736,7 +33736,7 @@ void motor_stop(motor_index_t motor_index)
 }
 
 
-void set_motor_power(motor_index_t motor_index, uint32 dutyPercent)
+void set_motor_power(motor_index_t motor_index, double dutyPercent)
 {
 
 
@@ -33751,11 +33751,12 @@ void set_motor_power(motor_index_t motor_index, uint32 dutyPercent)
     else
     {
 
-        dutyCycle = 3000 + ((3500 - 3000) / 100) * dutyPercent;
+        dutyCycle = 2200 + (uint32)(((4000 - 2200) / 100) * dutyPercent);
 
         switch(motor_index)
         {
             case INDEX_FL:
+                printfSerial("set power on fl");
                 _setDutyCycle(&motor_fr_tomDriver, &motor_fr_tomConfig, dutyCycle);
                 break;
             case INDEX_FR:
