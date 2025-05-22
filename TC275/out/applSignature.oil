@@ -55,6 +55,7 @@ CPU test_application {
 		APP_SRC = "uart_Driver.c";
 		APP_SRC = "steering_Pid.c";
 		APP_SRC = "hall_Driver.c";
+		APP_SRC = "shiparker_App.c";
 	};
 	ISR ASCLIN3_TX {
 		CATEGORY = 2;
@@ -99,11 +100,47 @@ CPU test_application {
 		PRIORITY = 15;
 		SOURCE = "SCUERU3";
 	};
+	ISR AppTimerISR {
+		CATEGORY = 2;
+		SOURCE = "STM0SR1";
+		PRIORITY = 7;
+	};
 	TASK TestTask {
 		PRIORITY = 5;
 		STACK = SHARED;
 		SCHEDULE = FULL;
 		AUTOSTART = FALSE;
 		ACTIVATION = 1;
+	};
+	TASK ShiParkerAppTask {
+		PRIORITY = 2;
+		STACK = SHARED;
+		SCHEDULE = FULL;
+		AUTOSTART = FALSE;
+		ACTIVATION = 1;
+	};
+	TASK PacketSendTask {
+		PRIORITY = 9;
+		STACK = SHARED;
+		SCHEDULE = FULL;
+		AUTOSTART = FALSE;
+		ACTIVATION = 1;
+	};
+	COUNTER AppCounter {
+		MINCYCLE = 1;
+		MAXALLOWEDVALUE = 50;
+		TICKSPERBASE = 1;
+	};
+	ALARM AppAlarm {
+		COUNTER = AppCounter;
+		ACTION = ACTIVATETASK {
+			TASK = ShiParkerAppTask;
+		};
+	};
+	ALARM PacketSendAlarm {
+		COUNTER = AppCounter;
+		ACTION = ACTIVATETASK {
+			TASK = PacketSendTask;
+		};
 	};
 };

@@ -35,6 +35,8 @@ OS_EE_OPT += EE_BUILD_SINGLE_ELF
 #
 ############################################################################
 OS_EE_OPT += OSEE_ARCH_TRICORE
+OS_EE_OPT += OSEE_HAS_ALARMS
+OS_EE_OPT += OSEE_HAS_COUNTERS
 OS_EE_OPT += OSEE_HAS_EVENTS
 OS_EE_OPT += OSEE_HAS_RESOURCES
 OS_EE_OPT += OSEE_ISR2_MAX_HW_ASM_PRIO 17

@@ -1,19 +1,2255 @@
-# 1 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c"
-# 1 "C:\\project\\ShiParker\\TC275\\out//"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.c"
+# 1 "C:\\Users\\USER\\Desktop\\AutodriveSystem\\TC275\\out//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c"
-# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 1
-# 65 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 1
-# 52 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Configurations\\Ifx_Cfg.h" 1
-# 53 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_bf.h" 1
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_bf.h" 1
-# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
-# 1429 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.c"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h" 1
+
+
+
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
+# 5 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 1
+
+
+
+
+
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Configurations\\Ifx_Cfg.h" 1
+# 7 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
+# 8 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGlobal_cfg.h" 1
+# 9 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
+# 46 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 1
+# 81 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 1
+# 46 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h"
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
+# 147 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
+typedef long int ptrdiff_t;
+# 212 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
+typedef long unsigned int size_t;
+# 324 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
+typedef int wchar_t;
+# 47 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 2
+# 82 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 2
+# 93 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
+void Ifx_C_Init(void);
+# 47 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h" 1
+# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
+typedef unsigned char boolean;
+
+
+
+typedef unsigned char uint8;
+
+
+
+typedef unsigned short uint16;
+
+
+
+typedef unsigned long uint32;
+
+
+
+
+typedef unsigned long long uint64;
+
+
+
+typedef signed char sint8;
+
+
+
+typedef short sint16;
+
+
+
+
+typedef long sint32;
+
+
+
+
+
+
+typedef long long sint64;
+
+
+
+typedef unsigned long uint8_least;
+
+
+
+typedef unsigned long uint16_least;
+
+
+
+typedef unsigned long uint32_least;
+
+
+
+typedef signed long sint8_least;
+
+
+
+typedef signed long sint16_least;
+
+
+
+typedef signed long sint32_least;
+
+
+
+
+typedef float float32;
+
+
+
+
+typedef double float64;
+# 48 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
+
+
+
+
+
+typedef const char *pchar;
+typedef void *pvoid;
+typedef volatile void *vvoid;
+typedef void (*voidfuncvoid) (void);
+
+typedef struct
+{
+    float32 real;
+    float32 imag;
+} cfloat32;
+
+typedef struct
+{
+    sint32 real;
+    sint32 imag;
+} csint32;
+
+typedef struct
+{
+    sint16 real;
+    sint16 imag;
+} csint16;
+
+typedef sint64 Ifx_TickTime;
+# 89 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+typedef sint16 Ifx_SizeT;
+
+
+
+typedef struct
+{
+    void *base;
+    uint16 index;
+    uint16 length;
+} Ifx_CircularBuffer;
+
+typedef uint16 Ifx_Priority;
+typedef uint32 Ifx_TimerValue;
+typedef sint32 Ifx_SignedTimerVal;
+
+typedef pvoid Ifx_AddressValue;
+
+typedef struct
+{
+    uint16 priority;
+    uint16 provider;
+} Ifx_IsrSetting;
+
+
+typedef enum
+{
+    Ifx_ActiveState_low = 0,
+    Ifx_ActiveState_high = 1
+} Ifx_ActiveState;
+
+typedef enum
+{
+    Ifx_ParityMode_even = 0,
+    Ifx_ParityMode_odd = 1
+} Ifx_ParityMode;
+
+
+
+typedef enum
+{
+    Ifx_RxSel_a,
+    Ifx_RxSel_b,
+    Ifx_RxSel_c,
+    Ifx_RxSel_d,
+    Ifx_RxSel_e,
+    Ifx_RxSel_f,
+    Ifx_RxSel_g,
+    Ifx_RxSel_h
+} Ifx_RxSel;
+
+
+typedef struct
+{
+    volatile void *module;
+    sint32 index;
+} IfxModule_IndexMap;
+
+typedef struct
+{
+    Ifx_TickTime timestamp;
+    uint8 data;
+}Ifx_DataBufferMode_TimeStampSingle;
+# 161 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+typedef enum
+{
+    Ifx_DataBufferMode_normal = 0,
+    Ifx_DataBufferMode_timeStampSingle,
+
+}Ifx_DataBufferMode;
+# 175 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h"
+typedef enum
+{
+    Ifx_Pwm_Mode_centerAligned = 0,
+    Ifx_Pwm_Mode_centerAlignedInverted = 1,
+    Ifx_Pwm_Mode_leftAligned = 2,
+    Ifx_Pwm_Mode_rightAligned = 3,
+    Ifx_Pwm_Mode_off = 4,
+    Ifx_Pwm_Mode_init = 5,
+    Ifx_Pwm_Mode_count
+} Ifx_Pwm_Mode;
+
+
+
+
+
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h" 1
+# 44 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h"
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\cint.h" 1 3
+# 24 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\cint.h" 3
+extern void _init_vectab (void);
+extern void _init_hnd_chain (void);
+
+
+
+
+
+
+extern int _install_int_handler (int intno, void (*handler) (int), int arg);
+
+
+
+
+
+
+
+extern void *_install_chained_int_handler (int intno, void (*handler) (int),
+        int arg);
+
+
+
+
+
+extern int _remove_chained_int_handler (int intno, void *ptr);
+
+
+
+
+
+extern int _install_trap_handler (int trapno, void (*handler) (int));
+# 45 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_TypesGnuc.h" 2
+
+
+typedef long fract;
+typedef short sfract;
+typedef long long laccum;
+typedef long __packb;
+typedef unsigned long __upackb;
+typedef long __packhw;
+typedef unsigned long __upackhw;
+# 191 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 2
+
+
+
+
+
+typedef struct
+{
+    fract real;
+    fract imag;
+} cfract;
+
+typedef struct
+{
+    sfract real;
+    sfract imag;
+} csfract;
+# 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 1
+# 136 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 1
+# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 1
+# 47 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 1
+# 48 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
+
+
+
+
+
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 1
+# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 1 3
+# 88 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
+static __inline__ __attribute__((__always_inline__))
+void _bisr (const unsigned __irq_level)
+{
+  __asm__ volatile ("bisr %0" :: "i" (__irq_level) : "memory");
+}
+# 110 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
+static __inline__ __attribute__((__always_inline__))
+unsigned _mfcr (const unsigned __regaddr)
+{
+  unsigned __res;
+  __asm__ volatile ("mfcr %0, LO:%1"
+                    : "=d" (__res) : "i" (__regaddr) : "memory");
+  return __res;
+}
+# 134 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
+static __inline__ __attribute__((__always_inline__))
+void _mtcr (const unsigned __regaddr, const unsigned __val)
+{
+  __asm__ volatile ("mtcr LO:%0, %1"
+                    :: "i" (__regaddr), "d" (__val) : "memory");
+}
+# 152 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
+static __inline__ __attribute__((__always_inline__))
+void _syscall (const unsigned __service)
+{
+  __asm__ volatile ("syscall %0" :: "i" (__service) : "memory");
+}
+
+
+
+
+
+
+static __inline__ __attribute__((__always_inline__))
+void _disable (void)
+{
+  __asm__ volatile ("disable" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _enable (void)
+{
+  __asm__ volatile ("enable" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _debug (void)
+{
+  __asm__ volatile ("debug" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _isync (void)
+{
+  __asm__ volatile ("isync" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _dsync (void)
+{
+  __asm__ volatile ("dsync" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _rstv (void)
+{
+  __asm__ volatile ("rstv" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _rslcx (void)
+{
+    __asm__ volatile ("rslcx" ::: "memory",
+                      "d0", "d1", "d2", "d3", "d4", "d5", "d6", "d7",
+                      "a2", "a3", "a4", "a5", "a6", "a7", "a11");
+}
+
+
+static __inline__ __attribute__((__always_inline__))
+void _svlcx (void)
+{
+  __asm__ volatile ("svlcx" ::: "memory");
+}
+
+static __inline__ __attribute__((__always_inline__))
+void _nop (void)
+{
+  __asm__ volatile ("nop" ::: "memory");
+}
+# 227 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
+static __inline__ __attribute__((__always_inline__))
+void _restore (const int irqs_on)
+{
+
+  __asm__ volatile ("restore %0" :: "d" (irqs_on) : "memory");
+
+
+
+
+
+
+}
+# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 2
+# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) void Ifx__jump_and_link(void (*fun)(void))
+{
+ __asm__ volatile ("jli %0"::"a"(fun));
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__moveToDataParam0(unsigned int var)
+{
+ __asm__ volatile ("mov\t %%d4, %0"::"d"(var));
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__moveToDataParamRet(unsigned int var)
+{
+ __asm__ volatile ("mov\t %%d2, %0"::"d"(var));
+}
+
+static inline __attribute__ ((always_inline)) unsigned int Ifx__getDataParamRet(void)
+{
+ unsigned int var;
+ __asm__ volatile (" mov\t %0, %%d2":"=d"(var));
+ return var;
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__moveToAddrParam0(const void *var)
+{
+ __asm__ volatile ("mov.aa\t %%a4, %0"::"a"(var));
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__jumpToFunction(const void *fun)
+{
+ __asm__ volatile ("ji %0"::"a"(fun));
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__jumpToFunctionWithLink(const void *fun)
+{
+ Ifx__jump_and_link((void (*)(void))fun);
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__jumpBackToLink(void)
+{
+ __asm__ volatile ("ji %a11");
+}
+# 148 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__max(sint32 a, sint32 b)
+{
+    sint32 res;
+    __asm__ volatile ("max %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__maxs(sint16 a, sint16 b)
+{
+    sint32 res;
+    __asm__ volatile ("max.h %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__maxu(uint32 a, uint32 b)
+{
+    uint32 res;
+    __asm__ volatile ("max.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__min(sint32 a, sint32 b)
+{
+    sint32 res;
+    __asm__ volatile ("min %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__mins(sint16 a, sint16 b)
+{
+    sint16 res;
+    __asm__ volatile ("min.h %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__minu(uint32 a, uint32 b)
+{
+    uint32 res;
+    __asm__ volatile ("min.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+# 238 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint16 Ifx__clssf(sfract a)
+{
+    sint16 res;
+    __asm__ volatile ("sh  %1,%1,16    \n                      cls  %0,%1":"=d"(res):"d"(a):"memory");
+
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) float Ifx__fract_to_float(fract a)
+{
+    float res;
+    __asm__ volatile ("q31tof  %0,%1,%2":"=d"(res):"d"(a), "d"(0):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) fract Ifx__float_to_fract(float a)
+{
+    fract res;
+    __asm__ volatile ("ftoq31  %0,%1,%2":"=d"(res):"d"(a), "d"(0):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__fract_to_sfract(fract a)
+{
+    sfract res;
+    __asm__ volatile ("mov.u  %0,0x8000        \n                    adds  %0,%1              \n                    extr  %0,%0,0x10,0x10 "
+
+
+                      :"=&d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__float_to_sfract(float a)
+{
+    fract tmp = Ifx__float_to_fract(a);
+    return Ifx__fract_to_sfract(tmp);
+}
+
+
+
+static inline __attribute__ ((always_inline)) fract Ifx__getfract(laccum a)
+{
+    fract res;
+    __asm__ volatile ("dextr  %0,%H1,%L1,0x11":"=&d" (res):"d" (a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__mac_r_sf(sfract a, sfract b, sfract c)
+{
+    sfract res;
+    __asm__ volatile ("sh  %1,%1,16        \n                       maddrs.q  %0,%1,%2L,%3L,1        \n                       sh %0,%0,-16":"=d"(res):"d"(a),
+
+                                                       "d"(b), "d"(c):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__mac_sf(sfract a, sfract b, sfract c)
+{
+    sfract res;
+    __asm__ volatile ("sh  %1,%1,16        \n                      madds.q  %0,%1,%2L,%3L,1        \n                      sh %0,%0,-16":"=d"(res):"d"(a),
+
+                                                      "d"(b), "d"(c):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) long Ifx__mulfractfract(fract a, fract b)
+{
+    long res;
+    __asm__ volatile ("mul.q %0,%1,%2,1":"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) long Ifx__mulfractlong(fract a, long b)
+{
+    long res;
+    __asm__ volatile ("mul.q %0,%1,%2,1":"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__round16(fract a)
+{
+    sfract res;
+    __asm__ volatile ("mov.u  %0,0x8000        \n                    adds  %0,%1              \n                    insert  %0,%0,0,0,0x10 \n					sh  %0,%0,-16"
+
+
+
+                      :"=&d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__s16_to_sfract(sint16 a)
+{
+    sfract res;
+    __asm__ volatile ("sh  %0,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
+
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__sfract_to_s16(sfract a)
+{
+    sint16 res;
+    __asm__ volatile ("sh  %1,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
+
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint16 Ifx__sfract_to_u16(sfract a)
+{
+    uint16 res;
+    __asm__ volatile ("sh  %1,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
+
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) laccum Ifx__shaaccum(laccum a, sint32 b)
+{
+    laccum res;
+    __asm__ volatile ("jge   %2,0,0f        \n                    sha   %H0,%H1,%2     \n                    rsub  %2,%2,0        \n                    dextr %L0,%H1,%L1,%2 \n                    j  1f                \n                    0:dextr %H0,%H1,%L1,%2 \n                    sha   %L0,%L1,%2     \n                    1:"
+
+
+
+
+
+
+
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) fract Ifx__shafracts(fract a, sint32 b)
+{
+    fract res;
+    __asm__ volatile ("shas  %0,%1,%2":"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__shasfracts(sfract a, sint32 b)
+{
+    sfract res;
+    __asm__ volatile ("shas  %0,%1,%2":"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sfract Ifx__u16_to_sfract(uint16 a)
+{
+    sfract res;
+    __asm__ volatile ("sh  %0,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
+
+    return res;
+}
+# 430 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__extr(sint32 a, uint32 p, uint32 w)
+{
+    sint32 res;
+    __asm__ volatile ("mov %%d14,%2  \n                     mov %%d15,%3  \n                     extr %0,%1,%%e14"
+
+
+                      : "=d" (res) : "d" (a), "d" (p), "d" (w):"d14", "d15");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__extru(uint32 a, uint32 p, uint32 w)
+{
+    uint32 res;
+    __asm__ volatile ("mov %%d14,%2  \n                     mov %%d15,%3  \n                     extr.u %0,%1,%%e14"
+
+
+                      : "=d" (res) : "d" (a), "d" (p), "d" (w):"d14", "d15");
+    return res;
+}
+# 468 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__ins(sint32 trg, const sint32 trgbit, sint32 src, const sint32 srcbit)
+{
+    sint32 res;
+    __asm__ volatile ("ins.t %0,%1,%2,%3,%4":"=d"(res):"d"(trg), "i"(trgbit), "d"(src), "i"(srcbit));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__insert(sint32 a, sint32 b, sint32 p, const sint32 w)
+{
+    sint32 res;
+    __asm__ volatile ("mov %%d14,%3  \n                     mov %%d15,%4  \n                     insert %0,%1,%2,%%e14"
+
+
+                      :"=d"(res):"d"(a), "d"(b), "d"(p), "d"(w):"d14", "d15");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__insn(sint32 trg, const sint32 trgbit, sint32 src, const sint32 srcbit)
+{
+    sint32 res;
+    __asm__ volatile ("insn.t %0,%1,%2,%3,%4":"=d"(res):"d"(trg), "i"(trgbit), "d"(src), "i"(srcbit));
+    return res;
+}
+# 520 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__disable_and_save(void)
+{
+    sint32 res;
+    __asm__ volatile("disable %0":"=d"(res));
+    return res;
+}
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__restore(sint32 ie)
+{
+    __asm__ volatile ("restore %0"::"d"(ie));
+}
+# 554 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) void Ifx__cacheawi(uint8* p)
+{
+    __asm__ volatile("cachea.wi [%0]0"::"a"(p));
+}
+
+
+static inline __attribute__ ((always_inline)) void Ifx__cacheiwi(uint8* p)
+{
+    __asm__ volatile("cachei.wi [%0]0"::"a"(p));
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) uint8* Ifx__cacheawi_bo_post_inc(uint8* p)
+{
+    __asm__ volatile("cachea.wi  [%0+]0"::"a"(p));
+    return p;
+}
+
+
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__mulsc(sint32 a, sint32 b, sint32 offset)
+{
+    sint32 res;
+    __asm__ volatile("mul  %%e12,%1,%2      \n                    dextr  %0,%%d13,%%d12,%3"
+
+                     :"=d"(res):"d"(a), "d"(b), "d"(offset):"d12", "d13");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__rol(uint32 operand, uint32 count)
+{
+    uint32 res;
+    __asm__ volatile("dextr  %0,%1,%1,%2":"=d"(res):"d"(operand), "d"(count):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__ror(uint32 operand, uint32 count)
+{
+    uint32 res;
+    __asm__ volatile("rsub %2,%2,0 \n                    dextr  %0,%1,%1,%2"
+
+                     :"=d"(res):"d"(operand), "d"(count):"memory");
+    return res;
+}
+# 616 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) __packb Ifx__absb(__packb a)
+{
+    __packb res;
+    __asm__ volatile ("abs.b %0,%1"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__absh(__packhw a)
+{
+    __packhw res;
+    __asm__ volatile ("abs.h %0,%1"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__abssh(__packhw a)
+{
+    __packb res;
+    __asm__ volatile ("abss.h %0,%1"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte1(__packb a)
+{
+    sint8 res;
+    __asm__ volatile ("extr  %0,%1,0,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte2(__packb a)
+{
+    sint8 res;
+    __asm__ volatile ("extr  %0,%1,8,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte3(__packb a)
+{
+    sint8 res;
+    __asm__ volatile ("extr  %0,%1,16,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte4(__packb a)
+{
+    sint8 res;
+    __asm__ volatile ("extr  %0,%1,24,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__extracthw1(__packhw a)
+{
+    sint16 res;
+    __asm__ volatile ("extr  %0,%1,0,16"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__extracthw2(__packhw a)
+{
+    sint16 res;
+    __asm__ volatile ("extr  %0,%1,16,16"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte1(__upackb a)
+{
+    uint8 res;
+    __asm__ volatile ("extr  %0,%1,0,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte2(__upackb a)
+{
+    uint8 res;
+    __asm__ volatile ("extr  %0,%1,8,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte3(__upackb a)
+{
+    uint8 res;
+    __asm__ volatile ("extr  %0,%1,16,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte4(__upackb a)
+{
+    uint8 res;
+    __asm__ volatile ("extr  %0,%1,24,8"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint16 Ifx__extractuhw1(__upackhw a)
+{
+    uint16 res;
+    __asm__ volatile ("extr  %0,%1,0,16"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint16 Ifx__extractuhw2(__upackhw a)
+{
+    uint16 res;
+    __asm__ volatile ("extr  %0,%1,16,16"
+                      :"=d"(res):"d"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte1(__packb* a)
+{
+    sint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte2(__packb* a)
+{
+    sint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,8,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte3(__packb* a)
+{
+    sint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte4(__packb* a)
+{
+    sint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,24,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__gethw1(__packhw* a)
+{
+    sint16 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,16"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__gethw2(__packhw* a)
+{
+    sint16 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,16"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte1(__upackb* a)
+{
+    uint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte2(__upackb* a)
+{
+    uint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,8,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte3(__upackb* a)
+{
+    uint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte4(__upackb* a)
+{
+    uint8 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,24,8"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint16 Ifx__getuhw1(__upackhw* a)
+{
+    uint16 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,16"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint16 Ifx__getuhw2(__upackhw* a)
+{
+    uint16 res;
+    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,16"
+
+                      :"=d"(res):"a"(a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__initpackb(sint32 a, sint32 b, sint32 c, sint32 d)
+{
+    __packb res;
+    __asm__ volatile ("insert  %3,%3,%4,8,8   \n                    insert  %4,%1,%2,8,8   \n                    insert  %0,%4,%3,16,16 "
+
+
+                      :"=d"(res):"d"(a), "d"(b), "d"(c), "d"(d):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__initpackbl(long a)
+{
+    return (__packb) a;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__initpackhw(sint16 a, sint16 b)
+{
+    __packhw res;
+    __asm__ volatile ("insert  %0,%1,%2,16,16"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__initpackhwl(long a)
+{
+    return a;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackb Ifx__initupackb( uint32 a, uint32 b, uint32 c, uint32 d)
+{
+    __upackb res;
+    __asm__ volatile ("insert  %3,%3,%4,8,8   \n                    insert  %1,%1,%2,8,8   \n                    insert  %0,%1,%3,16,16"
+
+
+                      :"=d"(res):"d"(a), "d"(b), "d"(c), "d"(d):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackhw Ifx__initupackhw( uint16 a, uint16 b)
+{
+    __upackhw res;
+    __asm__ volatile ("insert  %0,%1,%2,16,16"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte1(__packb a, sint8 b)
+{
+    __packb res;
+    __asm__ volatile ("insert  %0,%1,%2,0,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte2(__packb a, sint8 b)
+{
+    __packb res;
+    __asm__ volatile ("insert  %0,%1,%2,8,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte3(__packb a, sint8 b)
+{
+    __packb res;
+    __asm__ volatile ("insert  %0,%1,%2,16,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte4(__packb a, sint8 b)
+{
+    __packb res;
+    __asm__ volatile ("insert  %0,%1,%2,24,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte1( __upackb a, uint8 b)
+{
+    __upackb res;
+    __asm__ volatile ("insert  %0,%1,%2,0,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte2( __upackb a, uint8 b)
+{
+    __upackb res;
+    __asm__ volatile ("insert  %0,%1,%2,8,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte3( __upackb a, uint8 b)
+{
+    __upackb res;
+    __asm__ volatile ("insert  %0,%1,%2,16,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte4( __upackb a, uint8 b)
+{
+    __upackb res;
+    __asm__ volatile ("insert  %0,%1,%2,24,8"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__inserthw1(__packhw a, sint16 b)
+{
+    __packhw res;
+    __asm__ volatile ("insert  %0,%1,%2,0,16"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__inserthw2(__packhw a, sint16 b)
+{
+    __packhw res;
+    __asm__ volatile ("insert  %0,%1,%2,16,16"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackhw Ifx__insertuhw1( __upackhw a, uint16 b)
+{
+    __upackhw res;
+    __asm__ volatile ("insert  %0,%1,%2,0,16"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackhw Ifx__insertuhw2( __upackhw a, uint16 b)
+{
+    __upackhw res;
+    __asm__ volatile ("insert  %0,%1,%2,16,16"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packb Ifx__minb(__packb a, __packb b)
+{
+    __packb res;
+    __asm__ volatile ("min.b %0,%1,%2"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackb Ifx__minbu( __upackb a, __upackb b)
+{
+    __upackb res;
+    __asm__ volatile ("min.bu %0,%1,%2"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __packhw Ifx__minh(__packhw a, __packhw b)
+{
+    __packhw res;
+    __asm__ volatile ("min.h %0,%1,%2"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) __upackhw Ifx__minhu( __upackhw a, __upackhw b)
+{
+    __upackhw res;
+    __asm__ volatile ("min.hu %0,%1,%2"
+                      :"=d"(res):"d"(a), "d"(b):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setbyte1(__packb* a, sint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setbyte2(__packb* a, sint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,8,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setbyte3(__packb* a, sint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setbyte4(__packb* a, sint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,24,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__sethw1(__packhw* a, sint16 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,16 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__sethw2(__packhw* a, sint16 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,16 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setubyte1(__upackb* a, uint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setubyte2(__upackb* a, uint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,8,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setubyte3(__upackb* a, uint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setubyte4(__upackb* a, uint8 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,24,8 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setuhw1(__upackhw* a, uint16 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,16 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__setuhw2(__upackhw* a, uint16 b)
+{
+    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,16 \n                    st.w [%0],%%d15"
+
+
+                      ::"a"(a), "d"(b):"d15", "memory");
+}
+# 1251 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__absdif(sint32 a, sint32 b)
+{
+    sint32 res;
+    __asm__ volatile ("absdif %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__abss(sint32 a)
+{
+    sint32 res;
+    __asm__ volatile ("abss %0, %1": "=d" (res) : "d" (a));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__clo(sint32 a)
+{
+    sint32 res;
+    __asm__ volatile ("clo %0,%1":"=d"(res):"d"(a));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__cls(sint32 a)
+{
+    sint32 res;
+    __asm__ volatile ("cls %0,%1":"=d"(res):"d"(a));
+    return res;
+}
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) double Ifx__fabs(double d)
+{
+    double res;
+    __asm__ volatile ("insert  %0,%1,0,31,1": "=d" (res) : "d" (d):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) float Ifx__fabsf(float f)
+{
+    float res;
+    __asm__ volatile ("insert  %0,%1,0,31,1": "=d" (res) : "d" (f):"memory");
+    return res;
+}
+# 1322 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__parity(sint32 a)
+{
+    sint32 res;
+    __asm__ volatile ("parity  %0,%1": "=d" (res) : "d" (a):"memory");
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint8 Ifx__satb(sint32 a)
+{
+    sint8 res;
+    __asm__ volatile ("sat.b %0,%1":"=d"(res):"d"(a));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint8 Ifx__satbu(sint32 a)
+{
+    uint8 res;
+    __asm__ volatile ("sat.bu %0,%1":"=d"(res):"d"(a));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint16 Ifx__sath(sint32 a)
+{
+    sint8 res;
+    __asm__ volatile ("sat.h %0,%1":"=d"(res):"d"(a));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint16 Ifx__sathu(sint32 a)
+{
+    sint8 res;
+    __asm__ volatile ("sat.hu %0,%1":"=d"(res):"d"(a));
+    return res;
+}
+# 1375 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) sint32 Ifx__adds(sint32 a, sint32 b)
+{
+    sint32 res;
+    __asm__ volatile ("adds %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__addsu(uint32 a, uint32 b)
+{
+    uint32 res;
+    __asm__ volatile ("adds.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__subs(sint32 a, sint32 b)
+{
+    sint32 res;
+    __asm__ volatile ("subs %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__subsu(uint32 a, uint32 b)
+{
+    uint32 res;
+    __asm__ volatile ("subs.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+    return res;
+}
+# 1421 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) void Ifx__debug(void)
+{
+    __asm__ volatile ("debug" : : : "memory");
+}
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__dsync(void)
+{
+    __asm__ volatile ("dsync" : : : "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__isync(void)
+{
+    __asm__ volatile ("isync" : : : "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__ldmst(volatile void* address, uint32 mask, uint32 value)
+{
+    __asm__ volatile("mov %H2,%1 \n                  ldmst [%0]0,%A2"
+
+                     ::"a"(address), "d"(mask), "d"((long long)value));
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__nop(void)
+{
+    __asm__ volatile ("nop" : : : "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__nops(void* cnt)
+{
+    __asm__ volatile ("0: nop \n        loop %0,0b"
+
+                      ::"a"(((sint8*)cnt)-1));
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__rslcx(void)
+{
+    __asm__ volatile ("rslcx" : : : "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__svlcx(void)
+{
+    __asm__ volatile ("svlcx" : : : "memory");
+}
+
+
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__swap(void* place, uint32 value)
+{
+    uint32 res;
+    __asm__ volatile("swap.w [%1]0,%2":"=d"(res):"a"(place), "0"(value));
+    return res;
+}
+# 1505 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) void Ifx__stopPerfCounters(void)
+{
+    __asm__ volatile("mov %%d0,0\n                  mtcr 0xFC00,%%d0\n                  isync\n"
+
+
+            : : :"d0");
+}
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) unsigned int Ifx__cmpAndSwap (unsigned int volatile *address,
+           unsigned int value, unsigned int condition)
+{
+
+  __extension__ unsigned long long reg64
+    = value | (unsigned long long) condition << 32;
+
+  __asm__ __volatile__ ("cmpswap.w [%[addr]]0, %A[reg]"
+                        : [reg] "+d" (reg64)
+                        : [addr] "a" (address)
+                        : "memory");
+    return reg64;
+}
+# 1544 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
+static inline __attribute__ ((always_inline)) float32 Ifx__fixpoint_to_float32(fract value, sint32 shift)
+{
+    float32 result;
+
+    __asm__ volatile("q31tof %0, %1, %2": "=d" (result) : "d" (value), "d" (shift));
+    return result;
+}
+
+static inline __attribute__ ((always_inline)) void* Ifx__getA11(void)
+{
+    uint32 *res;
+    __asm__ volatile ("mov.aa %0, %%a11": "=a" (res) : :"a11");
+    return res;
+}
+
+static inline __attribute__ ((always_inline)) void Ifx__setStackPointer(void *stackAddr)
+{
+    __asm__ volatile ("mov.aa %%a10, %0": : "a" (stackAddr) :"a10");
+}
+
+static inline __attribute__ ((always_inline)) uint32 Ifx__crc32(uint32 b, uint32 a)
+{
+    uint32 returnvalue = 0;
+
+    __asm__ volatile ("CRC32 %0,%1,%2" : "=d" (returnvalue) : "d"(b), "d"(a));
+
+   return returnvalue;
+}
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_calculateCrc32(uint32 *startaddress, uint8 length)
+{
+    uint32 returnvalue = 0;
+    for (;length > 0; length--)
+    {
+
+        __asm__ ("CRC32 %0,%0,%1" : "+d" (returnvalue) : "d" (*startaddress));
+        startaddress++;
+    }
+    return returnvalue;
+}
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getRandomVal(uint32 a, uint32 x, uint32 m)
+{
+ uint32 result;
+    __asm("      mul.u     %%e14,%1,%2       # d15 = Eh; d14 = El    \n"
+        "        mov       %%d12,%%d14       #   e12 = El            \n"
+        "        mov       %%d13, 0          #                       \n"
+        "        madd.u    %%e14,%%e12,%%d15, 5 # e14 = El + 5 * d15    \n"
+        " cmp_m_%=: jge.u     %%d14,%3,sub_m_%=    #                       \n"
+        "        jz        %%d15,done_%=        #                       \n"
+        " sub_m_%=: subx      %%d14,%%d14,%3    #  e12=e12-m            \n"
+        "        subc      %%d15,%%d15,%%d13 # d13=d13-0             \n"
+        "        loopu     cmp_m_%=             #                       \n"
+        " done_%=:  mov       %0,%%d14          #                       \n"
+        : "=d"(result) : "d"(a), "d"(x), "d"(m) : "d12","d13","d14","d15");
+    return result;
+}
+
+static inline __attribute__ ((always_inline)) sint32 Ifx__popcnt(sint32 a)
+{
+ sint32 res;
+ __asm__ volatile ("popcnt %0,%1":"=d"(res):"d"(a));
+  return res;
+}
+
+
+
+static inline __attribute__ ((always_inline)) void Ifx__cacheai(uint8* p)
+{
+    __asm__ volatile("cachea.i [%0]0"::"a"(p));
+}
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
+# 87 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
+static inline __attribute__ ((always_inline)) void *__cx_to_addr(uint32 cx)
+{
+    uint32 seg_nr = Ifx__extru(cx, 16, 4);
+    return (void *)Ifx__insert(seg_nr << 28, cx, 6, 16);
+}
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) uint32 __addr_to_cx(void *addr)
+{
+    uint32 seg_nr, seg_idx;
+    seg_nr = Ifx__extru((int)addr, 28, 4) << 16;
+    seg_idx = Ifx__extru((int)addr, 6, 16);
+    return seg_nr | seg_idx;
+}
+
+
+
+static inline __attribute__ ((always_inline)) void __ldmst_c(volatile void *address, unsigned mask, unsigned value)
+{
+    *(volatile uint32 *)address = (*(volatile uint32 *)address & ~(mask)) | (mask & value);
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) uint32 __ld32(void *addr)
+{
+    return *(volatile uint32 *)addr;
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) void __st32(void *addr, uint32 value)
+{
+    *(volatile uint32 *)addr = value;
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) uint64 __ld64(void *addr)
+{
+    return *(volatile uint64 *)addr;
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) void __st64(void *addr, uint64 value)
+{
+    *(volatile uint64 *)addr = value;
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) void __ld64_lu(void *addr, uint32 *valueLower, uint32 *valueUpper)
+{
+    register uint64 value;
+    value = __ld64(addr);
+    *valueLower = (uint32)value;
+    *valueUpper = (uint32)(value >> 32);
+}
+
+
+
+
+static inline __attribute__ ((always_inline)) void __st64_lu(void *addr, uint32 valueLower, uint32 valueUpper)
+{
+    register uint64 value = ((uint64)valueUpper << 32) | valueLower;
+    __st64(addr, value);
+}
+# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 1
+# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 1
+# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
+# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 2
+
+
+
+
+
+typedef struct _Ifx_STM_ACCEN0_Bits
+{
+    unsigned int EN0:1;
+    unsigned int EN1:1;
+    unsigned int EN2:1;
+    unsigned int EN3:1;
+    unsigned int EN4:1;
+    unsigned int EN5:1;
+    unsigned int EN6:1;
+    unsigned int EN7:1;
+    unsigned int EN8:1;
+    unsigned int EN9:1;
+    unsigned int EN10:1;
+    unsigned int EN11:1;
+    unsigned int EN12:1;
+    unsigned int EN13:1;
+    unsigned int EN14:1;
+    unsigned int EN15:1;
+    unsigned int EN16:1;
+    unsigned int EN17:1;
+    unsigned int EN18:1;
+    unsigned int EN19:1;
+    unsigned int EN20:1;
+    unsigned int EN21:1;
+    unsigned int EN22:1;
+    unsigned int EN23:1;
+    unsigned int EN24:1;
+    unsigned int EN25:1;
+    unsigned int EN26:1;
+    unsigned int EN27:1;
+    unsigned int EN28:1;
+    unsigned int EN29:1;
+    unsigned int EN30:1;
+    unsigned int EN31:1;
+} Ifx_STM_ACCEN0_Bits;
+
+
+typedef struct _Ifx_STM_ACCEN1_Bits
+{
+    unsigned int reserved_0:32;
+} Ifx_STM_ACCEN1_Bits;
+
+
+typedef struct _Ifx_STM_CAP_Bits
+{
+    unsigned int STMCAP63_32:32;
+} Ifx_STM_CAP_Bits;
+
+
+typedef struct _Ifx_STM_CAPSV_Bits
+{
+    unsigned int STMCAP63_32:32;
+} Ifx_STM_CAPSV_Bits;
+
+
+typedef struct _Ifx_STM_CLC_Bits
+{
+    unsigned int DISR:1;
+    unsigned int DISS:1;
+    unsigned int reserved_2:1;
+    unsigned int EDIS:1;
+    unsigned int reserved_4:28;
+} Ifx_STM_CLC_Bits;
+
+
+typedef struct _Ifx_STM_CMCON_Bits
+{
+    unsigned int MSIZE0:5;
+    unsigned int reserved_5:3;
+    unsigned int MSTART0:5;
+    unsigned int reserved_13:3;
+    unsigned int MSIZE1:5;
+    unsigned int reserved_21:3;
+    unsigned int MSTART1:5;
+    unsigned int reserved_29:3;
+} Ifx_STM_CMCON_Bits;
+
+
+typedef struct _Ifx_STM_CMP_Bits
+{
+    unsigned int CMPVAL:32;
+} Ifx_STM_CMP_Bits;
+
+
+typedef struct _Ifx_STM_ICR_Bits
+{
+    unsigned int CMP0EN:1;
+    unsigned int CMP0IR:1;
+    unsigned int CMP0OS:1;
+    unsigned int reserved_3:1;
+    unsigned int CMP1EN:1;
+    unsigned int CMP1IR:1;
+    unsigned int CMP1OS:1;
+    unsigned int reserved_7:25;
+} Ifx_STM_ICR_Bits;
+
+
+typedef struct _Ifx_STM_ID_Bits
+{
+    unsigned int MODREV:8;
+    unsigned int MODTYPE:8;
+    unsigned int MODNUMBER:16;
+} Ifx_STM_ID_Bits;
+
+
+typedef struct _Ifx_STM_ISCR_Bits
+{
+    unsigned int CMP0IRR:1;
+    unsigned int CMP0IRS:1;
+    unsigned int CMP1IRR:1;
+    unsigned int CMP1IRS:1;
+    unsigned int reserved_4:28;
+} Ifx_STM_ISCR_Bits;
+
+
+typedef struct _Ifx_STM_KRST0_Bits
+{
+    unsigned int RST:1;
+    unsigned int RSTSTAT:1;
+    unsigned int reserved_2:30;
+} Ifx_STM_KRST0_Bits;
+
+
+typedef struct _Ifx_STM_KRST1_Bits
+{
+    unsigned int RST:1;
+    unsigned int reserved_1:31;
+} Ifx_STM_KRST1_Bits;
+
+
+typedef struct _Ifx_STM_KRSTCLR_Bits
+{
+    unsigned int CLR:1;
+    unsigned int reserved_1:31;
+} Ifx_STM_KRSTCLR_Bits;
+
+
+typedef struct _Ifx_STM_OCS_Bits
+{
+    unsigned int reserved_0:24;
+    unsigned int SUS:4;
+    unsigned int SUS_P:1;
+    unsigned int SUSSTA:1;
+    unsigned int reserved_30:2;
+} Ifx_STM_OCS_Bits;
+
+
+typedef struct _Ifx_STM_TIM0_Bits
+{
+    unsigned int STM31_0:32;
+} Ifx_STM_TIM0_Bits;
+
+
+typedef struct _Ifx_STM_TIM0SV_Bits
+{
+    unsigned int STM31_0:32;
+} Ifx_STM_TIM0SV_Bits;
+
+
+typedef struct _Ifx_STM_TIM1_Bits
+{
+    unsigned int STM35_4:32;
+} Ifx_STM_TIM1_Bits;
+
+
+typedef struct _Ifx_STM_TIM2_Bits
+{
+    unsigned int STM39_8:32;
+} Ifx_STM_TIM2_Bits;
+
+
+typedef struct _Ifx_STM_TIM3_Bits
+{
+    unsigned int STM43_12:32;
+} Ifx_STM_TIM3_Bits;
+
+
+typedef struct _Ifx_STM_TIM4_Bits
+{
+    unsigned int STM47_16:32;
+} Ifx_STM_TIM4_Bits;
+
+
+typedef struct _Ifx_STM_TIM5_Bits
+{
+    unsigned int STM51_20:32;
+} Ifx_STM_TIM5_Bits;
+
+
+typedef struct _Ifx_STM_TIM6_Bits
+{
+    unsigned int STM63_32:32;
+} Ifx_STM_TIM6_Bits;
+
+
+
+
+
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_ACCEN0_Bits B;
+} Ifx_STM_ACCEN0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_ACCEN1_Bits B;
+} Ifx_STM_ACCEN1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_CAP_Bits B;
+} Ifx_STM_CAP;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_CAPSV_Bits B;
+} Ifx_STM_CAPSV;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_CLC_Bits B;
+} Ifx_STM_CLC;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_CMCON_Bits B;
+} Ifx_STM_CMCON;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_CMP_Bits B;
+} Ifx_STM_CMP;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_ICR_Bits B;
+} Ifx_STM_ICR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_ID_Bits B;
+} Ifx_STM_ID;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_ISCR_Bits B;
+} Ifx_STM_ISCR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_KRST0_Bits B;
+} Ifx_STM_KRST0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_KRST1_Bits B;
+} Ifx_STM_KRST1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_KRSTCLR_Bits B;
+} Ifx_STM_KRSTCLR;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_OCS_Bits B;
+} Ifx_STM_OCS;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM0_Bits B;
+} Ifx_STM_TIM0;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM0SV_Bits B;
+} Ifx_STM_TIM0SV;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM1_Bits B;
+} Ifx_STM_TIM1;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM2_Bits B;
+} Ifx_STM_TIM2;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM3_Bits B;
+} Ifx_STM_TIM3;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM4_Bits B;
+} Ifx_STM_TIM4;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM5_Bits B;
+} Ifx_STM_TIM5;
+
+
+typedef union
+{
+    unsigned int U;
+    signed int I;
+    Ifx_STM_TIM6_Bits B;
+} Ifx_STM_TIM6;
+# 447 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
+typedef volatile struct _Ifx_STM
+{
+    Ifx_STM_CLC CLC;
+    unsigned char reserved_4[4];
+    Ifx_STM_ID ID;
+    unsigned char reserved_C[4];
+    Ifx_STM_TIM0 TIM0;
+    Ifx_STM_TIM1 TIM1;
+    Ifx_STM_TIM2 TIM2;
+    Ifx_STM_TIM3 TIM3;
+    Ifx_STM_TIM4 TIM4;
+    Ifx_STM_TIM5 TIM5;
+    Ifx_STM_TIM6 TIM6;
+    Ifx_STM_CAP CAP;
+    Ifx_STM_CMP CMP[2];
+    Ifx_STM_CMCON CMCON;
+    Ifx_STM_ICR ICR;
+    Ifx_STM_ISCR ISCR;
+    unsigned char reserved_44[12];
+    Ifx_STM_TIM0SV TIM0SV;
+    Ifx_STM_CAPSV CAPSV;
+    unsigned char reserved_58[144];
+    Ifx_STM_OCS OCS;
+    Ifx_STM_KRSTCLR KRSTCLR;
+    Ifx_STM_KRST1 KRST1;
+    Ifx_STM_KRST0 KRST0;
+    Ifx_STM_ACCEN1 ACCEN1;
+    Ifx_STM_ACCEN0 ACCEN0;
+} Ifx_STM;
+# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 2
+# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 2
+# 84 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
+typedef enum
+{
+    IfxStm_Index_none = -1,
+    IfxStm_Index_0 = 0,
+    IfxStm_Index_1,
+    IfxStm_Index_2
+} IfxStm_Index;
+# 101 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
+extern const IfxModule_IndexMap IfxStm_cfg_indexMap[3];
+# 137 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
+# 122 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 1
+# 53 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_bf.h" 1
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_bf.h" 1
+# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h" 2
+# 1429 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxScu_cfg.h"
 typedef enum
 {
     IfxScu_CCUCON0_CLKSEL_fBack = 0,
@@ -42,18 +2278,13 @@ typedef enum
     IfxScu_PMCSR_REQSLP_Sleep = 2U,
     IfxScu_PMCSR_REQSLP_Stby = 3U
 } IfxScu_PMCSR_REQSLP;
-# 66 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 1
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h" 1
-# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
-# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h" 2
-
-
-
-
-
+# 123 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 1
+# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 1
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
 typedef struct _Ifx_SCU_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -1932,7 +4163,7 @@ typedef union
     signed int I;
     Ifx_SCU_WDTS_SR_Bits B;
 } Ifx_SCU_WDTS_SR;
-# 1951 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
+# 1951 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
 typedef volatile struct _Ifx_SCU_WDTCPU
 {
     Ifx_SCU_WDTCPU_CON0 CON0;
@@ -1947,7 +4178,7 @@ typedef volatile struct _Ifx_SCU_WDTS
     Ifx_SCU_WDTS_CON1 CON1;
     Ifx_SCU_WDTS_SR SR;
 } Ifx_SCU_WDTS;
-# 1977 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
+# 1977 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_regdef.h"
 typedef volatile struct _Ifx_SCU
 {
     unsigned char reserved_0[8];
@@ -2055,1804 +4286,260 @@ typedef volatile struct _Ifx_SCU
     Ifx_SCU_ACCEN1 ACCEN1;
     Ifx_SCU_ACCEN0 ACCEN0;
 } Ifx_SCU;
-# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 2
-# 67 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 1
-# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 1
-# 56 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 1
-# 47 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 1
-# 46 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 1
-# 81 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 1
-# 46 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h"
-# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
-# 147 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
-typedef long int ptrdiff_t;
-# 212 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
-typedef long unsigned int size_t;
-# 324 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 3 4
-typedef int wchar_t;
-# 47 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/CompilerGnuc.h" 2
-# 82 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h" 2
-# 93 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Platform\\Tricore\\Compilers/Compilers.h"
-void Ifx_C_Init(void);
-# 47 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h" 1
-# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
-typedef unsigned char boolean;
+# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxScu_reg.h" 2
+# 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
 
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h" 1
+# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h"
+static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_calculateLfsr(uint16 password);
 
 
-typedef unsigned char uint8;
 
 
 
-typedef unsigned short uint16;
 
-
-
-typedef unsigned long uint32;
-
-
-
-
-typedef unsigned long long uint64;
-
-
-
-typedef signed char sint8;
-
-
-
-typedef short sint16;
-
-
-
-
-typedef long sint32;
-
-
-
-
-
-
-typedef long long sint64;
-
-
-
-typedef unsigned long uint8_least;
-
-
-
-typedef unsigned long uint16_least;
-
-
-
-typedef unsigned long uint32_least;
-
-
-
-typedef signed long sint8_least;
-
-
-
-typedef signed long sint16_least;
-
-
-
-typedef signed long sint32_least;
-
-
-
-
-typedef float float32;
-
-
-
-
-typedef double float64;
-# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 2
-
-
-
-
-
-typedef const char *pchar;
-typedef void *pvoid;
-typedef volatile void *vvoid;
-typedef void (*voidfuncvoid) (void);
-
-typedef struct
-{
-    float32 real;
-    float32 imag;
-} cfloat32;
-
-typedef struct
-{
-    sint32 real;
-    sint32 imag;
-} csint32;
-
-typedef struct
-{
-    sint16 real;
-    sint16 imag;
-} csint16;
-
-typedef sint64 Ifx_TickTime;
-# 89 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h"
-typedef sint16 Ifx_SizeT;
-
-
-
-typedef struct
-{
-    void *base;
-    uint16 index;
-    uint16 length;
-} Ifx_CircularBuffer;
-
-typedef uint16 Ifx_Priority;
-typedef uint32 Ifx_TimerValue;
-typedef sint32 Ifx_SignedTimerVal;
-
-typedef pvoid Ifx_AddressValue;
-
-typedef struct
-{
-    uint16 priority;
-    uint16 provider;
-} Ifx_IsrSetting;
-
-
-typedef enum
-{
-    Ifx_ActiveState_low = 0,
-    Ifx_ActiveState_high = 1
-} Ifx_ActiveState;
-
-typedef enum
-{
-    Ifx_ParityMode_even = 0,
-    Ifx_ParityMode_odd = 1
-} Ifx_ParityMode;
-
-
-
-typedef enum
-{
-    Ifx_RxSel_a,
-    Ifx_RxSel_b,
-    Ifx_RxSel_c,
-    Ifx_RxSel_d,
-    Ifx_RxSel_e,
-    Ifx_RxSel_f,
-    Ifx_RxSel_g,
-    Ifx_RxSel_h
-} Ifx_RxSel;
-
-
-typedef struct
-{
-    volatile void *module;
-    sint32 index;
-} IfxModule_IndexMap;
-
-typedef struct
-{
-    Ifx_TickTime timestamp;
-    uint8 data;
-}Ifx_DataBufferMode_TimeStampSingle;
-# 161 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h"
-typedef enum
-{
-    Ifx_DataBufferMode_normal = 0,
-    Ifx_DataBufferMode_timeStampSingle,
-
-}Ifx_DataBufferMode;
-# 175 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h"
-typedef enum
-{
-    Ifx_Pwm_Mode_centerAligned = 0,
-    Ifx_Pwm_Mode_centerAlignedInverted = 1,
-    Ifx_Pwm_Mode_leftAligned = 2,
-    Ifx_Pwm_Mode_rightAligned = 3,
-    Ifx_Pwm_Mode_off = 4,
-    Ifx_Pwm_Mode_init = 5,
-    Ifx_Pwm_Mode_count
-} Ifx_Pwm_Mode;
-
-
-
-
-
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_TypesGnuc.h" 1
-# 44 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_TypesGnuc.h"
-# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\cint.h" 1 3
-# 24 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\cint.h" 3
-extern void _init_vectab (void);
-extern void _init_hnd_chain (void);
-
-
-
-
-
-
-extern int _install_int_handler (int intno, void (*handler) (int), int arg);
-
-
-
-
-
-
-
-extern void *_install_chained_int_handler (int intno, void (*handler) (int),
-        int arg);
-
-
-
-
-
-extern int _remove_chained_int_handler (int intno, void *ptr);
-
-
-
-
-
-extern int _install_trap_handler (int trapno, void (*handler) (int));
-# 45 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_TypesGnuc.h" 2
-
-
-typedef long fract;
-typedef short sfract;
-typedef long long laccum;
-typedef long __packb;
-typedef unsigned long __upackb;
-typedef long __packhw;
-typedef unsigned long __upackhw;
-# 191 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Ifx_Types.h" 2
-
-
-
-
-
-typedef struct
-{
-    fract real;
-    fract imag;
-} cfract;
-
-typedef struct
-{
-    sfract real;
-    sfract imag;
-} csfract;
-# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
-
-
-
-
-
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 1
-# 59 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-# 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 1 3
-# 88 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
-static __inline__ __attribute__((__always_inline__))
-void _bisr (const unsigned __irq_level)
-{
-  __asm__ volatile ("bisr %0" :: "i" (__irq_level) : "memory");
-}
-# 110 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
-static __inline__ __attribute__((__always_inline__))
-unsigned _mfcr (const unsigned __regaddr)
-{
-  unsigned __res;
-  __asm__ volatile ("mfcr %0, LO:%1"
-                    : "=d" (__res) : "i" (__regaddr) : "memory");
-  return __res;
-}
-# 134 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
-static __inline__ __attribute__((__always_inline__))
-void _mtcr (const unsigned __regaddr, const unsigned __val)
-{
-  __asm__ volatile ("mtcr LO:%0, %1"
-                    :: "i" (__regaddr), "d" (__val) : "memory");
-}
-# 152 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
-static __inline__ __attribute__((__always_inline__))
-void _syscall (const unsigned __service)
-{
-  __asm__ volatile ("syscall %0" :: "i" (__service) : "memory");
-}
-
-
-
-
-
-
-static __inline__ __attribute__((__always_inline__))
-void _disable (void)
-{
-  __asm__ volatile ("disable" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _enable (void)
-{
-  __asm__ volatile ("enable" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _debug (void)
-{
-  __asm__ volatile ("debug" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _isync (void)
-{
-  __asm__ volatile ("isync" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _dsync (void)
-{
-  __asm__ volatile ("dsync" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _rstv (void)
-{
-  __asm__ volatile ("rstv" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _rslcx (void)
-{
-    __asm__ volatile ("rslcx" ::: "memory",
-                      "d0", "d1", "d2", "d3", "d4", "d5", "d6", "d7",
-                      "a2", "a3", "a4", "a5", "a6", "a7", "a11");
-}
-
-
-static __inline__ __attribute__((__always_inline__))
-void _svlcx (void)
-{
-  __asm__ volatile ("svlcx" ::: "memory");
-}
-
-static __inline__ __attribute__((__always_inline__))
-void _nop (void)
-{
-  __asm__ volatile ("nop" ::: "memory");
-}
-# 227 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\machine\\intrinsics.h" 3
-static __inline__ __attribute__((__always_inline__))
-void _restore (const int irqs_on)
+static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_calculateLfsr(uint16 pwd)
 {
 
-  __asm__ volatile ("restore %0" :: "d" (irqs_on) : "memory");
-
-
-
-
-
-
-}
-# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h" 2
-# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) void Ifx__jump_and_link(void (*fun)(void))
-{
- __asm__ volatile ("jli %0"::"a"(fun));
-}
-
-static inline __attribute__ ((always_inline)) void Ifx__moveToDataParam0(unsigned int var)
-{
- __asm__ volatile ("mov\t %%d4, %0"::"d"(var));
-}
-
-static inline __attribute__ ((always_inline)) void Ifx__moveToDataParamRet(unsigned int var)
-{
- __asm__ volatile ("mov\t %%d2, %0"::"d"(var));
-}
-
-static inline __attribute__ ((always_inline)) unsigned int Ifx__getDataParamRet(void)
-{
- unsigned int var;
- __asm__ volatile (" mov\t %0, %%d2":"=d"(var));
- return var;
-}
-
-static inline __attribute__ ((always_inline)) void Ifx__moveToAddrParam0(const void *var)
-{
- __asm__ volatile ("mov.aa\t %%a4, %0"::"a"(var));
-}
-
-static inline __attribute__ ((always_inline)) void Ifx__jumpToFunction(const void *fun)
-{
- __asm__ volatile ("ji %0"::"a"(fun));
-}
-
-static inline __attribute__ ((always_inline)) void Ifx__jumpToFunctionWithLink(const void *fun)
-{
- Ifx__jump_and_link((void (*)(void))fun);
-}
-
-static inline __attribute__ ((always_inline)) void Ifx__jumpBackToLink(void)
-{
- __asm__ volatile ("ji %a11");
-}
-# 148 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__max(sint32 a, sint32 b)
-{
-    sint32 res;
-    __asm__ volatile ("max %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__maxs(sint16 a, sint16 b)
-{
-    sint32 res;
-    __asm__ volatile ("max.h %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__maxu(uint32 a, uint32 b)
-{
-    uint32 res;
-    __asm__ volatile ("max.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__min(sint32 a, sint32 b)
-{
-    sint32 res;
-    __asm__ volatile ("min %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__mins(sint16 a, sint16 b)
-{
-    sint16 res;
-    __asm__ volatile ("min.h %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__minu(uint32 a, uint32 b)
-{
-    uint32 res;
-    __asm__ volatile ("min.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-# 238 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint16 Ifx__clssf(sfract a)
-{
-    sint16 res;
-    __asm__ volatile ("sh  %1,%1,16    \n                      cls  %0,%1":"=d"(res):"d"(a):"memory");
-
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) float Ifx__fract_to_float(fract a)
-{
-    float res;
-    __asm__ volatile ("q31tof  %0,%1,%2":"=d"(res):"d"(a), "d"(0):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) fract Ifx__float_to_fract(float a)
-{
-    fract res;
-    __asm__ volatile ("ftoq31  %0,%1,%2":"=d"(res):"d"(a), "d"(0):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__fract_to_sfract(fract a)
-{
-    sfract res;
-    __asm__ volatile ("mov.u  %0,0x8000        \n                    adds  %0,%1              \n                    extr  %0,%0,0x10,0x10 "
-
-
-                      :"=&d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__float_to_sfract(float a)
-{
-    fract tmp = Ifx__float_to_fract(a);
-    return Ifx__fract_to_sfract(tmp);
-}
-
-
-
-static inline __attribute__ ((always_inline)) fract Ifx__getfract(laccum a)
-{
-    fract res;
-    __asm__ volatile ("dextr  %0,%H1,%L1,0x11":"=&d" (res):"d" (a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__mac_r_sf(sfract a, sfract b, sfract c)
-{
-    sfract res;
-    __asm__ volatile ("sh  %1,%1,16        \n                       maddrs.q  %0,%1,%2L,%3L,1        \n                       sh %0,%0,-16":"=d"(res):"d"(a),
-
-                                                       "d"(b), "d"(c):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__mac_sf(sfract a, sfract b, sfract c)
-{
-    sfract res;
-    __asm__ volatile ("sh  %1,%1,16        \n                      madds.q  %0,%1,%2L,%3L,1        \n                      sh %0,%0,-16":"=d"(res):"d"(a),
-
-                                                      "d"(b), "d"(c):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) long Ifx__mulfractfract(fract a, fract b)
-{
-    long res;
-    __asm__ volatile ("mul.q %0,%1,%2,1":"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) long Ifx__mulfractlong(fract a, long b)
-{
-    long res;
-    __asm__ volatile ("mul.q %0,%1,%2,1":"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__round16(fract a)
-{
-    sfract res;
-    __asm__ volatile ("mov.u  %0,0x8000        \n                    adds  %0,%1              \n                    insert  %0,%0,0,0,0x10 \n					sh  %0,%0,-16"
-
-
-
-                      :"=&d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__s16_to_sfract(sint16 a)
-{
-    sfract res;
-    __asm__ volatile ("sh  %0,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
-
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__sfract_to_s16(sfract a)
-{
-    sint16 res;
-    __asm__ volatile ("sh  %1,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
-
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint16 Ifx__sfract_to_u16(sfract a)
-{
+    uint32 temp = pwd;
     uint16 res;
-    __asm__ volatile ("sh  %1,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
 
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) laccum Ifx__shaaccum(laccum a, sint32 b)
-{
-    laccum res;
-    __asm__ volatile ("jge   %2,0,0f        \n                    sha   %H0,%H1,%2     \n                    rsub  %2,%2,0        \n                    dextr %L0,%H1,%L1,%2 \n                    j  1f                \n                    0:dextr %H0,%H1,%L1,%2 \n                    sha   %L0,%L1,%2     \n                    1:"
-
-
-
-
-
-
-
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) fract Ifx__shafracts(fract a, sint32 b)
-{
-    fract res;
-    __asm__ volatile ("shas  %0,%1,%2":"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__shasfracts(sfract a, sint32 b)
-{
-    sfract res;
-    __asm__ volatile ("shas  %0,%1,%2":"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sfract Ifx__u16_to_sfract(uint16 a)
-{
-    sfract res;
-    __asm__ volatile ("sh  %0,%1,16    \n                       sh  %0,%1,-16":"=d"(res):"d"(a):"memory");
-
-    return res;
-}
-# 430 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__extr(sint32 a, uint32 p, uint32 w)
-{
-    sint32 res;
-    __asm__ volatile ("mov %%d14,%2  \n                     mov %%d15,%3  \n                     extr %0,%1,%%e14"
-
-
-                      : "=d" (res) : "d" (a), "d" (p), "d" (w):"d14", "d15");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__extru(uint32 a, uint32 p, uint32 w)
-{
-    uint32 res;
-    __asm__ volatile ("mov %%d14,%2  \n                     mov %%d15,%3  \n                     extr.u %0,%1,%%e14"
-
-
-                      : "=d" (res) : "d" (a), "d" (p), "d" (w):"d14", "d15");
-    return res;
-}
-# 468 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__ins(sint32 trg, const sint32 trgbit, sint32 src, const sint32 srcbit)
-{
-    sint32 res;
-    __asm__ volatile ("ins.t %0,%1,%2,%3,%4":"=d"(res):"d"(trg), "i"(trgbit), "d"(src), "i"(srcbit));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__insert(sint32 a, sint32 b, sint32 p, const sint32 w)
-{
-    sint32 res;
-    __asm__ volatile ("mov %%d14,%3  \n                     mov %%d15,%4  \n                     insert %0,%1,%2,%%e14"
-
-
-                      :"=d"(res):"d"(a), "d"(b), "d"(p), "d"(w):"d14", "d15");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__insn(sint32 trg, const sint32 trgbit, sint32 src, const sint32 srcbit)
-{
-    sint32 res;
-    __asm__ volatile ("insn.t %0,%1,%2,%3,%4":"=d"(res):"d"(trg), "i"(trgbit), "d"(src), "i"(srcbit));
-    return res;
-}
-# 520 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__disable_and_save(void)
-{
-    sint32 res;
-    __asm__ volatile("disable %0":"=d"(res));
-    return res;
-}
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__restore(sint32 ie)
-{
-    __asm__ volatile ("restore %0"::"d"(ie));
-}
-# 554 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) void Ifx__cacheawi(uint8* p)
-{
-    __asm__ volatile("cachea.wi [%0]0"::"a"(p));
-}
-
-
-static inline __attribute__ ((always_inline)) void Ifx__cacheiwi(uint8* p)
-{
-    __asm__ volatile("cachei.wi [%0]0"::"a"(p));
-}
-
-
-
-
-static inline __attribute__ ((always_inline)) uint8* Ifx__cacheawi_bo_post_inc(uint8* p)
-{
-    __asm__ volatile("cachea.wi  [%0+]0"::"a"(p));
-    return p;
-}
-
-
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__mulsc(sint32 a, sint32 b, sint32 offset)
-{
-    sint32 res;
-    __asm__ volatile("mul  %%e12,%1,%2      \n                    dextr  %0,%%d13,%%d12,%3"
-
-                     :"=d"(res):"d"(a), "d"(b), "d"(offset):"d12", "d13");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__rol(uint32 operand, uint32 count)
-{
-    uint32 res;
-    __asm__ volatile("dextr  %0,%1,%1,%2":"=d"(res):"d"(operand), "d"(count):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__ror(uint32 operand, uint32 count)
-{
-    uint32 res;
-    __asm__ volatile("rsub %2,%2,0 \n                    dextr  %0,%1,%1,%2"
-
-                     :"=d"(res):"d"(operand), "d"(count):"memory");
-    return res;
-}
-# 616 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) __packb Ifx__absb(__packb a)
-{
-    __packb res;
-    __asm__ volatile ("abs.b %0,%1"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__absh(__packhw a)
-{
-    __packhw res;
-    __asm__ volatile ("abs.h %0,%1"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__abssh(__packhw a)
-{
-    __packb res;
-    __asm__ volatile ("abss.h %0,%1"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte1(__packb a)
-{
-    sint8 res;
-    __asm__ volatile ("extr  %0,%1,0,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte2(__packb a)
-{
-    sint8 res;
-    __asm__ volatile ("extr  %0,%1,8,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte3(__packb a)
-{
-    sint8 res;
-    __asm__ volatile ("extr  %0,%1,16,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__extractbyte4(__packb a)
-{
-    sint8 res;
-    __asm__ volatile ("extr  %0,%1,24,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__extracthw1(__packhw a)
-{
-    sint16 res;
-    __asm__ volatile ("extr  %0,%1,0,16"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__extracthw2(__packhw a)
-{
-    sint16 res;
-    __asm__ volatile ("extr  %0,%1,16,16"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte1(__upackb a)
-{
-    uint8 res;
-    __asm__ volatile ("extr  %0,%1,0,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte2(__upackb a)
-{
-    uint8 res;
-    __asm__ volatile ("extr  %0,%1,8,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte3(__upackb a)
-{
-    uint8 res;
-    __asm__ volatile ("extr  %0,%1,16,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__extractubyte4(__upackb a)
-{
-    uint8 res;
-    __asm__ volatile ("extr  %0,%1,24,8"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint16 Ifx__extractuhw1(__upackhw a)
-{
-    uint16 res;
-    __asm__ volatile ("extr  %0,%1,0,16"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint16 Ifx__extractuhw2(__upackhw a)
-{
-    uint16 res;
-    __asm__ volatile ("extr  %0,%1,16,16"
-                      :"=d"(res):"d"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte1(__packb* a)
-{
-    sint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte2(__packb* a)
-{
-    sint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,8,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte3(__packb* a)
-{
-    sint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__getbyte4(__packb* a)
-{
-    sint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,24,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__gethw1(__packhw* a)
-{
-    sint16 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,16"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__gethw2(__packhw* a)
-{
-    sint16 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,16"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte1(__upackb* a)
-{
-    uint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte2(__upackb* a)
-{
-    uint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,8,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte3(__upackb* a)
-{
-    uint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__getubyte4(__upackb* a)
-{
-    uint8 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,24,8"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint16 Ifx__getuhw1(__upackhw* a)
-{
-    uint16 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,0,16"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint16 Ifx__getuhw2(__upackhw* a)
-{
-    uint16 res;
-    __asm__ volatile ("ld.w  %0,[%1]0 \n                     extr  %0,%0,16,16"
-
-                      :"=d"(res):"a"(a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__initpackb(sint32 a, sint32 b, sint32 c, sint32 d)
-{
-    __packb res;
-    __asm__ volatile ("insert  %3,%3,%4,8,8   \n                    insert  %4,%1,%2,8,8   \n                    insert  %0,%4,%3,16,16 "
-
-
-                      :"=d"(res):"d"(a), "d"(b), "d"(c), "d"(d):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__initpackbl(long a)
-{
-    return (__packb) a;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__initpackhw(sint16 a, sint16 b)
-{
-    __packhw res;
-    __asm__ volatile ("insert  %0,%1,%2,16,16"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__initpackhwl(long a)
-{
-    return a;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackb Ifx__initupackb( uint32 a, uint32 b, uint32 c, uint32 d)
-{
-    __upackb res;
-    __asm__ volatile ("insert  %3,%3,%4,8,8   \n                    insert  %1,%1,%2,8,8   \n                    insert  %0,%1,%3,16,16"
-
-
-                      :"=d"(res):"d"(a), "d"(b), "d"(c), "d"(d):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackhw Ifx__initupackhw( uint16 a, uint16 b)
-{
-    __upackhw res;
-    __asm__ volatile ("insert  %0,%1,%2,16,16"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte1(__packb a, sint8 b)
-{
-    __packb res;
-    __asm__ volatile ("insert  %0,%1,%2,0,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte2(__packb a, sint8 b)
-{
-    __packb res;
-    __asm__ volatile ("insert  %0,%1,%2,8,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte3(__packb a, sint8 b)
-{
-    __packb res;
-    __asm__ volatile ("insert  %0,%1,%2,16,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__insertbyte4(__packb a, sint8 b)
-{
-    __packb res;
-    __asm__ volatile ("insert  %0,%1,%2,24,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte1( __upackb a, uint8 b)
-{
-    __upackb res;
-    __asm__ volatile ("insert  %0,%1,%2,0,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte2( __upackb a, uint8 b)
-{
-    __upackb res;
-    __asm__ volatile ("insert  %0,%1,%2,8,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte3( __upackb a, uint8 b)
-{
-    __upackb res;
-    __asm__ volatile ("insert  %0,%1,%2,16,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackb Ifx__insertubyte4( __upackb a, uint8 b)
-{
-    __upackb res;
-    __asm__ volatile ("insert  %0,%1,%2,24,8"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__inserthw1(__packhw a, sint16 b)
-{
-    __packhw res;
-    __asm__ volatile ("insert  %0,%1,%2,0,16"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__inserthw2(__packhw a, sint16 b)
-{
-    __packhw res;
-    __asm__ volatile ("insert  %0,%1,%2,16,16"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackhw Ifx__insertuhw1( __upackhw a, uint16 b)
-{
-    __upackhw res;
-    __asm__ volatile ("insert  %0,%1,%2,0,16"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackhw Ifx__insertuhw2( __upackhw a, uint16 b)
-{
-    __upackhw res;
-    __asm__ volatile ("insert  %0,%1,%2,16,16"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packb Ifx__minb(__packb a, __packb b)
-{
-    __packb res;
-    __asm__ volatile ("min.b %0,%1,%2"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackb Ifx__minbu( __upackb a, __upackb b)
-{
-    __upackb res;
-    __asm__ volatile ("min.bu %0,%1,%2"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __packhw Ifx__minh(__packhw a, __packhw b)
-{
-    __packhw res;
-    __asm__ volatile ("min.h %0,%1,%2"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) __upackhw Ifx__minhu( __upackhw a, __upackhw b)
-{
-    __upackhw res;
-    __asm__ volatile ("min.hu %0,%1,%2"
-                      :"=d"(res):"d"(a), "d"(b):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setbyte1(__packb* a, sint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setbyte2(__packb* a, sint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,8,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setbyte3(__packb* a, sint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setbyte4(__packb* a, sint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,24,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__sethw1(__packhw* a, sint16 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,16 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__sethw2(__packhw* a, sint16 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,16 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setubyte1(__upackb* a, uint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setubyte2(__upackb* a, uint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,8,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setubyte3(__upackb* a, uint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setubyte4(__upackb* a, uint8 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,24,8 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setuhw1(__upackhw* a, uint16 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,0,16 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__setuhw2(__upackhw* a, uint16 b)
-{
-    __asm__ volatile ("ld.w  %%d15,[%0] \n                    insert  %%d15,%%d15,%1,16,16 \n                    st.w [%0],%%d15"
-
-
-                      ::"a"(a), "d"(b):"d15", "memory");
-}
-# 1251 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__absdif(sint32 a, sint32 b)
-{
-    sint32 res;
-    __asm__ volatile ("absdif %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__abss(sint32 a)
-{
-    sint32 res;
-    __asm__ volatile ("abss %0, %1": "=d" (res) : "d" (a));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__clo(sint32 a)
-{
-    sint32 res;
-    __asm__ volatile ("clo %0,%1":"=d"(res):"d"(a));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__cls(sint32 a)
-{
-    sint32 res;
-    __asm__ volatile ("cls %0,%1":"=d"(res):"d"(a));
-    return res;
-}
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) double Ifx__fabs(double d)
-{
-    double res;
-    __asm__ volatile ("insert  %0,%1,0,31,1": "=d" (res) : "d" (d):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) float Ifx__fabsf(float f)
-{
-    float res;
-    __asm__ volatile ("insert  %0,%1,0,31,1": "=d" (res) : "d" (f):"memory");
-    return res;
-}
-# 1322 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__parity(sint32 a)
-{
-    sint32 res;
-    __asm__ volatile ("parity  %0,%1": "=d" (res) : "d" (a):"memory");
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint8 Ifx__satb(sint32 a)
-{
-    sint8 res;
-    __asm__ volatile ("sat.b %0,%1":"=d"(res):"d"(a));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint8 Ifx__satbu(sint32 a)
-{
-    uint8 res;
-    __asm__ volatile ("sat.bu %0,%1":"=d"(res):"d"(a));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint16 Ifx__sath(sint32 a)
-{
-    sint8 res;
-    __asm__ volatile ("sat.h %0,%1":"=d"(res):"d"(a));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint16 Ifx__sathu(sint32 a)
-{
-    sint8 res;
-    __asm__ volatile ("sat.hu %0,%1":"=d"(res):"d"(a));
-    return res;
-}
-# 1375 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) sint32 Ifx__adds(sint32 a, sint32 b)
-{
-    sint32 res;
-    __asm__ volatile ("adds %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__addsu(uint32 a, uint32 b)
-{
-    uint32 res;
-    __asm__ volatile ("adds.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
-
-
-static inline __attribute__ ((always_inline)) sint32 Ifx__subs(sint32 a, sint32 b)
-{
-    sint32 res;
-    __asm__ volatile ("subs %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
-    return res;
-}
-
+    __asm("xor.t  %0,%1,13,%1,12 \n           xor.t  %0,%0,0,%1,11  \n           sh.xor.t %1,%0,0,%1,1  \n           extr.u %0,%1,0,14     \n"
 
 
-static inline __attribute__ ((always_inline)) uint32 Ifx__subsu(uint32 a, uint32 b)
-{
-    uint32 res;
-    __asm__ volatile ("subs.u %0, %1, %2": "=d" (res) : "d" (a), "d" (b));
+                                     : "=&d" (res) : "d" (temp));
     return res;
-}
-# 1421 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) void Ifx__debug(void)
-{
-    __asm__ volatile ("debug" : : : "memory");
-}
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__dsync(void)
-{
-    __asm__ volatile ("dsync" : : : "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__isync(void)
-{
-    __asm__ volatile ("isync" : : : "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__ldmst(volatile void* address, uint32 mask, uint32 value)
-{
-    __asm__ volatile("mov %H2,%1 \n                  ldmst [%0]0,%A2"
-
-                     ::"a"(address), "d"(mask), "d"((long long)value));
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__nop(void)
-{
-    __asm__ volatile ("nop" : : : "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__nops(void* cnt)
-{
-    __asm__ volatile ("0: nop \n        loop %0,0b"
-
-                      ::"a"(((sint8*)cnt)-1));
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__rslcx(void)
-{
-    __asm__ volatile ("rslcx" : : : "memory");
-}
-
-
-
-static inline __attribute__ ((always_inline)) void Ifx__svlcx(void)
-{
-    __asm__ volatile ("svlcx" : : : "memory");
-}
-
 
-
-static inline __attribute__ ((always_inline)) uint32 Ifx__swap(void* place, uint32 value)
-{
-    uint32 res;
-    __asm__ volatile("swap.w [%1]0,%2":"=d"(res):"a"(place), "0"(value));
-    return res;
 }
-# 1505 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) void Ifx__stopPerfCounters(void)
+# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
+# 86 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+typedef struct
 {
-    __asm__ volatile("mov %%d0,0\n                  mtcr 0xFC00,%%d0\n                  isync\n"
+    uint16 password;
+    uint16 reload;
+    IfxScu_WDTCON1_IR inputFrequency;
+    boolean disableWatchdog;
+    boolean enableSmuRestriction;
+    boolean enableAutomaticPasswordChange;
+    boolean enableTimerCheck;
+    boolean enableTimerCheckTolerance;
+    boolean clrInternalResetFlag;
+} IfxScuWdt_Config;
+# 113 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_initConfig(IfxScuWdt_Config *config);
+# 126 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_initCpuWatchdog(Ifx_SCU_WDTCPU *wdt, const IfxScuWdt_Config *config);
+# 139 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_initSafetyWatchdog(Ifx_SCU_WDTS *wdt, const IfxScuWdt_Config *config);
+# 162 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+static inline __attribute__ ((always_inline)) void IfxScuWdt_clearCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password);
+# 175 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+static inline __attribute__ ((always_inline)) void IfxScuWdt_clearSafetyEndinitInline(uint16 password);
+# 187 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+static inline __attribute__ ((always_inline)) void IfxScuWdt_setCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password);
+# 198 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+static inline __attribute__ ((always_inline)) void IfxScuWdt_setSafetyEndinitInline(uint16 password);
+# 214 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_clearCpuEndinit(uint16 password);
+# 226 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_clearSafetyEndinit(uint16 password);
+# 236 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_setCpuEndinit(uint16 password);
+# 246 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_setSafetyEndinit(uint16 password);
+# 266 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getCpuWatchdogPasswordInline(Ifx_SCU_WDTCPU *watchdog);
 
 
-            : : :"d0");
-}
 
 
 
+static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getCpuWatchdogEndInitInline(Ifx_SCU_WDTCPU *watchdog);
 
 
 
 
-static inline __attribute__ ((always_inline)) unsigned int Ifx__cmpAndSwap (unsigned int volatile *address,
-           unsigned int value, unsigned int condition)
-{
+static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getSafetyWatchdogEndInit(void);
+# 287 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getSafetyWatchdogPasswordInline(void);
+# 301 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_changeCpuWatchdogPassword(uint16 password, uint16 newPassword);
+# 312 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_changeCpuWatchdogReload(uint16 password, uint16 reload);
+# 322 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_changeSafetyWatchdogPassword(uint16 password, uint16 newPassword);
+# 333 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_changeSafetyWatchdogReload(uint16 password, uint16 reload);
+# 343 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_disableCpuWatchdog(uint16 password);
+# 353 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_disableSafetyWatchdog(uint16 password);
+# 363 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_enableCpuWatchdog(uint16 password);
+# 373 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_enableSafetyWatchdog(uint16 password);
+# 382 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern uint16 IfxScuWdt_getCpuWatchdogPassword(void);
 
-  __extension__ unsigned long long reg64
-    = value | (unsigned long long) condition << 32;
 
-  __asm__ __volatile__ ("cmpswap.w [%[addr]]0, %A[reg]"
-                        : [reg] "+d" (reg64)
-                        : [addr] "a" (address)
-                        : "memory");
-    return reg64;
-}
-# 1544 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsGnuc.h"
-static inline __attribute__ ((always_inline)) float32 Ifx__fixpoint_to_float32(fract value, sint32 shift)
-{
-    float32 result;
 
-    __asm__ volatile("q31tof %0, %1, %2": "=d" (result) : "d" (value), "d" (shift));
-    return result;
-}
 
-static inline __attribute__ ((always_inline)) void* Ifx__getA11(void)
-{
-    uint32 *res;
-    __asm__ volatile ("mov.aa %0, %%a11": "=a" (res) : :"a11");
-    return res;
-}
+extern boolean IfxScuWdt_getCpuWatchdogEndInit(void);
+# 396 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern uint16 IfxScuWdt_getSafetyWatchdogPassword(void);
+# 406 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_serviceCpuWatchdog(uint16 password);
+# 416 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern void IfxScuWdt_serviceSafetyWatchdog(uint16 password);
+# 428 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+extern boolean IfxScuWdt_enableWatchdogWithDebugger(void);
 
-static inline __attribute__ ((always_inline)) void Ifx__setStackPointer(void *stackAddr)
-{
-    __asm__ volatile ("mov.aa %%a10, %0": : "a" (stackAddr) :"a10");
-}
 
-static inline __attribute__ ((always_inline)) uint32 Ifx__crc32(uint32 b, uint32 a)
-{
-    uint32 returnvalue = 0;
 
-    __asm__ volatile ("CRC32 %0,%1,%2" : "=d" (returnvalue) : "d"(b), "d"(a));
 
-   return returnvalue;
-}
 
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_calculateCrc32(uint32 *startaddress, uint8 length)
+static inline __attribute__ ((always_inline)) void IfxScuWdt_clearCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password)
 {
-    uint32 returnvalue = 0;
-    for (;length > 0; length--)
+    if (watchdog->CON0.B.LCK)
     {
 
-        __asm__ ("CRC32 %0,%0,%1" : "+d" (returnvalue) : "d" (*startaddress));
-        startaddress++;
+        watchdog->CON0.U = (1 << (0u)) |
+                           (0 << (1u)) |
+                           (password << (2u)) |
+                           (watchdog->CON0.B.REL << (16u));
     }
-    return returnvalue;
+
+
+    watchdog->CON0.U = (0 << (0u)) |
+                       (1 << (1u)) |
+                       (password << (2u)) |
+                       (watchdog->CON0.B.REL << (16u));
+
+
+    while (watchdog->CON0.B.ENDINIT == 1)
+    {}
 }
 
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getRandomVal(uint32 a, uint32 x, uint32 m)
+
+static inline __attribute__ ((always_inline)) void IfxScuWdt_clearSafetyEndinitInline(uint16 password)
 {
- uint32 result;
-    __asm("      mul.u     %%e14,%1,%2       # d15 = Eh; d14 = El    \n"
-        "        mov       %%d12,%%d14       #   e12 = El            \n"
-        "        mov       %%d13, 0          #                       \n"
-        "        madd.u    %%e14,%%e12,%%d15, 5 # e14 = El + 5 * d15    \n"
-        " cmp_m_%=: jge.u     %%d14,%3,sub_m_%=    #                       \n"
-        "        jz        %%d15,done_%=        #                       \n"
-        " sub_m_%=: subx      %%d14,%%d14,%3    #  e12=e12-m            \n"
-        "        subc      %%d15,%%d15,%%d13 # d13=d13-0             \n"
-        "        loopu     cmp_m_%=             #                       \n"
-        " done_%=:  mov       %0,%%d14          #                       \n"
-        : "=d"(result) : "d"(a), "d"(x), "d"(m) : "d12","d13","d14","d15");
-    return result;
+    if ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.LCK)
+    {
+
+        (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (1 << (0u)) |
+                          (0 << (1u)) |
+                          (password << (2u)) |
+                          ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
+    }
+
+
+    (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (0 << (0u)) |
+                      (1 << (1u)) |
+                      (password << (2u)) |
+                      ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
+
+
+    while ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.ENDINIT == 1)
+    {}
 }
 
-static inline __attribute__ ((always_inline)) sint32 Ifx__popcnt(sint32 a)
+
+static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getCpuWatchdogPasswordInline(Ifx_SCU_WDTCPU *watchdog)
 {
- sint32 res;
- __asm__ volatile ("popcnt %0,%1":"=d"(res):"d"(a));
-  return res;
+    uint16 password;
+
+
+
+
+    password = watchdog->CON0.B.PW;
+    password ^= 0x003F;
+
+    return password;
 }
 
 
-
-static inline __attribute__ ((always_inline)) void Ifx__cacheai(uint8* p)
+static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getCpuWatchdogEndInitInline(Ifx_SCU_WDTCPU *watchdog)
 {
-    __asm__ volatile("cachea.i [%0]0"::"a"(p));
+    return (boolean)watchdog->CON0.B.ENDINIT;
 }
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h" 2
-# 87 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu_Intrinsics.h"
-static inline __attribute__ ((always_inline)) void *__cx_to_addr(uint32 cx)
+
+
+static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getSafetyWatchdogEndInit(void)
 {
-    uint32 seg_nr = Ifx__extru(cx, 16, 4);
-    return (void *)Ifx__insert(seg_nr << 28, cx, 6, 16);
+    return (boolean)(*(Ifx_SCU*)0xF0036000u).WDTS.CON0.B.ENDINIT;
 }
 
 
-
-
-
-
-static inline __attribute__ ((always_inline)) uint32 __addr_to_cx(void *addr)
+static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getSafetyWatchdogPasswordInline(void)
 {
-    uint32 seg_nr, seg_idx;
-    seg_nr = Ifx__extru((int)addr, 28, 4) << 16;
-    seg_idx = Ifx__extru((int)addr, 6, 16);
-    return seg_nr | seg_idx;
+    uint16 password;
+    Ifx_SCU_WDTS *watchdog = &(*(Ifx_SCU*)0xF0036000u).WDTS;
+
+
+
+
+    password = watchdog->CON0.B.PW;
+    password ^= 0x003F;
+
+    return password;
 }
 
 
-
-static inline __attribute__ ((always_inline)) void __ldmst_c(volatile void *address, unsigned mask, unsigned value)
+static inline __attribute__ ((always_inline)) void IfxScuWdt_setCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password)
 {
-    *(volatile uint32 *)address = (*(volatile uint32 *)address & ~(mask)) | (mask & value);
+    if (watchdog->CON0.B.LCK)
+    {
+
+        watchdog->CON0.U = (1 << (0u)) |
+                           (0 << (1u)) |
+                           (password << (2u)) |
+                           (watchdog->CON0.B.REL << (16u));
+    }
+
+
+    watchdog->CON0.U = (1 << (0u)) |
+                       (1 << (1u)) |
+                       (password << (2u)) |
+                       (watchdog->CON0.B.REL << (16u));
+
+
+    while (watchdog->CON0.B.ENDINIT == 0)
+    {}
 }
 
 
-
-
-static inline __attribute__ ((always_inline)) uint32 __ld32(void *addr)
+static inline __attribute__ ((always_inline)) void IfxScuWdt_setSafetyEndinitInline(uint16 password)
 {
-    return *(volatile uint32 *)addr;
+    if ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.LCK)
+    {
+
+        (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (1 << (0u)) |
+                          (0 << (1u)) |
+                          (password << (2u)) |
+                          ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
+    }
+
+
+    (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (1 << (0u)) |
+                      (1 << (1u)) |
+                      (password << (2u)) |
+                      ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
+
+
+    while ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.ENDINIT == 0)
+    {}
 }
-
-
-
-
-static inline __attribute__ ((always_inline)) void __st32(void *addr, uint32 value)
-{
-    *(volatile uint32 *)addr = value;
-}
-
-
-
-
-static inline __attribute__ ((always_inline)) uint64 __ld64(void *addr)
-{
-    return *(volatile uint64 *)addr;
-}
-
-
-
-
-static inline __attribute__ ((always_inline)) void __st64(void *addr, uint64 value)
-{
-    *(volatile uint64 *)addr = value;
-}
-
-
-
-
-static inline __attribute__ ((always_inline)) void __ld64_lu(void *addr, uint32 *valueLower, uint32 *valueUpper)
-{
-    register uint64 value;
-    value = __ld64(addr);
-    *valueLower = (uint32)value;
-    *valueUpper = (uint32)(value >> 32);
-}
-
-
-
-
-static inline __attribute__ ((always_inline)) void __st64_lu(void *addr, uint32 valueLower, uint32 valueUpper)
-{
-    register uint64 value = ((uint64)valueUpper << 32) | valueLower;
-    __st64(addr, value);
-}
-# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 1
-# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 1
-# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
-# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 2
+# 124 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 1
+# 67 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 1
+# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 1
+# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 1
+# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\Ifx_TypesReg.h" 1
+# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h" 2
 
 
 
@@ -5077,7 +5764,7 @@ typedef union
     signed int I;
     Ifx_CPU_TRIG_ACC_Bits B;
 } Ifx_CPU_TRIG_ACC;
-# 1292 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
+# 1292 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
 typedef volatile struct _Ifx_CPU_CPR
 {
     Ifx_CPU_CPR_L CL;
@@ -5113,7 +5800,7 @@ typedef volatile struct _Ifx_CPU_TR
     Ifx_CPU_TR_EVT EVT;
     Ifx_CPU_TR_ADR ADR;
 } Ifx_CPU_TR;
-# 1339 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
+# 1339 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_regdef.h"
 typedef volatile struct _Ifx_CPU
 {
     unsigned char reserved_0[4144];
@@ -5218,9 +5905,9 @@ typedef volatile struct _Ifx_CPU_SPROT
     Ifx_CPU_SPROT_ACCENB ACCENB;
     unsigned char reserved_E108[7928];
 } Ifx_CPU_SPROT;
-# 73 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 2
-# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 2
-# 116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
+# 73 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCpu_reg.h" 2
+# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h" 2
+# 116 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
 typedef enum
 {
     IfxCpu_DBGST_HALT_run = 0,
@@ -5273,11 +5960,11 @@ typedef enum
 
 
 extern const IfxModule_IndexMap IfxCpu_cfg_indexMap[(3)];
-# 68 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 1
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 1
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef struct _Ifx_SRC_SRCR_Bits
 {
     unsigned int SRPN:8;
@@ -5309,7 +5996,7 @@ typedef union
     signed int I;
     Ifx_SRC_SRCR_Bits B;
 } Ifx_SRC_SRCR;
-# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef volatile struct _Ifx_SRC_AGBT
 {
     Ifx_SRC_SRCR SR;
@@ -5594,7 +6281,7 @@ typedef volatile struct _Ifx_SRC_XBAR
 {
     Ifx_SRC_SRCR SRC;
 } Ifx_SRC_XBAR;
-# 400 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 400 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef volatile struct _Ifx_SRC_GAGBT
 {
     Ifx_SRC_AGBT AGBT[1];
@@ -5800,7 +6487,7 @@ typedef volatile struct _Ifx_SRC_GXBAR
 {
     Ifx_SRC_XBAR XBAR;
 } Ifx_SRC_GXBAR;
-# 617 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
+# 617 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_regdef.h"
 typedef volatile struct _Ifx_SRC
 {
     Ifx_SRC_GCPU CPU;
@@ -5868,678 +6555,671 @@ typedef volatile struct _Ifx_SRC
     Ifx_SRC_GGTM GTM;
     unsigned char reserved_1F50[176];
 } Ifx_SRC;
-# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 2
-# 69 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxSrc_reg.h" 2
+# 69 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
 
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 1
-# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
-typedef struct _Ifx_STM_ACCEN0_Bits
+
+
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\_Utilities/Ifx_Assert.h" 1
+# 73 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
+# 75 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
+# 111 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+typedef unsigned int IfxCpu_spinLock;
+
+
+
+typedef unsigned int IfxCpu_mutexLock;
+
+
+
+typedef unsigned int IfxCpu_syncEvent;
+# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+typedef enum
 {
-    unsigned int EN0:1;
-    unsigned int EN1:1;
-    unsigned int EN2:1;
-    unsigned int EN3:1;
-    unsigned int EN4:1;
-    unsigned int EN5:1;
-    unsigned int EN6:1;
-    unsigned int EN7:1;
-    unsigned int EN8:1;
-    unsigned int EN9:1;
-    unsigned int EN10:1;
-    unsigned int EN11:1;
-    unsigned int EN12:1;
-    unsigned int EN13:1;
-    unsigned int EN14:1;
-    unsigned int EN15:1;
-    unsigned int EN16:1;
-    unsigned int EN17:1;
-    unsigned int EN18:1;
-    unsigned int EN19:1;
-    unsigned int EN20:1;
-    unsigned int EN21:1;
-    unsigned int EN22:1;
-    unsigned int EN23:1;
-    unsigned int EN24:1;
-    unsigned int EN25:1;
-    unsigned int EN26:1;
-    unsigned int EN27:1;
-    unsigned int EN28:1;
-    unsigned int EN29:1;
-    unsigned int EN30:1;
-    unsigned int EN31:1;
-} Ifx_STM_ACCEN0_Bits;
+    IfxCpu_CoreMode_halt,
+    IfxCpu_CoreMode_run,
+    IfxCpu_CoreMode_idle,
+    IfxCpu_CoreMode_sleep,
+    IfxCpu_CoreMode_stby,
+    IfxCpu_CoreMode_unknown
+} IfxCpu_CoreMode;
 
 
-typedef struct _Ifx_STM_ACCEN1_Bits
+
+typedef enum
 {
-    unsigned int reserved_0:32;
-} Ifx_STM_ACCEN1_Bits;
-
-
-typedef struct _Ifx_STM_CAP_Bits
-{
-    unsigned int STMCAP63_32:32;
-} Ifx_STM_CAP_Bits;
-
-
-typedef struct _Ifx_STM_CAPSV_Bits
-{
-    unsigned int STMCAP63_32:32;
-} Ifx_STM_CAPSV_Bits;
-
-
-typedef struct _Ifx_STM_CLC_Bits
-{
-    unsigned int DISR:1;
-    unsigned int DISS:1;
-    unsigned int reserved_2:1;
-    unsigned int EDIS:1;
-    unsigned int reserved_4:28;
-} Ifx_STM_CLC_Bits;
-
-
-typedef struct _Ifx_STM_CMCON_Bits
-{
-    unsigned int MSIZE0:5;
-    unsigned int reserved_5:3;
-    unsigned int MSTART0:5;
-    unsigned int reserved_13:3;
-    unsigned int MSIZE1:5;
-    unsigned int reserved_21:3;
-    unsigned int MSTART1:5;
-    unsigned int reserved_29:3;
-} Ifx_STM_CMCON_Bits;
-
-
-typedef struct _Ifx_STM_CMP_Bits
-{
-    unsigned int CMPVAL:32;
-} Ifx_STM_CMP_Bits;
-
-
-typedef struct _Ifx_STM_ICR_Bits
-{
-    unsigned int CMP0EN:1;
-    unsigned int CMP0IR:1;
-    unsigned int CMP0OS:1;
-    unsigned int reserved_3:1;
-    unsigned int CMP1EN:1;
-    unsigned int CMP1IR:1;
-    unsigned int CMP1OS:1;
-    unsigned int reserved_7:25;
-} Ifx_STM_ICR_Bits;
-
-
-typedef struct _Ifx_STM_ID_Bits
-{
-    unsigned int MODREV:8;
-    unsigned int MODTYPE:8;
-    unsigned int MODNUMBER:16;
-} Ifx_STM_ID_Bits;
-
-
-typedef struct _Ifx_STM_ISCR_Bits
-{
-    unsigned int CMP0IRR:1;
-    unsigned int CMP0IRS:1;
-    unsigned int CMP1IRR:1;
-    unsigned int CMP1IRS:1;
-    unsigned int reserved_4:28;
-} Ifx_STM_ISCR_Bits;
-
-
-typedef struct _Ifx_STM_KRST0_Bits
-{
-    unsigned int RST:1;
-    unsigned int RSTSTAT:1;
-    unsigned int reserved_2:30;
-} Ifx_STM_KRST0_Bits;
-
-
-typedef struct _Ifx_STM_KRST1_Bits
-{
-    unsigned int RST:1;
-    unsigned int reserved_1:31;
-} Ifx_STM_KRST1_Bits;
-
-
-typedef struct _Ifx_STM_KRSTCLR_Bits
-{
-    unsigned int CLR:1;
-    unsigned int reserved_1:31;
-} Ifx_STM_KRSTCLR_Bits;
-
-
-typedef struct _Ifx_STM_OCS_Bits
-{
-    unsigned int reserved_0:24;
-    unsigned int SUS:4;
-    unsigned int SUS_P:1;
-    unsigned int SUSSTA:1;
-    unsigned int reserved_30:2;
-} Ifx_STM_OCS_Bits;
-
-
-typedef struct _Ifx_STM_TIM0_Bits
-{
-    unsigned int STM31_0:32;
-} Ifx_STM_TIM0_Bits;
-
-
-typedef struct _Ifx_STM_TIM0SV_Bits
-{
-    unsigned int STM31_0:32;
-} Ifx_STM_TIM0SV_Bits;
-
-
-typedef struct _Ifx_STM_TIM1_Bits
-{
-    unsigned int STM35_4:32;
-} Ifx_STM_TIM1_Bits;
-
-
-typedef struct _Ifx_STM_TIM2_Bits
-{
-    unsigned int STM39_8:32;
-} Ifx_STM_TIM2_Bits;
-
-
-typedef struct _Ifx_STM_TIM3_Bits
-{
-    unsigned int STM43_12:32;
-} Ifx_STM_TIM3_Bits;
-
-
-typedef struct _Ifx_STM_TIM4_Bits
-{
-    unsigned int STM47_16:32;
-} Ifx_STM_TIM4_Bits;
-
-
-typedef struct _Ifx_STM_TIM5_Bits
-{
-    unsigned int STM51_20:32;
-} Ifx_STM_TIM5_Bits;
-
-
-typedef struct _Ifx_STM_TIM6_Bits
-{
-    unsigned int STM63_32:32;
-} Ifx_STM_TIM6_Bits;
-
-
-
-
-
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_ACCEN0_Bits B;
-} Ifx_STM_ACCEN0;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_ACCEN1_Bits B;
-} Ifx_STM_ACCEN1;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_CAP_Bits B;
-} Ifx_STM_CAP;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_CAPSV_Bits B;
-} Ifx_STM_CAPSV;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_CLC_Bits B;
-} Ifx_STM_CLC;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_CMCON_Bits B;
-} Ifx_STM_CMCON;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_CMP_Bits B;
-} Ifx_STM_CMP;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_ICR_Bits B;
-} Ifx_STM_ICR;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_ID_Bits B;
-} Ifx_STM_ID;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_ISCR_Bits B;
-} Ifx_STM_ISCR;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_KRST0_Bits B;
-} Ifx_STM_KRST0;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_KRST1_Bits B;
-} Ifx_STM_KRST1;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_KRSTCLR_Bits B;
-} Ifx_STM_KRSTCLR;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_OCS_Bits B;
-} Ifx_STM_OCS;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM0_Bits B;
-} Ifx_STM_TIM0;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM0SV_Bits B;
-} Ifx_STM_TIM0SV;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM1_Bits B;
-} Ifx_STM_TIM1;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM2_Bits B;
-} Ifx_STM_TIM2;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM3_Bits B;
-} Ifx_STM_TIM3;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM4_Bits B;
-} Ifx_STM_TIM4;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM5_Bits B;
-} Ifx_STM_TIM5;
-
-
-typedef union
-{
-    unsigned int U;
-    signed int I;
-    Ifx_STM_TIM6_Bits B;
-} Ifx_STM_TIM6;
-# 447 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_regdef.h"
-typedef volatile struct _Ifx_STM
-{
-    Ifx_STM_CLC CLC;
-    unsigned char reserved_4[4];
-    Ifx_STM_ID ID;
-    unsigned char reserved_C[4];
-    Ifx_STM_TIM0 TIM0;
-    Ifx_STM_TIM1 TIM1;
-    Ifx_STM_TIM2 TIM2;
-    Ifx_STM_TIM3 TIM3;
-    Ifx_STM_TIM4 TIM4;
-    Ifx_STM_TIM5 TIM5;
-    Ifx_STM_TIM6 TIM6;
-    Ifx_STM_CAP CAP;
-    Ifx_STM_CMP CMP[2];
-    Ifx_STM_CMCON CMCON;
-    Ifx_STM_ICR ICR;
-    Ifx_STM_ISCR ISCR;
-    unsigned char reserved_44[12];
-    Ifx_STM_TIM0SV TIM0SV;
-    Ifx_STM_CAPSV CAPSV;
-    unsigned char reserved_58[144];
-    Ifx_STM_OCS OCS;
-    Ifx_STM_KRSTCLR KRSTCLR;
-    Ifx_STM_KRST1 KRST1;
-    Ifx_STM_KRST0 KRST0;
-    Ifx_STM_ACCEN1 ACCEN1;
-    Ifx_STM_ACCEN0 ACCEN0;
-} Ifx_STM;
-# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxStm_reg.h" 2
-# 71 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\_Utilities/Ifx_Assert.h" 1
-# 51 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\_Utilities/Ifx_Assert.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
-# 52 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\_Utilities/Ifx_Assert.h" 2
-# 73 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 1
-# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h" 1
-# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.asm.h"
-static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_calculateLfsr(uint16 password);
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_calculateLfsr(uint16 pwd)
-{
-
-    uint32 temp = pwd;
-    uint16 res;
-
-    __asm("xor.t  %0,%1,13,%1,12 \n           xor.t  %0,%0,0,%1,11  \n           sh.xor.t %1,%0,0,%1,1  \n           extr.u %0,%1,0,14     \n"
-
-
-                                     : "=&d" (res) : "d" (temp));
-    return res;
-
-}
-# 68 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h" 2
-# 86 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
+    IfxCpu_CounterMode_normal = 0,
+    IfxCpu_CounterMode_task = 1
+} IfxCpu_CounterMode;
+# 157 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
 typedef struct
 {
-    uint16 password;
-    uint16 reload;
-    IfxScu_WDTCON1_IR inputFrequency;
-    boolean disableWatchdog;
-    boolean enableSmuRestriction;
-    boolean enableAutomaticPasswordChange;
-    boolean enableTimerCheck;
-    boolean enableTimerCheckTolerance;
-    boolean clrInternalResetFlag;
-} IfxScuWdt_Config;
-# 113 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_initConfig(IfxScuWdt_Config *config);
-# 126 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_initCpuWatchdog(Ifx_SCU_WDTCPU *wdt, const IfxScuWdt_Config *config);
-# 139 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_initSafetyWatchdog(Ifx_SCU_WDTS *wdt, const IfxScuWdt_Config *config);
-# 162 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-static inline __attribute__ ((always_inline)) void IfxScuWdt_clearCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password);
-# 175 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-static inline __attribute__ ((always_inline)) void IfxScuWdt_clearSafetyEndinitInline(uint16 password);
-# 187 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-static inline __attribute__ ((always_inline)) void IfxScuWdt_setCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password);
-# 198 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-static inline __attribute__ ((always_inline)) void IfxScuWdt_setSafetyEndinitInline(uint16 password);
-# 214 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_clearCpuEndinit(uint16 password);
-# 226 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_clearSafetyEndinit(uint16 password);
-# 236 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_setCpuEndinit(uint16 password);
-# 246 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_setSafetyEndinit(uint16 password);
-# 266 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getCpuWatchdogPasswordInline(Ifx_SCU_WDTCPU *watchdog);
+    uint32 counter;
+    boolean overlfow;
+} IfxCpu_Counter;
 
 
 
 
 
-static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getCpuWatchdogEndInitInline(Ifx_SCU_WDTCPU *watchdog);
 
 
-
-
-static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getSafetyWatchdogEndInit(void);
-# 287 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getSafetyWatchdogPasswordInline(void);
-# 301 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_changeCpuWatchdogPassword(uint16 password, uint16 newPassword);
-# 312 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_changeCpuWatchdogReload(uint16 password, uint16 reload);
-# 322 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_changeSafetyWatchdogPassword(uint16 password, uint16 newPassword);
-# 333 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_changeSafetyWatchdogReload(uint16 password, uint16 reload);
-# 343 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_disableCpuWatchdog(uint16 password);
-# 353 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_disableSafetyWatchdog(uint16 password);
-# 363 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_enableCpuWatchdog(uint16 password);
-# 373 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_enableSafetyWatchdog(uint16 password);
-# 382 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern uint16 IfxScuWdt_getCpuWatchdogPassword(void);
-
-
-
-
-extern boolean IfxScuWdt_getCpuWatchdogEndInit(void);
-# 396 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern uint16 IfxScuWdt_getSafetyWatchdogPassword(void);
-# 406 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_serviceCpuWatchdog(uint16 password);
-# 416 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern void IfxScuWdt_serviceSafetyWatchdog(uint16 password);
-# 428 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuWdt.h"
-extern boolean IfxScuWdt_enableWatchdogWithDebugger(void);
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxScuWdt_clearCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password)
+typedef struct
 {
-    if (watchdog->CON0.B.LCK)
-    {
+    IfxCpu_Counter instruction;
+    IfxCpu_Counter clock;
+    IfxCpu_Counter counter1;
+    IfxCpu_Counter counter2;
+    IfxCpu_Counter counter3;
+} IfxCpu_Perf;
+# 191 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) Ifx_CPU *IfxCpu_getAddress(IfxCpu_ResourceCpu cpu);
 
-        watchdog->CON0.U = (1 << (0u)) |
-                           (0 << (1u)) |
-                           (password << (2u)) |
-                           (watchdog->CON0.B.REL << (16u));
+
+
+
+
+
+static inline __attribute__ ((always_inline)) IfxCpu_Id IfxCpu_getCoreId(void);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) IfxCpu_ResourceCpu IfxCpu_getCoreIndex(void);
+# 214 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_initCSA(uint32 *csaBegin, uint32 *csaEnd);
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_setSafetyTaskIdentifier(boolean safetyId);
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_triggerSwReset(void);
+# 234 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern IfxCpu_CoreMode IfxCpu_getCoreMode(Ifx_CPU *cpu);
+
+
+
+
+
+extern IfxCpu_ResourceCpu IfxCpu_getIndex(Ifx_CPU *cpu);
+# 249 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern boolean IfxCpu_setCoreMode(Ifx_CPU *cpu, IfxCpu_CoreMode mode);
+# 258 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern boolean IfxCpu_setProgramCounter(Ifx_CPU *cpu, uint32 programCounter);
+# 267 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern boolean IfxCpu_startCore(Ifx_CPU *cpu, uint32 programCounter);
+# 284 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) boolean IfxCpu_areInterruptsEnabled(void);
+# 294 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) boolean IfxCpu_disableInterrupts(void);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_enableInterrupts(void);
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_forceDisableInterrupts(void);
+# 314 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_restoreInterrupts(boolean enabled);
+# 332 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificDataAccessCacheability(uint16 segmentNumberMask, boolean enable);
+# 341 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificInstructionAccessCacheability(uint16 segmentNumberMask, boolean enable);
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_invalidateProgramCache(void);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_isAddressCachable(void *address);
+# 363 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_setDataCache(boolean enable);
+# 374 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_setProgramCache(boolean enable);
+# 391 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getClockCounter(void);
+# 404 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) boolean IfxCpu_getClockCounterStickyOverflow(void);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getInstructionCounter(void);
+# 425 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) boolean IfxCpu_getInstructionCounterStickyOverflow(void);
+
+
+
+
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getPerformanceCounter(uint16 address);
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_getPerformanceCounterStickyOverflow(uint16 address);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_resetAndStartCounters(IfxCpu_CounterMode mode);
+# 457 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_setPerformanceCountersEnableBit(uint32 enable);
+# 466 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) IfxCpu_Perf IfxCpu_stopCounters(void);
+# 476 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_updateClockCounter(uint32 count);
+# 485 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+static inline __attribute__ ((always_inline)) void IfxCpu_updateInstructionCounter(uint32 count);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_updatePerformanceCounter(uint32 address, uint32 count);
+# 520 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern boolean IfxCpu_acquireMutex(IfxCpu_mutexLock *lock);
+# 538 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern void IfxCpu_releaseMutex(IfxCpu_mutexLock *lock);
+
+
+
+
+
+
+
+extern void IfxCpu_resetSpinLock(IfxCpu_spinLock *lock);
+# 565 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern boolean IfxCpu_setSpinLock(IfxCpu_spinLock *lock, uint32 timeoutCount);
+# 580 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern uint32 IfxCpu_getRandomValue(uint32 *seed);
+
+
+
+
+
+
+
+extern uint32 IfxCpu_getRandomValueWithinRange(uint32 *seed, uint32 min, uint32 max);
+# 631 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern boolean IfxCpu_waitEvent(IfxCpu_syncEvent *event, uint32 timeoutMilliSec);
+# 640 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
+extern void IfxCpu_emitEvent(IfxCpu_syncEvent *event);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_areInterruptsEnabled(void)
+{
+    Ifx_CPU_ICR reg;
+    reg.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE2C" : "=d" (__res) :: "memory"); __res; }));
+    return reg.B.IE != 0;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_disableInterrupts(void)
+{
+    boolean enabled;
+    enabled = IfxCpu_areInterruptsEnabled();
+    __asm__ volatile ("disable" : : : "memory");
+    Ifx__nop();
+    return enabled;
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_enableInterrupts(void)
+{
+    __asm__ volatile ("enable" : : : "memory");
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificDataAccessCacheability(uint16 segmentNumberMask, boolean enable)
+{
+    uint32 cpu_pmaVal;
+    uint16 checkRestrictionMask;
+    uint32 coreIndex = IfxCpu_getCoreIndex();
+    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
+
+
+
+    checkRestrictionMask = ((uint16)1 << (7 - coreIndex)) | ((uint16)1 << 0xC);
+
+    if ((segmentNumberMask & checkRestrictionMask) != 0)
+    {
+        segmentNumberMask |= checkRestrictionMask;
     }
 
+    cpu_pmaVal = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0x8100" : "=d" (__res) :: "memory"); __res; }));
 
-    watchdog->CON0.U = (0 << (0u)) |
-                       (1 << (1u)) |
-                       (password << (2u)) |
-                       (watchdog->CON0.B.REL << (16u));
+    cpu_pmaVal = enable ? (cpu_pmaVal | segmentNumberMask) : (cpu_pmaVal & ~segmentNumberMask);
 
 
-    while (watchdog->CON0.B.ENDINIT == 1)
+    IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+
+
+    Ifx__dsync();
+    do { unsigned __newval = (unsigned) (cpu_pmaVal); __asm__ volatile ("mtcr LO:" "0x8100" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    Ifx__isync();
+    IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificInstructionAccessCacheability(uint16 segmentNumberMask, boolean enable)
+{
+    uint32 cpu_pmaVal;
+    uint16 checkRestrictionMask;
+    uint32 coreIndex = IfxCpu_getCoreIndex();
+    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
+
+
+
+    checkRestrictionMask = ((uint16)1 << (7 - coreIndex)) | ((uint16)1 << 0xD);
+
+    if ((segmentNumberMask & checkRestrictionMask) != 0)
+    {
+        segmentNumberMask |= checkRestrictionMask;
+    }
+
+    cpu_pmaVal = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0x8104" : "=d" (__res) :: "memory"); __res; }));
+
+    cpu_pmaVal = enable ? (cpu_pmaVal | segmentNumberMask) : (cpu_pmaVal & ~segmentNumberMask);
+
+
+    IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+
+
+    Ifx__dsync();
+    do { unsigned __newval = (unsigned) (cpu_pmaVal); __asm__ volatile ("mtcr LO:" "0x8104" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    Ifx__isync();
+    IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_forceDisableInterrupts(void)
+{
+    __asm__ volatile ("disable" : : : "memory");
+    Ifx__nop();
+}
+
+
+static inline __attribute__ ((always_inline)) Ifx_CPU *IfxCpu_getAddress(IfxCpu_ResourceCpu cpu)
+{
+    Ifx_CPU *module;
+
+    if (cpu < IfxCpu_ResourceCpu_none)
+    {
+        module = (Ifx_CPU *)IfxCpu_cfg_indexMap[cpu].module;
+    }
+    else
+    {
+        module = ((void *)0);
+    }
+
+    return module;
+}
+
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getClockCounter(void)
+{
+    return IfxCpu_getPerformanceCounter(0xFC04);
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_getClockCounterStickyOverflow(void)
+{
+    return IfxCpu_getPerformanceCounterStickyOverflow(0xFC04);
+}
+
+
+static inline __attribute__ ((always_inline)) IfxCpu_Id IfxCpu_getCoreId(void)
+{
+    Ifx_CPU_CORE_ID reg;
+    reg.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE1C" : "=d" (__res) :: "memory"); __res; }));
+    return (IfxCpu_Id)reg.B.CORE_ID;
+}
+
+
+static inline __attribute__ ((always_inline)) IfxCpu_ResourceCpu IfxCpu_getCoreIndex(void)
+{
+    Ifx_CPU_CORE_ID reg;
+    reg.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE1C" : "=d" (__res) :: "memory"); __res; }));
+    return (IfxCpu_ResourceCpu)reg.B.CORE_ID;
+}
+
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getInstructionCounter(void)
+{
+    return IfxCpu_getPerformanceCounter(0xFC08);
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_getInstructionCounterStickyOverflow(void)
+{
+    return IfxCpu_getPerformanceCounterStickyOverflow(0xFC08);
+}
+
+
+static inline __attribute__ ((always_inline)) uint32 IfxCpu_getPerformanceCounter(uint16 address)
+{
+    Ifx_CPU_CCNT ccnt;
+
+    if (address == 0xFC04)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC04" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC08)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC08" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC0C)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC0C" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC10)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC10" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC14)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC14" : "=d" (__res) :: "memory"); __res; }));
+    }
+
+    return ccnt.B.CountValue;
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_getPerformanceCounterStickyOverflow(uint16 address)
+{
+    Ifx_CPU_CCNT ccnt;
+
+    if (address == 0xFC04)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC04" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC08)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC08" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC0C)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC0C" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC10)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC10" : "=d" (__res) :: "memory"); __res; }));
+    }
+    else if (address == 0xFC14)
+    {
+        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC14" : "=d" (__res) :: "memory"); __res; }));
+    }
+
+    return ccnt.B.SOvf;
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_initCSA(uint32 *csaBegin, uint32 *csaEnd)
+{
+    uint32 k;
+    uint32 nxt_cxi_val = 0;
+    uint32 *prvCsa = 0U;
+    uint32 *nxtCsa = csaBegin;
+    uint32 numOfCsa = (((uint32)csaEnd - (uint32)csaBegin) / 64U);
+
+    for (k = 0; k < numOfCsa; k++)
+    {
+        nxt_cxi_val = ((uint32)nxtCsa & (0XFU << 28)) >> 12 | ((uint32)nxtCsa & (0XFFFFU << 6)) >> 6;
+
+        if (k == 0)
+        {
+            do { unsigned __newval = (unsigned) (nxt_cxi_val); __asm__ volatile ("mtcr LO:" "0xFE38" ", %0" :: "d" (__newval) : "memory"); } while (0);
+        }
+        else
+        {
+            *prvCsa = nxt_cxi_val;
+        }
+
+        if (k == (numOfCsa - 3U))
+        {
+            do { unsigned __newval = (unsigned) (nxt_cxi_val); __asm__ volatile ("mtcr LO:" "0xFE3C" ", %0" :: "d" (__newval) : "memory"); } while (0);
+        }
+
+        prvCsa = (uint32 *)nxtCsa;
+        nxtCsa += 16;
+    }
+
+    *prvCsa = 0;
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_invalidateProgramCache(void)
+{
+    uint16 cpuWdtPassword = IfxScuWdt_getCpuWatchdogPassword();
+    {
+        IfxScuWdt_clearCpuEndinit(cpuWdtPassword);
+        Ifx_CPU_PCON1 pcon1;
+        pcon1.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0x9204" : "=d" (__res) :: "memory"); __res; }));
+        pcon1.B.PCINV = 1;
+        do { unsigned __newval = (unsigned) (pcon1.U); __asm__ volatile ("mtcr LO:" "0x9204" ", %0" :: "d" (__newval) : "memory"); } while (0);
+        IfxScuWdt_setCpuEndinit(cpuWdtPassword);
+    }
+}
+
+
+static inline __attribute__ ((always_inline)) boolean IfxCpu_isAddressCachable(void *address)
+{
+    uint8 segment = (uint32)address >> 24;
+    return ((segment == (8)) || (segment == (9))) ? (1u) : (0u);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_resetAndStartCounters(IfxCpu_CounterMode mode)
+{
+    Ifx_CPU_CCTRL cctrl;
+    cctrl.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC00" : "=d" (__res) :: "memory"); __res; }));
+
+    cctrl.B.CE = 0;
+    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
+
+
+    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC04" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC08" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC0C" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC10" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC14" ", %0" :: "d" (__newval) : "memory"); } while (0);
+
+
+    cctrl.B.CE = 1;
+    cctrl.B.CM = mode;
+    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_restoreInterrupts(boolean enabled)
+{
+    if (enabled != (0u))
+    {
+        __asm__ volatile ("enable" : : : "memory");
+    }
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_setDataCache(boolean enable)
+{
+    uint32 coreIndex = IfxCpu_getCoreIndex();
+    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
+
+    {
+        IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+        Ifx_CPU_DCON0 dcon0;
+        dcon0.U = 0;
+        dcon0.B.DCBYP = enable ? 0 : 1;
+        do { unsigned __newval = (unsigned) (dcon0.U); __asm__ volatile ("mtcr LO:" "0x9040" ", %0" :: "d" (__newval) : "memory"); } while (0);
+        IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+    }
+
+    Ifx__isync();
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_setPerformanceCountersEnableBit(uint32 enable)
+{
+    Ifx_CPU_CCTRL cctrl;
+    cctrl.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC00" : "=d" (__res) :: "memory"); __res; }));
+    cctrl.B.CE = enable;
+    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_setProgramCache(boolean enable)
+{
+    if (enable)
+    {
+        Ifx_CPU_PCON1 pcon1;
+        pcon1.U = 0;
+        pcon1.B.PCINV = 1;
+        do { unsigned __newval = (unsigned) (pcon1.U); __asm__ volatile ("mtcr LO:" "0x9204" ", %0" :: "d" (__newval) : "memory"); } while (0);
+    }
+
+    uint32 coreIndex = IfxCpu_getCoreIndex();
+    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
+
+    {
+        IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+        Ifx_CPU_PCON0 pcon0;
+        pcon0.U = 0;
+        pcon0.B.PCBYP = enable ? 0 : 1;
+        do { unsigned __newval = (unsigned) (pcon0.U); __asm__ volatile ("mtcr LO:" "0x920C" ", %0" :: "d" (__newval) : "memory"); } while (0);
+        IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
+    }
+
+    Ifx__isync();
+}
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_setSafetyTaskIdentifier(boolean safetyId)
+{
+    Ifx_CPU_PSW psw;
+    ((void)0);
+    psw.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE04" : "=d" (__res) :: "memory"); __res; }));
+    psw.B.S = safetyId;
+    do { unsigned __newval = (unsigned) ((uint32)psw.U); __asm__ volatile ("mtcr LO:" "0xFE04" ", %0" :: "d" (__newval) : "memory"); } while (0);
+}
+
+
+
+static inline __attribute__ ((always_inline)) IfxCpu_Perf IfxCpu_stopCounters(void)
+{
+    IfxCpu_Perf result;
+
+
+    Ifx__stopPerfCounters();
+
+    Ifx_CPU_CCNT ccnt;
+    ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC04" : "=d" (__res) :: "memory"); __res; }));
+    result.clock.counter = ccnt.B.CountValue;
+    result.clock.overlfow = ccnt.B.SOvf;
+
+    Ifx_CPU_ICNT icnt;
+    icnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC08" : "=d" (__res) :: "memory"); __res; }));
+    result.instruction.counter = icnt.B.CountValue;
+    result.instruction.overlfow = icnt.B.SOvf;
+
+    Ifx_CPU_M1CNT m1cnt;
+    m1cnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC0C" : "=d" (__res) :: "memory"); __res; }));
+    result.counter1.counter = m1cnt.B.CountValue;
+    result.counter1.overlfow = m1cnt.B.SOvf;
+
+    Ifx_CPU_M2CNT m2cnt;
+    m2cnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC10" : "=d" (__res) :: "memory"); __res; }));
+    result.counter2.counter = m2cnt.B.CountValue;
+    result.counter2.overlfow = m2cnt.B.SOvf;
+
+    Ifx_CPU_M3CNT m3cnt;
+    m3cnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC14" : "=d" (__res) :: "memory"); __res; }));
+    result.counter3.counter = m3cnt.B.CountValue;
+    result.counter3.overlfow = m3cnt.B.SOvf;
+
+    return result;
+}
+
+
+
+static inline __attribute__ ((always_inline)) void IfxCpu_triggerSwReset(void)
+{
+    (*(Ifx_SCU*)0xF0036000u).SWRSTCON.B.SWRSTREQ = 1;
+
+
+    while (1)
     {}
 }
 
 
-static inline __attribute__ ((always_inline)) void IfxScuWdt_clearSafetyEndinitInline(uint16 password)
+static inline __attribute__ ((always_inline)) void IfxCpu_updateClockCounter(uint32 count)
 {
-    if ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.LCK)
-    {
-
-        (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (1 << (0u)) |
-                          (0 << (1u)) |
-                          (password << (2u)) |
-                          ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
-    }
-
-
-    (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (0 << (0u)) |
-                      (1 << (1u)) |
-                      (password << (2u)) |
-                      ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
-
-
-    while ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.ENDINIT == 1)
-    {}
+    IfxCpu_updatePerformanceCounter(0xFC04, count);
 }
 
 
-static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getCpuWatchdogPasswordInline(Ifx_SCU_WDTCPU *watchdog)
+static inline __attribute__ ((always_inline)) void IfxCpu_updateInstructionCounter(uint32 count)
 {
-    uint16 password;
-
-
-
-
-    password = watchdog->CON0.B.PW;
-    password ^= 0x003F;
-
-    return password;
+    IfxCpu_updatePerformanceCounter(0xFC08, count);
 }
 
 
-static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getCpuWatchdogEndInitInline(Ifx_SCU_WDTCPU *watchdog)
+static inline __attribute__ ((always_inline)) void IfxCpu_updatePerformanceCounter(uint32 address, uint32 count)
 {
-    return (boolean)watchdog->CON0.B.ENDINIT;
+    if(address){};
+    Ifx_CPU_CCTRL cctrl;
+    boolean enableBit;
+
+    cctrl.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC00" : "=d" (__res) :: "memory"); __res; }));
+    enableBit = cctrl.B.CE;
+    cctrl.B.CE = 0;
+    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
+
+
+    count &= ~(1U << 31);
+    do { unsigned __newval = (unsigned) (count); __asm__ volatile ("mtcr LO:" "address" ", %0" :: "d" (__newval) : "memory"); } while (0);
+
+
+    cctrl.B.CE = enableBit;
+    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
 }
+# 125 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
 
 
-static inline __attribute__ ((always_inline)) boolean IfxScuWdt_getSafetyWatchdogEndInit(void)
-{
-    return (boolean)(*(Ifx_SCU*)0xF0036000u).WDTS.CON0.B.ENDINIT;
-}
-
-
-static inline __attribute__ ((always_inline)) uint16 IfxScuWdt_getSafetyWatchdogPasswordInline(void)
-{
-    uint16 password;
-    Ifx_SCU_WDTS *watchdog = &(*(Ifx_SCU*)0xF0036000u).WDTS;
-
-
-
-
-    password = watchdog->CON0.B.PW;
-    password ^= 0x003F;
-
-    return password;
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxScuWdt_setCpuEndinitInline(Ifx_SCU_WDTCPU *watchdog, uint16 password)
-{
-    if (watchdog->CON0.B.LCK)
-    {
-
-        watchdog->CON0.U = (1 << (0u)) |
-                           (0 << (1u)) |
-                           (password << (2u)) |
-                           (watchdog->CON0.B.REL << (16u));
-    }
-
-
-    watchdog->CON0.U = (1 << (0u)) |
-                       (1 << (1u)) |
-                       (password << (2u)) |
-                       (watchdog->CON0.B.REL << (16u));
-
-
-    while (watchdog->CON0.B.ENDINIT == 0)
-    {}
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxScuWdt_setSafetyEndinitInline(uint16 password)
-{
-    if ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.LCK)
-    {
-
-        (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (1 << (0u)) |
-                          (0 << (1u)) |
-                          (password << (2u)) |
-                          ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
-    }
-
-
-    (*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).U = (1 << (0u)) |
-                      (1 << (1u)) |
-                      (password << (2u)) |
-                      ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.REL << (16u));
-
-
-    while ((*(volatile Ifx_SCU_WDTS_CON0*)0xF00360F0u).B.ENDINIT == 0)
-    {}
-}
-# 74 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 1
-# 124 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 1
-# 125 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-
-
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 1
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 1
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
 typedef struct _Ifx_FLASH_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -7434,7 +8114,7 @@ typedef union
     signed int I;
     Ifx_FLASH_UBAB_TOP_Bits B;
 } Ifx_FLASH_UBAB_TOP;
-# 967 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
+# 967 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
 typedef volatile struct _Ifx_FLASH_CBAB
 {
     Ifx_FLASH_CBAB_CFG CFG;
@@ -7457,7 +8137,7 @@ typedef volatile struct _Ifx_FLASH_UBAB
     Ifx_FLASH_UBAB_STAT STAT;
     Ifx_FLASH_UBAB_TOP TOP;
 } Ifx_FLASH_UBAB;
-# 1001 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
+# 1001 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_regdef.h"
 typedef volatile struct _Ifx_FLASH
 {
     Ifx_FLASH_COMM0 COMM0;
@@ -7509,20 +8189,20 @@ typedef volatile struct _Ifx_FLASH
     Ifx_FLASH_ACCEN1 ACCEN1;
     Ifx_FLASH_ACCEN0 ACCEN0;
 } Ifx_FLASH;
-# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 2
-# 128 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 1
-# 50 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 1
-# 60 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 1
-# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h" 1
-# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 1
-# 102 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
+# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxFlash_reg.h" 2
+# 128 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 1
+# 50 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 1
+# 60 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 1
+# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h" 1
+# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 1
+# 102 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
 typedef struct _Ifx_P_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -8208,7 +8888,7 @@ typedef union
     signed int I;
     Ifx_P_PDR1_Bits B;
 } Ifx_P_PDR1;
-# 758 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
+# 758 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_regdef.h"
 typedef volatile struct _Ifx_P
 {
     Ifx_P_OUT OUT;
@@ -8248,9 +8928,9 @@ typedef volatile struct _Ifx_P
     Ifx_P_ACCEN1 ACCEN1;
     Ifx_P_ACCEN0 ACCEN0;
 } Ifx_P;
-# 103 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 2
-# 59 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
-# 76 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
+# 103 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxPort_reg.h" 2
+# 59 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h" 2
+# 76 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxPort_cfg.h"
 typedef enum
 {
     IfxPort_Index_00 = 0,
@@ -8291,8 +8971,8 @@ typedef struct
 extern const IfxPort_Esr_Masks IfxPort_cfg_esrMasks[(16)];
 
 extern const IfxModule_IndexMap IfxPort_cfg_indexMap[(16)];
-# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 2
-# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h" 2
+# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 typedef enum
 {
     IfxPort_ControlledBy_port = 0,
@@ -8398,7 +9078,7 @@ typedef enum
     IfxPort_State_low = (1U << 16) | (0 << 0),
     IfxPort_State_toggled = (1U << 16) | (1U << 0)
 } IfxPort_State;
-# 188 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 188 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 typedef struct
 {
     Ifx_P *port;
@@ -8414,33 +9094,33 @@ typedef struct
     IfxPort_OutputIdx mode;
     IfxPort_PadDriver padDriver;
 } IfxPort_Pin_Config;
-# 226 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 226 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) boolean IfxPort_getPinState(Ifx_P *port, uint8 pinIndex);
-# 241 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 241 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinHigh(Ifx_P *port, uint8 pinIndex);
-# 256 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 256 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinLow(Ifx_P *port, uint8 pinIndex);
-# 270 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 270 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinModeInput(Ifx_P *port, uint8 pinIndex, IfxPort_InputMode mode);
-# 285 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 285 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinModeOutput(Ifx_P *port, uint8 pinIndex, IfxPort_OutputMode mode, IfxPort_OutputIdx index);
-# 301 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 301 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setPinState(Ifx_P *port, uint8 pinIndex, IfxPort_State action);
-# 316 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 316 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_togglePin(Ifx_P *port, uint8 pinIndex);
-# 339 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 339 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern boolean IfxPort_disableEmergencyStop(Ifx_P *port, uint8 pinIndex);
-# 357 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 357 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern boolean IfxPort_enableEmergencyStop(Ifx_P *port, uint8 pinIndex);
-# 373 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 373 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinMode(Ifx_P *port, uint8 pinIndex, IfxPort_Mode mode);
-# 388 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 388 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinPadDriver(Ifx_P *port, uint8 pinIndex, IfxPort_PadDriver padDriver);
-# 412 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 412 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) uint32 IfxPort_getGroupState(Ifx_P *port, uint8 pinIndex, uint16 mask);
-# 431 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 431 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 static inline __attribute__ ((always_inline)) void IfxPort_setGroupState(Ifx_P *port, uint8 pinIndex, uint16 mask, uint16 data);
-# 441 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 441 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern Ifx_P *IfxPort_getAddress(IfxPort_Index port);
 
 
@@ -8448,19 +9128,19 @@ extern Ifx_P *IfxPort_getAddress(IfxPort_Index port);
 
 
 extern IfxPort_Index IfxPort_getIndex(Ifx_P *port);
-# 463 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 463 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setGroupModeInput(Ifx_P *port, uint8 pinIndex, uint16 mask, IfxPort_InputMode mode);
-# 480 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 480 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setGroupModeOutput(Ifx_P *port, uint8 pinIndex, uint16 mask, IfxPort_OutputMode mode, IfxPort_OutputIdx index);
-# 496 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 496 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setGroupPadDriver(Ifx_P *port, uint8 pinIndex, uint16 mask, IfxPort_PadDriver padDriver);
-# 505 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 505 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinModeLvdsHigh(Ifx_P *port, uint8 pinIndex, IfxPort_Mode mode, IfxPort_ControlledBy enablePortControlled);
-# 514 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 514 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setPinModeLvdsMedium(Ifx_P *port, uint8 pinIndex, IfxPort_PadDriver lvdsPadDriver, IfxPort_PadSupply padSupply);
-# 531 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 531 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_resetESR(Ifx_P *port, uint8 pinIndex);
-# 542 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
+# 542 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std/IfxPort.h"
 extern void IfxPort_setESR(Ifx_P *port, uint8 pinIndex);
 
 
@@ -8519,7 +9199,7 @@ static inline __attribute__ ((always_inline)) void IfxPort_togglePin(Ifx_P *port
 {
     IfxPort_setPinState(port, pinIndex, IfxPort_State_toggled);
 }
-# 51 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 2
+# 51 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h" 2
 
 
 
@@ -8617,7 +9297,7 @@ extern IfxScu_Wdtlck_Out IfxScu_WDT0LCK_P20_8_OUT;
 extern IfxScu_Wdtlck_Out IfxScu_WDT1LCK_P20_7_OUT;
 extern IfxScu_Wdtlck_Out IfxScu_WDT2LCK_P20_6_OUT;
 extern IfxScu_Wdtlck_Out IfxScu_WDTSLCK_P20_9_OUT;
-# 162 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
+# 162 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxScu_PinMap.h"
 extern const IfxScu_Dcdcsync_Out *IfxScu_Dcdcsync_Out_pinTable[1][2];
 
 
@@ -8637,10 +9317,10 @@ extern const IfxScu_Req_In *IfxScu_Req_In_pinTable[1][8][4];
 
 
 extern const IfxScu_Wdtlck_Out *IfxScu_Wdtlck_Out_pinTable[1][4];
-# 129 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
-# 145 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h" 2
+# 145 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 typedef void (*IfxScuCcu_PllStepsFunctionHook)(void);
-# 155 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 155 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 typedef enum
 {
     IfxScuCcu_K1divider_1 = 0,
@@ -9196,7 +9876,7 @@ typedef enum
     IfxScuCcu_Pdivider_15,
     IfxScuCcu_Pdivider_16
 } IfxScuCcu_Pdivider;
-# 721 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 721 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 typedef struct
 {
     uint32 value;
@@ -9278,7 +9958,7 @@ typedef struct
 {
     IfxScuCcu_InitialStepConfig pllInitialStep;
 } IfxScuCcu_ErayPllConfig;
-# 816 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 816 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getEvrFrequency(void);
 
 
@@ -9309,7 +9989,7 @@ static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getStmFrequency(
 
 
 static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getCanFrequency(void);
-# 855 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 855 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern float32 IfxScuCcu_getBaud1Frequency(void);
 
 
@@ -9443,9 +10123,9 @@ extern float32 IfxScuCcu_setSpbFrequency(float32 spbFreq);
 
 
 extern float32 IfxScuCcu_setSriFrequency(float32 sriFreq);
-# 1003 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1003 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern boolean IfxScuCcu_calculateSysPllDividers(IfxScuCcu_Config *cfg, uint32 fPll);
-# 1012 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1012 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern boolean IfxScuCcu_init(const IfxScuCcu_Config *cfg);
 
 
@@ -9453,7 +10133,7 @@ extern boolean IfxScuCcu_init(const IfxScuCcu_Config *cfg);
 
 
 extern void IfxScuCcu_initConfig(IfxScuCcu_Config *cfg);
-# 1027 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1027 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern boolean IfxScuCcu_initErayPll(const IfxScuCcu_ErayPllConfig *cfg);
 
 
@@ -9467,11 +10147,11 @@ extern void IfxScuCcu_initErayPllConfig(IfxScuCcu_ErayPllConfig *cfg);
 
 
 extern void IfxScuCcu_switchToBackupClock(const IfxScuCcu_Config *cfg);
-# 1052 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1052 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getGtmFrequency(void);
-# 1063 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1063 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern float32 IfxScuCcu_setGtmFrequency(float32 gtmFreq);
-# 1072 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
+# 1072 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std/IfxScuCcu.h"
 extern const IfxScuCcu_Config IfxScuCcu_defaultClockConfig;
 
 
@@ -9544,866 +10224,11 @@ static inline __attribute__ ((always_inline)) float32 IfxScuCcu_getCanFrequency(
 
     return canFrequency;
 }
-# 75 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h" 2
-# 111 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-typedef unsigned int IfxCpu_spinLock;
-
-
-
-typedef unsigned int IfxCpu_mutexLock;
-
-
-
-typedef unsigned int IfxCpu_syncEvent;
-# 129 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-typedef enum
-{
-    IfxCpu_CoreMode_halt,
-    IfxCpu_CoreMode_run,
-    IfxCpu_CoreMode_idle,
-    IfxCpu_CoreMode_sleep,
-    IfxCpu_CoreMode_stby,
-    IfxCpu_CoreMode_unknown
-} IfxCpu_CoreMode;
-
-
-
-typedef enum
-{
-    IfxCpu_CounterMode_normal = 0,
-    IfxCpu_CounterMode_task = 1
-} IfxCpu_CounterMode;
-# 157 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-typedef struct
-{
-    uint32 counter;
-    boolean overlfow;
-} IfxCpu_Counter;
-
-
-
-
-
-
-
-typedef struct
-{
-    IfxCpu_Counter instruction;
-    IfxCpu_Counter clock;
-    IfxCpu_Counter counter1;
-    IfxCpu_Counter counter2;
-    IfxCpu_Counter counter3;
-} IfxCpu_Perf;
-# 191 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) Ifx_CPU *IfxCpu_getAddress(IfxCpu_ResourceCpu cpu);
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) IfxCpu_Id IfxCpu_getCoreId(void);
-
-
-
-
-
-static inline __attribute__ ((always_inline)) IfxCpu_ResourceCpu IfxCpu_getCoreIndex(void);
-# 214 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_initCSA(uint32 *csaBegin, uint32 *csaEnd);
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_setSafetyTaskIdentifier(boolean safetyId);
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_triggerSwReset(void);
-# 234 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern IfxCpu_CoreMode IfxCpu_getCoreMode(Ifx_CPU *cpu);
-
-
-
-
-
-extern IfxCpu_ResourceCpu IfxCpu_getIndex(Ifx_CPU *cpu);
-# 249 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern boolean IfxCpu_setCoreMode(Ifx_CPU *cpu, IfxCpu_CoreMode mode);
-# 258 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern boolean IfxCpu_setProgramCounter(Ifx_CPU *cpu, uint32 programCounter);
-# 267 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern boolean IfxCpu_startCore(Ifx_CPU *cpu, uint32 programCounter);
-# 284 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) boolean IfxCpu_areInterruptsEnabled(void);
-# 294 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) boolean IfxCpu_disableInterrupts(void);
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_enableInterrupts(void);
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_forceDisableInterrupts(void);
-# 314 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_restoreInterrupts(boolean enabled);
-# 332 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificDataAccessCacheability(uint16 segmentNumberMask, boolean enable);
-# 341 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificInstructionAccessCacheability(uint16 segmentNumberMask, boolean enable);
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_invalidateProgramCache(void);
-
-
-
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_isAddressCachable(void *address);
-# 363 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_setDataCache(boolean enable);
-# 374 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_setProgramCache(boolean enable);
-# 391 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getClockCounter(void);
-# 404 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) boolean IfxCpu_getClockCounterStickyOverflow(void);
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getInstructionCounter(void);
-# 425 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) boolean IfxCpu_getInstructionCounterStickyOverflow(void);
-
-
-
-
-
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getPerformanceCounter(uint16 address);
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_getPerformanceCounterStickyOverflow(uint16 address);
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_resetAndStartCounters(IfxCpu_CounterMode mode);
-# 457 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_setPerformanceCountersEnableBit(uint32 enable);
-# 466 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) IfxCpu_Perf IfxCpu_stopCounters(void);
-# 476 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_updateClockCounter(uint32 count);
-# 485 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-static inline __attribute__ ((always_inline)) void IfxCpu_updateInstructionCounter(uint32 count);
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_updatePerformanceCounter(uint32 address, uint32 count);
-# 520 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern boolean IfxCpu_acquireMutex(IfxCpu_mutexLock *lock);
-# 538 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern void IfxCpu_releaseMutex(IfxCpu_mutexLock *lock);
-
-
-
-
-
-
-
-extern void IfxCpu_resetSpinLock(IfxCpu_spinLock *lock);
-# 565 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern boolean IfxCpu_setSpinLock(IfxCpu_spinLock *lock, uint32 timeoutCount);
-# 580 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern uint32 IfxCpu_getRandomValue(uint32 *seed);
-
-
-
-
-
-
-
-extern uint32 IfxCpu_getRandomValueWithinRange(uint32 *seed, uint32 min, uint32 max);
-# 631 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern boolean IfxCpu_waitEvent(IfxCpu_syncEvent *event, uint32 timeoutMilliSec);
-# 640 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/IfxCpu.h"
-extern void IfxCpu_emitEvent(IfxCpu_syncEvent *event);
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_areInterruptsEnabled(void)
-{
-    Ifx_CPU_ICR reg;
-    reg.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE2C" : "=d" (__res) :: "memory"); __res; }));
-    return reg.B.IE != 0;
-}
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_disableInterrupts(void)
-{
-    boolean enabled;
-    enabled = IfxCpu_areInterruptsEnabled();
-    __asm__ volatile ("disable" : : : "memory");
-    Ifx__nop();
-    return enabled;
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_enableInterrupts(void)
-{
-    __asm__ volatile ("enable" : : : "memory");
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificDataAccessCacheability(uint16 segmentNumberMask, boolean enable)
-{
-    uint32 cpu_pmaVal;
-    uint16 checkRestrictionMask;
-    uint32 coreIndex = IfxCpu_getCoreIndex();
-    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
-
-
-
-    checkRestrictionMask = ((uint16)1 << (7 - coreIndex)) | ((uint16)1 << 0xC);
-
-    if ((segmentNumberMask & checkRestrictionMask) != 0)
-    {
-        segmentNumberMask |= checkRestrictionMask;
-    }
-
-    cpu_pmaVal = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0x8100" : "=d" (__res) :: "memory"); __res; }));
-
-    cpu_pmaVal = enable ? (cpu_pmaVal | segmentNumberMask) : (cpu_pmaVal & ~segmentNumberMask);
-
-
-    IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-
-
-    Ifx__dsync();
-    do { unsigned __newval = (unsigned) (cpu_pmaVal); __asm__ volatile ("mtcr LO:" "0x8100" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    Ifx__isync();
-    IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_enableSegmentSpecificInstructionAccessCacheability(uint16 segmentNumberMask, boolean enable)
-{
-    uint32 cpu_pmaVal;
-    uint16 checkRestrictionMask;
-    uint32 coreIndex = IfxCpu_getCoreIndex();
-    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
-
-
-
-    checkRestrictionMask = ((uint16)1 << (7 - coreIndex)) | ((uint16)1 << 0xD);
-
-    if ((segmentNumberMask & checkRestrictionMask) != 0)
-    {
-        segmentNumberMask |= checkRestrictionMask;
-    }
-
-    cpu_pmaVal = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0x8104" : "=d" (__res) :: "memory"); __res; }));
-
-    cpu_pmaVal = enable ? (cpu_pmaVal | segmentNumberMask) : (cpu_pmaVal & ~segmentNumberMask);
-
-
-    IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-
-
-    Ifx__dsync();
-    do { unsigned __newval = (unsigned) (cpu_pmaVal); __asm__ volatile ("mtcr LO:" "0x8104" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    Ifx__isync();
-    IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_forceDisableInterrupts(void)
-{
-    __asm__ volatile ("disable" : : : "memory");
-    Ifx__nop();
-}
-
-
-static inline __attribute__ ((always_inline)) Ifx_CPU *IfxCpu_getAddress(IfxCpu_ResourceCpu cpu)
-{
-    Ifx_CPU *module;
-
-    if (cpu < IfxCpu_ResourceCpu_none)
-    {
-        module = (Ifx_CPU *)IfxCpu_cfg_indexMap[cpu].module;
-    }
-    else
-    {
-        module = ((void *)0);
-    }
-
-    return module;
-}
-
-
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getClockCounter(void)
-{
-    return IfxCpu_getPerformanceCounter(0xFC04);
-}
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_getClockCounterStickyOverflow(void)
-{
-    return IfxCpu_getPerformanceCounterStickyOverflow(0xFC04);
-}
-
-
-static inline __attribute__ ((always_inline)) IfxCpu_Id IfxCpu_getCoreId(void)
-{
-    Ifx_CPU_CORE_ID reg;
-    reg.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE1C" : "=d" (__res) :: "memory"); __res; }));
-    return (IfxCpu_Id)reg.B.CORE_ID;
-}
-
-
-static inline __attribute__ ((always_inline)) IfxCpu_ResourceCpu IfxCpu_getCoreIndex(void)
-{
-    Ifx_CPU_CORE_ID reg;
-    reg.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE1C" : "=d" (__res) :: "memory"); __res; }));
-    return (IfxCpu_ResourceCpu)reg.B.CORE_ID;
-}
-
-
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getInstructionCounter(void)
-{
-    return IfxCpu_getPerformanceCounter(0xFC08);
-}
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_getInstructionCounterStickyOverflow(void)
-{
-    return IfxCpu_getPerformanceCounterStickyOverflow(0xFC08);
-}
-
-
-static inline __attribute__ ((always_inline)) uint32 IfxCpu_getPerformanceCounter(uint16 address)
-{
-    Ifx_CPU_CCNT ccnt;
-
-    if (address == 0xFC04)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC04" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC08)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC08" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC0C)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC0C" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC10)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC10" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC14)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC14" : "=d" (__res) :: "memory"); __res; }));
-    }
-
-    return ccnt.B.CountValue;
-}
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_getPerformanceCounterStickyOverflow(uint16 address)
-{
-    Ifx_CPU_CCNT ccnt;
-
-    if (address == 0xFC04)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC04" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC08)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC08" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC0C)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC0C" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC10)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC10" : "=d" (__res) :: "memory"); __res; }));
-    }
-    else if (address == 0xFC14)
-    {
-        ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC14" : "=d" (__res) :: "memory"); __res; }));
-    }
-
-    return ccnt.B.SOvf;
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_initCSA(uint32 *csaBegin, uint32 *csaEnd)
-{
-    uint32 k;
-    uint32 nxt_cxi_val = 0;
-    uint32 *prvCsa = 0U;
-    uint32 *nxtCsa = csaBegin;
-    uint32 numOfCsa = (((uint32)csaEnd - (uint32)csaBegin) / 64U);
-
-    for (k = 0; k < numOfCsa; k++)
-    {
-        nxt_cxi_val = ((uint32)nxtCsa & (0XFU << 28)) >> 12 | ((uint32)nxtCsa & (0XFFFFU << 6)) >> 6;
-
-        if (k == 0)
-        {
-            do { unsigned __newval = (unsigned) (nxt_cxi_val); __asm__ volatile ("mtcr LO:" "0xFE38" ", %0" :: "d" (__newval) : "memory"); } while (0);
-        }
-        else
-        {
-            *prvCsa = nxt_cxi_val;
-        }
-
-        if (k == (numOfCsa - 3U))
-        {
-            do { unsigned __newval = (unsigned) (nxt_cxi_val); __asm__ volatile ("mtcr LO:" "0xFE3C" ", %0" :: "d" (__newval) : "memory"); } while (0);
-        }
-
-        prvCsa = (uint32 *)nxtCsa;
-        nxtCsa += 16;
-    }
-
-    *prvCsa = 0;
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_invalidateProgramCache(void)
-{
-    uint16 cpuWdtPassword = IfxScuWdt_getCpuWatchdogPassword();
-    {
-        IfxScuWdt_clearCpuEndinit(cpuWdtPassword);
-        Ifx_CPU_PCON1 pcon1;
-        pcon1.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0x9204" : "=d" (__res) :: "memory"); __res; }));
-        pcon1.B.PCINV = 1;
-        do { unsigned __newval = (unsigned) (pcon1.U); __asm__ volatile ("mtcr LO:" "0x9204" ", %0" :: "d" (__newval) : "memory"); } while (0);
-        IfxScuWdt_setCpuEndinit(cpuWdtPassword);
-    }
-}
-
-
-static inline __attribute__ ((always_inline)) boolean IfxCpu_isAddressCachable(void *address)
-{
-    uint8 segment = (uint32)address >> 24;
-    return ((segment == (8)) || (segment == (9))) ? (1u) : (0u);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_resetAndStartCounters(IfxCpu_CounterMode mode)
-{
-    Ifx_CPU_CCTRL cctrl;
-    cctrl.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC00" : "=d" (__res) :: "memory"); __res; }));
-
-    cctrl.B.CE = 0;
-    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
-
-
-    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC04" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC08" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC0C" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC10" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    do { unsigned __newval = (unsigned) (0); __asm__ volatile ("mtcr LO:" "0xFC14" ", %0" :: "d" (__newval) : "memory"); } while (0);
-
-
-    cctrl.B.CE = 1;
-    cctrl.B.CM = mode;
-    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_restoreInterrupts(boolean enabled)
-{
-    if (enabled != (0u))
-    {
-        __asm__ volatile ("enable" : : : "memory");
-    }
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_setDataCache(boolean enable)
-{
-    uint32 coreIndex = IfxCpu_getCoreIndex();
-    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
-
-    {
-        IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-        Ifx_CPU_DCON0 dcon0;
-        dcon0.U = 0;
-        dcon0.B.DCBYP = enable ? 0 : 1;
-        do { unsigned __newval = (unsigned) (dcon0.U); __asm__ volatile ("mtcr LO:" "0x9040" ", %0" :: "d" (__newval) : "memory"); } while (0);
-        IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-    }
-
-    Ifx__isync();
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_setPerformanceCountersEnableBit(uint32 enable)
-{
-    Ifx_CPU_CCTRL cctrl;
-    cctrl.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC00" : "=d" (__res) :: "memory"); __res; }));
-    cctrl.B.CE = enable;
-    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_setProgramCache(boolean enable)
-{
-    if (enable)
-    {
-        Ifx_CPU_PCON1 pcon1;
-        pcon1.U = 0;
-        pcon1.B.PCINV = 1;
-        do { unsigned __newval = (unsigned) (pcon1.U); __asm__ volatile ("mtcr LO:" "0x9204" ", %0" :: "d" (__newval) : "memory"); } while (0);
-    }
-
-    uint32 coreIndex = IfxCpu_getCoreIndex();
-    uint16 wdtPassword = IfxScuWdt_getCpuWatchdogPasswordInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex]);
-
-    {
-        IfxScuWdt_clearCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-        Ifx_CPU_PCON0 pcon0;
-        pcon0.U = 0;
-        pcon0.B.PCBYP = enable ? 0 : 1;
-        do { unsigned __newval = (unsigned) (pcon0.U); __asm__ volatile ("mtcr LO:" "0x920C" ", %0" :: "d" (__newval) : "memory"); } while (0);
-        IfxScuWdt_setCpuEndinitInline(&(*(Ifx_SCU*)0xF0036000u).WDTCPU[coreIndex], wdtPassword);
-    }
-
-    Ifx__isync();
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_setSafetyTaskIdentifier(boolean safetyId)
-{
-    Ifx_CPU_PSW psw;
-    ((void)0);
-    psw.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFE04" : "=d" (__res) :: "memory"); __res; }));
-    psw.B.S = safetyId;
-    do { unsigned __newval = (unsigned) ((uint32)psw.U); __asm__ volatile ("mtcr LO:" "0xFE04" ", %0" :: "d" (__newval) : "memory"); } while (0);
-}
-
-
-
-static inline __attribute__ ((always_inline)) IfxCpu_Perf IfxCpu_stopCounters(void)
-{
-    IfxCpu_Perf result;
-
-
-    Ifx__stopPerfCounters();
-
-    Ifx_CPU_CCNT ccnt;
-    ccnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC04" : "=d" (__res) :: "memory"); __res; }));
-    result.clock.counter = ccnt.B.CountValue;
-    result.clock.overlfow = ccnt.B.SOvf;
-
-    Ifx_CPU_ICNT icnt;
-    icnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC08" : "=d" (__res) :: "memory"); __res; }));
-    result.instruction.counter = icnt.B.CountValue;
-    result.instruction.overlfow = icnt.B.SOvf;
-
-    Ifx_CPU_M1CNT m1cnt;
-    m1cnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC0C" : "=d" (__res) :: "memory"); __res; }));
-    result.counter1.counter = m1cnt.B.CountValue;
-    result.counter1.overlfow = m1cnt.B.SOvf;
-
-    Ifx_CPU_M2CNT m2cnt;
-    m2cnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC10" : "=d" (__res) :: "memory"); __res; }));
-    result.counter2.counter = m2cnt.B.CountValue;
-    result.counter2.overlfow = m2cnt.B.SOvf;
-
-    Ifx_CPU_M3CNT m3cnt;
-    m3cnt.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC14" : "=d" (__res) :: "memory"); __res; }));
-    result.counter3.counter = m3cnt.B.CountValue;
-    result.counter3.overlfow = m3cnt.B.SOvf;
-
-    return result;
-}
-
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_triggerSwReset(void)
-{
-    (*(Ifx_SCU*)0xF0036000u).SWRSTCON.B.SWRSTREQ = 1;
-
-
-    while (1)
-    {}
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_updateClockCounter(uint32 count)
-{
-    IfxCpu_updatePerformanceCounter(0xFC04, count);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_updateInstructionCounter(uint32 count)
-{
-    IfxCpu_updatePerformanceCounter(0xFC08, count);
-}
-
-
-static inline __attribute__ ((always_inline)) void IfxCpu_updatePerformanceCounter(uint32 address, uint32 count)
-{
-    if(address){};
-    Ifx_CPU_CCTRL cctrl;
-    boolean enableBit;
-
-    cctrl.U = (__extension__({ unsigned __res; __asm__ volatile ("mfcr %0, LO:" "0xFC00" : "=d" (__res) :: "memory"); __res; }));
-    enableBit = cctrl.B.CE;
-    cctrl.B.CE = 0;
-    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
-
-
-    count &= ~(1U << 31);
-    do { unsigned __newval = (unsigned) (count); __asm__ volatile ("mtcr LO:" "address" ", %0" :: "d" (__newval) : "memory"); } while (0);
-
-
-    cctrl.B.CE = enableBit;
-    do { unsigned __newval = (unsigned) (cctrl.U); __asm__ volatile ("mtcr LO:" "0xFC00" ", %0" :: "d" (__newval) : "memory"); } while (0);
-}
-# 68 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 2
-# 79 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-typedef enum
-{
-    IfxScuEru_ExternalInputSelection_0 = 0,
-    IfxScuEru_ExternalInputSelection_1,
-    IfxScuEru_ExternalInputSelection_2,
-    IfxScuEru_ExternalInputSelection_3
-} IfxScuEru_ExternalInputSelection;
-
-
-
-typedef enum
-{
-    IfxScuEru_InputChannel_0 = 0,
-    IfxScuEru_InputChannel_1,
-    IfxScuEru_InputChannel_2,
-    IfxScuEru_InputChannel_3,
-    IfxScuEru_InputChannel_4,
-    IfxScuEru_InputChannel_5,
-    IfxScuEru_InputChannel_6,
-    IfxScuEru_InputChannel_7
-} IfxScuEru_InputChannel;
-
-
-
-
-typedef enum
-{
-    IfxScuEru_InputNodePointer_0 = 0,
-    IfxScuEru_InputNodePointer_1,
-    IfxScuEru_InputNodePointer_2,
-    IfxScuEru_InputNodePointer_3,
-    IfxScuEru_InputNodePointer_4,
-    IfxScuEru_InputNodePointer_5,
-    IfxScuEru_InputNodePointer_6,
-    IfxScuEru_InputNodePointer_7
-} IfxScuEru_InputNodePointer;
-
-
-
-
-typedef enum
-{
-    IfxScuEru_InterruptGatingPattern_none = 0,
-    IfxScuEru_InterruptGatingPattern_alwaysActive = 1,
-    IfxScuEru_InterruptGatingPattern_patternMatch = 2,
-    IfxScuEru_InterruptGatingPattern_patternMiss = 3
-} IfxScuEru_InterruptGatingPattern;
-
-
-
-typedef enum
-{
-    IfxScuEru_OutputChannel_0 = 0,
-    IfxScuEru_OutputChannel_1,
-    IfxScuEru_OutputChannel_2,
-    IfxScuEru_OutputChannel_3,
-    IfxScuEru_OutputChannel_4,
-    IfxScuEru_OutputChannel_5,
-    IfxScuEru_OutputChannel_6,
-    IfxScuEru_OutputChannel_7
-} IfxScuEru_OutputChannel;
-# 155 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-static inline __attribute__ ((always_inline)) void IfxScuEru_initReqPin(IfxScu_Req_In *req, IfxPort_InputMode inputMode);
-# 166 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-extern void IfxScuEru_selectExternalInput(IfxScuEru_InputChannel inputChannel, IfxScuEru_ExternalInputSelection inputSignal);
-# 180 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-extern void IfxScuEru_clearAllEventFlags(void);
-
-
-
-
-
-extern void IfxScuEru_clearEventFlag(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_clearInputChannelConfiguration(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_disableAutoClear(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_disableFallingEdgeDetection(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_disableRisingEdgeDetection(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_enableAutoClear(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_enableFallingEdgeDetection(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_enableRisingEdgeDetection(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-extern uint32 IfxScuEru_getAllEventFlagsStatus(void);
-
-
-
-
-
-extern boolean IfxScuEru_getEventFlagStatus(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern uint32 IfxScuEru_getInputChannelConfiguration(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_setEventFlag(IfxScuEru_InputChannel inputChannel);
-# 267 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-extern void IfxScuEru_connectTrigger(IfxScuEru_InputChannel inputChannel, IfxScuEru_InputNodePointer triggerSelect);
-
-
-
-
-
-extern void IfxScuEru_disableTriggerPulse(IfxScuEru_InputChannel inputChannel);
-
-
-
-
-
-extern void IfxScuEru_enableTriggerPulse(IfxScuEru_InputChannel inputChannel);
-# 288 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-extern void IfxScuEru_setFlagPatternDetection(IfxScuEru_OutputChannel outputChannel, IfxScuEru_InputChannel inputChannel, boolean state);
-# 303 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
-extern void IfxScuEru_clearOutputChannelConfiguration(IfxScuEru_OutputChannel outputChannel);
-
-
-
-
-
-extern void IfxScuEru_disablePatternDetectionTrigger(IfxScuEru_OutputChannel outputChannel);
-
-
-
-
-
-extern void IfxScuEru_enablePatternDetectionTrigger(IfxScuEru_OutputChannel outputChannel);
-
-
-
-
-
-extern uint32 IfxScuEru_getOutputChannelConfiguration(IfxScuEru_OutputChannel outputChannel);
-
-
-
-
-
-extern boolean IfxScuEru_getPatternDetectionResult(IfxScuEru_OutputChannel outputChannel);
-
-
-
-
-extern uint32 IfxScuEru_getWholePatternDetectionResult(void);
-
-
-
-
-
-
-extern void IfxScuEru_setInterruptGatingPattern(IfxScuEru_OutputChannel outputChannel, IfxScuEru_InterruptGatingPattern gatingPattern);
-
-
-
-
-
-
-
-static inline __attribute__ ((always_inline)) void IfxScuEru_initReqPin(IfxScu_Req_In *req, IfxPort_InputMode inputMode)
-{
-    IfxPort_setPinModeInput(req->pin.port, req->pin.pinIndex, inputMode);
-    IfxScuEru_selectExternalInput((IfxScuEru_InputChannel)req->channelId, (IfxScuEru_ExternalInputSelection)req->select);
-}
-# 2 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h" 1
-# 112 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h" 1
-# 66 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h"
+# 138 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 1
+# 112 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h" 1
+# 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxSrc_cfg.h"
 typedef enum
 {
     IfxSrc_Tos_cpu0 = 0,
@@ -10411,24 +10236,24 @@ typedef enum
     IfxSrc_Tos_cpu2 = 2,
     IfxSrc_Tos_dma = 3
 } IfxSrc_Tos;
-# 113 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h" 2
-# 129 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 113 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 2
+# 129 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_clearOverrun(volatile Ifx_SRC_SRCR *src);
-# 138 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 138 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_clearRequest(volatile Ifx_SRC_SRCR *src);
-# 147 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 147 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) boolean IfxSrc_isOverrun(volatile Ifx_SRC_SRCR *src);
-# 156 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 156 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) boolean IfxSrc_isRequested(volatile Ifx_SRC_SRCR *src);
-# 165 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 165 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_setRequest(volatile Ifx_SRC_SRCR *src);
-# 183 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 183 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_deinit(volatile Ifx_SRC_SRCR *src);
-# 192 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 192 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_disable(volatile Ifx_SRC_SRCR *src);
-# 201 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_enable(volatile Ifx_SRC_SRCR *src);
-# 233 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h"
+# 233 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h"
 static inline __attribute__ ((always_inline)) void IfxSrc_init(volatile Ifx_SRC_SRCR *src, IfxSrc_Tos typOfService, Ifx_Priority priority);
 
 
@@ -10491,44 +10316,11 @@ static inline __attribute__ ((always_inline)) void IfxSrc_setRequest(volatile If
 {
     src->B.SETR = 1;
 }
-# 3 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std/Ifx_Types.h" 1
-# 4 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 5 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 1
-
-
-
-
-
-
-# 1 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 8 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxGlobal_cfg.h" 1
-# 9 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 1
-# 136 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h" 1
-# 84 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
-typedef enum
-{
-    IfxStm_Index_none = -1,
-    IfxStm_Index_0 = 0,
-    IfxStm_Index_1,
-    IfxStm_Index_2
-} IfxStm_Index;
-# 101 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxStm_cfg.h"
-extern const IfxModule_IndexMap IfxStm_cfg_indexMap[3];
-# 137 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std/IfxSrc.h" 1
-# 139 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 1
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
+# 139 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 1
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
 typedef struct _Ifx_CBS_COMDATA_Bits
 {
     unsigned int DATA : 32;
@@ -11501,13 +11293,13 @@ typedef union
 
     Ifx_CBS_TRTGB_L_Bits B;
 } Ifx_CBS_TRTGB_L;
-# 1045 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
+# 1045 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
 typedef volatile struct _Ifx_CBS_TRTGB
 {
     Ifx_CBS_TRTGB_L LB;
     Ifx_CBS_TRTGB_H HB;
 } Ifx_CBS_TRTGB;
-# 1062 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
+# 1062 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_regdef.h"
 typedef volatile struct _Ifx_CBS
 {
     unsigned char reserved_0[8];
@@ -11557,9 +11349,9 @@ typedef volatile struct _Ifx_CBS
     Ifx_CBS_TRIG TRIG[22];
     unsigned char reserved_158[168];
 } Ifx_CBS;
-# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 2
-# 140 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
-# 157 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCbs_reg.h" 2
+# 140 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h" 2
+# 157 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 typedef enum
 {
     IfxStm_Comparator_0 = 0,
@@ -11667,7 +11459,7 @@ typedef enum
     IfxStm_SuspendMode_hard = 1,
     IfxStm_SuspendMode_soft = 2
 } IfxStm_SuspendMode;
-# 275 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 275 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 typedef struct
 {
     IfxStm_Comparator comparator;
@@ -11678,7 +11470,7 @@ typedef struct
     Ifx_Priority triggerPriority;
     IfxSrc_Tos typeOfService;
 } IfxStm_CompareConfig;
-# 299 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 299 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) uint64 IfxStm_get(Ifx_STM *stm);
 
 
@@ -11702,7 +11494,7 @@ static inline __attribute__ ((always_inline)) boolean IfxStm_isModuleSuspended(I
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_setSuspendMode(Ifx_STM *stm, IfxStm_SuspendMode mode);
-# 331 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 331 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_disableModule(Ifx_STM *stm);
 
 
@@ -11723,7 +11515,7 @@ extern Ifx_STM *IfxStm_getAddress(IfxStm_Index stm);
 
 
 extern IfxStm_Index IfxStm_getIndex(Ifx_STM *stm);
-# 365 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 365 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) uint32 IfxStm_getLower(Ifx_STM *stm);
 
 
@@ -11776,7 +11568,7 @@ static inline __attribute__ ((always_inline)) uint32 IfxStm_getOffsetTimer(Ifx_S
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_waitTicks(Ifx_STM *stm, uint32 ticks);
-# 432 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 432 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) uint32 IfxStm_getCompare(Ifx_STM *stm, IfxStm_Comparator comparator);
 
 
@@ -11808,7 +11600,7 @@ static inline __attribute__ ((always_inline)) void IfxStm_increaseCompare(Ifx_ST
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_updateCompare(Ifx_STM *stm, IfxStm_Comparator comparator, uint32 ticks);
-# 473 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 473 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_clearCompareFlag(Ifx_STM *stm, IfxStm_Comparator comparator);
 
 
@@ -11851,9 +11643,9 @@ extern void IfxStm_initCompareConfig(IfxStm_CompareConfig *config);
 
 
 extern boolean IfxStm_isCompareFlagSet(Ifx_STM *stm, IfxStm_Comparator comparator);
-# 524 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 524 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_setCompareControl(Ifx_STM *stm, IfxStm_Comparator comparator, IfxStm_ComparatorOffset offset, IfxStm_ComparatorSize size, IfxStm_ComparatorInterrupt interrupt);
-# 537 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 537 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 static inline __attribute__ ((always_inline)) void IfxStm_setSleepMode(Ifx_STM *stm, IfxStm_SleepMode mode);
 
 
@@ -11878,7 +11670,7 @@ static inline __attribute__ ((always_inline)) boolean IfxStm_isDeadLine(sint64 d
 
 
 static inline __attribute__ ((always_inline)) void IfxStm_wait(sint64 timeout);
-# 570 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
+# 570 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Stm\\Std/IfxStm.h"
 extern void IfxStm_resetModule(Ifx_STM *stm);
 
 
@@ -12096,17 +11888,17 @@ static inline __attribute__ ((always_inline)) void IfxStm_wait(sint64 timeout)
     while (IfxStm_isDeadLine(deadLine) == (0u))
     {}
 }
-# 11 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 1
-# 238 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 1
-# 64 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 1
-# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
+# 11 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 1
+# 238 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 1
+# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 1
+# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
 typedef struct _Ifx_ASCLIN_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -12699,14 +12491,14 @@ typedef union
     signed int I;
     Ifx_ASCLIN_TXFIFOCON_Bits B;
 } Ifx_ASCLIN_TXFIFOCON;
-# 665 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
+# 665 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
 typedef volatile struct _Ifx_ASCLIN_LIN
 {
     Ifx_ASCLIN_LIN_CON CON;
     Ifx_ASCLIN_LIN_BTIMER BTIMER;
     Ifx_ASCLIN_LIN_HTIMER HTIMER;
 } Ifx_ASCLIN_LIN;
-# 683 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
+# 683 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_regdef.h"
 typedef volatile struct _Ifx_ASCLIN
 {
     Ifx_ASCLIN_CLC CLC;
@@ -12736,9 +12528,9 @@ typedef volatile struct _Ifx_ASCLIN
     Ifx_ASCLIN_ACCEN1 ACCEN1;
     Ifx_ASCLIN_ACCEN0 ACCEN0;
 } Ifx_ASCLIN;
-# 64 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 2
-# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 2
-# 77 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
+# 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxAsclin_reg.h" 2
+# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h" 2
+# 77 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxAsclin_cfg.h"
 typedef enum
 {
     IfxAsclin_Index_none = -1,
@@ -12754,14 +12546,14 @@ typedef enum
 
 
 extern const IfxModule_IndexMap IfxAsclin_cfg_indexMap[(4)];
-# 65 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
+# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
 
 
 
 
 
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h" 1
-# 56 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h" 1
+# 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
 typedef const struct
 {
     Ifx_ASCLIN* module;
@@ -12916,7 +12708,7 @@ extern IfxAsclin_Tx_Out IfxAsclin3_TX_P22_0_OUT;
 extern IfxAsclin_Tx_Out IfxAsclin3_TX_P22_1_OUT;
 extern IfxAsclin_Tx_Out IfxAsclin3_TX_P32_2_OUT;
 extern IfxAsclin_Tx_Out IfxAsclin3_TX_P32_3_OUT;
-# 222 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
+# 222 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxAsclin_PinMap.h"
 extern const IfxAsclin_Cts_In *IfxAsclin_Cts_In_pinTable[4][2];
 
 
@@ -12933,8 +12725,8 @@ extern const IfxAsclin_Slso_Out *IfxAsclin_Slso_Out_pinTable[4][6];
 
 
 extern const IfxAsclin_Tx_Out *IfxAsclin_Tx_Out_pinTable[4][13];
-# 71 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
-# 81 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 71 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h" 2
+# 81 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 typedef enum
 {
     IfxAsclin_Checksum_classic = 0,
@@ -13299,7 +13091,7 @@ typedef enum
     IfxAsclin_TxFifoInterruptLevel_14,
     IfxAsclin_TxFifoInterruptLevel_15
 } IfxAsclin_TxFifoInterruptLevel;
-# 459 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 459 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_clearAllFlags(Ifx_ASCLIN *asclin);
 
 
@@ -13683,7 +13475,7 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_setTxFifoInletWidth
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_setTxFifoInterruptLevel(Ifx_ASCLIN *asclin, IfxAsclin_TxFifoInterruptLevel level);
-# 856 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 856 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) boolean IfxAsclin_getBreakDetectedFlagStatus(Ifx_ASCLIN *asclin);
 
 
@@ -13878,7 +13670,7 @@ static inline __attribute__ ((always_inline)) boolean IfxAsclin_getTxResponseEnd
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_setSleepMode(Ifx_ASCLIN *asclin, IfxAsclin_SleepMode mode);
-# 1059 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1059 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern Ifx_ASCLIN *IfxAsclin_getAddress(IfxAsclin_Index asclin);
 
 
@@ -13915,7 +13707,7 @@ extern float32 IfxAsclin_getShiftFrequency(Ifx_ASCLIN *asclin);
 
 
 extern void IfxAsclin_resetModule(Ifx_ASCLIN *asclin);
-# 1109 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1109 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_disableAllFlags(Ifx_ASCLIN *asclin);
 
 
@@ -14178,9 +13970,9 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_setSlavePolarity(If
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_setSuspendMode(Ifx_ASCLIN *asclin, IfxAsclin_SuspendMode mode);
-# 1386 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1386 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern boolean IfxAsclin_setBitTiming(Ifx_ASCLIN *asclin, float32 baudrate, IfxAsclin_OversamplingFactor oversampling, IfxAsclin_SamplePointPosition samplepoint, IfxAsclin_SamplesPerBit medianFilter);
-# 1401 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1401 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern void IfxAsclin_disableModule(Ifx_ASCLIN *asclin);
 
 
@@ -14235,7 +14027,7 @@ extern uint32 IfxAsclin_read32(Ifx_ASCLIN *asclin, uint32 *data, uint32 count);
 
 
 extern uint32 IfxAsclin_read8(Ifx_ASCLIN *asclin, uint8 *data, uint32 count);
-# 1464 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1464 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 extern void IfxAsclin_setBaudrateBitFields(Ifx_ASCLIN *asclin, uint16 prescaler, uint16 numerator, uint16 denominator, IfxAsclin_OversamplingFactor oversampling);
 
 
@@ -14268,7 +14060,7 @@ extern uint32 IfxAsclin_write32(Ifx_ASCLIN *asclin, uint32 *data, uint32 count);
 
 
 extern uint32 IfxAsclin_write8(Ifx_ASCLIN *asclin, uint8 *data, uint32 count);
-# 1518 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1518 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_initCtsPin(const IfxAsclin_Cts_In *cts, IfxPort_InputMode inputMode, IfxPort_PadDriver padDriver);
 
 
@@ -14278,7 +14070,7 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_initCtsPin(const If
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_initRtsPin(const IfxAsclin_Rts_Out *rts, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
-# 1540 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1540 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) void IfxAsclin_initRxPin(const IfxAsclin_Rx_In *rx, IfxPort_InputMode inputMode, IfxPort_PadDriver padDriver);
 
 
@@ -14304,7 +14096,7 @@ static inline __attribute__ ((always_inline)) void IfxAsclin_initSlsoPin(const I
 
 
 static inline __attribute__ ((always_inline)) void IfxAsclin_initTxPin(const IfxAsclin_Tx_Out *tx, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
-# 1576 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
+# 1576 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Std/IfxAsclin.h"
 static inline __attribute__ ((always_inline)) uint32 IfxAsclin_readRxData(Ifx_ASCLIN *asclin);
 
 
@@ -15191,9 +14983,9 @@ static inline __attribute__ ((always_inline)) uint16 IfxAsclin_getAllErrorFlagsS
 {
     return (uint16)(asclin->FLAGS.U >> 16);
 }
-# 239 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h" 1
-# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 239 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h" 1
+# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 typedef struct
 {
     Ifx_SizeT count;
@@ -15218,9 +15010,9 @@ typedef struct _Fifo
     volatile boolean eventReader;
     volatile boolean eventWriter;
 } Ifx_Fifo;
-# 92 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 92 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern boolean Ifx_Fifo_canReadCount(Ifx_Fifo *fifo, Ifx_SizeT count, Ifx_TickTime timeout);
-# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern boolean Ifx_Fifo_canWriteCount(Ifx_Fifo *fifo, Ifx_SizeT count, Ifx_TickTime timeout);
 
 
@@ -15230,44 +15022,44 @@ extern boolean Ifx_Fifo_canWriteCount(Ifx_Fifo *fifo, Ifx_SizeT count, Ifx_TickT
 
 
 extern void Ifx_Fifo_clear(Ifx_Fifo *fifo);
-# 125 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 125 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_Fifo *Ifx_Fifo_create(Ifx_SizeT size, Ifx_SizeT elementSize);
-# 136 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 136 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern void Ifx_Fifo_destroy(Ifx_Fifo *fifo);
-# 151 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 151 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_Fifo *Ifx_Fifo_init(void *buffer, Ifx_SizeT size, Ifx_SizeT elementSize);
-# 165 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 165 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_SizeT Ifx_Fifo_read(Ifx_Fifo *fifo, void *data, Ifx_SizeT count, Ifx_TickTime timeout);
-# 177 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 177 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 extern Ifx_SizeT Ifx_Fifo_write(Ifx_Fifo *fifo, const void *data, Ifx_SizeT count, Ifx_TickTime timeout);
-# 186 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 186 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) boolean Ifx_Fifo_flush(Ifx_Fifo *fifo, Ifx_TickTime timeout)
 {
     return Ifx_Fifo_canWriteCount(fifo, fifo->size, timeout);
 }
-# 203 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 203 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) Ifx_SizeT Ifx_Fifo_readCount(Ifx_Fifo *fifo)
 {
     return fifo->shared.count;
 }
-# 219 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 219 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) Ifx_SizeT Ifx_Fifo_writeCount(Ifx_Fifo *fifo)
 {
     return (Ifx_SizeT)(fifo->size - Ifx_Fifo_readCount(fifo));
 }
-# 232 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
+# 232 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Lib\\DataHandling/Ifx_Fifo.h"
 static inline __attribute__ ((always_inline)) boolean Ifx_Fifo_isEmpty(Ifx_Fifo *fifo)
 {
     return (Ifx_Fifo_readCount(fifo) != (0u)) ? (0u) : (1u);
 }
-# 240 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
+# 240 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
 
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 1
-# 61 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h" 1
-# 115 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 1
+# 61 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h" 1
+# 115 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf\\IfxStdIf.h"
 typedef void *IfxStdIf_InterfaceDriver;
-# 62 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 2
+# 62 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h" 2
 
 
 
@@ -15278,9 +15070,9 @@ typedef struct IfxStdIf_DPipe_ IfxStdIf_DPipe;
 
 typedef volatile boolean *IfxStdIf_DPipe_WriteEvent;
 typedef volatile boolean *IfxStdIf_DPipe_ReadEvent;
-# 89 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 89 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_Write)(IfxStdIf_InterfaceDriver stdIf, void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
-# 104 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 104 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_Read)(IfxStdIf_InterfaceDriver stdIf, void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
 
 
@@ -15330,11 +15122,11 @@ typedef sint32 (*IfxStdIf_DPipe_GetWriteCount)(IfxStdIf_InterfaceDriver stdIf);
 
 
 typedef IfxStdIf_DPipe_WriteEvent (*IfxStdIf_DPipe_GetWriteEvent)(IfxStdIf_InterfaceDriver stdIf);
-# 163 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_CanReadCount)(IfxStdIf_InterfaceDriver stdIf, Ifx_SizeT count, Ifx_TickTime timeout);
-# 174 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 174 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_CanWriteCount)(IfxStdIf_InterfaceDriver stdIf, Ifx_SizeT count, Ifx_TickTime timeout);
-# 183 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
+# 183 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Service\\CpuGeneric\\StdIf/IfxStdIf_DPipe.h"
 typedef boolean (*IfxStdIf_DPipe_FlushTx)(IfxStdIf_InterfaceDriver stdIf, Ifx_TickTime timeout);
 
 
@@ -15546,7 +15338,7 @@ static inline __attribute__ ((always_inline)) void IfxStdIf_DPipe_resetSendCount
 
 
 extern void IfxStdIf_DPipe_print(IfxStdIf_DPipe *stdIf, pchar format, ...);
-# 242 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
+# 242 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h" 2
 
 
 
@@ -15686,7 +15478,7 @@ typedef struct
     boolean loopBack;
     Ifx_DataBufferMode dataBufferMode;
 } IfxAsclin_Asc_Config;
-# 399 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 399 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_isrError(IfxAsclin_Asc *asclin);
 
 
@@ -15702,11 +15494,11 @@ extern void IfxAsclin_Asc_isrReceive(IfxAsclin_Asc *asclin);
 
 
 extern void IfxAsclin_Asc_isrTransmit(IfxAsclin_Asc *asclin);
-# 431 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 431 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern uint8 IfxAsclin_Asc_blockingRead(IfxAsclin_Asc *asclin);
-# 441 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 441 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_blockingWrite(IfxAsclin_Asc *asclin, uint8 data);
-# 458 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 458 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_canReadCount(IfxAsclin_Asc *asclin, Ifx_SizeT count, Ifx_TickTime timeout);
 
 
@@ -15771,7 +15563,7 @@ extern sint32 IfxAsclin_Asc_getWriteCount(IfxAsclin_Asc *asclin);
 
 
 extern IfxStdIf_DPipe_WriteEvent IfxAsclin_Asc_getWriteEvent(IfxAsclin_Asc *asclin);
-# 534 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 534 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_read(IfxAsclin_Asc *asclin, void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
 
 
@@ -15779,15 +15571,15 @@ extern boolean IfxAsclin_Asc_read(IfxAsclin_Asc *asclin, void *data, Ifx_SizeT *
 
 
 extern void IfxAsclin_Asc_resetSendCount(IfxAsclin_Asc *asclin);
-# 553 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 553 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern boolean IfxAsclin_Asc_write(IfxAsclin_Asc *asclin, const void *data, Ifx_SizeT *count, Ifx_TickTime timeout);
-# 568 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 568 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_disableModule(IfxAsclin_Asc *asclin);
-# 578 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 578 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern IfxAsclin_Status IfxAsclin_Asc_initModule(IfxAsclin_Asc *asclin, const IfxAsclin_Asc_Config *config);
-# 588 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 588 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_initModuleConfig(IfxAsclin_Asc_Config *config, Ifx_ASCLIN *asclin);
-# 603 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
+# 603 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Asclin\\Asc/IfxAsclin_Asc.h"
 extern void IfxAsclin_Asc_initiateTransmission(IfxAsclin_Asc *asclin);
 
 
@@ -15796,18 +15588,223 @@ extern void IfxAsclin_Asc_initiateTransmission(IfxAsclin_Asc *asclin);
 
 
 extern boolean IfxAsclin_Asc_stdIfDPipeInit(IfxStdIf_DPipe *stdif, IfxAsclin_Asc *asclin);
-# 12 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 12 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
 
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h" 1
-# 14 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 1
-# 15 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 1
-# 360 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 1
-# 70 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h" 1
-# 116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Src\\Std\\IfxSrc.h" 1
+# 14 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h" 1
+# 79 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+typedef enum
+{
+    IfxScuEru_ExternalInputSelection_0 = 0,
+    IfxScuEru_ExternalInputSelection_1,
+    IfxScuEru_ExternalInputSelection_2,
+    IfxScuEru_ExternalInputSelection_3
+} IfxScuEru_ExternalInputSelection;
+
+
+
+typedef enum
+{
+    IfxScuEru_InputChannel_0 = 0,
+    IfxScuEru_InputChannel_1,
+    IfxScuEru_InputChannel_2,
+    IfxScuEru_InputChannel_3,
+    IfxScuEru_InputChannel_4,
+    IfxScuEru_InputChannel_5,
+    IfxScuEru_InputChannel_6,
+    IfxScuEru_InputChannel_7
+} IfxScuEru_InputChannel;
+
+
+
+
+typedef enum
+{
+    IfxScuEru_InputNodePointer_0 = 0,
+    IfxScuEru_InputNodePointer_1,
+    IfxScuEru_InputNodePointer_2,
+    IfxScuEru_InputNodePointer_3,
+    IfxScuEru_InputNodePointer_4,
+    IfxScuEru_InputNodePointer_5,
+    IfxScuEru_InputNodePointer_6,
+    IfxScuEru_InputNodePointer_7
+} IfxScuEru_InputNodePointer;
+
+
+
+
+typedef enum
+{
+    IfxScuEru_InterruptGatingPattern_none = 0,
+    IfxScuEru_InterruptGatingPattern_alwaysActive = 1,
+    IfxScuEru_InterruptGatingPattern_patternMatch = 2,
+    IfxScuEru_InterruptGatingPattern_patternMiss = 3
+} IfxScuEru_InterruptGatingPattern;
+
+
+
+typedef enum
+{
+    IfxScuEru_OutputChannel_0 = 0,
+    IfxScuEru_OutputChannel_1,
+    IfxScuEru_OutputChannel_2,
+    IfxScuEru_OutputChannel_3,
+    IfxScuEru_OutputChannel_4,
+    IfxScuEru_OutputChannel_5,
+    IfxScuEru_OutputChannel_6,
+    IfxScuEru_OutputChannel_7
+} IfxScuEru_OutputChannel;
+# 155 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+static inline __attribute__ ((always_inline)) void IfxScuEru_initReqPin(IfxScu_Req_In *req, IfxPort_InputMode inputMode);
+# 166 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+extern void IfxScuEru_selectExternalInput(IfxScuEru_InputChannel inputChannel, IfxScuEru_ExternalInputSelection inputSignal);
+# 180 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+extern void IfxScuEru_clearAllEventFlags(void);
+
+
+
+
+
+extern void IfxScuEru_clearEventFlag(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_clearInputChannelConfiguration(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_disableAutoClear(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_disableFallingEdgeDetection(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_disableRisingEdgeDetection(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_enableAutoClear(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_enableFallingEdgeDetection(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_enableRisingEdgeDetection(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+extern uint32 IfxScuEru_getAllEventFlagsStatus(void);
+
+
+
+
+
+extern boolean IfxScuEru_getEventFlagStatus(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern uint32 IfxScuEru_getInputChannelConfiguration(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_setEventFlag(IfxScuEru_InputChannel inputChannel);
+# 267 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+extern void IfxScuEru_connectTrigger(IfxScuEru_InputChannel inputChannel, IfxScuEru_InputNodePointer triggerSelect);
+
+
+
+
+
+extern void IfxScuEru_disableTriggerPulse(IfxScuEru_InputChannel inputChannel);
+
+
+
+
+
+extern void IfxScuEru_enableTriggerPulse(IfxScuEru_InputChannel inputChannel);
+# 288 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+extern void IfxScuEru_setFlagPatternDetection(IfxScuEru_OutputChannel outputChannel, IfxScuEru_InputChannel inputChannel, boolean state);
+# 303 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuEru.h"
+extern void IfxScuEru_clearOutputChannelConfiguration(IfxScuEru_OutputChannel outputChannel);
+
+
+
+
+
+extern void IfxScuEru_disablePatternDetectionTrigger(IfxScuEru_OutputChannel outputChannel);
+
+
+
+
+
+extern void IfxScuEru_enablePatternDetectionTrigger(IfxScuEru_OutputChannel outputChannel);
+
+
+
+
+
+extern uint32 IfxScuEru_getOutputChannelConfiguration(IfxScuEru_OutputChannel outputChannel);
+
+
+
+
+
+extern boolean IfxScuEru_getPatternDetectionResult(IfxScuEru_OutputChannel outputChannel);
+
+
+
+
+extern uint32 IfxScuEru_getWholePatternDetectionResult(void);
+
+
+
+
+
+
+extern void IfxScuEru_setInterruptGatingPattern(IfxScuEru_OutputChannel outputChannel, IfxScuEru_InterruptGatingPattern gatingPattern);
+
+
+
+
+
+
+
+static inline __attribute__ ((always_inline)) void IfxScuEru_initReqPin(IfxScu_Req_In *req, IfxPort_InputMode inputMode)
+{
+    IfxPort_setPinModeInput(req->pin.port, req->pin.pinIndex, inputMode);
+    IfxScuEru_selectExternalInput((IfxScuEru_InputChannel)req->channelId, (IfxScuEru_ExternalInputSelection)req->select);
+}
+# 15 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 1
+# 360 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 1
+# 70 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h" 1
+# 116 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxVadc_cfg.h"
 typedef enum
 {
     IfxVadc_GroupId_0,
@@ -15828,13 +15825,13 @@ typedef enum
 
 
 extern const uint32 IfxVadc_cfg_srcAddresses[((8) *4) + ((2) * 4) ];
-# 71 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 1
-# 48 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 1
-# 54 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h" 1
-# 67 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
+# 71 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 1
+# 48 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 1
+# 54 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h" 1
+# 67 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
 typedef struct _Ifx_VADC_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -17190,7 +17187,7 @@ typedef union
     signed int I;
     Ifx_VADC_OCS_Bits B;
 } Ifx_VADC_OCS;
-# 1432 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
+# 1432 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
 typedef volatile struct _Ifx_VADC_G
 {
     Ifx_VADC_G_ARBCFG ARBCFG;
@@ -17257,7 +17254,7 @@ typedef volatile struct _Ifx_VADC_G
     Ifx_VADC_G_RESD RESD[16];
     unsigned char reserved_340[192];
 } Ifx_VADC_G;
-# 1510 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
+# 1510 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_regdef.h"
 typedef volatile struct _Ifx_VADC
 {
     Ifx_VADC_CLC CLC;
@@ -17304,8 +17301,8 @@ typedef volatile struct _Ifx_VADC
     Ifx_VADC_G G[8];
     unsigned char reserved_2480[7040];
 } Ifx_VADC;
-# 55 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 2
-# 49 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 2
+# 55 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_reg.h" 2
+# 49 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h" 2
 
 
 
@@ -17438,7 +17435,7 @@ extern IfxVadc_Vadcg_In IfxVadc_G7_2_P00_4_IN;
 extern IfxVadc_Vadcg_In IfxVadc_G7_3_P00_3_IN;
 extern IfxVadc_Vadcg_In IfxVadc_G7_4_P00_2_IN;
 extern IfxVadc_Vadcg_In IfxVadc_G7_5_P00_1_IN;
-# 191 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
+# 191 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_PinMap/IfxVadc_PinMap.h"
 extern const IfxVadc_Emux_Out *IfxVadc_Emux_Out_pinTable[1][12];
 
 
@@ -17446,16 +17443,16 @@ extern const IfxVadc_GxBfl_Out *IfxVadc_GxBfl_Out_pinTable[1][8][4];
 
 
 extern const IfxVadc_Vadcg_In *IfxVadc_Vadcg_In_pinTable[1][8][8];
-# 72 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_bf.h" 1
-# 73 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 72 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxVadc_bf.h" 1
+# 73 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
 
 
 
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 1
-# 57 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h"
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h" 1
-# 63 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 1
+# 57 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h"
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h" 1
+# 63 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
 typedef struct _Ifx_CCU6_ACCEN0_Bits
 {
     unsigned int EN0:1;
@@ -18373,7 +18370,7 @@ typedef union
     signed int I;
     Ifx_CCU6_TRPCTR_Bits B;
 } Ifx_CCU6_TRPCTR;
-# 990 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
+# 990 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_regdef.h"
 typedef volatile struct _Ifx_CCU6
 {
     Ifx_CCU6_CLC CLC;
@@ -18429,11 +18426,11 @@ typedef volatile struct _Ifx_CCU6
     Ifx_CCU6_ACCEN1 ACCEN1;
     Ifx_CCU6_ACCEN0 ACCEN0;
 } Ifx_CCU6;
-# 58 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 2
-# 77 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_bf.h" 1
-# 78 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
-# 87 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 58 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_reg.h" 2
+# 77 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\Infra\\Sfr\\TC27D\\_Reg\\IfxCcu6_bf.h" 1
+# 78 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h" 2
+# 87 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 typedef enum
 {
     IfxVadc_AnalogConverterMode_off = 0,
@@ -18843,7 +18840,7 @@ typedef enum
     IfxVadc_TriggerSource_14,
     IfxVadc_TriggerSource_15
 } IfxVadc_TriggerSource;
-# 512 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 512 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_configureWaitForReadMode(Ifx_VADC_G *group, uint32 resultIdx, boolean waitForRead);
 
 
@@ -18901,7 +18898,7 @@ static inline __attribute__ ((always_inline)) IfxVadc_TriggerMode IfxVadc_getBac
 
 
 static inline __attribute__ ((always_inline)) IfxVadc_ChannelResolution IfxVadc_getGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum);
-# 598 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 598 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_GLOBRES IfxVadc_getGlobalResult(Ifx_VADC *vadc);
 
 
@@ -18911,9 +18908,9 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_GLOBRES IfxVadc_getGlobal
 
 
 static inline __attribute__ ((always_inline)) float32 IfxVadc_getGlobalSampleTime(Ifx_VADC *vadc, uint8 inputClassNum, float32 analogFrequency);
-# 642 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 642 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_getGroupResult(Ifx_VADC_G *group, Ifx_VADC_G_RES *results, uint32 resultOffset, uint32 numResults);
-# 676 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 676 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_getResult(Ifx_VADC_G *group, uint32 resultIdx);
 
 
@@ -18934,7 +18931,7 @@ static inline __attribute__ ((always_inline)) boolean IfxVadc_isRequestBackgroun
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setAutoBackgroundScan(Ifx_VADC *vadc, boolean autoBackgroundScanEnable);
-# 726 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 726 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setBackgroundScan(Ifx_VADC *vadc, IfxVadc_GroupId groupId, uint32 channels, uint32 mask);
 
 
@@ -18952,7 +18949,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setBackgroundScanSlot
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setBackgroundScanSlotTriggerConfig(Ifx_VADC *vadc, IfxVadc_TriggerMode triggerMode, IfxVadc_TriggerSource triggerSource);
-# 751 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 751 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_startBackgroundScan(Ifx_VADC *vadc);
 
 
@@ -18961,11 +18958,11 @@ static inline __attribute__ ((always_inline)) void IfxVadc_startBackgroundScan(I
 
 
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_getDebugResult(Ifx_VADC_G *group, uint32 resultIdx);
-# 768 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 768 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern IfxVadc_Status IfxVadc_getBackgroundScanStatus(Ifx_VADC *vadc);
-# 805 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 805 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern Ifx_VADC_G_RES IfxVadc_getResultBasedOnRequestSource(Ifx_VADC *vadc, Ifx_VADC_G *group, IfxVadc_ChannelId channel, IfxVadc_RequestSource sourceType);
-# 820 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 820 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_disableScanSlotExternalTrigger(Ifx_VADC_G *vadcG);
 
 
@@ -19044,13 +19041,13 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setScanSlotGatingConf
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setScanSlotTriggerConfig(Ifx_VADC_G *vadcG, IfxVadc_TriggerMode triggerMode, IfxVadc_TriggerSource triggerSource);
-# 906 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 906 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_startScan(Ifx_VADC_G *group);
-# 916 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 916 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern IfxVadc_Status IfxVadc_getScanStatus(Ifx_VADC_G *group);
-# 942 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 942 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_setScan(Ifx_VADC_G *group, uint32 channels, uint32 mask);
-# 971 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 971 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_addToQueue(Ifx_VADC_G *group, IfxVadc_ChannelId channel, uint32 options);
 
 
@@ -19135,9 +19132,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setQueueSlotTriggerOp
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_startQueue(Ifx_VADC_G *group);
-# 1070 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1070 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern IfxVadc_Status IfxVadc_getQueueStatus(Ifx_VADC_G *group);
-# 1087 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1087 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_initEmuxPin(const IfxVadc_Emux_Out *emux, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
 
 
@@ -19147,9 +19144,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_initEmuxPin(const Ifx
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_initGxBflPin(const IfxVadc_GxBfl_Out *gxBfl, IfxPort_OutputMode outputMode, IfxPort_PadDriver padDriver);
-# 1111 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1111 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) uint32 IfxVadc_calculateSampleTime(float32 analogFrequency, float32 sampleTime);
-# 1121 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1121 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern float32 IfxVadc_getAdcAnalogFrequency(Ifx_VADC *vadc);
 
 
@@ -19157,7 +19154,7 @@ extern float32 IfxVadc_getAdcAnalogFrequency(Ifx_VADC *vadc);
 
 
 extern float32 IfxVadc_getAdcDigitalFrequency(Ifx_VADC *vadc);
-# 1142 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1142 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_clearAllResultRequests(Ifx_VADC_G *vadcG);
 
 
@@ -19217,7 +19214,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setArbitrationRoundLe
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setGroupResolution(Ifx_VADC_G *vadcG, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1209 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1209 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setGroupSampleTime(Ifx_VADC_G *vadcG, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19226,9 +19223,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setGroupSampleTime(If
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setMasterIndex(Ifx_VADC_G *vadcG, uint8 masterIndex);
-# 1230 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1230 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_setArbiterPriority(Ifx_VADC_G *vadcG, boolean slotEnable, IfxVadc_RequestSlotPriority prio, IfxVadc_RequestSlotStartMode mode, IfxVadc_RequestSource slot);
-# 1245 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1245 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_disableModule(Ifx_VADC *vadc);
 
 
@@ -19269,7 +19266,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_initiateStartupCalibr
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1293 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1293 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setGlobalSampleTime(Ifx_VADC *vadc, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19278,7 +19275,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setGlobalSampleTime(I
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setSleepMode(Ifx_VADC *vadc, IfxVadc_SleepMode mode);
-# 1311 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1311 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_disableAccess(Ifx_VADC *vadc, IfxVadc_Protection protectionSet);
 
 
@@ -19368,7 +19365,7 @@ extern void IfxVadc_selectPowerSupplyVoltage(Ifx_VADC *vadc, IfxVadc_LowSupplyVo
 
 
 extern void IfxVadc_startupCalibration(Ifx_VADC *vadc);
-# 1415 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1415 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_clearChannelRequest(Ifx_VADC_G *vadcG, IfxVadc_ChannelId channelId);
 
 
@@ -19538,9 +19535,9 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setUpperBoundary(Ifx_
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_storeGroupResult(Ifx_VADC_G *vadcG, IfxVadc_ChannelId channelIndex, IfxVadc_ChannelResult resultRegister);
-# 1598 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1598 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern float32 IfxVadc_getChannelConversionTime(Ifx_VADC *vadc, IfxVadc_GroupId group, IfxVadc_InputClasses inputClass, float32 analogFrequency, float32 moduleFrequency, IfxVadc_ConversionType conversionMode);
-# 1614 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1614 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) IfxVadc_ChannelResolution IfxVadc_getEmuxGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum);
 
 
@@ -19573,7 +19570,7 @@ static inline __attribute__ ((always_inline)) float32 IfxVadc_getEmuxGroupSample
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGlobalResolution(Ifx_VADC *vadc, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1654 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1654 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGlobalSampleTime(Ifx_VADC *vadc, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19583,7 +19580,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGlobalSampleTi
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGroupResolution(Ifx_VADC_G *vadcG, uint8 inputClassNum, IfxVadc_ChannelResolution resolution);
-# 1671 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1671 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGroupSampletime(Ifx_VADC_G *vadcG, uint8 inputClassNum, float32 analogFrequency, float32 sampleTime);
 
 
@@ -19593,7 +19590,7 @@ static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxGroupSampletim
 
 
 static inline __attribute__ ((always_inline)) void IfxVadc_setEmuxInterfaceForGroup(Ifx_VADC *vadc, IfxVadc_EmuxInterface emuxInterface, IfxVadc_GroupId group);
-# 1696 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
+# 1696 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Std/IfxVadc.h"
 extern void IfxVadc_configExternalMultiplexerMode(Ifx_VADC *vadc, Ifx_VADC_G *vadcG, IfxVadc_ExternalMultiplexerMode mode, uint8 channels, IfxVadc_EmuxSelectValue startChannel, IfxVadc_EmuxCodingScheme code, IfxVadc_EmuxSampleTimeControl sampleTimeControl, IfxVadc_ChannelSelectionStyle channelSelectionStyle);
 
 
@@ -20348,7 +20345,7 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_getDebugRe
 
     return tmpResult;
 }
-# 361 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 2
+# 361 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h" 2
 
 
 
@@ -20356,7 +20353,7 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_getDebugRe
 
 
 typedef uint8 IfxVadc_Adc_SYNCTR_STSEL;
-# 377 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 377 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 typedef struct
 {
     Ifx_VADC *vadc;
@@ -20524,21 +20521,21 @@ typedef struct
     boolean disablePostCalibration;
     IfxVadc_Adc_ArbiterConfig arbiter;
 } IfxVadc_Adc_GroupConfig;
-# 561 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 561 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_deInitModule(IfxVadc_Adc *vadc);
-# 571 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 571 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_getModuleConfig(IfxVadc_Adc *vadc, IfxVadc_Adc_Config *config);
-# 639 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 639 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_Adc_getResultBasedOnRequestSource(IfxVadc_Adc_Group *group, IfxVadc_ChannelId channel, IfxVadc_RequestSource sourceType);
-# 649 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 649 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_disableModule(Ifx_VADC *vadc);
-# 659 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 659 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern IfxVadc_Status IfxVadc_Adc_initModule(IfxVadc_Adc *vadc, const IfxVadc_Adc_Config *config);
-# 669 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 669 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initModuleConfig(IfxVadc_Adc_Config *config, Ifx_VADC *vadc);
-# 710 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 710 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G *IfxVadc_Adc_getGroupRegsFromGroup(const IfxVadc_Adc_Group *group);
-# 797 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 797 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_getGroupResult(IfxVadc_Adc_Group *group, Ifx_VADC_G_RES *results, uint32 resultOffset, uint32 numResults);
 
 
@@ -20546,17 +20543,17 @@ static inline __attribute__ ((always_inline)) void IfxVadc_Adc_getGroupResult(If
 
 
 static inline __attribute__ ((always_inline)) Ifx_VADC *IfxVadc_Adc_getVadcFromGroup(const IfxVadc_Adc_Group *group);
-# 816 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 816 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_deInitGroup(IfxVadc_Adc_Group *group);
-# 826 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 826 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_getGroupConfig(IfxVadc_Adc_Group *group, IfxVadc_Adc_GroupConfig *config);
-# 836 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 836 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern IfxVadc_Status IfxVadc_Adc_initGroup(IfxVadc_Adc_Group *group, const IfxVadc_Adc_GroupConfig *config);
-# 846 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 846 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initGroupConfig(IfxVadc_Adc_GroupConfig *config, IfxVadc_Adc *vadc);
-# 865 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 865 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_configureWaitForReadMode(IfxVadc_Adc_Channel *channel, boolean waitForRead);
-# 874 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 874 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_Adc_getResult(IfxVadc_Adc_Channel *channel);
 
 
@@ -20564,7 +20561,7 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RES IfxVadc_Adc_getResu
 
 
 static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_Adc_getDebugResult(IfxVadc_Adc_Channel *channel);
-# 894 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 894 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_getChannelConfig(IfxVadc_Adc_Channel *channel, IfxVadc_Adc_ChannelConfig *config);
 
 
@@ -20573,11 +20570,11 @@ extern void IfxVadc_Adc_getChannelConfig(IfxVadc_Adc_Channel *channel, IfxVadc_A
 
 
 extern float32 IfxVadc_Adc_getChannelConversionTime(IfxVadc_Adc_Channel *channel, IfxVadc_ConversionType conversionMode);
-# 911 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 911 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern IfxVadc_Status IfxVadc_Adc_initChannel(IfxVadc_Adc_Channel *channel, const IfxVadc_Adc_ChannelConfig *config);
-# 921 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 921 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initChannelConfig(IfxVadc_Adc_ChannelConfig *config, const IfxVadc_Adc_Group *group);
-# 940 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 940 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_configureWaitForReadModeForGlobalResultRegister(IfxVadc_Adc *vadc, boolean waitForRead);
 
 
@@ -20585,27 +20582,27 @@ static inline __attribute__ ((always_inline)) void IfxVadc_Adc_configureWaitForR
 
 
 static inline __attribute__ ((always_inline)) IfxVadc_Status IfxVadc_Adc_getBackgroundScanStatus(IfxVadc_Adc *vadc);
-# 1035 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1035 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) Ifx_VADC_GLOBRES IfxVadc_Adc_getGlobalResult(IfxVadc_Adc *vadc);
-# 1047 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1047 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_setBackgroundScan(IfxVadc_Adc *vadc, IfxVadc_Adc_Group *group, uint32 channels, uint32 mask);
-# 1056 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1056 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_startBackgroundScan(IfxVadc_Adc *vadc);
-# 1074 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1074 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) IfxVadc_Status IfxVadc_Adc_getScanStatus(IfxVadc_Adc_Group *group);
-# 1085 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1085 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_setScan(IfxVadc_Adc_Group *group, uint32 channels, uint32 mask);
-# 1094 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1094 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_startScan(IfxVadc_Adc_Group *group);
-# 1116 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1116 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_addToQueue(IfxVadc_Adc_Channel *channel, uint32 options);
-# 1125 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1125 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_clearQueue(IfxVadc_Adc_Group *group);
-# 1134 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1134 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) IfxVadc_Status IfxVadc_Adc_getQueueStatus(IfxVadc_Adc_Group *group);
-# 1143 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1143 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 static inline __attribute__ ((always_inline)) void IfxVadc_Adc_startQueue(IfxVadc_Adc_Group *group);
-# 1159 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
+# 1159 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Vadc\\Adc\\IfxVadc_Adc.h"
 extern void IfxVadc_Adc_initExternalMultiplexerModeConfig(IfxVadc_Adc_EmuxControl *emuxConfig, Ifx_VADC *vadc);
 
 
@@ -20755,11 +20752,11 @@ static inline __attribute__ ((always_inline)) Ifx_VADC_G_RESD IfxVadc_Adc_getDeb
 {
     return IfxVadc_getDebugResult(channel->group->group, channel->resultreg);
 }
-# 16 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.h" 1
-# 17 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std\\IfxPort.h" 1
-# 18 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 16 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Scu\\Std\\IfxScuWdt.h" 1
+# 17 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Port\\Std\\IfxPort.h" 1
+# 18 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
 
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\string.h" 1 3
 # 10 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\string.h" 3
@@ -21170,13 +21167,13 @@ char *strupr (char *);
 # 101 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\string.h" 2 3
 
 
-# 20 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 20 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stdarg.h" 1 3 4
 # 40 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
 # 98 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stdarg.h" 3 4
 typedef __gnuc_va_list va_list;
-# 21 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 21 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h" 1 3
 # 41 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h" 3
 typedef signed char int8_t ;
@@ -21239,10 +21236,10 @@ typedef uint64_t uint_least64_t;
 # 243 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h" 3
 typedef signed long int intptr_t;
 typedef unsigned long int uintptr_t;
-# 22 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 22 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h" 1 3 4
-# 23 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h" 2
-# 45 "C:\\project\\SHIPAR~1\\TC275\\illd\\src\\Configuration.h"
+# 23 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 2
+# 45 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h"
 typedef struct
 {
     Ifx_STM *stmSfr;
@@ -21301,25 +21298,19 @@ struct __attribute__((__packed__)) ParkingSystemPacket
     uint8 car_command;
     uint8 crc;
 };
-# 6 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c" 2
-# 1 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.h" 1
-
-
-
-
-
-
+# 6 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h" 2
+# 24 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h"
 void initHall(void);
 uint16 getFRHallCnt(void);
 void resetFRHallCnt(void);
-# 7 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c" 2
-
+# 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.c" 2
 
 volatile uint16 g_FRHallCnt;
 volatile uint16 g_FLHallCnt;
 volatile uint16 g_RRHallCnt;
 volatile uint16 g_RLHallCnt;
-# 82 "C:\\project\\SHIPAR~1\\TC275\\hall_Driver.c"
+
+
 static ERUconfig g_ERUconfig0;
 static ERUconfig g_ERUconfig1;
 static ERUconfig g_ERUconfig2;

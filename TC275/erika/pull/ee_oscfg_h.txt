@@ -57,6 +57,8 @@
  *
  **************************************************************************/
 #define OSEE_ARCH_TRICORE
+#define OSEE_HAS_ALARMS
+#define OSEE_HAS_COUNTERS
 #define OSEE_HAS_EVENTS
 #define OSEE_HAS_RESOURCES
 #define OSEE_ISR2_MAX_HW_ASM_PRIO 17
@@ -153,6 +155,14 @@
 
 #define OSEE_TC_CORE0_RLHallISR_ISR_TID   (7U)
 #define OSEE_TC_CORE0_RLHallISR_ISR_PRIO  (15U)
+
+
+
+#define OSEE_TC_CORE0_7_ISR_CAT (2U)
+#define OSEE_TC_CORE0_7_ISR_TID 8
+
+#define OSEE_TC_CORE0_AppTimerISR_ISR_TID   (8U)
+#define OSEE_TC_CORE0_AppTimerISR_ISR_PRIO  (7U)
 
 
 /***************************************************************************

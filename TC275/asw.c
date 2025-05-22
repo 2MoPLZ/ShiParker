@@ -21,11 +21,7 @@ struct ParkingSystemPacket testSendPacket =
     .crc=7
 };
 
-
 TASK(TestTask){
-    testSendPacket.car_status++;
-    testSendPacket.car_status%=4;
-    sendPacket(&testSendPacket);
     printfSerial("FRHall: %d FLHall: %d RRHall: %d RLHall: %d",g_FRHallCnt,g_FLHallCnt,g_RRHallCnt,g_RLHallCnt);
 }
 
@@ -62,8 +58,10 @@ ISR2(TimerISR)
 
 
     /************** basic-TASK (every 1s) ********************/
-    ActivateTask(TestTask);
-
+    // ActivateTask(TestTask);
+    if(c==0){
+        startShiParkerApp();
+    }
     /************** basic-TASK for debugging ********************/
     
     printfSerial("\n%4ld: ", c++);

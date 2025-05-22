@@ -43,17 +43,21 @@ extern "C" {
  * Arrays size
  *
  **************************************************************************/
-#define OSEE_TASK_ARRAY_SIZE      (9U)
-#define OSEE_SN_ARRAY_SIZE        (9U)
+#define OSEE_TASK_ARRAY_SIZE      (12U)
+#define OSEE_SN_ARRAY_SIZE        (12U)
 #define OSEE_STACK_ARRAY_SIZE     (1U)
 #define OSEE_RESOURCE_ARRAY_SIZE  (1U)
+#define OSEE_COUNTERS_ARRAY_SIZE  (1U)
+#define OSEE_ALARMS_ARRAY_SIZE    (2U)
 
 /***************************************************************************
  *
  * TASKs declaration
  *
  **************************************************************************/
-#define TestTask (8U)
+#define TestTask (9U)
+#define ShiParkerAppTask (10U)
+#define PacketSendTask (11U)
 
 /***************************************************************************
  *
@@ -73,12 +77,19 @@ extern "C" {
  * COUNTERs Macro Declaration
  *
  **************************************************************************/
+#define AppCounter (0U)
+
+#define OSMAXALLOWEDVALUE_AppCounter (50U)
+#define OSTICKSPERBASE_AppCounter    (1U)
+#define OSMINCYCLE_AppCounter        (1U)
 
 /***************************************************************************
  *
  * ALARMs Declaration
  *
  **************************************************************************/
+#define AppAlarm (0U)
+#define PacketSendAlarm (1U)
 
 /***************************************************************************
  *
