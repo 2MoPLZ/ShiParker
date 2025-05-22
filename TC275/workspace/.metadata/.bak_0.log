@@ -12729,7 +12729,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 10:46:53.358
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SESSION 2025-05-21 12:42:45.719 -----------------------------------------------
+=======
+!SESSION 2025-05-21 12:47:53.285 -----------------------------------------------
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !SESSION 2025-05-21 12:47:53.285 -----------------------------------------------
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12741,7 +12745,11 @@ Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generato
 Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY javax.ws.rs 4 0 2025-05-21 12:42:47.825
+=======
+!ENTRY javax.ws.rs 4 0 2025-05-21 12:47:55.384
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY javax.ws.rs 4 0 2025-05-21 12:47:55.384
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12760,7 +12768,11 @@ org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 12:42:47.825
+=======
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 12:47:55.390
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 12:47:55.390
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12792,7 +12804,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.do
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 12:42:52.369
+=======
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 12:47:59.435
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 12:47:59.435
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12816,7 +12832,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 12:42:52.373
+=======
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 12:47:59.441
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 12:47:59.441
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12848,7 +12868,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 12:42:52.377
+=======
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 12:47:59.441
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 12:47:59.441
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12875,7 +12899,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 12:42:52.378
+=======
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 12:47:59.449
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 12:47:59.449
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12905,7 +12933,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 12:42:53.024
+=======
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 12:47:59.981
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 12:47:59.981
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12927,6 +12959,7 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 12:43:34.916
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
@@ -12934,12 +12967,17 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
 !SESSION 2025-05-21 12:43:51.601 -----------------------------------------------
 =======
+=======
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 12:48:37.249
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 12:48:37.606
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
 !SESSION 2025-05-21 12:48:53.912 -----------------------------------------------
+<<<<<<< HEAD
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
+=======
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=19.0.2
@@ -12949,7 +12987,11 @@ Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generato
 Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY javax.ws.rs 4 0 2025-05-21 12:43:52.387
+=======
+!ENTRY javax.ws.rs 4 0 2025-05-21 12:48:54.713
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY javax.ws.rs 4 0 2025-05-21 12:48:54.713
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -12968,7 +13010,11 @@ org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 12:43:52.387
+=======
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 12:48:54.713
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 12:48:54.713
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13000,7 +13046,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.do
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 12:43:52.511
+=======
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 12:48:54.829
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 12:48:54.829
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13024,7 +13074,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 12:43:52.514
+=======
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 12:48:54.833
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 12:48:54.833
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13056,7 +13110,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 12:43:52.521
+=======
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 12:48:54.841
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 12:48:54.841
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13083,7 +13141,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 12:43:52.521
+=======
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 12:48:54.841
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 12:48:54.841
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13113,7 +13175,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 12:43:52.521
+=======
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 12:48:54.841
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 12:48:54.841
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13135,6 +13201,7 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 12:43:56.219
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
@@ -13142,12 +13209,17 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
 !SESSION 2025-05-21 13:40:56.434 -----------------------------------------------
 =======
+=======
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 12:48:58.590
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-21 12:48:58.904
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
 !SESSION 2025-05-21 14:09:46.976 -----------------------------------------------
+<<<<<<< HEAD
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
+=======
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=19.0.2
@@ -13157,7 +13229,11 @@ Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generato
 Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY javax.ws.rs 4 0 2025-05-21 13:40:57.167
+=======
+!ENTRY javax.ws.rs 4 0 2025-05-21 14:09:47.777
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY javax.ws.rs 4 0 2025-05-21 14:09:47.777
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13176,7 +13252,11 @@ org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 13:40:57.167
+=======
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 14:09:47.777
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-21 14:09:47.777
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13208,7 +13288,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.do
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 13:40:57.280
+=======
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 14:09:47.844
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-21 14:09:47.844
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13232,7 +13316,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 13:40:57.284
+=======
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 14:09:47.860
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-21 14:09:47.860
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13264,7 +13352,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 13:40:57.293
+=======
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 14:09:47.861
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-21 14:09:47.861
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13291,7 +13383,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 13:40:57.298
+=======
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 14:09:47.861
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-21 14:09:47.861
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
@@ -13321,7 +13417,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 13:40:57.304
+=======
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 14:09:47.861
+>>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
 =======
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-21 14:09:47.861
 >>>>>>> 0d0a450eb56e98d678801b9a0e6ed2ce019c1b26
