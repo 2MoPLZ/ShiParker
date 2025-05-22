@@ -10,6 +10,7 @@
 #include "uart_Driver.h"
 #include "steering_Pid.h"
 #include "hall_Driver.h"
+#include "shiparker_App.h"
 /* custom driver added end*/
 
 #include <string.h>
@@ -246,6 +247,7 @@ int main(void)
 {
     osEE_tc_stm_set_clockpersec();
     osEE_tc_stm_set_sr0(1000000U, 1U);
+    osEE_tc_stm_set_sr1(50000U, 2U);
 
     UART_init();
     initADC();
@@ -253,12 +255,10 @@ int main(void)
     
     /* custom driver init() added start*/
     initUltrasonic(&g_Ultrasonic_FL);
-    initUltrasonic(&g_Ultrasonic_F);
-    initUltrasonic(&g_Ultrasonic_FR);
-    initUltrasonic(&g_Ultrasonic_SL);
-    initUltrasonic(&g_Ultrasonic_SR);
-    initUltrasonic(&g_Ultrasonic_R);
-    initUartDriver();
+    initUltrasonic(&g_Ultrasonic_FRONT);
+    initUltrasonic(&g_Ultrasonic_RL);
+    initUltrasonic(&g_Ultrasonic_RIGHT);
+    initUltrasonic(&g_Ultrasonic_REAR);
     initHall();
     /* custom driver added end*/
 

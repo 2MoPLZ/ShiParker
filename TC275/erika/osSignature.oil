@@ -64,4 +64,9 @@ CPU test_application {
 		PRIORITY = 15;
 		SOURCE = "SCUERU3";
 	};
+	ISR AppTimerISR {
+		CATEGORY = 2;
+		SOURCE = "STM0SR1";
+		PRIORITY = 7;
+	};
 };

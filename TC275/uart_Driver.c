@@ -1,5 +1,4 @@
 #include "uart_Driver.h"
-
 #include "bsw.h"
 
 App_AsclinAsc              g_AsclinStm;

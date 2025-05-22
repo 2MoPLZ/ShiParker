@@ -33,6 +33,8 @@ extern "C" {
  *
  **************************************************************************/
 DeclareTask(TestTask);
+DeclareTask(ShiParkerAppTask);
+DeclareTask(PacketSendTask);
 
 
 ISR2(asclin3TxISR);
@@ -43,6 +45,7 @@ ISR2(FRHallISR);
 ISR2(FLHallISR);
 ISR2(RRHallISR);
 ISR2(RLHallISR);
+ISR2(AppTimerISR);
 
 
 /***************************************************************************

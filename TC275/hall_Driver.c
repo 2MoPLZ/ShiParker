@@ -1,82 +1,9 @@
-#include "illd\Libraries\iLLD\TC27D\Tricore\Scu\Std\IfxScuEru.h"
-#include "illd\Libraries\iLLD\TC27D\Tricore\Src\Std\IfxSrc.h"
-#include "illd\Libraries\iLLD\TC27D\Tricore\Cpu\Std/Ifx_Types.h"
-#include "illd\src\ConfigurationIsr.h"
-#include "illd\src\Configuration.h"
 #include "hall_Driver.h"
-
 
 volatile uint16 g_FRHallCnt;
 volatile uint16 g_FLHallCnt;
 volatile uint16 g_RRHallCnt;
 volatile uint16 g_RLHallCnt;
-
-// void initHall(void)
-// {       
-//         IfxPort_setPinMode(&MODULE_P02, 1, IfxPort_Mode_inputPullUp);
-//         IfxPort_setPinMode(&MODULE_P10, 3, IfxPort_Mode_inputPullUp);
-//         SCU_EICR1.U &= ~(0x7 << 4); // EXIS1_IDX
-//         SCU_EICR1.U |= 0x1 << 4; // EXIS1_IDX
-
-//         SCU_EICR1.U |= 1 << 9; // FEN1_IDX 24 or  REN1_IDX 25
-//         SCU_EICR1.U |= 1 << 11; // EIEN1_IDX
-
-//         SCU_EICR1.U &= ~(0x7 << 12); // INP1_IDX
-// //        SCU_EICR1.U |= 1 << 12; // INP1_IDX, OGU 0 채널
-
-//         // set IGCR
-//         SCU_IGCR0.U &= ~(0x3 << 14); // IGP1_IDX
-//         SCU_IGCR0.U |= 0x1 << 14; // IGP1_IDX
-
-//         // set ERU
-//         SRC_SCU_SCU_ERU0.U &= ~0xFF;
-//         SRC_SCU_SCU_ERU0.U |= 0x20; // 우선 순위
-
-//         SRC_SCU_SCU_ERU0.U |= 1 << 10;
-//         SRC_SCU_SCU_ERU0.U &= ~(0x3 << 11);
-// // ========================================================
-//         SCU_EICR2.U &= ~(0x7 << 20); // EXIS1_IDX
-//         SCU_EICR2.U |= 0x1 << 20; // EXIS1_IDX
-
-//         SCU_EICR2.U |= 1 << 25; // FEN1_IDX 24 or  REN1_IDX 25
-//         SCU_EICR2.U |= 1 << 27; // EIEN1_IDX
-
-//         SCU_EICR2.U &= ~(0x7 << 28); // INP1_IDX
-//         SCU_EICR2.U |= 0x1 << 28; // INP1_IDX, OGU 1 채널
-
-//         // set IGCR
-//         SCU_IGCR1.U &= ~(0x3 << 30); // IGP1_IDX
-//         SCU_IGCR1.U |= 0x1 << 30; // IGP1_IDX
-
-//         // set ERU
-//         SRC_SCU_SCU_ERU1.U &= ~0xFF;
-//         SRC_SCU_SCU_ERU1.U |= 0x30; // 우선 순위
-
-//         SRC_SCU_SCU_ERU1.U |= 1 << 10;
-//         SRC_SCU_SCU_ERU1.U &= ~(0x3 << 11);
-
-// }
-
-
-
-
-/* 매크로 정의 */
-#define ISR_PRIORITY_SCUERU_INT0 10
-#define ISR_PRIORITY_SCUERU_INT1 11
-#define ISR_PRIORITY_SCUERU_INT2 12
-#define ISR_PRIORITY_SCUERU_INT3 15
-
-#define REQ_IN0   &IfxScu_REQ14_P02_1_IN   // 첫 번째 홀 센서 (P02.1)
-#define REQ_IN1   &IfxScu_REQ3_P10_3_IN   // 두 번째 홀 센서 (P10.3)
-#define REQ_IN2   &IfxScu_REQ13_P15_5_IN   // 세 번째 홀 센서 (P15.5)
-#define REQ_IN3   &IfxScu_REQ0_P15_4_IN  // 네 번째 홀 센서 (P15.4)
-
-
-#define TRIGGER_PIN0 &MODULE_P02, 1
-#define TRIGGER_PIN1 &MODULE_P10, 3
-#define TRIGGER_PIN2 &MODULE_P15, 5
-#define TRIGGER_PIN3 &MODULE_P15, 4
-
 
 /* 설정 구조체 */
 static ERUconfig g_ERUconfig0;
