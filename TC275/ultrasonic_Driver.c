@@ -2,53 +2,35 @@
 #include "bsw.h"
 
 struct Ultrasonic g_Ultrasonic_FL = {
+    .TRIG_PORT = &MODULE_P02,
+    .TRIG_PIN = 0,
+    .ECHO_PORT = &MODULE_P02,
+    .ECHO_PIN = 3
+};
+struct Ultrasonic g_Ultrasonic_FRONT = {
     .TRIG_PORT = &MODULE_P10,
-    .TRIG_PIN = 1,
+    .TRIG_PIN = 4,
     .ECHO_PORT = &MODULE_P10,
+    .ECHO_PIN = 5
+};
+struct Ultrasonic g_Ultrasonic_RL = {
+    .TRIG_PORT = &MODULE_P02,
+    .TRIG_PIN = 4,
+    .ECHO_PORT = &MODULE_P02,
+    .ECHO_PIN = 5
+};
+struct Ultrasonic g_Ultrasonic_RIGHT = {
+    .TRIG_PORT = &MODULE_P02,
+    .TRIG_PIN = 6,
+    .ECHO_PORT = &MODULE_P02,
+    .ECHO_PIN = 7
+};
+struct Ultrasonic g_Ultrasonic_REAR = {
+    .TRIG_PORT = &MODULE_P33,
+    .TRIG_PIN = 3,
+    .ECHO_PORT = &MODULE_P11,
     .ECHO_PIN = 2
 };
-struct Ultrasonic g_Ultrasonic_F = {
-    .TRIG_PORT = &MODULE_P10,
-    .TRIG_PIN = 1,
-    .ECHO_PORT = &MODULE_P10,
-    .ECHO_PIN = 2
-};
-struct Ultrasonic g_Ultrasonic_FR = {
-    .TRIG_PORT = &MODULE_P10,
-    .TRIG_PIN = 1,
-    .ECHO_PORT = &MODULE_P10,
-    .ECHO_PIN = 2
-};
-struct Ultrasonic g_Ultrasonic_SL = {
-    .TRIG_PORT = &MODULE_P10,
-    .TRIG_PIN = 1,
-    .ECHO_PORT = &MODULE_P10,
-    .ECHO_PIN = 2
-};
-struct Ultrasonic g_Ultrasonic_SR = {
-    .TRIG_PORT = &MODULE_P10,
-    .TRIG_PIN = 1,
-    .ECHO_PORT = &MODULE_P10,
-    .ECHO_PIN = 2
-};
-// struct Ultrasonic g_Ultrasonic_RL = {
-//     .TRIG_PORT = &MODULE_P10,
-//     .TRIG_PIN = 1,
-//     .ECHO_PORT = &MODULE_P10,
-//     .ECHO_PIN = 2
-// };
-struct Ultrasonic g_Ultrasonic_R = {
-    .TRIG_PORT = &MODULE_P10,
-    .TRIG_PIN = 1,
-    .ECHO_PORT = &MODULE_P10,
-    .ECHO_PIN = 2
-};
-// struct Ultrasonic g_Ultrasonic_RR = {
-//     .TRIG_PORT = &MODULE_P10,
-//     .TRIG_PIN = 1,
-//     .ECHO_PORT = &MODULE_P10,
-//     .ECHO_PIN = 2
-// };
 
 void initUltrasonic (struct Ultrasonic* ultrasonic)
 {
