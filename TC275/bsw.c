@@ -259,8 +259,8 @@ int main(void)
     initUltrasonic(&g_Ultrasonic_FL);
     initUltrasonic(&g_Ultrasonic_FRONT);
     initUltrasonic(&g_Ultrasonic_RL);
-    initUltrasonic(&g_Ultrasonic_RIGHT);
-    initUltrasonic(&g_Ultrasonic_REAR);
+    initUltrasonic(&g_Ultrasonic_FR);
+    initUltrasonic(&g_Ultrasonic_RR);
     initMotor();
     initHall();
     

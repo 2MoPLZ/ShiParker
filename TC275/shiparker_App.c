@@ -1,13 +1,8 @@
 #include "shiparker_App.h"
-
 #include "bsw.h"
-#include "hall_Driver.h"
-#include "motor_Driver.h"
-#include "steering_Pid.h"
-#include "uart_Driver.h"
-#include "ultrasonic_Driver.h"
 
 ////////follow the wall용 각도 -> 모터출력 가중치, 0.1라디안 = 5.7296도
+const volatile double motor_power_turn      = 100.0L;
 const volatile double motor_power_normal    = 50.0L;
 const volatile double Kp_rad_to_delta_power = 120.0L;
 /// 바퀴 둘레 22cm -> 홀센서 값 5
@@ -18,6 +13,7 @@ static CAR_STATUS_TYPE            carStatus;
 static CAR_COMMAND_TYPE           carCommand;
 static struct Position            currentPosition;
 static struct Position            targetPosition;
+static uint8                      currentDirection; // 0 : facing north, 1 : facing east ...
 
 ISR2(AppTimerISR)
 {
@@ -39,6 +35,7 @@ void startShiParkerApp(void)
     }
     g_isAppRunning    = TRUE;
     carStatus         = CAR_STATUS_READY;
+    currentDirection  = 0;
     currentPosition.x = 0;
     currentPosition.y = 0;
     targetPosition.x  = POSITION_NULL;
@@ -196,10 +193,10 @@ TASK(AvoidObstacleTask)
     }
 }
 
-void turn90()
+void turn90(void)
 {
-    double currentHallCntAvg = getHallCntAvg();
-    double targetHallCntAvg  = currentHallCntAvg + 3;
+    volatile double currentHallCntAvg = getHallCntAvg();
+    volatile double targetHallCntAvg  = currentHallCntAvg + 4.5;
 
     CancelAlarm(AvoidObstacleAlarm);
 
@@ -208,27 +205,80 @@ void turn90()
     motor_stop(INDEX_RL);
     motor_stop(INDEX_RR);
 
+    motor_run_forward(INDEX_FL);
+    motor_run_forward(INDEX_RL);
+    motor_run_backward(INDEX_FR);
+    motor_run_backward(INDEX_RR);
+
+
+    set_motor_power(INDEX_FL, motor_power_turn);
+    set_motor_power(INDEX_FR, motor_power_turn);
+    set_motor_power(INDEX_RL, motor_power_turn);
+    set_motor_power(INDEX_RR, motor_power_turn);
+ 
+    while (currentHallCntAvg < targetHallCntAvg)
+    {
+        delay_ms(50);
+        currentHallCntAvg = getHallCntAvg();
+        printDouble("getHallCntAvg(): ", currentHallCntAvg);
+        // printDouble("targetHallCntAvg: ", targetHallCntAvg);
+        delay_ms(50);
+    }
+    
+    currentDirection = (currentDirection + 1) % 4;
+    
+    g_FLHallCnt = 0;
+    g_FRHallCnt = 0;
+    g_RLHallCnt = 0; 
+    g_RRHallCnt = 0;
+
     set_motor_power(INDEX_FL, motor_power_normal);
     set_motor_power(INDEX_FR, motor_power_normal);
     set_motor_power(INDEX_RL, motor_power_normal);
     set_motor_power(INDEX_RR, motor_power_normal);
 
-    while (getHallCntAvg() < targetHallCntAvg)
-    {
-        delay_ms(10);
-    }
     SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
 }
 
+void calculateCurrentPos() {
+    switch (currentDirection) 
+    {
+        case 0: 
+            currentPosition.y = CM_PER_HALLCNT * getHallCntAvg();
+            break;
+        case 1: 
+            currentPosition.x = CM_PER_HALLCNT * getHallCntAvg();
+            break;
+        case 2:
+            currentPosition.y = CM_PER_HALLCNT * getHallCntAvg();
+            break;
+        case 3:
+            currentPosition.x = CM_PER_HALLCNT * getHallCntAvg();
+            break;
+        default:
+            break;
+    }
+}
+volatile double FrontUltra;
+volatile double RearUltra;
 TASK(WallFollowTask)
 {
     if (g_isAppRunning && (carStatus == CAR_STATUS_RUNNING))
     {
-        double       FrontLeftUltra = getUltrasonic(&g_Ultrasonic_FL);
-        double       RearLeftUltra  = getUltrasonic(&g_Ultrasonic_RL);
-        // printDouble("frontleft:",FrontLeftUltra);
-        // printDouble("Rearleft:",RearLeftUltra);
-        DriveCommand cmd = wall_follow_control(FrontLeftUltra, RearLeftUltra);
+        if(currentDirection == 0)
+        {
+            min_dist_left = 20; 
+            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
+            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
+        }
+        else if(currentDirection==1)
+        {
+            min_dist_left = targetPosition.y;
+            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
+            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
+            
+        }
+        DriveCommand cmd = wall_follow_control(FrontUltra, RearUltra);
         double       delta_p = cmd.steering_angle * Kp_rad_to_delta_power;
         printDouble("delta:",delta_p);
         set_motor_power(INDEX_FL, motor_power_normal + (delta_p / 2));
@@ -236,11 +286,35 @@ TASK(WallFollowTask)
         set_motor_power(INDEX_FR, motor_power_normal - (delta_p / 2));
         set_motor_power(INDEX_RR, motor_power_normal - (delta_p / 2));
         motor_run_forward(INDEX_FL);
-        motor_run_forward(INDEX_RL);
         motor_run_forward(INDEX_FR);
+        motor_run_forward(INDEX_RL);
         motor_run_forward(INDEX_RR);
+
+        
+        calculateCurrentPos();
+
+        if (currentDirection == 0 && currentPosition.y >= targetPosition.y) 
+        {
+            motor_stop(INDEX_FL);
+            motor_stop(INDEX_FR);
+            motor_stop(INDEX_RL);
+            motor_stop(INDEX_RR);
+
+            turn90();
+        } 
+
+        else if (currentDirection == 1 && currentPosition.x >= targetPosition.x) 
+        {
+            motor_stop(INDEX_FL);
+            motor_stop(INDEX_FR);
+            motor_stop(INDEX_RL);
+            motor_stop(INDEX_RR);
+
+            carStatus = CAR_STATUS_TERMINATED;
+        }
     }
 }
+
 
 TASK(PacketSendTask)
 {

@@ -8859,7 +8859,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 11:09:17.672
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
+<<<<<<< HEAD
+!SESSION 2025-05-23 12:47:12.901 -----------------------------------------------
+=======
 !SESSION 2025-05-23 12:33:14.683 -----------------------------------------------
+>>>>>>> TC275
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=19.0.2
 java.vendor=Oracle Corporation
@@ -8867,7 +8871,11 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 
+<<<<<<< HEAD
+!ENTRY javax.ws.rs 4 0 2025-05-23 12:47:15.185
+=======
 !ENTRY javax.ws.rs 4 0 2025-05-23 12:33:15.583
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
@@ -8882,7 +8890,11 @@ org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-23 12:47:15.185
+=======
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-23 12:33:15.586
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
@@ -8910,7 +8922,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.do
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-23 12:47:19.259
+=======
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-23 12:33:15.717
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
@@ -8930,7 +8946,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-23 12:47:19.262
+=======
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-23 12:33:15.727
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
@@ -8958,7 +8978,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-23 12:47:19.273
+=======
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-23 12:33:15.727
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
@@ -8981,7 +9005,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-23 12:47:19.277
+=======
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-23 12:33:15.734
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
@@ -9007,7 +9035,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-23 12:47:19.883
+=======
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-23 12:33:15.734
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
@@ -9025,12 +9057,21 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 12:48:00.279
+!MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 12:48:00.701
+!MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
+!SESSION 2025-05-23 16:21:43.755 -----------------------------------------------
+=======
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 12:33:19.510
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 12:33:19.966
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.
 !SESSION 2025-05-23 14:11:27.991 -----------------------------------------------
+>>>>>>> TC275
 eclipse.buildId=4.8.0.I20180611-0500
 java.version=19.0.2
 java.vendor=Oracle Corporation
@@ -9038,7 +9079,11 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 Command-line arguments:  -data ./workspace -application com.eu.evidence.rtdruid3.oil.ee.core.generator --inputFile conf.oil --outputDir .
 
+<<<<<<< HEAD
+!ENTRY javax.ws.rs 4 0 2025-05-23 16:21:44.744
+=======
 !ENTRY javax.ws.rs 4 0 2025-05-23 14:11:30.077
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
@@ -9053,7 +9098,11 @@ org.osgi.framework.BundleException: Could not resolve module: javax.ws.rs [32]
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-23 16:21:44.750
+=======
 !ENTRY org.eclipse.cdt.docker.launcher 4 0 2025-05-23 14:11:30.077
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.docker.launcher [109]
@@ -9081,7 +9130,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.cdt.do
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-23 16:21:44.905
+=======
 !ENTRY org.eclipse.linuxtools.docker.core 4 0 2025-05-23 14:11:34.283
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.core [302]
@@ -9101,7 +9154,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-23 16:21:44.921
+=======
 !ENTRY org.eclipse.linuxtools.docker.ui 4 0 2025-05-23 14:11:34.289
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxtools.docker.ui [304]
@@ -9129,7 +9186,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.linuxt
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-23 16:21:44.922
+=======
 !ENTRY org.eclipse.mylyn.bugzilla.core 4 0 2025-05-23 14:11:34.289
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.core [335]
@@ -9152,7 +9213,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-23 16:21:44.922
+=======
 !ENTRY org.eclipse.mylyn.bugzilla.ui 4 0 2025-05-23 14:11:34.289
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.bugzilla.ui [337]
@@ -9178,7 +9243,11 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-23 16:21:44.939
+=======
 !ENTRY org.eclipse.mylyn.commons.xmlrpc 4 0 2025-05-23 14:11:34.883
+>>>>>>> TC275
 !MESSAGE FrameworkEvent ERROR
 !STACK 0
 org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.commons.xmlrpc [349]
@@ -9196,6 +9265,12 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
 	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
 
+<<<<<<< HEAD
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 16:21:49.270
+!MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
+
+!ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 16:21:49.780
+=======
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 14:12:12.870
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
@@ -9542,4 +9617,5 @@ org.osgi.framework.BundleException: Could not resolve module: org.eclipse.mylyn.
 !MESSAGE No value found for the property 'preference_tricore__path_for_hightec_gcc_compiler'.
 
 !ENTRY org.eclipse.acceleo.engine 2 0 2025-05-23 15:51:55.553
+>>>>>>> TC275
 !MESSAGE No value found for the property 'preference_lauterbach__path_for_trace32'.

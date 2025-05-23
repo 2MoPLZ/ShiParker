@@ -21,6 +21,7 @@
 #define TRIGGER_PIN1 &MODULE_P10, 3
 #define TRIGGER_PIN2 &MODULE_P11, 10
 #define TRIGGER_PIN3 &MODULE_P20, 9
+#define CM_PER_HALLCNT 4.2
 
 extern volatile uint16 g_FRHallCnt;
 extern volatile uint16 g_FLHallCnt;

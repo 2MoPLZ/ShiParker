@@ -38,8 +38,8 @@ struct __attribute__((__packed__)) Ultrasonic
 extern struct Ultrasonic g_Ultrasonic_FL;
 extern struct Ultrasonic g_Ultrasonic_FRONT;
 extern struct Ultrasonic g_Ultrasonic_RL;
-extern struct Ultrasonic g_Ultrasonic_RIGHT;
-extern struct Ultrasonic g_Ultrasonic_REAR;
+extern struct Ultrasonic g_Ultrasonic_FR;
+extern struct Ultrasonic g_Ultrasonic_RR;
 
 
 void initUltrasonic(struct Ultrasonic* ultrasonic);

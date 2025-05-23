@@ -16,6 +16,8 @@
 
 #include <math.h>
 #include <time.h>
+#include "illd\src\ConfigurationIsr.h"
+#include "illd\src\Configuration.h"
 
 // 제어 상수
 #define KP 0.1
@@ -23,11 +25,11 @@
 #define KI 0.005
 #define L 10
 #define SENSOR_DISTANCE 11.5
-#define MIN_DIST_LEFT 15
 #define PI 3.14159265359
 #define STM_FREQUENCY 100000000UL  // STM 주파수 (Hz) → 100 MHz이면 1초 = 100,000,000 ticks
 
 
+extern volatile uint16_t min_dist_left;
 // PID 변수
 static double pid_prev_error = 0.0;
 static double pid_integral = 0.0;

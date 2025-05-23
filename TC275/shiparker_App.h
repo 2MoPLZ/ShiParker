@@ -21,9 +21,12 @@
 #include "illd\src\Configuration.h"
 #include "hall_Driver.h"
 #include "uart_Driver.h"
-#include "motor_Driver.h"
+#include "motor_driver.h"
+#include "ultrasonic_Driver.h"
 #include "bsw.h"
 #include "stdlib.h"
+#include "steering_Pid.h"
+
 
 #define APP_CYCLE_TICK 10                   //500ms
 #define WALL_FOLLOW_CYCLE_TICK 4            //200ms
@@ -103,5 +106,6 @@ void initShiParkerApp(void);
 void makePacket(struct ParkingSystemPacket* dst);
 void updateStatus(const struct ParkingSystemPacket* packet);
 void handleError(ERROR_CODE_TYPE errorCode);
+void turn90(void);
 
 #endif /* SHIPARKER_APP_H_ */
