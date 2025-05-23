@@ -27,8 +27,15 @@
 #include "bsw.h"
 #include "stdlib.h"
 
-#define ERROR_CODE_MAX 16
+#define APP_CYCLE_TICK 10                   //500ms
+#define SENDPACKET_DEFAULT_CYCLE_TICK 50    //2500ms
+#define SENDPACKET_RUNNING_CYCLE_TICK 10    //500ms
+#define FRONT_OBSTACLE_DETECTION_TICK 2     //100ms
 #define FRONT_OBSTACLE_THRESHOLD 7
+
+#define POSITION_NULL -1000000000
+
+#define ERROR_CODE_MAX 16
 
 extern boolean g_isAppRunning;
 

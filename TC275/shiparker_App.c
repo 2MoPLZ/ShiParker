@@ -31,11 +31,11 @@ void startShiParkerApp(void)
     carStatus         = CAR_STATUS_READY;
     currentPosition.x = 0;
     currentPosition.y = 0;
-    targetPosition.x  = -1; // NULL 값을 따로 정의해줘야함
-    targetPosition.y  = -1; // NULL 값을 따로 정의해줘야함
+    targetPosition.x  = POSITION_NULL;
+    targetPosition.y  = POSITION_NULL;
     carCommand        = CAR_COMMAND_STOP;
-    SetRelAlarm(AppAlarm, 1, 10);
-    SetRelAlarm(PacketSendAlarm, 2, 50);
+    SetRelAlarm(AppAlarm, 2, APP_CYCLE_TICK);
+    SetRelAlarm(PacketSendAlarm, 2, SENDPACKET_DEFAULT_CYCLE_TICK);
 }
 
 TASK(ShiParkerAppTask)
@@ -57,8 +57,8 @@ TASK(ShiParkerAppTask)
             // READY일때 시작 -> 주차 시작
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(PacketSendAlarm, 0, 10);
-            SetRelAlarm(AvoidObstacleAlarm, 0, 2); // 100ms
+            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_RUNNING_CYCLE_TICK);
+            SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK); // 100ms
             break;
         case CAR_COMMAND_STOP:
             // READY일때 일시정지 -> 변화없음
@@ -81,7 +81,7 @@ TASK(ShiParkerAppTask)
             // RUNNING일때 일시정지 -> 일시정지
             CancelAlarm(PacketSendAlarm);
             CancelAlarm(AvoidObstacleAlarm);
-            SetRelAlarm(PacketSendAlarm, 0, 50);
+            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
             break;
         default:
             break;
@@ -102,8 +102,8 @@ TASK(ShiParkerAppTask)
             // STOP일때 시작 -> 주차 재개
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(PacketSendAlarm, 0, 10);
-            SetRelAlarm(AvoidObstacleAlarm, 0, 2);
+            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_RUNNING_CYCLE_TICK);
+            SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK);
             break;
         case CAR_COMMAND_STOP:
             // STOP일때 일시정지 -> 변화없음
@@ -138,8 +138,8 @@ TASK(ShiParkerAppTask)
             // ERROR일때 시작 -> 주차 재개
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(PacketSendAlarm, 0, 50); // 2500ms
-            SetRelAlarm(AvoidObstacleAlarm, 0, 2);
+            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK); // 2500ms
+            SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK);
             break;
         case CAR_COMMAND_STOP:
             // ERROR일때 일시정지 -> 변화없음
