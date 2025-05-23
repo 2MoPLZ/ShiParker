@@ -48,12 +48,35 @@ void startShiParkerApp(void)
     SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
 }
 
+void exitShiParkerApp(){
+    printfSerial("Exit ShiParker...\n");
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
+
+    carStatus = CAR_STATUS_TERMINATED;
+
+    ActivateTask(PacketSendTask);
+    CancelAlarm(AvoidObstacleAlarm);
+    CancelAlarm(PacketSendAlarm);
+    CancelAlarm(WallFollowAlarm);
+    CancelAlarm(AppAlarm);
+
+    g_isAppRunning = FALSE;
+}
+
 TASK(ShiParkerAppTask)
 {
-    printfSerial("app");
+    printfSerial("[%d]",carStatus);
     if (g_isAppRunning == FALSE)
         TerminateTask();
+<<<<<<< Updated upstream
     // updateStatus(&g_RecievedParkingSystemPacket);
+=======
+    // 시스템과 통합할 때 주석처리를 해제하세요(g_RecievedParkingSystemPacket이 잘 초기화되어 있어야 합니다)
+    updateStatus(&g_RecievedParkingSystemPacket);
+>>>>>>> Stashed changes
     switch (carStatus)
     {
     case CAR_STATUS_READY:
@@ -61,7 +84,7 @@ TASK(ShiParkerAppTask)
         {
         case CAR_COMMAND_FORCESTOP:
             // READY일때 강제정지 -> 앱 종료
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
             // READY일때 시작 -> 주차 시작
@@ -85,13 +108,18 @@ TASK(ShiParkerAppTask)
         {
         case CAR_COMMAND_FORCESTOP:
             // RUNNING일때 강제정지 -> 앱 종료
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
             // RUNNING일때 시작 -> 변화없음
             break;
         case CAR_COMMAND_STOP:
             // RUNNING일때 일시정지 -> 일시정지
+            carStatus = CAR_STATUS_STOP;
+            motor_stop(0);
+            motor_stop(1);
+            motor_stop(2);
+            motor_stop(3);
             CancelAlarm(PacketSendAlarm);
             CancelAlarm(AvoidObstacleAlarm);
             CancelAlarm(WallFollowAlarm);
@@ -102,15 +130,11 @@ TASK(ShiParkerAppTask)
         }
         break;
     case CAR_STATUS_STOP:
-        motor_stop(0);
-        motor_stop(1);
-        motor_stop(2);
-        motor_stop(3);
         switch (carCommand)
         {
         case CAR_COMMAND_FORCESTOP:
             // STOP일때 강제정지 -> 앱 종료
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
             // STOP일때 시작 -> 주차 재개
@@ -129,18 +153,7 @@ TASK(ShiParkerAppTask)
         break;
     case CAR_STATUS_TERMINATED:
         // 앱을 종료하고 차량 제어권을 사용자에게 넘긴다
-        motor_stop(0);
-        motor_stop(1);
-        motor_stop(2);
-        motor_stop(3);
-        printfSerial("Terminate ShiParker...\n");
-        ActivateTask(PacketSendTask);
-        g_isAppRunning = FALSE;
-        CancelAlarm(AvoidObstacleAlarm);
-        CancelAlarm(PacketSendAlarm);
-        CancelAlarm(WallFollowAlarm);
-        CancelAlarm(AppAlarm);
-        TerminateTask();
+        exitShiParkerApp();
         break;
     case CAR_STATUS_ERROR_OBSTACLE:
     case CAR_STATUS_ERROR_BAD_CONNECTION:
@@ -148,7 +161,7 @@ TASK(ShiParkerAppTask)
         {
         case CAR_COMMAND_FORCESTOP:
             // STOP일때 강제정지 -> 앱 종료
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
             // ERROR일때 시작 -> 주차 재개
@@ -226,12 +239,15 @@ TASK(WallFollowTask)
         set_motor_power(INDEX_RL, motor_power_normal + (delta_p / 2));
         set_motor_power(INDEX_FR, motor_power_normal - (delta_p / 2));
         set_motor_power(INDEX_RR, motor_power_normal - (delta_p / 2));
+        motor_run_forward(INDEX_FL);
+        motor_run_forward(INDEX_RL);
+        motor_run_forward(INDEX_FR);
+        motor_run_forward(INDEX_RR);
     }
 }
 
 TASK(PacketSendTask)
 {
-    printfSerial("sendpacket:status=%d,cmd=%d",carStatus,carCommand);
     makePacket(&carStatusPacket);
     sendPacket(&carStatusPacket);
 }
@@ -248,22 +264,20 @@ void makePacket(struct ParkingSystemPacket *dst)
 }
 void updateStatus(const struct ParkingSystemPacket *packet)
 {
-    carStatus         = packet->car_status;
     carCommand        = packet->car_command;
-    currentPosition.x = packet->car_current_position.x;
-    currentPosition.y = packet->car_current_position.y;
     targetPosition.x  = packet->car_target_position.x;
     targetPosition.y  = packet->car_target_position.y;
 }
 
 void handleError(ERROR_CODE_TYPE errorCode)
 {
+    carCommand=CAR_COMMAND_STOP;
     CancelAlarm(AvoidObstacleAlarm);
     CancelAlarm(WallFollowAlarm);
-    motor_stop(0);
-    motor_stop(1);
-    motor_stop(2);
-    motor_stop(3);
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
     if (errorCode < ERROR_CODE_MAX)
     {
         printfSerial("ERROR: %s (%d)\n", errorMessages[errorCode], errorCode);
@@ -272,7 +286,7 @@ void handleError(ERROR_CODE_TYPE errorCode)
         case ERROR_CODE_USER_CONTROL:
             carStatus = CAR_STATUS_ERROR_HARDWARE;
             ActivateTask(PacketSendTask);
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case ERROR_CODE_OBSTACLE:
             carStatus = CAR_STATUS_ERROR_OBSTACLE;
@@ -287,6 +301,7 @@ void handleError(ERROR_CODE_TYPE errorCode)
     else
     {
         printfSerial("ERROR: Unknown error code (%d).\n", errorCode);
+        exitShiParkerApp();
     }
     ActivateTask(PacketSendTask);
 }

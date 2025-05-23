@@ -65,7 +65,7 @@ void printDouble(const char* label, double value)
 {
     int intPart = (int)value;
     int fracPart = (int)((value - intPart) * 1000);  // 소수점 세 자리
-    printfSerial("%s: %d.%03d\n", label, intPart, fracPart);
+    printfSerial("%s: %d.%03d", label, intPart, fracPart);
 }
 
 void UART_init(void)

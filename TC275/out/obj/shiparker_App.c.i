@@ -34343,12 +34343,31 @@ void startShiParkerApp(void)
     SetRelAlarm((1U), 0, 50);
 }
 
+void exitShiParkerApp(){
+    printfSerial("Exit ShiParker...\n");
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
+
+    carStatus = CAR_STATUS_TERMINATED;
+
+    ActivateTask((11U));
+    CancelAlarm((3U));
+    CancelAlarm((1U));
+    CancelAlarm((2U));
+    CancelAlarm((0U));
+
+    g_isAppRunning = (0u);
+}
+
 void FuncShiParkerAppTask ( void )
 {
-    printfSerial("app");
+    printfSerial("[%d]",carStatus);
     if (g_isAppRunning == (0u))
         TerminateTask();
 
+    updateStatus(&g_RecievedParkingSystemPacket);
     switch (carStatus)
     {
     case CAR_STATUS_READY:
@@ -34356,17 +34375,17 @@ void FuncShiParkerAppTask ( void )
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm((1U));
-            SetRelAlarm((2U), 0, 2);
+            SetRelAlarm((2U), 0, 4);
             SetRelAlarm((1U), 0, 10);
             SetRelAlarm((3U),
                         0,
-                        2);
+                        6);
             break;
         case CAR_COMMAND_STOP:
 
@@ -34380,13 +34399,18 @@ void FuncShiParkerAppTask ( void )
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             break;
         case CAR_COMMAND_STOP:
 
+            carStatus = CAR_STATUS_STOP;
+            motor_stop(0);
+            motor_stop(1);
+            motor_stop(2);
+            motor_stop(3);
             CancelAlarm((1U));
             CancelAlarm((3U));
             CancelAlarm((2U));
@@ -34397,23 +34421,19 @@ void FuncShiParkerAppTask ( void )
         }
         break;
     case CAR_STATUS_STOP:
-        motor_stop(0);
-        motor_stop(1);
-        motor_stop(2);
-        motor_stop(3);
         switch (carCommand)
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm((1U));
-            SetRelAlarm((2U), 0, 2);
+            SetRelAlarm((2U), 0, 4);
             SetRelAlarm((1U), 0, 10);
-            SetRelAlarm((3U), 0, 2);
+            SetRelAlarm((3U), 0, 6);
             break;
         case CAR_COMMAND_STOP:
 
@@ -34424,18 +34444,7 @@ void FuncShiParkerAppTask ( void )
         break;
     case CAR_STATUS_TERMINATED:
 
-        motor_stop(0);
-        motor_stop(1);
-        motor_stop(2);
-        motor_stop(3);
-        printfSerial("Terminate ShiParker...\n");
-        ActivateTask((11U));
-        g_isAppRunning = (0u);
-        CancelAlarm((3U));
-        CancelAlarm((1U));
-        CancelAlarm((2U));
-        CancelAlarm((0U));
-        TerminateTask();
+        exitShiParkerApp();
         break;
     case CAR_STATUS_ERROR_OBSTACLE:
     case CAR_STATUS_ERROR_BAD_CONNECTION:
@@ -34443,17 +34452,17 @@ void FuncShiParkerAppTask ( void )
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm((1U));
-            SetRelAlarm((2U), 0, 2);
+            SetRelAlarm((2U), 0, 4);
             SetRelAlarm((1U),
                         0,
                         50);
-            SetRelAlarm((3U), 0, 2);
+            SetRelAlarm((3U), 0, 6);
             break;
         case CAR_COMMAND_STOP:
 
@@ -34476,7 +34485,7 @@ void FuncAvoidObstacleTask ( void )
         TerminateTask();
     double dist = getUltrasonic(&g_Ultrasonic_FRONT);
     printDouble("frontUltra:",dist);
-    if (dist > 0 && dist < 7)
+    if (dist > 0 && dist < 12)
     {
         handleError(ERROR_CODE_OBSTACLE);
     }
@@ -34521,12 +34530,15 @@ void FuncWallFollowTask ( void )
         set_motor_power(INDEX_RL, motor_power_normal + (delta_p / 2));
         set_motor_power(INDEX_FR, motor_power_normal - (delta_p / 2));
         set_motor_power(INDEX_RR, motor_power_normal - (delta_p / 2));
+        motor_run_forward(INDEX_FL);
+        motor_run_forward(INDEX_RL);
+        motor_run_forward(INDEX_FR);
+        motor_run_forward(INDEX_RR);
     }
 }
 
 void FuncPacketSendTask ( void )
 {
-    printfSerial("sendpacket:status=%d,cmd=%d",carStatus,carCommand);
     makePacket(&carStatusPacket);
     sendPacket(&carStatusPacket);
 }
@@ -34543,22 +34555,20 @@ void makePacket(struct ParkingSystemPacket *dst)
 }
 void updateStatus(const struct ParkingSystemPacket *packet)
 {
-    carStatus = packet->car_status;
     carCommand = packet->car_command;
-    currentPosition.x = packet->car_current_position.x;
-    currentPosition.y = packet->car_current_position.y;
     targetPosition.x = packet->car_target_position.x;
     targetPosition.y = packet->car_target_position.y;
 }
 
 void handleError(ERROR_CODE_TYPE errorCode)
 {
+    carCommand=CAR_COMMAND_STOP;
     CancelAlarm((3U));
     CancelAlarm((2U));
-    motor_stop(0);
-    motor_stop(1);
-    motor_stop(2);
-    motor_stop(3);
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
     if (errorCode < 16)
     {
         printfSerial("ERROR: %s (%d)\n", errorMessages[errorCode], errorCode);
@@ -34567,7 +34577,7 @@ void handleError(ERROR_CODE_TYPE errorCode)
         case ERROR_CODE_USER_CONTROL:
             carStatus = CAR_STATUS_ERROR_HARDWARE;
             ActivateTask((11U));
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case ERROR_CODE_OBSTACLE:
             carStatus = CAR_STATUS_ERROR_OBSTACLE;
@@ -34582,6 +34592,7 @@ void handleError(ERROR_CODE_TYPE errorCode)
     else
     {
         printfSerial("ERROR: Unknown error code (%d).\n", errorCode);
+        exitShiParkerApp();
     }
     ActivateTask((11U));
 }

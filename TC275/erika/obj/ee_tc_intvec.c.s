@@ -65,12 +65,10 @@ __INTTAB0:
 	mov %d4, 7
 	j osEE_tc_isr2_wrapper
 	.align 5
-	.globl osEE_tc_isr2_entry_13
-	osEE_tc_isr2_entry_13:
-	svlcx
-	mov %d4, 1
-	j osEE_tc_isr2_wrapper
-	.align 5
+	.globl osEE_tc_isr_dummy_entry_13
+	osEE_tc_isr_dummy_entry_13:
+	j .
+	.align  5
 	.globl osEE_tc_isr2_entry_14
 	osEE_tc_isr2_entry_14:
 	svlcx
@@ -421,10 +419,12 @@ __INTTAB0:
 	osEE_tc_isr_dummy_entry_99:
 	j .
 	.align  5
-	.globl osEE_tc_isr_dummy_entry_100
-	osEE_tc_isr_dummy_entry_100:
-	j .
-	.align  5
+	.globl osEE_tc_isr2_entry_100
+	osEE_tc_isr2_entry_100:
+	svlcx
+	mov %d4, 1
+	j osEE_tc_isr2_wrapper
+	.align 5
 	.globl osEE_tc_isr_dummy_entry_101
 	osEE_tc_isr_dummy_entry_101:
 	j .

@@ -2,7 +2,7 @@
  * app.h
  *
  *  Created on: May 19, 2025
- *  Last modify: May 21, 2025
+ *  Last modify: May 23, 2025
  *      Author: 오동걸
  * 
  *          시스템에 의한 제어가 가능한 상태
@@ -10,10 +10,6 @@
  *          동작상태일때 0.5s 마다 현재 상태를 알리는 패킷을 날림
  * 
  *      TODO:
- *          시스템과의 통합테스트
- *          에러상황마다의 핸들링 로직 추가
- *          센서를 이용해 자신의 위치를 알아내는 알고리즘 이식
- *          차량 제어 알고리즘 이식(TASK기반이면 좋음.......)
  *          asw.c에서 ButtonISR을 살리고, ButtonISR에 의해 App의 start/restart를 동작시킬 수 있도록 구현
  */
 
@@ -30,10 +26,10 @@
 #include "stdlib.h"
 
 #define APP_CYCLE_TICK 10                   //500ms
-#define WALL_FOLLOW_CYCLE_TICK 2            //100ms
+#define WALL_FOLLOW_CYCLE_TICK 4            //200ms
 #define SENDPACKET_DEFAULT_CYCLE_TICK 50    //2500ms
 #define SENDPACKET_RUNNING_CYCLE_TICK 10    //500ms
-#define FRONT_OBSTACLE_DETECTION_TICK 2     //100ms
+#define FRONT_OBSTACLE_DETECTION_TICK 6     //300ms
 #define FRONT_OBSTACLE_THRESHOLD 12
 
 #define POSITION_NULL -1000000000
