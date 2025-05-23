@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "bsw.h": "c",
-        "shiparker_app.h": "c"
+        "shiparker_app.h": "c",
+        "uart_driver.h": "c",
+        "configurationisr.h": "c"
     }
 }

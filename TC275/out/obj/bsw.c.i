@@ -34355,7 +34355,7 @@ void printDouble(const char* label, double value)
 {
     int intPart = (int)value;
     int fracPart = (int)((value - intPart) * 1000);
-    printfSerial("%s: %d.%03d\n", label, intPart, fracPart);
+    printfSerial("%s: %d.%03d", label, intPart, fracPart);
 }
 
 void UART_init(void)
@@ -34545,6 +34545,7 @@ int main(void)
     initPeripheralsAndERU();
 
 
+    initUartDriver();
     initUltrasonic(&g_Ultrasonic_FL);
     initUltrasonic(&g_Ultrasonic_FRONT);
     initUltrasonic(&g_Ultrasonic_RL);
@@ -34552,7 +34553,7 @@ int main(void)
     initUltrasonic(&g_Ultrasonic_REAR);
     initMotor();
     initHall();
-# 273 "C:\\SHIPAR~1\\TC275\\bsw.c"
+# 274 "C:\\SHIPAR~1\\TC275\\bsw.c"
     printfSerial("\n...............\n");
     printfSerial("...OS Starts...\n");
     printfSerial("...............\n");
