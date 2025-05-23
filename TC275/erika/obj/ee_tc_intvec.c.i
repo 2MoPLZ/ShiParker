@@ -2546,10 +2546,10 @@ static inline OsEE_reg __attribute__((always_inline))
 {
   OsEE_icr icr = osEE_tc_get_icr();
 
-  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((144U))) {
+  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((227U))) {
     OsEE_icr icr_temp = icr;
 
-    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((144U));
+    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((227U));
     osEE_tc_set_icr(icr_temp);
   }
 
@@ -3206,9 +3206,17 @@ __asm__ (".globl osEE_tc" "_" "isr2_entry_" "10"); __asm__ ("osEE_tc" "_" "isr2_
 __asm__ (".globl osEE_tc" "_" "isr2_entry_" "11"); __asm__ ("osEE_tc" "_" "isr2_entry_" "11" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "4"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
 # 262 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr2_entry_" "12"); __asm__ ("osEE_tc" "_" "isr2_entry_" "12" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "7"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
+<<<<<<< HEAD
 # 273 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr2_entry_" "13"); __asm__ ("osEE_tc" "_" "isr2_entry_" "13" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "1"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
 # 284 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+=======
+# 280 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+__asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "13"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "13" ":"); __asm__ ("j ."); __asm__ (".align  5");
+
+
+
+>>>>>>> TC275
 __asm__ (".globl osEE_tc" "_" "isr2_entry_" "14"); __asm__ ("osEE_tc" "_" "isr2_entry_" "14" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "2"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
 # 295 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr2_entry_" "15"); __asm__ ("osEE_tc" "_" "isr2_entry_" "15" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "6"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
@@ -3382,9 +3390,17 @@ __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "97"); __asm__ ("osEE_tc" "_" "
 __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "98"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "98" ":"); __asm__ ("j ."); __asm__ (".align  5");
 # 1226 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "99"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "99" ":"); __asm__ ("j ."); __asm__ (".align  5");
+<<<<<<< HEAD
 # 1237 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "100"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "100" ":"); __asm__ ("j ."); __asm__ (".align  5");
 # 1248 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+=======
+
+
+
+__asm__ (".globl osEE_tc" "_" "isr2_entry_" "100"); __asm__ ("osEE_tc" "_" "isr2_entry_" "100" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "1"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
+# 1248 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+>>>>>>> TC275
 __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "101"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "101" ":"); __asm__ ("j ."); __asm__ (".align  5");
 # 1259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "102"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "102" ":"); __asm__ ("j ."); __asm__ (".align  5");

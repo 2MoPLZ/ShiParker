@@ -4,9 +4,9 @@
 # 1 "<command-line>"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.c"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 1
-# 24 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
+# 20 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
-# 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 21 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\Configuration.h" 1
 
 
@@ -31697,7 +31697,7 @@ struct __attribute__((__packed__)) ParkingSystemPacket
     uint8 car_command;
     uint8 crc;
 };
-# 26 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 22 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h" 1
 # 26 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h"
 extern volatile uint16 g_FRHallCnt;
@@ -31709,7 +31709,7 @@ void initHall(void);
 uint16 getFRHallCnt(void);
 void resetFRHallCnt(void);
 inline double getHallCntAvg(void);
-# 27 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 23 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h" 1
 # 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
@@ -31723,7 +31723,7 @@ void readPacket(struct ParkingSystemPacket *packet);
 uint8 calculateChecksum(const uint8 *data, size_t length);
 void serializePacket(const struct ParkingSystemPacket *packet, uint8 *buffer);
 void deserializePacket(const uint8 *buffer, struct ParkingSystemPacket *packet);
-# 28 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 24 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\motor_driver.h" 1
 # 12 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\motor_driver.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h" 1
@@ -33467,7 +33467,7 @@ void motor_run_backward(motor_index_t motor_index);
 void motor_stop(motor_index_t motor_index);
 void set_motor_power(motor_index_t motor_index, double dutyPercent);
 void _setDutyCycle(IfxGtm_Tom_Pwm_Driver* driver , IfxGtm_Tom_Pwm_Config* config, uint32 _dutyCycle);
-# 29 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.h" 1
 # 30 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\ultrasonic_Driver.h"
 struct __attribute__((__packed__)) Ultrasonic
@@ -33491,7 +33491,7 @@ double getUltrasonic(struct Ultrasonic* ultrasonic);
 void sendTrigger(struct Ultrasonic* ultrasonic);
 long measureEchoTick(struct Ultrasonic* ultrasonic);
 double calculateDistanceCm(long elapsedTicks);
-# 30 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 26 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 1 3
 # 10 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 3
@@ -33689,7 +33689,7 @@ extern long double wcstold (const wchar_t *, wchar_t **);
 
 
 
-# 32 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 28 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\steering_Pid.h" 1
 # 17 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\steering_Pid.h"
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\math.h" 1 3
@@ -34228,8 +34228,8 @@ typedef struct{
 double get_delta_time(void);
 double get_position(double adjusted_dist_a, double adjusted_dist_b);
 DriveCommand wall_follow_control(double dist_a, double dist_b);
-# 33 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
-# 46 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
+# 29 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 42 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
 extern boolean g_isAppRunning;
 
 
@@ -34338,19 +34338,38 @@ void startShiParkerApp(void)
     currentDirection = 0;
     currentPosition.x = 0;
     currentPosition.y = 0;
-    targetPosition.x = 40.00;
-    targetPosition.y = 40.00;
+    targetPosition.x = -1000000000;
+    targetPosition.y = -1000000000;
     carCommand = CAR_COMMAND_START;
     SetRelAlarm((0U), 0, 10);
     SetRelAlarm((1U), 0, 50);
 }
 
+void exitShiParkerApp(){
+    printfSerial("Exit ShiParker...\n");
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
+
+    carStatus = CAR_STATUS_TERMINATED;
+
+    ActivateTask((11U));
+    CancelAlarm((3U));
+    CancelAlarm((1U));
+    CancelAlarm((2U));
+    CancelAlarm((0U));
+
+    g_isAppRunning = (0u);
+}
+
 void FuncShiParkerAppTask ( void )
 {
-    printfSerial("app");
+    printfSerial("[%d]",carStatus);
     if (g_isAppRunning == (0u))
         TerminateTask();
 
+    updateStatus(&g_RecievedParkingSystemPacket);
     switch (carStatus)
     {
     case CAR_STATUS_READY:
@@ -34358,17 +34377,17 @@ void FuncShiParkerAppTask ( void )
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm((1U));
-            SetRelAlarm((2U), 0, 2);
+            SetRelAlarm((2U), 0, 4);
             SetRelAlarm((1U), 0, 10);
             SetRelAlarm((3U),
                         0,
-                        2);
+                        6);
             break;
         case CAR_COMMAND_STOP:
 
@@ -34382,13 +34401,18 @@ void FuncShiParkerAppTask ( void )
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             break;
         case CAR_COMMAND_STOP:
 
+            carStatus = CAR_STATUS_STOP;
+            motor_stop(0);
+            motor_stop(1);
+            motor_stop(2);
+            motor_stop(3);
             CancelAlarm((1U));
             CancelAlarm((3U));
             CancelAlarm((2U));
@@ -34399,23 +34423,19 @@ void FuncShiParkerAppTask ( void )
         }
         break;
     case CAR_STATUS_STOP:
-        motor_stop(0);
-        motor_stop(1);
-        motor_stop(2);
-        motor_stop(3);
         switch (carCommand)
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm((1U));
-            SetRelAlarm((2U), 0, 2);
+            SetRelAlarm((2U), 0, 4);
             SetRelAlarm((1U), 0, 10);
-            SetRelAlarm((3U), 0, 2);
+            SetRelAlarm((3U), 0, 6);
             break;
         case CAR_COMMAND_STOP:
 
@@ -34426,18 +34446,7 @@ void FuncShiParkerAppTask ( void )
         break;
     case CAR_STATUS_TERMINATED:
 
-        motor_stop(0);
-        motor_stop(1);
-        motor_stop(2);
-        motor_stop(3);
-        printfSerial("Terminate ShiParker...\n");
-        ActivateTask((11U));
-        g_isAppRunning = (0u);
-        CancelAlarm((3U));
-        CancelAlarm((1U));
-        CancelAlarm((2U));
-        CancelAlarm((0U));
-        TerminateTask();
+        exitShiParkerApp();
         break;
     case CAR_STATUS_ERROR_OBSTACLE:
     case CAR_STATUS_ERROR_BAD_CONNECTION:
@@ -34445,17 +34454,17 @@ void FuncShiParkerAppTask ( void )
         {
         case CAR_COMMAND_FORCESTOP:
 
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case CAR_COMMAND_START:
 
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm((1U));
-            SetRelAlarm((2U), 0, 2);
+            SetRelAlarm((2U), 0, 4);
             SetRelAlarm((1U),
                         0,
                         50);
-            SetRelAlarm((3U), 0, 2);
+            SetRelAlarm((3U), 0, 6);
             break;
         case CAR_COMMAND_STOP:
 
@@ -34609,7 +34618,6 @@ void FuncWallFollowTask ( void )
 
 void FuncPacketSendTask ( void )
 {
-    printfSerial("sendpacket:status=%d,cmd=%d",carStatus,carCommand);
     makePacket(&carStatusPacket);
     sendPacket(&carStatusPacket);
 }
@@ -34626,22 +34634,20 @@ void makePacket(struct ParkingSystemPacket *dst)
 }
 void updateStatus(const struct ParkingSystemPacket *packet)
 {
-    carStatus = packet->car_status;
     carCommand = packet->car_command;
-    currentPosition.x = packet->car_current_position.x;
-    currentPosition.y = packet->car_current_position.y;
     targetPosition.x = packet->car_target_position.x;
     targetPosition.y = packet->car_target_position.y;
 }
 
 void handleError(ERROR_CODE_TYPE errorCode)
 {
+    carCommand=CAR_COMMAND_STOP;
     CancelAlarm((3U));
     CancelAlarm((2U));
-    motor_stop(0);
-    motor_stop(1);
-    motor_stop(2);
-    motor_stop(3);
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
     if (errorCode < 16)
     {
         printfSerial("ERROR: %s (%d)\n", errorMessages[errorCode], errorCode);
@@ -34650,7 +34656,7 @@ void handleError(ERROR_CODE_TYPE errorCode)
         case ERROR_CODE_USER_CONTROL:
             carStatus = CAR_STATUS_ERROR_HARDWARE;
             ActivateTask((11U));
-            carStatus = CAR_STATUS_TERMINATED;
+            exitShiParkerApp();
             break;
         case ERROR_CODE_OBSTACLE:
             carStatus = CAR_STATUS_ERROR_OBSTACLE;
@@ -34665,6 +34671,7 @@ void handleError(ERROR_CODE_TYPE errorCode)
     else
     {
         printfSerial("ERROR: Unknown error code (%d).\n", errorCode);
+        exitShiParkerApp();
     }
     ActivateTask((11U));
 }

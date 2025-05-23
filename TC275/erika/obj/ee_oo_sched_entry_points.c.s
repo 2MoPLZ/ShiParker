@@ -217,11 +217,11 @@ osEE_scheduler_task_wrapper_run:
 	.loc 2 365 0
 	and	%d2, %d15, 255
 .LVL25:
-	ge.u	%d2, %d2, 17
+	ge.u	%d2, %d2, 100
 .LVL26:
 	jnz	%d2, .L13
 .LVL27:
-	mov	%d2, 17
+	mov	%d2, 100
 	insert	%d15, %d15, %d2, 0, 8
 .LVL28:
 .LBB129:

@@ -2296,7 +2296,7 @@ static OsEE_TCB
   },
   {
                                 0U,
-                                140U,
+                                227U,
                                 OSEE_TASK_SUSPENDED,
                                 ((void *)0),
                                 0U,
@@ -2448,8 +2448,8 @@ static OsEE_TDB
                             1U,
                             OSEE_TASK_TYPE_ISR2,
                             asclin0RxISR,
-                            140U,
-                            140U,
+                            227U,
+                            227U,
                             1U
   },
   {

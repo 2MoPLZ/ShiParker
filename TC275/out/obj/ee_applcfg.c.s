@@ -222,8 +222,8 @@ osEE_tdb_array:
 	.byte	2
 	.zero	3
 	.word	asclin0RxISR
-	.byte	-116
-	.byte	-116
+	.byte	-29
+	.byte	-29
 	.byte	1
 	.zero	1
 	.word	osEE_sdb_array
@@ -409,7 +409,7 @@ osEE_tcb_array:
 	.word	0
 	.word	0
 	.byte	0
-	.byte	-116
+	.byte	-29
 	.byte	0
 	.zero	1
 	.word	0

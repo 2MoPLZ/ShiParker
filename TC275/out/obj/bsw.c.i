@@ -34009,7 +34009,7 @@ void resetFRHallCnt(void);
 inline double getHallCntAvg(void);
 # 13 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.c" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 1
-# 28 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
+# 24 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\motor_driver.h" 1
 # 12 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\motor_driver.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h" 1
@@ -34041,7 +34041,7 @@ void motor_run_backward(motor_index_t motor_index);
 void motor_stop(motor_index_t motor_index);
 void set_motor_power(motor_index_t motor_index, double dutyPercent);
 void _setDutyCycle(IfxGtm_Tom_Pwm_Driver* driver , IfxGtm_Tom_Pwm_Config* config, uint32 _dutyCycle);
-# 29 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 
 
 # 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdlib.h" 1 3
@@ -34240,8 +34240,8 @@ extern long double wcstold (const wchar_t *, wchar_t **);
 
 
 
-# 32 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
-# 46 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
+# 28 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
+# 42 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
 extern boolean g_isAppRunning;
 
 
@@ -34357,7 +34357,7 @@ void printDouble(const char* label, double value)
 {
     int intPart = (int)value;
     int fracPart = (int)((value - intPart) * 1000);
-    printfSerial("%s: %d.%03d\n", label, intPart, fracPart);
+    printfSerial("%s: %d.%03d", label, intPart, fracPart);
 }
 
 void UART_init(void)
@@ -34547,6 +34547,7 @@ int main(void)
     initPeripheralsAndERU();
 
 
+    initUartDriver();
     initUltrasonic(&g_Ultrasonic_FL);
     initUltrasonic(&g_Ultrasonic_FRONT);
     initUltrasonic(&g_Ultrasonic_RL);
@@ -34554,7 +34555,7 @@ int main(void)
     initUltrasonic(&g_Ultrasonic_RR);
     initMotor();
     initHall();
-# 273 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.c"
+# 274 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.c"
     printfSerial("\n...............\n");
     printfSerial("...OS Starts...\n");
     printfSerial("...............\n");

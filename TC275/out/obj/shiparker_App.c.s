@@ -76,9 +76,10 @@ startShiParkerApp:
 	st.d	[%a15] 8, %e2
 	.loc 1 41 0
 	movh.a	%a15, hi:targetPosition
+	movh	%d3, 49614
 	lea	%a15, [%a15] lo:targetPosition
 	mov	%d2, 0
-	movh	%d3, 16452
+	addi	%d3, %d3, -12955
 	st.d	[%a15]0, %e2
 	.loc 1 42 0
 	st.d	[%a15] 8, %e2
@@ -98,9 +99,76 @@ startShiParkerApp:
 .LVL7:
 .LFE598:
 	.size	startShiParkerApp, .-startShiParkerApp
-	.global	__adddf3
 .section .rodata,"a",@progbits
 .LC2:
+	.string	"Exit ShiParker...\n"
+.section .text,"ax",@progbits
+	.align 1
+	.global	exitShiParkerApp
+	.type	exitShiParkerApp, @function
+exitShiParkerApp:
+.LFB599:
+	.loc 1 48 0
+	.loc 1 49 0
+	movh.a	%a4, hi:.LC2
+	lea	%a4, [%a4] lo:.LC2
+	call	printfSerial
+.LVL8:
+	.loc 1 50 0
+	mov	%d4, 0
+	call	motor_stop
+.LVL9:
+	.loc 1 51 0
+	mov	%d4, 1
+	call	motor_stop
+.LVL10:
+	.loc 1 52 0
+	mov	%d4, 2
+	call	motor_stop
+.LVL11:
+	.loc 1 53 0
+	mov	%d4, 3
+	call	motor_stop
+.LVL12:
+	.loc 1 55 0
+	mov	%d15, 3
+	movh.a	%a15, hi:carStatus
+	.loc 1 57 0
+	mov	%d4, 11
+	.loc 1 55 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 57 0
+	call	ActivateTask
+.LVL13:
+	.loc 1 58 0
+	mov	%d4, 3
+	call	CancelAlarm
+.LVL14:
+	.loc 1 59 0
+	mov	%d4, 1
+	call	CancelAlarm
+.LVL15:
+	.loc 1 60 0
+	mov	%d4, 2
+	call	CancelAlarm
+.LVL16:
+	.loc 1 63 0
+	mov	%d15, 0
+	.loc 1 61 0
+	mov	%d4, 0
+	.loc 1 63 0
+	movh.a	%a15, hi:g_isAppRunning
+	.loc 1 61 0
+	call	CancelAlarm
+.LVL17:
+	.loc 1 63 0
+	st.b	[%a15] lo:g_isAppRunning, %d15
+	ret
+.LFE599:
+	.size	exitShiParkerApp, .-exitShiParkerApp
+	.global	__adddf3
+.section .rodata,"a",@progbits
+.LC3:
 	.string	"getHallCntAvg(): "
 	.global	__ltdf2
 .section .text,"ax",@progbits
@@ -108,221 +176,221 @@ startShiParkerApp:
 	.global	turn90
 	.type	turn90, @function
 turn90:
-.LFB601:
-	.loc 1 188 0
+.LFB602:
+	.loc 1 197 0
 	sub.a	%SP, 16
 .LCFI0:
-	.loc 1 189 0
+	.loc 1 198 0
 	call	getHallCntAvg
-.LVL8:
+.LVL18:
 	st.d	[%SP]0, %e2
-	.loc 1 190 0
+	.loc 1 199 0
 	ld.d	%e4, [%SP]0
 	mov	%d6, 0
 	movh	%d7, 16402
 	call	__adddf3
-.LVL9:
-	.loc 1 192 0
-	mov	%d4, 3
-	.loc 1 190 0
-	st.d	[%SP] 8, %e2
-	.loc 1 192 0
-	call	CancelAlarm
-.LVL10:
-	.loc 1 194 0
-	mov	%d4, 0
-	call	motor_stop
-.LVL11:
-	.loc 1 195 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL12:
-	.loc 1 196 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL13:
-	.loc 1 197 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL14:
-	.loc 1 199 0
-	mov	%d4, 0
-	call	motor_run_forward
-.LVL15:
-	.loc 1 200 0
-	mov	%d4, 2
-	call	motor_run_forward
-.LVL16:
+.LVL19:
 	.loc 1 201 0
+	mov	%d4, 3
+	.loc 1 199 0
+	st.d	[%SP] 8, %e2
+	.loc 1 201 0
+	call	CancelAlarm
+.LVL20:
+	.loc 1 203 0
+	mov	%d4, 0
+	call	motor_stop
+.LVL21:
+	.loc 1 204 0
+	mov	%d4, 1
+	call	motor_stop
+.LVL22:
+	.loc 1 205 0
+	mov	%d4, 2
+	call	motor_stop
+.LVL23:
+	.loc 1 206 0
+	mov	%d4, 3
+	call	motor_stop
+.LVL24:
+	.loc 1 208 0
+	mov	%d4, 0
+	call	motor_run_forward
+.LVL25:
+	.loc 1 209 0
+	mov	%d4, 2
+	call	motor_run_forward
+.LVL26:
+	.loc 1 210 0
 	mov	%d4, 1
 	call	motor_run_backward
-.LVL17:
-	.loc 1 202 0
+.LVL27:
+	.loc 1 211 0
 	mov	%d4, 3
 	call	motor_run_backward
-.LVL18:
-	.loc 1 205 0
+.LVL28:
+	.loc 1 214 0
 	movh.a	%a15, hi:motor_power_turn
 	lea	%a15, [%a15] lo:motor_power_turn
 	ld.d	%e6, [%a15]0
 	mov	%d4, 0
 	call	set_motor_power
-.LVL19:
-	.loc 1 206 0
+.LVL29:
+	.loc 1 215 0
 	ld.d	%e6, [%a15]0
 	mov	%d4, 1
 	call	set_motor_power
-.LVL20:
-	.loc 1 207 0
+.LVL30:
+	.loc 1 216 0
 	ld.d	%e6, [%a15]0
 	mov	%d4, 2
 	call	set_motor_power
-.LVL21:
-	.loc 1 208 0
+.LVL31:
+	.loc 1 217 0
 	ld.d	%e6, [%a15]0
 	mov	%d4, 3
 	call	set_motor_power
-.LVL22:
-	.loc 1 214 0
-	movh.a	%a15, hi:.LC2
-	lea	%a15, [%a15] lo:.LC2
-.L7:
-	.loc 1 210 0
+.LVL32:
+	.loc 1 223 0
+	movh.a	%a15, hi:.LC3
+	lea	%a15, [%a15] lo:.LC3
+.L8:
+	.loc 1 219 0
 	ld.d	%e4, [%SP]0
 	ld.d	%e6, [%SP] 8
 	call	__ltdf2
-.LVL23:
-	jgez	%d2, .L9
-	.loc 1 212 0
+.LVL33:
+	jgez	%d2, .L10
+	.loc 1 221 0
 	mov	%d4, 50
 	call	delay_ms
-.LVL24:
-	.loc 1 213 0
+.LVL34:
+	.loc 1 222 0
 	call	getHallCntAvg
-.LVL25:
+.LVL35:
 	st.d	[%SP]0, %e2
-	.loc 1 214 0
+	.loc 1 223 0
 	ld.d	%e4, [%SP]0
 	mov.aa	%a4, %a15
 	call	printDouble
-.LVL26:
-	.loc 1 216 0
+.LVL36:
+	.loc 1 225 0
 	mov	%d4, 50
 	call	delay_ms
-.LVL27:
-	j	.L7
-.L9:
-	.loc 1 219 0
+.LVL37:
+	j	.L8
+.L10:
+	.loc 1 228 0
 	movh.a	%a15, hi:currentDirection
 	ld.bu	%d15, [%a15] lo:currentDirection
-	.loc 1 226 0
+	.loc 1 235 0
 	mov	%d4, 0
-	.loc 1 219 0
+	.loc 1 228 0
 	add	%d15, 1
 	and	%d15, %d15, 3
 	st.b	[%a15] lo:currentDirection, %d15
-	.loc 1 221 0
+	.loc 1 230 0
 	mov	%d15, 0
 	movh.a	%a15, hi:g_FLHallCnt
 	st.h	[%a15] lo:g_FLHallCnt, %d15
-	.loc 1 222 0
+	.loc 1 231 0
 	movh.a	%a15, hi:g_FRHallCnt
 	st.h	[%a15] lo:g_FRHallCnt, %d15
-	.loc 1 223 0
+	.loc 1 232 0
 	movh.a	%a15, hi:g_RLHallCnt
 	st.h	[%a15] lo:g_RLHallCnt, %d15
-	.loc 1 224 0
+	.loc 1 233 0
 	movh.a	%a15, hi:g_RRHallCnt
 	st.h	[%a15] lo:g_RRHallCnt, %d15
-	.loc 1 226 0
+	.loc 1 235 0
 	movh.a	%a15, hi:motor_power_normal
 	lea	%a15, [%a15] lo:motor_power_normal
 	ld.d	%e6, [%a15]0
 	call	set_motor_power
-.LVL28:
-	.loc 1 227 0
+.LVL38:
+	.loc 1 236 0
 	ld.d	%e6, [%a15]0
 	mov	%d4, 1
 	call	set_motor_power
-.LVL29:
-	.loc 1 228 0
+.LVL39:
+	.loc 1 237 0
 	ld.d	%e6, [%a15]0
 	mov	%d4, 2
 	call	set_motor_power
-.LVL30:
-	.loc 1 229 0
+.LVL40:
+	.loc 1 238 0
 	ld.d	%e6, [%a15]0
 	mov	%d4, 3
 	call	set_motor_power
-.LVL31:
-	.loc 1 231 0
+.LVL41:
+	.loc 1 240 0
 	mov	%e4, 1
 	mov	%d6, 50
 	j	SetRelAlarm
-.LVL32:
-.LFE601:
+.LVL42:
+.LFE602:
 	.size	turn90, .-turn90
 	.global	__muldf3
 	.align 1
 	.global	calculateCurrentPos
 	.type	calculateCurrentPos, @function
 calculateCurrentPos:
-.LFB602:
-	.loc 1 234 0
-	.loc 1 235 0
+.LFB603:
+	.loc 1 243 0
+	.loc 1 244 0
 	movh.a	%a15, hi:currentDirection
 	ld.bu	%d15, [%a15] lo:currentDirection
-	jge.u	%d15, 4, .L10
-	movh.a	%a2, hi:.L13
-	lea	%a2, [%a2] lo:.L13
+	jge.u	%d15, 4, .L11
+	movh.a	%a2, hi:.L14
+	lea	%a2, [%a2] lo:.L14
 	addsc.a	%a2, %a2, %d15, 2
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	ji	%a2
 	.align 2
 	.align 2
-.L13:
-	.code32
-	j	.L15
+.L14:
 	.code32
 	j	.L16
 	.code32
-	j	.L15
+	j	.L17
 	.code32
 	j	.L16
-.L15:
-	.loc 1 244 0
-	call	getHallCntAvg
-.LVL33:
-	movh	%d7, 16401
-	mov	%e4, %d3, %d2
-	movh	%d6, 52429
-	addi	%d7, %d7, -13108
-	addi	%d6, %d6, -13107
-	call	__muldf3
-.LVL34:
-	st.d	[%a15] 8, %e2
-	.loc 1 245 0
-	ret
+	.code32
+	j	.L17
 .L16:
-	.loc 1 247 0
+	.loc 1 253 0
 	call	getHallCntAvg
-.LVL35:
+.LVL43:
 	movh	%d7, 16401
 	mov	%e4, %d3, %d2
 	movh	%d6, 52429
 	addi	%d7, %d7, -13108
 	addi	%d6, %d6, -13107
 	call	__muldf3
-.LVL36:
-	st.d	[%a15]0, %e2
-.L10:
+.LVL44:
+	st.d	[%a15] 8, %e2
+	.loc 1 254 0
 	ret
-.LFE602:
+.L17:
+	.loc 1 256 0
+	call	getHallCntAvg
+.LVL45:
+	movh	%d7, 16401
+	mov	%e4, %d3, %d2
+	movh	%d6, 52429
+	addi	%d7, %d7, -13108
+	addi	%d6, %d6, -13107
+	call	__muldf3
+.LVL46:
+	st.d	[%a15]0, %e2
+.L11:
+	ret
+.LFE603:
 	.size	calculateCurrentPos, .-calculateCurrentPos
 	.global	__fixunsdfsi
 .section .rodata,"a",@progbits
-.LC3:
+.LC4:
 	.string	"delta:"
 	.global	__subdf3
 	.global	__gedf2
@@ -331,153 +399,153 @@ calculateCurrentPos:
 	.global	FuncWallFollowTask
 	.type	FuncWallFollowTask, @function
 FuncWallFollowTask:
-.LFB603:
-	.loc 1 256 0
-	.loc 1 257 0
+.LFB604:
+	.loc 1 265 0
+	.loc 1 266 0
 	movh.a	%a15, hi:g_isAppRunning
 	ld.bu	%d15, [%a15] lo:g_isAppRunning
-	.loc 1 256 0
+	.loc 1 265 0
 	sub.a	%SP, 16
 .LCFI1:
-	.loc 1 257 0
-	jz	%d15, .L17
-	.loc 1 257 0 is_stmt 0 discriminator 1
+	.loc 1 266 0
+	jz	%d15, .L18
+	.loc 1 266 0 is_stmt 0 discriminator 1
 	movh.a	%a13, hi:carStatus
 	ld.bu	%d15, [%a13] lo:carStatus
-	jne	%d15, 1, .L17
+	jne	%d15, 1, .L18
 .LBB4:
-	.loc 1 259 0 is_stmt 1
+	.loc 1 268 0 is_stmt 1
 	movh.a	%a14, hi:currentDirection
 	ld.bu	%d15, [%a14] lo:currentDirection
 	movh.a	%a12, hi:FrontUltra
 	movh.a	%a15, hi:RearUltra
 	lea	%a12, [%a12] lo:FrontUltra
 	lea	%a15, [%a15] lo:RearUltra
-	jnz	%d15, .L19
-	.loc 1 261 0
+	jnz	%d15, .L20
+	.loc 1 270 0
 	mov	%d15, 20
 	movh.a	%a2, hi:min_dist_left
 	st.h	[%a2] lo:min_dist_left, %d15
-	j	.L30
-.L19:
-	.loc 1 265 0
-	jne	%d15, 1, .L20
-	.loc 1 267 0
+	j	.L31
+.L20:
+	.loc 1 274 0
+	jne	%d15, 1, .L21
+	.loc 1 276 0
 	movh.a	%a2, hi:targetPosition
 	lea	%a2, [%a2] lo:targetPosition
 	ld.d	%e4, [%a2] 8
 	call	__fixunsdfsi
-.LVL37:
+.LVL47:
 	extr.u	%d2, %d2, 0, 16
 	movh.a	%a2, hi:min_dist_left
 	st.h	[%a2] lo:min_dist_left, %d2
-.L30:
-	.loc 1 268 0
+.L31:
+	.loc 1 277 0
 	movh.a	%a4, hi:g_Ultrasonic_FL
 	lea	%a4, [%a4] lo:g_Ultrasonic_FL
 	call	getUltrasonic
-.LVL38:
-	.loc 1 269 0
+.LVL48:
+	.loc 1 278 0
 	movh.a	%a4, hi:g_Ultrasonic_RL
 	lea	%a4, [%a4] lo:g_Ultrasonic_RL
-	.loc 1 268 0
+	.loc 1 277 0
 	st.d	[%a12]0, %e2
-	.loc 1 269 0
+	.loc 1 278 0
 	call	getUltrasonic
-.LVL39:
+.LVL49:
 	st.d	[%a15]0, %e2
-.L20:
-	.loc 1 272 0
+.L21:
+	.loc 1 281 0
 	ld.d	%e4, [%a12]0
 	mov.aa	%a4, %SP
 	ld.d	%e6, [%a15]0
 	call	wall_follow_control
-.LVL40:
-	.loc 1 273 0
+.LVL50:
+	.loc 1 282 0
 	movh.a	%a15, hi:Kp_rad_to_delta_power
 	lea	%a15, [%a15] lo:Kp_rad_to_delta_power
 	ld.d	%e4, [%a15]0
 	ld.d	%e6, [%SP]0
 	call	__muldf3
-.LVL41:
-	.loc 1 274 0
-	movh.a	%a4, hi:.LC3
+.LVL51:
+	.loc 1 283 0
+	movh.a	%a4, hi:.LC4
 	mov	%e4, %d3, %d2
-	lea	%a4, [%a4] lo:.LC3
-	.loc 1 273 0
+	lea	%a4, [%a4] lo:.LC4
+	.loc 1 282 0
 	mov	%e8, %d3, %d2
-.LVL42:
-	.loc 1 274 0
+.LVL52:
+	.loc 1 283 0
 	call	printDouble
-.LVL43:
-	.loc 1 275 0
+.LVL53:
+	.loc 1 284 0
 	mov	%e4, %d9, %d8
 	imask	%e6, 0, 21, 9
 	movh.a	%a15, hi:motor_power_normal
 	call	__muldf3
-.LVL44:
+.LVL54:
 	lea	%a15, [%a15] lo:motor_power_normal
 	ld.d	%e10, [%a15]0
 	mov	%e6, %d3, %d2
 	mov	%e4, %d11, %d10
 	mov	%e8, %d3, %d2
-.LVL45:
-	call	__adddf3
-.LVL46:
-	mov	%e6, %d3, %d2
-	mov	%d4, 0
-	call	set_motor_power
-.LVL47:
-	.loc 1 276 0
-	mov	%e6, %d9, %d8
-	ld.d	%e4, [%a15]0
-	call	__adddf3
-.LVL48:
-	mov	%e6, %d3, %d2
-	mov	%d4, 2
-	call	set_motor_power
-.LVL49:
-	.loc 1 277 0
-	mov	%e6, %d9, %d8
-	ld.d	%e4, [%a15]0
-	call	__subdf3
-.LVL50:
-	mov	%e6, %d3, %d2
-	mov	%d4, 1
-	call	set_motor_power
-.LVL51:
-	.loc 1 278 0
-	mov	%e6, %d9, %d8
-	ld.d	%e4, [%a15]0
-	call	__subdf3
-.LVL52:
-	mov	%e6, %d3, %d2
-	mov	%d4, 3
-	call	set_motor_power
-.LVL53:
-	.loc 1 279 0
-	mov	%d4, 0
-	call	motor_run_forward
-.LVL54:
-	.loc 1 280 0
-	mov	%d4, 1
-	call	motor_run_forward
 .LVL55:
-	.loc 1 281 0
-	mov	%d4, 2
-	call	motor_run_forward
+	call	__adddf3
 .LVL56:
-	.loc 1 282 0
-	mov	%d4, 3
-	call	motor_run_forward
+	mov	%e6, %d3, %d2
+	mov	%d4, 0
+	call	set_motor_power
 .LVL57:
 	.loc 1 285 0
-	call	calculateCurrentPos
+	mov	%e6, %d9, %d8
+	ld.d	%e4, [%a15]0
+	call	__adddf3
 .LVL58:
+	mov	%e6, %d3, %d2
+	mov	%d4, 2
+	call	set_motor_power
+.LVL59:
+	.loc 1 286 0
+	mov	%e6, %d9, %d8
+	ld.d	%e4, [%a15]0
+	call	__subdf3
+.LVL60:
+	mov	%e6, %d3, %d2
+	mov	%d4, 1
+	call	set_motor_power
+.LVL61:
 	.loc 1 287 0
+	mov	%e6, %d9, %d8
+	ld.d	%e4, [%a15]0
+	call	__subdf3
+.LVL62:
+	mov	%e6, %d3, %d2
+	mov	%d4, 3
+	call	set_motor_power
+.LVL63:
+	.loc 1 288 0
+	mov	%d4, 0
+	call	motor_run_forward
+.LVL64:
+	.loc 1 289 0
+	mov	%d4, 1
+	call	motor_run_forward
+.LVL65:
+	.loc 1 290 0
+	mov	%d4, 2
+	call	motor_run_forward
+.LVL66:
+	.loc 1 291 0
+	mov	%d4, 3
+	call	motor_run_forward
+.LVL67:
+	.loc 1 294 0
+	call	calculateCurrentPos
+.LVL68:
+	.loc 1 296 0
 	ld.bu	%d15, [%a14] lo:currentDirection
-	jnz	%d15, .L21
-	.loc 1 287 0 is_stmt 0 discriminator 1
+	jnz	%d15, .L22
+	.loc 1 296 0 is_stmt 0 discriminator 1
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	ld.d	%e4, [%a15] 8
@@ -485,35 +553,35 @@ FuncWallFollowTask:
 	lea	%a15, [%a15] lo:targetPosition
 	ld.d	%e6, [%a15] 8
 	call	__gedf2
-.LVL59:
-	jltz	%d2, .L17
-	.loc 1 289 0 is_stmt 1
+.LVL69:
+	jltz	%d2, .L18
+	.loc 1 298 0 is_stmt 1
 	mov	%d4, 0
 	call	motor_stop
-.LVL60:
-	.loc 1 290 0
+.LVL70:
+	.loc 1 299 0
 	mov	%d4, 1
 	call	motor_stop
-.LVL61:
-	.loc 1 291 0
+.LVL71:
+	.loc 1 300 0
 	mov	%d4, 2
 	call	motor_stop
-.LVL62:
-	.loc 1 292 0
+.LVL72:
+	.loc 1 301 0
 	mov	%d4, 3
 	call	motor_stop
-.LVL63:
+.LVL73:
 .LBE4:
-	.loc 1 307 0
+	.loc 1 316 0
 	lea	%SP, [%SP] 16
 .LBB5:
-	.loc 1 294 0
+	.loc 1 303 0
 	j	turn90
-.LVL64:
-.L21:
-	.loc 1 297 0
-	jne	%d15, 1, .L17
-	.loc 1 297 0 is_stmt 0 discriminator 1
+.LVL74:
+.L22:
+	.loc 1 306 0
+	jne	%d15, 1, .L18
+	.loc 1 306 0 is_stmt 0 discriminator 1
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	ld.d	%e4, [%a15]0
@@ -521,59 +589,59 @@ FuncWallFollowTask:
 	lea	%a15, [%a15] lo:targetPosition
 	ld.d	%e6, [%a15]0
 	call	__gedf2
-.LVL65:
-	jltz	%d2, .L17
-	.loc 1 299 0 is_stmt 1
+.LVL75:
+	jltz	%d2, .L18
+	.loc 1 308 0 is_stmt 1
 	mov	%d4, 0
 	call	motor_stop
-.LVL66:
-	.loc 1 300 0
+.LVL76:
+	.loc 1 309 0
 	mov	%d4, 1
 	call	motor_stop
-.LVL67:
-	.loc 1 301 0
+.LVL77:
+	.loc 1 310 0
 	mov	%d4, 2
 	call	motor_stop
-.LVL68:
-	.loc 1 304 0
+.LVL78:
+	.loc 1 313 0
 	mov	%d15, 3
-	.loc 1 302 0
+	.loc 1 311 0
 	mov	%d4, 3
 	call	motor_stop
-.LVL69:
-	.loc 1 304 0
+.LVL79:
+	.loc 1 313 0
 	st.b	[%a13] lo:carStatus, %d15
-.L17:
+.L18:
 	ret
 .LBE5:
-.LFE603:
+.LFE604:
 	.size	FuncWallFollowTask, .-FuncWallFollowTask
 	.align 1
 	.global	makePacket
 	.type	makePacket, @function
 makePacket:
-.LFB605:
-	.loc 1 318 0
-.LVL70:
-	.loc 1 319 0
+.LFB606:
+	.loc 1 326 0
+.LVL80:
+	.loc 1 327 0
 	mov	%d15, -86
-	.loc 1 320 0
+	.loc 1 328 0
 	movh.a	%a15, hi:carStatus
-	.loc 1 319 0
+	.loc 1 327 0
 	st.b	[%a4]0, %d15
-	.loc 1 320 0
+	.loc 1 328 0
 	ld.bu	%d15, [%a15] lo:carStatus
-	.loc 1 321 0
+	.loc 1 329 0
 	movh.a	%a15, hi:carCommand
-	.loc 1 320 0
+	.loc 1 328 0
 	st.b	[%a4] 1, %d15
-	.loc 1 321 0
+	.loc 1 329 0
 	ld.bu	%d15, [%a15] lo:carCommand
-	.loc 1 322 0
+	.loc 1 330 0
 	movh.a	%a2, hi:currentPosition
-	.loc 1 321 0
+	.loc 1 329 0
 	st.b	[%a4] 34, %d15
-	.loc 1 322 0
+	.loc 1 330 0
 	ld.w	%d15, [%a2] lo:currentPosition
 	lea	%a15, [%a2] lo:currentPosition
 	extr.u	%d2, %d15, 8, 8
@@ -590,11 +658,11 @@ makePacket:
 	extr.u	%d2, %d15, 16, 8
 	sh	%d15, %d15, -24
 	st.b	[%a4] 9, %d15
-	.loc 1 323 0
+	.loc 1 331 0
 	ld.w	%d15, [%a15] 8
-	.loc 1 322 0
+	.loc 1 330 0
 	st.b	[%a4] 8, %d2
-	.loc 1 323 0
+	.loc 1 331 0
 	extr.u	%d2, %d15, 8, 8
 	st.b	[%a4] 10, %d15
 	st.b	[%a4] 11, %d2
@@ -606,17 +674,17 @@ makePacket:
 	extr.u	%d2, %d15, 8, 8
 	st.b	[%a4] 14, %d15
 	st.b	[%a4] 15, %d2
-	.loc 1 324 0
+	.loc 1 332 0
 	movh.a	%a2, hi:targetPosition
-	.loc 1 323 0
+	.loc 1 331 0
 	extr.u	%d2, %d15, 16, 8
 	sh	%d15, %d15, -24
 	st.b	[%a4] 17, %d15
-	.loc 1 324 0
+	.loc 1 332 0
 	ld.w	%d15, [%a2] lo:targetPosition
-	.loc 1 323 0
+	.loc 1 331 0
 	st.b	[%a4] 16, %d2
-	.loc 1 324 0
+	.loc 1 332 0
 	extr.u	%d2, %d15, 8, 8
 	lea	%a15, [%a2] lo:targetPosition
 	st.b	[%a4] 18, %d15
@@ -633,7 +701,7 @@ makePacket:
 	sh	%d15, %d15, -24
 	st.b	[%a4] 24, %d2
 	st.b	[%a4] 25, %d15
-	.loc 1 325 0
+	.loc 1 333 0
 	ld.w	%d15, [%a15] 8
 	extr.u	%d2, %d15, 8, 8
 	st.b	[%a4] 26, %d15
@@ -651,116 +719,38 @@ makePacket:
 	st.b	[%a4] 32, %d2
 	st.b	[%a4] 33, %d15
 	ret
-.LFE605:
+.LFE606:
 	.size	makePacket, .-makePacket
-.section .rodata,"a",@progbits
-.LC4:
-	.string	"sendpacket:status=%d,cmd=%d"
-.section .text,"ax",@progbits
 	.align 1
 	.global	FuncPacketSendTask
 	.type	FuncPacketSendTask, @function
 FuncPacketSendTask:
-.LFB604:
-	.loc 1 311 0
-	.loc 1 312 0
-	movh.a	%a15, hi:carStatus
-	ld.bu	%d15, [%a15] lo:carStatus
-	.loc 1 311 0
-	sub.a	%SP, 8
-.LCFI2:
-	.loc 1 312 0
-	movh.a	%a15, hi:carCommand
-	st.w	[%SP]0, %d15
-	ld.bu	%d15, [%a15] lo:carCommand
-	movh.a	%a4, hi:.LC4
-	st.w	[%SP] 4, %d15
-	lea	%a4, [%a4] lo:.LC4
-	call	printfSerial
-.LVL71:
-	.loc 1 313 0
+.LFB605:
+	.loc 1 320 0
+	.loc 1 321 0
 	movh.a	%a15, hi:carStatusPacket
 	lea	%a15, [%a15] lo:carStatusPacket
 	mov.aa	%a4, %a15
 	call	makePacket
-.LVL72:
-	.loc 1 315 0
-	.loc 1 314 0
+.LVL81:
+	.loc 1 322 0
 	mov.aa	%a4, %a15
-	.loc 1 315 0
-	lea	%SP, [%SP] 8
-	.loc 1 314 0
 	j	sendPacket
-.LVL73:
-.LFE604:
+.LVL82:
+.LFE605:
 	.size	FuncPacketSendTask, .-FuncPacketSendTask
 	.align 1
 	.global	updateStatus
 	.type	updateStatus, @function
 updateStatus:
-.LFB606:
-	.loc 1 328 0
-.LVL74:
-	.loc 1 329 0
-	ld.bu	%d15, [%a4] 1
-	movh.a	%a15, hi:carStatus
-	.loc 1 331 0
-	ld.bu	%d5, [%a4] 3
-	.loc 1 329 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 331 0
-	ld.bu	%d2, [%a4] 2
-	.loc 1 330 0
+.LFB607:
+	.loc 1 336 0
+.LVL83:
+	.loc 1 337 0
 	ld.bu	%d15, [%a4] 34
 	movh.a	%a15, hi:carCommand
-	.loc 1 331 0
-	sh	%d5, %d5, 8
-	.loc 1 330 0
 	st.b	[%a15] lo:carCommand, %d15
-	.loc 1 331 0
-	or	%d15, %d5, %d2
-	ld.bu	%d5, [%a4] 4
-	ld.bu	%d3, [%a4] 6
-	sh	%d5, %d5, 16
-	or	%d5, %d15
-	ld.bu	%d15, [%a4] 7
-	ld.bu	%d4, [%a4] 9
-	sh	%d15, %d15, 8
-	or	%d2, %d15, %d3
-	ld.bu	%d15, [%a4] 8
-	ld.bu	%d6, [%a4] 5
-	sh	%d15, %d15, 16
-	or	%d15, %d2
-	sh	%d6, %d6, 24
-	sh	%d4, %d4, 24
-	movh.a	%a15, hi:currentPosition
-	or	%d2, %d6, %d5
-	or	%d3, %d4, %d15
-	lea	%a15, [%a15] lo:currentPosition
-	st.d	[%a15]0, %e2
-	.loc 1 332 0
-	ld.bu	%d5, [%a4] 11
-	ld.bu	%d2, [%a4] 10
-	sh	%d5, %d5, 8
-	or	%d15, %d5, %d2
-	ld.bu	%d5, [%a4] 12
-	ld.bu	%d3, [%a4] 14
-	sh	%d5, %d5, 16
-	or	%d5, %d15
-	ld.bu	%d15, [%a4] 15
-	ld.bu	%d6, [%a4] 13
-	sh	%d15, %d15, 8
-	or	%d2, %d15, %d3
-	ld.bu	%d15, [%a4] 16
-	ld.bu	%d4, [%a4] 17
-	sh	%d15, %d15, 16
-	or	%d15, %d2
-	sh	%d6, %d6, 24
-	sh	%d4, %d4, 24
-	or	%d2, %d6, %d5
-	or	%d3, %d4, %d15
-	st.d	[%a15] 8, %e2
-	.loc 1 333 0
+	.loc 1 338 0
 	ld.bu	%d5, [%a4] 19
 	ld.bu	%d2, [%a4] 18
 	sh	%d5, %d5, 8
@@ -784,7 +774,7 @@ updateStatus:
 	or	%d3, %d4, %d15
 	lea	%a15, [%a15] lo:targetPosition
 	st.d	[%a15]0, %e2
-	.loc 1 334 0
+	.loc 1 339 0
 	ld.bu	%d5, [%a4] 27
 	ld.bu	%d2, [%a4] 26
 	sh	%d5, %d5, 8
@@ -807,7 +797,7 @@ updateStatus:
 	or	%d3, %d4, %d15
 	st.d	[%a15] 8, %e2
 	ret
-.LFE606:
+.LFE607:
 	.size	updateStatus, .-updateStatus
 .section .rodata,"a",@progbits
 .LC5:
@@ -819,42 +809,48 @@ updateStatus:
 	.global	handleError
 	.type	handleError, @function
 handleError:
-.LFB607:
-	.loc 1 338 0
-.LVL75:
+.LFB608:
+	.loc 1 343 0
+.LVL84:
 	sub.a	%SP, 8
-.LCFI3:
-	.loc 1 338 0
+.LCFI2:
+	.loc 1 343 0
 	mov	%d15, %d4
-	.loc 1 339 0
+	.loc 1 344 0
+	mov	%d2, 2
+	.loc 1 345 0
 	mov	%d4, 3
-.LVL76:
+.LVL85:
+	.loc 1 344 0
+	movh.a	%a15, hi:carCommand
+	st.b	[%a15] lo:carCommand, %d2
+	.loc 1 345 0
 	call	CancelAlarm
-.LVL77:
-	.loc 1 340 0
+.LVL86:
+	.loc 1 346 0
 	mov	%d4, 2
 	call	CancelAlarm
-.LVL78:
-	.loc 1 341 0
+.LVL87:
+	.loc 1 347 0
 	mov	%d4, 0
 	call	motor_stop
-.LVL79:
-	.loc 1 342 0
+.LVL88:
+	.loc 1 348 0
 	mov	%d4, 1
 	call	motor_stop
-.LVL80:
-	.loc 1 343 0
+.LVL89:
+	.loc 1 349 0
 	mov	%d4, 2
 	call	motor_stop
-.LVL81:
-	.loc 1 344 0
+.LVL90:
+	.loc 1 350 0
 	mov	%d4, 3
 	call	motor_stop
-.LVL82:
-	.loc 1 345 0
+.LVL91:
+	.loc 1 351 0
 	ge.u	%d2, %d15, 16
-	jnz	%d2, .L35
-	.loc 1 347 0
+	jnz	%d2, .L36
+	.loc 1 353 0
 	movh.a	%a15, hi:errorMessages
 	lea	%a15, [%a15] lo:errorMessages
 	addsc.a	%a15, %a15, %d15, 2
@@ -864,273 +860,242 @@ handleError:
 	st.w	[%SP]0, %d2
 	lea	%a4, [%a4] lo:.LC5
 	call	printfSerial
-.LVL83:
-	.loc 1 348 0
-	jeq	%d15, 1, .L37
-	jz	%d15, .L38
-	jne	%d15, 2, .L36
-	.loc 1 359 0
+.LVL92:
+	.loc 1 354 0
+	jeq	%d15, 1, .L38
+	jz	%d15, .L39
+	jne	%d15, 2, .L37
+	.loc 1 365 0
 	mov	%d15, 5
-	j	.L41
-.L38:
-	.loc 1 351 0
+	j	.L42
+.L39:
+	.loc 1 357 0
 	mov	%d15, 6
 	movh.a	%a15, hi:carStatus
-	.loc 1 352 0
+	.loc 1 358 0
 	mov	%d4, 11
-	.loc 1 351 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 352 0
-	call	ActivateTask
-.LVL84:
-	.loc 1 353 0
-	mov	%d15, 3
-	j	.L40
-.L37:
-	.loc 1 356 0
-	mov	%d15, 4
-.L41:
-	movh.a	%a15, hi:carStatus
-.L40:
-	st.b	[%a15] lo:carStatus, %d15
 	.loc 1 357 0
-	j	.L36
-.L35:
-	.loc 1 367 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 358 0
+	call	ActivateTask
+.LVL93:
+	j	.L41
+.L38:
+	.loc 1 362 0
+	mov	%d15, 4
+.L42:
+	.loc 1 365 0
+	movh.a	%a15, hi:carStatus
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 366 0
+	j	.L37
+.L36:
+	.loc 1 373 0
 	movh.a	%a4, hi:.LC6
 	st.w	[%SP]0, %d15
 	lea	%a4, [%a4] lo:.LC6
 	call	printfSerial
-.LVL85:
-.L36:
-	.loc 1 370 0
-	.loc 1 369 0
+.LVL94:
+.L41:
+	.loc 1 374 0
+	call	exitShiParkerApp
+.LVL95:
+.L37:
+	.loc 1 377 0
+	.loc 1 376 0
 	mov	%d4, 11
-	.loc 1 370 0
+	.loc 1 377 0
 	lea	%SP, [%SP] 8
-	.loc 1 369 0
+	.loc 1 376 0
 	j	ActivateTask
-.LVL86:
-.LFE607:
+.LVL96:
+.LFE608:
 	.size	handleError, .-handleError
 .section .rodata,"a",@progbits
 .LC7:
-	.string	"app"
-.LC8:
-	.string	"Terminate ShiParker...\n"
+	.string	"[%d]"
 .section .text,"ax",@progbits
 	.align 1
 	.global	FuncShiParkerAppTask
 	.type	FuncShiParkerAppTask, @function
 FuncShiParkerAppTask:
-.LFB599:
-	.loc 1 49 0
-	.loc 1 50 0
-	movh.a	%a4, hi:.LC7
-	lea	%a4, [%a4] lo:.LC7
-	.loc 1 51 0
-	movh.a	%a12, hi:g_isAppRunning
-	.loc 1 50 0
-	call	printfSerial
-.LVL87:
-	.loc 1 51 0
-	ld.bu	%d15, [%a12] lo:g_isAppRunning
-	jnz	%d15, .L43
-	.loc 1 52 0
-	call	TerminateTask
-.LVL88:
-.L43:
-	.loc 1 54 0
+.LFB600:
+	.loc 1 67 0
+	.loc 1 68 0
 	movh.a	%a15, hi:carStatus
 	ld.bu	%d15, [%a15] lo:carStatus
-	jge.u	%d15, 6, .L44
-	movh.a	%a2, hi:.L46
-	lea	%a2, [%a2] lo:.L46
+	.loc 1 67 0
+	sub.a	%SP, 8
+.LCFI3:
+	.loc 1 68 0
+	movh.a	%a4, hi:.LC7
+	st.w	[%SP]0, %d15
+	lea	%a4, [%a4] lo:.LC7
+	call	printfSerial
+.LVL97:
+	.loc 1 69 0
+	movh.a	%a2, hi:g_isAppRunning
+	ld.bu	%d15, [%a2] lo:g_isAppRunning
+	jnz	%d15, .L44
+	.loc 1 70 0
+	call	TerminateTask
+.LVL98:
+.L44:
+	.loc 1 72 0
+	movh.a	%a4, hi:g_RecievedParkingSystemPacket
+	lea	%a4, [%a4] lo:g_RecievedParkingSystemPacket
+	call	updateStatus
+.LVL99:
+	.loc 1 73 0
+	ld.bu	%d15, [%a15] lo:carStatus
+	jge.u	%d15, 6, .L45
+	movh.a	%a2, hi:.L47
+	lea	%a2, [%a2] lo:.L47
 	addsc.a	%a2, %a2, %d15, 2
 	ji	%a2
 	.align 2
 	.align 2
-.L46:
+.L47:
 	.code32
-	j	.L45
-	.code32
-	j	.L47
+	j	.L46
 	.code32
 	j	.L48
 	.code32
 	j	.L49
 	.code32
-	j	.L50
+	j	.L59
 	.code32
-	j	.L50
-.L45:
-	.loc 1 57 0
+	j	.L51
+	.code32
+	j	.L51
+.L46:
+	.loc 1 76 0
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L58
-	jeq	%d15, 1, .L57
+	jz	%d15, .L59
+	jeq	%d15, 1, .L58
 	ret
-.L47:
-	.loc 1 81 0
-	movh.a	%a2, hi:carCommand
-	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L58
-	jeq	%d15, 2, .L55
-	ret
-.L55:
-	.loc 1 92 0
-	mov	%d4, 1
-	call	CancelAlarm
-.LVL89:
-	.loc 1 93 0
-	mov	%d4, 3
-	call	CancelAlarm
-.LVL90:
-	.loc 1 94 0
-	mov	%d4, 2
-	call	CancelAlarm
-.LVL91:
-	.loc 1 95 0
-	mov	%e4, 1
-	mov	%d6, 50
-.L60:
-	j	SetRelAlarm
-.LVL92:
 .L48:
-	.loc 1 102 0
-	mov	%d4, 0
-	call	motor_stop
-.LVL93:
-	.loc 1 103 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL94:
-	.loc 1 104 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL95:
-	.loc 1 105 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL96:
-	.loc 1 106 0
+	.loc 1 100 0
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L58
-	jeq	%d15, 1, .L57
+	jz	%d15, .L59
+	jeq	%d15, 2, .L56
 	ret
-.L57:
-	.loc 1 115 0
-	mov	%d4, 1
-	.loc 1 114 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 115 0
-	call	CancelAlarm
-.LVL97:
-	.loc 1 116 0
-	mov	%e4, 2
-	mov	%d6, 2
-	call	SetRelAlarm
-.LVL98:
-	.loc 1 117 0
-	mov	%e4, 1
-	mov	%d6, 10
-	j	.L61
-.L49:
-	.loc 1 129 0
+.L56:
+	.loc 1 112 0
 	mov	%d4, 0
-	call	motor_stop
-.LVL99:
-	.loc 1 130 0
-	mov	%d4, 1
+	.loc 1 111 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 112 0
 	call	motor_stop
 .LVL100:
-	.loc 1 131 0
-	mov	%d4, 2
+	.loc 1 113 0
+	mov	%d4, 1
 	call	motor_stop
 .LVL101:
-	.loc 1 132 0
-	mov	%d4, 3
+	.loc 1 114 0
+	mov	%d4, 2
 	call	motor_stop
 .LVL102:
-	.loc 1 133 0
-	movh.a	%a4, hi:.LC8
-	lea	%a4, [%a4] lo:.LC8
-	call	printfSerial
-.LVL103:
-	.loc 1 134 0
-	mov	%d4, 11
-	call	ActivateTask
-.LVL104:
-	.loc 1 135 0
-	mov	%d15, 0
-	.loc 1 136 0
+	.loc 1 115 0
 	mov	%d4, 3
-	.loc 1 135 0
-	st.b	[%a12] lo:g_isAppRunning, %d15
-	.loc 1 136 0
+	call	motor_stop
+.LVL103:
+	.loc 1 116 0
+	mov	%d4, 1
+	call	CancelAlarm
+.LVL104:
+	.loc 1 117 0
+	mov	%d4, 3
 	call	CancelAlarm
 .LVL105:
-	.loc 1 137 0
-	mov	%d4, 1
-	call	CancelAlarm
-.LVL106:
-	.loc 1 138 0
+	.loc 1 118 0
 	mov	%d4, 2
 	call	CancelAlarm
-.LVL107:
-	.loc 1 139 0
-	mov	%d4, 0
-	call	CancelAlarm
-.LVL108:
-	.loc 1 140 0
-	j	TerminateTask
-.LVL109:
-.L50:
-	.loc 1 144 0
-	movh.a	%a2, hi:carCommand
-	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L58
-	jeq	%d15, 1, .L59
-	ret
-.L58:
-	.loc 1 148 0
-	mov	%d15, 3
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 149 0
-	ret
-.L59:
-	.loc 1 153 0
-	mov	%d4, 1
-	.loc 1 152 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 153 0
-	call	CancelAlarm
-.LVL110:
-	.loc 1 154 0
-	mov	%e4, 2
-	mov	%d6, 2
-	call	SetRelAlarm
-.LVL111:
-	.loc 1 155 0
+.LVL106:
+	.loc 1 119 0
 	mov	%e4, 1
 	mov	%d6, 50
 .L61:
+	.loc 1 182 0
+	lea	%SP, [%SP] 8
+	.loc 1 119 0
+	j	SetRelAlarm
+.LVL107:
+.L49:
+	.loc 1 126 0
+	movh.a	%a2, hi:carCommand
+	ld.bu	%d15, [%a2] lo:carCommand
+	jz	%d15, .L59
+	jeq	%d15, 1, .L58
+	ret
+.L58:
+	.loc 1 135 0
+	mov	%d4, 1
+	.loc 1 134 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 135 0
+	call	CancelAlarm
+.LVL108:
+	.loc 1 136 0
+	mov	%e4, 2
+	mov	%d6, 4
+	call	SetRelAlarm
+.LVL109:
+	.loc 1 137 0
+	mov	%e4, 1
+	mov	%d6, 10
+	j	.L62
+.L51:
+	.loc 1 153 0
+	movh.a	%a2, hi:carCommand
+	ld.bu	%d15, [%a2] lo:carCommand
+	jz	%d15, .L59
+	jeq	%d15, 1, .L60
+	ret
+.L59:
+	.loc 1 182 0
+	lea	%SP, [%SP] 8
+	.loc 1 157 0
+	j	exitShiParkerApp
+.LVL110:
+.L60:
+	.loc 1 162 0
+	mov	%d4, 1
+	.loc 1 161 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 162 0
+	call	CancelAlarm
+.LVL111:
+	.loc 1 163 0
+	mov	%e4, 2
+	mov	%d6, 4
 	call	SetRelAlarm
 .LVL112:
-	.loc 1 158 0
-	mov	%e4, 3
-	mov	%d6, 2
-	j	.L60
-.L44:
-	.loc 1 170 0
-	mov	%d4, 3
-	j	handleError
+	.loc 1 164 0
+	mov	%e4, 1
+	mov	%d6, 50
+.L62:
+	call	SetRelAlarm
 .LVL113:
-.LFE599:
+	.loc 1 167 0
+	mov	%e4, 3
+	mov	%d6, 6
+	j	.L61
+.L45:
+	.loc 1 182 0
+	.loc 1 179 0
+	mov	%d4, 3
+	.loc 1 182 0
+	lea	%SP, [%SP] 8
+	.loc 1 179 0
+	j	handleError
+.LVL114:
+.LFE600:
 	.size	FuncShiParkerAppTask, .-FuncShiParkerAppTask
 .section .rodata,"a",@progbits
-.LC9:
+.LC8:
 	.string	"frontUltra:"
 	.global	__gtdf2
 .section .text,"ax",@progbits
@@ -1138,51 +1103,51 @@ FuncShiParkerAppTask:
 	.global	FuncAvoidObstacleTask
 	.type	FuncAvoidObstacleTask, @function
 FuncAvoidObstacleTask:
-.LFB600:
-	.loc 1 176 0
-	.loc 1 177 0
+.LFB601:
+	.loc 1 185 0
+	.loc 1 186 0
 	movh.a	%a15, hi:g_isAppRunning
 	ld.bu	%d15, [%a15] lo:g_isAppRunning
-	jnz	%d15, .L63
-	.loc 1 178 0
+	jnz	%d15, .L64
+	.loc 1 187 0
 	call	TerminateTask
-.LVL114:
-.L63:
-	.loc 1 179 0
+.LVL115:
+.L64:
+	.loc 1 188 0
 	movh.a	%a4, hi:g_Ultrasonic_FRONT
 	lea	%a4, [%a4] lo:g_Ultrasonic_FRONT
 	call	getUltrasonic
-.LVL115:
-	.loc 1 180 0
-	movh.a	%a4, hi:.LC9
-	mov	%e4, %d3, %d2
-	lea	%a4, [%a4] lo:.LC9
-	.loc 1 179 0
-	mov	%e8, %d3, %d2
 .LVL116:
-	.loc 1 180 0
-	call	printDouble
+	.loc 1 189 0
+	movh.a	%a4, hi:.LC8
+	mov	%e4, %d3, %d2
+	lea	%a4, [%a4] lo:.LC8
+	.loc 1 188 0
+	mov	%e8, %d3, %d2
 .LVL117:
-	.loc 1 181 0
+	.loc 1 189 0
+	call	printDouble
+.LVL118:
+	.loc 1 190 0
 	mov	%e4, %d9, %d8
 	mov	%e6, 0
 	call	__gtdf2
-.LVL118:
-	jlez	%d2, .L62
-	.loc 1 181 0 is_stmt 0 discriminator 1
+.LVL119:
+	jlez	%d2, .L63
+	.loc 1 190 0 is_stmt 0 discriminator 1
 	mov	%e4, %d9, %d8
 	mov	%d6, 0
 	movh	%d7, 16424
 	call	__ltdf2
-.LVL119:
-	jgez	%d2, .L62
-	.loc 1 183 0 is_stmt 1
+.LVL120:
+	jgez	%d2, .L63
+	.loc 1 192 0 is_stmt 1
 	mov	%d4, 1
 	j	handleError
-.LVL120:
-.L62:
+.LVL121:
+.L63:
 	ret
-.LFE600:
+.LFE601:
 	.size	FuncAvoidObstacleTask, .-FuncAvoidObstacleTask
 	.global	RearUltra
 .section .bss,"aw",@nobits
@@ -1260,42 +1225,43 @@ motor_power_normal:
 motor_power_turn:
 	.word	0
 	.word	1079574528
-.LC10:
+.LC9:
 	.string	"User Control occured."
-.LC11:
+.LC10:
 	.string	"Obstacle detected."
-.LC12:
+.LC11:
 	.string	"Connection Lost"
-.LC13:
+.LC12:
 	.string	"Undefined Status"
-.LC14:
+.LC13:
 	.string	"Hall_FL Error"
-.LC15:
+.LC14:
 	.string	"Hall_FR Error"
-.LC16:
+.LC15:
 	.string	"Hall_RL Error"
-.LC17:
+.LC16:
 	.string	"Hall_RR Error"
-.LC18:
+.LC17:
 	.string	"ULTRASONIC_FL Error"
-.LC19:
+.LC18:
 	.string	"ULTRASONIC_F Error"
-.LC20:
+.LC19:
 	.string	"ULTRASONIC_FR Error"
-.LC21:
+.LC20:
 	.string	"ULTRASONIC_SL Error"
-.LC22:
+.LC21:
 	.string	"ULTRASONIC_SR Error"
-.LC23:
+.LC22:
 	.string	"ULTRASONIC_RL Error"
-.LC24:
+.LC23:
 	.string	"ULTRASONIC_R Error"
-.LC25:
+.LC24:
 	.string	"ULTRASONIC_RR Error"
 	.align 2
 	.type	errorMessages, @object
 	.size	errorMessages, 64
 errorMessages:
+	.word	.LC9
 	.word	.LC10
 	.word	.LC11
 	.word	.LC12
@@ -1311,7 +1277,6 @@ errorMessages:
 	.word	.LC22
 	.word	.LC23
 	.word	.LC24
-	.word	.LC25
 .section .debug_frame,"",@progbits
 .Lframe0:
 	.uaword	.LECIE0-.LSCIE0
@@ -1347,12 +1312,8 @@ errorMessages:
 	.uaword	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.uaword	.Lframe0
-	.uaword	.LFB601
-	.uaword	.LFE601-.LFB601
-	.byte	0x4
-	.uaword	.LCFI0-.LFB601
-	.byte	0xe
-	.uleb128 0x10
+	.uaword	.LFB599
+	.uaword	.LFE599-.LFB599
 	.align 2
 .LEFDE4:
 .LSFDE6:
@@ -1361,6 +1322,10 @@ errorMessages:
 	.uaword	.Lframe0
 	.uaword	.LFB602
 	.uaword	.LFE602-.LFB602
+	.byte	0x4
+	.uaword	.LCFI0-.LFB602
+	.byte	0xe
+	.uleb128 0x10
 	.align 2
 .LEFDE6:
 .LSFDE8:
@@ -1369,38 +1334,34 @@ errorMessages:
 	.uaword	.Lframe0
 	.uaword	.LFB603
 	.uaword	.LFE603-.LFB603
-	.byte	0x4
-	.uaword	.LCFI1-.LFB603
-	.byte	0xe
-	.uleb128 0x10
 	.align 2
 .LEFDE8:
 .LSFDE10:
 	.uaword	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.uaword	.Lframe0
-	.uaword	.LFB605
-	.uaword	.LFE605-.LFB605
+	.uaword	.LFB604
+	.uaword	.LFE604-.LFB604
+	.byte	0x4
+	.uaword	.LCFI1-.LFB604
+	.byte	0xe
+	.uleb128 0x10
 	.align 2
 .LEFDE10:
 .LSFDE12:
 	.uaword	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.uaword	.Lframe0
-	.uaword	.LFB604
-	.uaword	.LFE604-.LFB604
-	.byte	0x4
-	.uaword	.LCFI2-.LFB604
-	.byte	0xe
-	.uleb128 0x8
+	.uaword	.LFB606
+	.uaword	.LFE606-.LFB606
 	.align 2
 .LEFDE12:
 .LSFDE14:
 	.uaword	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.uaword	.Lframe0
-	.uaword	.LFB606
-	.uaword	.LFE606-.LFB606
+	.uaword	.LFB605
+	.uaword	.LFE605-.LFB605
 	.align 2
 .LEFDE14:
 .LSFDE16:
@@ -1409,18 +1370,18 @@ errorMessages:
 	.uaword	.Lframe0
 	.uaword	.LFB607
 	.uaword	.LFE607-.LFB607
-	.byte	0x4
-	.uaword	.LCFI3-.LFB607
-	.byte	0xe
-	.uleb128 0x8
 	.align 2
 .LEFDE16:
 .LSFDE18:
 	.uaword	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.uaword	.Lframe0
-	.uaword	.LFB599
-	.uaword	.LFE599-.LFB599
+	.uaword	.LFB608
+	.uaword	.LFE608-.LFB608
+	.byte	0x4
+	.uaword	.LCFI2-.LFB608
+	.byte	0xe
+	.uleb128 0x8
 	.align 2
 .LEFDE18:
 .LSFDE20:
@@ -1429,8 +1390,20 @@ errorMessages:
 	.uaword	.Lframe0
 	.uaword	.LFB600
 	.uaword	.LFE600-.LFB600
+	.byte	0x4
+	.uaword	.LCFI3-.LFB600
+	.byte	0xe
+	.uleb128 0x8
 	.align 2
 .LEFDE20:
+.LSFDE22:
+	.uaword	.LEFDE22-.LASFDE22
+.LASFDE22:
+	.uaword	.Lframe0
+	.uaword	.LFB601
+	.uaword	.LFE601-.LFB601
+	.align 2
+.LEFDE22:
 .section .text,"ax",@progbits
 .Letext0:
 	.file 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\Cpu\\Std\\Platform_Types.h"
@@ -1447,13 +1420,13 @@ errorMessages:
 	.file 13 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
 	.file 14 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275/illd\\Libraries\\iLLD\\TC27D\\Tricore\\_Impl/IfxCpu_cfg.h"
 	.file 15 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\hall_Driver.h"
-	.file 16 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
-	.file 17 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h"
-	.file 18 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
-	.file 19 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
+	.file 16 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
+	.file 17 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_tc_system.h"
+	.file 18 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.h"
+	.file 19 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x3bf3
+	.uaword	0x3c39
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -6021,7 +5994,7 @@ errorMessages:
 	.string	"CAR_STATUS_TYPE_T"
 	.byte	0x1
 	.byte	0xd
-	.byte	0x31
+	.byte	0x2d
 	.uaword	0x2b05
 	.uleb128 0x19
 	.string	"CAR_STATUS_READY"
@@ -6048,13 +6021,13 @@ errorMessages:
 	.uleb128 0x3
 	.string	"CAR_STATUS_TYPE"
 	.byte	0xd
-	.byte	0x39
+	.byte	0x35
 	.uaword	0x2a3e
 	.uleb128 0x1a
 	.string	"CAR_COMMAND_TYPE_T"
 	.byte	0x1
 	.byte	0xd
-	.byte	0x3a
+	.byte	0x36
 	.uaword	0x2ba7
 	.uleb128 0x19
 	.string	"CAR_COMMAND_FORCESTOP"
@@ -6075,13 +6048,13 @@ errorMessages:
 	.uleb128 0x3
 	.string	"CAR_COMMAND_TYPE"
 	.byte	0xd
-	.byte	0x40
+	.byte	0x3c
 	.uaword	0x2b1c
 	.uleb128 0x1a
 	.string	"ERROR_CODE_TYPE_T"
 	.byte	0x1
 	.byte	0xd
-	.byte	0x41
+	.byte	0x3d
 	.uaword	0x2cff
 	.uleb128 0x19
 	.string	"ERROR_CODE_USER_CONTROL"
@@ -6135,24 +6108,24 @@ errorMessages:
 	.uleb128 0x3
 	.string	"ERROR_CODE_TYPE"
 	.byte	0xd
-	.byte	0x52
+	.byte	0x4e
 	.uaword	0x2bbf
 	.uleb128 0xb
 	.string	"Position"
 	.byte	0x10
 	.byte	0xd
-	.byte	0x53
+	.byte	0x4f
 	.uaword	0x2d3c
 	.uleb128 0x8
 	.string	"x"
 	.byte	0xd
-	.byte	0x55
+	.byte	0x51
 	.uaword	0x159
 	.byte	0
 	.uleb128 0x8
 	.string	"y"
 	.byte	0xd
-	.byte	0x56
+	.byte	0x52
 	.uaword	0x159
 	.byte	0x8
 	.byte	0
@@ -6160,7 +6133,7 @@ errorMessages:
 	.byte	0x1
 	.string	"calculateCurrentPos"
 	.byte	0x1
-	.byte	0xea
+	.byte	0xf3
 	.byte	0x1
 	.uleb128 0x1c
 	.byte	0x1
@@ -6176,7 +6149,7 @@ errorMessages:
 	.uaword	0x2d9b
 	.uleb128 0x1d
 	.uaword	.LVL0
-	.uaword	0x39b4
+	.uaword	0x39fa
 	.uaword	0x2d8a
 	.uleb128 0x1e
 	.byte	0x1
@@ -6188,7 +6161,7 @@ errorMessages:
 	.uleb128 0x1f
 	.uaword	.LVL1
 	.byte	0x1
-	.uaword	0x39e4
+	.uaword	0x3a2a
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6210,7 +6183,7 @@ errorMessages:
 	.uaword	0x2e4e
 	.uleb128 0x1d
 	.uaword	.LVL2
-	.uaword	0x3a0a
+	.uaword	0x3a50
 	.uaword	0x2dd8
 	.uleb128 0x1e
 	.byte	0x1
@@ -6221,7 +6194,7 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL3
-	.uaword	0x3a28
+	.uaword	0x3a6e
 	.uaword	0x2deb
 	.uleb128 0x1e
 	.byte	0x1
@@ -6231,7 +6204,7 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL4
-	.uaword	0x3a28
+	.uaword	0x3a6e
 	.uaword	0x2dfe
 	.uleb128 0x1e
 	.byte	0x1
@@ -6241,7 +6214,7 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL5
-	.uaword	0x3a0a
+	.uaword	0x3a50
 	.uaword	0x2e15
 	.uleb128 0x1e
 	.byte	0x1
@@ -6252,7 +6225,7 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL6
-	.uaword	0x3a49
+	.uaword	0x3a8f
 	.uaword	0x2e32
 	.uleb128 0x1e
 	.byte	0x1
@@ -6273,7 +6246,7 @@ errorMessages:
 	.uleb128 0x1f
 	.uaword	.LVL7
 	.byte	0x1
-	.uaword	0x3a49
+	.uaword	0x3a8f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
@@ -6294,49 +6267,30 @@ errorMessages:
 	.byte	0
 	.uleb128 0x20
 	.byte	0x1
-	.string	"turn90"
+	.string	"exitShiParkerApp"
 	.byte	0x1
-	.byte	0xbb
-	.byte	0x1
-	.uaword	.LFB601
-	.uaword	.LFE601
+	.byte	0x30
+	.uaword	.LFB599
+	.uaword	.LFE599
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x304d
-	.uleb128 0x21
-	.string	"currentHallCntAvg"
-	.byte	0x1
-	.byte	0xbd
-	.uaword	0x304d
-	.byte	0x2
-	.byte	0x91
-	.sleb128 -16
-	.uleb128 0x21
-	.string	"targetHallCntAvg"
-	.byte	0x1
-	.byte	0xbe
-	.uaword	0x304d
-	.byte	0x2
-	.byte	0x91
-	.sleb128 -8
-	.uleb128 0x22
-	.uaword	.LVL8
-	.uaword	0x3a74
+	.uaword	0x2f31
 	.uleb128 0x1d
-	.uaword	.LVL10
-	.uaword	0x3a28
-	.uaword	0x2ebc
+	.uaword	.LVL8
+	.uaword	0x3a50
+	.uaword	0x2e89
 	.uleb128 0x1e
 	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
+	.byte	0x64
+	.byte	0x5
+	.byte	0x3
+	.uaword	.LC2
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL11
-	.uaword	0x3a8c
-	.uaword	0x2ecf
+	.uaword	.LVL9
+	.uaword	0x3aba
+	.uaword	0x2e9c
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6344,9 +6298,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL12
-	.uaword	0x3a8c
-	.uaword	0x2ee2
+	.uaword	.LVL10
+	.uaword	0x3aba
+	.uaword	0x2eaf
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6354,9 +6308,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL13
-	.uaword	0x3a8c
-	.uaword	0x2ef5
+	.uaword	.LVL11
+	.uaword	0x3aba
+	.uaword	0x2ec2
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6364,9 +6318,29 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
+	.uaword	.LVL12
+	.uaword	0x3aba
+	.uaword	0x2ed5
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL13
+	.uaword	0x3ad5
+	.uaword	0x2ee8
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x3b
+	.byte	0
+	.uleb128 0x1d
 	.uaword	.LVL14
-	.uaword	0x3a8c
-	.uaword	0x2f08
+	.uaword	0x3a6e
+	.uaword	0x2efb
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6375,38 +6349,69 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL15
-	.uaword	0x3aa7
-	.uaword	0x2f1b
+	.uaword	0x3a6e
+	.uaword	0x2f0e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x30
+	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL16
-	.uaword	0x3aa7
-	.uaword	0x2f2e
+	.uaword	0x3a6e
+	.uaword	0x2f21
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x32
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x21
 	.uaword	.LVL17
-	.uaword	0x3ac9
-	.uaword	0x2f41
+	.uaword	0x3a6e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x31
+	.byte	0x30
 	.byte	0
-	.uleb128 0x1d
+	.byte	0
+	.uleb128 0x22
+	.byte	0x1
+	.string	"turn90"
+	.byte	0x1
+	.byte	0xc4
+	.byte	0x1
+	.uaword	.LFB602
+	.uaword	.LFE602
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x3130
+	.uleb128 0x23
+	.string	"currentHallCntAvg"
+	.byte	0x1
+	.byte	0xc6
+	.uaword	0x3130
+	.byte	0x2
+	.byte	0x91
+	.sleb128 -16
+	.uleb128 0x23
+	.string	"targetHallCntAvg"
+	.byte	0x1
+	.byte	0xc7
+	.uaword	0x3130
+	.byte	0x2
+	.byte	0x91
+	.sleb128 -8
+	.uleb128 0x24
 	.uaword	.LVL18
-	.uaword	0x3ac9
-	.uaword	0x2f54
+	.uaword	0x3af7
+	.uleb128 0x1d
+	.uaword	.LVL20
+	.uaword	0x3a6e
+	.uaword	0x2f9f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6414,9 +6419,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL19
-	.uaword	0x3aec
-	.uaword	0x2f67
+	.uaword	.LVL21
+	.uaword	0x3aba
+	.uaword	0x2fb2
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6424,9 +6429,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL20
-	.uaword	0x3aec
-	.uaword	0x2f7a
+	.uaword	.LVL22
+	.uaword	0x3aba
+	.uaword	0x2fc5
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6434,9 +6439,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL21
-	.uaword	0x3aec
-	.uaword	0x2f8d
+	.uaword	.LVL23
+	.uaword	0x3aba
+	.uaword	0x2fd8
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6444,9 +6449,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL22
-	.uaword	0x3aec
-	.uaword	0x2fa0
+	.uaword	.LVL24
+	.uaword	0x3aba
+	.uaword	0x2feb
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6454,9 +6459,89 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL24
-	.uaword	0x3b11
-	.uaword	0x2fb4
+	.uaword	.LVL25
+	.uaword	0x3b0f
+	.uaword	0x2ffe
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL26
+	.uaword	0x3b0f
+	.uaword	0x3011
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL27
+	.uaword	0x3b31
+	.uaword	0x3024
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL28
+	.uaword	0x3b31
+	.uaword	0x3037
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL29
+	.uaword	0x3b54
+	.uaword	0x304a
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL30
+	.uaword	0x3b54
+	.uaword	0x305d
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL31
+	.uaword	0x3b54
+	.uaword	0x3070
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL32
+	.uaword	0x3b54
+	.uaword	0x3083
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL34
+	.uaword	0x3b79
+	.uaword	0x3097
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6464,13 +6549,13 @@ errorMessages:
 	.byte	0x8
 	.byte	0x32
 	.byte	0
-	.uleb128 0x22
-	.uaword	.LVL25
-	.uaword	0x3a74
+	.uleb128 0x24
+	.uaword	.LVL35
+	.uaword	0x3af7
 	.uleb128 0x1d
-	.uaword	.LVL26
-	.uaword	0x3b2a
-	.uaword	0x2fd1
+	.uaword	.LVL36
+	.uaword	0x3b92
+	.uaword	0x30b4
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -6479,9 +6564,9 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL27
-	.uaword	0x3b11
-	.uaword	0x2fe5
+	.uaword	.LVL37
+	.uaword	0x3b79
+	.uaword	0x30c8
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6490,9 +6575,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL28
-	.uaword	0x3aec
-	.uaword	0x2ff8
+	.uaword	.LVL38
+	.uaword	0x3b54
+	.uaword	0x30db
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6500,9 +6585,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL29
-	.uaword	0x3aec
-	.uaword	0x300b
+	.uaword	.LVL39
+	.uaword	0x3b54
+	.uaword	0x30ee
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6510,9 +6595,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL30
-	.uaword	0x3aec
-	.uaword	0x301e
+	.uaword	.LVL40
+	.uaword	0x3b54
+	.uaword	0x3101
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6520,9 +6605,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL31
-	.uaword	0x3aec
-	.uaword	0x3031
+	.uaword	.LVL41
+	.uaword	0x3b54
+	.uaword	0x3114
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6530,9 +6615,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1f
-	.uaword	.LVL32
+	.uaword	.LVL42
 	.byte	0x1
-	.uaword	0x3a49
+	.uaword	0x3a8f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
@@ -6553,59 +6638,59 @@ errorMessages:
 	.byte	0
 	.uleb128 0x17
 	.uaword	0x159
-	.uleb128 0x23
+	.uleb128 0x25
 	.uaword	0x2d3c
-	.uaword	.LFB602
-	.uaword	.LFE602
-	.byte	0x1
-	.byte	0x9c
-	.byte	0x1
-	.uaword	0x3079
-	.uleb128 0x22
-	.uaword	.LVL33
-	.uaword	0x3a74
-	.uleb128 0x22
-	.uaword	.LVL35
-	.uaword	0x3a74
-	.byte	0
-	.uleb128 0x20
-	.byte	0x1
-	.string	"FuncWallFollowTask"
-	.byte	0x1
-	.byte	0xff
-	.byte	0x1
 	.uaword	.LFB603
 	.uaword	.LFE603
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x3253
+	.uaword	0x315c
 	.uleb128 0x24
+	.uaword	.LVL43
+	.uaword	0x3af7
+	.uleb128 0x24
+	.uaword	.LVL45
+	.uaword	0x3af7
+	.byte	0
+	.uleb128 0x26
+	.byte	0x1
+	.string	"FuncWallFollowTask"
+	.byte	0x1
+	.uahalf	0x108
+	.byte	0x1
+	.uaword	.LFB604
+	.uaword	.LFE604
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x3337
+	.uleb128 0x27
 	.uaword	.Ldebug_ranges0+0
-	.uleb128 0x25
+	.uleb128 0x28
 	.string	"cmd"
 	.byte	0x1
-	.uahalf	0x110
+	.uahalf	0x119
 	.uaword	0x2a2a
 	.byte	0x2
 	.byte	0x91
 	.sleb128 -16
-	.uleb128 0x26
+	.uleb128 0x29
 	.string	"delta_p"
 	.byte	0x1
-	.uahalf	0x111
+	.uahalf	0x11a
 	.uaword	0x159
 	.uaword	.LLST0
-	.uleb128 0x22
-	.uaword	.LVL38
-	.uaword	0x3b4b
-	.uleb128 0x22
-	.uaword	.LVL39
-	.uaword	0x3b4b
+	.uleb128 0x24
+	.uaword	.LVL48
+	.uaword	0x3bb3
+	.uleb128 0x24
+	.uaword	.LVL49
+	.uaword	0x3bb3
 	.uleb128 0x1d
-	.uaword	.LVL40
-	.uaword	0x3b73
-	.uaword	0x30ee
+	.uaword	.LVL50
+	.uaword	0x3bdb
+	.uaword	0x31d2
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -6614,9 +6699,9 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL43
-	.uaword	0x3b2a
-	.uaword	0x3112
+	.uaword	.LVL53
+	.uaword	0x3b92
+	.uaword	0x31f6
 	.uleb128 0x1e
 	.byte	0x6
 	.byte	0x54
@@ -6634,95 +6719,12 @@ errorMessages:
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
-	.uaword	.LC3
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL47
-	.uaword	0x3aec
-	.uaword	0x3125
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL49
-	.uaword	0x3aec
-	.uaword	0x3138
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL51
-	.uaword	0x3aec
-	.uaword	0x314b
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL53
-	.uaword	0x3aec
-	.uaword	0x315e
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL54
-	.uaword	0x3aa7
-	.uaword	0x3171
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL55
-	.uaword	0x3aa7
-	.uaword	0x3184
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL56
-	.uaword	0x3aa7
-	.uaword	0x3197
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
+	.uaword	.LC4
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL57
-	.uaword	0x3aa7
-	.uaword	0x31aa
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x22
-	.uaword	.LVL58
-	.uaword	0x2d3c
-	.uleb128 0x1d
-	.uaword	.LVL60
-	.uaword	0x3a8c
-	.uaword	0x31c6
+	.uaword	0x3b54
+	.uaword	0x3209
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6730,52 +6732,18 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL61
-	.uaword	0x3a8c
-	.uaword	0x31d9
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL62
-	.uaword	0x3a8c
-	.uaword	0x31ec
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL63
-	.uaword	0x3a8c
-	.uaword	0x31ff
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x27
-	.uaword	.LVL64
-	.byte	0x1
-	.uaword	0x2e4e
-	.uleb128 0x1d
-	.uaword	.LVL66
-	.uaword	0x3a8c
+	.uaword	.LVL59
+	.uaword	0x3b54
 	.uaword	0x321c
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x30
+	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL67
-	.uaword	0x3a8c
+	.uaword	.LVL61
+	.uaword	0x3b54
 	.uaword	0x322f
 	.uleb128 0x1e
 	.byte	0x1
@@ -6784,18 +6752,135 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL68
-	.uaword	0x3a8c
+	.uaword	.LVL63
+	.uaword	0x3b54
 	.uaword	0x3242
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL64
+	.uaword	0x3b0f
+	.uaword	0x3255
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL65
+	.uaword	0x3b0f
+	.uaword	0x3268
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL66
+	.uaword	0x3b0f
+	.uaword	0x327b
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x32
 	.byte	0
-	.uleb128 0x28
-	.uaword	.LVL69
-	.uaword	0x3a8c
+	.uleb128 0x1d
+	.uaword	.LVL67
+	.uaword	0x3b0f
+	.uaword	0x328e
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.uleb128 0x24
+	.uaword	.LVL68
+	.uaword	0x2d3c
+	.uleb128 0x1d
+	.uaword	.LVL70
+	.uaword	0x3aba
+	.uaword	0x32aa
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL71
+	.uaword	0x3aba
+	.uaword	0x32bd
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL72
+	.uaword	0x3aba
+	.uaword	0x32d0
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL73
+	.uaword	0x3aba
+	.uaword	0x32e3
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x33
+	.byte	0
+	.uleb128 0x2a
+	.uaword	.LVL74
+	.byte	0x1
+	.uaword	0x2f31
+	.uleb128 0x1d
+	.uaword	.LVL76
+	.uaword	0x3aba
+	.uaword	0x3300
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x30
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL77
+	.uaword	0x3aba
+	.uaword	0x3313
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL78
+	.uaword	0x3aba
+	.uaword	0x3326
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.uleb128 0x21
+	.uaword	.LVL79
+	.uaword	0x3aba
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6804,63 +6889,45 @@ errorMessages:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2b
 	.byte	0x1
 	.string	"makePacket"
 	.byte	0x1
-	.uahalf	0x13d
+	.uahalf	0x145
 	.byte	0x1
-	.uaword	.LFB605
-	.uaword	.LFE605
+	.uaword	.LFB606
+	.uaword	.LFE606
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x3282
-	.uleb128 0x2a
+	.uaword	0x3366
+	.uleb128 0x2c
 	.string	"dst"
 	.byte	0x1
-	.uahalf	0x13d
-	.uaword	0x3282
+	.uahalf	0x145
+	.uaword	0x3366
 	.byte	0x1
 	.byte	0x64
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
 	.uaword	0x25ec
-	.uleb128 0x29
+	.uleb128 0x2b
 	.byte	0x1
 	.string	"FuncPacketSendTask"
 	.byte	0x1
-	.uahalf	0x136
+	.uahalf	0x13f
 	.byte	0x1
-	.uaword	.LFB604
-	.uaword	.LFE604
+	.uaword	.LFB605
+	.uaword	.LFE605
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x32f4
+	.uaword	0x33ba
 	.uleb128 0x1d
-	.uaword	.LVL71
-	.uaword	0x3a0a
-	.uaword	0x32ce
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x64
-	.byte	0x5
-	.byte	0x3
-	.uaword	.LC4
-	.uleb128 0x1e
-	.byte	0x2
-	.byte	0x8a
-	.sleb128 4
-	.byte	0x2
-	.byte	0x7f
-	.sleb128 0
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL72
-	.uaword	0x3253
-	.uaword	0x32e2
+	.uaword	.LVL81
+	.uaword	0x3337
+	.uaword	0x33a8
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -6869,9 +6936,9 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-	.uaword	.LVL73
+	.uaword	.LVL82
 	.byte	0x1
-	.uaword	0x3ba0
+	.uaword	0x3c08
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -6880,53 +6947,53 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2b
 	.byte	0x1
 	.string	"updateStatus"
 	.byte	0x1
-	.uahalf	0x147
-	.byte	0x1
-	.uaword	.LFB606
-	.uaword	.LFE606
-	.byte	0x1
-	.byte	0x9c
-	.byte	0x1
-	.uaword	0x3328
-	.uleb128 0x2a
-	.string	"packet"
-	.byte	0x1
-	.uahalf	0x147
-	.uaword	0x3328
-	.byte	0x1
-	.byte	0x64
-	.byte	0
-	.uleb128 0x4
-	.byte	0x4
-	.uaword	0x332e
-	.uleb128 0x5
-	.uaword	0x25ec
-	.uleb128 0x29
-	.byte	0x1
-	.string	"handleError"
-	.byte	0x1
-	.uahalf	0x151
+	.uahalf	0x14f
 	.byte	0x1
 	.uaword	.LFB607
 	.uaword	.LFE607
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x3444
+	.uaword	0x33ee
+	.uleb128 0x2c
+	.string	"packet"
+	.byte	0x1
+	.uahalf	0x14f
+	.uaword	0x33ee
+	.byte	0x1
+	.byte	0x64
+	.byte	0
+	.uleb128 0x4
+	.byte	0x4
+	.uaword	0x33f4
+	.uleb128 0x5
+	.uaword	0x25ec
 	.uleb128 0x2b
+	.byte	0x1
+	.string	"handleError"
+	.byte	0x1
+	.uahalf	0x156
+	.byte	0x1
+	.uaword	.LFB608
+	.uaword	.LFE608
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x3513
+	.uleb128 0x2d
 	.string	"errorCode"
 	.byte	0x1
-	.uahalf	0x151
+	.uahalf	0x156
 	.uaword	0x2cff
 	.uaword	.LLST1
 	.uleb128 0x1d
-	.uaword	.LVL77
-	.uaword	0x3a28
-	.uaword	0x337d
+	.uaword	.LVL86
+	.uaword	0x3a6e
+	.uaword	0x3443
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6934,9 +7001,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL78
-	.uaword	0x3a28
-	.uaword	0x3390
+	.uaword	.LVL87
+	.uaword	0x3a6e
+	.uaword	0x3456
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6944,9 +7011,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL79
-	.uaword	0x3a8c
-	.uaword	0x33a3
+	.uaword	.LVL88
+	.uaword	0x3aba
+	.uaword	0x3469
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6954,9 +7021,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL80
-	.uaword	0x3a8c
-	.uaword	0x33b6
+	.uaword	.LVL89
+	.uaword	0x3aba
+	.uaword	0x347c
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6964,9 +7031,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL81
-	.uaword	0x3a8c
-	.uaword	0x33c9
+	.uaword	.LVL90
+	.uaword	0x3aba
+	.uaword	0x348f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6974,9 +7041,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL82
-	.uaword	0x3a8c
-	.uaword	0x33dc
+	.uaword	.LVL91
+	.uaword	0x3aba
+	.uaword	0x34a2
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -6984,9 +7051,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL83
-	.uaword	0x3a0a
-	.uaword	0x3402
+	.uaword	.LVL92
+	.uaword	0x3a50
+	.uaword	0x34c8
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -7010,9 +7077,9 @@ errorMessages:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL84
-	.uaword	0x3bbb
-	.uaword	0x3415
+	.uaword	.LVL93
+	.uaword	0x3ad5
+	.uaword	0x34db
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7020,9 +7087,9 @@ errorMessages:
 	.byte	0x3b
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL85
-	.uaword	0x3a0a
-	.uaword	0x3433
+	.uaword	.LVL94
+	.uaword	0x3a50
+	.uaword	0x34f9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -7037,10 +7104,13 @@ errorMessages:
 	.byte	0x7f
 	.sleb128 0
 	.byte	0
+	.uleb128 0x24
+	.uaword	.LVL95
+	.uaword	0x2e4e
 	.uleb128 0x1f
-	.uaword	.LVL86
+	.uaword	.LVL96
 	.byte	0x1
-	.uaword	0x3bbb
+	.uaword	0x3ad5
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7052,156 +7122,62 @@ errorMessages:
 	.byte	0x1
 	.string	"FuncShiParkerAppTask"
 	.byte	0x1
-	.byte	0x30
+	.byte	0x42
 	.byte	0x1
-	.uaword	.LFB599
-	.uaword	.LFE599
+	.uaword	.LFB600
+	.uaword	.LFE600
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x3662
+	.uaword	0x367f
 	.uleb128 0x1d
-	.uaword	.LVL87
-	.uaword	0x3a0a
-	.uaword	0x3484
+	.uaword	.LVL97
+	.uaword	0x3a50
+	.uaword	0x355a
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
 	.uaword	.LC7
-	.byte	0
-	.uleb128 0x22
-	.uaword	.LVL88
-	.uaword	0x3bdd
-	.uleb128 0x1d
-	.uaword	.LVL89
-	.uaword	0x3a28
-	.uaword	0x34a0
 	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
+	.byte	0x2
+	.byte	0x8a
+	.sleb128 0
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
 	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL90
-	.uaword	0x3a28
-	.uaword	0x34b3
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL91
-	.uaword	0x3a28
-	.uaword	0x34c6
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x27
-	.uaword	.LVL92
-	.byte	0x1
-	.uaword	0x3a49
-	.uleb128 0x1d
-	.uaword	.LVL93
-	.uaword	0x3a8c
-	.uaword	0x34e3
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL94
-	.uaword	0x3a8c
-	.uaword	0x34f6
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL95
-	.uaword	0x3a8c
-	.uaword	0x3509
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL96
-	.uaword	0x3a8c
-	.uaword	0x351c
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL97
-	.uaword	0x3a28
-	.uaword	0x352f
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x24
 	.uaword	.LVL98
-	.uaword	0x3a49
-	.uaword	0x354c
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x56
-	.byte	0x1
-	.byte	0x32
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x55
-	.byte	0x1
-	.byte	0x30
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
+	.uaword	0x3c23
+	.uleb128 0x24
 	.uaword	.LVL99
-	.uaword	0x3a8c
-	.uaword	0x355f
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
+	.uaword	0x33ba
 	.uleb128 0x1d
 	.uaword	.LVL100
-	.uaword	0x3a8c
-	.uaword	0x3572
+	.uaword	0x3aba
+	.uaword	0x357f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x31
+	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL101
-	.uaword	0x3a8c
-	.uaword	0x3585
+	.uaword	0x3aba
+	.uaword	0x3592
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL102
+	.uaword	0x3aba
+	.uaword	0x35a5
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7209,9 +7185,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL102
-	.uaword	0x3a8c
-	.uaword	0x3598
+	.uaword	.LVL103
+	.uaword	0x3aba
+	.uaword	0x35b8
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7219,30 +7195,19 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL103
-	.uaword	0x3a0a
-	.uaword	0x35af
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x64
-	.byte	0x5
-	.byte	0x3
-	.uaword	.LC8
-	.byte	0
-	.uleb128 0x1d
 	.uaword	.LVL104
-	.uaword	0x3bbb
-	.uaword	0x35c2
+	.uaword	0x3a6e
+	.uaword	0x35cb
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x3b
+	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL105
-	.uaword	0x3a28
-	.uaword	0x35d5
+	.uaword	0x3a6e
+	.uaword	0x35de
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7251,57 +7216,37 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL106
-	.uaword	0x3a28
-	.uaword	0x35e8
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL107
-	.uaword	0x3a28
-	.uaword	0x35fb
+	.uaword	0x3a6e
+	.uaword	0x35f1
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x32
 	.byte	0
+	.uleb128 0x2a
+	.uaword	.LVL107
+	.byte	0x1
+	.uaword	0x3a8f
 	.uleb128 0x1d
 	.uaword	.LVL108
-	.uaword	0x3a28
+	.uaword	0x3a6e
 	.uaword	0x360e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x27
-	.uaword	.LVL109
-	.byte	0x1
-	.uaword	0x3bdd
-	.uleb128 0x1d
-	.uaword	.LVL110
-	.uaword	0x3a28
-	.uaword	0x362b
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL111
-	.uaword	0x3a49
-	.uaword	0x3648
+	.uaword	.LVL109
+	.uaword	0x3a8f
+	.uaword	0x362b
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
 	.byte	0x1
-	.byte	0x32
+	.byte	0x34
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x55
@@ -7313,13 +7258,47 @@ errorMessages:
 	.byte	0x1
 	.byte	0x32
 	.byte	0
-	.uleb128 0x22
-	.uaword	.LVL112
-	.uaword	0x3a49
-	.uleb128 0x1f
-	.uaword	.LVL113
+	.uleb128 0x2a
+	.uaword	.LVL110
 	.byte	0x1
-	.uaword	0x3333
+	.uaword	0x2e4e
+	.uleb128 0x1d
+	.uaword	.LVL111
+	.uaword	0x3a6e
+	.uaword	0x3648
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x31
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL112
+	.uaword	0x3a8f
+	.uaword	0x3665
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x56
+	.byte	0x1
+	.byte	0x34
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x55
+	.byte	0x1
+	.byte	0x30
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.uleb128 0x24
+	.uaword	.LVL113
+	.uaword	0x3a8f
+	.uleb128 0x1f
+	.uaword	.LVL114
+	.byte	0x1
+	.uaword	0x33f9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7327,34 +7306,34 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0x22
 	.byte	0x1
 	.string	"FuncAvoidObstacleTask"
 	.byte	0x1
-	.byte	0xaf
+	.byte	0xb8
 	.byte	0x1
-	.uaword	.LFB600
-	.uaword	.LFE600
+	.uaword	.LFB601
+	.uaword	.LFE601
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x36e3
-	.uleb128 0x2c
+	.uaword	0x3700
+	.uleb128 0x2e
 	.string	"dist"
 	.byte	0x1
-	.byte	0xb3
+	.byte	0xbc
 	.uaword	0x159
 	.uaword	.LLST2
-	.uleb128 0x22
-	.uaword	.LVL114
-	.uaword	0x3bdd
-	.uleb128 0x22
+	.uleb128 0x24
 	.uaword	.LVL115
-	.uaword	0x3b4b
+	.uaword	0x3c23
+	.uleb128 0x24
+	.uaword	.LVL116
+	.uaword	0x3bb3
 	.uleb128 0x1d
-	.uaword	.LVL117
-	.uaword	0x3b2a
-	.uaword	0x36d2
+	.uaword	.LVL118
+	.uaword	0x3b92
+	.uaword	0x36ef
 	.uleb128 0x1e
 	.byte	0x6
 	.byte	0x54
@@ -7372,12 +7351,12 @@ errorMessages:
 	.byte	0x64
 	.byte	0x5
 	.byte	0x3
-	.uaword	.LC9
+	.uaword	.LC8
 	.byte	0
 	.uleb128 0x1f
-	.uaword	.LVL120
+	.uaword	.LVL121
 	.byte	0x1
-	.uaword	0x3333
+	.uaword	0x33f9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7385,7 +7364,7 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2f
 	.string	"pid_prev_error"
 	.byte	0xc
 	.byte	0x22
@@ -7393,7 +7372,7 @@ errorMessages:
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x2d
+	.uleb128 0x2f
 	.string	"pid_integral"
 	.byte	0xc
 	.byte	0x23
@@ -7401,7 +7380,7 @@ errorMessages:
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x2e
+	.uleb128 0x30
 	.string	"pid_last_time"
 	.byte	0xc
 	.byte	0x24
@@ -7409,22 +7388,22 @@ errorMessages:
 	.byte	0
 	.uleb128 0x9
 	.uaword	0x23a
-	.uaword	0x3745
+	.uaword	0x3762
 	.uleb128 0xa
 	.uaword	0x2b4
 	.byte	0xf
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.string	"errorMessages"
 	.byte	0xd
-	.byte	0x59
-	.uaword	0x3760
+	.byte	0x55
+	.uaword	0x377d
 	.byte	0x5
 	.byte	0x3
 	.uaword	errorMessages
 	.uleb128 0x5
-	.uaword	0x3735
-	.uleb128 0x21
+	.uaword	0x3752
+	.uleb128 0x23
 	.string	"carStatusPacket"
 	.byte	0x1
 	.byte	0xb
@@ -7432,7 +7411,7 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	carStatusPacket
-	.uleb128 0x21
+	.uleb128 0x23
 	.string	"carStatus"
 	.byte	0x1
 	.byte	0xc
@@ -7440,7 +7419,7 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	carStatus
-	.uleb128 0x21
+	.uleb128 0x23
 	.string	"carCommand"
 	.byte	0x1
 	.byte	0xd
@@ -7448,7 +7427,7 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	carCommand
-	.uleb128 0x21
+	.uleb128 0x23
 	.string	"currentPosition"
 	.byte	0x1
 	.byte	0xe
@@ -7456,7 +7435,7 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	currentPosition
-	.uleb128 0x21
+	.uleb128 0x23
 	.string	"targetPosition"
 	.byte	0x1
 	.byte	0xf
@@ -7464,7 +7443,7 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	targetPosition
-	.uleb128 0x21
+	.uleb128 0x23
 	.string	"currentDirection"
 	.byte	0x1
 	.byte	0x10
@@ -7474,81 +7453,88 @@ errorMessages:
 	.uaword	currentDirection
 	.uleb128 0x9
 	.uaword	0x27a
-	.uaword	0x3818
+	.uaword	0x3835
 	.uleb128 0xa
 	.uaword	0x2b4
 	.byte	0x2
 	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"IfxCpu_cfg_indexMap"
 	.byte	0xe
 	.byte	0xa7
-	.uaword	0x3835
+	.uaword	0x3852
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5
-	.uaword	0x3808
-	.uleb128 0x2f
+	.uaword	0x3825
+	.uleb128 0x31
 	.string	"g_FRHallCnt"
 	.byte	0xf
 	.byte	0x1a
-	.uaword	0x384f
+	.uaword	0x386c
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x17
 	.uaword	0x1b8
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"g_FLHallCnt"
 	.byte	0xf
 	.byte	0x1b
-	.uaword	0x384f
+	.uaword	0x386c
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"g_RRHallCnt"
 	.byte	0xf
 	.byte	0x1c
-	.uaword	0x384f
+	.uaword	0x386c
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"g_RLHallCnt"
 	.byte	0xf
 	.byte	0x1d
-	.uaword	0x384f
+	.uaword	0x386c
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2f
+	.uleb128 0x31
+	.string	"g_RecievedParkingSystemPacket"
+	.byte	0x10
+	.byte	0x19
+	.uaword	0x25ec
+	.byte	0x1
+	.byte	0x1
+	.uleb128 0x31
 	.string	"g_Ultrasonic_FL"
 	.byte	0xa
 	.byte	0x26
 	.uaword	0x2984
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"g_Ultrasonic_FRONT"
 	.byte	0xa
 	.byte	0x27
 	.uaword	0x2984
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"g_Ultrasonic_RL"
 	.byte	0xa
 	.byte	0x28
 	.uaword	0x2984
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2f
+	.uleb128 0x31
 	.string	"min_dist_left"
 	.byte	0xc
 	.byte	0x20
-	.uaword	0x38f8
+	.uaword	0x393c
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x17
 	.uaword	0x25a9
-	.uleb128 0x30
+	.uleb128 0x32
 	.string	"g_isAppRunning"
 	.byte	0x1
 	.byte	0xa
@@ -7557,117 +7543,140 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	g_isAppRunning
-	.uleb128 0x30
+	.uleb128 0x32
 	.string	"motor_power_turn"
 	.byte	0x1
 	.byte	0x5
-	.uaword	0x3939
+	.uaword	0x397d
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	motor_power_turn
 	.uleb128 0x5
-	.uaword	0x304d
-	.uleb128 0x30
+	.uaword	0x3130
+	.uleb128 0x32
 	.string	"motor_power_normal"
 	.byte	0x1
 	.byte	0x6
-	.uaword	0x3939
+	.uaword	0x397d
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	motor_power_normal
-	.uleb128 0x30
+	.uleb128 0x32
 	.string	"Kp_rad_to_delta_power"
 	.byte	0x1
 	.byte	0x7
-	.uaword	0x3939
+	.uaword	0x397d
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	Kp_rad_to_delta_power
-	.uleb128 0x30
+	.uleb128 0x33
 	.string	"FrontUltra"
 	.byte	0x1
-	.byte	0xfd
-	.uaword	0x304d
+	.uahalf	0x106
+	.uaword	0x3130
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	FrontUltra
-	.uleb128 0x30
+	.uleb128 0x33
 	.string	"RearUltra"
 	.byte	0x1
-	.byte	0xfe
-	.uaword	0x304d
+	.uahalf	0x107
+	.uaword	0x3130
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	RearUltra
-	.uleb128 0x31
+	.uleb128 0x34
 	.byte	0x1
 	.string	"osEE_tc_stm_set_sr1_next_match"
-	.byte	0x10
+	.byte	0x11
 	.uahalf	0x3eb
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x39e4
-	.uleb128 0x32
+	.uaword	0x3a2a
+	.uleb128 0x35
 	.uaword	0x2688
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x36
 	.byte	0x1
 	.string	"IncrementCounter"
-	.byte	0x12
+	.byte	0x13
 	.uahalf	0x45c
 	.byte	0x1
 	.uaword	0x291b
 	.byte	0x1
-	.uaword	0x3a0a
-	.uleb128 0x32
+	.uaword	0x3a50
+	.uleb128 0x35
 	.uaword	0x26a8
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x37
 	.byte	0x1
 	.string	"printfSerial"
-	.byte	0x11
+	.byte	0x12
 	.byte	0xf
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x3a28
-	.uleb128 0x32
-	.uaword	0x23a
+	.uaword	0x3a6e
 	.uleb128 0x35
+	.uaword	0x23a
+	.uleb128 0x38
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x36
 	.byte	0x1
 	.string	"CancelAlarm"
-	.byte	0x12
+	.byte	0x13
 	.uahalf	0x313
 	.byte	0x1
 	.uaword	0x291b
 	.byte	0x1
-	.uaword	0x3a49
-	.uleb128 0x32
+	.uaword	0x3a8f
+	.uleb128 0x35
 	.uaword	0x26cd
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x36
 	.byte	0x1
 	.string	"SetRelAlarm"
-	.byte	0x12
+	.byte	0x13
 	.uahalf	0x294
 	.byte	0x1
 	.uaword	0x291b
 	.byte	0x1
-	.uaword	0x3a74
-	.uleb128 0x32
+	.uaword	0x3aba
+	.uleb128 0x35
 	.uaword	0x26cd
-	.uleb128 0x32
+	.uleb128 0x35
 	.uaword	0x26bc
-	.uleb128 0x32
+	.uleb128 0x35
 	.uaword	0x26bc
 	.byte	0
+	.uleb128 0x37
+	.byte	0x1
+	.string	"motor_stop"
+	.byte	0x9
+	.byte	0x42
+	.byte	0x1
+	.byte	0x1
+	.uaword	0x3ad5
+	.uleb128 0x35
+	.uaword	0x296f
+	.byte	0
 	.uleb128 0x36
+	.byte	0x1
+	.string	"ActivateTask"
+	.byte	0x13
+	.uahalf	0x178
+	.byte	0x1
+	.uaword	0x291b
+	.byte	0x1
+	.uaword	0x3af7
+	.uleb128 0x35
+	.uaword	0x2698
+	.byte	0
+	.uleb128 0x39
 	.byte	0x1
 	.string	"getHallCntAvg"
 	.byte	0xf
@@ -7675,77 +7684,66 @@ errorMessages:
 	.byte	0x1
 	.uaword	0x159
 	.byte	0x1
-	.uleb128 0x34
-	.byte	0x1
-	.string	"motor_stop"
-	.byte	0x9
-	.byte	0x42
-	.byte	0x1
-	.byte	0x1
-	.uaword	0x3aa7
-	.uleb128 0x32
-	.uaword	0x296f
-	.byte	0
-	.uleb128 0x34
+	.uleb128 0x37
 	.byte	0x1
 	.string	"motor_run_forward"
 	.byte	0x9
 	.byte	0x40
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x3ac9
-	.uleb128 0x32
+	.uaword	0x3b31
+	.uleb128 0x35
 	.uaword	0x296f
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x37
 	.byte	0x1
 	.string	"motor_run_backward"
 	.byte	0x9
 	.byte	0x41
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x3aec
-	.uleb128 0x32
+	.uaword	0x3b54
+	.uleb128 0x35
 	.uaword	0x296f
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x37
 	.byte	0x1
 	.string	"set_motor_power"
 	.byte	0x9
 	.byte	0x43
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x3b11
-	.uleb128 0x32
+	.uaword	0x3b79
+	.uleb128 0x35
 	.uaword	0x296f
-	.uleb128 0x32
-	.uaword	0x159
-	.byte	0
-	.uleb128 0x34
-	.byte	0x1
-	.string	"delay_ms"
-	.byte	0x11
-	.byte	0xc
-	.byte	0x1
-	.byte	0x1
-	.uaword	0x3b2a
-	.uleb128 0x32
-	.uaword	0x16f
-	.byte	0
-	.uleb128 0x34
-	.byte	0x1
-	.string	"printDouble"
-	.byte	0x11
-	.byte	0xb
-	.byte	0x1
-	.byte	0x1
-	.uaword	0x3b4b
-	.uleb128 0x32
-	.uaword	0x23a
-	.uleb128 0x32
+	.uleb128 0x35
 	.uaword	0x159
 	.byte	0
 	.uleb128 0x37
+	.byte	0x1
+	.string	"delay_ms"
+	.byte	0x12
+	.byte	0xc
+	.byte	0x1
+	.byte	0x1
+	.uaword	0x3b92
+	.uleb128 0x35
+	.uaword	0x16f
+	.byte	0
+	.uleb128 0x37
+	.byte	0x1
+	.string	"printDouble"
+	.byte	0x12
+	.byte	0xb
+	.byte	0x1
+	.byte	0x1
+	.uaword	0x3bb3
+	.uleb128 0x35
+	.uaword	0x23a
+	.uleb128 0x35
+	.uaword	0x159
+	.byte	0
+	.uleb128 0x3a
 	.byte	0x1
 	.string	"getUltrasonic"
 	.byte	0xa
@@ -7753,14 +7751,14 @@ errorMessages:
 	.byte	0x1
 	.uaword	0x159
 	.byte	0x1
-	.uaword	0x3b6d
-	.uleb128 0x32
-	.uaword	0x3b6d
+	.uaword	0x3bd5
+	.uleb128 0x35
+	.uaword	0x3bd5
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
 	.uaword	0x2984
-	.uleb128 0x37
+	.uleb128 0x3a
 	.byte	0x1
 	.string	"wall_follow_control"
 	.byte	0xc
@@ -7768,39 +7766,27 @@ errorMessages:
 	.byte	0x1
 	.uaword	0x2a2a
 	.byte	0x1
-	.uaword	0x3ba0
-	.uleb128 0x32
+	.uaword	0x3c08
+	.uleb128 0x35
 	.uaword	0x159
-	.uleb128 0x32
+	.uleb128 0x35
 	.uaword	0x159
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x37
 	.byte	0x1
 	.string	"sendPacket"
-	.byte	0x13
+	.byte	0x10
 	.byte	0x1e
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x3bbb
-	.uleb128 0x32
-	.uaword	0x3328
+	.uaword	0x3c23
+	.uleb128 0x35
+	.uaword	0x33ee
 	.byte	0
-	.uleb128 0x33
-	.byte	0x1
-	.string	"ActivateTask"
-	.byte	0x12
-	.uahalf	0x178
-	.byte	0x1
-	.uaword	0x291b
-	.byte	0x1
-	.uaword	0x3bdd
-	.uleb128 0x32
-	.uaword	0x2698
-	.byte	0
-	.uleb128 0x38
+	.uleb128 0x3b
 	.byte	0x1
 	.string	"TerminateTask"
-	.byte	0x12
+	.byte	0x13
 	.uahalf	0x1c9
 	.byte	0x1
 	.uaword	0x291b
@@ -8240,6 +8226,38 @@ errorMessages:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x21
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x22
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
 	.uleb128 0x11
@@ -8254,7 +8272,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8269,7 +8287,7 @@ errorMessages:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x24
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -8278,7 +8296,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x25
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -8295,14 +8313,39 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x26
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2116
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x27
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x55
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x28
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8317,7 +8360,7 @@ errorMessages:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x26
+	.uleb128 0x29
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8332,7 +8375,7 @@ errorMessages:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x2a
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -8343,16 +8386,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x28
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -8377,7 +8411,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x2c
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -8390,51 +8424,21 @@ errorMessages:
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0xa
-	.byte	0
-	.byte	0
-	.uleb128 0x2b
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x2c
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x2d
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x1c
-	.uleb128 0xa
+	.uleb128 0x2
+	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x2e
@@ -8448,8 +8452,8 @@ errorMessages:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x1c
-	.uleb128 0xb
+	.uleb128 0x2
+	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x2f
@@ -8463,13 +8467,43 @@ errorMessages:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x30
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3c
 	.uleb128 0xc
 	.byte	0
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x32
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -8486,51 +8520,21 @@ errorMessages:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x31
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x32
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x33
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
+	.uleb128 0x34
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0x5
-	.uleb128 0x27
-	.uleb128 0xc
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x3c
+	.uleb128 0x3f
 	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
 	.byte	0
 	.byte	0
 	.uleb128 0x34
@@ -8543,7 +8547,7 @@ errorMessages:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
 	.uleb128 0x3c
@@ -8553,13 +8557,15 @@ errorMessages:
 	.byte	0
 	.byte	0
 	.uleb128 0x35
-	.uleb128 0x18
+	.uleb128 0x5
 	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x36
 	.uleb128 0x2e
-	.byte	0
+	.byte	0x1
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3
@@ -8567,13 +8573,15 @@ errorMessages:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x37
@@ -8589,6 +8597,49 @@ errorMessages:
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
+	.uleb128 0x3c
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x38
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x39
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0xc
+	.byte	0
+	.byte	0
+	.uleb128 0x3a
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3c
@@ -8597,7 +8648,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x38
+	.uleb128 0x3b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -8620,8 +8671,8 @@ errorMessages:
 .section .debug_loc,"",@progbits
 .Ldebug_loc0:
 .LLST0:
-	.uaword	.LVL42-.Ltext0
-	.uaword	.LVL43-1-.Ltext0
+	.uaword	.LVL52-.Ltext0
+	.uaword	.LVL53-1-.Ltext0
 	.uahalf	0x6
 	.byte	0x52
 	.byte	0x93
@@ -8629,8 +8680,8 @@ errorMessages:
 	.byte	0x53
 	.byte	0x93
 	.uleb128 0x4
-	.uaword	.LVL43-1-.Ltext0
-	.uaword	.LVL45-.Ltext0
+	.uaword	.LVL53-1-.Ltext0
+	.uaword	.LVL55-.Ltext0
 	.uahalf	0x6
 	.byte	0x58
 	.byte	0x93
@@ -8641,12 +8692,12 @@ errorMessages:
 	.uaword	0
 	.uaword	0
 .LLST1:
-	.uaword	.LVL75-.Ltext0
-	.uaword	.LVL76-.Ltext0
+	.uaword	.LVL84-.Ltext0
+	.uaword	.LVL85-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL76-.Ltext0
-	.uaword	.LFE607-.Ltext0
+	.uaword	.LVL85-.Ltext0
+	.uaword	.LFE608-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -8655,8 +8706,8 @@ errorMessages:
 	.uaword	0
 	.uaword	0
 .LLST2:
-	.uaword	.LVL116-.Ltext0
-	.uaword	.LVL117-1-.Ltext0
+	.uaword	.LVL117-.Ltext0
+	.uaword	.LVL118-1-.Ltext0
 	.uahalf	0x6
 	.byte	0x52
 	.byte	0x93
@@ -8664,8 +8715,8 @@ errorMessages:
 	.byte	0x53
 	.byte	0x93
 	.uleb128 0x4
-	.uaword	.LVL117-1-.Ltext0
-	.uaword	.LFE600-.Ltext0
+	.uaword	.LVL118-1-.Ltext0
+	.uaword	.LFE601-.Ltext0
 	.uahalf	0x6
 	.byte	0x58
 	.byte	0x93
@@ -8715,8 +8766,8 @@ errorMessages:
 .LASF6:
 	.string	"reserved_28"
 	.extern	g_Ultrasonic_FRONT,STT_OBJECT,10
+	.extern	g_RecievedParkingSystemPacket,STT_OBJECT,36
 	.extern	TerminateTask,STT_FUNC,0
-	.extern	ActivateTask,STT_FUNC,0
 	.extern	sendPacket,STT_FUNC,0
 	.extern	wall_follow_control,STT_FUNC,0
 	.extern	g_Ultrasonic_RL,STT_OBJECT,10
@@ -8732,8 +8783,9 @@ errorMessages:
 	.extern	set_motor_power,STT_FUNC,0
 	.extern	motor_run_backward,STT_FUNC,0
 	.extern	motor_run_forward,STT_FUNC,0
-	.extern	motor_stop,STT_FUNC,0
 	.extern	getHallCntAvg,STT_FUNC,0
+	.extern	ActivateTask,STT_FUNC,0
+	.extern	motor_stop,STT_FUNC,0
 	.extern	SetRelAlarm,STT_FUNC,0
 	.extern	CancelAlarm,STT_FUNC,0
 	.extern	printfSerial,STT_FUNC,0
