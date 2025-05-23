@@ -1,4 +1,5 @@
 #include "hall_Driver.h"
+#include "bsw.h"
 
 volatile uint16 g_FRHallCnt;
 volatile uint16 g_FLHallCnt;
@@ -94,4 +95,31 @@ uint16 getFRHallCnt(void)
 void resetFRHallCnt(void)
 {
     g_FRHallCnt = 0;
+}
+
+inline double getHallCntAvg(void){
+    return (double)(g_FLHallCnt+g_FRHallCnt+g_RLHallCnt+g_RRHallCnt)/(double)4.00;
+};
+
+ISR2(FRHallISR)
+{
+    g_FRHallCnt++;
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_2);
+}
+ISR2(FLHallISR)
+{
+    g_FLHallCnt++;
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_3);
+}
+ISR2(RRHallISR)
+{
+    g_RRHallCnt++;
+    // IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_4);
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_6);
+}
+ISR2(RLHallISR)
+{
+    g_RLHallCnt++;
+    // IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_0);
+    IfxScuEru_clearEventFlag(IfxScuEru_InputChannel_7);
 }

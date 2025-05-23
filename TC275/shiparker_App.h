@@ -23,15 +23,18 @@
 /************** MAKE CHANGES HERE ********************/
 #include "illd\src\ConfigurationIsr.h"
 #include "illd\src\Configuration.h"
+#include "hall_Driver.h"
 #include "uart_Driver.h"
+#include "motor_Driver.h"
 #include "bsw.h"
 #include "stdlib.h"
 
 #define APP_CYCLE_TICK 10                   //500ms
+#define WALL_FOLLOW_CYCLE_TICK 2            //100ms
 #define SENDPACKET_DEFAULT_CYCLE_TICK 50    //2500ms
 #define SENDPACKET_RUNNING_CYCLE_TICK 10    //500ms
 #define FRONT_OBSTACLE_DETECTION_TICK 2     //100ms
-#define FRONT_OBSTACLE_THRESHOLD 7
+#define FRONT_OBSTACLE_THRESHOLD 12
 
 #define POSITION_NULL -1000000000
 

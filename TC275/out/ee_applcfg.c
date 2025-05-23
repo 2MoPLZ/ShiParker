@@ -61,7 +61,7 @@ static VAR(OsEE_SDB, OS_CONST) osEE_sdb_array[(1U)] =
  **************************************************************************/
 
 static VAR(OsEE_TCB, OS_VAR_INIT)
-  osEE_tcb_array[13] =
+  osEE_tcb_array[15] =
 {
   {
     /* .current_num_of_act = */ 0U,
@@ -101,15 +101,6 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 137U,
-    /* .status             = */ SUSPENDED,
-    /* .p_last_m           = */ NULL,
-    /* .wait_mask          = */ 0U,
-    /* .event_mask         = */ 0U,
-    /* .p_own_sn           = */ NULL
-  },
-  {
-    /* .current_num_of_act = */ 0U,
     /* .current_prio       = */ 138U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
@@ -119,7 +110,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 139U,
+    /* .current_prio       = */ 137U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -137,7 +128,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 134U,
+    /* .current_prio       = */ 139U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -146,7 +137,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 2U,
+    /* .current_prio       = */ 134U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -164,7 +155,34 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
+    /* .current_prio       = */ 5U,
+    /* .status             = */ SUSPENDED,
+    /* .p_last_m           = */ NULL,
+    /* .wait_mask          = */ 0U,
+    /* .event_mask         = */ 0U,
+    /* .p_own_sn           = */ NULL
+  },
+  {
+    /* .current_num_of_act = */ 0U,
+    /* .current_prio       = */ 2U,
+    /* .status             = */ SUSPENDED,
+    /* .p_last_m           = */ NULL,
+    /* .wait_mask          = */ 0U,
+    /* .event_mask         = */ 0U,
+    /* .p_own_sn           = */ NULL
+  },
+  {
+    /* .current_num_of_act = */ 0U,
     /* .current_prio       = */ 3U,
+    /* .status             = */ SUSPENDED,
+    /* .p_last_m           = */ NULL,
+    /* .wait_mask          = */ 0U,
+    /* .event_mask         = */ 0U,
+    /* .p_own_sn           = */ NULL
+  },
+  {
+    /* .current_num_of_act = */ 0U,
+    /* .current_prio       = */ 4U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -189,7 +207,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
  **************************************************************************/
 
 static VAR(OsEE_TDB, OS_CONST)
-  osEE_tdb_array[13]  =
+  osEE_tdb_array[15]  =
 {
   {
     /* .hdb = */ {
@@ -251,24 +269,10 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .hdb = */ {
       /* .p_sdb    = */   &osEE_sdb_array[0U],
       /* .p_scb    = */   &osEE_scb_array[0U],
-      /* .isr2_src = */   OSEE_TC_SRC_SCUERU0
+      /* .isr2_src = */   OSEE_TC_SRC_SCUERU1
     },
     /* .p_tcb          = */ &osEE_tcb_array[4U],
     /* .tid            = */ 4U,
-    /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
-    /* .task_func      = */ FRHallISR,
-    /* .ready_prio     = */ 137U,
-    /* .dispatch_prio  = */ 137U,
-    /* .max_num_of_act = */ 1U
-  },
-  {
-    /* .hdb = */ {
-      /* .p_sdb    = */   &osEE_sdb_array[0U],
-      /* .p_scb    = */   &osEE_scb_array[0U],
-      /* .isr2_src = */   OSEE_TC_SRC_SCUERU1
-    },
-    /* .p_tcb          = */ &osEE_tcb_array[5U],
-    /* .tid            = */ 5U,
     /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
     /* .task_func      = */ FLHallISR,
     /* .ready_prio     = */ 138U,
@@ -279,14 +283,14 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .hdb = */ {
       /* .p_sdb    = */   &osEE_sdb_array[0U],
       /* .p_scb    = */   &osEE_scb_array[0U],
-      /* .isr2_src = */   OSEE_TC_SRC_SCUERU2
+      /* .isr2_src = */   OSEE_TC_SRC_SCUERU0
     },
-    /* .p_tcb          = */ &osEE_tcb_array[6U],
-    /* .tid            = */ 6U,
+    /* .p_tcb          = */ &osEE_tcb_array[5U],
+    /* .tid            = */ 5U,
     /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
-    /* .task_func      = */ RRHallISR,
-    /* .ready_prio     = */ 139U,
-    /* .dispatch_prio  = */ 139U,
+    /* .task_func      = */ FRHallISR,
+    /* .ready_prio     = */ 137U,
+    /* .dispatch_prio  = */ 137U,
     /* .max_num_of_act = */ 1U
   },
   {
@@ -295,12 +299,26 @@ static VAR(OsEE_TDB, OS_CONST)
       /* .p_scb    = */   &osEE_scb_array[0U],
       /* .isr2_src = */   OSEE_TC_SRC_SCUERU3
     },
-    /* .p_tcb          = */ &osEE_tcb_array[7U],
-    /* .tid            = */ 7U,
+    /* .p_tcb          = */ &osEE_tcb_array[6U],
+    /* .tid            = */ 6U,
     /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
     /* .task_func      = */ RLHallISR,
     /* .ready_prio     = */ 142U,
     /* .dispatch_prio  = */ 142U,
+    /* .max_num_of_act = */ 1U
+  },
+  {
+    /* .hdb = */ {
+      /* .p_sdb    = */   &osEE_sdb_array[0U],
+      /* .p_scb    = */   &osEE_scb_array[0U],
+      /* .isr2_src = */   OSEE_TC_SRC_SCUERU2
+    },
+    /* .p_tcb          = */ &osEE_tcb_array[7U],
+    /* .tid            = */ 7U,
+    /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
+    /* .task_func      = */ RRHallISR,
+    /* .ready_prio     = */ 139U,
+    /* .dispatch_prio  = */ 139U,
     /* .max_num_of_act = */ 1U
   },
   {
@@ -327,8 +345,8 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .tid            = */ 9U,
     /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
     /* .task_func      = */ TASK_FUNC(TestTask),
-    /* .ready_prio     = */ 2U,
-    /* .dispatch_prio  = */ 2U,
+    /* .ready_prio     = */ 1U,
+    /* .dispatch_prio  = */ 1U,
     /* .max_num_of_act = */ 1U
   },
   {
@@ -341,8 +359,8 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .tid            = */ 10U,
     /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
     /* .task_func      = */ TASK_FUNC(ShiParkerAppTask),
-    /* .ready_prio     = */ 1U,
-    /* .dispatch_prio  = */ 1U,
+    /* .ready_prio     = */ 5U,
+    /* .dispatch_prio  = */ 5U,
     /* .max_num_of_act = */ 1U
   },
   {
@@ -355,6 +373,20 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .tid            = */ 11U,
     /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
     /* .task_func      = */ TASK_FUNC(PacketSendTask),
+    /* .ready_prio     = */ 2U,
+    /* .dispatch_prio  = */ 2U,
+    /* .max_num_of_act = */ 1U
+  },
+  {
+    /* .hdb = */ {
+      /* .p_sdb    = */   &osEE_sdb_array[0U],
+      /* .p_scb    = */   &osEE_scb_array[0U],
+      /* .isr2_src  = */  OSEE_TC_SRC_INVALID
+    },
+    /* .p_tcb          = */ &osEE_tcb_array[12U],
+    /* .tid            = */ 12U,
+    /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
+    /* .task_func      = */ TASK_FUNC(WallFollowTask),
     /* .ready_prio     = */ 3U,
     /* .dispatch_prio  = */ 3U,
     /* .max_num_of_act = */ 1U
@@ -363,10 +395,24 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .hdb = */ {
       /* .p_sdb    = */   &osEE_sdb_array[0U],
       /* .p_scb    = */   &osEE_scb_array[0U],
+      /* .isr2_src  = */  OSEE_TC_SRC_INVALID
+    },
+    /* .p_tcb          = */ &osEE_tcb_array[13U],
+    /* .tid            = */ 13U,
+    /* .task_type      = */ OSEE_TASK_TYPE_BASIC,
+    /* .task_func      = */ TASK_FUNC(AvoidObstacleTask),
+    /* .ready_prio     = */ 4U,
+    /* .dispatch_prio  = */ 4U,
+    /* .max_num_of_act = */ 1U
+  },
+  {
+    /* .hdb = */ {
+      /* .p_sdb    = */   &osEE_sdb_array[0U],
+      /* .p_scb    = */   &osEE_scb_array[0U],
       /* .isr_src  = */   OSEE_TC_SRC_INVALID
     },
-    /* .p_tcb          = */ &osEE_tcb_array[12U],
-    /* .tid            = */ 12U,
+    /* .p_tcb          = */ &osEE_tcb_array[14U],
+    /* .tid            = */ 14U,
     /* .task_type      = */ OSEE_TASK_TYPE_IDLE,
     /* .task_func      = */ osEE_idle_hook_wrapper,
     /* .ready_prio     = */ 0U,
@@ -392,12 +438,14 @@ static CONSTP2VAR(OsEE_TDB, OS_CONST, OS_APPL_DATA)
   &osEE_tdb_array[9U],
   &osEE_tdb_array[10U],
   &osEE_tdb_array[11U],
-  &osEE_tdb_array[12U]
+  &osEE_tdb_array[12U],
+  &osEE_tdb_array[13U],
+  &osEE_tdb_array[14U]
 };
 
 
 
-static VAR(OsEE_SN, OS_VAR_INIT)  osEE_sn_array[12] = {
+static VAR(OsEE_SN, OS_VAR_INIT)  osEE_sn_array[14] = {
   {
     /* .p_next = */ &osEE_sn_array[1U],
     /* .p_tdb  = */ NULL
@@ -443,6 +491,14 @@ static VAR(OsEE_SN, OS_VAR_INIT)  osEE_sn_array[12] = {
     /* .p_tdb  = */ NULL
   },
   {
+    /* .p_next = */ &osEE_sn_array[12U],
+    /* .p_tdb  = */ NULL
+  },
+  {
+    /* .p_next = */ &osEE_sn_array[13U],
+    /* .p_tdb  = */ NULL
+  },
+  {
     /* .p_next = */ NULL,
     /* .p_tdb  = */ NULL
   }
@@ -457,7 +513,7 @@ static VAR(OsEE_ResourceCB, OS_VAR_CLEARED) osEE_res_cb_array[1];
 static VAR(OsEE_ResourceDB, OS_CONST) osEE_res_db_array[1] = {
   {
     /* .p_cb              = */ &osEE_res_cb_array[0U],
-    /* .prio              = */ 3U
+    /* .prio              = */ 5U
   }
 };
 
@@ -508,12 +564,12 @@ static CONSTP2VAR(OsEE_CounterDB, OS_CONST, OS_APPL_DATA)
  **************************************************************************/
 
 static VAR(OsEE_AlarmCB, OS_VAR_CLEARED)
-  osEE_alarm_cb_array[2];
+  osEE_alarm_cb_array[4];
 
 
 
 static VAR(OsEE_AlarmDB, OS_CONST)
-  osEE_alarm_db_array[2] = {
+  osEE_alarm_db_array[4] = {
   {
     /* .p_trigger_cb = */ &osEE_alarm_cb_array[0U],
     /* .p_counter_db = */ &osEE_counter_db_array[0U],
@@ -537,6 +593,30 @@ static VAR(OsEE_AlarmDB, OS_CONST)
         /* .mask         = */ 0U},
       /* .type       = */ OSEE_ACTION_TASK
     }
+  },
+  {
+    /* .p_trigger_cb = */ &osEE_alarm_cb_array[2U],
+    /* .p_counter_db = */ &osEE_counter_db_array[0U],
+    /* .action       = */ {
+      /* .param      = */   {
+        /* .f            = */ NULL,
+        /* .p_tdb        = */ &osEE_tdb_array[12U],
+        /* .p_counter_db = */ NULL,
+        /* .mask         = */ 0U},
+      /* .type       = */ OSEE_ACTION_TASK
+    }
+  },
+  {
+    /* .p_trigger_cb = */ &osEE_alarm_cb_array[3U],
+    /* .p_counter_db = */ &osEE_counter_db_array[0U],
+    /* .action       = */ {
+      /* .param      = */   {
+        /* .f            = */ NULL,
+        /* .p_tdb        = */ &osEE_tdb_array[13U],
+        /* .p_counter_db = */ NULL,
+        /* .mask         = */ 0U},
+      /* .type       = */ OSEE_ACTION_TASK
+    }
   }
 };
 
@@ -546,7 +626,9 @@ static CONSTP2VAR(OsEE_AlarmDB, OS_CONST, OS_APPL_DATA)
   osEE_alarm_db_ptr_array[OSEE_ALARMS_ARRAY_SIZE] =
 {
   &osEE_alarm_db_array[0],
-  &osEE_alarm_db_array[1] 
+  &osEE_alarm_db_array[1],
+  &osEE_alarm_db_array[2],
+  &osEE_alarm_db_array[3] 
 };
 
 
@@ -558,7 +640,7 @@ static CONSTP2VAR(OsEE_AlarmDB, OS_CONST, OS_APPL_DATA)
 
 
 VAR(OsEE_CCB, OS_VAR_INIT) osEE_ccb_var = {
-  /* .p_curr      = */  &osEE_tdb_array[12U],
+  /* .p_curr      = */  &osEE_tdb_array[14U],
   /* .rq          = */  NULL,
   /* .p_free_sn   = */  &osEE_sn_array[0U],
   /* .p_stk_sn    = */  NULL,
@@ -581,7 +663,7 @@ VAR(OsEE_CCB, OS_VAR_INIT) osEE_ccb_var = {
 
 VAR(OsEE_CDB, OS_CONST) osEE_cdb_var = {
   /* .p_ccb                         = */ &osEE_ccb_var,
-  /* .p_idle_task                   = */ &osEE_tdb_array[12U]
+  /* .p_idle_task                   = */ &osEE_tdb_array[14U]
 };
 
 

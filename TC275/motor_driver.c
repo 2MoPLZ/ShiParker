@@ -331,7 +331,6 @@ void set_motor_power(motor_index_t motor_index, double dutyPercent)
         switch(motor_index)
         {
             case INDEX_FL:
-                printfSerial("set power on fl");
                 _setDutyCycle(&motor_fr_tomDriver, &motor_fr_tomConfig, dutyCycle);
                 break;
             case INDEX_FR:
