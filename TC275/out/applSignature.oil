@@ -88,25 +88,25 @@ CPU test_application {
 		SOURCE = "STM0SR0";
 		PRIORITY = 6;
 	};
-	ISR FRHallISR {
-		CATEGORY = 2;
-		PRIORITY = 10;
-		SOURCE = "SCUERU0";
-	};
 	ISR FLHallISR {
 		CATEGORY = 2;
 		PRIORITY = 11;
 		SOURCE = "SCUERU1";
 	};
-	ISR RRHallISR {
+	ISR FRHallISR {
 		CATEGORY = 2;
-		PRIORITY = 12;
-		SOURCE = "SCUERU2";
+		PRIORITY = 10;
+		SOURCE = "SCUERU0";
 	};
 	ISR RLHallISR {
 		CATEGORY = 2;
 		PRIORITY = 15;
 		SOURCE = "SCUERU3";
+	};
+	ISR RRHallISR {
+		CATEGORY = 2;
+		PRIORITY = 12;
+		SOURCE = "SCUERU2";
 	};
 	ISR AppTimerISR {
 		CATEGORY = 2;
@@ -121,7 +121,7 @@ CPU test_application {
 		ACTIVATION = 1;
 	};
 	TASK ShiParkerAppTask {
-		PRIORITY = 2;
+		PRIORITY = 12;
 		STACK = SHARED;
 		SCHEDULE = FULL;
 		AUTOSTART = FALSE;
@@ -129,6 +129,20 @@ CPU test_application {
 	};
 	TASK PacketSendTask {
 		PRIORITY = 9;
+		STACK = SHARED;
+		SCHEDULE = FULL;
+		AUTOSTART = FALSE;
+		ACTIVATION = 1;
+	};
+	TASK WallFollowTask {
+		PRIORITY = 10;
+		STACK = SHARED;
+		SCHEDULE = FULL;
+		AUTOSTART = FALSE;
+		ACTIVATION = 1;
+	};
+	TASK AvoidObstacleTask {
+		PRIORITY = 11;
 		STACK = SHARED;
 		SCHEDULE = FULL;
 		AUTOSTART = FALSE;
@@ -149,6 +163,18 @@ CPU test_application {
 		COUNTER = AppCounter;
 		ACTION = ACTIVATETASK {
 			TASK = PacketSendTask;
+		};
+	};
+	ALARM WallFollowAlarm {
+		COUNTER = AppCounter;
+		ACTION = ACTIVATETASK {
+			TASK = WallFollowTask;
+		};
+	};
+	ALARM AvoidObstacleAlarm {
+		COUNTER = AppCounter;
+		ACTION = ACTIVATETASK {
+			TASK = AvoidObstacleTask;
 		};
 	};
 };

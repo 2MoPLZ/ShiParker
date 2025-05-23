@@ -41,12 +41,12 @@ DriveCommand  wall_follow_control(double dist_a, double dist_b){
 
 
 
-    printDouble("alpha: ", alpha);
+    // printDouble("alpha: ", alpha);
     // 차량과 벽 사이 거리 계산
     double dt = dist_b * cosf(alpha);
     double dt1 = dt + L * sinf(alpha);
-    printDouble("MIN_DIST_LEFT: ", MIN_DIST_LEFT);
-    printDouble("dt1: ", dt1);
+    // printDouble("MIN_DIST_LEFT: ", MIN_DIST_LEFT);
+    // printDouble("dt1: ", dt1);
     // 목표 거리와의 오차
     double error =  MIN_DIST_LEFT - dt1;
 
@@ -79,7 +79,7 @@ DriveCommand  wall_follow_control(double dist_a, double dist_b){
         speed = 1.5f;
 
     DriveCommand cmd = { steering_angle, speed };
-    printDouble("steering_angle: ", cmd.steering_angle);
+    // printDouble("steering_angle: ", cmd.steering_angle);
     return cmd;
 
 }

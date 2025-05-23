@@ -17,14 +17,19 @@
 #define REQ_IN2   &IfxScu_REQ12_P11_10_IN
 #define REQ_IN3   &IfxScu_REQ11_P20_9_IN
 
-
 #define TRIGGER_PIN0 &MODULE_P02, 1
 #define TRIGGER_PIN1 &MODULE_P10, 3
 #define TRIGGER_PIN2 &MODULE_P11, 10
 #define TRIGGER_PIN3 &MODULE_P20, 9
 
+extern volatile uint16 g_FRHallCnt;
+extern volatile uint16 g_FLHallCnt;
+extern volatile uint16 g_RRHallCnt;
+extern volatile uint16 g_RLHallCnt;
+
 void initHall(void);
 uint16 getFRHallCnt(void);
 void resetFRHallCnt(void);
+inline double getHallCntAvg(void);
 
 #endif /* HALL_DRIVER_H_ */

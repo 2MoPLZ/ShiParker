@@ -43,12 +43,12 @@ extern "C" {
  * Arrays size
  *
  **************************************************************************/
-#define OSEE_TASK_ARRAY_SIZE      (12U)
-#define OSEE_SN_ARRAY_SIZE        (12U)
+#define OSEE_TASK_ARRAY_SIZE      (14U)
+#define OSEE_SN_ARRAY_SIZE        (14U)
 #define OSEE_STACK_ARRAY_SIZE     (1U)
 #define OSEE_RESOURCE_ARRAY_SIZE  (1U)
 #define OSEE_COUNTERS_ARRAY_SIZE  (1U)
-#define OSEE_ALARMS_ARRAY_SIZE    (2U)
+#define OSEE_ALARMS_ARRAY_SIZE    (4U)
 
 /***************************************************************************
  *
@@ -58,6 +58,8 @@ extern "C" {
 #define TestTask (9U)
 #define ShiParkerAppTask (10U)
 #define PacketSendTask (11U)
+#define WallFollowTask (12U)
+#define AvoidObstacleTask (13U)
 
 /***************************************************************************
  *
@@ -90,6 +92,8 @@ extern "C" {
  **************************************************************************/
 #define AppAlarm (0U)
 #define PacketSendAlarm (1U)
+#define WallFollowAlarm (2U)
+#define AvoidObstacleAlarm (3U)
 
 /***************************************************************************
  *

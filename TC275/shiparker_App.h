@@ -23,9 +23,20 @@
 /************** MAKE CHANGES HERE ********************/
 #include "illd\src\ConfigurationIsr.h"
 #include "illd\src\Configuration.h"
+#include "hall_Driver.h"
 #include "uart_Driver.h"
+#include "motor_Driver.h"
 #include "bsw.h"
 #include "stdlib.h"
+
+#define APP_CYCLE_TICK 10                   //500ms
+#define WALL_FOLLOW_CYCLE_TICK 2            //100ms
+#define SENDPACKET_DEFAULT_CYCLE_TICK 50    //2500ms
+#define SENDPACKET_RUNNING_CYCLE_TICK 10    //500ms
+#define FRONT_OBSTACLE_DETECTION_TICK 2     //100ms
+#define FRONT_OBSTACLE_THRESHOLD 12
+
+#define POSITION_NULL -1000000000
 
 #define ERROR_CODE_MAX 16
 
@@ -37,9 +48,9 @@ typedef enum CAR_STATUS_TYPE_T{
     CAR_STATUS_RUNNING,
     CAR_STATUS_STOP,
     CAR_STATUS_TERMINATED,
-    CAR_STATUS_ERROR,
-    CAR_STATUS_RESERVED1,
-    CAR_STATUS_RESERVED2
+    CAR_STATUS_ERROR_OBSTACLE,
+    CAR_STATUS_ERROR_BAD_CONNECTION,
+    CAR_STATUS_ERROR_HARDWARE
 }CAR_STATUS_TYPE;
 typedef enum CAR_COMMAND_TYPE_T{
     CAR_COMMAND_FORCESTOP,

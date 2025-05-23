@@ -35,16 +35,18 @@ extern "C" {
 DeclareTask(TestTask);
 DeclareTask(ShiParkerAppTask);
 DeclareTask(PacketSendTask);
+DeclareTask(WallFollowTask);
+DeclareTask(AvoidObstacleTask);
 
 
 ISR2(asclin3TxISR);
 ISR2(asclin0RxISR);
 ISR2(asclin0TxISR);
 ISR2(TimerISR);
-ISR2(FRHallISR);
 ISR2(FLHallISR);
-ISR2(RRHallISR);
+ISR2(FRHallISR);
 ISR2(RLHallISR);
+ISR2(RRHallISR);
 ISR2(AppTimerISR);
 
 
