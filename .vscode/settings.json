@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "bsw.h": "c",
-        "shiparker_app.h": "c"
+        "shiparker_app.h": "c",
+        "motor_driver.h": "c",
+        "steering_pid.h": "c"
     }
 }

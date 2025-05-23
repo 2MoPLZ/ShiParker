@@ -19,13 +19,13 @@ struct Ultrasonic g_Ultrasonic_RL = {
     .ECHO_PORT = &MODULE_P02,
     .ECHO_PIN = 5
 };
-struct Ultrasonic g_Ultrasonic_RIGHT = {
+struct Ultrasonic g_Ultrasonic_FR = {
     .TRIG_PORT = &MODULE_P02,
     .TRIG_PIN = 6,
     .ECHO_PORT = &MODULE_P02,
     .ECHO_PIN = 7
 };
-struct Ultrasonic g_Ultrasonic_REAR = {
+struct Ultrasonic g_Ultrasonic_RR = {
     .TRIG_PORT = &MODULE_P33,
     .TRIG_PIN = 3,
     .ECHO_PORT = &MODULE_P11,

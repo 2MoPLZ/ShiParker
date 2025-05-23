@@ -1,8 +1,9 @@
 #include "steering_Pid.h"
-#include <time.h>
 #include "bsw.h"
 
- get_time_us()
+volatile uint16_t min_dist_left = 20;
+
+get_time_us()
 {
     return IfxStm_get(&MODULE_STM0) / (STM_FREQUENCY / 1000000UL);  // ex: 100MHz → /100
 }
@@ -45,10 +46,10 @@ DriveCommand  wall_follow_control(double dist_a, double dist_b){
     // 차량과 벽 사이 거리 계산
     double dt = dist_b * cosf(alpha);
     double dt1 = dt + L * sinf(alpha);
-    // printDouble("MIN_DIST_LEFT: ", MIN_DIST_LEFT);
+    // printDouble("min_dist_left: ", min_dist_left);
     // printDouble("dt1: ", dt1);
     // 목표 거리와의 오차
-    double error =  MIN_DIST_LEFT - dt1;
+    double error =  min_dist_left - dt1;
 
     // 시간 간격
     double delta_time = get_delta_time();
