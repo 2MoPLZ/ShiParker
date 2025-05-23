@@ -255,6 +255,7 @@ int main(void)
     initPeripheralsAndERU();
     
     /* custom driver init() added start*/
+    initUartDriver();
     initUltrasonic(&g_Ultrasonic_FL);
     initUltrasonic(&g_Ultrasonic_FRONT);
     initUltrasonic(&g_Ultrasonic_RL);

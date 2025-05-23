@@ -71,12 +71,8 @@ TASK(ShiParkerAppTask)
     printfSerial("[%d]",carStatus);
     if (g_isAppRunning == FALSE)
         TerminateTask();
-<<<<<<< Updated upstream
-    // updateStatus(&g_RecievedParkingSystemPacket);
-=======
     // 시스템과 통합할 때 주석처리를 해제하세요(g_RecievedParkingSystemPacket이 잘 초기화되어 있어야 합니다)
     updateStatus(&g_RecievedParkingSystemPacket);
->>>>>>> Stashed changes
     switch (carStatus)
     {
     case CAR_STATUS_READY:

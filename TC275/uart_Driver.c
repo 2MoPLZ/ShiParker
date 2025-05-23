@@ -50,22 +50,6 @@ void sendPacket(const struct ParkingSystemPacket *packet)
     //     printfSerial("%02x/", buf[i]);
     // }
     // printfSerial(" ]");
-<<<<<<< Updated upstream
-    // printfSerial("\n[send| start:%02x status:%02x command:%d crc:%d ]",
-    //              packet->start_byte,
-    //              packet->car_status,
-    //              packet->car_command,
-    //              packet->crc);
-    // printDouble("current_position_X: ", packet->car_current_position.x);
-    // printDouble("current_position_Y: ", packet->car_current_position.y);
-    // printDouble("target_position_X: ", packet->car_target_position.x);
-    // printDouble("target_position_Y: ", packet->car_target_position.y);
-    // printfSerial("\n");
-    // IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
-    //                     &buf,
-    //                     &g_AsclinStm.count,
-    //                     TIME_INFINITE);
-=======
     printfSerial("\n[send| start:%02x status:%d command:%d crc:%d",
                  packet->start_byte,
                  packet->car_status,
@@ -80,7 +64,6 @@ void sendPacket(const struct ParkingSystemPacket *packet)
                         &buf,
                         &g_AsclinStm.count,
                         TIME_INFINITE);
->>>>>>> Stashed changes
 }
 
 void readPacket(struct ParkingSystemPacket *packet)
