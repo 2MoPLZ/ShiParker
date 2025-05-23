@@ -53,6 +53,7 @@ TASK(ShiParkerAppTask)
     printfSerial("app");
     if (g_isAppRunning == FALSE)
         TerminateTask();
+    // 시스템과 통합할 때 주석처리를 해제하세요(g_RecievedParkingSystemPacket이 잘 초기화되어 있어야 합니다)
     // updateStatus(&g_RecievedParkingSystemPacket);
     switch (carStatus)
     {
