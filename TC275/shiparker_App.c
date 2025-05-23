@@ -88,6 +88,10 @@ TASK(ShiParkerAppTask)
         }
         break;
     case CAR_STATUS_STOP:
+        motor_stop(0);
+        motor_stop(1);
+        motor_stop(2);
+        motor_stop(3);
         switch (carCommand)
         {
         case CAR_COMMAND_FORCESTOP:
@@ -110,6 +114,10 @@ TASK(ShiParkerAppTask)
         break;
     case CAR_STATUS_TERMINATED:
         // 앱을 종료하고 차량 제어권을 사용자에게 넘긴다
+        motor_stop(0);
+        motor_stop(1);
+        motor_stop(2);
+        motor_stop(3);
         printfSerial("Terminate ShiParker...\n");
         ActivateTask(PacketSendTask);
         g_isAppRunning = FALSE;
@@ -205,6 +213,8 @@ void handleError(ERROR_CODE_TYPE errorCode)
         {
         case ERROR_CODE_USER_CONTROL:
             carStatus = CAR_STATUS_ERROR_HARDWARE;
+            ActivateTask(PacketSendTask);
+            carStatus = CAR_STATUS_TERMINATED;
             break;
         case ERROR_CODE_OBSTACLE:
             carStatus = CAR_STATUS_ERROR_OBSTACLE;
