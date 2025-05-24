@@ -27,7 +27,7 @@ typedef struct __attribute__((__packed__)) ParkingSystemPacket {
 } ParkingSystemPacket;
 
 ParkingSystemPacket currentPacket = {
-  0xAA, 0, 12.345, 67.890, 90.123, 45.678, 1, 0
+  0xAA, 0, 0.0, 0.0, 0.0, 0.0, 0, 0
 };
 
 uint8_t calculate_checksum(const uint8_t* data, size_t length) {
@@ -48,7 +48,8 @@ void initWiFi() {
 }
 
 void mqttCallback(char* topic, byte* payload, unsigned int length) {
-  Serial.print("[MQTT] 메시지 수신 [");
+  String topicStr = String(topic);
+  Serial.print("[MQTT] Received Message [");
   Serial.print(topic);
   Serial.print("]: ");
   for (int i = 0; i < length; i++) {
@@ -56,15 +57,29 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
   }
   Serial.println();
 
-  if (String(topic) == String(mqtt_client_id) + "/command") {
+  if (topicStr == String(mqtt_client_id) + "/command") {
     int command = atoi((char*)payload);
     Serial.print("[CMD] Received command: ");
     Serial.println(command);
     currentPacket.car_command = command;
+
     uint8_t* ptr = (uint8_t*)&currentPacket;
     currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
     uart.write(ptr, sizeof(ParkingSystemPacket));
-    Serial.println("[UART] 명령 전송됨 (루프백 기대)");
+    Serial.println("[UART] SEND (crc : " + String(currentPacket.crc) + ")");
+  }
+
+  else if (topicStr == String(mqtt_client_id) + "/target_position") {
+    String payload_str;
+    for (unsigned int i = 0; i < length; ++i) payload_str += (char)payload[i];
+    float x, y;
+    if (sscanf(payload_str.c_str(), "%f %f", &x, &y) == 2) {
+      currentPacket.car_target_x = x;
+      currentPacket.car_target_y = y;
+      Serial.println("[MQTT] Received target_position: " + String(x) + ", " + String(y));
+    } else {
+      Serial.println("[WARN] target_position error: " + payload_str);
+    }
   }
 }
 
@@ -74,6 +89,8 @@ void reconnectMQTT() {
     if (client.connect(mqtt_client_id)) {
       Serial.println(" 연결 성공");
       client.subscribe((String(mqtt_client_id) + "/command").c_str());
+      client.subscribe((String(mqtt_client_id) + "/target_position").c_str());
+
     } else {
       Serial.print(" 실패, rc=");
       Serial.print(client.state());
@@ -86,7 +103,7 @@ void reconnectMQTT() {
 void publishMessage(const char* topic, const String& payload) {
   if (client.connected()) {
     client.publish(topic, payload.c_str());
-    Serial.println("[MQTT] 전송됨: " + String(topic) + " -> " + payload);
+    Serial.println("[MQTT] Publish: " + String(topic) + " -> " + payload);
   }
 }
 
@@ -97,13 +114,6 @@ void processPacket(const ParkingSystemPacket& pkt) {
   String current_topic = String(mqtt_client_id) + "/current_position";
   String current_payload = String(pkt.car_current_x, 3) + " " + String(pkt.car_current_y, 3);
   publishMessage(current_topic.c_str(), current_payload);
-
-  String target_topic = String(mqtt_client_id) + "/target_position";
-  String target_payload = String(pkt.car_target_x, 3) + " " + String(pkt.car_target_y, 3);
-  publishMessage(target_topic.c_str(), target_payload);
-
-  String command_topic = String(mqtt_client_id) + "/command_status";
-  publishMessage(command_topic.c_str(), String(pkt.car_command));
 }
 
 void setup() {
@@ -141,14 +151,31 @@ void loop() {
     }
   }
 
-  // 테스트 패킷 전송 (10초 주기)
-  static unsigned long lastTest = 0;
-  if (millis() - lastTest > 10000) {
-    currentPacket.car_status = (currentPacket.car_status + 1) % 7;
-    uint8_t* ptr = (uint8_t*)&currentPacket;
-    currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
-    uart.write(ptr, sizeof(ParkingSystemPacket));
-    Serial.println("[UART] 테스트 패킷 전송됨");
-    lastTest = millis();
-  }
+  // 테스트 패킷 전송
+  // static unsigned long lastLogTime = 0;
+  // static unsigned long lastTestPublishTime = 0;
+  // const unsigned long logInterval = 3000;
+  // const unsigned long publishInterval = 10000;
+
+  // if (millis() - lastLogTime >= logInterval) {
+  //   lastLogTime = millis();
+  //   Serial.println("==== Current Packet ====");
+  //   Serial.println("Status       : " + String(currentPacket.car_status));
+  //   Serial.println("Current Pos  : " + String(currentPacket.car_current_x, 3) + ", " + String(currentPacket.car_current_y, 3));
+  //   Serial.println("Target Pos   : " + String(currentPacket.car_target_x, 3) + ", " + String(currentPacket.car_target_y, 3));
+  //   Serial.println("Command      : " + String(currentPacket.car_command));
+  //   Serial.println("CRC          : " + String(currentPacket.crc));
+  //   Serial.println("========================");
+  // }
+
+  // if (millis() - lastTestPublishTime >= publishInterval) {
+  //   lastTestPublishTime = millis();
+    
+  //   String status_topic = String(mqtt_client_id) + "/status";
+  //   publishMessage(status_topic.c_str(), String(currentPacket.car_status));
+
+  //   String current_topic = String(mqtt_client_id) + "/current_position";
+  //   String current_payload = String(currentPacket.car_current_x, 3) + " " + String(currentPacket.car_current_y, 3);
+  //   publishMessage(current_topic.c_str(), current_payload);
+  // }
 }
