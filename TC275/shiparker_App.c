@@ -241,7 +241,7 @@ void turn90(void)
     set_motor_power(INDEX_RL, motor_power_normal);
     set_motor_power(INDEX_RR, motor_power_normal);
 
-    SetRelAlarm(AvoidObstacleAlarm, 1, WALL_FOLLOW_CYCLE_TICK);
+    SetRelAlarm(AvoidObstacleAlarm, 1, FRONT_OBSTACLE_DETECTION_TICK);
 }
 
 void calculateCurrentPos() {
