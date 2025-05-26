@@ -2,6 +2,7 @@
 
 #include "bsw.h"
 
+volatile boolean g_isRecieved = FALSE;
 App_AsclinAsc              g_AsclinStm;
 struct ParkingSystemPacket g_RecievedParkingSystemPacket = {.car_status  = 0,
                                                             .car_command = 2};
@@ -44,6 +45,34 @@ void sendPacket(const struct ParkingSystemPacket *packet)
     uint8 buf[PARKING_SYSTEM_PACKET_SIZE] = {};
     serializePacket(packet, buf);
     g_AsclinStm.count = PARKING_SYSTEM_PACKET_SIZE;
+
+    // printfSerial("\nsend:[ ");
+    // int i;
+    // for (i = 0; i < PARKING_SYSTEM_PACKET_SIZE; i++)
+    // {
+    //     printfSerial("%02x/", buf[i]);
+    // }
+    // printfSerial(" ]");
+    // printfSerial("\n[send| start:%02x status:%d command:%d crc:%d",
+    //              packet->start_byte,
+    //              packet->car_status,
+    //              packet->car_command,
+    //              packet->crc);
+    // printDouble("c_X: ", packet->car_current_position.x);
+    // printDouble("c_Y: ", packet->car_current_position.y);
+    // printDouble("t_X: ", packet->car_target_position.x);
+    // printDouble("t_Y: ", packet->car_target_position.y);
+    // printfSerial("]\n");
+    // printfSerial("\n[send| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
+    //              "tx:%d ty:%d]",
+    //              packet->start_byte,
+    //              packet->car_status,
+    //              packet->car_command,
+    //              packet->crc,
+    //              packet->car_current_position.x,
+    //              packet->car_current_position.y,
+    //              packet->car_target_position.x,
+    //              packet->car_target_position.y);
     printfSerial("\n[send| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
                  "tx:%d ty:%d]",
                  packet->start_byte,
@@ -57,7 +86,7 @@ void sendPacket(const struct ParkingSystemPacket *packet)
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &buf,
                         &g_AsclinStm.count,
-                        TIME_INFINITE);
+                        (Ifx_TickTime)1000000);
 }
 
 void readPacket(struct ParkingSystemPacket *packet)
@@ -96,6 +125,7 @@ void readPacket(struct ParkingSystemPacket *packet)
                  packet->car_current_position.y,
                  packet->car_target_position.x,
                  packet->car_target_position.y);
+                 g_isRecieved=TRUE;
         }
         else
         {
@@ -124,7 +154,7 @@ void myprintfSerial(const char *fmt, ...)
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &txData,
                         &g_AsclinStm.count,
-                        TIME_INFINITE);
+                        (Ifx_TickTime)1000000);
 }
 
 ISR(asclin0RxISR)

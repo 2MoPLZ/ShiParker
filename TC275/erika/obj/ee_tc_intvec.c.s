@@ -93,958 +93,6 @@ __INTTAB0:
 	mov %d4, 0
 	j osEE_tc_isr2_wrapper
 	.align 5
-	.globl osEE_tc_isr_dummy_entry_18
-	osEE_tc_isr_dummy_entry_18:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_19
-	osEE_tc_isr_dummy_entry_19:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_20
-	osEE_tc_isr_dummy_entry_20:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_21
-	osEE_tc_isr_dummy_entry_21:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_22
-	osEE_tc_isr_dummy_entry_22:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_23
-	osEE_tc_isr_dummy_entry_23:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_24
-	osEE_tc_isr_dummy_entry_24:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_25
-	osEE_tc_isr_dummy_entry_25:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_26
-	osEE_tc_isr_dummy_entry_26:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_27
-	osEE_tc_isr_dummy_entry_27:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_28
-	osEE_tc_isr_dummy_entry_28:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_29
-	osEE_tc_isr_dummy_entry_29:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_30
-	osEE_tc_isr_dummy_entry_30:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_31
-	osEE_tc_isr_dummy_entry_31:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_32
-	osEE_tc_isr_dummy_entry_32:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_33
-	osEE_tc_isr_dummy_entry_33:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_34
-	osEE_tc_isr_dummy_entry_34:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_35
-	osEE_tc_isr_dummy_entry_35:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_36
-	osEE_tc_isr_dummy_entry_36:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_37
-	osEE_tc_isr_dummy_entry_37:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_38
-	osEE_tc_isr_dummy_entry_38:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_39
-	osEE_tc_isr_dummy_entry_39:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_40
-	osEE_tc_isr_dummy_entry_40:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_41
-	osEE_tc_isr_dummy_entry_41:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_42
-	osEE_tc_isr_dummy_entry_42:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_43
-	osEE_tc_isr_dummy_entry_43:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_44
-	osEE_tc_isr_dummy_entry_44:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_45
-	osEE_tc_isr_dummy_entry_45:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_46
-	osEE_tc_isr_dummy_entry_46:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_47
-	osEE_tc_isr_dummy_entry_47:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_48
-	osEE_tc_isr_dummy_entry_48:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_49
-	osEE_tc_isr_dummy_entry_49:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_50
-	osEE_tc_isr_dummy_entry_50:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_51
-	osEE_tc_isr_dummy_entry_51:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_52
-	osEE_tc_isr_dummy_entry_52:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_53
-	osEE_tc_isr_dummy_entry_53:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_54
-	osEE_tc_isr_dummy_entry_54:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_55
-	osEE_tc_isr_dummy_entry_55:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_56
-	osEE_tc_isr_dummy_entry_56:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_57
-	osEE_tc_isr_dummy_entry_57:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_58
-	osEE_tc_isr_dummy_entry_58:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_59
-	osEE_tc_isr_dummy_entry_59:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_60
-	osEE_tc_isr_dummy_entry_60:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_61
-	osEE_tc_isr_dummy_entry_61:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_62
-	osEE_tc_isr_dummy_entry_62:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_63
-	osEE_tc_isr_dummy_entry_63:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_64
-	osEE_tc_isr_dummy_entry_64:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_65
-	osEE_tc_isr_dummy_entry_65:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_66
-	osEE_tc_isr_dummy_entry_66:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_67
-	osEE_tc_isr_dummy_entry_67:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_68
-	osEE_tc_isr_dummy_entry_68:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_69
-	osEE_tc_isr_dummy_entry_69:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_70
-	osEE_tc_isr_dummy_entry_70:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_71
-	osEE_tc_isr_dummy_entry_71:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_72
-	osEE_tc_isr_dummy_entry_72:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_73
-	osEE_tc_isr_dummy_entry_73:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_74
-	osEE_tc_isr_dummy_entry_74:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_75
-	osEE_tc_isr_dummy_entry_75:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_76
-	osEE_tc_isr_dummy_entry_76:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_77
-	osEE_tc_isr_dummy_entry_77:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_78
-	osEE_tc_isr_dummy_entry_78:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_79
-	osEE_tc_isr_dummy_entry_79:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_80
-	osEE_tc_isr_dummy_entry_80:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_81
-	osEE_tc_isr_dummy_entry_81:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_82
-	osEE_tc_isr_dummy_entry_82:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_83
-	osEE_tc_isr_dummy_entry_83:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_84
-	osEE_tc_isr_dummy_entry_84:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_85
-	osEE_tc_isr_dummy_entry_85:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_86
-	osEE_tc_isr_dummy_entry_86:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_87
-	osEE_tc_isr_dummy_entry_87:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_88
-	osEE_tc_isr_dummy_entry_88:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_89
-	osEE_tc_isr_dummy_entry_89:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_90
-	osEE_tc_isr_dummy_entry_90:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_91
-	osEE_tc_isr_dummy_entry_91:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_92
-	osEE_tc_isr_dummy_entry_92:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_93
-	osEE_tc_isr_dummy_entry_93:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_94
-	osEE_tc_isr_dummy_entry_94:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_95
-	osEE_tc_isr_dummy_entry_95:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_96
-	osEE_tc_isr_dummy_entry_96:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_97
-	osEE_tc_isr_dummy_entry_97:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_98
-	osEE_tc_isr_dummy_entry_98:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_99
-	osEE_tc_isr_dummy_entry_99:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_100
-	osEE_tc_isr_dummy_entry_100:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_101
-	osEE_tc_isr_dummy_entry_101:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_102
-	osEE_tc_isr_dummy_entry_102:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_103
-	osEE_tc_isr_dummy_entry_103:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_104
-	osEE_tc_isr_dummy_entry_104:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_105
-	osEE_tc_isr_dummy_entry_105:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_106
-	osEE_tc_isr_dummy_entry_106:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_107
-	osEE_tc_isr_dummy_entry_107:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_108
-	osEE_tc_isr_dummy_entry_108:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_109
-	osEE_tc_isr_dummy_entry_109:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_110
-	osEE_tc_isr_dummy_entry_110:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_111
-	osEE_tc_isr_dummy_entry_111:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_112
-	osEE_tc_isr_dummy_entry_112:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_113
-	osEE_tc_isr_dummy_entry_113:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_114
-	osEE_tc_isr_dummy_entry_114:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_115
-	osEE_tc_isr_dummy_entry_115:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_116
-	osEE_tc_isr_dummy_entry_116:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_117
-	osEE_tc_isr_dummy_entry_117:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_118
-	osEE_tc_isr_dummy_entry_118:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_119
-	osEE_tc_isr_dummy_entry_119:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_120
-	osEE_tc_isr_dummy_entry_120:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_121
-	osEE_tc_isr_dummy_entry_121:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_122
-	osEE_tc_isr_dummy_entry_122:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_123
-	osEE_tc_isr_dummy_entry_123:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_124
-	osEE_tc_isr_dummy_entry_124:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_125
-	osEE_tc_isr_dummy_entry_125:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_126
-	osEE_tc_isr_dummy_entry_126:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_127
-	osEE_tc_isr_dummy_entry_127:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_128
-	osEE_tc_isr_dummy_entry_128:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_129
-	osEE_tc_isr_dummy_entry_129:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_130
-	osEE_tc_isr_dummy_entry_130:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_131
-	osEE_tc_isr_dummy_entry_131:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_132
-	osEE_tc_isr_dummy_entry_132:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_133
-	osEE_tc_isr_dummy_entry_133:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_134
-	osEE_tc_isr_dummy_entry_134:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_135
-	osEE_tc_isr_dummy_entry_135:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_136
-	osEE_tc_isr_dummy_entry_136:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_137
-	osEE_tc_isr_dummy_entry_137:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_138
-	osEE_tc_isr_dummy_entry_138:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_139
-	osEE_tc_isr_dummy_entry_139:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_140
-	osEE_tc_isr_dummy_entry_140:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_141
-	osEE_tc_isr_dummy_entry_141:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_142
-	osEE_tc_isr_dummy_entry_142:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_143
-	osEE_tc_isr_dummy_entry_143:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_144
-	osEE_tc_isr_dummy_entry_144:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_145
-	osEE_tc_isr_dummy_entry_145:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_146
-	osEE_tc_isr_dummy_entry_146:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_147
-	osEE_tc_isr_dummy_entry_147:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_148
-	osEE_tc_isr_dummy_entry_148:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_149
-	osEE_tc_isr_dummy_entry_149:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_150
-	osEE_tc_isr_dummy_entry_150:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_151
-	osEE_tc_isr_dummy_entry_151:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_152
-	osEE_tc_isr_dummy_entry_152:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_153
-	osEE_tc_isr_dummy_entry_153:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_154
-	osEE_tc_isr_dummy_entry_154:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_155
-	osEE_tc_isr_dummy_entry_155:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_156
-	osEE_tc_isr_dummy_entry_156:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_157
-	osEE_tc_isr_dummy_entry_157:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_158
-	osEE_tc_isr_dummy_entry_158:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_159
-	osEE_tc_isr_dummy_entry_159:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_160
-	osEE_tc_isr_dummy_entry_160:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_161
-	osEE_tc_isr_dummy_entry_161:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_162
-	osEE_tc_isr_dummy_entry_162:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_163
-	osEE_tc_isr_dummy_entry_163:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_164
-	osEE_tc_isr_dummy_entry_164:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_165
-	osEE_tc_isr_dummy_entry_165:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_166
-	osEE_tc_isr_dummy_entry_166:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_167
-	osEE_tc_isr_dummy_entry_167:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_168
-	osEE_tc_isr_dummy_entry_168:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_169
-	osEE_tc_isr_dummy_entry_169:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_170
-	osEE_tc_isr_dummy_entry_170:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_171
-	osEE_tc_isr_dummy_entry_171:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_172
-	osEE_tc_isr_dummy_entry_172:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_173
-	osEE_tc_isr_dummy_entry_173:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_174
-	osEE_tc_isr_dummy_entry_174:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_175
-	osEE_tc_isr_dummy_entry_175:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_176
-	osEE_tc_isr_dummy_entry_176:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_177
-	osEE_tc_isr_dummy_entry_177:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_178
-	osEE_tc_isr_dummy_entry_178:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_179
-	osEE_tc_isr_dummy_entry_179:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_180
-	osEE_tc_isr_dummy_entry_180:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_181
-	osEE_tc_isr_dummy_entry_181:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_182
-	osEE_tc_isr_dummy_entry_182:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_183
-	osEE_tc_isr_dummy_entry_183:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_184
-	osEE_tc_isr_dummy_entry_184:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_185
-	osEE_tc_isr_dummy_entry_185:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_186
-	osEE_tc_isr_dummy_entry_186:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_187
-	osEE_tc_isr_dummy_entry_187:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_188
-	osEE_tc_isr_dummy_entry_188:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_189
-	osEE_tc_isr_dummy_entry_189:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_190
-	osEE_tc_isr_dummy_entry_190:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_191
-	osEE_tc_isr_dummy_entry_191:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_192
-	osEE_tc_isr_dummy_entry_192:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_193
-	osEE_tc_isr_dummy_entry_193:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_194
-	osEE_tc_isr_dummy_entry_194:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_195
-	osEE_tc_isr_dummy_entry_195:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_196
-	osEE_tc_isr_dummy_entry_196:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_197
-	osEE_tc_isr_dummy_entry_197:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_198
-	osEE_tc_isr_dummy_entry_198:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_199
-	osEE_tc_isr_dummy_entry_199:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_200
-	osEE_tc_isr_dummy_entry_200:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_201
-	osEE_tc_isr_dummy_entry_201:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_202
-	osEE_tc_isr_dummy_entry_202:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_203
-	osEE_tc_isr_dummy_entry_203:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_204
-	osEE_tc_isr_dummy_entry_204:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_205
-	osEE_tc_isr_dummy_entry_205:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_206
-	osEE_tc_isr_dummy_entry_206:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_207
-	osEE_tc_isr_dummy_entry_207:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_208
-	osEE_tc_isr_dummy_entry_208:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_209
-	osEE_tc_isr_dummy_entry_209:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_210
-	osEE_tc_isr_dummy_entry_210:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_211
-	osEE_tc_isr_dummy_entry_211:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_212
-	osEE_tc_isr_dummy_entry_212:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_213
-	osEE_tc_isr_dummy_entry_213:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_214
-	osEE_tc_isr_dummy_entry_214:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_215
-	osEE_tc_isr_dummy_entry_215:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_216
-	osEE_tc_isr_dummy_entry_216:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_217
-	osEE_tc_isr_dummy_entry_217:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_218
-	osEE_tc_isr_dummy_entry_218:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_219
-	osEE_tc_isr_dummy_entry_219:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_220
-	osEE_tc_isr_dummy_entry_220:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_221
-	osEE_tc_isr_dummy_entry_221:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_222
-	osEE_tc_isr_dummy_entry_222:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_223
-	osEE_tc_isr_dummy_entry_223:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_224
-	osEE_tc_isr_dummy_entry_224:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_225
-	osEE_tc_isr_dummy_entry_225:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_226
-	osEE_tc_isr_dummy_entry_226:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_227
-	osEE_tc_isr_dummy_entry_227:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_228
-	osEE_tc_isr_dummy_entry_228:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_229
-	osEE_tc_isr_dummy_entry_229:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_230
-	osEE_tc_isr_dummy_entry_230:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_231
-	osEE_tc_isr_dummy_entry_231:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_232
-	osEE_tc_isr_dummy_entry_232:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_233
-	osEE_tc_isr_dummy_entry_233:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_234
-	osEE_tc_isr_dummy_entry_234:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_235
-	osEE_tc_isr_dummy_entry_235:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_236
-	osEE_tc_isr_dummy_entry_236:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_237
-	osEE_tc_isr_dummy_entry_237:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_238
-	osEE_tc_isr_dummy_entry_238:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_239
-	osEE_tc_isr_dummy_entry_239:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_240
-	osEE_tc_isr_dummy_entry_240:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_241
-	osEE_tc_isr_dummy_entry_241:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_242
-	osEE_tc_isr_dummy_entry_242:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_243
-	osEE_tc_isr_dummy_entry_243:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_244
-	osEE_tc_isr_dummy_entry_244:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_245
-	osEE_tc_isr_dummy_entry_245:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_246
-	osEE_tc_isr_dummy_entry_246:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_247
-	osEE_tc_isr_dummy_entry_247:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_248
-	osEE_tc_isr_dummy_entry_248:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_249
-	osEE_tc_isr_dummy_entry_249:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_250
-	osEE_tc_isr_dummy_entry_250:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_251
-	osEE_tc_isr_dummy_entry_251:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_252
-	osEE_tc_isr_dummy_entry_252:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_253
-	osEE_tc_isr_dummy_entry_253:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_254
-	osEE_tc_isr_dummy_entry_254:
-	j .
-	.align  5
-	.globl osEE_tc_isr_dummy_entry_255
-	osEE_tc_isr_dummy_entry_255:
-	j .
-	.align  5
 	.size __INTTAB0, . - __INTTAB0
 	.section .text,"ax",@progbits
 #NO_APP
@@ -1052,20 +100,18 @@ __INTTAB0:
 	.type	osEE_tc_isr2_wrapper, @function
 osEE_tc_isr2_wrapper:
 .LFB109:
-	.file 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 	.loc 1 17033 0
 .LVL0:
-	mov.aa	%a14, %SP
-.LCFI0:
 	.loc 1 17062 0
 	call	osEE_activate_isr2
 .LVL1:
 .LBB6:
 .LBB7:
-	.file 2 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal.h"
+	.file 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
 	.loc 2 232 0
 #APP
-	# 232 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
+	# 232 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
 	rslcx
 	# 0 "" 2
 #NO_APP
@@ -1075,7 +121,7 @@ osEE_tc_isr2_wrapper:
 .LBB9:
 	.loc 2 237 0
 #APP
-	# 237 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
+	# 237 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
 	rfe
 	# 0 "" 2
 #NO_APP
@@ -1105,34 +151,30 @@ osEE_tc_isr2_wrapper:
 	.uaword	.Lframe0
 	.uaword	.LFB109
 	.uaword	.LFE109-.LFB109
-	.byte	0x4
-	.uaword	.LCFI0-.LFB109
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE0:
 .section .text,"ax",@progbits
 .Letext0:
 	.file 3 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
 	.file 4 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
-	.file 5 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 6 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
-	.file 7 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 8 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
-	.file 9 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
-	.file 10 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
-	.file 11 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_kernel.h"
+	.file 5 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+	.file 6 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+	.file 7 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+	.file 8 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+	.file 9 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+	.file 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
+	.file 11 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_kernel.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x129b
+	.uaword	0x12ae
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0
@@ -1144,7 +186,7 @@ osEE_tc_isr2_wrapper:
 	.string	"size_t"
 	.byte	0x3
 	.byte	0xd4
-	.uaword	0x169
+	.uaword	0x17c
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
@@ -1161,7 +203,7 @@ osEE_tc_isr2_wrapper:
 	.string	"uint8_t"
 	.byte	0x4
 	.byte	0x2a
-	.uaword	0x1a3
+	.uaword	0x1b6
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
@@ -1174,7 +216,7 @@ osEE_tc_isr2_wrapper:
 	.string	"uint16_t"
 	.byte	0x4
 	.byte	0x36
-	.uaword	0x1d1
+	.uaword	0x1e4
 	.uleb128 0x2
 	.byte	0x2
 	.byte	0x7
@@ -1183,7 +225,7 @@ osEE_tc_isr2_wrapper:
 	.string	"uint32_t"
 	.byte	0x4
 	.byte	0x50
-	.uaword	0x169
+	.uaword	0x17c
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x5
@@ -1200,34 +242,34 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_addr"
 	.byte	0x5
 	.byte	0x5a
-	.uaword	0x243
+	.uaword	0x256
 	.uleb128 0x4
 	.byte	0x4
 	.uleb128 0x3
 	.string	"OsEE_reg"
 	.byte	0x5
 	.byte	0x5b
-	.uaword	0x1e7
+	.uaword	0x1fa
 	.uleb128 0x3
 	.string	"OsEE_prio"
 	.byte	0x5
 	.byte	0x8d
-	.uaword	0x194
+	.uaword	0x1a7
 	.uleb128 0x3
 	.string	"OsEE_isr_src_id"
 	.byte	0x5
 	.byte	0x92
-	.uaword	0x1c1
+	.uaword	0x1d4
 	.uleb128 0x5
 	.byte	0x4
 	.byte	0x6
 	.byte	0x74
-	.uaword	0x2d3
+	.uaword	0x2e6
 	.uleb128 0x6
 	.string	"pcxo"
 	.byte	0x6
 	.byte	0x75
-	.uaword	0x222
+	.uaword	0x235
 	.byte	0x4
 	.byte	0x10
 	.byte	0x10
@@ -1236,7 +278,7 @@ osEE_tc_isr2_wrapper:
 	.string	"pcxs"
 	.byte	0x6
 	.byte	0x76
-	.uaword	0x222
+	.uaword	0x235
 	.byte	0x4
 	.byte	0x4
 	.byte	0xc
@@ -1245,7 +287,7 @@ osEE_tc_isr2_wrapper:
 	.string	"ul"
 	.byte	0x6
 	.byte	0x7b
-	.uaword	0x222
+	.uaword	0x235
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -1254,7 +296,7 @@ osEE_tc_isr2_wrapper:
 	.string	"pie"
 	.byte	0x6
 	.byte	0x7c
-	.uaword	0x222
+	.uaword	0x235
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -1263,7 +305,7 @@ osEE_tc_isr2_wrapper:
 	.string	"pcpn"
 	.byte	0x6
 	.byte	0x7d
-	.uaword	0x222
+	.uaword	0x235
 	.byte	0x4
 	.byte	0x8
 	.byte	0x2
@@ -1273,179 +315,179 @@ osEE_tc_isr2_wrapper:
 	.byte	0x4
 	.byte	0x6
 	.byte	0x72
-	.uaword	0x2f3
+	.uaword	0x306
 	.uleb128 0x8
 	.string	"reg"
 	.byte	0x6
 	.byte	0x73
-	.uaword	0x245
+	.uaword	0x258
 	.uleb128 0x8
 	.string	"bits"
 	.byte	0x6
 	.byte	0x82
-	.uaword	0x27d
+	.uaword	0x290
 	.byte	0
 	.uleb128 0x3
 	.string	"OsEE_pcxi"
 	.byte	0x6
 	.byte	0x83
-	.uaword	0x2d3
+	.uaword	0x2e6
 	.uleb128 0x9
 	.string	"OsEE_CTX_tag"
 	.byte	0x10
 	.byte	0x6
 	.byte	0xf3
-	.uaword	0x34e
+	.uaword	0x361
 	.uleb128 0xa
 	.string	"p_ctx"
 	.byte	0x6
 	.byte	0xf4
-	.uaword	0x34e
+	.uaword	0x361
 	.byte	0
 	.uleb128 0xa
 	.string	"dummy"
 	.byte	0x6
 	.byte	0xf5
-	.uaword	0x245
+	.uaword	0x258
 	.byte	0x4
 	.uleb128 0xa
 	.string	"pcxi"
 	.byte	0x6
 	.byte	0xf6
-	.uaword	0x2f3
+	.uaword	0x306
 	.byte	0x8
 	.uleb128 0xa
 	.string	"ra"
 	.byte	0x6
 	.byte	0xf7
-	.uaword	0x232
+	.uaword	0x245
 	.byte	0xc
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x304
+	.uaword	0x317
 	.uleb128 0x3
 	.string	"OsEE_CTX"
 	.byte	0x6
 	.byte	0xf8
-	.uaword	0x304
+	.uaword	0x317
 	.uleb128 0x5
 	.byte	0x4
 	.byte	0x6
 	.byte	0xfb
-	.uaword	0x37b
+	.uaword	0x38e
 	.uleb128 0xa
 	.string	"p_tos"
 	.byte	0x6
 	.byte	0xfc
-	.uaword	0x37b
+	.uaword	0x38e
 	.byte	0
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x354
+	.uaword	0x367
 	.uleb128 0x3
 	.string	"OsEE_SCB"
 	.byte	0x6
 	.byte	0xfd
-	.uaword	0x364
+	.uaword	0x377
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x6
 	.uahalf	0x100
-	.uaword	0x3be
+	.uaword	0x3d1
 	.uleb128 0xd
 	.string	"p_bos"
 	.byte	0x6
 	.uahalf	0x101
-	.uaword	0x37b
+	.uaword	0x38e
 	.byte	0
 	.uleb128 0xd
 	.string	"stack_size"
 	.byte	0x6
 	.uahalf	0x105
-	.uaword	0x15b
+	.uaword	0x16e
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_SDB"
 	.byte	0x6
 	.uahalf	0x106
-	.uaword	0x3cf
+	.uaword	0x3e2
 	.uleb128 0xf
-	.uaword	0x391
+	.uaword	0x3a4
 	.uleb128 0xc
 	.byte	0xc
 	.byte	0x6
 	.uahalf	0x10b
-	.uaword	0x40e
+	.uaword	0x421
 	.uleb128 0xd
 	.string	"p_sdb"
 	.byte	0x6
 	.uahalf	0x10c
-	.uaword	0x40e
+	.uaword	0x421
 	.byte	0
 	.uleb128 0xd
 	.string	"p_scb"
 	.byte	0x6
 	.uahalf	0x10d
-	.uaword	0x414
+	.uaword	0x427
 	.byte	0x4
 	.uleb128 0xd
 	.string	"isr2_src"
 	.byte	0x6
 	.uahalf	0x10e
-	.uaword	0x266
+	.uaword	0x279
 	.byte	0x8
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x3be
+	.uaword	0x3d1
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x381
+	.uaword	0x394
 	.uleb128 0xe
 	.string	"OsEE_HDB"
 	.byte	0x6
 	.uahalf	0x111
-	.uaword	0x42b
+	.uaword	0x43e
 	.uleb128 0xf
-	.uaword	0x3d4
+	.uaword	0x3e7
 	.uleb128 0x3
 	.string	"AppModeType"
 	.byte	0x7
 	.byte	0x60
-	.uaword	0x194
+	.uaword	0x1a7
 	.uleb128 0x3
 	.string	"TaskType"
 	.byte	0x7
 	.byte	0x78
-	.uaword	0x245
+	.uaword	0x258
 	.uleb128 0x3
 	.string	"TaskPrio"
 	.byte	0x7
 	.byte	0xc8
-	.uaword	0x255
+	.uaword	0x268
 	.uleb128 0x3
 	.string	"TaskActivation"
 	.byte	0x7
 	.byte	0xf4
-	.uaword	0x194
+	.uaword	0x1a7
 	.uleb128 0xe
 	.string	"TaskFunc"
 	.byte	0x7
 	.uahalf	0x13a
-	.uaword	0x48a
+	.uaword	0x49d
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x490
+	.uaword	0x4a3
 	.uleb128 0x10
 	.byte	0x1
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x7
 	.uahalf	0x145
-	.uaword	0x4f9
+	.uaword	0x50c
 	.uleb128 0x12
 	.string	"OSEE_TASK_TYPE_BASIC"
 	.sleb128 0
@@ -1463,17 +505,17 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_task_type"
 	.byte	0x7
 	.uahalf	0x153
-	.uaword	0x492
+	.uaword	0x4a5
 	.uleb128 0xe
 	.string	"TaskExecutionType"
 	.byte	0x7
 	.uahalf	0x157
-	.uaword	0x4f9
+	.uaword	0x50c
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x7
 	.uahalf	0x15d
-	.uaword	0x5b2
+	.uaword	0x5c5
 	.uleb128 0x12
 	.string	"OSEE_TASK_SUSPENDED"
 	.sleb128 0
@@ -1497,55 +539,55 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_task_status"
 	.byte	0x7
 	.uahalf	0x16e
-	.uaword	0x52a
+	.uaword	0x53d
 	.uleb128 0xe
 	.string	"TaskStateType"
 	.byte	0x7
 	.uahalf	0x17e
-	.uaword	0x5b2
+	.uaword	0x5c5
 	.uleb128 0xe
 	.string	"TickType"
 	.byte	0x7
 	.uahalf	0x19e
-	.uaword	0x245
+	.uaword	0x258
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x7
 	.uahalf	0x1b7
-	.uaword	0x62b
+	.uaword	0x63e
 	.uleb128 0xd
 	.string	"maxallowedvalue"
 	.byte	0x7
 	.uahalf	0x1b9
-	.uaword	0x5e1
+	.uaword	0x5f4
 	.byte	0
 	.uleb128 0xd
 	.string	"ticksperbase"
 	.byte	0x7
 	.uahalf	0x1bc
-	.uaword	0x5e1
+	.uaword	0x5f4
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.string	"AlarmBaseType"
 	.byte	0x7
 	.uahalf	0x1c2
-	.uaword	0x5f2
+	.uaword	0x605
 	.uleb128 0xe
 	.string	"EventMaskType"
 	.byte	0x7
 	.uahalf	0x237
-	.uaword	0x245
+	.uaword	0x258
 	.uleb128 0xe
 	.string	"MemSize"
 	.byte	0x7
 	.uahalf	0x2a3
-	.uaword	0x15b
+	.uaword	0x16e
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x7
 	.uahalf	0x2b1
-	.uaword	0x88a
+	.uaword	0x89d
 	.uleb128 0x12
 	.string	"E_OK"
 	.sleb128 0
@@ -1638,122 +680,122 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_status_type"
 	.byte	0x7
 	.uahalf	0x2d4
-	.uaword	0x667
+	.uaword	0x67a
 	.uleb128 0xe
 	.string	"StatusType"
 	.byte	0x7
 	.uahalf	0x2d9
-	.uaword	0x88a
+	.uaword	0x89d
 	.uleb128 0x9
 	.string	"OsEE_SN_tag"
 	.byte	0x8
 	.byte	0x8
 	.byte	0x4b
-	.uaword	0x8e5
+	.uaword	0x8f8
 	.uleb128 0x13
 	.uaword	.LASF0
 	.byte	0x8
 	.byte	0x4d
-	.uaword	0x8e5
+	.uaword	0x8f8
 	.byte	0
 	.uleb128 0xa
 	.string	"p_tdb"
 	.byte	0x8
 	.byte	0x4f
-	.uaword	0x994
+	.uaword	0x9a7
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x8b6
+	.uaword	0x8c9
 	.uleb128 0x14
 	.string	"OsEE_TDB_tag"
 	.byte	0x20
 	.byte	0x9
 	.uahalf	0x108
-	.uaword	0x994
+	.uaword	0x9a7
 	.uleb128 0xd
 	.string	"hdb"
 	.byte	0x9
 	.uahalf	0x10b
-	.uaword	0x41a
+	.uaword	0x42d
 	.byte	0
 	.uleb128 0xd
 	.string	"p_tcb"
 	.byte	0x9
 	.uahalf	0x10e
-	.uaword	0xba9
+	.uaword	0xbbc
 	.byte	0xc
 	.uleb128 0xd
 	.string	"tid"
 	.byte	0x9
 	.uahalf	0x110
-	.uaword	0x443
+	.uaword	0x456
 	.byte	0x10
 	.uleb128 0xd
 	.string	"task_type"
 	.byte	0x9
 	.uahalf	0x112
-	.uaword	0x510
+	.uaword	0x523
 	.byte	0x14
 	.uleb128 0xd
 	.string	"task_func"
 	.byte	0x9
 	.uahalf	0x114
-	.uaword	0x479
+	.uaword	0x48c
 	.byte	0x18
 	.uleb128 0xd
 	.string	"ready_prio"
 	.byte	0x9
 	.uahalf	0x117
-	.uaword	0x453
+	.uaword	0x466
 	.byte	0x1c
 	.uleb128 0xd
 	.string	"dispatch_prio"
 	.byte	0x9
 	.uahalf	0x11a
-	.uaword	0x453
+	.uaword	0x466
 	.byte	0x1d
 	.uleb128 0xd
 	.string	"max_num_of_act"
 	.byte	0x9
 	.uahalf	0x11c
-	.uaword	0x463
+	.uaword	0x476
 	.byte	0x1e
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x99a
+	.uaword	0x9ad
 	.uleb128 0xf
-	.uaword	0x8eb
+	.uaword	0x8fe
 	.uleb128 0x3
 	.string	"OsEE_SN"
 	.byte	0x8
 	.byte	0x50
-	.uaword	0x8b6
+	.uaword	0x8c9
 	.uleb128 0x3
 	.string	"OsEE_RQ"
 	.byte	0x8
 	.byte	0xd5
-	.uaword	0x9bd
+	.uaword	0x9d0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x99f
+	.uaword	0x9b2
 	.uleb128 0x3
 	.string	"OsEE_kernel_cb"
 	.byte	0x9
 	.byte	0x51
-	.uaword	0x48a
+	.uaword	0x49d
 	.uleb128 0x3
 	.string	"OsEE_byte"
 	.byte	0x9
 	.byte	0x53
-	.uaword	0x194
+	.uaword	0x1a7
 	.uleb128 0x15
 	.byte	0x1
 	.byte	0x9
 	.byte	0x73
-	.uaword	0xa51
+	.uaword	0xa64
 	.uleb128 0x12
 	.string	"OSEE_KERNEL_INITIALIZED"
 	.sleb128 0
@@ -1771,29 +813,29 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_kernel_status"
 	.byte	0x9
 	.byte	0x7d
-	.uaword	0x9ea
+	.uaword	0x9fd
 	.uleb128 0x5
 	.byte	0xc
 	.byte	0x9
 	.byte	0x90
-	.uaword	0xaa2
+	.uaword	0xab5
 	.uleb128 0x13
 	.uaword	.LASF0
 	.byte	0x9
 	.byte	0x94
-	.uaword	0xad2
+	.uaword	0xae5
 	.byte	0
 	.uleb128 0xa
 	.string	"prev_prio"
 	.byte	0x9
 	.byte	0x97
-	.uaword	0x453
+	.uaword	0x466
 	.byte	0x4
 	.uleb128 0xa
 	.string	"p_owner"
 	.byte	0x9
 	.byte	0x9a
-	.uaword	0x994
+	.uaword	0x9a7
 	.byte	0x8
 	.byte	0
 	.uleb128 0x9
@@ -1801,196 +843,196 @@ osEE_tc_isr2_wrapper:
 	.byte	0x8
 	.byte	0x9
 	.byte	0xb5
-	.uaword	0xad2
+	.uaword	0xae5
 	.uleb128 0xa
 	.string	"p_cb"
 	.byte	0x9
 	.byte	0xb7
-	.uaword	0xaed
+	.uaword	0xb00
 	.byte	0
 	.uleb128 0xa
 	.string	"prio"
 	.byte	0x9
 	.byte	0xc3
-	.uaword	0x453
+	.uaword	0x466
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xad8
+	.uaword	0xaeb
 	.uleb128 0xf
-	.uaword	0xaa2
+	.uaword	0xab5
 	.uleb128 0x3
 	.string	"OsEE_MCB"
 	.byte	0x9
 	.byte	0x9b
-	.uaword	0xa6b
+	.uaword	0xa7e
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xadd
+	.uaword	0xaf0
 	.uleb128 0x3
 	.string	"OsEE_MDB"
 	.byte	0x9
 	.byte	0xce
-	.uaword	0xad8
+	.uaword	0xaeb
 	.uleb128 0x5
 	.byte	0x14
 	.byte	0x9
 	.byte	0xe0
-	.uaword	0xb92
+	.uaword	0xba5
 	.uleb128 0xa
 	.string	"current_num_of_act"
 	.byte	0x9
 	.byte	0xe4
-	.uaword	0x463
+	.uaword	0x476
 	.byte	0
 	.uleb128 0xa
 	.string	"current_prio"
 	.byte	0x9
 	.byte	0xea
-	.uaword	0x453
+	.uaword	0x466
 	.byte	0x1
 	.uleb128 0xa
 	.string	"status"
 	.byte	0x9
 	.byte	0xec
-	.uaword	0x5cb
+	.uaword	0x5de
 	.byte	0x2
 	.uleb128 0xa
 	.string	"p_last_m"
 	.byte	0x9
 	.byte	0xef
-	.uaword	0xb92
+	.uaword	0xba5
 	.byte	0x4
 	.uleb128 0xa
 	.string	"wait_mask"
 	.byte	0x9
 	.byte	0xf3
-	.uaword	0x641
+	.uaword	0x654
 	.byte	0x8
 	.uleb128 0xa
 	.string	"event_mask"
 	.byte	0x9
 	.byte	0xf5
-	.uaword	0x641
+	.uaword	0x654
 	.byte	0xc
 	.uleb128 0xa
 	.string	"p_own_sn"
 	.byte	0x9
 	.byte	0xfb
-	.uaword	0x9bd
+	.uaword	0x9d0
 	.byte	0x10
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xaf3
+	.uaword	0xb06
 	.uleb128 0xe
 	.string	"OsEE_TCB"
 	.byte	0x9
 	.uahalf	0x101
-	.uaword	0xb03
+	.uaword	0xb16
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xb98
+	.uaword	0xbab
 	.uleb128 0xe
 	.string	"OsEE_TDB"
 	.byte	0x9
 	.uahalf	0x122
-	.uaword	0x99a
+	.uaword	0x9ad
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xbaf
+	.uaword	0xbc2
 	.uleb128 0xe
 	.string	"OsEE_TriggerQ"
 	.byte	0x9
 	.uahalf	0x151
-	.uaword	0xbdc
+	.uaword	0xbef
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xbe2
+	.uaword	0xbf5
 	.uleb128 0xf
-	.uaword	0xbe7
+	.uaword	0xbfa
 	.uleb128 0x14
 	.string	"OsEE_TriggerDB_tag"
 	.byte	0x1c
 	.byte	0x9
 	.uahalf	0x269
-	.uaword	0xc37
+	.uaword	0xc4a
 	.uleb128 0xd
 	.string	"p_trigger_cb"
 	.byte	0x9
 	.uahalf	0x26b
-	.uaword	0xedb
+	.uaword	0xeee
 	.byte	0
 	.uleb128 0x16
 	.uaword	.LASF1
 	.byte	0x9
 	.uahalf	0x26d
-	.uaword	0xd84
+	.uaword	0xd97
 	.byte	0x4
 	.uleb128 0xd
 	.string	"action"
 	.byte	0x9
 	.uahalf	0x27b
-	.uaword	0xdcb
+	.uaword	0xdde
 	.byte	0x8
 	.byte	0
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x9
 	.uahalf	0x155
-	.uaword	0xc67
+	.uaword	0xc7a
 	.uleb128 0xd
 	.string	"trigger_queue"
 	.byte	0x9
 	.uahalf	0x157
-	.uaword	0xbc6
+	.uaword	0xbd9
 	.byte	0
 	.uleb128 0xd
 	.string	"value"
 	.byte	0x9
 	.uahalf	0x159
-	.uaword	0x5e1
+	.uaword	0x5f4
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_CounterCB"
 	.byte	0x9
 	.uahalf	0x15e
-	.uaword	0xc37
+	.uaword	0xc4a
 	.uleb128 0xc
 	.byte	0xc
 	.byte	0x9
 	.uahalf	0x16f
-	.uaword	0xcac
+	.uaword	0xcbf
 	.uleb128 0xd
 	.string	"p_counter_cb"
 	.byte	0x9
 	.uahalf	0x171
-	.uaword	0xcac
+	.uaword	0xcbf
 	.byte	0
 	.uleb128 0xd
 	.string	"info"
 	.byte	0x9
 	.uahalf	0x177
-	.uaword	0x62b
+	.uaword	0x63e
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xc67
+	.uaword	0xc7a
 	.uleb128 0xe
 	.string	"OsEE_CounterDB"
 	.byte	0x9
 	.uahalf	0x17c
-	.uaword	0xcc9
+	.uaword	0xcdc
 	.uleb128 0xf
-	.uaword	0xc7e
+	.uaword	0xc91
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x9
 	.uahalf	0x17f
-	.uaword	0xd2c
+	.uaword	0xd3f
 	.uleb128 0x12
 	.string	"OSEE_ACTION_TASK"
 	.sleb128 0
@@ -2008,75 +1050,75 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_action_type"
 	.byte	0x9
 	.uahalf	0x184
-	.uaword	0xcce
+	.uaword	0xce1
 	.uleb128 0xc
 	.byte	0x10
 	.byte	0x9
 	.uahalf	0x189
-	.uaword	0xd84
+	.uaword	0xd97
 	.uleb128 0xd
 	.string	"f"
 	.byte	0x9
 	.uahalf	0x18b
-	.uaword	0x9c3
+	.uaword	0x9d6
 	.byte	0
 	.uleb128 0xd
 	.string	"p_tdb"
 	.byte	0x9
 	.uahalf	0x18d
-	.uaword	0xbc0
+	.uaword	0xbd3
 	.byte	0x4
 	.uleb128 0x16
 	.uaword	.LASF1
 	.byte	0x9
 	.uahalf	0x18f
-	.uaword	0xd84
+	.uaword	0xd97
 	.byte	0x8
 	.uleb128 0xd
 	.string	"mask"
 	.byte	0x9
 	.uahalf	0x192
-	.uaword	0x641
+	.uaword	0x654
 	.byte	0xc
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xcb2
+	.uaword	0xcc5
 	.uleb128 0xe
 	.string	"OsEE_action_param"
 	.byte	0x9
 	.uahalf	0x194
-	.uaword	0xd45
+	.uaword	0xd58
 	.uleb128 0xc
 	.byte	0x14
 	.byte	0x9
 	.uahalf	0x198
-	.uaword	0xdcb
+	.uaword	0xdde
 	.uleb128 0xd
 	.string	"param"
 	.byte	0x9
 	.uahalf	0x19a
-	.uaword	0xd8a
+	.uaword	0xd9d
 	.byte	0
 	.uleb128 0xd
 	.string	"type"
 	.byte	0x9
 	.uahalf	0x19c
-	.uaword	0xd2c
+	.uaword	0xd3f
 	.byte	0x10
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_action"
 	.byte	0x9
 	.uahalf	0x19d
-	.uaword	0xddf
+	.uaword	0xdf2
 	.uleb128 0xf
-	.uaword	0xda4
+	.uaword	0xdb7
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x9
 	.uahalf	0x22b
-	.uaword	0xe64
+	.uaword	0xe77
 	.uleb128 0x12
 	.string	"OSEE_TRIGGER_INACTIVE"
 	.sleb128 0
@@ -2097,280 +1139,280 @@ osEE_tc_isr2_wrapper:
 	.string	"OsEE_trigger_status"
 	.byte	0x9
 	.uahalf	0x231
-	.uaword	0xde4
+	.uaword	0xdf7
 	.uleb128 0xc
 	.byte	0x10
 	.byte	0x9
 	.uahalf	0x242
-	.uaword	0xec4
+	.uaword	0xed7
 	.uleb128 0x16
 	.uaword	.LASF0
 	.byte	0x9
 	.uahalf	0x244
-	.uaword	0xbdc
+	.uaword	0xbef
 	.byte	0
 	.uleb128 0xd
 	.string	"when"
 	.byte	0x9
 	.uahalf	0x247
-	.uaword	0x5e1
+	.uaword	0x5f4
 	.byte	0x4
 	.uleb128 0xd
 	.string	"status"
 	.byte	0x9
 	.uahalf	0x249
-	.uaword	0xe64
+	.uaword	0xe77
 	.byte	0x8
 	.uleb128 0xd
 	.string	"cycle"
 	.byte	0x9
 	.uahalf	0x24d
-	.uaword	0x5e1
+	.uaword	0x5f4
 	.byte	0xc
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_TriggerCB"
 	.byte	0x9
 	.uahalf	0x25e
-	.uaword	0xe80
+	.uaword	0xe93
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xec4
+	.uaword	0xed7
 	.uleb128 0xc
 	.byte	0x20
 	.byte	0x9
 	.uahalf	0x2d9
-	.uaword	0xfe6
+	.uaword	0xff9
 	.uleb128 0xd
 	.string	"p_curr"
 	.byte	0x9
 	.uahalf	0x2dc
-	.uaword	0xbc0
+	.uaword	0xbd3
 	.byte	0
 	.uleb128 0xd
 	.string	"rq"
 	.byte	0x9
 	.uahalf	0x2ee
-	.uaword	0x9ae
+	.uaword	0x9c1
 	.byte	0x4
 	.uleb128 0xd
 	.string	"p_free_sn"
 	.byte	0x9
 	.uahalf	0x2f0
-	.uaword	0x9bd
+	.uaword	0x9d0
 	.byte	0x8
 	.uleb128 0xd
 	.string	"p_stk_sn"
 	.byte	0x9
 	.uahalf	0x2ff
-	.uaword	0x9bd
+	.uaword	0x9d0
 	.byte	0xc
 	.uleb128 0xd
 	.string	"os_status"
 	.byte	0x9
 	.uahalf	0x301
-	.uaword	0xfe6
+	.uaword	0xff9
 	.byte	0x10
 	.uleb128 0xd
 	.string	"app_mode"
 	.byte	0x9
 	.uahalf	0x305
-	.uaword	0x430
+	.uaword	0x443
 	.byte	0x11
 	.uleb128 0xd
 	.string	"last_error"
 	.byte	0x9
 	.uahalf	0x307
-	.uaword	0x8a3
+	.uaword	0x8b6
 	.byte	0x12
 	.uleb128 0xd
 	.string	"prev_s_isr_all_status"
 	.byte	0x9
 	.uahalf	0x327
-	.uaword	0x245
+	.uaword	0x258
 	.byte	0x14
 	.uleb128 0xd
 	.string	"prev_s_isr_os_status"
 	.byte	0x9
 	.uahalf	0x329
-	.uaword	0x245
+	.uaword	0x258
 	.byte	0x18
 	.uleb128 0xd
 	.string	"s_isr_all_cnt"
 	.byte	0x9
 	.uahalf	0x32b
-	.uaword	0x9d9
+	.uaword	0x9ec
 	.byte	0x1c
 	.uleb128 0xd
 	.string	"s_isr_os_cnt"
 	.byte	0x9
 	.uahalf	0x32d
-	.uaword	0x9d9
+	.uaword	0x9ec
 	.byte	0x1d
 	.uleb128 0xd
 	.string	"d_isr_all_cnt"
 	.byte	0x9
 	.uahalf	0x330
-	.uaword	0x9d9
+	.uaword	0x9ec
 	.byte	0x1e
 	.byte	0
 	.uleb128 0x17
-	.uaword	0xa51
+	.uaword	0xa64
 	.uleb128 0xe
 	.string	"OsEE_CCB"
 	.byte	0x9
 	.uahalf	0x33a
-	.uaword	0xee1
+	.uaword	0xef4
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x9
 	.uahalf	0x344
-	.uaword	0x102a
+	.uaword	0x103d
 	.uleb128 0xd
 	.string	"p_ccb"
 	.byte	0x9
 	.uahalf	0x34a
-	.uaword	0x102a
+	.uaword	0x103d
 	.byte	0
 	.uleb128 0xd
 	.string	"p_idle_task"
 	.byte	0x9
 	.uahalf	0x354
-	.uaword	0xbc0
+	.uaword	0xbd3
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xfeb
+	.uaword	0xffe
 	.uleb128 0xe
 	.string	"OsEE_CDB"
 	.byte	0x9
 	.uahalf	0x36a
-	.uaword	0x1041
+	.uaword	0x1054
 	.uleb128 0xf
-	.uaword	0xffc
+	.uaword	0x100f
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0x9
 	.uahalf	0x36f
-	.uaword	0x105f
+	.uaword	0x1072
 	.uleb128 0xd
 	.string	"dummy"
 	.byte	0x9
 	.uahalf	0x3b1
-	.uaword	0x245
+	.uaword	0x258
 	.byte	0
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_KCB"
 	.byte	0x9
 	.uahalf	0x3b3
-	.uaword	0x1046
+	.uaword	0x1059
 	.uleb128 0xc
 	.byte	0x24
 	.byte	0x9
 	.uahalf	0x3c3
-	.uaword	0x1159
+	.uaword	0x116c
 	.uleb128 0xd
 	.string	"p_kcb"
 	.byte	0x9
 	.uahalf	0x3c5
-	.uaword	0x1159
+	.uaword	0x116c
 	.byte	0
 	.uleb128 0xd
 	.string	"p_tdb_ptr_array"
 	.byte	0x9
 	.uahalf	0x3d1
-	.uaword	0x116a
+	.uaword	0x117d
 	.byte	0x4
 	.uleb128 0xd
 	.string	"tdb_array_size"
 	.byte	0x9
 	.uahalf	0x3d4
-	.uaword	0x657
+	.uaword	0x66a
 	.byte	0x8
 	.uleb128 0xd
 	.string	"p_res_ptr_array"
 	.byte	0x9
 	.uahalf	0x3e0
-	.uaword	0x117b
+	.uaword	0x118e
 	.byte	0xc
 	.uleb128 0xd
 	.string	"res_array_size"
 	.byte	0x9
 	.uahalf	0x3e2
-	.uaword	0x657
+	.uaword	0x66a
 	.byte	0x10
 	.uleb128 0xd
 	.string	"p_counter_ptr_array"
 	.byte	0x9
 	.uahalf	0x3e6
-	.uaword	0x1192
+	.uaword	0x11a5
 	.byte	0x14
 	.uleb128 0xd
 	.string	"counter_array_size"
 	.byte	0x9
 	.uahalf	0x3e8
-	.uaword	0x657
+	.uaword	0x66a
 	.byte	0x18
 	.uleb128 0xd
 	.string	"p_alarm_ptr_array"
 	.byte	0x9
 	.uahalf	0x3eb
-	.uaword	0x11a3
+	.uaword	0x11b6
 	.byte	0x1c
 	.uleb128 0xd
 	.string	"alarm_array_size"
 	.byte	0x9
 	.uahalf	0x3ed
-	.uaword	0x657
+	.uaword	0x66a
 	.byte	0x20
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x105f
+	.uaword	0x1072
 	.uleb128 0x18
-	.uaword	0x994
-	.uaword	0x116a
+	.uaword	0x9a7
+	.uaword	0x117d
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x115f
+	.uaword	0x1172
 	.uleb128 0x18
-	.uaword	0xad2
-	.uaword	0x117b
+	.uaword	0xae5
+	.uaword	0x118e
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1170
+	.uaword	0x1183
 	.uleb128 0x18
-	.uaword	0x118c
-	.uaword	0x118c
+	.uaword	0x119f
+	.uaword	0x119f
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xcc9
+	.uaword	0xcdc
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1181
+	.uaword	0x1194
 	.uleb128 0x18
-	.uaword	0xbdc
-	.uaword	0x11a3
+	.uaword	0xbef
+	.uaword	0x11b6
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1198
+	.uaword	0x11ab
 	.uleb128 0xe
 	.string	"OsEE_KDB"
 	.byte	0x9
 	.uahalf	0x3fc
-	.uaword	0x11ba
+	.uaword	0x11cd
 	.uleb128 0xf
-	.uaword	0x1070
+	.uaword	0x1083
 	.uleb128 0x1a
 	.string	"osEE_tc_rslcx"
 	.byte	0x2
@@ -2393,28 +1435,28 @@ osEE_tc_isr2_wrapper:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x1253
+	.uaword	0x1266
 	.uleb128 0x1c
 	.string	"isr2_tid"
 	.byte	0x1
 	.uahalf	0x4289
-	.uaword	0x443
+	.uaword	0x456
 	.uaword	.LLST0
 	.uleb128 0x1d
-	.uaword	0x11bf
+	.uaword	0x11d2
 	.uaword	.LBB6
 	.uaword	.LBE6
 	.byte	0x1
 	.uahalf	0x42aa
 	.uleb128 0x1d
-	.uaword	0x11d2
+	.uaword	0x11e5
 	.uaword	.LBB8
 	.uaword	.LBE8
 	.byte	0x1
 	.uahalf	0x42ab
 	.uleb128 0x1e
 	.uaword	.LVL1
-	.uaword	0x127f
+	.uaword	0x1292
 	.uleb128 0x1f
 	.byte	0x1
 	.byte	0x54
@@ -2428,14 +1470,14 @@ osEE_tc_isr2_wrapper:
 	.string	"osEE_kdb_var"
 	.byte	0xa
 	.byte	0x42
-	.uaword	0x11a9
+	.uaword	0x11bc
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x20
 	.string	"osEE_cdb_var"
 	.byte	0xa
 	.byte	0x5b
-	.uaword	0x1030
+	.uaword	0x1043
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x21
@@ -2446,7 +1488,7 @@ osEE_tc_isr2_wrapper:
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x22
-	.uaword	0x443
+	.uaword	0x456
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits

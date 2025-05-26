@@ -74,9 +74,9 @@ void exitShiParkerApp(){
 TASK(ShiParkerAppTask)
 {
     printfSerial("[%d]",carStatus);
-    if (g_isAppRunning == FALSE)
+    if (g_isAppRunning == FALSE||g_isRecieved==FALSE)
         TerminateTask();
-    // 시스템과 통합할 때 주석처리를 해제하세요(g_RecievedParkingSystemPacket이 잘 초기화되어 있어야 합니다)
+    g_isRecieved=FALSE;
     updateStatus(&g_RecievedParkingSystemPacket);
     switch (carStatus)
     {
@@ -91,10 +91,10 @@ TASK(ShiParkerAppTask)
             // READY일때 시작 -> 주차 시작
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(WallFollowAlarm, 0, WALL_FOLLOW_CYCLE_TICK);
-            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_RUNNING_CYCLE_TICK);
+            SetRelAlarm(WallFollowAlarm, 3, WALL_FOLLOW_CYCLE_TICK);
+            SetRelAlarm(PacketSendAlarm, 1, SENDPACKET_RUNNING_CYCLE_TICK);
             SetRelAlarm(AvoidObstacleAlarm,
-                        0,
+                        2,
                         FRONT_OBSTACLE_DETECTION_TICK); // 100ms
             break;
         case CAR_COMMAND_STOP:
@@ -117,14 +117,14 @@ TASK(ShiParkerAppTask)
         case CAR_COMMAND_STOP:
             // RUNNING일때 일시정지 -> 일시정지
             carStatus = CAR_STATUS_STOP;
-            motor_stop(0);
-            motor_stop(1);
-            motor_stop(2);
-            motor_stop(3);
+            motor_stop(INDEX_FL);
+            motor_stop(INDEX_FR);
+            motor_stop(INDEX_RL);
+            motor_stop(INDEX_RR);
             CancelAlarm(PacketSendAlarm);
             CancelAlarm(AvoidObstacleAlarm);
             CancelAlarm(WallFollowAlarm);
-            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
+            SetRelAlarm(PacketSendAlarm, 1, SENDPACKET_DEFAULT_CYCLE_TICK);
             break;
         default:
             break;
@@ -141,9 +141,9 @@ TASK(ShiParkerAppTask)
             // STOP일때 시작 -> 주차 재개
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(WallFollowAlarm, 0, WALL_FOLLOW_CYCLE_TICK);
-            SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_RUNNING_CYCLE_TICK);
-            SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK);
+            SetRelAlarm(WallFollowAlarm, 3, WALL_FOLLOW_CYCLE_TICK);
+            SetRelAlarm(PacketSendAlarm, 1, SENDPACKET_RUNNING_CYCLE_TICK);
+            SetRelAlarm(AvoidObstacleAlarm, 2, FRONT_OBSTACLE_DETECTION_TICK);
             break;
         case CAR_COMMAND_STOP:
             // STOP일때 일시정지 -> 변화없음
@@ -168,11 +168,11 @@ TASK(ShiParkerAppTask)
             // ERROR일때 시작 -> 주차 재개
             carStatus = CAR_STATUS_RUNNING;
             CancelAlarm(PacketSendAlarm);
-            SetRelAlarm(WallFollowAlarm, 0, WALL_FOLLOW_CYCLE_TICK);
+            SetRelAlarm(WallFollowAlarm, 3, WALL_FOLLOW_CYCLE_TICK);
             SetRelAlarm(PacketSendAlarm,
-                        0,
+                        1,
                         SENDPACKET_RUNNING_CYCLE_TICK); // 500ms
-            SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK);
+            SetRelAlarm(AvoidObstacleAlarm, 2, FRONT_OBSTACLE_DETECTION_TICK);
             break;
         case CAR_COMMAND_STOP:
             // ERROR일때 일시정지 -> 변화없음
@@ -194,7 +194,7 @@ TASK(AvoidObstacleTask)
     if (g_isAppRunning == FALSE)
         TerminateTask();
     double dist = getUltrasonic(&g_Ultrasonic_FRONT);
-    printDouble("frontUltra:",dist);
+    // printDouble("frontUltra:",dist);
     if (dist > 0 && dist < FRONT_OBSTACLE_THRESHOLD)
     {
         handleError(ERROR_CODE_OBSTACLE);
@@ -204,7 +204,7 @@ TASK(AvoidObstacleTask)
 void turn90(void)
 {
     volatile double currentHallCntAvg = getHallCntAvg();
-    volatile double targetHallCntAvg  = currentHallCntAvg + 4.0;
+    volatile double targetHallCntAvg  = currentHallCntAvg + (double)4.5;
 
     CancelAlarm(AvoidObstacleAlarm);
 
@@ -218,19 +218,15 @@ void turn90(void)
     motor_run_backward(INDEX_FR);
     motor_run_backward(INDEX_RR);
 
-
     set_motor_power(INDEX_FL, motor_power_turn);
     set_motor_power(INDEX_FR, motor_power_turn);
     set_motor_power(INDEX_RL, motor_power_turn);
     set_motor_power(INDEX_RR, motor_power_turn);
  
-    while (currentHallCntAvg < targetHallCntAvg)
+    for (currentHallCntAvg; currentHallCntAvg < targetHallCntAvg;currentHallCntAvg=getHallCntAvg())
     {
-        delay_ms(50);
-        currentHallCntAvg = getHallCntAvg();
-        printDouble("getHallCntAvg(): ", currentHallCntAvg);
-        // printDouble("targetHallCntAvg: ", targetHallCntAvg);
-        delay_ms(50);
+        delay_ms(10);
+        printDouble("asd:",currentHallCntAvg);
     }
     
     currentDirection = (currentDirection + 1) % 4;
@@ -245,7 +241,7 @@ void turn90(void)
     set_motor_power(INDEX_RL, motor_power_normal);
     set_motor_power(INDEX_RR, motor_power_normal);
 
-    SetRelAlarm(AvoidObstacleAlarm, 0, WALL_FOLLOW_CYCLE_TICK);
+    SetRelAlarm(AvoidObstacleAlarm, 1, FRONT_OBSTACLE_DETECTION_TICK);
 }
 
 void calculateCurrentPos() {
@@ -273,22 +269,30 @@ TASK(WallFollowTask)
 {
     if (g_isAppRunning && (carStatus == CAR_STATUS_RUNNING))
     {
-        if(currentDirection == 0)
-        {
-            min_dist_left = 20; 
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
-        }
-        else if(currentDirection==1)
-        {
-            min_dist_left = targetPosition.y;
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FR);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RR);
+        // volatile int32_t tmpdir = 1;
+        min_dist_left = 20; 
+        FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
+        RearUltra = getUltrasonic(&g_Ultrasonic_RL);
+        printDouble("g_Ultrasonic_FL : ", FrontUltra);
+        printDouble("g_Ultrasonic_RL : ", RearUltra);
+        
+        // if(currentDirection == 0)
+        // {
+        //     min_dist_left = 20; 
+        //     FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
+        //     RearUltra = getUltrasonic(&g_Ultrasonic_RL);
+        // }
+        // else if(currentDirection==1)
+        // {
+        //     min_dist_left = targetPosition.y;
+        //     tmpdir=-1;
+        //     FrontUltra = getUltrasonic(&g_Ultrasonic_FR);
+        //     RearUltra = getUltrasonic(&g_Ultrasonic_RR);
             
-        }
+        // }
         DriveCommand cmd = wall_follow_control(FrontUltra, RearUltra);
+        printDouble("steering :", cmd.steering_angle);
         double       delta_p = cmd.steering_angle * Kp_rad_to_delta_power;
-        printDouble("delta:",delta_p);
         set_motor_power(INDEX_FL, motor_power_normal + (delta_p / 2));
         set_motor_power(INDEX_RL, motor_power_normal + (delta_p / 2));
         set_motor_power(INDEX_FR, motor_power_normal - (delta_p / 2));

@@ -6,37 +6,32 @@
 	.type	osEE_change_context_from_running, @function
 osEE_change_context_from_running:
 .LFB109:
-	.file 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_std_change_context.c"
+	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.c"
 	.loc 1 62 0
 .LVL0:
-	mov.aa	%a14, %SP
-.LCFI0:
-	mov.aa	%a15, %a4
-.LVL1:
 	.loc 1 65 0
 	ld.a	%a2, [%a5] 12
+	.loc 1 62 0
+	mov.aa	%a15, %a4
+	.loc 1 66 0
+	ld.a	%a6, [%a15] 4
+	.loc 1 65 0
 	ld.bu	%d15, [%a2] 2
+	.loc 1 62 0
+	mov.aa	%a4, %a5
+.LVL1:
+	.loc 1 66 0
+	ld.a	%a5, [%a5] 4
+.LVL2:
+	.loc 1 65 0
 	jne	%d15, 2, .L2
 	.loc 1 66 0
-	mov.aa	%a4, %a5
-.LVL2:
-	ld.a	%a5, [%a5] 4
+	j	osEE_hal_save_ctx_and_restore_ctx
 .LVL3:
-	ld.a	%a6, [%a15] 4
-	call	osEE_hal_save_ctx_and_restore_ctx
-.LVL4:
-	ret
-.LVL5:
 .L2:
 	.loc 1 69 0
-	mov.aa	%a4, %a5
-.LVL6:
-	ld.a	%a5, [%a5] 4
-.LVL7:
-	ld.a	%a6, [%a15] 4
-	call	osEE_hal_save_ctx_and_ready2stacked
-.LVL8:
-	ret
+	j	osEE_hal_save_ctx_and_ready2stacked
+.LVL4:
 .LFE109:
 	.size	osEE_change_context_from_running, .-osEE_change_context_from_running
 	.align 1
@@ -45,32 +40,25 @@ osEE_change_context_from_running:
 osEE_change_context_from_task_end:
 .LFB110:
 	.loc 1 82 0
-.LVL9:
-	mov.aa	%a14, %SP
-.LCFI1:
-.LVL10:
+.LVL5:
 	.loc 1 85 0
 	ld.a	%a15, [%a5] 12
+	.loc 1 82 0
+	mov.aa	%a4, %a5
+.LVL6:
+	.loc 1 86 0
+	ld.a	%a5, [%a5] 4
+.LVL7:
+	.loc 1 85 0
 	ld.bu	%d15, [%a15] 2
 	jne	%d15, 2, .L5
 	.loc 1 86 0
-	mov.aa	%a4, %a5
-.LVL11:
-	ld.a	%a5, [%a5] 4
-.LVL12:
-	call	osEE_hal_restore_ctx
-.LVL13:
-	ret
-.LVL14:
+	j	osEE_hal_restore_ctx
+.LVL8:
 .L5:
 	.loc 1 88 0
-	mov.aa	%a4, %a5
-.LVL15:
-	ld.a	%a5, [%a5] 4
-.LVL16:
-	call	osEE_hal_ready2stacked
-.LVL17:
-	ret
+	j	osEE_hal_ready2stacked
+.LVL9:
 .LFE110:
 	.size	osEE_change_context_from_task_end, .-osEE_change_context_from_task_end
 	.align 1
@@ -79,41 +67,37 @@ osEE_change_context_from_task_end:
 osEE_idle_task_terminate:
 .LFB111:
 	.loc 1 102 0
-.LVL18:
-	mov.aa	%a14, %SP
-.LCFI2:
-.LVL19:
-	.loc 1 107 0
-	ld.a	%a5, [%a4] 4
-.LVL20:
+.LVL10:
 	.loc 1 108 0
 	ld.a	%a15, [%a4]0
+	.loc 1 107 0
+	ld.a	%a5, [%a4] 4
+.LVL11:
+	.loc 1 108 0
 	ld.w	%d3, [%a15]0
-.LVL21:
+.LVL12:
 	.loc 1 109 0
 	ld.a	%a15, [%a5]0
-.LVL22:
-	j	.L8
-.LVL23:
-.L9:
-	.loc 1 113 0
-	mov.a	%a15, %d15
-.LVL24:
-.L8:
-	.loc 1 113 0 is_stmt 0 discriminator 1
+.LVL13:
+.L7:
+	.loc 1 113 0 discriminator 1
 	ld.w	%d15, [%a15]0
-.LVL25:
-	.loc 1 114 0 is_stmt 1 discriminator 1
+.LVL14:
+	.loc 1 114 0 discriminator 1
 	ne	%d2, %d15, 0
 	and.ne	%d2, %d15, %d3
-	jnz	%d2, .L9
+	jz	%d2, .L9
+	mov.a	%a15, %d15
+.LVL15:
+	j	.L7
+.LVL16:
+.L9:
 	.loc 1 117 0
 	st.a	[%a5]0, %a15
-.LVL26:
+.LVL17:
 	.loc 1 119 0
-	call	osEE_hal_restore_ctx
-.LVL27:
-	ret
+	j	osEE_hal_restore_ctx
+.LVL18:
 .LFE111:
 	.size	osEE_idle_task_terminate, .-osEE_idle_task_terminate
 .section .debug_frame,"",@progbits
@@ -137,10 +121,6 @@ osEE_idle_task_terminate:
 	.uaword	.Lframe0
 	.uaword	.LFB109
 	.uaword	.LFE109-.LFB109
-	.byte	0x4
-	.uaword	.LCFI0-.LFB109
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE0:
 .LSFDE2:
@@ -149,10 +129,6 @@ osEE_idle_task_terminate:
 	.uaword	.Lframe0
 	.uaword	.LFB110
 	.uaword	.LFE110-.LFB110
-	.byte	0x4
-	.uaword	.LCFI1-.LFB110
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE2:
 .LSFDE4:
@@ -161,34 +137,30 @@ osEE_idle_task_terminate:
 	.uaword	.Lframe0
 	.uaword	.LFB111
 	.uaword	.LFE111-.LFB111
-	.byte	0x4
-	.uaword	.LCFI2-.LFB111
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE4:
 .section .text,"ax",@progbits
 .Letext0:
 	.file 2 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
 	.file 3 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\tricore\\include\\stdint.h"
-	.file 4 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_platform_types.h"
-	.file 5 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
-	.file 6 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api_types.h"
-	.file 7 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
-	.file 8 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_kernel_types.h"
-	.file 9 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
-	.file 10 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_std_change_context.h"
+	.file 4 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_platform_types.h"
+	.file 5 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal_internal_types.h"
+	.file 6 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api_types.h"
+	.file 7 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
+	.file 8 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_kernel_types.h"
+	.file 9 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
+	.file 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-	.uaword	0x14c3
+	.uaword	0x14cd
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
-	.string	"C:\\SHIPAR~1\\TC275\\erika\\src\\ee_std_change_context.c"
+	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.c"
 	.uaword	.Ltext0
 	.uaword	.Letext0
 	.uaword	.Ldebug_line0
@@ -200,7 +172,7 @@ osEE_idle_task_terminate:
 	.string	"size_t"
 	.byte	0x2
 	.byte	0xd4
-	.uaword	0x172
+	.uaword	0x185
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x7
@@ -217,7 +189,7 @@ osEE_idle_task_terminate:
 	.string	"uint8_t"
 	.byte	0x3
 	.byte	0x2a
-	.uaword	0x1ac
+	.uaword	0x1bf
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
@@ -230,7 +202,7 @@ osEE_idle_task_terminate:
 	.string	"uint16_t"
 	.byte	0x3
 	.byte	0x36
-	.uaword	0x1da
+	.uaword	0x1ed
 	.uleb128 0x2
 	.byte	0x2
 	.byte	0x7
@@ -239,7 +211,7 @@ osEE_idle_task_terminate:
 	.string	"uint32_t"
 	.byte	0x3
 	.byte	0x50
-	.uaword	0x172
+	.uaword	0x185
 	.uleb128 0x2
 	.byte	0x8
 	.byte	0x5
@@ -256,34 +228,34 @@ osEE_idle_task_terminate:
 	.string	"OsEE_addr"
 	.byte	0x4
 	.byte	0x5a
-	.uaword	0x24c
+	.uaword	0x25f
 	.uleb128 0x4
 	.byte	0x4
 	.uleb128 0x3
 	.string	"OsEE_reg"
 	.byte	0x4
 	.byte	0x5b
-	.uaword	0x1f0
+	.uaword	0x203
 	.uleb128 0x3
 	.string	"OsEE_prio"
 	.byte	0x4
 	.byte	0x8d
-	.uaword	0x19d
+	.uaword	0x1b0
 	.uleb128 0x3
 	.string	"OsEE_isr_src_id"
 	.byte	0x4
 	.byte	0x92
-	.uaword	0x1ca
+	.uaword	0x1dd
 	.uleb128 0x5
 	.byte	0x4
 	.byte	0x5
 	.byte	0x74
-	.uaword	0x2dc
+	.uaword	0x2ef
 	.uleb128 0x6
 	.string	"pcxo"
 	.byte	0x5
 	.byte	0x75
-	.uaword	0x22b
+	.uaword	0x23e
 	.byte	0x4
 	.byte	0x10
 	.byte	0x10
@@ -292,7 +264,7 @@ osEE_idle_task_terminate:
 	.string	"pcxs"
 	.byte	0x5
 	.byte	0x76
-	.uaword	0x22b
+	.uaword	0x23e
 	.byte	0x4
 	.byte	0x4
 	.byte	0xc
@@ -301,7 +273,7 @@ osEE_idle_task_terminate:
 	.string	"ul"
 	.byte	0x5
 	.byte	0x7b
-	.uaword	0x22b
+	.uaword	0x23e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xb
@@ -310,7 +282,7 @@ osEE_idle_task_terminate:
 	.string	"pie"
 	.byte	0x5
 	.byte	0x7c
-	.uaword	0x22b
+	.uaword	0x23e
 	.byte	0x4
 	.byte	0x1
 	.byte	0xa
@@ -319,7 +291,7 @@ osEE_idle_task_terminate:
 	.string	"pcpn"
 	.byte	0x5
 	.byte	0x7d
-	.uaword	0x22b
+	.uaword	0x23e
 	.byte	0x4
 	.byte	0x8
 	.byte	0x2
@@ -329,179 +301,179 @@ osEE_idle_task_terminate:
 	.byte	0x4
 	.byte	0x5
 	.byte	0x72
-	.uaword	0x2fc
+	.uaword	0x30f
 	.uleb128 0x8
 	.string	"reg"
 	.byte	0x5
 	.byte	0x73
-	.uaword	0x24e
+	.uaword	0x261
 	.uleb128 0x8
 	.string	"bits"
 	.byte	0x5
 	.byte	0x82
-	.uaword	0x286
+	.uaword	0x299
 	.byte	0
 	.uleb128 0x3
 	.string	"OsEE_pcxi"
 	.byte	0x5
 	.byte	0x83
-	.uaword	0x2dc
+	.uaword	0x2ef
 	.uleb128 0x9
 	.string	"OsEE_CTX_tag"
 	.byte	0x10
 	.byte	0x5
 	.byte	0xf3
-	.uaword	0x357
+	.uaword	0x36a
 	.uleb128 0xa
 	.string	"p_ctx"
 	.byte	0x5
 	.byte	0xf4
-	.uaword	0x357
+	.uaword	0x36a
 	.byte	0
 	.uleb128 0xa
 	.string	"dummy"
 	.byte	0x5
 	.byte	0xf5
-	.uaword	0x24e
+	.uaword	0x261
 	.byte	0x4
 	.uleb128 0xa
 	.string	"pcxi"
 	.byte	0x5
 	.byte	0xf6
-	.uaword	0x2fc
+	.uaword	0x30f
 	.byte	0x8
 	.uleb128 0xa
 	.string	"ra"
 	.byte	0x5
 	.byte	0xf7
-	.uaword	0x23b
+	.uaword	0x24e
 	.byte	0xc
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x30d
+	.uaword	0x320
 	.uleb128 0x3
 	.string	"OsEE_CTX"
 	.byte	0x5
 	.byte	0xf8
-	.uaword	0x30d
+	.uaword	0x320
 	.uleb128 0x5
 	.byte	0x4
 	.byte	0x5
 	.byte	0xfb
-	.uaword	0x384
+	.uaword	0x397
 	.uleb128 0xa
 	.string	"p_tos"
 	.byte	0x5
 	.byte	0xfc
-	.uaword	0x384
+	.uaword	0x397
 	.byte	0
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x35d
+	.uaword	0x370
 	.uleb128 0x3
 	.string	"OsEE_SCB"
 	.byte	0x5
 	.byte	0xfd
-	.uaword	0x36d
+	.uaword	0x380
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x5
 	.uahalf	0x100
-	.uaword	0x3c7
+	.uaword	0x3da
 	.uleb128 0xd
 	.string	"p_bos"
 	.byte	0x5
 	.uahalf	0x101
-	.uaword	0x384
+	.uaword	0x397
 	.byte	0
 	.uleb128 0xd
 	.string	"stack_size"
 	.byte	0x5
 	.uahalf	0x105
-	.uaword	0x164
+	.uaword	0x177
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_SDB"
 	.byte	0x5
 	.uahalf	0x106
-	.uaword	0x3d8
+	.uaword	0x3eb
 	.uleb128 0xf
-	.uaword	0x39a
+	.uaword	0x3ad
 	.uleb128 0xc
 	.byte	0xc
 	.byte	0x5
 	.uahalf	0x10b
-	.uaword	0x417
+	.uaword	0x42a
 	.uleb128 0xd
 	.string	"p_sdb"
 	.byte	0x5
 	.uahalf	0x10c
-	.uaword	0x417
+	.uaword	0x42a
 	.byte	0
 	.uleb128 0xd
 	.string	"p_scb"
 	.byte	0x5
 	.uahalf	0x10d
-	.uaword	0x41d
+	.uaword	0x430
 	.byte	0x4
 	.uleb128 0xd
 	.string	"isr2_src"
 	.byte	0x5
 	.uahalf	0x10e
-	.uaword	0x26f
+	.uaword	0x282
 	.byte	0x8
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x3c7
+	.uaword	0x3da
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x38a
+	.uaword	0x39d
 	.uleb128 0xe
 	.string	"OsEE_HDB"
 	.byte	0x5
 	.uahalf	0x111
-	.uaword	0x434
+	.uaword	0x447
 	.uleb128 0xf
-	.uaword	0x3dd
+	.uaword	0x3f0
 	.uleb128 0x3
 	.string	"AppModeType"
 	.byte	0x6
 	.byte	0x60
-	.uaword	0x19d
+	.uaword	0x1b0
 	.uleb128 0x3
 	.string	"TaskType"
 	.byte	0x6
 	.byte	0x78
-	.uaword	0x24e
+	.uaword	0x261
 	.uleb128 0x3
 	.string	"TaskPrio"
 	.byte	0x6
 	.byte	0xc8
-	.uaword	0x25e
+	.uaword	0x271
 	.uleb128 0x3
 	.string	"TaskActivation"
 	.byte	0x6
 	.byte	0xf4
-	.uaword	0x19d
+	.uaword	0x1b0
 	.uleb128 0xe
 	.string	"TaskFunc"
 	.byte	0x6
 	.uahalf	0x13a
-	.uaword	0x493
+	.uaword	0x4a6
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x499
+	.uaword	0x4ac
 	.uleb128 0x10
 	.byte	0x1
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x6
 	.uahalf	0x145
-	.uaword	0x502
+	.uaword	0x515
 	.uleb128 0x12
 	.string	"OSEE_TASK_TYPE_BASIC"
 	.sleb128 0
@@ -519,17 +491,17 @@ osEE_idle_task_terminate:
 	.string	"OsEE_task_type"
 	.byte	0x6
 	.uahalf	0x153
-	.uaword	0x49b
+	.uaword	0x4ae
 	.uleb128 0xe
 	.string	"TaskExecutionType"
 	.byte	0x6
 	.uahalf	0x157
-	.uaword	0x502
+	.uaword	0x515
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x6
 	.uahalf	0x15d
-	.uaword	0x5bb
+	.uaword	0x5ce
 	.uleb128 0x12
 	.string	"OSEE_TASK_SUSPENDED"
 	.sleb128 0
@@ -553,55 +525,55 @@ osEE_idle_task_terminate:
 	.string	"OsEE_task_status"
 	.byte	0x6
 	.uahalf	0x16e
-	.uaword	0x533
+	.uaword	0x546
 	.uleb128 0xe
 	.string	"TaskStateType"
 	.byte	0x6
 	.uahalf	0x17e
-	.uaword	0x5bb
+	.uaword	0x5ce
 	.uleb128 0xe
 	.string	"TickType"
 	.byte	0x6
 	.uahalf	0x19e
-	.uaword	0x24e
+	.uaword	0x261
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x6
 	.uahalf	0x1b7
-	.uaword	0x634
+	.uaword	0x647
 	.uleb128 0xd
 	.string	"maxallowedvalue"
 	.byte	0x6
 	.uahalf	0x1b9
-	.uaword	0x5ea
+	.uaword	0x5fd
 	.byte	0
 	.uleb128 0xd
 	.string	"ticksperbase"
 	.byte	0x6
 	.uahalf	0x1bc
-	.uaword	0x5ea
+	.uaword	0x5fd
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.string	"AlarmBaseType"
 	.byte	0x6
 	.uahalf	0x1c2
-	.uaword	0x5fb
+	.uaword	0x60e
 	.uleb128 0xe
 	.string	"EventMaskType"
 	.byte	0x6
 	.uahalf	0x237
-	.uaword	0x24e
+	.uaword	0x261
 	.uleb128 0xe
 	.string	"MemSize"
 	.byte	0x6
 	.uahalf	0x2a3
-	.uaword	0x164
+	.uaword	0x177
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x6
 	.uahalf	0x2b1
-	.uaword	0x893
+	.uaword	0x8a6
 	.uleb128 0x12
 	.string	"E_OK"
 	.sleb128 0
@@ -694,122 +666,122 @@ osEE_idle_task_terminate:
 	.string	"OsEE_status_type"
 	.byte	0x6
 	.uahalf	0x2d4
-	.uaword	0x670
+	.uaword	0x683
 	.uleb128 0xe
 	.string	"StatusType"
 	.byte	0x6
 	.uahalf	0x2d9
-	.uaword	0x893
+	.uaword	0x8a6
 	.uleb128 0x9
 	.string	"OsEE_SN_tag"
 	.byte	0x8
 	.byte	0x7
 	.byte	0x4b
-	.uaword	0x8ee
+	.uaword	0x901
 	.uleb128 0x13
 	.uaword	.LASF0
 	.byte	0x7
 	.byte	0x4d
-	.uaword	0x8ee
+	.uaword	0x901
 	.byte	0
 	.uleb128 0xa
 	.string	"p_tdb"
 	.byte	0x7
 	.byte	0x4f
-	.uaword	0x99d
+	.uaword	0x9b0
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x8bf
+	.uaword	0x8d2
 	.uleb128 0x14
 	.string	"OsEE_TDB_tag"
 	.byte	0x20
 	.byte	0x8
 	.uahalf	0x108
-	.uaword	0x99d
+	.uaword	0x9b0
 	.uleb128 0xd
 	.string	"hdb"
 	.byte	0x8
 	.uahalf	0x10b
-	.uaword	0x423
+	.uaword	0x436
 	.byte	0
 	.uleb128 0xd
 	.string	"p_tcb"
 	.byte	0x8
 	.uahalf	0x10e
-	.uaword	0xbb2
+	.uaword	0xbc5
 	.byte	0xc
 	.uleb128 0xd
 	.string	"tid"
 	.byte	0x8
 	.uahalf	0x110
-	.uaword	0x44c
+	.uaword	0x45f
 	.byte	0x10
 	.uleb128 0xd
 	.string	"task_type"
 	.byte	0x8
 	.uahalf	0x112
-	.uaword	0x519
+	.uaword	0x52c
 	.byte	0x14
 	.uleb128 0xd
 	.string	"task_func"
 	.byte	0x8
 	.uahalf	0x114
-	.uaword	0x482
+	.uaword	0x495
 	.byte	0x18
 	.uleb128 0xd
 	.string	"ready_prio"
 	.byte	0x8
 	.uahalf	0x117
-	.uaword	0x45c
+	.uaword	0x46f
 	.byte	0x1c
 	.uleb128 0xd
 	.string	"dispatch_prio"
 	.byte	0x8
 	.uahalf	0x11a
-	.uaword	0x45c
+	.uaword	0x46f
 	.byte	0x1d
 	.uleb128 0xd
 	.string	"max_num_of_act"
 	.byte	0x8
 	.uahalf	0x11c
-	.uaword	0x46c
+	.uaword	0x47f
 	.byte	0x1e
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x9a3
+	.uaword	0x9b6
 	.uleb128 0xf
-	.uaword	0x8f4
+	.uaword	0x907
 	.uleb128 0x3
 	.string	"OsEE_SN"
 	.byte	0x7
 	.byte	0x50
-	.uaword	0x8bf
+	.uaword	0x8d2
 	.uleb128 0x3
 	.string	"OsEE_RQ"
 	.byte	0x7
 	.byte	0xd5
-	.uaword	0x9c6
+	.uaword	0x9d9
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x9a8
+	.uaword	0x9bb
 	.uleb128 0x3
 	.string	"OsEE_kernel_cb"
 	.byte	0x8
 	.byte	0x51
-	.uaword	0x493
+	.uaword	0x4a6
 	.uleb128 0x3
 	.string	"OsEE_byte"
 	.byte	0x8
 	.byte	0x53
-	.uaword	0x19d
+	.uaword	0x1b0
 	.uleb128 0x15
 	.byte	0x1
 	.byte	0x8
 	.byte	0x73
-	.uaword	0xa5a
+	.uaword	0xa6d
 	.uleb128 0x12
 	.string	"OSEE_KERNEL_INITIALIZED"
 	.sleb128 0
@@ -827,29 +799,29 @@ osEE_idle_task_terminate:
 	.string	"OsEE_kernel_status"
 	.byte	0x8
 	.byte	0x7d
-	.uaword	0x9f3
+	.uaword	0xa06
 	.uleb128 0x5
 	.byte	0xc
 	.byte	0x8
 	.byte	0x90
-	.uaword	0xaab
+	.uaword	0xabe
 	.uleb128 0x13
 	.uaword	.LASF0
 	.byte	0x8
 	.byte	0x94
-	.uaword	0xadb
+	.uaword	0xaee
 	.byte	0
 	.uleb128 0xa
 	.string	"prev_prio"
 	.byte	0x8
 	.byte	0x97
-	.uaword	0x45c
+	.uaword	0x46f
 	.byte	0x4
 	.uleb128 0xa
 	.string	"p_owner"
 	.byte	0x8
 	.byte	0x9a
-	.uaword	0x99d
+	.uaword	0x9b0
 	.byte	0x8
 	.byte	0
 	.uleb128 0x9
@@ -857,196 +829,196 @@ osEE_idle_task_terminate:
 	.byte	0x8
 	.byte	0x8
 	.byte	0xb5
-	.uaword	0xadb
+	.uaword	0xaee
 	.uleb128 0xa
 	.string	"p_cb"
 	.byte	0x8
 	.byte	0xb7
-	.uaword	0xaf6
+	.uaword	0xb09
 	.byte	0
 	.uleb128 0xa
 	.string	"prio"
 	.byte	0x8
 	.byte	0xc3
-	.uaword	0x45c
+	.uaword	0x46f
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xae1
+	.uaword	0xaf4
 	.uleb128 0xf
-	.uaword	0xaab
+	.uaword	0xabe
 	.uleb128 0x3
 	.string	"OsEE_MCB"
 	.byte	0x8
 	.byte	0x9b
-	.uaword	0xa74
+	.uaword	0xa87
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xae6
+	.uaword	0xaf9
 	.uleb128 0x3
 	.string	"OsEE_MDB"
 	.byte	0x8
 	.byte	0xce
-	.uaword	0xae1
+	.uaword	0xaf4
 	.uleb128 0x5
 	.byte	0x14
 	.byte	0x8
 	.byte	0xe0
-	.uaword	0xb9b
+	.uaword	0xbae
 	.uleb128 0xa
 	.string	"current_num_of_act"
 	.byte	0x8
 	.byte	0xe4
-	.uaword	0x46c
+	.uaword	0x47f
 	.byte	0
 	.uleb128 0xa
 	.string	"current_prio"
 	.byte	0x8
 	.byte	0xea
-	.uaword	0x45c
+	.uaword	0x46f
 	.byte	0x1
 	.uleb128 0xa
 	.string	"status"
 	.byte	0x8
 	.byte	0xec
-	.uaword	0x5d4
+	.uaword	0x5e7
 	.byte	0x2
 	.uleb128 0xa
 	.string	"p_last_m"
 	.byte	0x8
 	.byte	0xef
-	.uaword	0xb9b
+	.uaword	0xbae
 	.byte	0x4
 	.uleb128 0xa
 	.string	"wait_mask"
 	.byte	0x8
 	.byte	0xf3
-	.uaword	0x64a
+	.uaword	0x65d
 	.byte	0x8
 	.uleb128 0xa
 	.string	"event_mask"
 	.byte	0x8
 	.byte	0xf5
-	.uaword	0x64a
+	.uaword	0x65d
 	.byte	0xc
 	.uleb128 0xa
 	.string	"p_own_sn"
 	.byte	0x8
 	.byte	0xfb
-	.uaword	0x9c6
+	.uaword	0x9d9
 	.byte	0x10
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xafc
+	.uaword	0xb0f
 	.uleb128 0xe
 	.string	"OsEE_TCB"
 	.byte	0x8
 	.uahalf	0x101
-	.uaword	0xb0c
+	.uaword	0xb1f
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xba1
+	.uaword	0xbb4
 	.uleb128 0xe
 	.string	"OsEE_TDB"
 	.byte	0x8
 	.uahalf	0x122
-	.uaword	0x9a3
+	.uaword	0x9b6
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xbb8
+	.uaword	0xbcb
 	.uleb128 0xe
 	.string	"OsEE_TriggerQ"
 	.byte	0x8
 	.uahalf	0x151
-	.uaword	0xbe5
+	.uaword	0xbf8
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xbeb
+	.uaword	0xbfe
 	.uleb128 0xf
-	.uaword	0xbf0
+	.uaword	0xc03
 	.uleb128 0x14
 	.string	"OsEE_TriggerDB_tag"
 	.byte	0x1c
 	.byte	0x8
 	.uahalf	0x269
-	.uaword	0xc40
+	.uaword	0xc53
 	.uleb128 0xd
 	.string	"p_trigger_cb"
 	.byte	0x8
 	.uahalf	0x26b
-	.uaword	0xee4
+	.uaword	0xef7
 	.byte	0
 	.uleb128 0x16
 	.uaword	.LASF1
 	.byte	0x8
 	.uahalf	0x26d
-	.uaword	0xd8d
+	.uaword	0xda0
 	.byte	0x4
 	.uleb128 0xd
 	.string	"action"
 	.byte	0x8
 	.uahalf	0x27b
-	.uaword	0xdd4
+	.uaword	0xde7
 	.byte	0x8
 	.byte	0
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x8
 	.uahalf	0x155
-	.uaword	0xc70
+	.uaword	0xc83
 	.uleb128 0xd
 	.string	"trigger_queue"
 	.byte	0x8
 	.uahalf	0x157
-	.uaword	0xbcf
+	.uaword	0xbe2
 	.byte	0
 	.uleb128 0xd
 	.string	"value"
 	.byte	0x8
 	.uahalf	0x159
-	.uaword	0x5ea
+	.uaword	0x5fd
 	.byte	0x4
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_CounterCB"
 	.byte	0x8
 	.uahalf	0x15e
-	.uaword	0xc40
+	.uaword	0xc53
 	.uleb128 0xc
 	.byte	0xc
 	.byte	0x8
 	.uahalf	0x16f
-	.uaword	0xcb5
+	.uaword	0xcc8
 	.uleb128 0xd
 	.string	"p_counter_cb"
 	.byte	0x8
 	.uahalf	0x171
-	.uaword	0xcb5
+	.uaword	0xcc8
 	.byte	0
 	.uleb128 0xd
 	.string	"info"
 	.byte	0x8
 	.uahalf	0x177
-	.uaword	0x634
+	.uaword	0x647
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xc70
+	.uaword	0xc83
 	.uleb128 0xe
 	.string	"OsEE_CounterDB"
 	.byte	0x8
 	.uahalf	0x17c
-	.uaword	0xcd2
+	.uaword	0xce5
 	.uleb128 0xf
-	.uaword	0xc87
+	.uaword	0xc9a
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x8
 	.uahalf	0x17f
-	.uaword	0xd35
+	.uaword	0xd48
 	.uleb128 0x12
 	.string	"OSEE_ACTION_TASK"
 	.sleb128 0
@@ -1064,75 +1036,75 @@ osEE_idle_task_terminate:
 	.string	"OsEE_action_type"
 	.byte	0x8
 	.uahalf	0x184
-	.uaword	0xcd7
+	.uaword	0xcea
 	.uleb128 0xc
 	.byte	0x10
 	.byte	0x8
 	.uahalf	0x189
-	.uaword	0xd8d
+	.uaword	0xda0
 	.uleb128 0xd
 	.string	"f"
 	.byte	0x8
 	.uahalf	0x18b
-	.uaword	0x9cc
+	.uaword	0x9df
 	.byte	0
 	.uleb128 0xd
 	.string	"p_tdb"
 	.byte	0x8
 	.uahalf	0x18d
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.byte	0x4
 	.uleb128 0x16
 	.uaword	.LASF1
 	.byte	0x8
 	.uahalf	0x18f
-	.uaword	0xd8d
+	.uaword	0xda0
 	.byte	0x8
 	.uleb128 0xd
 	.string	"mask"
 	.byte	0x8
 	.uahalf	0x192
-	.uaword	0x64a
+	.uaword	0x65d
 	.byte	0xc
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xcbb
+	.uaword	0xcce
 	.uleb128 0xe
 	.string	"OsEE_action_param"
 	.byte	0x8
 	.uahalf	0x194
-	.uaword	0xd4e
+	.uaword	0xd61
 	.uleb128 0xc
 	.byte	0x14
 	.byte	0x8
 	.uahalf	0x198
-	.uaword	0xdd4
+	.uaword	0xde7
 	.uleb128 0xd
 	.string	"param"
 	.byte	0x8
 	.uahalf	0x19a
-	.uaword	0xd93
+	.uaword	0xda6
 	.byte	0
 	.uleb128 0xd
 	.string	"type"
 	.byte	0x8
 	.uahalf	0x19c
-	.uaword	0xd35
+	.uaword	0xd48
 	.byte	0x10
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_action"
 	.byte	0x8
 	.uahalf	0x19d
-	.uaword	0xde8
+	.uaword	0xdfb
 	.uleb128 0xf
-	.uaword	0xdad
+	.uaword	0xdc0
 	.uleb128 0x11
 	.byte	0x1
 	.byte	0x8
 	.uahalf	0x22b
-	.uaword	0xe6d
+	.uaword	0xe80
 	.uleb128 0x12
 	.string	"OSEE_TRIGGER_INACTIVE"
 	.sleb128 0
@@ -1153,280 +1125,280 @@ osEE_idle_task_terminate:
 	.string	"OsEE_trigger_status"
 	.byte	0x8
 	.uahalf	0x231
-	.uaword	0xded
+	.uaword	0xe00
 	.uleb128 0xc
 	.byte	0x10
 	.byte	0x8
 	.uahalf	0x242
-	.uaword	0xecd
+	.uaword	0xee0
 	.uleb128 0x16
 	.uaword	.LASF0
 	.byte	0x8
 	.uahalf	0x244
-	.uaword	0xbe5
+	.uaword	0xbf8
 	.byte	0
 	.uleb128 0xd
 	.string	"when"
 	.byte	0x8
 	.uahalf	0x247
-	.uaword	0x5ea
+	.uaword	0x5fd
 	.byte	0x4
 	.uleb128 0xd
 	.string	"status"
 	.byte	0x8
 	.uahalf	0x249
-	.uaword	0xe6d
+	.uaword	0xe80
 	.byte	0x8
 	.uleb128 0xd
 	.string	"cycle"
 	.byte	0x8
 	.uahalf	0x24d
-	.uaword	0x5ea
+	.uaword	0x5fd
 	.byte	0xc
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_TriggerCB"
 	.byte	0x8
 	.uahalf	0x25e
-	.uaword	0xe89
+	.uaword	0xe9c
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xecd
+	.uaword	0xee0
 	.uleb128 0xc
 	.byte	0x20
 	.byte	0x8
 	.uahalf	0x2d9
-	.uaword	0xfef
+	.uaword	0x1002
 	.uleb128 0xd
 	.string	"p_curr"
 	.byte	0x8
 	.uahalf	0x2dc
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.byte	0
 	.uleb128 0xd
 	.string	"rq"
 	.byte	0x8
 	.uahalf	0x2ee
-	.uaword	0x9b7
+	.uaword	0x9ca
 	.byte	0x4
 	.uleb128 0xd
 	.string	"p_free_sn"
 	.byte	0x8
 	.uahalf	0x2f0
-	.uaword	0x9c6
+	.uaword	0x9d9
 	.byte	0x8
 	.uleb128 0xd
 	.string	"p_stk_sn"
 	.byte	0x8
 	.uahalf	0x2ff
-	.uaword	0x9c6
+	.uaword	0x9d9
 	.byte	0xc
 	.uleb128 0xd
 	.string	"os_status"
 	.byte	0x8
 	.uahalf	0x301
-	.uaword	0xfef
+	.uaword	0x1002
 	.byte	0x10
 	.uleb128 0xd
 	.string	"app_mode"
 	.byte	0x8
 	.uahalf	0x305
-	.uaword	0x439
+	.uaword	0x44c
 	.byte	0x11
 	.uleb128 0xd
 	.string	"last_error"
 	.byte	0x8
 	.uahalf	0x307
-	.uaword	0x8ac
+	.uaword	0x8bf
 	.byte	0x12
 	.uleb128 0xd
 	.string	"prev_s_isr_all_status"
 	.byte	0x8
 	.uahalf	0x327
-	.uaword	0x24e
+	.uaword	0x261
 	.byte	0x14
 	.uleb128 0xd
 	.string	"prev_s_isr_os_status"
 	.byte	0x8
 	.uahalf	0x329
-	.uaword	0x24e
+	.uaword	0x261
 	.byte	0x18
 	.uleb128 0xd
 	.string	"s_isr_all_cnt"
 	.byte	0x8
 	.uahalf	0x32b
-	.uaword	0x9e2
+	.uaword	0x9f5
 	.byte	0x1c
 	.uleb128 0xd
 	.string	"s_isr_os_cnt"
 	.byte	0x8
 	.uahalf	0x32d
-	.uaword	0x9e2
+	.uaword	0x9f5
 	.byte	0x1d
 	.uleb128 0xd
 	.string	"d_isr_all_cnt"
 	.byte	0x8
 	.uahalf	0x330
-	.uaword	0x9e2
+	.uaword	0x9f5
 	.byte	0x1e
 	.byte	0
 	.uleb128 0x17
-	.uaword	0xa5a
+	.uaword	0xa6d
 	.uleb128 0xe
 	.string	"OsEE_CCB"
 	.byte	0x8
 	.uahalf	0x33a
-	.uaword	0xeea
+	.uaword	0xefd
 	.uleb128 0xc
 	.byte	0x8
 	.byte	0x8
 	.uahalf	0x344
-	.uaword	0x1033
+	.uaword	0x1046
 	.uleb128 0xd
 	.string	"p_ccb"
 	.byte	0x8
 	.uahalf	0x34a
-	.uaword	0x1033
+	.uaword	0x1046
 	.byte	0
 	.uleb128 0xd
 	.string	"p_idle_task"
 	.byte	0x8
 	.uahalf	0x354
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.byte	0x4
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xff4
+	.uaword	0x1007
 	.uleb128 0xe
 	.string	"OsEE_CDB"
 	.byte	0x8
 	.uahalf	0x36a
-	.uaword	0x104a
+	.uaword	0x105d
 	.uleb128 0xf
-	.uaword	0x1005
+	.uaword	0x1018
 	.uleb128 0xc
 	.byte	0x4
 	.byte	0x8
 	.uahalf	0x36f
-	.uaword	0x1068
+	.uaword	0x107b
 	.uleb128 0xd
 	.string	"dummy"
 	.byte	0x8
 	.uahalf	0x3b1
-	.uaword	0x24e
+	.uaword	0x261
 	.byte	0
 	.byte	0
 	.uleb128 0xe
 	.string	"OsEE_KCB"
 	.byte	0x8
 	.uahalf	0x3b3
-	.uaword	0x104f
+	.uaword	0x1062
 	.uleb128 0xc
 	.byte	0x24
 	.byte	0x8
 	.uahalf	0x3c3
-	.uaword	0x1162
+	.uaword	0x1175
 	.uleb128 0xd
 	.string	"p_kcb"
 	.byte	0x8
 	.uahalf	0x3c5
-	.uaword	0x1162
+	.uaword	0x1175
 	.byte	0
 	.uleb128 0xd
 	.string	"p_tdb_ptr_array"
 	.byte	0x8
 	.uahalf	0x3d1
-	.uaword	0x1173
+	.uaword	0x1186
 	.byte	0x4
 	.uleb128 0xd
 	.string	"tdb_array_size"
 	.byte	0x8
 	.uahalf	0x3d4
-	.uaword	0x660
+	.uaword	0x673
 	.byte	0x8
 	.uleb128 0xd
 	.string	"p_res_ptr_array"
 	.byte	0x8
 	.uahalf	0x3e0
-	.uaword	0x1184
+	.uaword	0x1197
 	.byte	0xc
 	.uleb128 0xd
 	.string	"res_array_size"
 	.byte	0x8
 	.uahalf	0x3e2
-	.uaword	0x660
+	.uaword	0x673
 	.byte	0x10
 	.uleb128 0xd
 	.string	"p_counter_ptr_array"
 	.byte	0x8
 	.uahalf	0x3e6
-	.uaword	0x119b
+	.uaword	0x11ae
 	.byte	0x14
 	.uleb128 0xd
 	.string	"counter_array_size"
 	.byte	0x8
 	.uahalf	0x3e8
-	.uaword	0x660
+	.uaword	0x673
 	.byte	0x18
 	.uleb128 0xd
 	.string	"p_alarm_ptr_array"
 	.byte	0x8
 	.uahalf	0x3eb
-	.uaword	0x11ac
+	.uaword	0x11bf
 	.byte	0x1c
 	.uleb128 0xd
 	.string	"alarm_array_size"
 	.byte	0x8
 	.uahalf	0x3ed
-	.uaword	0x660
+	.uaword	0x673
 	.byte	0x20
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1068
+	.uaword	0x107b
 	.uleb128 0x18
-	.uaword	0x99d
-	.uaword	0x1173
+	.uaword	0x9b0
+	.uaword	0x1186
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1168
+	.uaword	0x117b
 	.uleb128 0x18
-	.uaword	0xadb
-	.uaword	0x1184
+	.uaword	0xaee
+	.uaword	0x1197
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1179
+	.uaword	0x118c
 	.uleb128 0x18
-	.uaword	0x1195
-	.uaword	0x1195
+	.uaword	0x11a8
+	.uaword	0x11a8
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0xcd2
+	.uaword	0xce5
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x118a
+	.uaword	0x119d
 	.uleb128 0x18
-	.uaword	0xbe5
-	.uaword	0x11ac
+	.uaword	0xbf8
+	.uaword	0x11bf
 	.uleb128 0x19
 	.byte	0
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x11a1
+	.uaword	0x11b4
 	.uleb128 0xe
 	.string	"OsEE_KDB"
 	.byte	0x8
 	.uahalf	0x3fc
-	.uaword	0x11c3
+	.uaword	0x11d6
 	.uleb128 0xf
-	.uaword	0x1079
+	.uaword	0x108c
 	.uleb128 0x1a
 	.byte	0x1
 	.string	"osEE_change_context_from_running"
@@ -1438,29 +1410,30 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x1255
+	.uaword	0x1262
 	.uleb128 0x1b
 	.string	"p_from"
 	.byte	0x1
 	.byte	0x3b
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.uaword	.LLST0
 	.uleb128 0x1b
 	.string	"p_to"
 	.byte	0x1
 	.byte	0x3c
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.uaword	.LLST1
 	.uleb128 0x1c
 	.uaword	.LASF2
 	.byte	0x1
 	.byte	0x3f
-	.uaword	0x1255
+	.uaword	0x1262
 	.uaword	.LLST2
 	.uleb128 0x1d
-	.uaword	.LVL4
-	.uaword	0x13fa
-	.uaword	0x1243
+	.uaword	.LVL3
+	.byte	0x1
+	.uaword	0x1404
+	.uaword	0x1257
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -1470,24 +1443,17 @@ osEE_idle_task_terminate:
 	.byte	0x65
 	.byte	0
 	.uleb128 0x1f
-	.uaword	.LVL8
-	.uaword	0x1436
-	.uleb128 0x1e
+	.uaword	.LVL4
 	.byte	0x1
-	.byte	0x64
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x65
-	.byte	0
+	.uaword	0x1440
 	.byte	0
 	.uleb128 0xf
-	.uaword	0x125a
+	.uaword	0x1267
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x1260
+	.uaword	0x126d
 	.uleb128 0xf
-	.uaword	0xba1
+	.uaword	0xbb4
 	.uleb128 0x1a
 	.byte	0x1
 	.string	"osEE_change_context_from_task_end"
@@ -1499,29 +1465,30 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x12f3
+	.uaword	0x12fa
 	.uleb128 0x1b
 	.string	"p_from"
 	.byte	0x1
 	.byte	0x4f
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.uaword	.LLST3
 	.uleb128 0x1b
 	.string	"p_to"
 	.byte	0x1
 	.byte	0x50
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.uaword	.LLST4
 	.uleb128 0x1c
 	.uaword	.LASF2
 	.byte	0x1
 	.byte	0x53
-	.uaword	0x1255
+	.uaword	0x1262
 	.uaword	.LLST5
 	.uleb128 0x1d
-	.uaword	.LVL13
-	.uaword	0x1474
-	.uaword	0x12e1
+	.uaword	.LVL8
+	.byte	0x1
+	.uaword	0x147e
+	.uaword	0x12ef
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -1531,16 +1498,9 @@ osEE_idle_task_terminate:
 	.byte	0x65
 	.byte	0
 	.uleb128 0x1f
-	.uaword	.LVL17
-	.uaword	0x149e
-	.uleb128 0x1e
+	.uaword	.LVL9
 	.byte	0x1
-	.byte	0x64
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x65
-	.byte	0
+	.uaword	0x14a8
 	.byte	0
 	.uleb128 0x1a
 	.byte	0x1
@@ -1553,138 +1513,138 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-	.uaword	0x13a9
+	.uaword	0x13b3
 	.uleb128 0x1b
 	.string	"p_idle_tdb"
 	.byte	0x1
 	.byte	0x64
-	.uaword	0xbc9
+	.uaword	0xbdc
 	.uaword	.LLST6
 	.uleb128 0x20
 	.string	"p_ctx"
 	.byte	0x1
 	.byte	0x67
-	.uaword	0x384
-	.byte	0x1
-	.byte	0x6f
-	.uleb128 0x21
+	.uaword	0x397
+	.uaword	.LLST7
+	.uleb128 0x20
 	.string	"p_idle_hdb"
 	.byte	0x1
 	.byte	0x69
-	.uaword	0x13a9
-	.uaword	.LLST7
-	.uleb128 0x21
+	.uaword	0x13b3
+	.uaword	.LLST6
+	.uleb128 0x20
 	.string	"p_sdb"
 	.byte	0x1
 	.byte	0x6a
-	.uaword	0x13b4
-	.uaword	.LLST8
-	.uleb128 0x21
+	.uaword	0x13be
+	.uaword	.LLST9
+	.uleb128 0x20
 	.string	"p_scb"
 	.byte	0x1
 	.byte	0x6b
-	.uaword	0x13b9
-	.uaword	.LLST9
-	.uleb128 0x21
+	.uaword	0x13c3
+	.uaword	.LLST10
+	.uleb128 0x20
 	.string	"p_bos"
 	.byte	0x1
 	.byte	0x6c
-	.uaword	0x13be
-	.uaword	.LLST10
-	.uleb128 0x21
+	.uaword	0x13c8
+	.uaword	.LLST11
+	.uleb128 0x20
 	.string	"p_tos"
 	.byte	0x1
 	.byte	0x6d
-	.uaword	0x384
-	.uaword	.LLST11
-	.uleb128 0x22
-	.uaword	.LVL27
-	.uaword	0x1474
+	.uaword	0x397
+	.uaword	.LLST12
+	.uleb128 0x1f
+	.uaword	.LVL18
+	.byte	0x1
+	.uaword	0x147e
 	.byte	0
 	.uleb128 0xf
-	.uaword	0x13ae
+	.uaword	0x13b8
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x423
+	.uaword	0x436
 	.uleb128 0xf
-	.uaword	0x417
+	.uaword	0x42a
 	.uleb128 0xf
-	.uaword	0x41d
+	.uaword	0x430
 	.uleb128 0xf
-	.uaword	0x13c3
+	.uaword	0x13cd
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x13c9
+	.uaword	0x13d3
 	.uleb128 0xf
-	.uaword	0x35d
-	.uleb128 0x23
+	.uaword	0x370
+	.uleb128 0x21
 	.string	"osEE_kdb_var"
 	.byte	0x9
 	.byte	0x42
-	.uaword	0x11b2
+	.uaword	0x11c5
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x21
 	.string	"osEE_cdb_var"
 	.byte	0x9
 	.byte	0x5b
-	.uaword	0x1039
+	.uaword	0x104c
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x24
+	.uleb128 0x22
 	.byte	0x1
 	.string	"osEE_hal_save_ctx_and_restore_ctx"
 	.byte	0xa
 	.byte	0x59
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x1436
-	.uleb128 0x25
-	.uaword	0xbc9
-	.uleb128 0x25
-	.uaword	0x41d
-	.uleb128 0x25
-	.uaword	0x41d
+	.uaword	0x1440
+	.uleb128 0x23
+	.uaword	0xbdc
+	.uleb128 0x23
+	.uaword	0x430
+	.uleb128 0x23
+	.uaword	0x430
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x22
 	.byte	0x1
 	.string	"osEE_hal_save_ctx_and_ready2stacked"
 	.byte	0xa
 	.byte	0x68
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x1474
-	.uleb128 0x25
-	.uaword	0xbc9
-	.uleb128 0x25
-	.uaword	0x41d
-	.uleb128 0x25
-	.uaword	0x41d
+	.uaword	0x147e
+	.uleb128 0x23
+	.uaword	0xbdc
+	.uleb128 0x23
+	.uaword	0x430
+	.uleb128 0x23
+	.uaword	0x430
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x22
 	.byte	0x1
 	.string	"osEE_hal_restore_ctx"
 	.byte	0xa
 	.byte	0x61
 	.byte	0x1
 	.byte	0x1
-	.uaword	0x149e
-	.uleb128 0x25
-	.uaword	0xbc9
-	.uleb128 0x25
-	.uaword	0x41d
+	.uaword	0x14a8
+	.uleb128 0x23
+	.uaword	0xbdc
+	.uleb128 0x23
+	.uaword	0x430
 	.byte	0
-	.uleb128 0x26
+	.uleb128 0x24
 	.byte	0x1
 	.string	"osEE_hal_ready2stacked"
 	.byte	0xa
 	.byte	0x70
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x25
-	.uaword	0xbc9
-	.uleb128 0x25
-	.uaword	0x41d
+	.uleb128 0x23
+	.uaword	0xbdc
+	.uleb128 0x23
+	.uaword	0x430
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits
@@ -2052,6 +2012,8 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x2115
+	.uleb128 0xc
 	.uleb128 0x31
 	.uleb128 0x13
 	.uleb128 0x1
@@ -2069,9 +2031,11 @@ osEE_idle_task_terminate:
 	.byte	0
 	.uleb128 0x1f
 	.uleb128 0x4109
-	.byte	0x1
+	.byte	0
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x2115
+	.uleb128 0xc
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
@@ -2088,34 +2052,10 @@ osEE_idle_task_terminate:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
-	.uleb128 0xa
-	.byte	0
-	.byte	0
-	.uleb128 0x21
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x22
-	.uleb128 0x4109
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x23
+	.uleb128 0x21
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -2132,7 +2072,7 @@ osEE_idle_task_terminate:
 	.uleb128 0xc
 	.byte	0
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x22
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2151,14 +2091,14 @@ osEE_idle_task_terminate:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x25
+	.uleb128 0x23
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x26
+	.uleb128 0x24
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -2180,18 +2120,10 @@ osEE_idle_task_terminate:
 .Ldebug_loc0:
 .LLST0:
 	.uaword	.LVL0-.Ltext0
-	.uaword	.LVL2-.Ltext0
+	.uaword	.LVL1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL2-.Ltext0
-	.uaword	.LVL5-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL6-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL6-.Ltext0
+	.uaword	.LVL1-.Ltext0
 	.uaword	.LFE109-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
@@ -2199,29 +2131,25 @@ osEE_idle_task_terminate:
 	.uaword	0
 .LLST1:
 	.uaword	.LVL0-.Ltext0
-	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL2-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
-	.uaword	.LVL3-.Ltext0
-	.uaword	.LVL4-1-.Ltext0
+	.uaword	.LVL2-.Ltext0
+	.uaword	.LVL3-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL4-1-.Ltext0
-	.uaword	.LVL5-.Ltext0
+	.uaword	.LVL3-1-.Ltext0
+	.uaword	.LVL3-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x65
 	.byte	0x9f
-	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL7-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	.LVL7-.Ltext0
-	.uaword	.LVL8-1-.Ltext0
+	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL4-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL8-1-.Ltext0
+	.uaword	.LVL4-1-.Ltext0
 	.uaword	.LFE109-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2231,38 +2159,27 @@ osEE_idle_task_terminate:
 	.uaword	0
 	.uaword	0
 .LLST2:
-	.uaword	.LVL1-.Ltext0
-	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL0-.Ltext0
+	.uaword	.LVL2-.Ltext0
 	.uahalf	0x2
 	.byte	0x85
 	.sleb128 12
-	.uaword	.LVL3-.Ltext0
-	.uaword	.LVL4-1-.Ltext0
+	.uaword	.LVL2-.Ltext0
+	.uaword	.LVL3-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
-	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL8-1-.Ltext0
+	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL4-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
 	.uaword	0
 	.uaword	0
 .LLST3:
-	.uaword	.LVL9-.Ltext0
-	.uaword	.LVL11-.Ltext0
+	.uaword	.LVL5-.Ltext0
+	.uaword	.LVL6-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL11-.Ltext0
-	.uaword	.LVL14-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x64
-	.byte	0x9f
-	.uaword	.LVL14-.Ltext0
-	.uaword	.LVL15-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL15-.Ltext0
+	.uaword	.LVL6-.Ltext0
 	.uaword	.LFE110-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2272,30 +2189,26 @@ osEE_idle_task_terminate:
 	.uaword	0
 	.uaword	0
 .LLST4:
-	.uaword	.LVL9-.Ltext0
-	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL5-.Ltext0
+	.uaword	.LVL7-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
-	.uaword	.LVL12-.Ltext0
-	.uaword	.LVL13-1-.Ltext0
+	.uaword	.LVL7-.Ltext0
+	.uaword	.LVL8-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL13-1-.Ltext0
-	.uaword	.LVL14-.Ltext0
+	.uaword	.LVL8-1-.Ltext0
+	.uaword	.LVL8-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x65
 	.byte	0x9f
-	.uaword	.LVL14-.Ltext0
-	.uaword	.LVL16-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	.LVL16-.Ltext0
-	.uaword	.LVL17-1-.Ltext0
+	.uaword	.LVL8-.Ltext0
+	.uaword	.LVL9-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL17-1-.Ltext0
+	.uaword	.LVL9-1-.Ltext0
 	.uaword	.LFE110-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2305,23 +2218,23 @@ osEE_idle_task_terminate:
 	.uaword	0
 	.uaword	0
 .LLST5:
-	.uaword	.LVL10-.Ltext0
-	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL5-.Ltext0
+	.uaword	.LVL7-.Ltext0
 	.uahalf	0x2
 	.byte	0x85
 	.sleb128 12
-	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL7-.Ltext0
 	.uaword	.LFE110-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST6:
-	.uaword	.LVL18-.Ltext0
-	.uaword	.LVL27-1-.Ltext0
+	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL18-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL27-1-.Ltext0
+	.uaword	.LVL18-1-.Ltext0
 	.uaword	.LFE111-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2331,55 +2244,44 @@ osEE_idle_task_terminate:
 	.uaword	0
 	.uaword	0
 .LLST7:
-	.uaword	.LVL19-.Ltext0
-	.uaword	.LVL27-1-.Ltext0
+	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL15-.Ltext0
 	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL27-1-.Ltext0
+	.byte	0x6f
+	.uaword	.LVL16-.Ltext0
 	.uaword	.LFE111-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x64
-	.byte	0x9f
+	.uahalf	0x1
+	.byte	0x6f
 	.uaword	0
 	.uaword	0
-.LLST8:
-	.uaword	.LVL19-.Ltext0
-	.uaword	.LVL26-.Ltext0
+.LLST9:
+	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL17-.Ltext0
 	.uahalf	0x2
 	.byte	0x84
 	.sleb128 0
 	.uaword	0
 	.uaword	0
-.LLST9:
-	.uaword	.LVL20-.Ltext0
-	.uaword	.LVL27-1-.Ltext0
+.LLST10:
+	.uaword	.LVL11-.Ltext0
+	.uaword	.LVL18-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
 	.uaword	0
 	.uaword	0
-.LLST10:
-	.uaword	.LVL21-.Ltext0
-	.uaword	.LVL27-1-.Ltext0
+.LLST11:
+	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL18-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x53
 	.uaword	0
 	.uaword	0
-.LLST11:
-	.uaword	.LVL22-.Ltext0
-	.uaword	.LVL23-.Ltext0
+.LLST12:
+	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL14-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
-	.uaword	.LVL23-.Ltext0
-	.uaword	.LVL24-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL24-.Ltext0
-	.uaword	.LVL25-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL25-.Ltext0
+	.uaword	.LVL14-.Ltext0
 	.uaword	.LFE111-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f

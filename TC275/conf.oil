@@ -1,10 +1,6 @@
 CPU test_application {
 
     OS EE {
-        EE_OPT = "OSEE_DEBUG";
-        EE_OPT = "OSEE_ASSERT";
-        EE_OPT = "OS_EE_APPL_BUILD_DEBUG";
-        EE_OPT = "OS_EE_BUILD_DEBUG";
         EE_OPT = "EE_BUILD_SINGLE_ELF";    
         CFLAGS = "-Wno-implicit-function-declaration -Wno-cast-align -Wno-missing-prototypes  -Wno-missing-field-initializers -Wno-double-promotion -Wno-strict-prototypes -Wno-unused-parameter -Wno-missing-declarations";
 	
@@ -163,7 +159,7 @@ CPU test_application {
 
     COUNTER AppCounter {
       MINCYCLE = 1;
-      MAXALLOWEDVALUE = 50;
+      MAXALLOWEDVALUE = 70;
       TICKSPERBASE = 1;
     };
 

@@ -81,7 +81,7 @@ extern "C" {
  **************************************************************************/
 #define AppCounter (0U)
 
-#define OSMAXALLOWEDVALUE_AppCounter (50U)
+#define OSMAXALLOWEDVALUE_AppCounter (70U)
 #define OSTICKSPERBASE_AppCounter    (1U)
 #define OSMINCYCLE_AppCounter        (1U)
 

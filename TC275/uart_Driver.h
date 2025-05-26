@@ -22,6 +22,7 @@
 
 /*******************************************     NO CHANGES AFTER THIS LINE      ****************************************************/
 
+extern volatile boolean g_isRecieved;
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);

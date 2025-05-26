@@ -45,10 +45,6 @@
  * User options
  *
  **************************************************************************/
-#define OSEE_DEBUG
-#define OSEE_ASSERT
-#define OS_EE_APPL_BUILD_DEBUG
-#define OS_EE_BUILD_DEBUG
 #define EE_BUILD_SINGLE_ELF
 
 /***************************************************************************
