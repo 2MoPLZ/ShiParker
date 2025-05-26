@@ -40,7 +40,15 @@ void startShiParkerApp(void)
     currentPosition.y = 0;
     targetPosition.x  = POSITION_NULL;
     targetPosition.y  = POSITION_NULL;
-    carCommand        = CAR_COMMAND_START;
+    carCommand        = CAR_COMMAND_STOP;
+    set_motor_power(INDEX_FL, motor_power_normal);
+    set_motor_power(INDEX_RL, motor_power_normal);
+    set_motor_power(INDEX_FR, motor_power_normal);
+    set_motor_power(INDEX_RR, motor_power_normal);
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
     SetRelAlarm(AppAlarm, 0, APP_CYCLE_TICK);
     SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
 }
@@ -163,7 +171,7 @@ TASK(ShiParkerAppTask)
             SetRelAlarm(WallFollowAlarm, 0, WALL_FOLLOW_CYCLE_TICK);
             SetRelAlarm(PacketSendAlarm,
                         0,
-                        SENDPACKET_DEFAULT_CYCLE_TICK); // 2500ms
+                        SENDPACKET_RUNNING_CYCLE_TICK); // 500ms
             SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK);
             break;
         case CAR_COMMAND_STOP:
@@ -196,7 +204,7 @@ TASK(AvoidObstacleTask)
 void turn90(void)
 {
     volatile double currentHallCntAvg = getHallCntAvg();
-    volatile double targetHallCntAvg  = currentHallCntAvg + 4.5;
+    volatile double targetHallCntAvg  = currentHallCntAvg + 4.0;
 
     CancelAlarm(AvoidObstacleAlarm);
 
@@ -237,7 +245,7 @@ void turn90(void)
     set_motor_power(INDEX_RL, motor_power_normal);
     set_motor_power(INDEX_RR, motor_power_normal);
 
-    SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
+    SetRelAlarm(AvoidObstacleAlarm, 0, WALL_FOLLOW_CYCLE_TICK);
 }
 
 void calculateCurrentPos() {
@@ -274,8 +282,8 @@ TASK(WallFollowTask)
         else if(currentDirection==1)
         {
             min_dist_left = targetPosition.y;
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
+            FrontUltra = getUltrasonic(&g_Ultrasonic_FR);
+            RearUltra = getUltrasonic(&g_Ultrasonic_RR);
             
         }
         DriveCommand cmd = wall_follow_control(FrontUltra, RearUltra);
@@ -290,10 +298,9 @@ TASK(WallFollowTask)
         motor_run_forward(INDEX_RL);
         motor_run_forward(INDEX_RR);
 
-        
         calculateCurrentPos();
 
-        if (currentDirection == 0 && currentPosition.y >= targetPosition.y) 
+        if (currentDirection == 0 && (currentPosition.y >= targetPosition.y)) 
         {
             motor_stop(INDEX_FL);
             motor_stop(INDEX_FR);
@@ -303,7 +310,7 @@ TASK(WallFollowTask)
             turn90();
         } 
 
-        else if (currentDirection == 1 && currentPosition.x >= targetPosition.x) 
+        else if (currentDirection == 1 && (currentPosition.x >= targetPosition.x)) 
         {
             motor_stop(INDEX_FL);
             motor_stop(INDEX_FR);
@@ -341,9 +348,10 @@ void updateStatus(const struct ParkingSystemPacket *packet)
 
 void handleError(ERROR_CODE_TYPE errorCode)
 {
-    carCommand=CAR_COMMAND_STOP;
+    g_RecievedParkingSystemPacket.car_command=CAR_COMMAND_STOP;
     CancelAlarm(AvoidObstacleAlarm);
     CancelAlarm(WallFollowAlarm);
+    CancelAlarm(PacketSendAlarm);
     motor_stop(INDEX_FL);
     motor_stop(INDEX_FR);
     motor_stop(INDEX_RL);

@@ -47,7 +47,7 @@
 #define CHN_39 3                     /* Position of channel 7 group 4 (AN39) on the array of ADC channels    */
 
 #define UART_START_BYTE 0xAA
-#define PARKING_SYSTEM_PACKET_SIZE 36
+#define PARKING_SYSTEM_PACKET_SIZE 20
 
 /******************************************************************************/
 /*-----------------------------Data Structures--------------------------------*/
@@ -98,8 +98,8 @@ typedef struct
 
 struct Point
 {
-    double x;
-    double y;
+    int32_t x;
+    int32_t y;
 };
 
 struct __attribute__((__packed__)) ParkingSystemPacket
