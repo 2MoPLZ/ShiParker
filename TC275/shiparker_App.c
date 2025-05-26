@@ -40,7 +40,15 @@ void startShiParkerApp(void)
     currentPosition.y = 0;
     targetPosition.x  = POSITION_NULL;
     targetPosition.y  = POSITION_NULL;
-    carCommand        = CAR_COMMAND_START;
+    carCommand        = CAR_COMMAND_STOP;
+    set_motor_power(INDEX_FL, motor_power_normal);
+    set_motor_power(INDEX_RL, motor_power_normal);
+    set_motor_power(INDEX_FR, motor_power_normal);
+    set_motor_power(INDEX_RR, motor_power_normal);
+    motor_stop(INDEX_FL);
+    motor_stop(INDEX_FR);
+    motor_stop(INDEX_RL);
+    motor_stop(INDEX_RR);
     SetRelAlarm(AppAlarm, 0, APP_CYCLE_TICK);
     SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
 }
@@ -294,10 +302,9 @@ TASK(WallFollowTask)
         motor_run_forward(INDEX_RL);
         motor_run_forward(INDEX_RR);
 
-        
         calculateCurrentPos();
 
-        if (currentDirection == 0 && currentPosition.y >= targetPosition.y) 
+        if (currentDirection == 0 && (currentPosition.y >= targetPosition.y)) 
         {
             motor_stop(INDEX_FL);
             motor_stop(INDEX_FR);
@@ -307,7 +314,7 @@ TASK(WallFollowTask)
             turn90();
         } 
 
-        else if (currentDirection == 1 && currentPosition.x >= targetPosition.x) 
+        else if (currentDirection == 1 && (currentPosition.x >= targetPosition.x)) 
         {
             motor_stop(INDEX_FL);
             motor_stop(INDEX_FR);
@@ -345,9 +352,10 @@ void updateStatus(const struct ParkingSystemPacket *packet)
 
 void handleError(ERROR_CODE_TYPE errorCode)
 {
-    carCommand=CAR_COMMAND_STOP;
+    g_RecievedParkingSystemPacket.car_command=CAR_COMMAND_STOP;
     CancelAlarm(AvoidObstacleAlarm);
     CancelAlarm(WallFollowAlarm);
+    CancelAlarm(PacketSendAlarm);
     motor_stop(INDEX_FL);
     motor_stop(INDEX_FR);
     motor_stop(INDEX_RL);

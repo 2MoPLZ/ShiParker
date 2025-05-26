@@ -57,18 +57,18 @@ startShiParkerApp:
 .L4:
 	.loc 1 36 0
 	mov	%d15, 1
-	.loc 1 37 0
-	mov	%d2, 0
-	.loc 1 36 0
 	st.b	[%a15] lo:g_isAppRunning, %d15
 	.loc 1 37 0
+	mov	%d15, 0
 	movh.a	%a15, hi:carStatus
-	st.b	[%a15] lo:carStatus, %d2
+	st.b	[%a15] lo:carStatus, %d15
 	.loc 1 38 0
 	movh.a	%a15, hi:currentDirection
-	st.b	[%a15] lo:currentDirection, %d2
 	.loc 1 39 0
 	mov	%e2, 0
+	.loc 1 38 0
+	st.b	[%a15] lo:currentDirection, %d15
+	.loc 1 39 0
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	st.d	[%a15]0, %e2
@@ -76,33 +76,25 @@ startShiParkerApp:
 	st.d	[%a15] 8, %e2
 	.loc 1 41 0
 	movh.a	%a15, hi:targetPosition
-<<<<<<< Updated upstream
 	movh	%d3, 49614
-	lea	%a15, [%a15] lo:targetPosition
 	mov	%d2, 0
 	addi	%d3, %d3, -12955
-=======
-	mov	%d2, 0
-	movh	%d3, 16452
 	lea	%a15, [%a15] lo:targetPosition
->>>>>>> Stashed changes
 	st.d	[%a15]0, %e2
 	.loc 1 42 0
 	st.d	[%a15] 8, %e2
-	.loc 1 44 0
-	mov	%e4, 0
-	mov	%d6, 10
 	.loc 1 43 0
+	mov	%d15, 2
 	movh.a	%a15, hi:carCommand
 	st.b	[%a15] lo:carCommand, %d15
 	.loc 1 44 0
-	call	SetRelAlarm
+	movh.a	%a15, hi:motor_power_normal
+	lea	%a15, [%a15] lo:motor_power_normal
+	ld.d	%e6, [%a15]0
+	mov	%d4, 0
+	call	set_motor_power
 .LVL6:
 	.loc 1 45 0
-<<<<<<< Updated upstream
-	mov	%e4, 1
-	mov	%d6, 50
-=======
 	ld.d	%e6, [%a15]0
 	mov	%d4, 2
 	call	set_motor_power
@@ -134,18 +126,15 @@ startShiParkerApp:
 	call	motor_stop
 .LVL13:
 	.loc 1 52 0
-	mov	%d4, 0
-	mov	%d5, 4
+	mov	%e4, 0
 	mov	%d6, 4
 	call	SetRelAlarm
 .LVL14:
 	.loc 1 53 0
-	mov	%d4, 1
-	mov	%d5, 5
+	mov	%e4, 1
 	mov	%d6, 30
->>>>>>> Stashed changes
 	j	SetRelAlarm
-.LVL7:
+.LVL15:
 .LFE598:
 	.size	startShiParkerApp, .-startShiParkerApp
 .section .rodata,"a",@progbits
@@ -157,60 +146,60 @@ startShiParkerApp:
 	.type	exitShiParkerApp, @function
 exitShiParkerApp:
 .LFB599:
-	.loc 1 48 0
-	.loc 1 49 0
+	.loc 1 56 0
+	.loc 1 57 0
 	movh.a	%a4, hi:.LC2
 	lea	%a4, [%a4] lo:.LC2
 	call	printfSerial
-.LVL8:
-	.loc 1 50 0
+.LVL16:
+	.loc 1 58 0
 	mov	%d4, 0
 	call	motor_stop
-.LVL9:
-	.loc 1 51 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL10:
-	.loc 1 52 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL11:
-	.loc 1 53 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL12:
-	.loc 1 55 0
-	mov	%d15, 3
-	movh.a	%a15, hi:carStatus
-	.loc 1 57 0
-	mov	%d4, 11
-	.loc 1 55 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 57 0
-	call	ActivateTask
-.LVL13:
-	.loc 1 58 0
-	mov	%d4, 3
-	call	CancelAlarm
-.LVL14:
+.LVL17:
 	.loc 1 59 0
 	mov	%d4, 1
-	call	CancelAlarm
-.LVL15:
+	call	motor_stop
+.LVL18:
 	.loc 1 60 0
 	mov	%d4, 2
-	call	CancelAlarm
-.LVL16:
+	call	motor_stop
+.LVL19:
+	.loc 1 61 0
+	mov	%d4, 3
+	call	motor_stop
+.LVL20:
 	.loc 1 63 0
+	mov	%d15, 3
+	movh.a	%a15, hi:carStatus
+	.loc 1 65 0
+	mov	%d4, 11
+	.loc 1 63 0
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 65 0
+	call	ActivateTask
+.LVL21:
+	.loc 1 66 0
+	mov	%d4, 3
+	call	CancelAlarm
+.LVL22:
+	.loc 1 67 0
+	mov	%d4, 1
+	call	CancelAlarm
+.LVL23:
+	.loc 1 68 0
+	mov	%d4, 2
+	call	CancelAlarm
+.LVL24:
+	.loc 1 71 0
 	mov	%d15, 0
-	.loc 1 61 0
+	.loc 1 69 0
 	mov	%d4, 0
-	.loc 1 63 0
+	.loc 1 71 0
 	movh.a	%a15, hi:g_isAppRunning
-	.loc 1 61 0
+	.loc 1 69 0
 	call	CancelAlarm
-.LVL17:
-	.loc 1 63 0
+.LVL25:
+	.loc 1 71 0
 	st.b	[%a15] lo:g_isAppRunning, %d15
 	ret
 .LFE599:
@@ -226,61 +215,39 @@ exitShiParkerApp:
 	.type	turn90, @function
 turn90:
 .LFB602:
-	.loc 1 197 0
+	.loc 1 205 0
 	sub.a	%SP, 16
 .LCFI0:
-	.loc 1 198 0
+	.loc 1 206 0
 	call	getHallCntAvg
-.LVL18:
+.LVL26:
 	st.d	[%SP]0, %e2
-	.loc 1 199 0
+	.loc 1 207 0
 	ld.d	%e4, [%SP]0
 	mov	%d6, 0
 	movh	%d7, 16402
 	call	__adddf3
-.LVL19:
-	.loc 1 201 0
-	mov	%d4, 3
-	.loc 1 199 0
-	st.d	[%SP] 8, %e2
-	.loc 1 201 0
-	call	CancelAlarm
-.LVL20:
-	.loc 1 203 0
-	mov	%d4, 0
-	call	motor_stop
-.LVL21:
-	.loc 1 204 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL22:
-	.loc 1 205 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL23:
-	.loc 1 206 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL24:
-	.loc 1 208 0
-	mov	%d4, 0
-	call	motor_run_forward
-.LVL25:
-	.loc 1 209 0
-	mov	%d4, 2
-	call	motor_run_forward
-.LVL26:
-	.loc 1 210 0
-	mov	%d4, 1
-	call	motor_run_backward
 .LVL27:
-	.loc 1 211 0
+	.loc 1 209 0
 	mov	%d4, 3
-	call	motor_run_backward
+	.loc 1 207 0
+	st.d	[%SP] 8, %e2
+	.loc 1 209 0
+	call	CancelAlarm
 .LVL28:
+	.loc 1 211 0
+	mov	%d4, 0
+	call	motor_stop
+.LVL29:
+	.loc 1 212 0
+	mov	%d4, 1
+	call	motor_stop
+.LVL30:
+	.loc 1 213 0
+	mov	%d4, 2
+	call	motor_stop
+.LVL31:
 	.loc 1 214 0
-<<<<<<< Updated upstream
-=======
 	mov	%d4, 3
 	call	motor_stop
 .LVL32:
@@ -301,31 +268,11 @@ turn90:
 	call	motor_run_backward
 .LVL36:
 	.loc 1 221 0
->>>>>>> Stashed changes
 	movh.a	%a15, hi:motor_power_turn
 	lea	%a15, [%a15] lo:motor_power_turn
 	ld.d	%e6, [%a15]0
 	mov	%d4, 0
 	call	set_motor_power
-<<<<<<< Updated upstream
-.LVL29:
-	.loc 1 215 0
-	ld.d	%e6, [%a15]0
-	mov	%d4, 1
-	call	set_motor_power
-.LVL30:
-	.loc 1 216 0
-	ld.d	%e6, [%a15]0
-	mov	%d4, 2
-	call	set_motor_power
-.LVL31:
-	.loc 1 217 0
-	ld.d	%e6, [%a15]0
-	mov	%d4, 3
-	call	set_motor_power
-.LVL32:
-	.loc 1 223 0
-=======
 .LVL37:
 	.loc 1 222 0
 	ld.d	%e6, [%a15]0
@@ -343,67 +290,18 @@ turn90:
 	call	set_motor_power
 .LVL40:
 	.loc 1 229 0
->>>>>>> Stashed changes
 	movh.a	%a15, hi:.LC3
 	.loc 1 226 0
 	ld.d	%e2, [%SP]0
 	.loc 1 229 0
 	lea	%a15, [%a15] lo:.LC3
 .L8:
-<<<<<<< Updated upstream
-	.loc 1 219 0
-=======
 	.loc 1 226 0 discriminator 1
->>>>>>> Stashed changes
 	ld.d	%e4, [%SP]0
 	ld.d	%e6, [%SP] 8
 	call	__ltdf2
-.LVL33:
+.LVL41:
 	jgez	%d2, .L10
-<<<<<<< Updated upstream
-	.loc 1 221 0
-	mov	%d4, 50
-	call	delay_ms
-.LVL34:
-	.loc 1 222 0
-	call	getHallCntAvg
-.LVL35:
-	st.d	[%SP]0, %e2
-	.loc 1 223 0
-	ld.d	%e4, [%SP]0
-	mov.aa	%a4, %a15
-	call	printDouble
-.LVL36:
-	.loc 1 225 0
-	mov	%d4, 50
-	call	delay_ms
-.LVL37:
-	j	.L8
-.L10:
-	.loc 1 228 0
-	movh.a	%a15, hi:currentDirection
-	ld.bu	%d15, [%a15] lo:currentDirection
-	.loc 1 235 0
-	mov	%d4, 0
-	.loc 1 228 0
-	add	%d15, 1
-	and	%d15, %d15, 3
-	st.b	[%a15] lo:currentDirection, %d15
-	.loc 1 230 0
-	mov	%d15, 0
-	movh.a	%a15, hi:g_FLHallCnt
-	st.h	[%a15] lo:g_FLHallCnt, %d15
-	.loc 1 231 0
-	movh.a	%a15, hi:g_FRHallCnt
-	st.h	[%a15] lo:g_FRHallCnt, %d15
-	.loc 1 232 0
-	movh.a	%a15, hi:g_RLHallCnt
-	st.h	[%a15] lo:g_RLHallCnt, %d15
-	.loc 1 233 0
-	movh.a	%a15, hi:g_RRHallCnt
-	st.h	[%a15] lo:g_RRHallCnt, %d15
-	.loc 1 235 0
-=======
 	.loc 1 228 0 discriminator 3
 	mov	%d4, 10
 	call	delay_ms
@@ -442,34 +340,10 @@ turn90:
 	movh.a	%a15, hi:g_RRHallCnt
 	st.h	[%a15] lo:g_RRHallCnt, %d15
 	.loc 1 239 0
->>>>>>> Stashed changes
 	movh.a	%a15, hi:motor_power_normal
 	lea	%a15, [%a15] lo:motor_power_normal
 	ld.d	%e6, [%a15]0
 	call	set_motor_power
-<<<<<<< Updated upstream
-.LVL38:
-	.loc 1 236 0
-	ld.d	%e6, [%a15]0
-	mov	%d4, 1
-	call	set_motor_power
-.LVL39:
-	.loc 1 237 0
-	ld.d	%e6, [%a15]0
-	mov	%d4, 2
-	call	set_motor_power
-.LVL40:
-	.loc 1 238 0
-	ld.d	%e6, [%a15]0
-	mov	%d4, 3
-	call	set_motor_power
-.LVL41:
-	.loc 1 240 0
-	mov	%e4, 1
-	mov	%d6, 50
-	j	SetRelAlarm
-.LVL42:
-=======
 .LVL45:
 	.loc 1 240 0
 	ld.d	%e6, [%a15]0
@@ -492,7 +366,6 @@ turn90:
 	mov	%d6, 3
 	j	SetRelAlarm
 .LVL49:
->>>>>>> Stashed changes
 .LFE602:
 	.size	turn90, .-turn90
 	.global	__muldf3
@@ -501,13 +374,8 @@ turn90:
 	.type	calculateCurrentPos, @function
 calculateCurrentPos:
 .LFB603:
-<<<<<<< Updated upstream
-	.loc 1 243 0
-	.loc 1 244 0
-=======
 	.loc 1 247 0
 	.loc 1 248 0
->>>>>>> Stashed changes
 	movh.a	%a15, hi:currentDirection
 	ld.bu	%d15, [%a15] lo:currentDirection
 	jge.u	%d15, 4, .L11
@@ -529,31 +397,15 @@ calculateCurrentPos:
 	.code32
 	j	.L17
 .L16:
-<<<<<<< Updated upstream
-	.loc 1 253 0
-	call	getHallCntAvg
-.LVL43:
-=======
 	.loc 1 257 0
 	call	getHallCntAvg
 .LVL50:
->>>>>>> Stashed changes
 	movh	%d7, 16401
 	mov	%e4, %d3, %d2
 	movh	%d6, 52429
 	addi	%d7, %d7, -13108
 	addi	%d6, %d6, -13107
 	call	__muldf3
-<<<<<<< Updated upstream
-.LVL44:
-	st.d	[%a15] 8, %e2
-	.loc 1 254 0
-	ret
-.L17:
-	.loc 1 256 0
-	call	getHallCntAvg
-.LVL45:
-=======
 .LVL51:
 	st.d	[%a15] 8, %e2
 	.loc 1 258 0
@@ -562,18 +414,13 @@ calculateCurrentPos:
 	.loc 1 260 0
 	call	getHallCntAvg
 .LVL52:
->>>>>>> Stashed changes
 	movh	%d7, 16401
 	mov	%e4, %d3, %d2
 	movh	%d6, 52429
 	addi	%d7, %d7, -13108
 	addi	%d6, %d6, -13107
 	call	__muldf3
-<<<<<<< Updated upstream
-.LVL46:
-=======
 .LVL53:
->>>>>>> Stashed changes
 	st.d	[%a15]0, %e2
 .L11:
 	ret
@@ -594,18 +441,6 @@ calculateCurrentPos:
 	.type	FuncWallFollowTask, @function
 FuncWallFollowTask:
 .LFB604:
-<<<<<<< Updated upstream
-	.loc 1 265 0
-	.loc 1 266 0
-	movh.a	%a15, hi:g_isAppRunning
-	ld.bu	%d15, [%a15] lo:g_isAppRunning
-	.loc 1 265 0
-	sub.a	%SP, 16
-.LCFI1:
-	.loc 1 266 0
-	jz	%d15, .L18
-	.loc 1 266 0 is_stmt 0 discriminator 1
-=======
 	.loc 1 269 0
 	.loc 1 270 0
 	movh.a	%a15, hi:g_isAppRunning
@@ -616,55 +451,10 @@ FuncWallFollowTask:
 	.loc 1 270 0
 	jz	%d15, .L18
 	.loc 1 270 0 is_stmt 0 discriminator 1
->>>>>>> Stashed changes
 	movh.a	%a13, hi:carStatus
 	ld.bu	%d15, [%a13] lo:carStatus
 	jne	%d15, 1, .L18
 .LBB4:
-<<<<<<< Updated upstream
-	.loc 1 268 0 is_stmt 1
-	movh.a	%a14, hi:currentDirection
-	ld.bu	%d15, [%a14] lo:currentDirection
-	movh.a	%a12, hi:FrontUltra
-	movh.a	%a15, hi:RearUltra
-	lea	%a12, [%a12] lo:FrontUltra
-	lea	%a15, [%a15] lo:RearUltra
-	jnz	%d15, .L20
-	.loc 1 270 0
-	mov	%d15, 20
-	movh.a	%a2, hi:min_dist_left
-	st.h	[%a2] lo:min_dist_left, %d15
-	j	.L31
-.L20:
-	.loc 1 274 0
-	jne	%d15, 1, .L21
-	.loc 1 276 0
-	movh.a	%a2, hi:targetPosition
-	lea	%a2, [%a2] lo:targetPosition
-	ld.d	%e4, [%a2] 8
-	call	__fixunsdfsi
-.LVL47:
-	extr.u	%d2, %d2, 0, 16
-	movh.a	%a2, hi:min_dist_left
-	st.h	[%a2] lo:min_dist_left, %d2
-.L31:
-	.loc 1 277 0
-	movh.a	%a4, hi:g_Ultrasonic_FL
-	lea	%a4, [%a4] lo:g_Ultrasonic_FL
-	call	getUltrasonic
-.LVL48:
-	.loc 1 278 0
-	movh.a	%a4, hi:g_Ultrasonic_RL
-	lea	%a4, [%a4] lo:g_Ultrasonic_RL
-	.loc 1 277 0
-	st.d	[%a12]0, %e2
-	.loc 1 278 0
-	call	getUltrasonic
-.LVL49:
-	st.d	[%a15]0, %e2
-.L21:
-	.loc 1 281 0
-=======
 	.loc 1 274 0 is_stmt 1
 	movh.a	%a4, hi:g_Ultrasonic_FL
 	.loc 1 273 0
@@ -705,38 +495,15 @@ FuncWallFollowTask:
 	call	printDouble
 .LVL57:
 	.loc 1 293 0
->>>>>>> Stashed changes
 	ld.d	%e4, [%a12]0
 	mov.aa	%a4, %SP
 	ld.d	%e6, [%a15]0
 	call	wall_follow_control
-<<<<<<< Updated upstream
-.LVL50:
-	.loc 1 282 0
-	movh.a	%a15, hi:Kp_rad_to_delta_power
-	lea	%a15, [%a15] lo:Kp_rad_to_delta_power
-	ld.d	%e4, [%a15]0
-	ld.d	%e6, [%SP]0
-	call	__muldf3
-.LVL51:
-	.loc 1 283 0
-	movh.a	%a4, hi:.LC4
-	mov	%e4, %d3, %d2
-	lea	%a4, [%a4] lo:.LC4
-	.loc 1 282 0
-	mov	%e8, %d3, %d2
-.LVL52:
-	.loc 1 283 0
-	call	printDouble
-.LVL53:
-	.loc 1 284 0
-=======
 .LVL58:
 	ld.d	%e8, [%SP]0
 .LVL59:
 	.loc 1 294 0
 	movh.a	%a4, hi:.LC6
->>>>>>> Stashed changes
 	mov	%e4, %d9, %d8
 	lea	%a4, [%a4] lo:.LC6
 	call	printDouble
@@ -754,71 +521,19 @@ FuncWallFollowTask:
 	mov	%e4, %d3, %d2
 	movh.a	%a15, hi:motor_power_normal
 	call	__muldf3
-.LVL54:
+.LVL63:
 	lea	%a15, [%a15] lo:motor_power_normal
 	ld.d	%e10, [%a15]0
 	mov	%e6, %d3, %d2
 	mov	%e4, %d11, %d10
 	mov	%e8, %d3, %d2
-.LVL55:
-	call	__adddf3
-.LVL56:
-	mov	%e6, %d3, %d2
-	mov	%d4, 0
-	call	set_motor_power
-.LVL57:
-	.loc 1 285 0
-	mov	%e6, %d9, %d8
-	ld.d	%e4, [%a15]0
-	call	__adddf3
-.LVL58:
-	mov	%e6, %d3, %d2
-	mov	%d4, 2
-	call	set_motor_power
-.LVL59:
-	.loc 1 286 0
-	mov	%e6, %d9, %d8
-	ld.d	%e4, [%a15]0
-	call	__subdf3
-.LVL60:
-	mov	%e6, %d3, %d2
-	mov	%d4, 1
-	call	set_motor_power
-.LVL61:
-	.loc 1 287 0
-	mov	%e6, %d9, %d8
-	ld.d	%e4, [%a15]0
-	call	__subdf3
-.LVL62:
-	mov	%e6, %d3, %d2
-	mov	%d4, 3
-	call	set_motor_power
-.LVL63:
-	.loc 1 288 0
-	mov	%d4, 0
-	call	motor_run_forward
 .LVL64:
-	.loc 1 289 0
-	mov	%d4, 1
-	call	motor_run_forward
+	call	__adddf3
 .LVL65:
-	.loc 1 290 0
-	mov	%d4, 2
-	call	motor_run_forward
+	mov	%e6, %d3, %d2
+	mov	%d4, 0
+	call	set_motor_power
 .LVL66:
-<<<<<<< Updated upstream
-	.loc 1 291 0
-	mov	%d4, 3
-	call	motor_run_forward
-.LVL67:
-	.loc 1 294 0
-	call	calculateCurrentPos
-.LVL68:
-	.loc 1 296 0
-	ld.bu	%d15, [%a14] lo:currentDirection
-	jnz	%d15, .L22
-	.loc 1 296 0 is_stmt 0 discriminator 1
-=======
 	.loc 1 297 0
 	mov	%e6, %d9, %d8
 	ld.d	%e4, [%a15]0
@@ -871,7 +586,6 @@ FuncWallFollowTask:
 	ld.bu	%d15, [%a15] lo:currentDirection
 	jnz	%d15, .L20
 	.loc 1 307 0 is_stmt 0 discriminator 1
->>>>>>> Stashed changes
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	ld.d	%e4, [%a15] 8
@@ -879,23 +593,8 @@ FuncWallFollowTask:
 	lea	%a15, [%a15] lo:targetPosition
 	ld.d	%e6, [%a15] 8
 	call	__gedf2
-.LVL69:
+.LVL78:
 	jltz	%d2, .L18
-<<<<<<< Updated upstream
-	.loc 1 298 0 is_stmt 1
-	mov	%d4, 0
-	call	motor_stop
-.LVL70:
-	.loc 1 299 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL71:
-	.loc 1 300 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL72:
-	.loc 1 301 0
-=======
 	.loc 1 309 0 is_stmt 1
 	mov	%d4, 0
 	call	motor_stop
@@ -909,23 +608,10 @@ FuncWallFollowTask:
 	call	motor_stop
 .LVL81:
 	.loc 1 312 0
->>>>>>> Stashed changes
 	mov	%d4, 3
 	call	motor_stop
-.LVL73:
+.LVL82:
 .LBE4:
-<<<<<<< Updated upstream
-	.loc 1 316 0
-	lea	%SP, [%SP] 16
-.LBB5:
-	.loc 1 303 0
-	j	turn90
-.LVL74:
-.L22:
-	.loc 1 306 0
-	jne	%d15, 1, .L18
-	.loc 1 306 0 is_stmt 0 discriminator 1
-=======
 	.loc 1 327 0
 	lea	%SP, [%SP] 16
 .LVL83:
@@ -937,7 +623,6 @@ FuncWallFollowTask:
 	.loc 1 317 0
 	jne	%d15, 1, .L18
 	.loc 1 317 0 is_stmt 0 discriminator 1
->>>>>>> Stashed changes
 	movh.a	%a15, hi:currentPosition
 	lea	%a15, [%a15] lo:currentPosition
 	ld.d	%e4, [%a15]0
@@ -945,29 +630,6 @@ FuncWallFollowTask:
 	lea	%a15, [%a15] lo:targetPosition
 	ld.d	%e6, [%a15]0
 	call	__gedf2
-<<<<<<< Updated upstream
-.LVL75:
-	jltz	%d2, .L18
-	.loc 1 308 0 is_stmt 1
-	mov	%d4, 0
-	call	motor_stop
-.LVL76:
-	.loc 1 309 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL77:
-	.loc 1 310 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL78:
-	.loc 1 313 0
-	mov	%d15, 3
-	.loc 1 311 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL79:
-	.loc 1 313 0
-=======
 .LVL85:
 	jltz	%d2, .L18
 	.loc 1 319 0 is_stmt 1
@@ -989,7 +651,6 @@ FuncWallFollowTask:
 	call	motor_stop
 .LVL89:
 	.loc 1 324 0
->>>>>>> Stashed changes
 	st.b	[%a13] lo:carStatus, %d15
 .LVL90:
 .L18:
@@ -997,110 +658,12 @@ FuncWallFollowTask:
 .LBE5:
 .LFE604:
 	.size	FuncWallFollowTask, .-FuncWallFollowTask
+	.global	__fixdfsi
 	.align 1
 	.global	makePacket
 	.type	makePacket, @function
 makePacket:
 .LFB606:
-<<<<<<< Updated upstream
-	.loc 1 326 0
-.LVL80:
-	.loc 1 327 0
-	mov	%d15, -86
-	.loc 1 328 0
-	movh.a	%a15, hi:carStatus
-	.loc 1 327 0
-	st.b	[%a4]0, %d15
-	.loc 1 328 0
-	ld.bu	%d15, [%a15] lo:carStatus
-	.loc 1 329 0
-	movh.a	%a15, hi:carCommand
-	.loc 1 328 0
-	st.b	[%a4] 1, %d15
-	.loc 1 329 0
-	ld.bu	%d15, [%a15] lo:carCommand
-	.loc 1 330 0
-	movh.a	%a2, hi:currentPosition
-	.loc 1 329 0
-	st.b	[%a4] 34, %d15
-	.loc 1 330 0
-	ld.w	%d15, [%a2] lo:currentPosition
-	lea	%a15, [%a2] lo:currentPosition
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 2, %d15
-	st.b	[%a4] 3, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 5, %d15
-	ld.w	%d15, [%a15] 4
-	st.b	[%a4] 4, %d2
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 6, %d15
-	st.b	[%a4] 7, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 9, %d15
-	.loc 1 331 0
-	ld.w	%d15, [%a15] 8
-	.loc 1 330 0
-	st.b	[%a4] 8, %d2
-	.loc 1 331 0
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 10, %d15
-	st.b	[%a4] 11, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 13, %d15
-	ld.w	%d15, [%a15] 12
-	st.b	[%a4] 12, %d2
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 14, %d15
-	st.b	[%a4] 15, %d2
-	.loc 1 332 0
-	movh.a	%a2, hi:targetPosition
-	.loc 1 331 0
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 17, %d15
-	.loc 1 332 0
-	ld.w	%d15, [%a2] lo:targetPosition
-	.loc 1 331 0
-	st.b	[%a4] 16, %d2
-	.loc 1 332 0
-	extr.u	%d2, %d15, 8, 8
-	lea	%a15, [%a2] lo:targetPosition
-	st.b	[%a4] 18, %d15
-	st.b	[%a4] 19, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 21, %d15
-	ld.w	%d15, [%a15] 4
-	st.b	[%a4] 20, %d2
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 22, %d15
-	st.b	[%a4] 23, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 24, %d2
-	st.b	[%a4] 25, %d15
-	.loc 1 333 0
-	ld.w	%d15, [%a15] 8
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 26, %d15
-	st.b	[%a4] 27, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 29, %d15
-	ld.w	%d15, [%a15] 12
-	st.b	[%a4] 28, %d2
-	extr.u	%d2, %d15, 8, 8
-	st.b	[%a4] 30, %d15
-	st.b	[%a4] 31, %d2
-	extr.u	%d2, %d15, 16, 8
-	sh	%d15, %d15, -24
-	st.b	[%a4] 32, %d2
-	st.b	[%a4] 33, %d15
-=======
 	.loc 1 337 0
 .LVL91:
 	.loc 1 338 0
@@ -1180,7 +743,6 @@ makePacket:
 	sh	%d2, %d2, -24
 	st.b	[%a15] 16, %d15
 	st.b	[%a15] 17, %d2
->>>>>>> Stashed changes
 	ret
 .LFE606:
 	.size	makePacket, .-makePacket
@@ -1189,56 +751,25 @@ makePacket:
 	.type	FuncPacketSendTask, @function
 FuncPacketSendTask:
 .LFB605:
-<<<<<<< Updated upstream
-	.loc 1 320 0
-	.loc 1 321 0
-=======
 	.loc 1 331 0
 	.loc 1 332 0
->>>>>>> Stashed changes
 	movh.a	%a15, hi:carStatusPacket
 	lea	%a15, [%a15] lo:carStatusPacket
 	mov.aa	%a4, %a15
 	call	makePacket
-<<<<<<< Updated upstream
-.LVL81:
-	.loc 1 322 0
-	mov.aa	%a4, %a15
-	j	sendPacket
-.LVL82:
-=======
 .LVL96:
 	.loc 1 333 0
 	mov.aa	%a4, %a15
 	j	sendPacket
 .LVL97:
->>>>>>> Stashed changes
 .LFE605:
 	.size	FuncPacketSendTask, .-FuncPacketSendTask
+	.global	__floatsidf
 	.align 1
 	.global	updateStatus
 	.type	updateStatus, @function
 updateStatus:
 .LFB607:
-<<<<<<< Updated upstream
-	.loc 1 336 0
-.LVL83:
-	.loc 1 337 0
-	ld.bu	%d15, [%a4] 34
-	movh.a	%a15, hi:carCommand
-	st.b	[%a15] lo:carCommand, %d15
-	.loc 1 338 0
-	ld.bu	%d5, [%a4] 19
-	ld.bu	%d2, [%a4] 18
-	sh	%d5, %d5, 8
-	or	%d15, %d5, %d2
-	ld.bu	%d5, [%a4] 20
-	ld.bu	%d3, [%a4] 22
-	sh	%d5, %d5, 16
-	or	%d5, %d15
-	ld.bu	%d15, [%a4] 23
-	ld.bu	%d6, [%a4] 21
-=======
 	.loc 1 347 0
 .LVL98:
 	.loc 1 348 0
@@ -1248,33 +779,13 @@ updateStatus:
 	.loc 1 349 0
 	ld.bu	%d15, [%a4] 11
 	ld.bu	%d3, [%a4] 10
->>>>>>> Stashed changes
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
-	ld.bu	%d15, [%a4] 24
-	ld.bu	%d4, [%a4] 25
+	ld.bu	%d15, [%a4] 12
+	ld.bu	%d4, [%a4] 13
 	sh	%d15, %d15, 16
 	or	%d15, %d2
-	sh	%d6, %d6, 24
 	sh	%d4, %d4, 24
-<<<<<<< Updated upstream
-	movh.a	%a15, hi:targetPosition
-	or	%d2, %d6, %d5
-	or	%d3, %d4, %d15
-	lea	%a15, [%a15] lo:targetPosition
-	st.d	[%a15]0, %e2
-	.loc 1 339 0
-	ld.bu	%d5, [%a4] 27
-	ld.bu	%d2, [%a4] 26
-	sh	%d5, %d5, 8
-	or	%d15, %d5, %d2
-	ld.bu	%d5, [%a4] 28
-	ld.bu	%d3, [%a4] 30
-	sh	%d5, %d5, 16
-	or	%d5, %d15
-	ld.bu	%d15, [%a4] 31
-	ld.bu	%d6, [%a4] 29
-=======
 	or	%d4, %d15
 	.loc 1 347 0
 	mov.aa	%a15, %a4
@@ -1287,25 +798,17 @@ updateStatus:
 	.loc 1 350 0
 	ld.bu	%d15, [%a15] 15
 	ld.bu	%d3, [%a15] 14
->>>>>>> Stashed changes
 	sh	%d15, %d15, 8
 	or	%d2, %d15, %d3
-	ld.bu	%d15, [%a4] 32
-	ld.bu	%d4, [%a4] 33
+	ld.bu	%d15, [%a15] 16
+	ld.bu	%d4, [%a15] 17
 	sh	%d15, %d15, 16
 	or	%d15, %d2
-	sh	%d6, %d6, 24
 	sh	%d4, %d4, 24
-<<<<<<< Updated upstream
-	or	%d2, %d6, %d5
-	or	%d3, %d4, %d15
-	st.d	[%a15] 8, %e2
-=======
 	or	%d4, %d15
 	call	__floatsidf
 .LVL100:
 	st.d	[%a12] 8, %e2
->>>>>>> Stashed changes
 	ret
 .LFE607:
 	.size	updateStatus, .-updateStatus
@@ -1320,38 +823,6 @@ updateStatus:
 	.type	handleError, @function
 handleError:
 .LFB608:
-<<<<<<< Updated upstream
-	.loc 1 343 0
-.LVL84:
-	sub.a	%SP, 8
-.LCFI2:
-	.loc 1 343 0
-	mov	%d15, %d4
-	.loc 1 344 0
-	mov	%d2, 2
-	.loc 1 345 0
-	mov	%d4, 3
-.LVL85:
-	.loc 1 344 0
-	movh.a	%a15, hi:carCommand
-	st.b	[%a15] lo:carCommand, %d2
-	.loc 1 345 0
-	call	CancelAlarm
-.LVL86:
-	.loc 1 346 0
-	mov	%d4, 2
-	call	CancelAlarm
-.LVL87:
-	.loc 1 347 0
-	mov	%d4, 0
-	call	motor_stop
-.LVL88:
-	.loc 1 348 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL89:
-	.loc 1 349 0
-=======
 	.loc 1 354 0
 .LVL101:
 	.loc 1 355 0
@@ -1373,7 +844,6 @@ handleError:
 	call	CancelAlarm
 .LVL103:
 	.loc 1 357 0
->>>>>>> Stashed changes
 	mov	%d4, 2
 	call	CancelAlarm
 .LVL104:
@@ -1384,17 +854,6 @@ handleError:
 	.loc 1 359 0
 	mov	%d4, 0
 	call	motor_stop
-<<<<<<< Updated upstream
-.LVL90:
-	.loc 1 350 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL91:
-	.loc 1 351 0
-	ge.u	%d2, %d15, 16
-	jnz	%d2, .L36
-	.loc 1 353 0
-=======
 .LVL106:
 	.loc 1 360 0
 	mov	%d4, 1
@@ -1412,7 +871,6 @@ handleError:
 	ge.u	%d2, %d15, 16
 	jnz	%d2, .L33
 	.loc 1 365 0
->>>>>>> Stashed changes
 	movh.a	%a15, hi:errorMessages
 	lea	%a15, [%a15] lo:errorMessages
 	addsc.a	%a15, %a15, %d15, 2
@@ -1420,59 +878,6 @@ handleError:
 	ld.w	%d2, [%a15]0
 	st.w	[%SP] 4, %d15
 	st.w	[%SP]0, %d2
-<<<<<<< Updated upstream
-	lea	%a4, [%a4] lo:.LC5
-	call	printfSerial
-.LVL92:
-	.loc 1 354 0
-	jeq	%d15, 1, .L38
-	jz	%d15, .L39
-	jne	%d15, 2, .L37
-	.loc 1 365 0
-	mov	%d15, 5
-	j	.L42
-.L39:
-	.loc 1 357 0
-	mov	%d15, 6
-	movh.a	%a15, hi:carStatus
-	.loc 1 358 0
-	mov	%d4, 11
-	.loc 1 357 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 358 0
-	call	ActivateTask
-.LVL93:
-	j	.L41
-.L38:
-	.loc 1 362 0
-	mov	%d15, 4
-.L42:
-	.loc 1 365 0
-	movh.a	%a15, hi:carStatus
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 366 0
-	j	.L37
-.L36:
-	.loc 1 373 0
-	movh.a	%a4, hi:.LC6
-	st.w	[%SP]0, %d15
-	lea	%a4, [%a4] lo:.LC6
-	call	printfSerial
-.LVL94:
-.L41:
-	.loc 1 374 0
-	call	exitShiParkerApp
-.LVL95:
-.L37:
-	.loc 1 377 0
-	.loc 1 376 0
-	mov	%d4, 11
-	.loc 1 377 0
-	lea	%SP, [%SP] 8
-	.loc 1 376 0
-	j	ActivateTask
-.LVL96:
-=======
 	lea	%a4, [%a4] lo:.LC7
 	call	printfSerial
 .LVL110:
@@ -1524,7 +929,6 @@ handleError:
 	.loc 1 388 0
 	j	ActivateTask
 .LVL114:
->>>>>>> Stashed changes
 .LFE608:
 	.size	handleError, .-handleError
 .section .rodata,"a",@progbits
@@ -1536,35 +940,18 @@ handleError:
 	.type	FuncShiParkerAppTask, @function
 FuncShiParkerAppTask:
 .LFB600:
-	.loc 1 67 0
-	.loc 1 68 0
+	.loc 1 75 0
+	.loc 1 76 0
 	movh.a	%a15, hi:carStatus
 	ld.bu	%d15, [%a15] lo:carStatus
-	.loc 1 67 0
+	.loc 1 75 0
 	sub.a	%SP, 8
 .LCFI3:
-<<<<<<< Updated upstream
-	.loc 1 68 0
-	movh.a	%a4, hi:.LC7
-=======
 	.loc 1 76 0
 	movh.a	%a4, hi:.LC9
->>>>>>> Stashed changes
 	st.w	[%SP]0, %d15
 	lea	%a4, [%a4] lo:.LC9
 	call	printfSerial
-<<<<<<< Updated upstream
-.LVL97:
-	.loc 1 69 0
-	movh.a	%a2, hi:g_isAppRunning
-	ld.bu	%d15, [%a2] lo:g_isAppRunning
-	jnz	%d15, .L44
-	.loc 1 70 0
-	call	TerminateTask
-.LVL98:
-.L44:
-	.loc 1 72 0
-=======
 .LVL115:
 	.loc 1 77 0
 	movh.a	%a2, hi:g_isAppRunning
@@ -1580,7 +967,6 @@ FuncShiParkerAppTask:
 .LVL116:
 .L42:
 	.loc 1 80 0
->>>>>>> Stashed changes
 	movh.a	%a4, hi:g_RecievedParkingSystemPacket
 	.loc 1 79 0
 	mov	%d15, 0
@@ -1590,13 +976,8 @@ FuncShiParkerAppTask:
 	st.b	[%a12] lo:g_isRecieved, %d15
 	.loc 1 80 0
 	call	updateStatus
-<<<<<<< Updated upstream
-.LVL99:
-	.loc 1 73 0
-=======
 .LVL117:
 	.loc 1 81 0
->>>>>>> Stashed changes
 	ld.bu	%d15, [%a15] lo:carStatus
 	jge.u	%d15, 6, .L43
 	movh.a	%a2, hi:.L45
@@ -1617,22 +998,6 @@ FuncShiParkerAppTask:
 	.code32
 	j	.L49
 	.code32
-<<<<<<< Updated upstream
-	j	.L59
-	.code32
-	j	.L51
-	.code32
-	j	.L51
-.L46:
-	.loc 1 76 0
-	movh.a	%a2, hi:carCommand
-	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L59
-	jeq	%d15, 1, .L58
-	ret
-.L48:
-	.loc 1 100 0
-=======
 	j	.L49
 .L44:
 	.loc 1 84 0
@@ -1643,56 +1008,18 @@ FuncShiParkerAppTask:
 	ret
 .L46:
 	.loc 1 108 0
->>>>>>> Stashed changes
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
 	jz	%d15, .L57
 	jeq	%d15, 2, .L54
 	ret
-<<<<<<< Updated upstream
-.L56:
-	.loc 1 112 0
-=======
 .L54:
 	.loc 1 120 0
->>>>>>> Stashed changes
 	mov	%d4, 0
-	.loc 1 111 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 112 0
-	call	motor_stop
-<<<<<<< Updated upstream
-.LVL100:
-	.loc 1 113 0
-	mov	%d4, 1
-	call	motor_stop
-.LVL101:
-	.loc 1 114 0
-	mov	%d4, 2
-	call	motor_stop
-.LVL102:
-	.loc 1 115 0
-	mov	%d4, 3
-	call	motor_stop
-.LVL103:
-	.loc 1 116 0
-	mov	%d4, 1
-	call	CancelAlarm
-.LVL104:
-	.loc 1 117 0
-	mov	%d4, 3
-	call	CancelAlarm
-.LVL105:
-	.loc 1 118 0
-	mov	%d4, 2
-	call	CancelAlarm
-.LVL106:
 	.loc 1 119 0
-	mov	%e4, 1
-	mov	%d6, 50
-.L61:
-	.loc 1 182 0
-=======
+	st.b	[%a15] lo:carStatus, %d15
+	.loc 1 120 0
+	call	motor_stop
 .LVL118:
 	.loc 1 121 0
 	mov	%d4, 1
@@ -1724,39 +1051,9 @@ FuncShiParkerAppTask:
 	mov	%d6, 30
 .L62:
 	.loc 1 190 0
->>>>>>> Stashed changes
 	lea	%SP, [%SP] 8
-	.loc 1 119 0
+	.loc 1 127 0
 	j	SetRelAlarm
-<<<<<<< Updated upstream
-.LVL107:
-.L49:
-	.loc 1 126 0
-	movh.a	%a2, hi:carCommand
-	ld.bu	%d15, [%a2] lo:carCommand
-	jz	%d15, .L59
-	jeq	%d15, 1, .L58
-	ret
-.L58:
-	.loc 1 135 0
-	mov	%d4, 1
-	.loc 1 134 0
-	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 135 0
-	call	CancelAlarm
-.LVL108:
-	.loc 1 136 0
-	mov	%e4, 2
-	mov	%d6, 4
-	call	SetRelAlarm
-.LVL109:
-	.loc 1 137 0
-	mov	%e4, 1
-	mov	%d6, 10
-	j	.L62
-.L51:
-	.loc 1 153 0
-=======
 .LVL125:
 .L47:
 	.loc 1 134 0
@@ -1767,57 +1064,24 @@ FuncShiParkerAppTask:
 	ret
 .L49:
 	.loc 1 161 0
->>>>>>> Stashed changes
 	movh.a	%a2, hi:carCommand
 	ld.bu	%d15, [%a2] lo:carCommand
 	jz	%d15, .L57
 	jeq	%d15, 1, .L58
 	ret
-<<<<<<< Updated upstream
-.L59:
-	.loc 1 182 0
-=======
 .L57:
 	.loc 1 190 0
->>>>>>> Stashed changes
 	lea	%SP, [%SP] 8
-	.loc 1 157 0
+	.loc 1 165 0
 	j	exitShiParkerApp
-<<<<<<< Updated upstream
-.LVL110:
-.L60:
-	.loc 1 162 0
-=======
 .LVL126:
 .L58:
 	.loc 1 170 0
->>>>>>> Stashed changes
 	mov	%d4, 1
-	.loc 1 161 0
+	.loc 1 169 0
 	st.b	[%a15] lo:carStatus, %d15
-	.loc 1 162 0
+	.loc 1 170 0
 	call	CancelAlarm
-<<<<<<< Updated upstream
-.LVL111:
-	.loc 1 163 0
-	mov	%e4, 2
-	mov	%d6, 4
-	call	SetRelAlarm
-.LVL112:
-	.loc 1 164 0
-	mov	%e4, 1
-	mov	%d6, 50
-.L62:
-	call	SetRelAlarm
-.LVL113:
-	.loc 1 167 0
-	mov	%e4, 3
-	mov	%d6, 6
-	j	.L61
-.L45:
-	.loc 1 182 0
-	.loc 1 179 0
-=======
 .LVL127:
 	.loc 1 171 0
 	mov	%d4, 2
@@ -1839,17 +1103,12 @@ FuncShiParkerAppTask:
 .L43:
 	.loc 1 190 0
 	.loc 1 187 0
->>>>>>> Stashed changes
 	mov	%d4, 3
-	.loc 1 182 0
+	.loc 1 190 0
 	lea	%SP, [%SP] 8
-	.loc 1 179 0
+	.loc 1 187 0
 	j	handleError
-<<<<<<< Updated upstream
-.LVL114:
-=======
 .LVL130:
->>>>>>> Stashed changes
 .LFE600:
 	.size	FuncShiParkerAppTask, .-FuncShiParkerAppTask
 	.global	__gtdf2
@@ -1858,49 +1117,11 @@ FuncShiParkerAppTask:
 	.type	FuncAvoidObstacleTask, @function
 FuncAvoidObstacleTask:
 .LFB601:
-	.loc 1 185 0
-	.loc 1 186 0
+	.loc 1 193 0
+	.loc 1 194 0
 	movh.a	%a15, hi:g_isAppRunning
 	ld.bu	%d15, [%a15] lo:g_isAppRunning
 	jnz	%d15, .L64
-<<<<<<< Updated upstream
-	.loc 1 187 0
-	call	TerminateTask
-.LVL115:
-.L64:
-	.loc 1 188 0
-	movh.a	%a4, hi:g_Ultrasonic_FRONT
-	lea	%a4, [%a4] lo:g_Ultrasonic_FRONT
-	call	getUltrasonic
-.LVL116:
-	.loc 1 189 0
-	movh.a	%a4, hi:.LC8
-	mov	%e4, %d3, %d2
-	lea	%a4, [%a4] lo:.LC8
-	.loc 1 188 0
-	mov	%e8, %d3, %d2
-.LVL117:
-	.loc 1 189 0
-	call	printDouble
-.LVL118:
-	.loc 1 190 0
-	mov	%e4, %d9, %d8
-	mov	%e6, 0
-	call	__gtdf2
-.LVL119:
-	jlez	%d2, .L63
-	.loc 1 190 0 is_stmt 0 discriminator 1
-	mov	%e4, %d9, %d8
-	mov	%d6, 0
-	movh	%d7, 16424
-	call	__ltdf2
-.LVL120:
-	jgez	%d2, .L63
-	.loc 1 192 0 is_stmt 1
-	mov	%d4, 1
-	j	handleError
-.LVL121:
-=======
 	.loc 1 195 0
 	call	TerminateTask
 .LVL131:
@@ -1931,7 +1152,6 @@ FuncAvoidObstacleTask:
 	mov	%d4, 1
 	j	handleError
 .LVL136:
->>>>>>> Stashed changes
 .L63:
 	ret
 .LFE601:
@@ -1982,9 +1202,9 @@ carStatus:
 	.local	carStatusPacket
 	.align 0
 	.type		 carStatusPacket,@object
-	.size		 carStatusPacket,36
+	.size		 carStatusPacket,20
 carStatusPacket:
-	.space	36
+	.space	20
 	.global	g_isAppRunning
 	.type	g_isAppRunning, @object
 	.size	g_isAppRunning, 1
@@ -2213,11 +1433,7 @@ errorMessages:
 	.file 19 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_oo_api_osek.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-<<<<<<< Updated upstream
-	.uaword	0x3c39
-=======
-	.uaword	0x3cd7
->>>>>>> Stashed changes
+	.uaword	0x3cea
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -6493,18 +5709,19 @@ errorMessages:
 	.uaword	0x233f
 	.uleb128 0x4
 	.byte	0x4
-<<<<<<< Updated upstream
 	.uaword	0x2590
-=======
-	.uaword	0x257d
 	.uleb128 0x17
-	.uaword	0x178
->>>>>>> Stashed changes
+	.uaword	0x18b
 	.uleb128 0x3
 	.string	"uint16_t"
 	.byte	0x5
 	.byte	0x36
 	.uaword	0x1c6
+	.uleb128 0x3
+	.string	"int32_t"
+	.byte	0x5
+	.byte	0x4f
+	.uaword	0x163
 	.uleb128 0x3
 	.string	"uint32_t"
 	.byte	0x5
@@ -6512,46 +5729,29 @@ errorMessages:
 	.uaword	0x16f
 	.uleb128 0xb
 	.string	"Point"
-	.byte	0x10
+	.byte	0x8
 	.byte	0x6
 	.byte	0x63
-<<<<<<< Updated upstream
-	.uaword	0x25ec
-=======
-	.uaword	0x25ed
->>>>>>> Stashed changes
+	.uaword	0x2600
 	.uleb128 0x8
 	.string	"x"
 	.byte	0x6
 	.byte	0x65
-<<<<<<< Updated upstream
-	.uaword	0x159
-=======
-	.uaword	0x25ab
->>>>>>> Stashed changes
+	.uaword	0x25be
 	.byte	0
 	.uleb128 0x8
 	.string	"y"
 	.byte	0x6
 	.byte	0x66
-<<<<<<< Updated upstream
-	.uaword	0x159
-	.byte	0x8
-=======
-	.uaword	0x25ab
+	.uaword	0x25be
 	.byte	0x4
->>>>>>> Stashed changes
 	.byte	0
 	.uleb128 0xb
 	.string	"ParkingSystemPacket"
-	.byte	0x24
+	.byte	0x14
 	.byte	0x6
 	.byte	0x69
-<<<<<<< Updated upstream
-	.uaword	0x2688
-=======
-	.uaword	0x2689
->>>>>>> Stashed changes
+	.uaword	0x269c
 	.uleb128 0x8
 	.string	"start_byte"
 	.byte	0x6
@@ -6568,90 +5768,57 @@ errorMessages:
 	.string	"car_current_position"
 	.byte	0x6
 	.byte	0x6d
-<<<<<<< Updated upstream
-	.uaword	0x25c9
-=======
-	.uaword	0x25ca
->>>>>>> Stashed changes
+	.uaword	0x25dd
 	.byte	0x2
 	.uleb128 0x8
 	.string	"car_target_position"
 	.byte	0x6
 	.byte	0x6e
-<<<<<<< Updated upstream
-	.uaword	0x25c9
-	.byte	0x12
-=======
-	.uaword	0x25ca
+	.uaword	0x25dd
 	.byte	0xa
->>>>>>> Stashed changes
 	.uleb128 0x8
 	.string	"car_command"
 	.byte	0x6
 	.byte	0x6f
 	.uaword	0x1ab
-	.byte	0x22
+	.byte	0x12
 	.uleb128 0x8
 	.string	"crc"
 	.byte	0x6
 	.byte	0x70
 	.uaword	0x1ab
-	.byte	0x23
+	.byte	0x13
 	.byte	0
 	.uleb128 0x3
 	.string	"OsEE_reg"
 	.byte	0x7
 	.byte	0x5b
-<<<<<<< Updated upstream
-	.uaword	0x25b9
-=======
-	.uaword	0x25ba
->>>>>>> Stashed changes
+	.uaword	0x25cd
 	.uleb128 0x3
 	.string	"TaskType"
 	.byte	0x8
 	.byte	0x78
-<<<<<<< Updated upstream
-	.uaword	0x2688
-=======
-	.uaword	0x2689
->>>>>>> Stashed changes
+	.uaword	0x269c
 	.uleb128 0x10
 	.string	"CounterType"
 	.byte	0x8
 	.uahalf	0x18f
-<<<<<<< Updated upstream
-	.uaword	0x2688
-=======
-	.uaword	0x2689
->>>>>>> Stashed changes
+	.uaword	0x269c
 	.uleb128 0x10
 	.string	"TickType"
 	.byte	0x8
 	.uahalf	0x19e
-<<<<<<< Updated upstream
-	.uaword	0x2688
-=======
-	.uaword	0x2689
->>>>>>> Stashed changes
+	.uaword	0x269c
 	.uleb128 0x10
 	.string	"AlarmType"
 	.byte	0x8
 	.uahalf	0x1d6
-<<<<<<< Updated upstream
-	.uaword	0x2688
-=======
-	.uaword	0x2689
->>>>>>> Stashed changes
+	.uaword	0x269c
 	.uleb128 0x18
 	.byte	0x1
 	.byte	0x8
 	.uahalf	0x2b1
-<<<<<<< Updated upstream
-	.uaword	0x2902
-=======
-	.uaword	0x2903
->>>>>>> Stashed changes
+	.uaword	0x2916
 	.uleb128 0x19
 	.string	"E_OK"
 	.sleb128 0
@@ -6744,30 +5911,18 @@ errorMessages:
 	.string	"OsEE_status_type"
 	.byte	0x8
 	.uahalf	0x2d4
-<<<<<<< Updated upstream
-	.uaword	0x26df
-=======
-	.uaword	0x26e0
->>>>>>> Stashed changes
+	.uaword	0x26f3
 	.uleb128 0x10
 	.string	"StatusType"
 	.byte	0x8
 	.uahalf	0x2d9
-<<<<<<< Updated upstream
-	.uaword	0x2902
-=======
-	.uaword	0x2903
->>>>>>> Stashed changes
+	.uaword	0x2916
 	.uleb128 0x1a
 	.string	"motor_index"
 	.byte	0x1
 	.byte	0x9
 	.byte	0x34
-<<<<<<< Updated upstream
-	.uaword	0x296f
-=======
-	.uaword	0x2970
->>>>>>> Stashed changes
+	.uaword	0x2983
 	.uleb128 0x19
 	.string	"INDEX_FL"
 	.sleb128 0
@@ -6785,21 +5940,13 @@ errorMessages:
 	.string	"motor_index_t"
 	.byte	0x9
 	.byte	0x39
-<<<<<<< Updated upstream
-	.uaword	0x292e
-=======
-	.uaword	0x292f
->>>>>>> Stashed changes
+	.uaword	0x2942
 	.uleb128 0xb
 	.string	"Ultrasonic"
 	.byte	0xa
 	.byte	0xa
 	.byte	0x1e
-<<<<<<< Updated upstream
-	.uaword	0x29de
-=======
-	.uaword	0x29df
->>>>>>> Stashed changes
+	.uaword	0x29f2
 	.uleb128 0x8
 	.string	"TRIG_PORT"
 	.byte	0xa
@@ -6838,11 +5985,7 @@ errorMessages:
 	.byte	0x10
 	.byte	0xc
 	.byte	0x27
-<<<<<<< Updated upstream
-	.uaword	0x2a2a
-=======
-	.uaword	0x2a2b
->>>>>>> Stashed changes
+	.uaword	0x2a3e
 	.uleb128 0x8
 	.string	"steering_angle"
 	.byte	0xc
@@ -6860,21 +6003,13 @@ errorMessages:
 	.string	"DriveCommand"
 	.byte	0xc
 	.byte	0x2a
-<<<<<<< Updated upstream
-	.uaword	0x29fc
-=======
-	.uaword	0x29fd
->>>>>>> Stashed changes
+	.uaword	0x2a10
 	.uleb128 0x1a
 	.string	"CAR_STATUS_TYPE_T"
 	.byte	0x1
 	.byte	0xd
-	.byte	0x2d
-<<<<<<< Updated upstream
-	.uaword	0x2b05
-=======
-	.uaword	0x2b06
->>>>>>> Stashed changes
+	.byte	0x2c
+	.uaword	0x2b19
 	.uleb128 0x19
 	.string	"CAR_STATUS_READY"
 	.sleb128 0
@@ -6900,22 +6035,14 @@ errorMessages:
 	.uleb128 0x3
 	.string	"CAR_STATUS_TYPE"
 	.byte	0xd
-	.byte	0x35
-<<<<<<< Updated upstream
-	.uaword	0x2a3e
-=======
-	.uaword	0x2a3f
->>>>>>> Stashed changes
+	.byte	0x34
+	.uaword	0x2a52
 	.uleb128 0x1a
 	.string	"CAR_COMMAND_TYPE_T"
 	.byte	0x1
 	.byte	0xd
-	.byte	0x36
-<<<<<<< Updated upstream
-	.uaword	0x2ba7
-=======
-	.uaword	0x2ba8
->>>>>>> Stashed changes
+	.byte	0x35
+	.uaword	0x2bbb
 	.uleb128 0x19
 	.string	"CAR_COMMAND_FORCESTOP"
 	.sleb128 0
@@ -6935,22 +6062,14 @@ errorMessages:
 	.uleb128 0x3
 	.string	"CAR_COMMAND_TYPE"
 	.byte	0xd
-	.byte	0x3c
-<<<<<<< Updated upstream
-	.uaword	0x2b1c
-=======
-	.uaword	0x2b1d
->>>>>>> Stashed changes
+	.byte	0x3b
+	.uaword	0x2b30
 	.uleb128 0x1a
 	.string	"ERROR_CODE_TYPE_T"
 	.byte	0x1
 	.byte	0xd
-	.byte	0x3d
-<<<<<<< Updated upstream
-	.uaword	0x2cff
-=======
-	.uaword	0x2d00
->>>>>>> Stashed changes
+	.byte	0x3c
+	.uaword	0x2d13
 	.uleb128 0x19
 	.string	"ERROR_CODE_USER_CONTROL"
 	.sleb128 0
@@ -7003,32 +6122,24 @@ errorMessages:
 	.uleb128 0x3
 	.string	"ERROR_CODE_TYPE"
 	.byte	0xd
-	.byte	0x4e
-<<<<<<< Updated upstream
-	.uaword	0x2bbf
-=======
-	.uaword	0x2bc0
->>>>>>> Stashed changes
+	.byte	0x4d
+	.uaword	0x2bd3
 	.uleb128 0xb
 	.string	"Position"
 	.byte	0x10
 	.byte	0xd
-	.byte	0x4f
-<<<<<<< Updated upstream
-	.uaword	0x2d3c
-=======
-	.uaword	0x2d3d
->>>>>>> Stashed changes
+	.byte	0x4e
+	.uaword	0x2d50
 	.uleb128 0x8
 	.string	"x"
 	.byte	0xd
-	.byte	0x51
+	.byte	0x50
 	.uaword	0x159
 	.byte	0
 	.uleb128 0x8
 	.string	"y"
 	.byte	0xd
-	.byte	0x52
+	.byte	0x51
 	.uaword	0x159
 	.byte	0x8
 	.byte	0
@@ -7036,11 +6147,7 @@ errorMessages:
 	.byte	0x1
 	.string	"calculateCurrentPos"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.byte	0xf3
-=======
 	.byte	0xf7
->>>>>>> Stashed changes
 	.byte	0x1
 	.uleb128 0x1c
 	.byte	0x1
@@ -7053,19 +6160,11 @@ errorMessages:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x2d9b
+	.uaword	0x2daf
 	.uleb128 0x1d
 	.uaword	.LVL0
-	.uaword	0x39fa
-	.uaword	0x2d8a
-=======
-	.uaword	0x2d9c
-	.uleb128 0x1d
-	.uaword	.LVL0
-	.uaword	0x3a98
-	.uaword	0x2d8b
->>>>>>> Stashed changes
+	.uaword	0x3aab
+	.uaword	0x2d9e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7076,11 +6175,7 @@ errorMessages:
 	.uleb128 0x1f
 	.uaword	.LVL1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3a2a
-=======
-	.uaword	0x3ac8
->>>>>>> Stashed changes
+	.uaword	0x3adb
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7099,19 +6194,11 @@ errorMessages:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x2e4e
+	.uaword	0x2ef9
 	.uleb128 0x1d
 	.uaword	.LVL2
-	.uaword	0x3a50
-	.uaword	0x2dd8
-=======
-	.uaword	0x2ee6
-	.uleb128 0x1d
-	.uaword	.LVL2
-	.uaword	0x3aee
-	.uaword	0x2dd9
->>>>>>> Stashed changes
+	.uaword	0x3b01
+	.uaword	0x2dec
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -7121,13 +6208,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL3
-<<<<<<< Updated upstream
-	.uaword	0x3a6e
-	.uaword	0x2deb
-=======
-	.uaword	0x3b0c
-	.uaword	0x2dec
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x2dff
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7136,13 +6218,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL4
-<<<<<<< Updated upstream
-	.uaword	0x3a6e
-	.uaword	0x2dfe
-=======
-	.uaword	0x3b0c
-	.uaword	0x2dff
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x2e12
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7151,13 +6228,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL5
-<<<<<<< Updated upstream
-	.uaword	0x3a50
-	.uaword	0x2e15
-=======
-	.uaword	0x3aee
-	.uaword	0x2e16
->>>>>>> Stashed changes
+	.uaword	0x3b01
+	.uaword	0x2e29
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -7167,12 +6239,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL6
-<<<<<<< Updated upstream
-	.uaword	0x3a8f
-	.uaword	0x2e32
-=======
-	.uaword	0x3b2d
-	.uaword	0x2e29
+	.uaword	0x3b40
+	.uaword	0x2e3c
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7181,8 +6249,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL7
-	.uaword	0x3b2d
-	.uaword	0x2e3c
+	.uaword	0x3b40
+	.uaword	0x2e4f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7191,8 +6259,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL8
-	.uaword	0x3b2d
-	.uaword	0x2e4f
+	.uaword	0x3b40
+	.uaword	0x2e62
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7201,8 +6269,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL9
-	.uaword	0x3b2d
-	.uaword	0x2e62
+	.uaword	0x3b40
+	.uaword	0x2e75
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7211,8 +6279,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL10
-	.uaword	0x3b52
-	.uaword	0x2e75
+	.uaword	0x3b65
+	.uaword	0x2e88
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7221,8 +6289,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL11
-	.uaword	0x3b52
-	.uaword	0x2e88
+	.uaword	0x3b65
+	.uaword	0x2e9b
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7231,8 +6299,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL12
-	.uaword	0x3b52
-	.uaword	0x2e9b
+	.uaword	0x3b65
+	.uaword	0x2eae
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7241,8 +6309,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL13
-	.uaword	0x3b52
-	.uaword	0x2eae
+	.uaword	0x3b65
+	.uaword	0x2ec1
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7251,9 +6319,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL14
-	.uaword	0x3b6d
-	.uaword	0x2ecb
->>>>>>> Stashed changes
+	.uaword	0x3b80
+	.uaword	0x2ede
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
@@ -7263,7 +6330,7 @@ errorMessages:
 	.byte	0x1
 	.byte	0x55
 	.byte	0x1
-	.byte	0x34
+	.byte	0x30
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7271,13 +6338,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1f
-	.uaword	.LVL7
+	.uaword	.LVL15
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3a8f
-=======
-	.uaword	0x3b6d
->>>>>>> Stashed changes
+	.uaword	0x3b80
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
@@ -7287,7 +6350,7 @@ errorMessages:
 	.byte	0x1
 	.byte	0x55
 	.byte	0x1
-	.byte	0x35
+	.byte	0x30
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7299,25 +6362,17 @@ errorMessages:
 	.byte	0x1
 	.string	"exitShiParkerApp"
 	.byte	0x1
-	.byte	0x30
+	.byte	0x38
 	.uaword	.LFB599
 	.uaword	.LFE599
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x2f31
-	.uleb128 0x1d
-	.uaword	.LVL8
-	.uaword	0x3a50
-	.uaword	0x2e89
-=======
-	.uaword	0x2fc9
+	.uaword	0x2fdc
 	.uleb128 0x1d
 	.uaword	.LVL16
-	.uaword	0x3aee
-	.uaword	0x2f21
->>>>>>> Stashed changes
+	.uaword	0x3b01
+	.uaword	0x2f34
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -7326,15 +6381,9 @@ errorMessages:
 	.uaword	.LC2
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL9
-	.uaword	0x3aba
-	.uaword	0x2e9c
-=======
 	.uaword	.LVL17
-	.uaword	0x3b52
-	.uaword	0x2f34
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x2f47
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7342,15 +6391,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL10
-	.uaword	0x3aba
-	.uaword	0x2eaf
-=======
 	.uaword	.LVL18
-	.uaword	0x3b52
-	.uaword	0x2f47
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x2f5a
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7358,15 +6401,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL11
-	.uaword	0x3aba
-	.uaword	0x2ec2
-=======
 	.uaword	.LVL19
-	.uaword	0x3b52
-	.uaword	0x2f5a
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x2f6d
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7374,15 +6411,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL12
-	.uaword	0x3aba
-	.uaword	0x2ed5
-=======
 	.uaword	.LVL20
-	.uaword	0x3b52
-	.uaword	0x2f6d
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x2f80
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7390,15 +6421,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL13
-	.uaword	0x3ad5
-	.uaword	0x2ee8
-=======
 	.uaword	.LVL21
-	.uaword	0x3b98
-	.uaword	0x2f80
->>>>>>> Stashed changes
+	.uaword	0x3bab
+	.uaword	0x2f93
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7406,15 +6431,9 @@ errorMessages:
 	.byte	0x3b
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL14
-	.uaword	0x3a6e
-	.uaword	0x2efb
-=======
 	.uaword	.LVL22
-	.uaword	0x3b0c
-	.uaword	0x2f93
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x2fa6
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7422,15 +6441,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL15
-	.uaword	0x3a6e
-	.uaword	0x2f0e
-=======
 	.uaword	.LVL23
-	.uaword	0x3b0c
-	.uaword	0x2fa6
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x2fb9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7438,15 +6451,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL16
-	.uaword	0x3a6e
-	.uaword	0x2f21
-=======
 	.uaword	.LVL24
-	.uaword	0x3b0c
-	.uaword	0x2fb9
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x2fcc
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7454,13 +6461,8 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x21
-<<<<<<< Updated upstream
-	.uaword	.LVL17
-	.uaword	0x3a6e
-=======
 	.uaword	.LVL25
-	.uaword	0x3b0c
->>>>>>> Stashed changes
+	.uaword	0x3b1f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7472,138 +6474,37 @@ errorMessages:
 	.byte	0x1
 	.string	"turn90"
 	.byte	0x1
-	.byte	0xc4
+	.byte	0xcc
 	.byte	0x1
 	.uaword	.LFB602
 	.uaword	.LFE602
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3130
-	.uleb128 0x23
-	.string	"currentHallCntAvg"
-	.byte	0x1
-	.byte	0xc6
-	.uaword	0x3130
-=======
-	.uaword	0x31b2
+	.uaword	0x31c5
 	.uleb128 0x23
 	.string	"currentHallCntAvg"
 	.byte	0x1
 	.byte	0xce
-	.uaword	0x31b2
->>>>>>> Stashed changes
+	.uaword	0x31c5
 	.byte	0x2
 	.byte	0x91
 	.sleb128 -16
 	.uleb128 0x23
 	.string	"targetHallCntAvg"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.byte	0xc7
-	.uaword	0x3130
-=======
 	.byte	0xcf
-	.uaword	0x31b2
->>>>>>> Stashed changes
+	.uaword	0x31c5
 	.byte	0x2
 	.byte	0x91
 	.sleb128 -8
 	.uleb128 0x24
-	.uaword	.LVL18
-	.uaword	0x3af7
-	.uleb128 0x1d
-	.uaword	.LVL20
-	.uaword	0x3a6e
-	.uaword	0x2f9f
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL21
-	.uaword	0x3aba
-	.uaword	0x2fb2
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL22
-	.uaword	0x3aba
-	.uaword	0x2fc5
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL23
-	.uaword	0x3aba
-	.uaword	0x2fd8
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL24
-	.uaword	0x3aba
-	.uaword	0x2feb
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL25
-	.uaword	0x3b0f
-	.uaword	0x2ffe
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
 	.uaword	.LVL26
-<<<<<<< Updated upstream
-	.uaword	0x3b0f
-	.uaword	0x3011
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL27
-	.uaword	0x3b31
-	.uaword	0x3024
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
+	.uaword	0x3bcd
 	.uleb128 0x1d
 	.uaword	.LVL28
-	.uaword	0x3b31
-=======
-	.uaword	0x3bba
-	.uleb128 0x1d
-	.uaword	.LVL28
-	.uaword	0x3b0c
->>>>>>> Stashed changes
-	.uaword	0x3037
+	.uaword	0x3b1f
+	.uaword	0x304a
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7612,12 +6513,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL29
-<<<<<<< Updated upstream
-	.uaword	0x3b54
-=======
-	.uaword	0x3b52
->>>>>>> Stashed changes
-	.uaword	0x304a
+	.uaword	0x3b65
+	.uaword	0x305d
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7626,12 +6523,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL30
-<<<<<<< Updated upstream
-	.uaword	0x3b54
-=======
-	.uaword	0x3b52
->>>>>>> Stashed changes
-	.uaword	0x305d
+	.uaword	0x3b65
+	.uaword	0x3070
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7640,12 +6533,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL31
-<<<<<<< Updated upstream
-	.uaword	0x3b54
-=======
-	.uaword	0x3b52
->>>>>>> Stashed changes
-	.uaword	0x3070
+	.uaword	0x3b65
+	.uaword	0x3083
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7654,12 +6543,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL32
-<<<<<<< Updated upstream
-	.uaword	0x3b54
-=======
-	.uaword	0x3b52
->>>>>>> Stashed changes
-	.uaword	0x3083
+	.uaword	0x3b65
+	.uaword	0x3096
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7667,14 +6552,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL34
-	.uaword	0x3b79
-	.uaword	0x3097
-=======
 	.uaword	.LVL33
-	.uaword	0x3bd2
-	.uaword	0x3096
+	.uaword	0x3be5
+	.uaword	0x30a9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7683,8 +6563,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL34
-	.uaword	0x3bd2
-	.uaword	0x30a9
+	.uaword	0x3be5
+	.uaword	0x30bc
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7693,8 +6573,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL35
-	.uaword	0x3bf4
-	.uaword	0x30bc
+	.uaword	0x3c07
+	.uaword	0x30cf
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7703,8 +6583,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL36
-	.uaword	0x3bf4
-	.uaword	0x30cf
+	.uaword	0x3c07
+	.uaword	0x30e2
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7713,8 +6593,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL37
-	.uaword	0x3b2d
-	.uaword	0x30e2
+	.uaword	0x3b40
+	.uaword	0x30f5
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7723,8 +6603,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL38
-	.uaword	0x3b2d
-	.uaword	0x30f5
+	.uaword	0x3b40
+	.uaword	0x3108
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7733,8 +6613,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL39
-	.uaword	0x3b2d
-	.uaword	0x3108
+	.uaword	0x3b40
+	.uaword	0x311b
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7743,8 +6623,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL40
-	.uaword	0x3b2d
-	.uaword	0x311b
+	.uaword	0x3b40
+	.uaword	0x312e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7753,29 +6633,18 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL42
-	.uaword	0x3c17
-	.uaword	0x312e
->>>>>>> Stashed changes
+	.uaword	0x3c2a
+	.uaword	0x3141
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x3a
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x24
-	.uaword	.LVL35
-	.uaword	0x3af7
-	.uleb128 0x1d
-	.uaword	.LVL36
-	.uaword	0x3b92
-	.uaword	0x30b4
-=======
 	.uleb128 0x1d
 	.uaword	.LVL43
-	.uaword	0x3c30
-	.uaword	0x3142
->>>>>>> Stashed changes
+	.uaword	0x3c43
+	.uaword	0x3155
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -7785,28 +6654,11 @@ errorMessages:
 	.byte	0
 	.uleb128 0x24
 	.uaword	.LVL44
-	.uaword	0x3bba
+	.uaword	0x3bcd
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL37
-	.uaword	0x3b79
-	.uaword	0x30c8
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x2
-	.byte	0x8
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL38
-	.uaword	0x3b54
-	.uaword	0x30db
-=======
 	.uaword	.LVL45
-	.uaword	0x3b2d
-	.uaword	0x315e
->>>>>>> Stashed changes
+	.uaword	0x3b40
+	.uaword	0x3171
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7814,15 +6666,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL39
-	.uaword	0x3b54
-	.uaword	0x30ee
-=======
 	.uaword	.LVL46
-	.uaword	0x3b2d
-	.uaword	0x3171
->>>>>>> Stashed changes
+	.uaword	0x3b40
+	.uaword	0x3184
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7830,15 +6676,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL40
-	.uaword	0x3b54
-	.uaword	0x3101
-=======
 	.uaword	.LVL47
-	.uaword	0x3b2d
-	.uaword	0x3184
->>>>>>> Stashed changes
+	.uaword	0x3b40
+	.uaword	0x3197
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7846,15 +6686,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL41
-	.uaword	0x3b54
-	.uaword	0x3114
-=======
 	.uaword	.LVL48
-	.uaword	0x3b2d
-	.uaword	0x3197
->>>>>>> Stashed changes
+	.uaword	0x3b40
+	.uaword	0x31aa
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -7862,26 +6696,14 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1f
-<<<<<<< Updated upstream
-	.uaword	.LVL42
-	.byte	0x1
-	.uaword	0x3a8f
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x56
-	.byte	0x2
-	.byte	0x8
-	.byte	0x32
-=======
 	.uaword	.LVL49
 	.byte	0x1
-	.uaword	0x3b6d
+	.uaword	0x3b80
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
 	.byte	0x1
 	.byte	0x33
->>>>>>> Stashed changes
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x55
@@ -7891,107 +6713,62 @@ errorMessages:
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x31
+	.byte	0x33
 	.byte	0
 	.byte	0
 	.uleb128 0x17
 	.uaword	0x159
 	.uleb128 0x25
-<<<<<<< Updated upstream
-	.uaword	0x2d3c
-=======
-	.uaword	0x2d3d
->>>>>>> Stashed changes
+	.uaword	0x2d50
 	.uaword	.LFB603
 	.uaword	.LFE603
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x315c
-	.uleb128 0x24
-	.uaword	.LVL43
-	.uaword	0x3af7
-	.uleb128 0x24
-	.uaword	.LVL45
-	.uaword	0x3af7
-=======
-	.uaword	0x31de
+	.uaword	0x31f1
 	.uleb128 0x24
 	.uaword	.LVL50
-	.uaword	0x3bba
+	.uaword	0x3bcd
 	.uleb128 0x24
 	.uaword	.LVL52
-	.uaword	0x3bba
->>>>>>> Stashed changes
+	.uaword	0x3bcd
 	.byte	0
 	.uleb128 0x26
 	.byte	0x1
 	.string	"FuncWallFollowTask"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uahalf	0x108
-=======
 	.uahalf	0x10c
->>>>>>> Stashed changes
 	.byte	0x1
 	.uaword	.LFB604
 	.uaword	.LFE604
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3337
-=======
-	.uaword	0x33e8
->>>>>>> Stashed changes
+	.uaword	0x33fb
 	.uleb128 0x27
 	.uaword	.Ldebug_ranges0+0
 	.uleb128 0x28
 	.string	"cmd"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uahalf	0x119
-	.uaword	0x2a2a
-	.byte	0x2
-	.byte	0x91
-	.sleb128 -16
-	.uleb128 0x29
-	.string	"delta_p"
-	.byte	0x1
-	.uahalf	0x11a
-	.uaword	0x159
-	.uaword	.LLST0
-	.uleb128 0x24
-	.uaword	.LVL48
-	.uaword	0x3bb3
-	.uleb128 0x24
-	.uaword	.LVL49
-	.uaword	0x3bb3
-	.uleb128 0x1d
-	.uaword	.LVL50
-	.uaword	0x3bdb
-	.uaword	0x31d2
-=======
 	.uahalf	0x125
-	.uaword	0x2a2b
+	.uaword	0x2a3e
 	.uaword	.LLST0
 	.uleb128 0x28
 	.string	"delta_p"
 	.byte	0x1
 	.uahalf	0x127
-	.uaword	0x146
+	.uaword	0x159
 	.uaword	.LLST1
 	.uleb128 0x24
 	.uaword	.LVL54
-	.uaword	0x3c51
+	.uaword	0x3c64
 	.uleb128 0x24
 	.uaword	.LVL55
-	.uaword	0x3c51
+	.uaword	0x3c64
 	.uleb128 0x1d
 	.uaword	.LVL56
-	.uaword	0x3c30
-	.uaword	0x3258
+	.uaword	0x3c43
+	.uaword	0x326b
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8001,8 +6778,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL57
-	.uaword	0x3c30
-	.uaword	0x326f
+	.uaword	0x3c43
+	.uaword	0x3282
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8012,9 +6789,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL58
-	.uaword	0x3c79
-	.uaword	0x3283
->>>>>>> Stashed changes
+	.uaword	0x3c8c
+	.uaword	0x3296
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8023,15 +6799,9 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL53
-	.uaword	0x3b92
-	.uaword	0x31f6
-=======
 	.uaword	.LVL60
-	.uaword	0x3c30
-	.uaword	0x32a7
->>>>>>> Stashed changes
+	.uaword	0x3c43
+	.uaword	0x32ba
 	.uleb128 0x1e
 	.byte	0x6
 	.byte	0x54
@@ -8052,61 +6822,9 @@ errorMessages:
 	.uaword	.LC6
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL57
-	.uaword	0x3b54
-	.uaword	0x3209
-=======
 	.uaword	.LVL66
-	.uaword	0x3b2d
-	.uaword	0x32ba
->>>>>>> Stashed changes
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL59
-	.uaword	0x3b54
-	.uaword	0x321c
-=======
-	.uaword	.LVL68
-	.uaword	0x3b2d
+	.uaword	0x3b40
 	.uaword	0x32cd
->>>>>>> Stashed changes
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL61
-	.uaword	0x3b54
-	.uaword	0x322f
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL63
-	.uaword	0x3b54
-	.uaword	0x3242
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL64
-	.uaword	0x3b0f
-	.uaword	0x3255
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8114,57 +6832,19 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL65
-	.uaword	0x3b0f
-	.uaword	0x3268
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL66
-	.uaword	0x3b0f
-	.uaword	0x327b
+	.uaword	.LVL68
+	.uaword	0x3b40
+	.uaword	0x32e0
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x32
 	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL67
-	.uaword	0x3b0f
-	.uaword	0x328e
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x24
-	.uaword	.LVL68
-	.uaword	0x2d3c
 	.uleb128 0x1d
 	.uaword	.LVL70
-<<<<<<< Updated upstream
-	.uaword	0x3aba
-	.uaword	0x32aa
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL71
-	.uaword	0x3aba
-	.uaword	0x32bd
-=======
-	.uaword	0x3b2d
-	.uaword	0x32e0
->>>>>>> Stashed changes
+	.uaword	0x3b40
+	.uaword	0x32f3
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8173,27 +6853,18 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL72
-<<<<<<< Updated upstream
-	.uaword	0x3aba
-	.uaword	0x32d0
-=======
-	.uaword	0x3b2d
-	.uaword	0x32f3
->>>>>>> Stashed changes
+	.uaword	0x3b40
+	.uaword	0x3306
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x32
+	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL73
-<<<<<<< Updated upstream
-	.uaword	0x3aba
-	.uaword	0x32e3
-=======
-	.uaword	0x3bd2
-	.uaword	0x3306
+	.uaword	0x3be5
+	.uaword	0x3319
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8202,8 +6873,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL74
-	.uaword	0x3bd2
-	.uaword	0x3319
+	.uaword	0x3be5
+	.uaword	0x332c
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8212,8 +6883,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL75
-	.uaword	0x3bd2
-	.uaword	0x332c
+	.uaword	0x3be5
+	.uaword	0x333f
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8222,8 +6893,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL76
-	.uaword	0x3bd2
-	.uaword	0x333f
+	.uaword	0x3be5
+	.uaword	0x3352
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8232,11 +6903,11 @@ errorMessages:
 	.byte	0
 	.uleb128 0x24
 	.uaword	.LVL77
-	.uaword	0x2d3d
+	.uaword	0x2d50
 	.uleb128 0x1d
 	.uaword	.LVL79
-	.uaword	0x3b52
-	.uaword	0x335b
+	.uaword	0x3b65
+	.uaword	0x336e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8245,8 +6916,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL80
-	.uaword	0x3b52
-	.uaword	0x336e
+	.uaword	0x3b65
+	.uaword	0x3381
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8255,8 +6926,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL81
-	.uaword	0x3b52
-	.uaword	0x3381
+	.uaword	0x3b65
+	.uaword	0x3394
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8265,34 +6936,22 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL82
-	.uaword	0x3b52
-	.uaword	0x3394
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x33a7
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x33
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x2a
-	.uaword	.LVL74
-	.byte	0x1
-	.uaword	0x2f31
-	.uleb128 0x1d
-	.uaword	.LVL76
-	.uaword	0x3aba
-	.uaword	0x3300
-=======
 	.uleb128 0x29
 	.uaword	.LVL84
 	.byte	0x1
-	.uaword	0x2fc9
+	.uaword	0x2fdc
 	.uleb128 0x1d
 	.uaword	.LVL86
-	.uaword	0x3b52
-	.uaword	0x33b1
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x33c4
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8300,15 +6959,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL77
-	.uaword	0x3aba
-	.uaword	0x3313
-=======
 	.uaword	.LVL87
-	.uaword	0x3b52
-	.uaword	0x33c4
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x33d7
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8316,15 +6969,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL78
-	.uaword	0x3aba
-	.uaword	0x3326
-=======
 	.uaword	.LVL88
-	.uaword	0x3b52
-	.uaword	0x33d7
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x33ea
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8332,13 +6979,8 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x21
-<<<<<<< Updated upstream
-	.uaword	.LVL79
-	.uaword	0x3aba
-=======
 	.uaword	.LVL89
-	.uaword	0x3b52
->>>>>>> Stashed changes
+	.uaword	0x3b65
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8347,75 +6989,44 @@ errorMessages:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x26
 	.byte	0x1
 	.string	"makePacket"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uahalf	0x145
-=======
 	.uahalf	0x150
->>>>>>> Stashed changes
 	.byte	0x1
 	.uaword	.LFB606
 	.uaword	.LFE606
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3366
-	.uleb128 0x2c
-	.string	"dst"
-	.byte	0x1
-	.uahalf	0x145
-	.uaword	0x3366
-	.byte	0x1
-	.byte	0x64
-	.byte	0
-	.uleb128 0x4
-	.byte	0x4
-	.uaword	0x25ec
-=======
-	.uaword	0x3419
+	.uaword	0x342c
 	.uleb128 0x2a
 	.string	"dst"
 	.byte	0x1
 	.uahalf	0x150
-	.uaword	0x3419
+	.uaword	0x342c
 	.uaword	.LLST2
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x25ed
->>>>>>> Stashed changes
+	.uaword	0x2600
 	.uleb128 0x2b
 	.byte	0x1
 	.string	"FuncPacketSendTask"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uahalf	0x13f
-=======
 	.uahalf	0x14a
->>>>>>> Stashed changes
 	.byte	0x1
 	.uaword	.LFB605
 	.uaword	.LFE605
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x33ba
-	.uleb128 0x1d
-	.uaword	.LVL81
-	.uaword	0x3337
-	.uaword	0x33a8
-=======
-	.uaword	0x346d
+	.uaword	0x3480
 	.uleb128 0x1d
 	.uaword	.LVL96
-	.uaword	0x33e8
-	.uaword	0x345b
->>>>>>> Stashed changes
+	.uaword	0x33fb
+	.uaword	0x346e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8424,15 +7035,9 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1f
-<<<<<<< Updated upstream
-	.uaword	.LVL82
-	.byte	0x1
-	.uaword	0x3c08
-=======
 	.uaword	.LVL97
 	.byte	0x1
-	.uaword	0x3ca6
->>>>>>> Stashed changes
+	.uaword	0x3cb9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8441,91 +7046,52 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x26
 	.byte	0x1
 	.string	"updateStatus"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uahalf	0x14f
-=======
 	.uahalf	0x15a
->>>>>>> Stashed changes
 	.byte	0x1
 	.uaword	.LFB607
 	.uaword	.LFE607
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x33ee
-	.uleb128 0x2c
-	.string	"packet"
-	.byte	0x1
-	.uahalf	0x14f
-	.uaword	0x33ee
-	.byte	0x1
-	.byte	0x64
-	.byte	0
-	.uleb128 0x4
-	.byte	0x4
-	.uaword	0x33f4
-	.uleb128 0x5
-	.uaword	0x25ec
-=======
-	.uaword	0x34a3
+	.uaword	0x34b6
 	.uleb128 0x2a
 	.string	"packet"
 	.byte	0x1
 	.uahalf	0x15a
-	.uaword	0x34a3
+	.uaword	0x34b6
 	.uaword	.LLST3
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x34a9
+	.uaword	0x34bc
 	.uleb128 0x5
-	.uaword	0x25ed
->>>>>>> Stashed changes
+	.uaword	0x2600
 	.uleb128 0x2b
 	.byte	0x1
 	.string	"handleError"
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uahalf	0x156
-=======
 	.uahalf	0x161
->>>>>>> Stashed changes
 	.byte	0x1
 	.uaword	.LFB608
 	.uaword	.LFE608
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3513
-	.uleb128 0x2d
-	.string	"errorCode"
-	.byte	0x1
-	.uahalf	0x156
-	.uaword	0x2cff
-	.uaword	.LLST1
-	.uleb128 0x1d
-	.uaword	.LVL86
-	.uaword	0x3a6e
-	.uaword	0x3443
-=======
-	.uaword	0x35db
+	.uaword	0x35ee
 	.uleb128 0x2a
 	.string	"errorCode"
 	.byte	0x1
 	.uahalf	0x161
-	.uaword	0x2d00
+	.uaword	0x2d13
 	.uaword	.LLST4
 	.uleb128 0x1d
 	.uaword	.LVL103
-	.uaword	0x3b0c
-	.uaword	0x34f8
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x350b
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8533,15 +7099,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL87
-	.uaword	0x3a6e
-	.uaword	0x3456
-=======
 	.uaword	.LVL104
-	.uaword	0x3b0c
-	.uaword	0x350b
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x351e
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8549,25 +7109,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL88
-	.uaword	0x3aba
-	.uaword	0x3469
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x30
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL89
-	.uaword	0x3aba
-	.uaword	0x347c
-=======
 	.uaword	.LVL105
-	.uaword	0x3b0c
-	.uaword	0x351e
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x3531
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8575,14 +7119,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL90
-	.uaword	0x3aba
-	.uaword	0x348f
-=======
 	.uaword	.LVL106
-	.uaword	0x3b52
-	.uaword	0x3531
+	.uaword	0x3b65
+	.uaword	0x3544
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8591,8 +7130,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL107
-	.uaword	0x3b52
-	.uaword	0x3544
+	.uaword	0x3b65
+	.uaword	0x3557
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8601,9 +7140,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL108
-	.uaword	0x3b52
-	.uaword	0x3557
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x356a
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8611,15 +7149,9 @@ errorMessages:
 	.byte	0x32
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL91
-	.uaword	0x3aba
-	.uaword	0x34a2
-=======
 	.uaword	.LVL109
-	.uaword	0x3b52
-	.uaword	0x356a
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x357d
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8627,15 +7159,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL92
-	.uaword	0x3a50
-	.uaword	0x34c8
-=======
 	.uaword	.LVL110
-	.uaword	0x3aee
-	.uaword	0x3590
->>>>>>> Stashed changes
+	.uaword	0x3b01
+	.uaword	0x35a3
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8659,15 +7185,9 @@ errorMessages:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL93
-	.uaword	0x3ad5
-	.uaword	0x34db
-=======
 	.uaword	.LVL111
-	.uaword	0x3b98
-	.uaword	0x35a3
->>>>>>> Stashed changes
+	.uaword	0x3bab
+	.uaword	0x35b6
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8675,15 +7195,9 @@ errorMessages:
 	.byte	0x3b
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL94
-	.uaword	0x3a50
-	.uaword	0x34f9
-=======
 	.uaword	.LVL112
-	.uaword	0x3aee
-	.uaword	0x35c1
->>>>>>> Stashed changes
+	.uaword	0x3b01
+	.uaword	0x35d4
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8699,21 +7213,12 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x24
-<<<<<<< Updated upstream
-	.uaword	.LVL95
-	.uaword	0x2e4e
-	.uleb128 0x1f
-	.uaword	.LVL96
-	.byte	0x1
-	.uaword	0x3ad5
-=======
 	.uaword	.LVL113
-	.uaword	0x2ee6
+	.uaword	0x2ef9
 	.uleb128 0x1f
 	.uaword	.LVL114
 	.byte	0x1
-	.uaword	0x3b98
->>>>>>> Stashed changes
+	.uaword	0x3bab
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8725,26 +7230,18 @@ errorMessages:
 	.byte	0x1
 	.string	"FuncShiParkerAppTask"
 	.byte	0x1
-	.byte	0x42
+	.byte	0x4a
 	.byte	0x1
 	.uaword	.LFB600
 	.uaword	.LFE600
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x367f
-	.uleb128 0x1d
-	.uaword	.LVL97
-	.uaword	0x3a50
-	.uaword	0x355a
-=======
-	.uaword	0x372b
+	.uaword	0x373e
 	.uleb128 0x1d
 	.uaword	.LVL115
-	.uaword	0x3aee
-	.uaword	0x3622
->>>>>>> Stashed changes
+	.uaword	0x3b01
+	.uaword	0x3635
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -8760,27 +7257,15 @@ errorMessages:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x24
-<<<<<<< Updated upstream
-	.uaword	.LVL98
-	.uaword	0x3c23
-	.uleb128 0x24
-	.uaword	.LVL99
-	.uaword	0x33ba
-	.uleb128 0x1d
-	.uaword	.LVL100
-	.uaword	0x3aba
-	.uaword	0x357f
-=======
 	.uaword	.LVL116
-	.uaword	0x3cc1
+	.uaword	0x3cd4
 	.uleb128 0x24
 	.uaword	.LVL117
-	.uaword	0x346d
+	.uaword	0x3480
 	.uleb128 0x1d
 	.uaword	.LVL118
-	.uaword	0x3b52
-	.uaword	0x3647
->>>>>>> Stashed changes
+	.uaword	0x3b65
+	.uaword	0x365a
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8788,52 +7273,9 @@ errorMessages:
 	.byte	0x30
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL101
-	.uaword	0x3aba
-	.uaword	0x3592
-=======
 	.uaword	.LVL119
-	.uaword	0x3b52
-	.uaword	0x365a
->>>>>>> Stashed changes
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL102
-	.uaword	0x3aba
-	.uaword	0x35a5
-=======
-	.uaword	.LVL120
-	.uaword	0x3b52
+	.uaword	0x3b65
 	.uaword	0x366d
->>>>>>> Stashed changes
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL103
-	.uaword	0x3aba
-	.uaword	0x35b8
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x33
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL104
-	.uaword	0x3a6e
-	.uaword	0x35cb
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8841,14 +7283,19 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-	.uaword	.LVL105
-	.uaword	0x3a6e
-	.uaword	0x35de
-=======
-	.uaword	.LVL121
-	.uaword	0x3b52
+	.uaword	.LVL120
+	.uaword	0x3b65
 	.uaword	0x3680
->>>>>>> Stashed changes
+	.uleb128 0x1e
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x32
+	.byte	0
+	.uleb128 0x1d
+	.uaword	.LVL121
+	.uaword	0x3b65
+	.uaword	0x3693
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8856,29 +7303,9 @@ errorMessages:
 	.byte	0x33
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL106
-	.uaword	0x3a6e
-	.uaword	0x35f1
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x32
-	.byte	0
-	.uleb128 0x2a
-	.uaword	.LVL107
-	.byte	0x1
-	.uaword	0x3a8f
-	.uleb128 0x1d
-	.uaword	.LVL108
-	.uaword	0x3a6e
-	.uaword	0x360e
-=======
 	.uaword	.LVL122
-	.uaword	0x3b0c
-	.uaword	0x3693
->>>>>>> Stashed changes
+	.uaword	0x3b1f
+	.uaword	0x36a6
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8886,14 +7313,9 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL109
-	.uaword	0x3a8f
-	.uaword	0x362b
-=======
 	.uaword	.LVL123
-	.uaword	0x3b0c
-	.uaword	0x36a6
+	.uaword	0x3b1f
+	.uaword	0x36b9
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8902,8 +7324,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL124
-	.uaword	0x3b0c
-	.uaword	0x36b9
+	.uaword	0x3b1f
+	.uaword	0x36cc
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8913,15 +7335,15 @@ errorMessages:
 	.uleb128 0x29
 	.uaword	.LVL125
 	.byte	0x1
-	.uaword	0x3b6d
+	.uaword	0x3b80
 	.uleb128 0x29
 	.uaword	.LVL126
 	.byte	0x1
-	.uaword	0x2ee6
+	.uaword	0x2ef9
 	.uleb128 0x1d
 	.uaword	.LVL127
-	.uaword	0x3b0c
-	.uaword	0x36e0
+	.uaword	0x3b1f
+	.uaword	0x36f3
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -8930,9 +7352,8 @@ errorMessages:
 	.byte	0
 	.uleb128 0x1d
 	.uaword	.LVL128
-	.uaword	0x3b6d
-	.uaword	0x36fd
->>>>>>> Stashed changes
+	.uaword	0x3b80
+	.uaword	0x3710
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
@@ -8949,39 +7370,15 @@ errorMessages:
 	.byte	0x1
 	.byte	0x32
 	.byte	0
-	.uleb128 0x2a
-	.uaword	.LVL110
-	.byte	0x1
-	.uaword	0x2e4e
 	.uleb128 0x1d
-<<<<<<< Updated upstream
-	.uaword	.LVL111
-	.uaword	0x3a6e
-	.uaword	0x3648
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x54
-	.byte	0x1
-	.byte	0x31
-	.byte	0
-	.uleb128 0x1d
-	.uaword	.LVL112
-	.uaword	0x3a8f
-	.uaword	0x3665
-=======
 	.uaword	.LVL129
-	.uaword	0x3b6d
-	.uaword	0x371a
->>>>>>> Stashed changes
+	.uaword	0x3b80
+	.uaword	0x372d
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x56
 	.byte	0x1
-<<<<<<< Updated upstream
-	.byte	0x34
-=======
 	.byte	0x4e
->>>>>>> Stashed changes
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x55
@@ -8991,21 +7388,12 @@ errorMessages:
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
-	.byte	0x32
+	.byte	0x31
 	.byte	0
-	.uleb128 0x24
-	.uaword	.LVL113
-	.uaword	0x3a8f
 	.uleb128 0x1f
-<<<<<<< Updated upstream
-	.uaword	.LVL114
-	.byte	0x1
-	.uaword	0x33f9
-=======
 	.uaword	.LVL130
 	.byte	0x1
-	.uaword	0x34ae
->>>>>>> Stashed changes
+	.uaword	0x34c1
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -9017,73 +7405,30 @@ errorMessages:
 	.byte	0x1
 	.string	"FuncAvoidObstacleTask"
 	.byte	0x1
-	.byte	0xb8
+	.byte	0xc0
 	.byte	0x1
 	.uaword	.LFB601
 	.uaword	.LFE601
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3700
-	.uleb128 0x2e
-	.string	"dist"
-	.byte	0x1
-	.byte	0xbc
-	.uaword	0x159
-	.uaword	.LLST2
-	.uleb128 0x24
-	.uaword	.LVL115
-	.uaword	0x3c23
-	.uleb128 0x24
-	.uaword	.LVL116
-	.uaword	0x3bb3
-	.uleb128 0x1d
-	.uaword	.LVL118
-	.uaword	0x3b92
-	.uaword	0x36ef
-	.uleb128 0x1e
-	.byte	0x6
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x55
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x4
-	.byte	0xf5
-	.uleb128 0x8
-	.uleb128 0x159
-	.uleb128 0x1e
-	.byte	0x1
-	.byte	0x64
-	.byte	0x5
-	.byte	0x3
-	.uaword	.LC8
-	.byte	0
-	.uleb128 0x1f
-	.uaword	.LVL121
-	.byte	0x1
-	.uaword	0x33f9
-=======
-	.uaword	0x3788
+	.uaword	0x379b
 	.uleb128 0x2c
 	.string	"dist"
 	.byte	0x1
 	.byte	0xc4
-	.uaword	0x146
+	.uaword	0x159
 	.uaword	.LLST5
 	.uleb128 0x24
 	.uaword	.LVL131
-	.uaword	0x3cc1
+	.uaword	0x3cd4
 	.uleb128 0x24
 	.uaword	.LVL132
-	.uaword	0x3c51
+	.uaword	0x3c64
 	.uleb128 0x1f
 	.uaword	.LVL136
 	.byte	0x1
-	.uaword	0x34ae
->>>>>>> Stashed changes
+	.uaword	0x34c1
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x54
@@ -9091,8 +7436,7 @@ errorMessages:
 	.byte	0x31
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"pid_prev_error"
 	.byte	0xc
 	.byte	0x22
@@ -9100,37 +7444,11 @@ errorMessages:
 	.byte	0x8
 	.uaword	0
 	.uaword	0
-	.uleb128 0x2f
+	.uleb128 0x2d
 	.string	"pid_integral"
 	.byte	0xc
 	.byte	0x23
 	.uaword	0x159
-	.byte	0x8
-	.uaword	0
-	.uaword	0
-	.uleb128 0x30
-	.string	"pid_last_time"
-	.byte	0xc
-	.byte	0x24
-	.uaword	0x29ed
-	.byte	0
-	.uleb128 0x9
-	.uaword	0x23a
-	.uaword	0x3762
-=======
-	.uleb128 0x2d
-	.string	"pid_prev_error"
-	.byte	0xc
-	.byte	0x22
-	.uaword	0x146
-	.byte	0x8
-	.uaword	0
-	.uaword	0
-	.uleb128 0x2d
-	.string	"pid_integral"
-	.byte	0xc
-	.byte	0x23
-	.uaword	0x146
 	.byte	0x8
 	.uaword	0
 	.uaword	0
@@ -9138,12 +7456,11 @@ errorMessages:
 	.string	"pid_last_time"
 	.byte	0xc
 	.byte	0x24
-	.uaword	0x29ee
+	.uaword	0x2a01
 	.byte	0
 	.uleb128 0x9
-	.uaword	0x227
-	.uaword	0x37ea
->>>>>>> Stashed changes
+	.uaword	0x23a
+	.uaword	0x37fd
 	.uleb128 0xa
 	.uaword	0x2b4
 	.byte	0xf
@@ -9151,30 +7468,18 @@ errorMessages:
 	.uleb128 0x23
 	.string	"errorMessages"
 	.byte	0xd
-	.byte	0x55
-<<<<<<< Updated upstream
-	.uaword	0x377d
-=======
-	.uaword	0x3805
->>>>>>> Stashed changes
+	.byte	0x54
+	.uaword	0x3818
 	.byte	0x5
 	.byte	0x3
 	.uaword	errorMessages
 	.uleb128 0x5
-<<<<<<< Updated upstream
-	.uaword	0x3752
-=======
-	.uaword	0x37da
->>>>>>> Stashed changes
+	.uaword	0x37ed
 	.uleb128 0x23
 	.string	"carStatusPacket"
 	.byte	0x1
 	.byte	0xb
-<<<<<<< Updated upstream
-	.uaword	0x25ec
-=======
-	.uaword	0x25ed
->>>>>>> Stashed changes
+	.uaword	0x2600
 	.byte	0x5
 	.byte	0x3
 	.uaword	carStatusPacket
@@ -9182,11 +7487,7 @@ errorMessages:
 	.string	"carStatus"
 	.byte	0x1
 	.byte	0xc
-<<<<<<< Updated upstream
-	.uaword	0x2b05
-=======
-	.uaword	0x2b06
->>>>>>> Stashed changes
+	.uaword	0x2b19
 	.byte	0x5
 	.byte	0x3
 	.uaword	carStatus
@@ -9194,11 +7495,7 @@ errorMessages:
 	.string	"carCommand"
 	.byte	0x1
 	.byte	0xd
-<<<<<<< Updated upstream
-	.uaword	0x2ba7
-=======
-	.uaword	0x2ba8
->>>>>>> Stashed changes
+	.uaword	0x2bbb
 	.byte	0x5
 	.byte	0x3
 	.uaword	carCommand
@@ -9206,11 +7503,7 @@ errorMessages:
 	.string	"currentPosition"
 	.byte	0x1
 	.byte	0xe
-<<<<<<< Updated upstream
-	.uaword	0x2d16
-=======
-	.uaword	0x2d17
->>>>>>> Stashed changes
+	.uaword	0x2d2a
 	.byte	0x5
 	.byte	0x3
 	.uaword	currentPosition
@@ -9218,11 +7511,7 @@ errorMessages:
 	.string	"targetPosition"
 	.byte	0x1
 	.byte	0xf
-<<<<<<< Updated upstream
-	.uaword	0x2d16
-=======
-	.uaword	0x2d17
->>>>>>> Stashed changes
+	.uaword	0x2d2a
 	.byte	0x5
 	.byte	0x3
 	.uaword	targetPosition
@@ -9235,181 +7524,96 @@ errorMessages:
 	.byte	0x3
 	.uaword	currentDirection
 	.uleb128 0x9
-<<<<<<< Updated upstream
 	.uaword	0x27a
-	.uaword	0x3835
-=======
-	.uaword	0x267
-	.uaword	0x38bd
->>>>>>> Stashed changes
+	.uaword	0x38d0
 	.uleb128 0xa
 	.uaword	0x2b4
 	.byte	0x2
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x31
+	.uleb128 0x2f
 	.string	"IfxCpu_cfg_indexMap"
 	.byte	0xe
 	.byte	0xa7
-	.uaword	0x3852
+	.uaword	0x38ed
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5
-	.uaword	0x3825
-	.uleb128 0x31
+	.uaword	0x38c0
+	.uleb128 0x2f
 	.string	"g_FRHallCnt"
 	.byte	0xf
 	.byte	0x1a
-	.uaword	0x386c
+	.uaword	0x3907
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x17
 	.uaword	0x1b8
-	.uleb128 0x31
-	.string	"g_FLHallCnt"
-	.byte	0xf
-	.byte	0x1b
-	.uaword	0x386c
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"g_RRHallCnt"
-	.byte	0xf
-	.byte	0x1c
-	.uaword	0x386c
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"g_RLHallCnt"
-	.byte	0xf
-	.byte	0x1d
-	.uaword	0x386c
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"g_RecievedParkingSystemPacket"
-	.byte	0x10
-	.byte	0x19
-	.uaword	0x25ec
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"g_Ultrasonic_FL"
-	.byte	0xa
-	.byte	0x26
-	.uaword	0x2984
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"g_Ultrasonic_FRONT"
-	.byte	0xa
-	.byte	0x27
-	.uaword	0x2984
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"g_Ultrasonic_RL"
-	.byte	0xa
-	.byte	0x28
-	.uaword	0x2984
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x31
-	.string	"min_dist_left"
-	.byte	0xc
-	.byte	0x20
-	.uaword	0x393c
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x17
-	.uaword	0x25a9
-	.uleb128 0x32
-=======
-	.uleb128 0x2f
-	.string	"IfxCpu_cfg_indexMap"
-	.byte	0xe
-	.byte	0xa7
-	.uaword	0x38da
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x5
-	.uaword	0x38ad
-	.uleb128 0x2f
-	.string	"g_FRHallCnt"
-	.byte	0xf
-	.byte	0x1a
-	.uaword	0x38f4
-	.byte	0x1
-	.byte	0x1
-	.uleb128 0x17
-	.uaword	0x1a5
 	.uleb128 0x2f
 	.string	"g_FLHallCnt"
 	.byte	0xf
 	.byte	0x1b
-	.uaword	0x38f4
+	.uaword	0x3907
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_RRHallCnt"
 	.byte	0xf
 	.byte	0x1c
-	.uaword	0x38f4
+	.uaword	0x3907
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_RLHallCnt"
 	.byte	0xf
 	.byte	0x1d
-	.uaword	0x38f4
+	.uaword	0x3907
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_isRecieved"
 	.byte	0x10
 	.byte	0x19
-	.uaword	0x2596
+	.uaword	0x25a9
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_RecievedParkingSystemPacket"
 	.byte	0x10
 	.byte	0x1a
-	.uaword	0x25ed
+	.uaword	0x2600
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_Ultrasonic_FL"
 	.byte	0xa
 	.byte	0x26
-	.uaword	0x2985
+	.uaword	0x2998
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_Ultrasonic_FRONT"
 	.byte	0xa
 	.byte	0x27
-	.uaword	0x2985
+	.uaword	0x2998
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"g_Ultrasonic_RL"
 	.byte	0xa
 	.byte	0x28
-	.uaword	0x2985
+	.uaword	0x2998
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x2f
 	.string	"min_dist_left"
 	.byte	0xc
 	.byte	0x20
-	.uaword	0x39da
+	.uaword	0x39ed
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x17
-	.uaword	0x259b
+	.uaword	0x25ae
 	.uleb128 0x30
->>>>>>> Stashed changes
 	.string	"g_isAppRunning"
 	.byte	0x1
 	.byte	0xa
@@ -9418,223 +7622,123 @@ errorMessages:
 	.byte	0x5
 	.byte	0x3
 	.uaword	g_isAppRunning
-<<<<<<< Updated upstream
-	.uleb128 0x32
-	.string	"motor_power_turn"
-	.byte	0x1
-	.byte	0x5
-	.uaword	0x397d
-=======
 	.uleb128 0x30
 	.string	"motor_power_turn"
 	.byte	0x1
 	.byte	0x5
-	.uaword	0x3a1b
->>>>>>> Stashed changes
+	.uaword	0x3a2e
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	motor_power_turn
 	.uleb128 0x5
-<<<<<<< Updated upstream
-	.uaword	0x3130
-	.uleb128 0x32
-	.string	"motor_power_normal"
-	.byte	0x1
-	.byte	0x6
-	.uaword	0x397d
-=======
-	.uaword	0x31b2
+	.uaword	0x31c5
 	.uleb128 0x30
 	.string	"motor_power_normal"
 	.byte	0x1
 	.byte	0x6
-	.uaword	0x3a1b
->>>>>>> Stashed changes
+	.uaword	0x3a2e
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	motor_power_normal
-<<<<<<< Updated upstream
-	.uleb128 0x32
-	.string	"Kp_rad_to_delta_power"
-	.byte	0x1
-	.byte	0x7
-	.uaword	0x397d
-=======
 	.uleb128 0x30
 	.string	"Kp_rad_to_delta_power"
 	.byte	0x1
 	.byte	0x7
-	.uaword	0x3a1b
->>>>>>> Stashed changes
+	.uaword	0x3a2e
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	Kp_rad_to_delta_power
-<<<<<<< Updated upstream
-	.uleb128 0x33
-	.string	"FrontUltra"
-	.byte	0x1
-	.uahalf	0x106
-	.uaword	0x3130
-=======
 	.uleb128 0x31
 	.string	"FrontUltra"
 	.byte	0x1
 	.uahalf	0x10a
-	.uaword	0x31b2
->>>>>>> Stashed changes
+	.uaword	0x31c5
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	FrontUltra
-<<<<<<< Updated upstream
-	.uleb128 0x33
-	.string	"RearUltra"
-	.byte	0x1
-	.uahalf	0x107
-	.uaword	0x3130
-=======
 	.uleb128 0x31
 	.string	"RearUltra"
 	.byte	0x1
 	.uahalf	0x10b
-	.uaword	0x31b2
->>>>>>> Stashed changes
+	.uaword	0x31c5
 	.byte	0x1
 	.byte	0x5
 	.byte	0x3
 	.uaword	RearUltra
-<<<<<<< Updated upstream
-	.uleb128 0x34
-=======
 	.uleb128 0x32
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"osEE_tc_stm_set_sr1_next_match"
 	.byte	0x11
 	.uahalf	0x3eb
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3a2a
-	.uleb128 0x35
-	.uaword	0x2688
-	.byte	0
-	.uleb128 0x36
-=======
-	.uaword	0x3ac8
+	.uaword	0x3adb
 	.uleb128 0x33
-	.uaword	0x2689
+	.uaword	0x269c
 	.byte	0
 	.uleb128 0x34
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"IncrementCounter"
 	.byte	0x13
 	.uahalf	0x45c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x291b
+	.uaword	0x292f
 	.byte	0x1
-	.uaword	0x3a50
-	.uleb128 0x35
-	.uaword	0x26a8
-	.byte	0
-	.uleb128 0x37
-=======
-	.uaword	0x291c
-	.byte	0x1
-	.uaword	0x3aee
+	.uaword	0x3b01
 	.uleb128 0x33
-	.uaword	0x26a9
+	.uaword	0x26bc
 	.byte	0
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"printfSerial"
 	.byte	0x12
 	.byte	0xf
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3a6e
-	.uleb128 0x35
-	.uaword	0x23a
-	.uleb128 0x38
-	.byte	0
-	.uleb128 0x36
-=======
-	.uaword	0x3b0c
+	.uaword	0x3b1f
 	.uleb128 0x33
-	.uaword	0x227
+	.uaword	0x23a
 	.uleb128 0x36
 	.byte	0
 	.uleb128 0x34
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"CancelAlarm"
 	.byte	0x13
 	.uahalf	0x313
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x291b
+	.uaword	0x292f
 	.byte	0x1
-	.uaword	0x3a8f
-	.uleb128 0x35
-	.uaword	0x26cd
-=======
-	.uaword	0x291c
-	.byte	0x1
-	.uaword	0x3b2d
+	.uaword	0x3b40
 	.uleb128 0x33
-	.uaword	0x26ce
->>>>>>> Stashed changes
+	.uaword	0x26e1
 	.byte	0
 	.uleb128 0x35
 	.byte	0x1
-	.string	"SetRelAlarm"
-	.byte	0x13
-	.uahalf	0x294
+	.string	"set_motor_power"
+	.byte	0x9
+	.byte	0x43
 	.byte	0x1
-	.uaword	0x291b
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3aba
-	.uleb128 0x35
-	.uaword	0x26cd
-	.uleb128 0x35
-	.uaword	0x26bc
-	.uleb128 0x35
-	.uaword	0x26bc
-	.byte	0
-	.uleb128 0x37
-=======
-	.uaword	0x3b52
+	.uaword	0x3b65
 	.uleb128 0x33
-	.uaword	0x2970
+	.uaword	0x2983
 	.uleb128 0x33
-	.uaword	0x146
+	.uaword	0x159
 	.byte	0
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"motor_stop"
 	.byte	0x9
 	.byte	0x42
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3ad5
-	.uleb128 0x35
-	.uaword	0x296f
-	.byte	0
-	.uleb128 0x36
-=======
-	.uaword	0x3b6d
+	.uaword	0x3b80
 	.uleb128 0x33
-	.uaword	0x2970
+	.uaword	0x2983
 	.byte	0
 	.uleb128 0x34
 	.byte	0x1
@@ -9642,40 +7746,29 @@ errorMessages:
 	.byte	0x13
 	.uahalf	0x294
 	.byte	0x1
-	.uaword	0x291c
+	.uaword	0x292f
 	.byte	0x1
-	.uaword	0x3b98
+	.uaword	0x3bab
 	.uleb128 0x33
-	.uaword	0x26ce
+	.uaword	0x26e1
 	.uleb128 0x33
-	.uaword	0x26bd
+	.uaword	0x26d0
 	.uleb128 0x33
-	.uaword	0x26bd
+	.uaword	0x26d0
 	.byte	0
 	.uleb128 0x34
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"ActivateTask"
 	.byte	0x13
 	.uahalf	0x178
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x291b
+	.uaword	0x292f
 	.byte	0x1
-	.uaword	0x3af7
-	.uleb128 0x35
-	.uaword	0x2698
-	.byte	0
-	.uleb128 0x39
-=======
-	.uaword	0x291c
-	.byte	0x1
-	.uaword	0x3bba
+	.uaword	0x3bcd
 	.uleb128 0x33
-	.uaword	0x2699
+	.uaword	0x26ac
 	.byte	0
 	.uleb128 0x37
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"getHallCntAvg"
 	.byte	0xf
@@ -9683,104 +7776,53 @@ errorMessages:
 	.byte	0x1
 	.uaword	0x159
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uleb128 0x37
-=======
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"motor_run_forward"
 	.byte	0x9
 	.byte	0x40
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3b31
-	.uleb128 0x35
-	.uaword	0x296f
-	.byte	0
-	.uleb128 0x37
-=======
-	.uaword	0x3bf4
+	.uaword	0x3c07
 	.uleb128 0x33
-	.uaword	0x2970
+	.uaword	0x2983
 	.byte	0
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"motor_run_backward"
 	.byte	0x9
 	.byte	0x41
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3b54
-	.uleb128 0x35
-	.uaword	0x296f
-	.byte	0
-	.uleb128 0x37
-	.byte	0x1
-	.string	"set_motor_power"
-	.byte	0x9
-	.byte	0x43
-	.byte	0x1
-	.byte	0x1
-	.uaword	0x3b79
-	.uleb128 0x35
-	.uaword	0x296f
-	.uleb128 0x35
-	.uaword	0x159
-	.byte	0
-	.uleb128 0x37
-=======
-	.uaword	0x3c17
+	.uaword	0x3c2a
 	.uleb128 0x33
-	.uaword	0x2970
+	.uaword	0x2983
 	.byte	0
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"delay_ms"
 	.byte	0x12
 	.byte	0xc
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3b92
-	.uleb128 0x35
+	.uaword	0x3c43
+	.uleb128 0x33
 	.uaword	0x16f
 	.byte	0
-	.uleb128 0x37
-=======
-	.uaword	0x3c30
-	.uleb128 0x33
-	.uaword	0x15c
-	.byte	0
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"printDouble"
 	.byte	0x12
 	.byte	0xb
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3bb3
-	.uleb128 0x35
+	.uaword	0x3c64
+	.uleb128 0x33
 	.uaword	0x23a
-	.uleb128 0x35
+	.uleb128 0x33
 	.uaword	0x159
 	.byte	0
-	.uleb128 0x3a
-=======
-	.uaword	0x3c51
-	.uleb128 0x33
-	.uaword	0x227
-	.uleb128 0x33
-	.uaword	0x146
-	.byte	0
 	.uleb128 0x38
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"getUltrasonic"
 	.byte	0xa
@@ -9788,80 +7830,45 @@ errorMessages:
 	.byte	0x1
 	.uaword	0x159
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3bd5
-	.uleb128 0x35
-	.uaword	0x3bd5
-	.byte	0
-	.uleb128 0x4
-	.byte	0x4
-	.uaword	0x2984
-	.uleb128 0x3a
-=======
-	.uaword	0x3c73
+	.uaword	0x3c86
 	.uleb128 0x33
-	.uaword	0x3c73
+	.uaword	0x3c86
 	.byte	0
 	.uleb128 0x4
 	.byte	0x4
-	.uaword	0x2985
+	.uaword	0x2998
 	.uleb128 0x38
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"wall_follow_control"
 	.byte	0xc
 	.byte	0x2e
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x2a2a
+	.uaword	0x2a3e
 	.byte	0x1
-	.uaword	0x3c08
-	.uleb128 0x35
+	.uaword	0x3cb9
+	.uleb128 0x33
 	.uaword	0x159
-	.uleb128 0x35
+	.uleb128 0x33
 	.uaword	0x159
 	.byte	0
-	.uleb128 0x37
-=======
-	.uaword	0x2a2b
-	.byte	0x1
-	.uaword	0x3ca6
-	.uleb128 0x33
-	.uaword	0x146
-	.uleb128 0x33
-	.uaword	0x146
-	.byte	0
 	.uleb128 0x35
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"sendPacket"
 	.byte	0x10
 	.byte	0x1f
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x3c23
-	.uleb128 0x35
-	.uaword	0x33ee
-	.byte	0
-	.uleb128 0x3b
-=======
-	.uaword	0x3cc1
+	.uaword	0x3cd4
 	.uleb128 0x33
-	.uaword	0x34a3
+	.uaword	0x34b6
 	.byte	0
 	.uleb128 0x39
->>>>>>> Stashed changes
 	.byte	0x1
 	.string	"TerminateTask"
 	.byte	0x13
 	.uahalf	0x1c9
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x291b
-=======
-	.uaword	0x291c
->>>>>>> Stashed changes
+	.uaword	0x292f
 	.byte	0x1
 	.byte	0
 .section .debug_abbrev,"",@progbits
@@ -10443,8 +8450,6 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-=======
 	.uleb128 0x2a
 	.uleb128 0x5
 	.byte	0
@@ -10460,7 +8465,6 @@ errorMessages:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
->>>>>>> Stashed changes
 	.uleb128 0x2b
 	.uleb128 0x2e
 	.byte	0x1
@@ -10487,52 +8491,33 @@ errorMessages:
 	.byte	0
 	.byte	0
 	.uleb128 0x2c
-<<<<<<< Updated upstream
-	.uleb128 0x5
-=======
 	.uleb128 0x34
->>>>>>> Stashed changes
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x2d
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1c
 	.uleb128 0xa
-	.byte	0
-	.byte	0
-	.uleb128 0x2d
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x2d
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x2e
@@ -10547,7 +8532,7 @@ errorMessages:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x1c
-	.uleb128 0xa
+	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x2f
@@ -10578,53 +8563,13 @@ errorMessages:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-<<<<<<< Updated upstream
-	.uleb128 0x1c
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-=======
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x2
-	.uleb128 0xa
->>>>>>> Stashed changes
-	.byte	0
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x2
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x33
+	.uleb128 0x31
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -10641,10 +8586,7 @@ errorMessages:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x34
-=======
 	.uleb128 0x32
->>>>>>> Stashed changes
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10663,12 +8605,6 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x35
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x49
-=======
 	.uleb128 0x33
 	.uleb128 0x5
 	.byte	0
@@ -10713,63 +8649,15 @@ errorMessages:
 	.uleb128 0x3c
 	.uleb128 0xc
 	.uleb128 0x1
->>>>>>> Stashed changes
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x36
-<<<<<<< Updated upstream
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x37
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x3c
-	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x38
-=======
->>>>>>> Stashed changes
 	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x39
-=======
 	.uleb128 0x37
->>>>>>> Stashed changes
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -10788,11 +8676,7 @@ errorMessages:
 	.uleb128 0xc
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x3a
-=======
 	.uleb128 0x38
->>>>>>> Stashed changes
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10813,11 +8697,7 @@ errorMessages:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-<<<<<<< Updated upstream
-	.uleb128 0x3b
-=======
 	.uleb128 0x39
->>>>>>> Stashed changes
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -10840,24 +8720,9 @@ errorMessages:
 .section .debug_loc,"",@progbits
 .Ldebug_loc0:
 .LLST0:
-<<<<<<< Updated upstream
-	.uaword	.LVL52-.Ltext0
-	.uaword	.LVL53-1-.Ltext0
-	.uahalf	0x6
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x4
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	.LVL53-1-.Ltext0
-	.uaword	.LVL55-.Ltext0
-	.uahalf	0x6
-=======
 	.uaword	.LVL59-.Ltext0
 	.uaword	.LVL64-.Ltext0
 	.uahalf	0x8
->>>>>>> Stashed changes
 	.byte	0x58
 	.byte	0x93
 	.uleb128 0x4
@@ -10896,22 +8761,15 @@ errorMessages:
 	.uaword	0
 	.uaword	0
 .LLST1:
-<<<<<<< Updated upstream
-	.uaword	.LVL84-.Ltext0
-	.uaword	.LVL85-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL85-.Ltext0
-=======
 	.uaword	.LVL61-.Ltext0
 	.uaword	.LVL62-1-.Ltext0
 	.uahalf	0xa
 	.byte	0xf5
 	.uleb128 0x8
-	.uleb128 0x146
+	.uleb128 0x159
 	.byte	0xf5
 	.uleb128 0x6
-	.uleb128 0x146
+	.uleb128 0x159
 	.byte	0x1e
 	.byte	0x9f
 	.uaword	0
@@ -10944,7 +8802,6 @@ errorMessages:
 	.uahalf	0x1
 	.byte	0x54
 	.uaword	.LVL102-.Ltext0
->>>>>>> Stashed changes
 	.uaword	.LFE608-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -10953,15 +8810,9 @@ errorMessages:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-<<<<<<< Updated upstream
-.LLST2:
-	.uaword	.LVL117-.Ltext0
-	.uaword	.LVL118-1-.Ltext0
-=======
 .LLST5:
 	.uaword	.LVL133-.Ltext0
 	.uaword	.LVL134-1-.Ltext0
->>>>>>> Stashed changes
 	.uahalf	0x6
 	.byte	0x52
 	.byte	0x93
@@ -10969,11 +8820,7 @@ errorMessages:
 	.byte	0x53
 	.byte	0x93
 	.uleb128 0x4
-<<<<<<< Updated upstream
-	.uaword	.LVL118-1-.Ltext0
-=======
 	.uaword	.LVL134-1-.Ltext0
->>>>>>> Stashed changes
 	.uaword	.LFE601-.Ltext0
 	.uahalf	0x6
 	.byte	0x58
@@ -11024,32 +8871,28 @@ errorMessages:
 .LASF6:
 	.string	"reserved_28"
 	.extern	g_Ultrasonic_FRONT,STT_OBJECT,10
-	.extern	g_RecievedParkingSystemPacket,STT_OBJECT,36
 	.extern	TerminateTask,STT_FUNC,0
-<<<<<<< Updated upstream
-=======
 	.extern	g_isRecieved,STT_OBJECT,1
 	.extern	g_RecievedParkingSystemPacket,STT_OBJECT,20
->>>>>>> Stashed changes
 	.extern	sendPacket,STT_FUNC,0
 	.extern	wall_follow_control,STT_FUNC,0
 	.extern	g_Ultrasonic_RL,STT_OBJECT,10
 	.extern	getUltrasonic,STT_FUNC,0
-	.extern	g_Ultrasonic_FL,STT_OBJECT,10
 	.extern	min_dist_left,STT_OBJECT,2
+	.extern	g_Ultrasonic_FL,STT_OBJECT,10
 	.extern	g_RRHallCnt,STT_OBJECT,2
 	.extern	g_RLHallCnt,STT_OBJECT,2
 	.extern	g_FRHallCnt,STT_OBJECT,2
 	.extern	g_FLHallCnt,STT_OBJECT,2
 	.extern	printDouble,STT_FUNC,0
 	.extern	delay_ms,STT_FUNC,0
-	.extern	set_motor_power,STT_FUNC,0
 	.extern	motor_run_backward,STT_FUNC,0
 	.extern	motor_run_forward,STT_FUNC,0
 	.extern	getHallCntAvg,STT_FUNC,0
 	.extern	ActivateTask,STT_FUNC,0
-	.extern	motor_stop,STT_FUNC,0
 	.extern	SetRelAlarm,STT_FUNC,0
+	.extern	motor_stop,STT_FUNC,0
+	.extern	set_motor_power,STT_FUNC,0
 	.extern	CancelAlarm,STT_FUNC,0
 	.extern	printfSerial,STT_FUNC,0
 	.extern	IncrementCounter,STT_FUNC,0

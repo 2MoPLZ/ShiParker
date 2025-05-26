@@ -31684,8 +31684,8 @@ typedef struct
 
 struct Point
 {
-    double x;
-    double y;
+    int32_t x;
+    int32_t y;
 };
 
 struct __attribute__((__packed__)) ParkingSystemPacket
@@ -31709,16 +31709,10 @@ void initHall(void);
 uint16 getFRHallCnt(void);
 void resetFRHallCnt(void);
 inline double getHallCntAvg(void);
-<<<<<<< Updated upstream
 # 23 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h" 1
 # 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
-=======
-# 23 "C:\\SHIPAR~1\\TC275\\shiparker_App.h" 2
-# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 1
-# 25 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
 extern volatile boolean g_isRecieved;
->>>>>>> Stashed changes
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);
@@ -33395,35 +33389,7 @@ typedef OsEE_SN * OsEE_RQ;
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
-<<<<<<< Updated upstream
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
-# 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
-# 118 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 2
-# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-extern uint8_t osEE_assertions[];
-# 182 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert(OsEE_reg id,
-           OsEE_bool test,
-           OsEE_reg prev);
-# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_or(OsEE_reg id,
-        OsEE_reg prev1,
-        OsEE_reg prev2);
-# 220 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_and(OsEE_reg id,
-         OsEE_reg prev1,
-         OsEE_reg prev2);
-# 244 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_range(OsEE_reg id,
-           OsEE_reg begin,
-           OsEE_reg end);
-# 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_last(void);
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-=======
 
->>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
@@ -34240,7 +34206,7 @@ double get_delta_time(void);
 double get_position(double adjusted_dist_a, double adjusted_dist_b);
 DriveCommand wall_follow_control(double dist_a, double dist_b);
 # 29 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h" 2
-# 42 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
+# 41 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.h"
 extern boolean g_isAppRunning;
 
 
@@ -34349,15 +34315,8 @@ void startShiParkerApp(void)
     currentDirection = 0;
     currentPosition.x = 0;
     currentPosition.y = 0;
-<<<<<<< Updated upstream
     targetPosition.x = -1000000000;
     targetPosition.y = -1000000000;
-    carCommand = CAR_COMMAND_START;
-    SetRelAlarm((0U), 0, 10);
-    SetRelAlarm((1U), 0, 50);
-=======
-    targetPosition.x = 40;
-    targetPosition.y = 40;
     carCommand = CAR_COMMAND_STOP;
     set_motor_power(INDEX_FL, motor_power_normal);
     set_motor_power(INDEX_RL, motor_power_normal);
@@ -34367,9 +34326,8 @@ void startShiParkerApp(void)
     motor_stop(INDEX_FR);
     motor_stop(INDEX_RL);
     motor_stop(INDEX_RR);
-    SetRelAlarm((0U), 4, 4);
-    SetRelAlarm((1U), 5, 30);
->>>>>>> Stashed changes
+    SetRelAlarm((0U), 0, 4);
+    SetRelAlarm((1U), 0, 30);
 }
 
 void exitShiParkerApp(){
@@ -34489,15 +34447,9 @@ void FuncShiParkerAppTask ( void )
             CancelAlarm((1U));
             SetRelAlarm((2U), 3, 3);
             SetRelAlarm((1U),
-<<<<<<< Updated upstream
-                        0,
-                        50);
-            SetRelAlarm((3U), 0, 6);
-=======
                         1,
                         30);
             SetRelAlarm((3U), 2, 4);
->>>>>>> Stashed changes
             break;
         case CAR_COMMAND_STOP:
 
@@ -34519,13 +34471,8 @@ void FuncAvoidObstacleTask ( void )
     if (g_isAppRunning == (0u))
         TerminateTask();
     double dist = getUltrasonic(&g_Ultrasonic_FRONT);
-<<<<<<< Updated upstream
-    printDouble("frontUltra:",dist);
-    if (dist > 0 && dist < 12)
-=======
 
     if (dist > 0 && dist < 8)
->>>>>>> Stashed changes
     {
         handleError(ERROR_CODE_OBSTACLE);
     }
@@ -34534,11 +34481,7 @@ void FuncAvoidObstacleTask ( void )
 void turn90(void)
 {
     volatile double currentHallCntAvg = getHallCntAvg();
-<<<<<<< Updated upstream
-    volatile double targetHallCntAvg = currentHallCntAvg + 4.5;
-=======
     volatile double targetHallCntAvg = currentHallCntAvg + (double)4.5;
->>>>>>> Stashed changes
 
     CancelAlarm((3U));
 
@@ -34575,11 +34518,7 @@ void turn90(void)
     set_motor_power(INDEX_RL, motor_power_normal);
     set_motor_power(INDEX_RR, motor_power_normal);
 
-<<<<<<< Updated upstream
-    SetRelAlarm((1U), 0, 50);
-=======
     SetRelAlarm((3U), 1, 3);
->>>>>>> Stashed changes
 }
 
 void calculateCurrentPos() {
@@ -34607,27 +34546,13 @@ void FuncWallFollowTask ( void )
 {
     if (g_isAppRunning && (carStatus == CAR_STATUS_RUNNING))
     {
-<<<<<<< Updated upstream
-        if(currentDirection == 0)
-        {
-            min_dist_left = 20;
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
-        }
-        else if(currentDirection==1)
-        {
-            min_dist_left = targetPosition.y;
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
-=======
->>>>>>> Stashed changes
 
         min_dist_left = 20;
         FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
         RearUltra = getUltrasonic(&g_Ultrasonic_RL);
         printDouble("g_Ultrasonic_FL : ", FrontUltra);
         printDouble("g_Ultrasonic_RL : ", RearUltra);
-# 293 "C:\\SHIPAR~1\\TC275\\shiparker_App.c"
+# 293 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\shiparker_App.c"
         DriveCommand cmd = wall_follow_control(FrontUltra, RearUltra);
         printDouble("steering :", cmd.steering_angle);
         double delta_p = cmd.steering_angle * Kp_rad_to_delta_power;
@@ -34640,10 +34565,9 @@ void FuncWallFollowTask ( void )
         motor_run_forward(INDEX_RL);
         motor_run_forward(INDEX_RR);
 
-
         calculateCurrentPos();
 
-        if (currentDirection == 0 && currentPosition.y >= targetPosition.y)
+        if (currentDirection == 0 && (currentPosition.y >= targetPosition.y))
         {
             motor_stop(INDEX_FL);
             motor_stop(INDEX_FR);
@@ -34653,7 +34577,7 @@ void FuncWallFollowTask ( void )
             turn90();
         }
 
-        else if (currentDirection == 1 && currentPosition.x >= targetPosition.x)
+        else if (currentDirection == 1 && (currentPosition.x >= targetPosition.x))
         {
             motor_stop(INDEX_FL);
             motor_stop(INDEX_FR);
@@ -34691,9 +34615,10 @@ void updateStatus(const struct ParkingSystemPacket *packet)
 
 void handleError(ERROR_CODE_TYPE errorCode)
 {
-    carCommand=CAR_COMMAND_STOP;
+    g_RecievedParkingSystemPacket.car_command=CAR_COMMAND_STOP;
     CancelAlarm((3U));
     CancelAlarm((2U));
+    CancelAlarm((1U));
     motor_stop(INDEX_FL);
     motor_stop(INDEX_FR);
     motor_stop(INDEX_RL);

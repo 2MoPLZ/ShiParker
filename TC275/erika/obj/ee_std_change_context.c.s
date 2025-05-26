@@ -152,11 +152,7 @@ osEE_idle_task_terminate:
 	.file 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-<<<<<<< Updated upstream
-	.uaword	0x14d6
-=======
-	.uaword	0x14ba
->>>>>>> Stashed changes
+	.uaword	0x14cd
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -1414,11 +1410,7 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x1268
-=======
-	.uaword	0x124f
->>>>>>> Stashed changes
+	.uaword	0x1262
 	.uleb128 0x1b
 	.string	"p_from"
 	.byte	0x1
@@ -1435,22 +1427,13 @@ osEE_idle_task_terminate:
 	.uaword	.LASF2
 	.byte	0x1
 	.byte	0x3f
-<<<<<<< Updated upstream
-	.uaword	0x1268
-	.uaword	.LLST2
-	.uleb128 0x1d
-	.uaword	.LVL4
-	.uaword	0x140d
-	.uaword	0x1256
-=======
-	.uaword	0x124f
+	.uaword	0x1262
 	.uaword	.LLST2
 	.uleb128 0x1d
 	.uaword	.LVL3
 	.byte	0x1
-	.uaword	0x13f1
-	.uaword	0x1244
->>>>>>> Stashed changes
+	.uaword	0x1404
+	.uaword	0x1257
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -1460,28 +1443,15 @@ osEE_idle_task_terminate:
 	.byte	0x65
 	.byte	0
 	.uleb128 0x1f
-<<<<<<< Updated upstream
-	.uaword	.LVL8
-	.uaword	0x1449
-	.uleb128 0x1e
-=======
 	.uaword	.LVL4
->>>>>>> Stashed changes
 	.byte	0x1
-	.uaword	0x142d
+	.uaword	0x1440
 	.byte	0
 	.uleb128 0xf
-<<<<<<< Updated upstream
+	.uaword	0x1267
+	.uleb128 0xb
+	.byte	0x4
 	.uaword	0x126d
-	.uleb128 0xb
-	.byte	0x4
-	.uaword	0x1273
-=======
-	.uaword	0x1254
-	.uleb128 0xb
-	.byte	0x4
-	.uaword	0x125a
->>>>>>> Stashed changes
 	.uleb128 0xf
 	.uaword	0xbb4
 	.uleb128 0x1a
@@ -1495,11 +1465,7 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x1306
-=======
-	.uaword	0x12e7
->>>>>>> Stashed changes
+	.uaword	0x12fa
 	.uleb128 0x1b
 	.string	"p_from"
 	.byte	0x1
@@ -1516,22 +1482,13 @@ osEE_idle_task_terminate:
 	.uaword	.LASF2
 	.byte	0x1
 	.byte	0x53
-<<<<<<< Updated upstream
-	.uaword	0x1268
-	.uaword	.LLST5
-	.uleb128 0x1d
-	.uaword	.LVL13
-	.uaword	0x1487
-	.uaword	0x12f4
-=======
-	.uaword	0x124f
+	.uaword	0x1262
 	.uaword	.LLST5
 	.uleb128 0x1d
 	.uaword	.LVL8
 	.byte	0x1
-	.uaword	0x146b
-	.uaword	0x12dc
->>>>>>> Stashed changes
+	.uaword	0x147e
+	.uaword	0x12ef
 	.uleb128 0x1e
 	.byte	0x1
 	.byte	0x64
@@ -1541,15 +1498,9 @@ osEE_idle_task_terminate:
 	.byte	0x65
 	.byte	0
 	.uleb128 0x1f
-<<<<<<< Updated upstream
-	.uaword	.LVL17
-	.uaword	0x14b1
-	.uleb128 0x1e
-=======
 	.uaword	.LVL9
->>>>>>> Stashed changes
 	.byte	0x1
-	.uaword	0x1495
+	.uaword	0x14a8
 	.byte	0
 	.uleb128 0x1a
 	.byte	0x1
@@ -1562,11 +1513,7 @@ osEE_idle_task_terminate:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x13bc
-=======
-	.uaword	0x13a0
->>>>>>> Stashed changes
+	.uaword	0x13b3
 	.uleb128 0x1b
 	.string	"p_idle_tdb"
 	.byte	0x1
@@ -1577,87 +1524,45 @@ osEE_idle_task_terminate:
 	.string	"p_ctx"
 	.byte	0x1
 	.byte	0x67
-<<<<<<< Updated upstream
 	.uaword	0x397
-	.byte	0x1
-	.byte	0x6f
-	.uleb128 0x21
-	.string	"p_idle_hdb"
-	.byte	0x1
-	.byte	0x69
-	.uaword	0x13bc
-	.uaword	.LLST7
-	.uleb128 0x21
-	.string	"p_sdb"
-	.byte	0x1
-	.byte	0x6a
-	.uaword	0x13c7
-	.uaword	.LLST8
-	.uleb128 0x21
-	.string	"p_scb"
-	.byte	0x1
-	.byte	0x6b
-	.uaword	0x13cc
-	.uaword	.LLST9
-	.uleb128 0x21
-	.string	"p_bos"
-	.byte	0x1
-	.byte	0x6c
-	.uaword	0x13d1
-	.uaword	.LLST10
-	.uleb128 0x21
-	.string	"p_tos"
-	.byte	0x1
-	.byte	0x6d
-	.uaword	0x397
-	.uaword	.LLST11
-	.uleb128 0x22
-	.uaword	.LVL27
-	.uaword	0x1487
-	.byte	0
-	.uleb128 0xf
-	.uaword	0x13c1
-=======
-	.uaword	0x384
 	.uaword	.LLST7
 	.uleb128 0x20
 	.string	"p_idle_hdb"
 	.byte	0x1
 	.byte	0x69
-	.uaword	0x13a0
+	.uaword	0x13b3
 	.uaword	.LLST6
 	.uleb128 0x20
 	.string	"p_sdb"
 	.byte	0x1
 	.byte	0x6a
-	.uaword	0x13ab
+	.uaword	0x13be
 	.uaword	.LLST9
 	.uleb128 0x20
 	.string	"p_scb"
 	.byte	0x1
 	.byte	0x6b
-	.uaword	0x13b0
+	.uaword	0x13c3
 	.uaword	.LLST10
 	.uleb128 0x20
 	.string	"p_bos"
 	.byte	0x1
 	.byte	0x6c
-	.uaword	0x13b5
+	.uaword	0x13c8
 	.uaword	.LLST11
 	.uleb128 0x20
 	.string	"p_tos"
 	.byte	0x1
 	.byte	0x6d
-	.uaword	0x384
+	.uaword	0x397
 	.uaword	.LLST12
 	.uleb128 0x1f
 	.uaword	.LVL18
 	.byte	0x1
-	.uaword	0x146b
+	.uaword	0x147e
 	.byte	0
 	.uleb128 0xf
-	.uaword	0x13a5
->>>>>>> Stashed changes
+	.uaword	0x13b8
 	.uleb128 0xb
 	.byte	0x4
 	.uaword	0x436
@@ -1666,23 +1571,13 @@ osEE_idle_task_terminate:
 	.uleb128 0xf
 	.uaword	0x430
 	.uleb128 0xf
-<<<<<<< Updated upstream
-	.uaword	0x13d6
+	.uaword	0x13cd
 	.uleb128 0xb
 	.byte	0x4
-	.uaword	0x13dc
+	.uaword	0x13d3
 	.uleb128 0xf
 	.uaword	0x370
-	.uleb128 0x23
-=======
-	.uaword	0x13ba
-	.uleb128 0xb
-	.byte	0x4
-	.uaword	0x13c0
-	.uleb128 0xf
-	.uaword	0x35d
 	.uleb128 0x21
->>>>>>> Stashed changes
 	.string	"osEE_kdb_var"
 	.byte	0x9
 	.byte	0x42
@@ -1703,23 +1598,13 @@ osEE_idle_task_terminate:
 	.byte	0x59
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x1449
-	.uleb128 0x25
+	.uaword	0x1440
+	.uleb128 0x23
 	.uaword	0xbdc
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0x430
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0x430
-=======
-	.uaword	0x142d
-	.uleb128 0x23
-	.uaword	0xbc9
-	.uleb128 0x23
-	.uaword	0x41d
-	.uleb128 0x23
-	.uaword	0x41d
->>>>>>> Stashed changes
 	.byte	0
 	.uleb128 0x22
 	.byte	0x1
@@ -1728,23 +1613,13 @@ osEE_idle_task_terminate:
 	.byte	0x68
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x1487
-	.uleb128 0x25
+	.uaword	0x147e
+	.uleb128 0x23
 	.uaword	0xbdc
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0x430
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0x430
-=======
-	.uaword	0x146b
-	.uleb128 0x23
-	.uaword	0xbc9
-	.uleb128 0x23
-	.uaword	0x41d
-	.uleb128 0x23
-	.uaword	0x41d
->>>>>>> Stashed changes
 	.byte	0
 	.uleb128 0x22
 	.byte	0x1
@@ -1753,19 +1628,11 @@ osEE_idle_task_terminate:
 	.byte	0x61
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x14b1
-	.uleb128 0x25
+	.uaword	0x14a8
+	.uleb128 0x23
 	.uaword	0xbdc
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0x430
-=======
-	.uaword	0x1495
-	.uleb128 0x23
-	.uaword	0xbc9
-	.uleb128 0x23
-	.uaword	0x41d
->>>>>>> Stashed changes
 	.byte	0
 	.uleb128 0x24
 	.byte	0x1
@@ -1774,17 +1641,10 @@ osEE_idle_task_terminate:
 	.byte	0x70
 	.byte	0x1
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0xbdc
-	.uleb128 0x25
+	.uleb128 0x23
 	.uaword	0x430
-=======
-	.uleb128 0x23
-	.uaword	0xbc9
-	.uleb128 0x23
-	.uaword	0x41d
->>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits

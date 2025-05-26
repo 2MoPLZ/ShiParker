@@ -31684,8 +31684,8 @@ typedef struct
 
 struct Point
 {
-    double x;
-    double y;
+    int32_t x;
+    int32_t y;
 };
 
 struct __attribute__((__packed__)) ParkingSystemPacket
@@ -33381,35 +33381,7 @@ typedef OsEE_SN * OsEE_RQ;
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
-<<<<<<< Updated upstream
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
-# 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
-# 118 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 2
-# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-extern uint8_t osEE_assertions[];
-# 182 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert(OsEE_reg id,
-           OsEE_bool test,
-           OsEE_reg prev);
-# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_or(OsEE_reg id,
-        OsEE_reg prev1,
-        OsEE_reg prev2);
-# 220 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_and(OsEE_reg id,
-         OsEE_reg prev1,
-         OsEE_reg prev2);
-# 244 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_range(OsEE_reg id,
-           OsEE_reg begin,
-           OsEE_reg end);
-# 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_last(void);
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-=======
 
->>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
@@ -33487,15 +33459,20 @@ void initUartDriver(void)
 void sendPacket(const struct ParkingSystemPacket *packet)
 {
     EnableAllInterrupts();
-    uint8 buf[36] = {};
+    uint8 buf[20] = {};
     serializePacket(packet, buf);
-<<<<<<< Updated upstream
-    g_AsclinStm.count = 36;
-# 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.c"
-=======
     g_AsclinStm.count = 20;
-# 58 "C:\\SHIPAR~1\\TC275\\uart_Driver.c"
->>>>>>> Stashed changes
+# 76 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.c"
+    printfSerial("\n[send| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
+                 "tx:%d ty:%d]",
+                 packet->start_byte,
+                 packet->car_status,
+                 packet->car_command,
+                 packet->crc,
+                 packet->car_current_position.x,
+                 packet->car_current_position.y,
+                 packet->car_target_position.x,
+                 packet->car_target_position.y);
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &buf,
                         &g_AsclinStm.count,
@@ -33506,38 +33483,27 @@ void readPacket(struct ParkingSystemPacket *packet)
 {
     if (IfxAsclin_Asc_blockingRead(&g_AsclinStm.drivers.asc) == 0xAA)
     {
-        uint8 buffer[36] = {};
+        uint8 buffer[20] = {};
         buffer[0] = 0xAA;
         uint8 pos = 1;
-        while (pos < 36)
+        while (pos < 20)
         {
             buffer[pos] = IfxAsclin_Asc_blockingRead(&g_AsclinStm.drivers.asc);
             pos++;
         }
-        printfSerial("\nrecieve:[ ");
-        int i;
-        for (i = 0; i < 36; i++)
-        {
-            printfSerial("%02x/", buffer[i]);
-        }
-        printfSerial(" ]");
-        if (calculateChecksum(buffer, 36 - 1)
-            == buffer[36 - 1])
+
+
+
+
+
+
+
+        if (calculateChecksum(buffer, 20 - 1)
+            == buffer[20 - 1])
         {
             printfSerial("(valid recieve)");
+
             deserializePacket(buffer, packet);
-<<<<<<< Updated upstream
-            printfSerial("\n[recieve| start:%02x status:%02x command:%d crc:%d",
-                         packet->start_byte,
-                         packet->car_status,
-                         packet->car_command,
-                         packet->crc);
-            printDouble("c_X: ", packet->car_current_position.x);
-            printDouble("c_Y: ", packet->car_current_position.y);
-            printDouble("t_X: ", packet->car_target_position.x);
-            printDouble("t_Y: ", packet->car_target_position.y);
-            printfSerial("]\n");
-=======
 
             printfSerial("\n[read| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
                  "tx:%d ty:%d]",
@@ -33550,11 +33516,10 @@ void readPacket(struct ParkingSystemPacket *packet)
                  packet->car_target_position.x,
                  packet->car_target_position.y);
                  g_isRecieved=(1u);
->>>>>>> Stashed changes
         }
         else
         {
-            printfSerial("crc fail");
+            printfSerial("(crc fail)");
         }
     }
 }
@@ -33587,7 +33552,7 @@ void asclin0RxISR(void)
 
     IfxAsclin_Asc_isrReceive(&g_AsclinStm.drivers.asc);
     if (IfxAsclin_Asc_getReadCount(&g_AsclinStm.drivers.asc)
-        >= 36)
+        >= 20)
     {
         readPacket(&g_RecievedParkingSystemPacket);
     }
@@ -33617,17 +33582,17 @@ uint8 calculateChecksum(const uint8 *data, size_t length)
 void serializePacket(const struct ParkingSystemPacket *packet, uint8 *buffer)
 {
 
-    memcpy(buffer, packet, 36 - 1);
+    memcpy(buffer, packet, 20 - 1);
 
-    buffer[36 - 1] =
-        calculateChecksum(buffer, 36 - 1);
+    buffer[20 - 1] =
+        calculateChecksum(buffer, 20 - 1);
 }
 
 
 void deserializePacket(const uint8 *buffer, struct ParkingSystemPacket *packet)
 {
 
-    memcpy(packet, buffer, 36);
+    memcpy(packet, buffer, 20);
 
 
 

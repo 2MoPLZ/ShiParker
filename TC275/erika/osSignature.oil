@@ -25,7 +25,7 @@ CPU test_application {
 	};
 	ISR ASCLIN0_RX {
 		CATEGORY = 2;
-		PRIORITY = 100;
+		PRIORITY = 13;
 		HANDLER = "asclin0RxISR";
 		SOURCE = "ASCLIN0RX";
 	};

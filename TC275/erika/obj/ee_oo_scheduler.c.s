@@ -313,11 +313,7 @@ osEE_scheduler_core_pop_running:
 	.file 11 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-<<<<<<< Updated upstream
-	.uaword	0x171b
-=======
-	.uaword	0x1715
->>>>>>> Stashed changes
+	.uaword	0x1728
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -1651,72 +1647,44 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0xeb
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x13ea
-=======
-	.uaword	0x13df
->>>>>>> Stashed changes
+	.uaword	0x13f2
 	.uaword	.LFB111
 	.uaword	.LFE111
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x13ea
-=======
-	.uaword	0x13df
->>>>>>> Stashed changes
+	.uaword	0x13f2
 	.uleb128 0x23
 	.string	"p_cdb"
 	.byte	0x1
 	.byte	0xed
-<<<<<<< Updated upstream
-	.uaword	0x13f0
-=======
-	.uaword	0x13e5
->>>>>>> Stashed changes
+	.uaword	0x13f8
 	.uaword	.LLST0
 	.uleb128 0x23
 	.string	"p_rq"
 	.byte	0x1
 	.byte	0xee
-<<<<<<< Updated upstream
-	.uaword	0x13f6
-=======
-	.uaword	0x13eb
->>>>>>> Stashed changes
+	.uaword	0x13fe
 	.uaword	.LLST1
 	.uleb128 0x24
 	.uaword	.LASF3
 	.byte	0x1
 	.byte	0xf1
-<<<<<<< Updated upstream
-	.uaword	0x13fc
-=======
-	.uaword	0x13f1
->>>>>>> Stashed changes
+	.uaword	0x1404
 	.byte	0x1
 	.byte	0x63
 	.uleb128 0x25
 	.string	"p_rq_sn"
 	.byte	0x1
 	.byte	0xf2
-<<<<<<< Updated upstream
-	.uaword	0x1401
-=======
-	.uaword	0x13f6
->>>>>>> Stashed changes
+	.uaword	0x1409
 	.byte	0x1
 	.byte	0x6f
 	.uleb128 0x26
 	.string	"p_ret_sn"
 	.byte	0x1
 	.byte	0xf3
-<<<<<<< Updated upstream
-	.uaword	0x1406
-=======
-	.uaword	0x13fb
->>>>>>> Stashed changes
+	.uaword	0x140e
 	.uaword	.LLST2
 	.uleb128 0x26
 	.string	"is_rq_preemption"
@@ -1787,11 +1755,7 @@ osEE_scheduler_core_pop_running:
 	.uaword	0x9fc
 	.uleb128 0xd
 	.byte	0x4
-<<<<<<< Updated upstream
-	.uaword	0x140c
-=======
-	.uaword	0x1401
->>>>>>> Stashed changes
+	.uaword	0x1414
 	.uleb128 0x11
 	.uaword	0x9de
 	.uleb128 0x2c
@@ -1806,20 +1770,12 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x1542
-=======
-	.uaword	0x1539
->>>>>>> Stashed changes
+	.uaword	0x154c
 	.uleb128 0x2d
 	.string	"pp_first"
 	.byte	0x1
 	.uahalf	0x12e
-<<<<<<< Updated upstream
-	.uaword	0x1542
-=======
-	.uaword	0x1539
->>>>>>> Stashed changes
+	.uaword	0x154c
 	.byte	0x1
 	.byte	0x64
 	.uleb128 0x2e
@@ -1833,11 +1789,7 @@ osEE_scheduler_core_pop_running:
 	.string	"as_ready"
 	.byte	0x1
 	.uahalf	0x130
-<<<<<<< Updated upstream
-	.uaword	0x1548
-=======
-	.uaword	0x153f
->>>>>>> Stashed changes
+	.uaword	0x1552
 	.byte	0x1
 	.byte	0x54
 	.uleb128 0x2f
@@ -1850,57 +1802,33 @@ osEE_scheduler_core_pop_running:
 	.string	"p_tcb_new"
 	.byte	0x1
 	.uahalf	0x134
-<<<<<<< Updated upstream
-	.uaword	0x154d
-=======
-	.uaword	0x1544
->>>>>>> Stashed changes
+	.uaword	0x1557
 	.uaword	.LLST12
 	.uleb128 0x31
 	.string	"new_task_prio"
 	.byte	0x1
 	.uahalf	0x135
-<<<<<<< Updated upstream
 	.uaword	0x12b8
-	.uaword	.LLST13
-=======
-	.uaword	0x12a5
 	.byte	0x1
 	.byte	0x5f
->>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_prev"
 	.byte	0x1
 	.uahalf	0x139
-<<<<<<< Updated upstream
 	.uaword	0x9fc
-	.uaword	.LLST14
-=======
-	.uaword	0x9e9
 	.uaword	.LLST13
->>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_curr"
 	.byte	0x1
 	.uahalf	0x13a
-<<<<<<< Updated upstream
 	.uaword	0x9fc
-	.uaword	.LLST15
-=======
-	.uaword	0x9e9
 	.uaword	.LLST14
->>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"head_changed"
 	.byte	0x1
 	.uahalf	0x13b
-<<<<<<< Updated upstream
 	.uaword	0x26a
-	.uaword	.LLST16
-=======
-	.uaword	0x257
 	.uaword	.LLST15
->>>>>>> Stashed changes
 	.uleb128 0x2a
 	.uaword	.LBB13
 	.uaword	.LBE13
@@ -1908,35 +1836,20 @@ osEE_scheduler_core_pop_running:
 	.string	"prio_to_check"
 	.byte	0x1
 	.uahalf	0x13f
-<<<<<<< Updated upstream
 	.uaword	0x49c
-	.uaword	.LLST17
-=======
-	.uaword	0x489
 	.uaword	.LLST16
->>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_cur_tdb"
 	.byte	0x1
 	.uahalf	0x140
-<<<<<<< Updated upstream
 	.uaword	0x12ae
-	.uaword	.LLST18
-=======
-	.uaword	0x129b
 	.uaword	.LLST17
->>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_cur_tcb"
 	.byte	0x1
 	.uahalf	0x141
-<<<<<<< Updated upstream
-	.uaword	0x154d
-	.uaword	.LLST19
-=======
-	.uaword	0x1544
+	.uaword	0x1557
 	.uaword	.LLST18
->>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.uleb128 0xd
@@ -1945,17 +1858,10 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x11
 	.uaword	0x26a
 	.uleb128 0x11
-<<<<<<< Updated upstream
-	.uaword	0x1552
+	.uaword	0x155c
 	.uleb128 0xd
 	.byte	0x4
-	.uaword	0x1558
-=======
-	.uaword	0x1549
-	.uleb128 0xd
-	.byte	0x4
-	.uaword	0x154f
->>>>>>> Stashed changes
+	.uaword	0x1562
 	.uleb128 0x11
 	.uaword	0xbd7
 	.uleb128 0x22
@@ -1970,53 +1876,29 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x15da
-=======
-	.uaword	0x15d2
->>>>>>> Stashed changes
+	.uaword	0x15e5
 	.uleb128 0x23
 	.string	"p_rq"
 	.byte	0x1
 	.byte	0xdc
-<<<<<<< Updated upstream
-	.uaword	0x13f6
-	.uaword	.LLST20
-	.uleb128 0x31
-	.uaword	.LASF4
-	.byte	0x1
-	.byte	0xdd
-	.uaword	0x9fc
-	.uaword	.LLST21
-	.uleb128 0x31
-	.uaword	.LASF5
-	.byte	0x1
-	.byte	0xde
-	.uaword	0x12ae
-	.uaword	.LLST22
-	.uleb128 0x32
-	.uaword	.LVL47
-	.uaword	0x1411
-=======
-	.uaword	0x13eb
+	.uaword	0x13fe
 	.uaword	.LLST19
 	.uleb128 0x32
 	.uaword	.LASF4
 	.byte	0x1
 	.byte	0xdd
-	.uaword	0x9e9
+	.uaword	0x9fc
 	.uaword	.LLST20
 	.uleb128 0x32
 	.uaword	.LASF5
 	.byte	0x1
 	.byte	0xde
-	.uaword	0x129b
+	.uaword	0x12ae
 	.uaword	.LLST21
->>>>>>> Stashed changes
 	.uleb128 0x33
 	.uaword	.LVL35
 	.byte	0x1
-	.uaword	0x1406
+	.uaword	0x1419
 	.uleb128 0x34
 	.byte	0x1
 	.byte	0x54
@@ -2050,128 +1932,70 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x16e8
-	.uleb128 0x34
-	.string	"p_cdb"
-	.byte	0x1
-	.uahalf	0x161
-	.uaword	0x13f0
-	.uaword	.LLST23
-	.uleb128 0x34
-	.string	"p_rq"
-	.byte	0x1
-	.uahalf	0x162
-	.uaword	0x13f6
-	.uaword	.LLST24
-	.uleb128 0x35
-	.uaword	.LASF3
-	.byte	0x1
-	.uahalf	0x165
-	.uaword	0x13fc
-=======
-	.uaword	0x16e2
+	.uaword	0x16f5
 	.uleb128 0x35
 	.string	"p_cdb"
 	.byte	0x1
 	.uahalf	0x161
-	.uaword	0x13e5
+	.uaword	0x13f8
 	.uaword	.LLST22
 	.uleb128 0x35
 	.string	"p_rq"
 	.byte	0x1
 	.uahalf	0x162
-	.uaword	0x13eb
+	.uaword	0x13fe
 	.uaword	.LLST23
 	.uleb128 0x36
 	.uaword	.LASF3
 	.byte	0x1
 	.uahalf	0x165
-	.uaword	0x13f1
->>>>>>> Stashed changes
+	.uaword	0x1404
 	.byte	0x1
 	.byte	0x6f
 	.uleb128 0x31
 	.string	"p_prev_stk_sn"
 	.byte	0x1
 	.uahalf	0x166
-<<<<<<< Updated upstream
-	.uaword	0x1401
-=======
-	.uaword	0x13f6
->>>>>>> Stashed changes
+	.uaword	0x1409
 	.byte	0x1
 	.byte	0x6c
 	.uleb128 0x30
 	.string	"p_next_stk_sn"
 	.byte	0x1
 	.uahalf	0x168
-<<<<<<< Updated upstream
-	.uaword	0x1401
-	.uaword	.LLST25
-	.uleb128 0x37
-	.uaword	.LBB18
-	.uaword	.LBE18
-=======
-	.uaword	0x13f6
+	.uaword	0x1409
 	.uaword	.LLST24
 	.uleb128 0x2a
 	.uaword	.LBB14
 	.uaword	.LBE14
->>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_preempt"
 	.byte	0x1
 	.uahalf	0x183
-<<<<<<< Updated upstream
-	.uaword	0x16e8
-	.uaword	.LLST26
-	.uleb128 0x30
-	.string	"p_curr_stk_sn"
-	.byte	0x1
-	.uahalf	0x185
-	.uaword	0x16ed
-	.uaword	.LLST27
-	.uleb128 0x27
-	.uaword	.LBB19
-	.uaword	.LBE19
-	.uaword	0x16cf
-	.uleb128 0x38
-	.string	"p_tdb_stk"
-	.byte	0x1
-	.uahalf	0x189
-	.uaword	0xbff
-	.byte	0
-	.uleb128 0x32
-	.uaword	.LVL52
-	.uaword	0x12bd
-	.uleb128 0x33
-=======
-	.uaword	0x16e2
+	.uaword	0x16f5
 	.uaword	.LLST25
 	.uleb128 0x31
 	.string	"p_curr_stk_sn"
 	.byte	0x1
 	.uahalf	0x185
-	.uaword	0x16e7
+	.uaword	0x16fa
 	.byte	0x1
 	.byte	0x63
 	.uleb128 0x27
 	.uaword	.LBB15
 	.uaword	.LBE15
-	.uaword	0x16c9
+	.uaword	0x16dc
 	.uleb128 0x30
 	.string	"p_tdb_stk"
 	.byte	0x1
 	.uahalf	0x189
-	.uaword	0xbec
+	.uaword	0xbff
 	.uaword	.LLST26
 	.byte	0
 	.uleb128 0x37
 	.uaword	.LVL40
-	.uaword	0x12aa
+	.uaword	0x12bd
 	.uleb128 0x34
->>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x3
@@ -2188,17 +2012,10 @@ osEE_scheduler_core_pop_running:
 	.byte	0
 	.byte	0
 	.uleb128 0x11
-<<<<<<< Updated upstream
-	.uaword	0x13ea
+	.uaword	0x13f2
 	.uleb128 0x11
-	.uaword	0x1406
-	.uleb128 0x39
-=======
-	.uaword	0x13df
-	.uleb128 0x11
-	.uaword	0x13fb
+	.uaword	0x140e
 	.uleb128 0x38
->>>>>>> Stashed changes
 	.string	"osEE_kdb_var"
 	.byte	0xb
 	.byte	0x42

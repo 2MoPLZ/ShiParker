@@ -188,11 +188,7 @@ osEE_activate_isr2:
 	.file 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_scheduler.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-<<<<<<< Updated upstream
-	.uaword	0x1409
-=======
-	.uaword	0x13f7
->>>>>>> Stashed changes
+	.uaword	0x140a
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -1575,11 +1571,7 @@ osEE_activate_isr2:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x13a5
-=======
-	.uaword	0x1393
->>>>>>> Stashed changes
+	.uaword	0x13a6
 	.uleb128 0x20
 	.string	"isr2_id"
 	.byte	0x1
@@ -1593,11 +1585,7 @@ osEE_activate_isr2:
 	.string	"p_kdb"
 	.byte	0x1
 	.byte	0xc6
-<<<<<<< Updated upstream
-	.uaword	0x13a5
-=======
-	.uaword	0x1393
->>>>>>> Stashed changes
+	.uaword	0x13a6
 	.uleb128 0x1d
 	.string	"p_act_tdb"
 	.byte	0x1
@@ -1605,14 +1593,9 @@ osEE_activate_isr2:
 	.uaword	0x1293
 	.uaword	.LLST4
 	.uleb128 0x24
-<<<<<<< Updated upstream
-	.uaword	.LVL14
-	.uaword	0x13d6
-=======
 	.uaword	.LVL13
 	.byte	0x1
-	.uaword	0x13c4
->>>>>>> Stashed changes
+	.uaword	0x13d7
 	.uleb128 0x25
 	.byte	0x1
 	.byte	0x66

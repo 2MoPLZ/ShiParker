@@ -27,7 +27,6 @@
 #include "stdlib.h"
 #include "steering_Pid.h"
 
-
 #define APP_CYCLE_TICK 4                   //100ms
 #define WALL_FOLLOW_CYCLE_TICK 3            //200ms
 #define SENDPACKET_DEFAULT_CYCLE_TICK 30    //2500ms

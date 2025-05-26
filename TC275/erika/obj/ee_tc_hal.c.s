@@ -13,13 +13,8 @@ osEE_cpu_startos:
 	.file 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
 	.loc 2 367 0
 #APP
-<<<<<<< Updated upstream
 	# 367 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
-	mfcr %d5, LO:65052
-=======
-	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d4, LO:65052
->>>>>>> Stashed changes
 	# 0 "" 2
 .LVL0:
 #NO_APP
@@ -159,11 +154,7 @@ osEE_cpu_startos:
 	.file 12 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
-<<<<<<< Updated upstream
-	.uaword	0x14c4
-=======
-	.uaword	0x14ab
->>>>>>> Stashed changes
+	.uaword	0x14be
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
@@ -1537,11 +1528,7 @@ osEE_cpu_startos:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
-<<<<<<< Updated upstream
-	.uaword	0x1487
-=======
-	.uaword	0x146e
->>>>>>> Stashed changes
+	.uaword	0x1481
 	.uleb128 0x21
 	.string	"i"
 	.byte	0x1
@@ -1558,20 +1545,12 @@ osEE_cpu_startos:
 	.string	"p_kdb"
 	.byte	0x1
 	.byte	0x6f
-<<<<<<< Updated upstream
-	.uaword	0x1487
-=======
-	.uaword	0x146e
->>>>>>> Stashed changes
+	.uaword	0x1481
 	.uleb128 0x22
 	.string	"curr_core_id"
 	.byte	0x1
 	.byte	0x70
-<<<<<<< Updated upstream
-	.uaword	0x148c
-=======
-	.uaword	0x1473
->>>>>>> Stashed changes
+	.uaword	0x1486
 	.uleb128 0x23
 	.uaword	0x129f
 	.uaword	.LBB15
@@ -1593,76 +1572,42 @@ osEE_cpu_startos:
 	.string	"p_tdb"
 	.byte	0x1
 	.byte	0x80
-<<<<<<< Updated upstream
-	.uaword	0x1491
-	.uaword	.LLST3
-=======
-	.uaword	0x1478
+	.uaword	0x148b
 	.byte	0x1
 	.byte	0x6f
->>>>>>> Stashed changes
 	.uleb128 0x26
 	.uaword	.Ldebug_ranges0+0x20
 	.uleb128 0x21
 	.string	"srn_priority_tmp"
 	.byte	0x1
 	.byte	0x8b
-<<<<<<< Updated upstream
-	.uaword	0x1496
-	.uaword	.LLST4
-	.uleb128 0x27
-	.uaword	0x130d
-=======
-	.uaword	0x147d
+	.uaword	0x1490
 	.uaword	.LLST3
 	.uleb128 0x28
-	.uaword	0x12fa
->>>>>>> Stashed changes
+	.uaword	0x130d
 	.uaword	.LBB19
 	.uaword	.Ldebug_ranges0+0x38
 	.byte	0x1
 	.byte	0x8f
-<<<<<<< Updated upstream
-	.uaword	0x146b
-	.uleb128 0x28
+	.uaword	0x1465
+	.uleb128 0x29
 	.uaword	0x1347
-	.uaword	.LLST4
-	.uleb128 0x28
-	.uaword	0x1334
-	.uaword	.LLST6
-	.uleb128 0x29
-	.uaword	0x1328
-	.byte	0
-	.uleb128 0x2a
-	.uaword	0x12d2
-	.uaword	.LBB24
-	.uaword	.LBE24
-	.byte	0x1
-	.byte	0x8c
-	.uleb128 0x28
-	.uaword	0x12fa
-	.uaword	.LLST7
-=======
-	.uaword	0x1452
-	.uleb128 0x29
-	.uaword	0x1334
 	.uaword	.LLST3
 	.uleb128 0x29
-	.uaword	0x1321
+	.uaword	0x1334
 	.uaword	.LLST5
 	.uleb128 0x2a
-	.uaword	0x1315
+	.uaword	0x1328
 	.byte	0
 	.uleb128 0x2b
-	.uaword	0x12bf
+	.uaword	0x12d2
 	.uaword	.LBB25
 	.uaword	.Ldebug_ranges0+0x60
 	.byte	0x1
 	.byte	0x8c
 	.uleb128 0x29
-	.uaword	0x12e7
+	.uaword	0x12fa
 	.uaword	.LLST6
->>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1674,13 +1619,8 @@ osEE_cpu_startos:
 	.uleb128 0x11
 	.uaword	0xc81
 	.uleb128 0x11
-<<<<<<< Updated upstream
 	.uaword	0x303
-	.uleb128 0x2b
-=======
-	.uaword	0x2f0
 	.uleb128 0x2c
->>>>>>> Stashed changes
 	.string	"osEE_kdb_var"
 	.byte	0xb
 	.byte	0x42

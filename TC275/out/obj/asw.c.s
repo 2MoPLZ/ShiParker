@@ -20,36 +20,23 @@ FuncTestTask:
 	.type	TimerISR, @function
 TimerISR:
 .LFB598:
-<<<<<<< Updated upstream
-	.loc 1 50 0
-	.loc 1 66 0
-	movh.a	%a15, hi:c.24695
-	ld.w	%d15, [%a15] lo:c.24695
-	.loc 1 50 0
-=======
 	.loc 1 51 0
 	.loc 1 67 0
 	movh.a	%a15, hi:c.24677
 	ld.w	%d15, [%a15] lo:c.24677
 	.loc 1 51 0
->>>>>>> Stashed changes
 	sub.a	%SP, 8
 .LCFI0:
-	.loc 1 66 0
+	.loc 1 67 0
 	jne	%d15, -2, .L3
 .LBB2:
-	.loc 1 67 0
+	.loc 1 68 0
 	call	startShiParkerApp
 .LVL0:
 .L3:
 .LBE2:
-<<<<<<< Updated upstream
-	.loc 1 71 0
-	ld.w	%d15, [%a15] lo:c.24695
-=======
 	.loc 1 73 0
 	ld.w	%d15, [%a15] lo:c.24677
->>>>>>> Stashed changes
 	movh.a	%a4, hi:.LC0
 	st.w	[%SP]0, %d15
 	lea	%a4, [%a4] lo:.LC0
@@ -239,7 +226,7 @@ c.24677:
 	.byte	0x1
 	.string	"TimerISR"
 	.byte	0x1
-	.byte	0x31
+	.byte	0x32
 	.byte	0x1
 	.uaword	.LFB598
 	.uaword	.LFE598
@@ -250,7 +237,7 @@ c.24677:
 	.uleb128 0xb
 	.string	"c"
 	.byte	0x1
-	.byte	0x33
+	.byte	0x34
 	.uaword	0x14f
 	.byte	0x5
 	.byte	0x3
@@ -263,7 +250,7 @@ c.24677:
 	.byte	0x1
 	.uaword	.LASF0
 	.byte	0x1
-	.byte	0x43
+	.byte	0x44
 	.uaword	0x170
 	.byte	0x1
 	.uaword	0x303
@@ -334,7 +321,7 @@ c.24677:
 	.byte	0x1
 	.uaword	.LASF0
 	.byte	0x1
-	.byte	0x43
+	.byte	0x44
 	.uaword	0x170
 	.byte	0x1
 	.uaword	0x3c0

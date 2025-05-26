@@ -1733,41 +1733,9 @@ OsEE_bool
 );
 # 213 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 typedef OsEE_SN * OsEE_RQ;
-<<<<<<< Updated upstream
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
-# 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
-# 118 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 2
-# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-extern uint8_t osEE_assertions[];
-# 182 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert(OsEE_reg id,
-           OsEE_bool test,
-           OsEE_reg prev);
-# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_or(OsEE_reg id,
-        OsEE_reg prev1,
-        OsEE_reg prev2);
-# 220 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_and(OsEE_reg id,
-         OsEE_reg prev1,
-         OsEE_reg prev2);
-# 244 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_range(OsEE_reg id,
-           OsEE_reg begin,
-           OsEE_reg end);
-# 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_last(void);
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 # 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_conf.h" 2
-=======
-# 64 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 66 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
-# 56 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_conf.h" 2
->>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_kernel_types.h" 1
@@ -2552,10 +2520,10 @@ static inline OsEE_reg __attribute__((always_inline))
 {
   OsEE_icr icr = osEE_tc_get_icr();
 
-  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((227U))) {
+  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((144U))) {
     OsEE_icr icr_temp = icr;
 
-    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((227U));
+    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((144U));
     osEE_tc_set_icr(icr_temp);
   }
 
@@ -3175,38 +3143,19 @@ static inline void osEE_stack_monitoring
 # 49 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c" 2
 # 1272 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ ("                                  \n  .section .traptab_cpu0, \"ax\", @progbits \n  .align 8                                  \n  .globl _exit                              \n  .globl __TRAPTAB                          \n__TRAPTAB:                                  \n");
-<<<<<<< Updated upstream
 # 1287 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_mmu"); __asm__ ("osEE_tc_trap_mmu" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_mmu"); __asm__ (".align 5");
-# 1298 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_protection"); __asm__ ("osEE_tc_trap_protection" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_protection"); __asm__ (".align 5");
-# 1307 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_instruction"); __asm__ ("osEE_tc_trap_instruction" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_instruction"); __asm__ (".align 5");
-# 1316 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_context"); __asm__ ("osEE_tc_trap_context" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_context"); __asm__ (".align 5");
-# 1327 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_bus"); __asm__ ("osEE_tc_trap_bus" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_bus"); __asm__ (".align 5");
-# 1336 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_assertion"); __asm__ ("osEE_tc_trap_assertion" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_assertion"); __asm__ (".align 5");
-# 1365 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_system"); __asm__ ("osEE_tc_trap_system" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_system"); __asm__ (".align 5");
-# 1374 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
-__asm__ (".globl " "osEE_tc_trap_nmi"); __asm__ ("osEE_tc_trap_nmi" ":"); __asm__ (""); __asm__ ("debug"); __asm__ ("j " "osEE_tc_trap_nmi"); __asm__ (".align 5");
-=======
-# 1287 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_mmu"); __asm__ ("osEE_tc_trap_mmu" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1298 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1298 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_protection"); __asm__ ("osEE_tc_trap_protection" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1307 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1307 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_instruction"); __asm__ ("osEE_tc_trap_instruction" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1316 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1316 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_context"); __asm__ ("osEE_tc_trap_context" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1327 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1327 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_bus"); __asm__ ("osEE_tc_trap_bus" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1336 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1336 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_assertion"); __asm__ ("osEE_tc_trap_assertion" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1365 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1365 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_system"); __asm__ ("osEE_tc_trap_system" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
-# 1374 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
+# 1374 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 __asm__ (".globl " "osEE_tc_trap_nmi"); __asm__ ("osEE_tc_trap_nmi" ":"); __asm__ (""); __asm__ ("svlcx"); __asm__ ("call _exit"); __asm__ ("rslcx"); __asm__ ("rfe"); __asm__ (".align 5");
->>>>>>> Stashed changes

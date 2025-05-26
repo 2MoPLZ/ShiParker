@@ -74,7 +74,7 @@ static VAR(OsEE_TCB, OS_VAR_INIT)
   },
   {
     /* .current_num_of_act = */ 0U,
-    /* .current_prio       = */ 227U,
+    /* .current_prio       = */ 140U,
     /* .status             = */ SUSPENDED,
     /* .p_last_m           = */ NULL,
     /* .wait_mask          = */ 0U,
@@ -233,8 +233,8 @@ static VAR(OsEE_TDB, OS_CONST)
     /* .tid            = */ 1U,
     /* .task_type      = */ OSEE_TASK_TYPE_ISR2,
     /* .task_func      = */ asclin0RxISR,
-    /* .ready_prio     = */ 227U,
-    /* .dispatch_prio  = */ 227U,
+    /* .ready_prio     = */ 140U,
+    /* .dispatch_prio  = */ 140U,
     /* .max_num_of_act = */ 1U
   },
   {

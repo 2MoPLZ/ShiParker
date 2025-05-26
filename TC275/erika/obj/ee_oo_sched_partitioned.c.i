@@ -1733,41 +1733,9 @@ OsEE_bool
 );
 # 213 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 typedef OsEE_SN * OsEE_RQ;
-<<<<<<< Updated upstream
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
-
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
-# 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-# 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
-# 118 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 2
-# 163 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-extern uint8_t osEE_assertions[];
-# 182 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert(OsEE_reg id,
-           OsEE_bool test,
-           OsEE_reg prev);
-# 201 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_or(OsEE_reg id,
-        OsEE_reg prev1,
-        OsEE_reg prev2);
-# 220 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_and(OsEE_reg id,
-         OsEE_reg prev1,
-         OsEE_reg prev2);
-# 244 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_range(OsEE_reg id,
-           OsEE_reg begin,
-           OsEE_reg end);
-# 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
-uint8_t osEE_assert_last(void);
-# 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 # 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_conf.h" 2
-=======
-# 64 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
-# 66 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
-# 56 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_conf.h" 2
->>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_kernel_types.h" 1
@@ -2552,10 +2520,10 @@ static inline OsEE_reg __attribute__((always_inline))
 {
   OsEE_icr icr = osEE_tc_get_icr();
 
-  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((227U))) {
+  if (icr.bits.ccpn < OSEE_ISR2_VIRT_TO_HW_PRIO((144U))) {
     OsEE_icr icr_temp = icr;
 
-    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((227U));
+    icr_temp.bits.ccpn = OSEE_ISR2_VIRT_TO_HW_PRIO((144U));
     osEE_tc_set_icr(icr_temp);
   }
 
