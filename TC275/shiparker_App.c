@@ -38,27 +38,11 @@ void startShiParkerApp(void)
     currentDirection  = 0;
     currentPosition.x = 0;
     currentPosition.y = 0;
-<<<<<<< Updated upstream
     targetPosition.x  = POSITION_NULL;
     targetPosition.y  = POSITION_NULL;
     carCommand        = CAR_COMMAND_START;
     SetRelAlarm(AppAlarm, 0, APP_CYCLE_TICK);
     SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
-=======
-    targetPosition.x  = 40;
-    targetPosition.y  = 40;
-    carCommand        = CAR_COMMAND_STOP;
-    set_motor_power(INDEX_FL, motor_power_normal);
-    set_motor_power(INDEX_RL, motor_power_normal);
-    set_motor_power(INDEX_FR, motor_power_normal);
-    set_motor_power(INDEX_RR, motor_power_normal);
-    motor_stop(INDEX_FL);
-    motor_stop(INDEX_FR);
-    motor_stop(INDEX_RL);
-    motor_stop(INDEX_RR);
-    SetRelAlarm(AppAlarm, 4, APP_CYCLE_TICK);
-    SetRelAlarm(PacketSendAlarm, 5, SENDPACKET_DEFAULT_CYCLE_TICK);
->>>>>>> Stashed changes
 }
 
 void exitShiParkerApp(){
@@ -178,15 +162,9 @@ TASK(ShiParkerAppTask)
             CancelAlarm(PacketSendAlarm);
             SetRelAlarm(WallFollowAlarm, 3, WALL_FOLLOW_CYCLE_TICK);
             SetRelAlarm(PacketSendAlarm,
-<<<<<<< Updated upstream
-                        0,
-                        SENDPACKET_DEFAULT_CYCLE_TICK); // 2500ms
-            SetRelAlarm(AvoidObstacleAlarm, 0, FRONT_OBSTACLE_DETECTION_TICK);
-=======
                         1,
                         SENDPACKET_RUNNING_CYCLE_TICK); // 500ms
             SetRelAlarm(AvoidObstacleAlarm, 2, FRONT_OBSTACLE_DETECTION_TICK);
->>>>>>> Stashed changes
             break;
         case CAR_COMMAND_STOP:
             // ERROR일때 일시정지 -> 변화없음
@@ -218,11 +196,7 @@ TASK(AvoidObstacleTask)
 void turn90(void)
 {
     volatile double currentHallCntAvg = getHallCntAvg();
-<<<<<<< Updated upstream
-    volatile double targetHallCntAvg  = currentHallCntAvg + 4.5;
-=======
     volatile double targetHallCntAvg  = currentHallCntAvg + (double)4.5;
->>>>>>> Stashed changes
 
     CancelAlarm(AvoidObstacleAlarm);
 
@@ -259,11 +233,7 @@ void turn90(void)
     set_motor_power(INDEX_RL, motor_power_normal);
     set_motor_power(INDEX_RR, motor_power_normal);
 
-<<<<<<< Updated upstream
-    SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
-=======
     SetRelAlarm(AvoidObstacleAlarm, 1, WALL_FOLLOW_CYCLE_TICK);
->>>>>>> Stashed changes
 }
 
 void calculateCurrentPos() {
@@ -291,19 +261,6 @@ TASK(WallFollowTask)
 {
     if (g_isAppRunning && (carStatus == CAR_STATUS_RUNNING))
     {
-<<<<<<< Updated upstream
-        if(currentDirection == 0)
-        {
-            min_dist_left = 20; 
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
-        }
-        else if(currentDirection==1)
-        {
-            min_dist_left = targetPosition.y;
-            FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
-            RearUltra = getUltrasonic(&g_Ultrasonic_RL);
-=======
         // volatile int32_t tmpdir = 1;
         min_dist_left = 20; 
         FrontUltra = getUltrasonic(&g_Ultrasonic_FL);
@@ -323,7 +280,6 @@ TASK(WallFollowTask)
         //     tmpdir=-1;
         //     FrontUltra = getUltrasonic(&g_Ultrasonic_FR);
         //     RearUltra = getUltrasonic(&g_Ultrasonic_RR);
->>>>>>> Stashed changes
             
         // }
         DriveCommand cmd = wall_follow_control(FrontUltra, RearUltra);

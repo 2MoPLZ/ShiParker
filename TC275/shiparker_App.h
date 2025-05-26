@@ -28,21 +28,12 @@
 #include "steering_Pid.h"
 
 
-<<<<<<< Updated upstream
-#define APP_CYCLE_TICK 10                   //500ms
-#define WALL_FOLLOW_CYCLE_TICK 4            //200ms
-#define SENDPACKET_DEFAULT_CYCLE_TICK 50    //2500ms
-#define SENDPACKET_RUNNING_CYCLE_TICK 10    //500ms
-#define FRONT_OBSTACLE_DETECTION_TICK 6     //300ms
-#define FRONT_OBSTACLE_THRESHOLD 12
-=======
 #define APP_CYCLE_TICK 4                   //100ms
 #define WALL_FOLLOW_CYCLE_TICK 3            //200ms
 #define SENDPACKET_DEFAULT_CYCLE_TICK 30    //2500ms
 #define SENDPACKET_RUNNING_CYCLE_TICK 30    //500ms
 #define FRONT_OBSTACLE_DETECTION_TICK 4     //300ms
 #define FRONT_OBSTACLE_THRESHOLD 8
->>>>>>> Stashed changes
 
 #define POSITION_NULL -1000000000
 
