@@ -12,14 +12,15 @@ TASK(TestTask){
     // // if(cnt==4){
     // //     cnt=0;
     // // }
-    // // for(i=0;i<4;i++){
-    // //     if(i==cnt){
-    // //         set_motor_power(i,100);
-    // //     }
-    // //     else{
-    // //         set_motor_power(i,0);
-    // //     }
-    // // }
+    //set_motor_power(0,100);
+    // for(i=0;i<4;i++){
+    //     if(i==cnt){
+    //         set_motor_power(i,100);
+    //     }
+    //     else{
+    //         set_motor_power(i,0);
+    //     }
+    // }
     // // printDouble("FrontUltra",getUltrasonic(&g_Ultrasonic_FRONT));
     // double FrontLeftUltra = getUltrasonic(&g_Ultrasonic_FL);
     // double RearLeftUltra = getUltrasonic(&g_Ultrasonic_RL);
@@ -65,6 +66,7 @@ ISR2(TimerISR)
     // cnt++;
     if(c==-2){
         startShiParkerApp();
+        // ActivateTask(TestTask);
     }
     /************** basic-TASK for debugging ********************/
     
