@@ -33387,6 +33387,7 @@ typedef OsEE_SN * OsEE_RQ;
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
+<<<<<<< Updated upstream
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
 # 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
@@ -33412,6 +33413,9 @@ uint8_t osEE_assert_range(OsEE_reg id,
 # 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_last(void);
 # 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+=======
+
+>>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
@@ -33507,12 +33511,12 @@ long measureEchoTick(struct Ultrasonic* ultrasonic)
     startTick = IfxStm_get(&(*(Ifx_STM*)0xF0000000u));
     while (IfxPort_getPinState(ultrasonic->ECHO_PORT,ultrasonic->ECHO_PIN) == 0){
         elapsedTick = IfxStm_get(&(*(Ifx_STM*)0xF0000000u))-startTick;
-        if(elapsedTick >= (uint64) 1200000)return -1;
+        if(elapsedTick >= (uint64) 600000)return -1;
     };
     startTick = IfxStm_get(&(*(Ifx_STM*)0xF0000000u));
     while (IfxPort_getPinState(ultrasonic->ECHO_PORT,ultrasonic->ECHO_PIN) == 1){
         elapsedTick = IfxStm_get(&(*(Ifx_STM*)0xF0000000u))-startTick;
-        if(elapsedTick >= (uint64) 1200000)return -1;
+        if(elapsedTick >= (uint64) 600000)return -1;
     };
     return (long)elapsedTick;
 }

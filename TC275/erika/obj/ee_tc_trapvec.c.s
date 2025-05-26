@@ -12,50 +12,66 @@ __TRAPTAB:
 	.globl osEE_tc_trap_mmu
 	osEE_tc_trap_mmu:
 	
-	debug
-	j osEE_tc_trap_mmu
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_protection
 	osEE_tc_trap_protection:
 	
-	debug
-	j osEE_tc_trap_protection
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_instruction
 	osEE_tc_trap_instruction:
 	
-	debug
-	j osEE_tc_trap_instruction
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_context
 	osEE_tc_trap_context:
 	
-	debug
-	j osEE_tc_trap_context
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_bus
 	osEE_tc_trap_bus:
 	
-	debug
-	j osEE_tc_trap_bus
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_assertion
 	osEE_tc_trap_assertion:
 	
-	debug
-	j osEE_tc_trap_assertion
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_system
 	osEE_tc_trap_system:
 	
-	debug
-	j osEE_tc_trap_system
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 	.globl osEE_tc_trap_nmi
 	osEE_tc_trap_nmi:
 	
-	debug
-	j osEE_tc_trap_nmi
+	svlcx
+	call _exit
+	rslcx
+	rfe
 	.align 5
 .Letext0:
 	.file 1 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
@@ -74,7 +90,7 @@ __TRAPTAB:
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_trapvec.c"
 	.uaword	.Ldebug_line0

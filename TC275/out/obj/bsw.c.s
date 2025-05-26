@@ -37573,7 +37573,7 @@ g_AsclinAsc:
 	.byte	0x1
 	.string	"initUartDriver"
 	.byte	0x29
-	.byte	0x1b
+	.byte	0x1c
 	.byte	0x1
 	.byte	0x1
 	.uleb128 0x5f

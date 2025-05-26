@@ -8,15 +8,18 @@ osEE_cpu_startos:
 .LFB109:
 	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_hal.c"
 	.loc 1 108 0
-	mov.aa	%a14, %SP
-.LCFI0:
 .LBB15:
 .LBB16:
 	.file 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_hal.h"
 	.loc 2 367 0
 #APP
+<<<<<<< Updated upstream
 	# 367 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
 	mfcr %d5, LO:65052
+=======
+	# 367 "C:\SHIPAR~1\TC275\erika\inc/ee_hal.h" 1
+	mfcr %d4, LO:65052
+>>>>>>> Stashed changes
 	# 0 "" 2
 .LVL0:
 #NO_APP
@@ -25,84 +28,99 @@ osEE_cpu_startos:
 	.loc 1 125 0
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
-	ld.a	%a15, [%a15] 8
-	add.a	%a15, -1
+	ld.w	%d3, [%a15] 8
 .LVL1:
-	.loc 1 126 0
-	jz.a	%a15, .L2
 .LBB17:
 	.loc 1 128 0
-	movh.a	%a2, hi:osEE_kdb_var
-	lea	%a2, [%a2] lo:osEE_kdb_var
-	ld.w	%d3, [%a2] 4
+	ld.a	%a3, [%a15] 4
 .LBB18:
 .LBB19:
 .LBB20:
 	.file 3 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_hal_internal.h"
 	.loc 3 421 0
-	and	%d5, %d5, 3
+	and	%d4, %d4, 3
 .LVL2:
-	sh	%d5, %d5, 11
+	addi	%d6, %d3, -1
+.LVL3:
+	ne	%d15, %d3, 1
+	sh	%d4, %d4, 11
 .LBE20:
 .LBE19:
 .LBE18:
-	.loc 1 138 0
-	mov.u	%d4, 65535
-	mov	%d15, 0
-	add.a	%a15, -1
-.LVL3:
-.L4:
-	.loc 1 128 0
-	mov.a	%a3, %d3
-	addsc.a	%a2, %a3, %d15, 2
-	ld.a	%a2, [%a2]0
-.LVL4:
-	.loc 1 132 0
-	ld.bu	%d2, [%a2] 20
-	jne	%d2, 2, .L3
-	.loc 1 138 0
-	ld.hu	%d2, [%a2] 8
-	jeq	%d2, %d4, .L3
-.LVL5:
-.LBB27:
-.LBB23:
-.LBB21:
-	.loc 3 421 0
-	mov.a	%a4, %d2
-	lea	%a3, [%a4] -32768
-	addih.a	%a3, %a3, 61444
-.LBE21:
-.LBE23:
-.LBB24:
-.LBB25:
-	.loc 3 303 0
-	ld.bu	%d2, [%a2] 28
-.LVL6:
-	add	%d2, 1
-	insert	%d2, %d2, 8, 7, 25
-.LBE25:
-.LBE24:
-.LBB26:
-.LBB22:
-	.loc 3 422 0
-	or	%d2, %d5
-	.loc 3 421 0
-	st.w	[%a3]0, %d2
-.LVL7:
-.L3:
-.LBE22:
-.LBE26:
-.LBE27:
 .LBE17:
-	.loc 1 126 0 discriminator 2
-	add	%d15, 1
-.LVL8:
-	loop	%a15, .L4
-.LVL9:
+	.loc 1 126 0
+	mov	%d2, 0
+.LBB32:
+	.loc 1 138 0
+	mov.u	%d5, 65535
+	sel	%d15, %d15, %d6, 0
+.LVL4:
 .L2:
+	jned	%d15, 0, .L4
+.LBE32:
 	.loc 1 207 0
 	mov	%d2, 1
+.LVL5:
 	ret
+.LVL6:
+.L4:
+.LBB33:
+	.loc 1 128 0
+	addsc.a	%a15, %a3, %d2, 2
+	ld.a	%a15, [%a15]0
+.LVL7:
+	.loc 1 132 0
+	ld.bu	%d3, [%a15] 20
+	jne	%d3, 2, .L3
+	.loc 1 138 0
+	ld.hu	%d3, [%a15] 8
+	jeq	%d3, %d5, .L3
+.LVL8:
+.LBB31:
+.LBB24:
+.LBB21:
+	.loc 3 421 0
+	mov.a	%a4, %d3
+.LBE21:
+.LBE24:
+.LBB25:
+.LBB26:
+	.loc 3 303 0
+	ld.bu	%d3, [%a15] 28
+.LVL9:
+.LBE26:
+.LBE25:
+.LBB28:
+.LBB22:
+	.loc 3 421 0
+	lea	%a2, [%a4] -32768
+.LBE22:
+.LBE28:
+.LBB29:
+.LBB27:
+	.loc 3 303 0
+	add	%d3, 1
+	insert	%d3, %d3, 8, 7, 25
+.LBE27:
+.LBE29:
+.LBB30:
+.LBB23:
+	.loc 3 421 0
+	addih.a	%a2, %a2, 61444
+	.loc 3 422 0
+	or	%d3, %d4
+	.loc 3 421 0
+	st.w	[%a2]0, %d3
+.LVL10:
+.L3:
+.LBE23:
+.LBE30:
+.LBE31:
+.LBE33:
+	.loc 1 126 0 discriminator 2
+	add	%d2, 1
+.LVL11:
+	j	.L2
 .LFE109:
 	.size	osEE_cpu_startos, .-osEE_cpu_startos
 .section .debug_frame,"",@progbits
@@ -126,10 +144,6 @@ osEE_cpu_startos:
 	.uaword	.Lframe0
 	.uaword	.LFB109
 	.uaword	.LFE109-.LFB109
-	.byte	0x4
-	.uaword	.LCFI0-.LFB109
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE0:
 .section .text,"ax",@progbits
@@ -145,13 +159,17 @@ osEE_cpu_startos:
 	.file 12 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
+<<<<<<< Updated upstream
 	.uaword	0x14c4
+=======
+	.uaword	0x14ab
+>>>>>>> Stashed changes
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_hal.c"
 	.uaword	.Ltext0
@@ -1519,7 +1537,11 @@ osEE_cpu_startos:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x1487
+=======
+	.uaword	0x146e
+>>>>>>> Stashed changes
 	.uleb128 0x21
 	.string	"i"
 	.byte	0x1
@@ -1536,12 +1558,20 @@ osEE_cpu_startos:
 	.string	"p_kdb"
 	.byte	0x1
 	.byte	0x6f
+<<<<<<< Updated upstream
 	.uaword	0x1487
+=======
+	.uaword	0x146e
+>>>>>>> Stashed changes
 	.uleb128 0x22
 	.string	"curr_core_id"
 	.byte	0x1
 	.byte	0x70
+<<<<<<< Updated upstream
 	.uaword	0x148c
+=======
+	.uaword	0x1473
+>>>>>>> Stashed changes
 	.uleb128 0x23
 	.uaword	0x129f
 	.uaword	.LBB15
@@ -1557,29 +1587,42 @@ osEE_cpu_startos:
 	.uaword	.LLST2
 	.byte	0
 	.byte	0
-	.uleb128 0x24
-	.uaword	.LBB17
-	.uaword	.LBE17
-	.uleb128 0x21
+	.uleb128 0x26
+	.uaword	.Ldebug_ranges0+0
+	.uleb128 0x27
 	.string	"p_tdb"
 	.byte	0x1
 	.byte	0x80
+<<<<<<< Updated upstream
 	.uaword	0x1491
 	.uaword	.LLST3
+=======
+	.uaword	0x1478
+	.byte	0x1
+	.byte	0x6f
+>>>>>>> Stashed changes
 	.uleb128 0x26
-	.uaword	.Ldebug_ranges0+0
+	.uaword	.Ldebug_ranges0+0x20
 	.uleb128 0x21
 	.string	"srn_priority_tmp"
 	.byte	0x1
 	.byte	0x8b
+<<<<<<< Updated upstream
 	.uaword	0x1496
 	.uaword	.LLST4
 	.uleb128 0x27
 	.uaword	0x130d
+=======
+	.uaword	0x147d
+	.uaword	.LLST3
+	.uleb128 0x28
+	.uaword	0x12fa
+>>>>>>> Stashed changes
 	.uaword	.LBB19
-	.uaword	.Ldebug_ranges0+0x18
+	.uaword	.Ldebug_ranges0+0x38
 	.byte	0x1
 	.byte	0x8f
+<<<<<<< Updated upstream
 	.uaword	0x146b
 	.uleb128 0x28
 	.uaword	0x1347
@@ -1599,6 +1642,27 @@ osEE_cpu_startos:
 	.uleb128 0x28
 	.uaword	0x12fa
 	.uaword	.LLST7
+=======
+	.uaword	0x1452
+	.uleb128 0x29
+	.uaword	0x1334
+	.uaword	.LLST3
+	.uleb128 0x29
+	.uaword	0x1321
+	.uaword	.LLST5
+	.uleb128 0x2a
+	.uaword	0x1315
+	.byte	0
+	.uleb128 0x2b
+	.uaword	0x12bf
+	.uaword	.LBB25
+	.uaword	.Ldebug_ranges0+0x60
+	.byte	0x1
+	.byte	0x8c
+	.uleb128 0x29
+	.uaword	0x12e7
+	.uaword	.LLST6
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1610,15 +1674,20 @@ osEE_cpu_startos:
 	.uleb128 0x11
 	.uaword	0xc81
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x303
 	.uleb128 0x2b
+=======
+	.uaword	0x2f0
+	.uleb128 0x2c
+>>>>>>> Stashed changes
 	.string	"osEE_kdb_var"
 	.byte	0xb
 	.byte	0x42
 	.uaword	0x126a
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.string	"osEE_cdb_var"
 	.byte	0xb
 	.byte	0x5b
@@ -2113,6 +2182,21 @@ osEE_cpu_startos:
 	.byte	0
 	.byte	0
 	.uleb128 0x27
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x28
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
@@ -2129,7 +2213,7 @@ osEE_cpu_startos:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x29
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -2138,29 +2222,29 @@ osEE_cpu_startos:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.uleb128 0x1d
 	.byte	0x1
 	.uleb128 0x31
 	.uleb128 0x13
-	.uleb128 0x11
+	.uleb128 0x52
 	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
+	.uleb128 0x55
+	.uleb128 0x6
 	.uleb128 0x58
 	.uleb128 0xb
 	.uleb128 0x59
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -2182,42 +2266,45 @@ osEE_cpu_startos:
 .Ldebug_loc0:
 .LLST0:
 	.uaword	.LVL1-.Ltext0
-	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL4-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL3-.Ltext0
-	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL4-.Ltext0
+	.uaword	.LVL5-.Ltext0
 	.uahalf	0x1
-	.byte	0x5f
+	.byte	0x52
+	.uaword	.LVL6-.Ltext0
+	.uaword	.LFE109-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
 	.uaword	0
 	.uaword	0
 .LLST1:
 	.uaword	.LVL1-.Ltext0
 	.uaword	.LVL3-.Ltext0
+	.uahalf	0x3
+	.byte	0x73
+	.sleb128 -1
+	.byte	0x9f
+	.uaword	.LVL3-.Ltext0
+	.uaword	.LFE109-.Ltext0
 	.uahalf	0x1
-	.byte	0x6f
+	.byte	0x56
 	.uaword	0
 	.uaword	0
 .LLST2:
 	.uaword	.LVL0-.Ltext0
 	.uaword	.LVL2-.Ltext0
 	.uahalf	0x1
-	.byte	0x55
+	.byte	0x54
 	.uaword	0
 	.uaword	0
 .LLST3:
-	.uaword	.LVL4-.Ltext0
-	.uaword	.LVL9-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	0
-	.uaword	0
-.LLST4:
-	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL7-.Ltext0
+	.uaword	.LVL8-.Ltext0
+	.uaword	.LVL10-.Ltext0
 	.uahalf	0xa
-	.byte	0x82
+	.byte	0x8f
 	.sleb128 28
 	.byte	0x94
 	.byte	0x1
@@ -2229,22 +2316,22 @@ osEE_cpu_startos:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-.LLST6:
-	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL6-.Ltext0
+.LLST5:
+	.uaword	.LVL8-.Ltext0
+	.uaword	.LVL9-.Ltext0
 	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL6-.Ltext0
-	.uaword	.LVL7-.Ltext0
+	.byte	0x53
+	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL10-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
 	.uaword	0
 	.uaword	0
-.LLST7:
-	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL7-.Ltext0
+.LLST6:
+	.uaword	.LVL8-.Ltext0
+	.uaword	.LVL10-.Ltext0
 	.uahalf	0x2
-	.byte	0x82
+	.byte	0x8f
 	.sleb128 28
 	.uaword	0
 	.uaword	0
@@ -2262,18 +2349,34 @@ osEE_cpu_startos:
 	.uaword	0
 .section .debug_ranges,"",@progbits
 .Ldebug_ranges0:
+	.uaword	.LBB17-.Ltext0
+	.uaword	.LBE17-.Ltext0
+	.uaword	.LBB32-.Ltext0
+	.uaword	.LBE32-.Ltext0
+	.uaword	.LBB33-.Ltext0
+	.uaword	.LBE33-.Ltext0
+	.uaword	0
+	.uaword	0
 	.uaword	.LBB18-.Ltext0
 	.uaword	.LBE18-.Ltext0
-	.uaword	.LBB27-.Ltext0
-	.uaword	.LBE27-.Ltext0
+	.uaword	.LBB31-.Ltext0
+	.uaword	.LBE31-.Ltext0
 	.uaword	0
 	.uaword	0
 	.uaword	.LBB19-.Ltext0
 	.uaword	.LBE19-.Ltext0
-	.uaword	.LBB23-.Ltext0
-	.uaword	.LBE23-.Ltext0
-	.uaword	.LBB26-.Ltext0
-	.uaword	.LBE26-.Ltext0
+	.uaword	.LBB24-.Ltext0
+	.uaword	.LBE24-.Ltext0
+	.uaword	.LBB28-.Ltext0
+	.uaword	.LBE28-.Ltext0
+	.uaword	.LBB30-.Ltext0
+	.uaword	.LBE30-.Ltext0
+	.uaword	0
+	.uaword	0
+	.uaword	.LBB25-.Ltext0
+	.uaword	.LBE25-.Ltext0
+	.uaword	.LBB29-.Ltext0
+	.uaword	.LBE29-.Ltext0
 	.uaword	0
 	.uaword	0
 .section .debug_line,"",@progbits

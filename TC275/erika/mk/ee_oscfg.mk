@@ -22,10 +22,6 @@
 # User options
 #
 ############################################################################
-OS_EE_OPT += OSEE_DEBUG
-OS_EE_OPT += OSEE_ASSERT
-OS_EE_OPT += OS_EE_APPL_BUILD_DEBUG
-OS_EE_OPT += OS_EE_BUILD_DEBUG
 OS_EE_OPT += EE_BUILD_SINGLE_ELF
 
 

@@ -91,6 +91,7 @@ __INTTAB0:
 	mov %d4, 0
 	j osEE_tc_isr2_wrapper
 	.align 5
+<<<<<<< Updated upstream
 	.globl osEE_tc_isr_dummy_entry_18
 	osEE_tc_isr_dummy_entry_18:
 	j .
@@ -1045,6 +1046,8 @@ __INTTAB0:
 	osEE_tc_isr_dummy_entry_255:
 	j .
 	.align  5
+=======
+>>>>>>> Stashed changes
 	.size __INTTAB0, . - __INTTAB0
 	.section .text,"ax",@progbits
 #NO_APP
@@ -1055,8 +1058,6 @@ osEE_tc_isr2_wrapper:
 	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 	.loc 1 17033 0
 .LVL0:
-	mov.aa	%a14, %SP
-.LCFI0:
 	.loc 1 17062 0
 	call	osEE_activate_isr2
 .LVL1:
@@ -1105,10 +1106,6 @@ osEE_tc_isr2_wrapper:
 	.uaword	.Lframe0
 	.uaword	.LFB109
 	.uaword	.LFE109-.LFB109
-	.byte	0x4
-	.uaword	.LCFI0-.LFB109
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE0:
 .section .text,"ax",@progbits
@@ -1130,7 +1127,7 @@ osEE_tc_isr2_wrapper:
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 	.uaword	.Ltext0

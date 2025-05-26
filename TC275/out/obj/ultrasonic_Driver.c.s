@@ -211,12 +211,12 @@ measureEchoTick:
 	or	%d2, %d15
 	mov.a	%a15, %d2
 	.loc 1 62 0
-	movh	%d10, 18
+	movh	%d10, 9
 	.loc 1 58 0
 	mov	%e2, 0
 	sh	%d9, %d9, %d8
 	.loc 1 62 0
-	addi	%d10, %d10, 20352
+	addi	%d10, %d10, 10176
 .LVL14:
 .L4:
 .LBB59:
@@ -270,7 +270,7 @@ measureEchoTick:
 .LBE63:
 .LBE62:
 	.loc 1 67 0
-	movh	%d0, 18
+	movh	%d0, 9
 .LVL23:
 .LBB65:
 .LBB64:
@@ -280,7 +280,7 @@ measureEchoTick:
 .LBE64:
 .LBE65:
 	.loc 1 67 0
-	addi	%d0, %d0, 20352
+	addi	%d0, %d0, 10176
 .L7:
 .LVL25:
 .LBB66:

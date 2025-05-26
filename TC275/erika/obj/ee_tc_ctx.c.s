@@ -188,7 +188,6 @@ osEE_hal_restore_ctx:
 	ld.w	%d15, [%a15]0
 .LVL16:
 	st.w	[%a5]0, %d15
-.LVL17:
 	.loc 1 147 0
 #APP
 	# 147 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_tc_ctx.c" 1
@@ -204,7 +203,7 @@ osEE_hal_restore_ctx:
 osEE_hal_save_ctx_and_ready2stacked:
 .LFB113:
 	.loc 1 159 0
-.LVL18:
+.LVL17:
 .LBB114:
 .LBB115:
 .LBB116:
@@ -216,13 +215,13 @@ osEE_hal_save_ctx_and_ready2stacked:
 	# 154 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
 	mov.aa %a15, %SP
 	# 0 "" 2
-.LVL19:
+.LVL18:
 #NO_APP
 .LBE119:
 .LBE118:
 	.loc 1 80 0
 	lea	%a2, [%a15] -16
-.LVL20:
+.LVL19:
 .LBB120:
 .LBB121:
 	.loc 3 114 0
@@ -246,7 +245,7 @@ osEE_hal_save_ctx_and_ready2stacked:
 	# 217 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d15, LO:65024
 	# 0 "" 2
-.LVL21:
+.LVL20:
 #NO_APP
 .LBE124:
 .LBE123:
@@ -260,7 +259,7 @@ osEE_hal_save_ctx_and_ready2stacked:
 	# 124 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mov.aa %a3, %a11
 	# 0 "" 2
-.LVL22:
+.LVL21:
 #NO_APP
 .LBE126:
 .LBE125:
@@ -285,7 +284,7 @@ osEE_hal_save_ctx_and_ready2stacked:
 osEE_hal_ready2stacked:
 .LFB114:
 	.loc 1 175 0
-.LVL23:
+.LVL22:
 .LBB127:
 .LBB128:
 	.loc 3 114 0
@@ -304,7 +303,7 @@ osEE_hal_ready2stacked:
 	# 227 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
 	svlcx
 	# 0 "" 2
-.LVL24:
+.LVL23:
 #NO_APP
 .LBE130:
 .LBE129:
@@ -319,13 +318,13 @@ osEE_hal_ready2stacked:
 	# 154 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\inc/ee_hal.h" 1
 	mov.aa %a15, %SP
 	# 0 "" 2
-.LVL25:
+.LVL24:
 #NO_APP
 .LBE136:
 .LBE135:
 	.loc 1 80 0
 	lea	%a2, [%a15] -16
-.LVL26:
+.LVL25:
 .LBB137:
 .LBB138:
 	.loc 3 114 0
@@ -341,7 +340,7 @@ osEE_hal_ready2stacked:
 	.loc 1 94 0
 	ld.w	%d15, [%a5]0
 	st.w	[%a15] -16, %d15
-.LVL27:
+.LVL26:
 .LBB139:
 .LBB140:
 .LBB141:
@@ -350,7 +349,7 @@ osEE_hal_ready2stacked:
 	# 217 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d15, LO:65024
 	# 0 "" 2
-.LVL28:
+.LVL27:
 #NO_APP
 .LBE141:
 .LBE140:
@@ -364,7 +363,7 @@ osEE_hal_ready2stacked:
 	# 124 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mov.aa %a3, %a11
 	# 0 "" 2
-.LVL29:
+.LVL28:
 #NO_APP
 .LBE143:
 .LBE142:
@@ -389,24 +388,24 @@ osEE_hal_ready2stacked:
 osEE_tc_change_context_from_isr2_end:
 .LFB116:
 	.loc 1 282 0
-.LVL30:
+.LVL29:
 .LBB144:
 	.loc 1 284 0
 #APP
 	# 284 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_tc_ctx.c" 1
 	mfcr %d15, LO:65028
 	# 0 "" 2
-.LVL31:
+.LVL30:
 #NO_APP
 .LBE144:
 	andn	%d15, %d15, ~(-128)
-.LVL32:
+.LVL31:
 #APP
 	# 284 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_tc_ctx.c" 1
 	mtcr LO:65028, %d15
 	isync
 	# 0 "" 2
-.LVL33:
+.LVL32:
 #NO_APP
 .LBB145:
 .LBB146:
@@ -439,7 +438,7 @@ osEE_tc_change_context_from_isr2_end:
 osEE_hal_terminate_ctx:
 .LFB115:
 	.loc 1 216 0
-.LVL34:
+.LVL33:
 	sub.a	%SP, 8
 .LCFI0:
 .LBB149:
@@ -451,7 +450,7 @@ osEE_hal_terminate_ctx:
 	# 202 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d2, LO:65080
 	# 0 "" 2
-.LVL35:
+.LVL34:
 #NO_APP
 .LBE152:
 .LBE151:
@@ -464,14 +463,14 @@ osEE_hal_terminate_ctx:
 	# 217 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d15, LO:65024
 	# 0 "" 2
-.LVL36:
+.LVL35:
 #NO_APP
 .LBE155:
 .LBE154:
 .LBE153:
 	.loc 1 231 0
 	ld.a	%a15, [%a4]0
-.LVL37:
+.LVL36:
 	ld.w	%d3, [%a15] 8
 .LBB156:
 .LBB157:
@@ -487,24 +486,24 @@ osEE_hal_terminate_ctx:
 	sh	%d3, %d3, 28
 	or	%d3, %d4
 	mov.a	%a15, %d3
-.LVL38:
+.LVL37:
 .LBE159:
 .LBE158:
 	.loc 3 237 0
 	mov	%d3, 0
-.LVL39:
+.LVL38:
 	.loc 3 234 0
 	jz.a	%a15, .L12
 	.loc 3 235 0
 	ld.w	%d3, [%a15]0
-.LVL40:
+.LVL39:
 .LBE157:
 .LBE156:
 .LBB160:
 .LBB161:
 	.loc 3 248 0
 	st.w	[%a15]0, %d2
-.LVL41:
+.LVL40:
 .L12:
 .LBE161:
 .LBE160:
@@ -516,7 +515,7 @@ osEE_hal_terminate_ctx:
 	mtcr LO:65080, %d15
 	isync
 	# 0 "" 2
-.LVL42:
+.LVL41:
 #NO_APP
 .LBE163:
 .LBE162:
@@ -533,10 +532,11 @@ osEE_hal_terminate_ctx:
 .LBE164:
 	.loc 1 249 0
 	ld.a	%a15, [%a4]0
-.LVL43:
+.LVL42:
 	ld.w	%d15, [%a15]0
-.LVL44:
+.LVL43:
 	st.w	[%a4]0, %d15
+.LVL44:
 .LBE149:
 	.loc 1 253 0
 .LBB166:
@@ -672,7 +672,7 @@ osEE_hal_terminate_ctx:
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_ctx.c"
 	.uaword	.Ltext0
@@ -4142,7 +4142,7 @@ osEE_hal_terminate_ctx:
 	.byte	0x93
 	.uleb128 0x4
 	.uaword	.LVL16-.Ltext0
-	.uaword	.LVL17-.Ltext0
+	.uaword	.LFE112-.Ltext0
 	.uahalf	0x4
 	.byte	0x8f
 	.sleb128 8
@@ -4158,7 +4158,7 @@ osEE_hal_terminate_ctx:
 	.byte	0x93
 	.uleb128 0x4
 	.uaword	.LVL16-.Ltext0
-	.uaword	.LVL17-.Ltext0
+	.uaword	.LFE112-.Ltext0
 	.uahalf	0x4
 	.byte	0x8f
 	.sleb128 8
@@ -4167,46 +4167,46 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST4:
+	.uaword	.LVL17-.Ltext0
 	.uaword	.LVL18-.Ltext0
-	.uaword	.LVL19-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL19-.Ltext0
+	.uaword	.LVL18-.Ltext0
 	.uaword	.LFE113-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST5:
-	.uaword	.LVL23-.Ltext0
-	.uaword	.LVL27-.Ltext0
+	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL26-.Ltext0
 	.uahalf	0x2
 	.byte	0x85
 	.sleb128 0
 	.uaword	0
 	.uaword	0
 .LLST6:
+	.uaword	.LVL23-.Ltext0
 	.uaword	.LVL24-.Ltext0
-	.uaword	.LVL25-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL25-.Ltext0
+	.uaword	.LVL24-.Ltext0
 	.uaword	.LFE114-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST7:
+	.uaword	.LVL30-.Ltext0
 	.uaword	.LVL31-.Ltext0
-	.uaword	.LVL32-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST8:
-	.uaword	.LVL34-.Ltext0
+	.uaword	.LVL33-.Ltext0
 	.uaword	.LVL45-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
@@ -4220,7 +4220,7 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST9:
-	.uaword	.LVL34-.Ltext0
+	.uaword	.LVL33-.Ltext0
 	.uaword	.LVL46-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
@@ -4234,7 +4234,7 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST10:
-	.uaword	.LVL35-.Ltext0
+	.uaword	.LVL34-.Ltext0
 	.uaword	.LVL47-1-.Ltext0
 	.uahalf	0x3
 	.byte	0x52
@@ -4243,8 +4243,8 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST11:
-	.uaword	.LVL36-.Ltext0
-	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL35-.Ltext0
+	.uaword	.LVL43-.Ltext0
 	.uahalf	0x3
 	.byte	0x5f
 	.byte	0x93
@@ -4252,8 +4252,8 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST12:
+	.uaword	.LVL36-.Ltext0
 	.uaword	.LVL37-.Ltext0
-	.uaword	.LVL38-.Ltext0
 	.uahalf	0xc
 	.byte	0x8f
 	.sleb128 8
@@ -4267,8 +4267,8 @@ osEE_hal_terminate_ctx:
 	.byte	0x9d
 	.uleb128 0xc
 	.uleb128 0
-	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL41-.Ltext0
+	.uaword	.LVL37-.Ltext0
+	.uaword	.LVL40-.Ltext0
 	.uahalf	0x12
 	.byte	0x84
 	.sleb128 0
@@ -4291,8 +4291,8 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST13:
+	.uaword	.LVL39-.Ltext0
 	.uaword	.LVL40-.Ltext0
-	.uaword	.LVL41-.Ltext0
 	.uahalf	0x3
 	.byte	0x53
 	.byte	0x93
@@ -4300,33 +4300,51 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST14:
-	.uaword	.LVL35-.Ltext0
+	.uaword	.LVL34-.Ltext0
 	.uaword	.LVL47-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
 .LLST15:
-	.uaword	.LVL36-.Ltext0
-	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL35-.Ltext0
+	.uaword	.LVL43-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST19:
+	.uaword	.LVL37-.Ltext0
 	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL39-.Ltext0
 	.uahalf	0x1
 	.byte	0x53
-	.uaword	.LVL39-.Ltext0
-	.uaword	.LVL43-.Ltext0
+	.uaword	.LVL38-.Ltext0
+	.uaword	.LVL42-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
+	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL44-.Ltext0
+	.uahalf	0xf
+	.byte	0x84
+	.sleb128 0
+	.byte	0x6
+	.byte	0x23
+	.uleb128 0x8
+	.byte	0x6
+	.byte	0x9
+	.byte	0xf0
+	.byte	0x24
+	.byte	0x4c
+	.byte	0x24
+	.byte	0x74
+	.sleb128 0
+	.byte	0x21
+	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST20:
+	.uaword	.LVL39-.Ltext0
 	.uaword	.LVL40-.Ltext0
-	.uaword	.LVL41-.Ltext0
 	.uahalf	0x3
 	.byte	0x52
 	.byte	0x93
@@ -4334,8 +4352,8 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST21:
+	.uaword	.LVL39-.Ltext0
 	.uaword	.LVL40-.Ltext0
-	.uaword	.LVL41-.Ltext0
 	.uahalf	0x12
 	.byte	0x84
 	.sleb128 0
@@ -4358,8 +4376,8 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST22:
-	.uaword	.LVL41-.Ltext0
-	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL40-.Ltext0
+	.uaword	.LVL43-.Ltext0
 	.uahalf	0x3
 	.byte	0x5f
 	.byte	0x93
@@ -4367,7 +4385,7 @@ osEE_hal_terminate_ctx:
 	.uaword	0
 	.uaword	0
 .LLST23:
-	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL41-.Ltext0
 	.uaword	.LVL47-1-.Ltext0
 	.uahalf	0x3
 	.byte	0x53

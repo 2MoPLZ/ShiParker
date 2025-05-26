@@ -9,17 +9,15 @@ osEE_task_activated:
 	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_oo_kernel.c"
 	.loc 1 59 0
 .LVL0:
-	mov.aa	%a14, %SP
-.LCFI0:
 	.loc 1 61 0
 	ld.a	%a15, [%a4] 12
 .LVL1:
 	.loc 1 71 0
-	ld.bu	%d15, [%a15]0
 	ld.bu	%d3, [%a4] 30
 	.loc 1 75 0
 	mov	%d2, 4
 	.loc 1 71 0
+	ld.bu	%d15, [%a15]0
 	jge.u	%d15, %d3, .L2
 	.loc 1 72 0
 	add	%d15, 1
@@ -40,8 +38,6 @@ osEE_task_end:
 .LFB110:
 	.loc 1 94 0
 .LVL4:
-	mov.aa	%a14, %SP
-.LCFI1:
 	.loc 1 96 0
 	ld.a	%a15, [%a4] 12
 .LVL5:
@@ -54,13 +50,10 @@ osEE_task_end:
 	and	%d15, 255
 	st.b	[%a15]0, %d15
 	.loc 1 102 0
-	jnz	%d15, .L5
-	.loc 1 103 0
-	st.b	[%a15] 2, %d15
-	ret
-.L5:
+	jz	%d15, .L8
 	.loc 1 105 0
 	mov	%d15, 1
+.L8:
 	st.b	[%a15] 2, %d15
 	ret
 .LFE110:
@@ -72,37 +65,36 @@ osEE_task_event_set_mask:
 .LFB111:
 	.loc 1 117 0
 .LVL6:
-	mov.aa	%a14, %SP
-.LCFI2:
-.LVL7:
 	.loc 1 122 0
 	ld.a	%a15, [%a4] 12
-.LVL8:
+.LVL7:
 	.loc 1 143 0
 	mov	%d2, %d4
 	mov	%d3, %d4
-	ldmst	[%a15] 12, %e2
 	.loc 1 145 0
 	mov	%d15, 0
+	.loc 1 143 0
+	ldmst	[%a15] 12, %e2
+	.loc 1 145 0
 	st.b	[%a5]0, %d15
 	.loc 1 147 0
 	ld.w	%d15, [%a15] 8
-	and	%d4, %d15
-.LVL9:
 	.loc 1 120 0
 	mov.a	%a2, 0
 	.loc 1 147 0
-	jz	%d4, .L8
+	and	%d4, %d15
+.LVL8:
+	jz	%d4, .L10
 	.loc 1 148 0
 	ld.a	%a2, [%a15] 16
-.LVL10:
+.LVL9:
 	.loc 1 152 0
-	jz.a	%a2, .L8
+	jz.a	%a2, .L10
 	.loc 1 153 0
 	mov	%d15, 0
 	st.w	[%a15] 16, %d15
-.LVL11:
-.L8:
+.LVL10:
+.L10:
 	.loc 1 167 0
 	ret
 .LFE111:
@@ -113,27 +105,26 @@ osEE_task_event_set_mask:
 osEE_activate_isr2:
 .LFB112:
 	.loc 1 193 0
-.LVL12:
-	mov.aa	%a14, %SP
-.LCFI3:
+.LVL11:
 .LBB5:
 	.loc 1 200 0
 	movh.a	%a4, hi:osEE_kdb_var
 	lea	%a4, [%a4] lo:osEE_kdb_var
 	ld.a	%a15, [%a4] 4
+	.loc 1 207 0
+	mov.a	%a6, 0
+	.loc 1 200 0
 	addsc.a	%a15, %a15, %d4, 2
 	ld.a	%a5, [%a15]0
-.LVL13:
+.LVL12:
 	.loc 1 205 0
 	ld.a	%a15, [%a5] 12
 	ld.bu	%d15, [%a15]0
 	add	%d15, 1
 	st.b	[%a15]0, %d15
 	.loc 1 207 0
-	mov.a	%a6, 0
-	call	osEE_scheduler_task_set_running
-.LVL14:
-	ret
+	j	osEE_scheduler_task_set_running
+.LVL13:
 .LBE5:
 .LFE112:
 	.size	osEE_activate_isr2, .-osEE_activate_isr2
@@ -158,10 +149,6 @@ osEE_activate_isr2:
 	.uaword	.Lframe0
 	.uaword	.LFB109
 	.uaword	.LFE109-.LFB109
-	.byte	0x4
-	.uaword	.LCFI0-.LFB109
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE0:
 .LSFDE2:
@@ -170,10 +157,6 @@ osEE_activate_isr2:
 	.uaword	.Lframe0
 	.uaword	.LFB110
 	.uaword	.LFE110-.LFB110
-	.byte	0x4
-	.uaword	.LCFI1-.LFB110
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE2:
 .LSFDE4:
@@ -182,10 +165,6 @@ osEE_activate_isr2:
 	.uaword	.Lframe0
 	.uaword	.LFB111
 	.uaword	.LFE111-.LFB111
-	.byte	0x4
-	.uaword	.LCFI2-.LFB111
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE4:
 .LSFDE6:
@@ -194,10 +173,6 @@ osEE_activate_isr2:
 	.uaword	.Lframe0
 	.uaword	.LFB112
 	.uaword	.LFE112-.LFB112
-	.byte	0x4
-	.uaword	.LCFI3-.LFB112
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE6:
 .section .text,"ax",@progbits
@@ -213,13 +188,17 @@ osEE_activate_isr2:
 	.file 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_scheduler.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
+<<<<<<< Updated upstream
 	.uaword	0x1409
+=======
+	.uaword	0x13f7
+>>>>>>> Stashed changes
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_oo_kernel.c"
 	.uaword	.Ltext0
@@ -1596,7 +1575,11 @@ osEE_activate_isr2:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x13a5
+=======
+	.uaword	0x1393
+>>>>>>> Stashed changes
 	.uleb128 0x20
 	.string	"isr2_id"
 	.byte	0x1
@@ -1610,7 +1593,11 @@ osEE_activate_isr2:
 	.string	"p_kdb"
 	.byte	0x1
 	.byte	0xc6
+<<<<<<< Updated upstream
 	.uaword	0x13a5
+=======
+	.uaword	0x1393
+>>>>>>> Stashed changes
 	.uleb128 0x1d
 	.string	"p_act_tdb"
 	.byte	0x1
@@ -1618,8 +1605,14 @@ osEE_activate_isr2:
 	.uaword	0x1293
 	.uaword	.LLST4
 	.uleb128 0x24
+<<<<<<< Updated upstream
 	.uaword	.LVL14
 	.uaword	0x13d6
+=======
+	.uaword	.LVL13
+	.byte	0x1
+	.uaword	0x13c4
+>>>>>>> Stashed changes
 	.uleb128 0x25
 	.byte	0x1
 	.byte	0x66
@@ -2135,6 +2128,8 @@ osEE_activate_isr2:
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x2115
+	.uleb128 0xc
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
@@ -2206,33 +2201,33 @@ osEE_activate_isr2:
 	.uaword	0
 .LLST1:
 	.uaword	.LVL6-.Ltext0
-	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL8-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL8-.Ltext0
 	.uaword	.LFE111-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
 .LLST2:
-	.uaword	.LVL7-.Ltext0
-	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL6-.Ltext0
+	.uaword	.LVL9-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL9-.Ltext0
 	.uaword	.LFE111-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
 	.uaword	0
 	.uaword	0
 .LLST3:
-	.uaword	.LVL12-.Ltext0
-	.uaword	.LVL14-1-.Ltext0
+	.uaword	.LVL11-.Ltext0
+	.uaword	.LVL13-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL14-1-.Ltext0
+	.uaword	.LVL13-1-.Ltext0
 	.uaword	.LFE112-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2242,8 +2237,8 @@ osEE_activate_isr2:
 	.uaword	0
 	.uaword	0
 .LLST4:
-	.uaword	.LVL13-.Ltext0
-	.uaword	.LVL14-1-.Ltext0
+	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL13-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
 	.uaword	0

@@ -31705,6 +31705,7 @@ struct __attribute__((__packed__)) ParkingSystemPacket
 
 
 
+extern volatile boolean g_isRecieved;
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);
@@ -33380,6 +33381,7 @@ typedef OsEE_SN * OsEE_RQ;
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
+<<<<<<< Updated upstream
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
 # 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
@@ -33405,6 +33407,9 @@ uint8_t osEE_assert_range(OsEE_reg id,
 # 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_last(void);
 # 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+=======
+
+>>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
@@ -33442,6 +33447,7 @@ void initADC(void);
 uint16 readADCValue(uint8 channel);
 # 4 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.c" 2
 
+volatile boolean g_isRecieved = (0u);
 App_AsclinAsc g_AsclinStm;
 struct ParkingSystemPacket g_RecievedParkingSystemPacket = {.car_status = 0,
                                                             .car_command = 2};
@@ -33483,12 +33489,17 @@ void sendPacket(const struct ParkingSystemPacket *packet)
     EnableAllInterrupts();
     uint8 buf[36] = {};
     serializePacket(packet, buf);
+<<<<<<< Updated upstream
     g_AsclinStm.count = 36;
 # 65 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.c"
+=======
+    g_AsclinStm.count = 20;
+# 58 "C:\\SHIPAR~1\\TC275\\uart_Driver.c"
+>>>>>>> Stashed changes
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &buf,
                         &g_AsclinStm.count,
-                        ((Ifx_TickTime)0x7FFFFFFFFFFFFFFFLL));
+                        (Ifx_TickTime)1000000);
 }
 
 void readPacket(struct ParkingSystemPacket *packet)
@@ -33515,6 +33526,7 @@ void readPacket(struct ParkingSystemPacket *packet)
         {
             printfSerial("(valid recieve)");
             deserializePacket(buffer, packet);
+<<<<<<< Updated upstream
             printfSerial("\n[recieve| start:%02x status:%02x command:%d crc:%d",
                          packet->start_byte,
                          packet->car_status,
@@ -33525,6 +33537,20 @@ void readPacket(struct ParkingSystemPacket *packet)
             printDouble("t_X: ", packet->car_target_position.x);
             printDouble("t_Y: ", packet->car_target_position.y);
             printfSerial("]\n");
+=======
+
+            printfSerial("\n[read| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
+                 "tx:%d ty:%d]",
+                 packet->start_byte,
+                 packet->car_status,
+                 packet->car_command,
+                 packet->crc,
+                 packet->car_current_position.x,
+                 packet->car_current_position.y,
+                 packet->car_target_position.x,
+                 packet->car_target_position.y);
+                 g_isRecieved=(1u);
+>>>>>>> Stashed changes
         }
         else
         {
@@ -33553,7 +33579,7 @@ void myprintfSerial(const char *fmt, ...)
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &txData,
                         &g_AsclinStm.count,
-                        ((Ifx_TickTime)0x7FFFFFFFFFFFFFFFLL));
+                        (Ifx_TickTime)1000000);
 }
 
 void asclin0RxISR(void)

@@ -1733,6 +1733,7 @@ OsEE_bool
 );
 # 213 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 typedef OsEE_SN * OsEE_RQ;
+<<<<<<< Updated upstream
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
@@ -1762,6 +1763,11 @@ uint8_t osEE_assert_range(OsEE_reg id,
 uint8_t osEE_assert_last(void);
 # 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 # 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_conf.h" 2
+=======
+# 64 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 66 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
+# 56 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_conf.h" 2
+>>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_kernel_types.h" 1
@@ -3226,6 +3232,7 @@ __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "16"); __asm__ ("osEE_tc" "_" "
 
 
 __asm__ (".globl osEE_tc" "_" "isr2_entry_" "17"); __asm__ ("osEE_tc" "_" "isr2_entry_" "17" ":"); __asm__ ("svlcx"); __asm__ ("mov %d4, " "0"); __asm__ ("j osEE_tc_isr2_wrapper"); __asm__ (".align 5");
+<<<<<<< Updated upstream
 # 335 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "18"); __asm__ ("osEE_tc" "_" "isr_dummy_entry_" "18" ":"); __asm__ ("j ."); __asm__ (".align  5");
 # 346 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
@@ -3713,6 +3720,9 @@ __asm__ (".globl osEE_tc" "_" "isr_dummy_entry_" "255"); __asm__ ("osEE_tc" "_" 
 
 
 
+=======
+# 2946 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
+>>>>>>> Stashed changes
 __asm__ ("\t.size __INTTAB0, . - __INTTAB0\n\t.section .text,\"ax\",@progbits");
 # 17030 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_tc_intvec.c"
 #pragma section

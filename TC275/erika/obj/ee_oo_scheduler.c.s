@@ -9,70 +9,85 @@ osEE_scheduler_core_rq_preempt_stk:
 	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_oo_scheduler.c"
 	.loc 1 240 0
 .LVL0:
-	mov.aa	%a14, %SP
-.LCFI0:
 	.loc 1 241 0
 	ld.a	%a3, [%a4]0
 .LVL1:
+	.loc 1 243 0
+	ld.a	%a2, [%a3] 12
 	.loc 1 242 0
 	ld.a	%a15, [%a5]0
 .LVL2:
-	.loc 1 243 0
-	ld.a	%a2, [%a3] 12
-.LVL3:
 	.loc 1 248 0
 	jz.a	%a2, .L2
 	.loc 1 249 0
 	ld.a	%a2, [%a2] 4
-.LVL4:
+.LVL3:
 	.loc 1 250 0
-	jz.a	%a15, .L6
+	jz.a	%a15, .L7
 .LBB9:
-	.loc 1 252 0
-	ld.a	%a4, [%a2] 12
-.LVL5:
 	.loc 1 254 0
 	ld.a	%a6, [%a15] 4
+	.loc 1 252 0
+	ld.a	%a4, [%a2] 12
+.LVL4:
+	.loc 1 254 0
 	ld.a	%a6, [%a6] 12
 	.loc 1 253 0
 	ld.bu	%d2, [%a4] 1
 	ld.bu	%d15, [%a6] 1
 	jge.u	%d2, %d15, .L7
-.LVL6:
-	.loc 1 260 0
-	mov	%d15, 2
-	st.b	[%a4] 2, %d15
-.LVL7:
-	j	.L4
-.LVL8:
+	j	.L11
+.LVL5:
 .L2:
 .LBE9:
 	.loc 1 287 0
 	mov.a	%a2, 0
-.LVL9:
+.LVL6:
 	.loc 1 264 0
 	jz.a	%a15, .L9
 	.loc 1 269 0
 	ld.a	%a2, [%a4] 4
-.LVL10:
+.LVL7:
 	.loc 1 270 0
 	ld.a	%a4, [%a2] 12
-.LVL11:
+.LVL8:
+.L11:
 	mov	%d15, 2
 	st.b	[%a4] 2, %d15
-.LVL12:
-	j	.L4
-.LVL13:
-.L5:
+.LVL9:
+	.loc 1 279 0
+	ld.w	%d15, [%a15]0
+	st.w	[%a5]0, %d15
+.LVL10:
 .LBB10:
 .LBB11:
+	.loc 1 63 0
+	ld.a	%a4, [%a15] 4
+.LVL11:
+	.loc 1 72 0
+	ld.w	%d15, [%a3] 12
+	.loc 1 64 0
+	ld.a	%a5, [%a4] 12
+.LVL12:
+	.loc 1 72 0
+	st.w	[%a15]0, %d15
+	.loc 1 74 0
+	st.a	[%a3] 12, %a15
+	.loc 1 75 0
+	st.a	[%a3]0, %a4
 .LBB12:
+	.loc 1 80 0
+	ld.bu	%d15, [%a4] 29
+.LVL13:
+	.loc 1 81 0
+	ld.bu	%d2, [%a5] 1
+	jge.u	%d2, %d15, .L9
 	.loc 1 82 0
 	st.b	[%a5] 1, %d15
 .LVL14:
 	ret
 .LVL15:
-.L6:
+.L7:
 .LBE12:
 .LBE11:
 .LBE10:
@@ -81,43 +96,7 @@ osEE_scheduler_core_rq_preempt_stk:
 .LVL16:
 	ret
 .LVL17:
-.L7:
-	mov.a	%a2, 0
-.LVL18:
-	ret
-.LVL19:
-.L4:
-	.loc 1 279 0
-	ld.w	%d15, [%a15]0
-	st.w	[%a5]0, %d15
-.LVL20:
-.LBB15:
-.LBB14:
-	.loc 1 63 0
-	ld.a	%a4, [%a15] 4
-.LVL21:
-	.loc 1 64 0
-	ld.a	%a5, [%a4] 12
-.LVL22:
-	.loc 1 72 0
-	ld.w	%d15, [%a3] 12
-	st.w	[%a15]0, %d15
-	.loc 1 74 0
-	st.a	[%a3] 12, %a15
-	.loc 1 75 0
-	st.a	[%a3]0, %a4
-.LBB13:
-	.loc 1 80 0
-	ld.bu	%d15, [%a4] 29
-.LVL23:
-	.loc 1 81 0
-	ld.bu	%d2, [%a5] 1
-	jlt.u	%d2, %d15, .L5
-.LVL24:
 .L9:
-.LBE13:
-.LBE14:
-.LBE15:
 	.loc 1 295 0
 	ret
 .LFE111:
@@ -128,92 +107,77 @@ osEE_scheduler_core_rq_preempt_stk:
 osEE_sn_priority_insert:
 .LFB112:
 	.loc 1 306 0
-.LVL25:
-	mov.aa	%a14, %SP
-.LCFI1:
+.LVL18:
 	.loc 1 307 0
 	ld.a	%a15, [%a5] 4
-.LVL26:
+.LVL19:
 	.loc 1 308 0
 	ld.a	%a2, [%a15] 12
-.LVL27:
+.LVL20:
 	.loc 1 309 0
-	jz	%d4, .L11
+	jz	%d4, .L14
 	.loc 1 309 0 is_stmt 0 discriminator 1
-	ld.bu	%d2, [%a15] 28
-	j	.L12
-.L11:
+	ld.bu	%d15, [%a15] 28
+	j	.L15
+.L14:
 	.loc 1 309 0 discriminator 2
-	ld.bu	%d2, [%a2] 1
-.L12:
-.LVL28:
+	ld.bu	%d15, [%a2] 1
+.L15:
+.LVL21:
 	.loc 1 314 0 is_stmt 1 discriminator 4
 	ld.a	%a15, [%a4]0
-.LVL29:
-	.loc 1 318 0 discriminator 4
-	mov.a	%a6, 0
-	jnz.a	%a15, .L17
-	j	.L13
-.LVL30:
-.L19:
-.LBB16:
-	.loc 1 332 0
-	mov.a	%a15, %d15
-.LVL31:
-.L17:
-	.loc 1 320 0
-	ld.a	%a2, [%a15] 4
-.LVL32:
-	.loc 1 321 0
-	ld.a	%a3, [%a2] 12
-.LVL33:
-	.loc 1 323 0
-	jz	%d4, .L14
-	.loc 1 324 0
-	ld.bu	%d15, [%a2] 28
-.LVL34:
-	j	.L15
-.LVL35:
-.L14:
-	.loc 1 326 0
-	ld.bu	%d15, [%a3] 1
-.LVL36:
-.L15:
-	.loc 1 329 0
-	jlt.u	%d15, %d2, .L16
-.LVL37:
-	.loc 1 332 0
-	ld.w	%d15, [%a15]0
-.LVL38:
-	mov.aa	%a6, %a15
-.LBE16:
-	.loc 1 318 0
-	jnz	%d15, .L19
-.LVL39:
-.LBB17:
-	.loc 1 332 0
-	mov.a	%a15, %d15
-.LVL40:
+.LVL22:
+	.loc 1 313 0 discriminator 4
+	mov.a	%a2, 0
+.LVL23:
 .L16:
-.LBE17:
+	.loc 1 318 0
+	jz.a	%a15, .L19
+.LBB13:
+	.loc 1 320 0
+	ld.a	%a3, [%a15] 4
+.LVL24:
+	.loc 1 321 0
+	ld.a	%a6, [%a3] 12
+.LVL25:
+	.loc 1 323 0
+	jz	%d4, .L17
+	.loc 1 324 0
+	ld.bu	%d2, [%a3] 28
+.LVL26:
+	j	.L18
+.LVL27:
+.L17:
+	.loc 1 326 0
+	ld.bu	%d2, [%a6] 1
+.LVL28:
+.L18:
+	.loc 1 329 0
+	jlt.u	%d2, %d15, .L19
+.LVL29:
+	.loc 1 332 0
+	mov.aa	%a2, %a15
+	ld.a	%a15, [%a15]0
+.LVL30:
+	j	.L16
+.LVL31:
+.L19:
+.LBE13:
 	.loc 1 338 0
-	jz.a	%a6, .L13
+	jz.a	%a2, .L21
 	.loc 1 339 0
-	st.a	[%a6]0, %a5
-.LVL41:
+	st.a	[%a2]0, %a5
 	.loc 1 315 0
 	mov	%d2, 0
-.LVL42:
-	j	.L18
-.LVL43:
-.L13:
+	j	.L22
+.L21:
 	.loc 1 341 0
 	st.a	[%a4]0, %a5
-.LVL44:
+.LVL32:
 	.loc 1 342 0
 	mov	%d2, 1
-.LVL45:
-.L18:
+.LVL33:
+.L22:
 	.loc 1 345 0
 	st.a	[%a5]0, %a15
 	.loc 1 348 0
@@ -226,17 +190,13 @@ osEE_sn_priority_insert:
 osEE_scheduler_rq_insert:
 .LFB110:
 	.loc 1 224 0
-.LVL46:
-	mov.aa	%a14, %SP
-.LCFI2:
+.LVL34:
 	.loc 1 225 0
 	st.a	[%a5] 4, %a6
 	.loc 1 228 0
 	mov	%d4, 1
-	call	osEE_sn_priority_insert
-.LVL47:
-	.loc 1 232 0
-	ret
+	j	osEE_sn_priority_insert
+.LVL35:
 .LFE110:
 	.size	osEE_scheduler_rq_insert, .-osEE_scheduler_rq_insert
 	.align 1
@@ -245,47 +205,50 @@ osEE_scheduler_rq_insert:
 osEE_scheduler_core_pop_running:
 .LFB113:
 	.loc 1 356 0
-.LVL48:
-	mov.aa	%a14, %SP
-.LCFI3:
-	mov.aa	%a13, %a4
+.LVL36:
 	.loc 1 357 0
 	ld.a	%a15, [%a4]0
-.LVL49:
+.LVL37:
 	.loc 1 358 0
 	ld.a	%a12, [%a15] 12
-.LVL50:
+.LVL38:
+	.loc 1 356 0
+	mov.aa	%a13, %a4
 	.loc 1 364 0
 	ld.w	%d15, [%a12]0
 	st.w	[%a15] 12, %d15
-.LVL51:
-.LBB18:
+.LVL39:
+.LBB14:
 	.loc 1 387 0
 	call	osEE_scheduler_core_rq_preempt_stk
-.LVL52:
+.LVL40:
 	.loc 1 389 0
-	ld.w	%d15, [%a15] 12
-.LVL53:
+	ld.a	%a3, [%a15] 12
+.LVL41:
 	.loc 1 392 0
-	jnz.a	%a2, .L22
-.LBB19:
+	jnz.a	%a2, .L25
+.LBB15:
+	.loc 1 403 0
+	jz.a	%a3, .L26
 	.loc 1 405 0
-	mov.d	%d3, %a13
-	add	%d3, 4
-	add	%d2, %d15, 4
-	cmovn	%d2, %d15, %d3
-	mov.a	%a13, %d2
-.LVL54:
-	ld.w	%d15, [%a13]0
-.LVL55:
+	ld.w	%d15, [%a3] 4
+.LVL42:
+	j	.L27
+.LVL43:
+.L26:
+	.loc 1 408 0
+	ld.w	%d15, [%a13] 4
+.LVL44:
+.L27:
+	.loc 1 411 0
 	st.w	[%a15]0, %d15
-.LVL56:
-.L22:
-.LBE19:
-.LBE18:
+.LVL45:
+.L25:
+.LBE15:
+.LBE14:
 	.loc 1 423 0
 	mov.aa	%a2, %a12
-.LVL57:
+.LVL46:
 	ret
 .LFE113:
 	.size	osEE_scheduler_core_pop_running, .-osEE_scheduler_core_pop_running
@@ -310,10 +273,6 @@ osEE_scheduler_core_pop_running:
 	.uaword	.Lframe0
 	.uaword	.LFB111
 	.uaword	.LFE111-.LFB111
-	.byte	0x4
-	.uaword	.LCFI0-.LFB111
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE0:
 .LSFDE2:
@@ -322,10 +281,6 @@ osEE_scheduler_core_pop_running:
 	.uaword	.Lframe0
 	.uaword	.LFB112
 	.uaword	.LFE112-.LFB112
-	.byte	0x4
-	.uaword	.LCFI1-.LFB112
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE2:
 .LSFDE4:
@@ -334,10 +289,6 @@ osEE_scheduler_core_pop_running:
 	.uaword	.Lframe0
 	.uaword	.LFB110
 	.uaword	.LFE110-.LFB110
-	.byte	0x4
-	.uaword	.LCFI2-.LFB110
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE4:
 .LSFDE6:
@@ -346,10 +297,6 @@ osEE_scheduler_core_pop_running:
 	.uaword	.Lframe0
 	.uaword	.LFB113
 	.uaword	.LFE113-.LFB113
-	.byte	0x4
-	.uaword	.LCFI3-.LFB113
-	.byte	0xd
-	.uleb128 0x1e
 	.align 2
 .LEFDE6:
 .section .text,"ax",@progbits
@@ -366,13 +313,17 @@ osEE_scheduler_core_pop_running:
 	.file 11 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_get_kernel_and_core.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
+<<<<<<< Updated upstream
 	.uaword	0x171b
+=======
+	.uaword	0x1715
+>>>>>>> Stashed changes
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_oo_scheduler.c"
 	.uaword	.Ltext0
@@ -1700,44 +1651,72 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0xeb
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x13ea
+=======
+	.uaword	0x13df
+>>>>>>> Stashed changes
 	.uaword	.LFB111
 	.uaword	.LFE111
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x13ea
+=======
+	.uaword	0x13df
+>>>>>>> Stashed changes
 	.uleb128 0x23
 	.string	"p_cdb"
 	.byte	0x1
 	.byte	0xed
+<<<<<<< Updated upstream
 	.uaword	0x13f0
+=======
+	.uaword	0x13e5
+>>>>>>> Stashed changes
 	.uaword	.LLST0
 	.uleb128 0x23
 	.string	"p_rq"
 	.byte	0x1
 	.byte	0xee
+<<<<<<< Updated upstream
 	.uaword	0x13f6
+=======
+	.uaword	0x13eb
+>>>>>>> Stashed changes
 	.uaword	.LLST1
 	.uleb128 0x24
 	.uaword	.LASF3
 	.byte	0x1
 	.byte	0xf1
+<<<<<<< Updated upstream
 	.uaword	0x13fc
+=======
+	.uaword	0x13f1
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x63
 	.uleb128 0x25
 	.string	"p_rq_sn"
 	.byte	0x1
 	.byte	0xf2
+<<<<<<< Updated upstream
 	.uaword	0x1401
+=======
+	.uaword	0x13f6
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6f
 	.uleb128 0x26
 	.string	"p_ret_sn"
 	.byte	0x1
 	.byte	0xf3
+<<<<<<< Updated upstream
 	.uaword	0x1406
+=======
+	.uaword	0x13fb
+>>>>>>> Stashed changes
 	.uaword	.LLST2
 	.uleb128 0x26
 	.string	"is_rq_preemption"
@@ -1765,7 +1744,7 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x28
 	.uaword	0x124b
 	.uaword	.LBB10
-	.uaword	.Ldebug_ranges0+0
+	.uaword	.LBE10
 	.byte	0x1
 	.uahalf	0x11a
 	.uleb128 0x29
@@ -1775,7 +1754,8 @@ osEE_scheduler_core_pop_running:
 	.uaword	0x126c
 	.uaword	.LLST7
 	.uleb128 0x2a
-	.uaword	.Ldebug_ranges0+0
+	.uaword	.LBB11
+	.uaword	.LBE11
 	.uleb128 0x2b
 	.uaword	0x1286
 	.uaword	.LLST8
@@ -1783,7 +1763,8 @@ osEE_scheduler_core_pop_running:
 	.uaword	0x1293
 	.uaword	.LLST9
 	.uleb128 0x2a
-	.uaword	.Ldebug_ranges0+0x18
+	.uaword	.LBB12
+	.uaword	.LBE12
 	.uleb128 0x2b
 	.uaword	0x12a1
 	.uaword	.LLST10
@@ -1806,7 +1787,11 @@ osEE_scheduler_core_pop_running:
 	.uaword	0x9fc
 	.uleb128 0xd
 	.byte	0x4
+<<<<<<< Updated upstream
 	.uaword	0x140c
+=======
+	.uaword	0x1401
+>>>>>>> Stashed changes
 	.uleb128 0x11
 	.uaword	0x9de
 	.uleb128 0x2c
@@ -1821,12 +1806,20 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x1542
+=======
+	.uaword	0x1539
+>>>>>>> Stashed changes
 	.uleb128 0x2d
 	.string	"pp_first"
 	.byte	0x1
 	.uahalf	0x12e
+<<<<<<< Updated upstream
 	.uaword	0x1542
+=======
+	.uaword	0x1539
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x64
 	.uleb128 0x2e
@@ -1840,7 +1833,11 @@ osEE_scheduler_core_pop_running:
 	.string	"as_ready"
 	.byte	0x1
 	.uahalf	0x130
+<<<<<<< Updated upstream
 	.uaword	0x1548
+=======
+	.uaword	0x153f
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x54
 	.uleb128 0x2f
@@ -1853,52 +1850,93 @@ osEE_scheduler_core_pop_running:
 	.string	"p_tcb_new"
 	.byte	0x1
 	.uahalf	0x134
+<<<<<<< Updated upstream
 	.uaword	0x154d
+=======
+	.uaword	0x1544
+>>>>>>> Stashed changes
 	.uaword	.LLST12
-	.uleb128 0x30
+	.uleb128 0x31
 	.string	"new_task_prio"
 	.byte	0x1
 	.uahalf	0x135
+<<<<<<< Updated upstream
 	.uaword	0x12b8
 	.uaword	.LLST13
+=======
+	.uaword	0x12a5
+	.byte	0x1
+	.byte	0x5f
+>>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_prev"
 	.byte	0x1
 	.uahalf	0x139
+<<<<<<< Updated upstream
 	.uaword	0x9fc
 	.uaword	.LLST14
+=======
+	.uaword	0x9e9
+	.uaword	.LLST13
+>>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_curr"
 	.byte	0x1
 	.uahalf	0x13a
+<<<<<<< Updated upstream
 	.uaword	0x9fc
 	.uaword	.LLST15
+=======
+	.uaword	0x9e9
+	.uaword	.LLST14
+>>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"head_changed"
 	.byte	0x1
 	.uahalf	0x13b
+<<<<<<< Updated upstream
 	.uaword	0x26a
 	.uaword	.LLST16
+=======
+	.uaword	0x257
+	.uaword	.LLST15
+>>>>>>> Stashed changes
 	.uleb128 0x2a
-	.uaword	.Ldebug_ranges0+0x30
+	.uaword	.LBB13
+	.uaword	.LBE13
 	.uleb128 0x30
 	.string	"prio_to_check"
 	.byte	0x1
 	.uahalf	0x13f
+<<<<<<< Updated upstream
 	.uaword	0x49c
 	.uaword	.LLST17
+=======
+	.uaword	0x489
+	.uaword	.LLST16
+>>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_cur_tdb"
 	.byte	0x1
 	.uahalf	0x140
+<<<<<<< Updated upstream
 	.uaword	0x12ae
 	.uaword	.LLST18
+=======
+	.uaword	0x129b
+	.uaword	.LLST17
+>>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_cur_tcb"
 	.byte	0x1
 	.uahalf	0x141
+<<<<<<< Updated upstream
 	.uaword	0x154d
 	.uaword	.LLST19
+=======
+	.uaword	0x1544
+	.uaword	.LLST18
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.uleb128 0xd
@@ -1907,10 +1945,17 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x11
 	.uaword	0x26a
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x1552
 	.uleb128 0xd
 	.byte	0x4
 	.uaword	0x1558
+=======
+	.uaword	0x1549
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x154f
+>>>>>>> Stashed changes
 	.uleb128 0x11
 	.uaword	0xbd7
 	.uleb128 0x22
@@ -1925,11 +1970,16 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x15da
+=======
+	.uaword	0x15d2
+>>>>>>> Stashed changes
 	.uleb128 0x23
 	.string	"p_rq"
 	.byte	0x1
 	.byte	0xdc
+<<<<<<< Updated upstream
 	.uaword	0x13f6
 	.uaword	.LLST20
 	.uleb128 0x31
@@ -1947,19 +1997,39 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x32
 	.uaword	.LVL47
 	.uaword	0x1411
+=======
+	.uaword	0x13eb
+	.uaword	.LLST19
+	.uleb128 0x32
+	.uaword	.LASF4
+	.byte	0x1
+	.byte	0xdd
+	.uaword	0x9e9
+	.uaword	.LLST20
+	.uleb128 0x32
+	.uaword	.LASF5
+	.byte	0x1
+	.byte	0xde
+	.uaword	0x129b
+	.uaword	.LLST21
+>>>>>>> Stashed changes
 	.uleb128 0x33
+	.uaword	.LVL35
+	.byte	0x1
+	.uaword	0x1406
+	.uleb128 0x34
 	.byte	0x1
 	.byte	0x54
 	.byte	0x1
 	.byte	0x31
-	.uleb128 0x33
+	.uleb128 0x34
 	.byte	0x1
 	.byte	0x65
 	.byte	0x3
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x65
-	.uleb128 0x33
+	.uleb128 0x34
 	.byte	0x1
 	.byte	0x64
 	.byte	0x3
@@ -1980,6 +2050,7 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x16e8
 	.uleb128 0x34
 	.string	"p_cdb"
@@ -1998,28 +2069,61 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.uahalf	0x165
 	.uaword	0x13fc
+=======
+	.uaword	0x16e2
+	.uleb128 0x35
+	.string	"p_cdb"
+	.byte	0x1
+	.uahalf	0x161
+	.uaword	0x13e5
+	.uaword	.LLST22
+	.uleb128 0x35
+	.string	"p_rq"
+	.byte	0x1
+	.uahalf	0x162
+	.uaword	0x13eb
+	.uaword	.LLST23
+	.uleb128 0x36
+	.uaword	.LASF3
+	.byte	0x1
+	.uahalf	0x165
+	.uaword	0x13f1
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6f
-	.uleb128 0x36
+	.uleb128 0x31
 	.string	"p_prev_stk_sn"
 	.byte	0x1
 	.uahalf	0x166
+<<<<<<< Updated upstream
 	.uaword	0x1401
+=======
+	.uaword	0x13f6
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6c
 	.uleb128 0x30
 	.string	"p_next_stk_sn"
 	.byte	0x1
 	.uahalf	0x168
+<<<<<<< Updated upstream
 	.uaword	0x1401
 	.uaword	.LLST25
 	.uleb128 0x37
 	.uaword	.LBB18
 	.uaword	.LBE18
+=======
+	.uaword	0x13f6
+	.uaword	.LLST24
+	.uleb128 0x2a
+	.uaword	.LBB14
+	.uaword	.LBE14
+>>>>>>> Stashed changes
 	.uleb128 0x30
 	.string	"p_preempt"
 	.byte	0x1
 	.uahalf	0x183
+<<<<<<< Updated upstream
 	.uaword	0x16e8
 	.uaword	.LLST26
 	.uleb128 0x30
@@ -2042,13 +2146,39 @@ osEE_scheduler_core_pop_running:
 	.uaword	.LVL52
 	.uaword	0x12bd
 	.uleb128 0x33
+=======
+	.uaword	0x16e2
+	.uaword	.LLST25
+	.uleb128 0x31
+	.string	"p_curr_stk_sn"
+	.byte	0x1
+	.uahalf	0x185
+	.uaword	0x16e7
+	.byte	0x1
+	.byte	0x63
+	.uleb128 0x27
+	.uaword	.LBB15
+	.uaword	.LBE15
+	.uaword	0x16c9
+	.uleb128 0x30
+	.string	"p_tdb_stk"
+	.byte	0x1
+	.uahalf	0x189
+	.uaword	0xbec
+	.uaword	.LLST26
+	.byte	0
+	.uleb128 0x37
+	.uaword	.LVL40
+	.uaword	0x12aa
+	.uleb128 0x34
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x3
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x65
-	.uleb128 0x33
+	.uleb128 0x34
 	.byte	0x1
 	.byte	0x64
 	.byte	0x2
@@ -2058,17 +2188,24 @@ osEE_scheduler_core_pop_running:
 	.byte	0
 	.byte	0
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x13ea
 	.uleb128 0x11
 	.uaword	0x1406
 	.uleb128 0x39
+=======
+	.uaword	0x13df
+	.uleb128 0x11
+	.uaword	0x13fb
+	.uleb128 0x38
+>>>>>>> Stashed changes
 	.string	"osEE_kdb_var"
 	.byte	0xb
 	.byte	0x42
 	.uaword	0x11e6
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x39
+	.uleb128 0x38
 	.string	"osEE_cdb_var"
 	.byte	0xb
 	.byte	0x5b
@@ -2588,10 +2725,10 @@ osEE_scheduler_core_pop_running:
 	.byte	0x1
 	.uleb128 0x31
 	.uleb128 0x13
-	.uleb128 0x52
+	.uleb128 0x11
 	.uleb128 0x1
-	.uleb128 0x55
-	.uleb128 0x6
+	.uleb128 0x12
+	.uleb128 0x1
 	.uleb128 0x58
 	.uleb128 0xb
 	.uleb128 0x59
@@ -2610,8 +2747,10 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x2a
 	.uleb128 0xb
 	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x6
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
 	.byte	0
 	.byte	0
 	.uleb128 0x2b
@@ -2711,6 +2850,21 @@ osEE_scheduler_core_pop_running:
 	.byte	0
 	.byte	0
 	.uleb128 0x31
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x32
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -2725,16 +2879,18 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x32
+	.uleb128 0x33
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x2115
+	.uleb128 0xc
 	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -2743,7 +2899,7 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -2758,26 +2914,11 @@ osEE_scheduler_core_pop_running:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x35
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0xa
-	.byte	0
-	.byte	0
 	.uleb128 0x36
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -2789,28 +2930,15 @@ osEE_scheduler_core_pop_running:
 	.byte	0
 	.byte	0
 	.uleb128 0x37
-	.uleb128 0xb
+	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
 	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.byte	0
-	.byte	0
-	.uleb128 0x38
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
+	.uleb128 0x31
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x39
+	.uleb128 0x38
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -2832,32 +2960,21 @@ osEE_scheduler_core_pop_running:
 .Ldebug_loc0:
 .LLST0:
 	.uaword	.LVL0-.Ltext0
-	.uaword	.LVL5-.Ltext0
+	.uaword	.LVL4-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
+	.uaword	.LVL4-.Ltext0
 	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL8-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x64
 	.byte	0x9f
+	.uaword	.LVL5-.Ltext0
 	.uaword	.LVL8-.Ltext0
-	.uaword	.LVL11-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL11-.Ltext0
-	.uaword	.LVL15-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x64
-	.byte	0x9f
-	.uaword	.LVL15-.Ltext0
-	.uaword	.LVL17-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL17-.Ltext0
+	.uaword	.LVL8-.Ltext0
 	.uaword	.LFE111-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2868,10 +2985,10 @@ osEE_scheduler_core_pop_running:
 	.uaword	0
 .LLST1:
 	.uaword	.LVL0-.Ltext0
-	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL12-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
-	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL12-.Ltext0
 	.uaword	.LVL15-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2879,10 +2996,10 @@ osEE_scheduler_core_pop_running:
 	.byte	0x65
 	.byte	0x9f
 	.uaword	.LVL15-.Ltext0
-	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL17-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
-	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL17-.Ltext0
 	.uaword	.LFE111-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -2892,70 +3009,55 @@ osEE_scheduler_core_pop_running:
 	.uaword	0
 	.uaword	0
 .LLST2:
+	.uaword	.LVL2-.Ltext0
 	.uaword	.LVL3-.Ltext0
-	.uaword	.LVL4-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
-	.uaword	.LVL4-.Ltext0
-	.uaword	.LVL7-.Ltext0
+	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL5-.Ltext0
 	.uahalf	0x2
 	.byte	0x83
 	.sleb128 12
-	.uaword	.LVL8-.Ltext0
-	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL5-.Ltext0
+	.uaword	.LVL6-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
-	.uaword	.LVL9-.Ltext0
-	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL6-.Ltext0
+	.uaword	.LVL10-.Ltext0
 	.uahalf	0x2
 	.byte	0x83
 	.sleb128 12
 	.uaword	.LVL15-.Ltext0
-	.uaword	.LVL19-.Ltext0
+	.uaword	.LVL17-.Ltext0
 	.uahalf	0x2
 	.byte	0x83
 	.sleb128 12
 	.uaword	0
 	.uaword	0
 .LLST3:
-	.uaword	.LVL3-.Ltext0
-	.uaword	.LVL7-.Ltext0
+	.uaword	.LVL2-.Ltext0
+	.uaword	.LVL9-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL7-.Ltext0
-	.uaword	.LVL8-.Ltext0
-	.uahalf	0x2
-	.byte	0x31
-	.byte	0x9f
-	.uaword	.LVL8-.Ltext0
-	.uaword	.LVL12-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL9-.Ltext0
 	.uaword	.LVL15-.Ltext0
 	.uahalf	0x2
 	.byte	0x31
 	.byte	0x9f
 	.uaword	.LVL15-.Ltext0
-	.uaword	.LVL19-.Ltext0
+	.uaword	.LVL17-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL19-.Ltext0
-	.uaword	.LVL24-.Ltext0
-	.uahalf	0x2
-	.byte	0x31
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST4:
-	.uaword	.LVL4-.Ltext0
-	.uaword	.LVL8-.Ltext0
+	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL5-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
-	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL7-.Ltext0
 	.uaword	.LVL16-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
@@ -2967,75 +3069,39 @@ osEE_scheduler_core_pop_running:
 	.byte	0x6
 	.byte	0x23
 	.uleb128 0x4
-	.uaword	.LVL17-.Ltext0
-	.uaword	.LVL18-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	.LVL18-.Ltext0
-	.uaword	.LVL19-.Ltext0
-	.uahalf	0x5
-	.byte	0x83
-	.sleb128 12
-	.byte	0x6
-	.byte	0x23
-	.uleb128 0x4
-	.uaword	.LVL19-.Ltext0
-	.uaword	.LVL24-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
 	.uaword	0
 	.uaword	0
 .LLST5:
+	.uaword	.LVL4-.Ltext0
 	.uaword	.LVL5-.Ltext0
-	.uaword	.LVL8-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL17-.Ltext0
-	.uaword	.LVL19-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
 	.uaword	0
 	.uaword	0
 .LLST6:
-	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL10-.Ltext0
 	.uaword	.LVL15-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL20-.Ltext0
-	.uaword	.LVL24-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST7:
-	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL10-.Ltext0
 	.uaword	.LVL15-.Ltext0
-	.uahalf	0x1
-	.byte	0x63
-	.uaword	.LVL20-.Ltext0
-	.uaword	.LVL24-.Ltext0
 	.uahalf	0x1
 	.byte	0x63
 	.uaword	0
 	.uaword	0
 .LLST8:
-	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL11-.Ltext0
 	.uaword	.LVL15-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL21-.Ltext0
-	.uaword	.LVL24-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
 	.uaword	0
 	.uaword	0
 .LLST9:
-	.uaword	.LVL13-.Ltext0
+	.uaword	.LVL12-.Ltext0
 	.uaword	.LVL15-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	.LVL22-.Ltext0
-	.uaword	.LVL24-.Ltext0
 	.uahalf	0x1
 	.byte	0x65
 	.uaword	0
@@ -3050,45 +3116,27 @@ osEE_scheduler_core_pop_running:
 	.uaword	.LVL15-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
-	.uaword	.LVL23-.Ltext0
-	.uaword	.LVL24-.Ltext0
-	.uahalf	0x2
-	.byte	0x84
-	.sleb128 29
 	.uaword	0
 	.uaword	0
 .LLST11:
-	.uaword	.LVL26-.Ltext0
-	.uaword	.LVL29-.Ltext0
+	.uaword	.LVL19-.Ltext0
+	.uaword	.LVL22-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
-	.uaword	.LVL29-.Ltext0
-	.uaword	.LVL41-.Ltext0
-	.uahalf	0x2
-	.byte	0x85
-	.sleb128 4
-	.uaword	.LVL43-.Ltext0
-	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL32-.Ltext0
 	.uahalf	0x2
 	.byte	0x85
 	.sleb128 4
 	.uaword	0
 	.uaword	0
 .LLST12:
-	.uaword	.LVL27-.Ltext0
-	.uaword	.LVL30-.Ltext0
+	.uaword	.LVL20-.Ltext0
+	.uaword	.LVL23-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
-	.uaword	.LVL30-.Ltext0
-	.uaword	.LVL41-.Ltext0
-	.uahalf	0x5
-	.byte	0x85
-	.sleb128 4
-	.byte	0x6
-	.byte	0x23
-	.uleb128 0xc
-	.uaword	.LVL43-.Ltext0
-	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL23-.Ltext0
+	.uaword	.LVL32-.Ltext0
 	.uahalf	0x5
 	.byte	0x85
 	.sleb128 4
@@ -3098,219 +3146,179 @@ osEE_scheduler_core_pop_running:
 	.uaword	0
 	.uaword	0
 .LLST13:
-	.uaword	.LVL28-.Ltext0
-	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL21-.Ltext0
+	.uaword	.LVL23-.Ltext0
+	.uahalf	0x2
+	.byte	0x30
+	.byte	0x9f
+	.uaword	.LVL29-.Ltext0
+	.uaword	.LVL30-.Ltext0
 	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL43-.Ltext0
-	.uaword	.LVL45-.Ltext0
+	.byte	0x6f
+	.uaword	.LVL30-.Ltext0
+	.uaword	.LVL31-.Ltext0
 	.uahalf	0x1
-	.byte	0x52
+	.byte	0x62
 	.uaword	0
 	.uaword	0
 .LLST14:
-	.uaword	.LVL28-.Ltext0
-	.uaword	.LVL30-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL30-.Ltext0
-	.uaword	.LVL31-.Ltext0
-	.uahalf	0x1
-	.byte	0x66
-	.uaword	.LVL37-.Ltext0
-	.uaword	.LVL39-.Ltext0
+	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL29-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
-	.uaword	.LVL39-.Ltext0
-	.uaword	.LVL40-.Ltext0
+	.uaword	.LVL29-.Ltext0
+	.uaword	.LVL30-.Ltext0
+	.uahalf	0x2
+	.byte	0x8f
+	.sleb128 0
+	.uaword	.LVL30-.Ltext0
+	.uaword	.LFE112-.Ltext0
 	.uahalf	0x1
-	.byte	0x66
+	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST15:
-	.uaword	.LVL29-.Ltext0
-	.uaword	.LVL30-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL30-.Ltext0
-	.uaword	.LVL31-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL31-.Ltext0
-	.uaword	.LVL38-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL40-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL40-.Ltext0
-	.uaword	.LFE112-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	0
-	.uaword	0
-.LLST16:
-	.uaword	.LVL29-.Ltext0
-	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL32-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL44-.Ltext0
-	.uaword	.LVL45-.Ltext0
+	.uaword	.LVL32-.Ltext0
+	.uaword	.LVL33-.Ltext0
 	.uahalf	0x2
 	.byte	0x31
 	.byte	0x9f
-	.uaword	.LVL45-.Ltext0
+	.uaword	.LVL33-.Ltext0
 	.uaword	.LFE112-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST16:
+	.uaword	.LVL26-.Ltext0
+	.uaword	.LVL27-.Ltext0
+	.uahalf	0x2
+	.byte	0x83
+	.sleb128 28
+	.uaword	.LVL28-.Ltext0
+	.uaword	.LVL31-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
 .LLST17:
-	.uaword	.LVL34-.Ltext0
-	.uaword	.LVL35-.Ltext0
-	.uahalf	0x2
-	.byte	0x82
-	.sleb128 28
-	.uaword	.LVL36-.Ltext0
-	.uaword	.LVL38-.Ltext0
+	.uaword	.LVL24-.Ltext0
+	.uaword	.LVL31-.Ltext0
 	.uahalf	0x1
-	.byte	0x5f
+	.byte	0x63
 	.uaword	0
 	.uaword	0
 .LLST18:
-	.uaword	.LVL30-.Ltext0
+	.uaword	.LVL25-.Ltext0
 	.uaword	.LVL31-.Ltext0
 	.uahalf	0x1
-	.byte	0x62
-	.uaword	.LVL32-.Ltext0
-	.uaword	.LVL43-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
+	.byte	0x66
 	.uaword	0
 	.uaword	0
 .LLST19:
-	.uaword	.LVL30-.Ltext0
-	.uaword	.LVL31-.Ltext0
-	.uahalf	0x1
-	.byte	0x63
-	.uaword	.LVL33-.Ltext0
-	.uaword	.LVL43-.Ltext0
-	.uahalf	0x1
-	.byte	0x63
-	.uaword	0
-	.uaword	0
-.LLST20:
-	.uaword	.LVL46-.Ltext0
-	.uaword	.LVL47-1-.Ltext0
+	.uaword	.LVL34-.Ltext0
+	.uaword	.LVL35-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x64
-	.uaword	.LVL47-1-.Ltext0
+	.uaword	.LVL35-1-.Ltext0
 	.uaword	.LFE110-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x64
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST20:
+	.uaword	.LVL34-.Ltext0
+	.uaword	.LVL35-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x65
+	.uaword	.LVL35-1-.Ltext0
+	.uaword	.LFE110-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x65
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST21:
-	.uaword	.LVL46-.Ltext0
-	.uaword	.LVL47-1-.Ltext0
+	.uaword	.LVL34-.Ltext0
+	.uaword	.LVL35-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x65
-	.uaword	.LVL47-1-.Ltext0
+	.byte	0x66
+	.uaword	.LVL35-1-.Ltext0
 	.uaword	.LFE110-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
-	.byte	0x65
+	.byte	0x66
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST22:
-	.uaword	.LVL46-.Ltext0
-	.uaword	.LVL47-1-.Ltext0
+	.uaword	.LVL36-.Ltext0
+	.uaword	.LVL40-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x66
-	.uaword	.LVL47-1-.Ltext0
-	.uaword	.LFE110-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x66
-	.byte	0x9f
+	.byte	0x64
+	.uaword	.LVL40-1-.Ltext0
+	.uaword	.LFE113-.Ltext0
+	.uahalf	0x1
+	.byte	0x6d
 	.uaword	0
 	.uaword	0
 .LLST23:
-	.uaword	.LVL48-.Ltext0
-	.uaword	.LVL52-1-.Ltext0
+	.uaword	.LVL36-.Ltext0
+	.uaword	.LVL40-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL52-1-.Ltext0
-	.uaword	.LVL54-.Ltext0
-	.uahalf	0x1
-	.byte	0x6d
-	.uaword	.LVL54-.Ltext0
-	.uaword	.LVL56-.Ltext0
-	.uahalf	0x3
-	.byte	0x73
-	.sleb128 -4
-	.byte	0x9f
-	.uaword	.LVL56-.Ltext0
+	.byte	0x65
+	.uaword	.LVL40-1-.Ltext0
 	.uaword	.LFE113-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
-	.byte	0x64
+	.byte	0x65
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST24:
-	.uaword	.LVL48-.Ltext0
-	.uaword	.LVL52-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	.LVL52-1-.Ltext0
-	.uaword	.LFE113-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x65
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST25:
-	.uaword	.LVL50-.Ltext0
-	.uaword	.LVL51-.Ltext0
+	.uaword	.LVL38-.Ltext0
+	.uaword	.LVL39-.Ltext0
 	.uahalf	0x2
 	.byte	0x8c
 	.sleb128 0
-	.uaword	.LVL51-.Ltext0
-	.uaword	.LVL53-.Ltext0
+	.uaword	.LVL39-.Ltext0
+	.uaword	.LVL42-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL43-.Ltext0
+	.uaword	.LVL44-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
-.LLST26:
-	.uaword	.LVL52-.Ltext0
-	.uaword	.LVL57-.Ltext0
+.LLST25:
+	.uaword	.LVL40-.Ltext0
+	.uaword	.LVL46-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
 	.uaword	0
 	.uaword	0
-.LLST27:
-	.uaword	.LVL53-.Ltext0
-	.uaword	.LVL55-.Ltext0
+.LLST26:
+	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL43-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
-	.uaword	.LVL55-.Ltext0
-	.uaword	.LFE113-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 12
+	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL45-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .section .debug_aranges,"",@progbits
@@ -3323,26 +3331,6 @@ osEE_scheduler_core_pop_running:
 	.uahalf	0
 	.uaword	.Ltext0
 	.uaword	.Letext0-.Ltext0
-	.uaword	0
-	.uaword	0
-.section .debug_ranges,"",@progbits
-.Ldebug_ranges0:
-	.uaword	.LBB10-.Ltext0
-	.uaword	.LBE10-.Ltext0
-	.uaword	.LBB15-.Ltext0
-	.uaword	.LBE15-.Ltext0
-	.uaword	0
-	.uaword	0
-	.uaword	.LBB12-.Ltext0
-	.uaword	.LBE12-.Ltext0
-	.uaword	.LBB13-.Ltext0
-	.uaword	.LBE13-.Ltext0
-	.uaword	0
-	.uaword	0
-	.uaword	.LBB16-.Ltext0
-	.uaword	.LBE16-.Ltext0
-	.uaword	.LBB17-.Ltext0
-	.uaword	.LBE17-.Ltext0
 	.uaword	0
 	.uaword	0
 .section .debug_line,"",@progbits

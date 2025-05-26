@@ -24,7 +24,7 @@
 #include "illd\src\Configuration.h"
 
 // #define ECHO_TIMEOUT_TICK 7600000 //38ms
-#define ECHO_TIMEOUT_TICK 1200000   //최대 감지 거리를 대략 1미터로
+#define ECHO_TIMEOUT_TICK 600000   //최대 감지 거리를 대략 0.5미터로
 /*******************************************     NO CHANGES AFTER THIS LINE      ****************************************************/
 
 struct __attribute__((__packed__)) Ultrasonic

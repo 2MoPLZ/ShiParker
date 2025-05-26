@@ -20,11 +20,19 @@ FuncTestTask:
 	.type	TimerISR, @function
 TimerISR:
 .LFB598:
+<<<<<<< Updated upstream
 	.loc 1 50 0
 	.loc 1 66 0
 	movh.a	%a15, hi:c.24695
 	ld.w	%d15, [%a15] lo:c.24695
 	.loc 1 50 0
+=======
+	.loc 1 51 0
+	.loc 1 67 0
+	movh.a	%a15, hi:c.24677
+	ld.w	%d15, [%a15] lo:c.24677
+	.loc 1 51 0
+>>>>>>> Stashed changes
 	sub.a	%SP, 8
 .LCFI0:
 	.loc 1 66 0
@@ -35,22 +43,27 @@ TimerISR:
 .LVL0:
 .L3:
 .LBE2:
+<<<<<<< Updated upstream
 	.loc 1 71 0
 	ld.w	%d15, [%a15] lo:c.24695
+=======
+	.loc 1 73 0
+	ld.w	%d15, [%a15] lo:c.24677
+>>>>>>> Stashed changes
 	movh.a	%a4, hi:.LC0
 	st.w	[%SP]0, %d15
 	lea	%a4, [%a4] lo:.LC0
 	add	%d15, 1
-	st.w	[%a15] lo:c.24695, %d15
+	st.w	[%a15] lo:c.24677, %d15
 	j	printfSerial
 .LVL1:
 .LFE598:
 	.size	TimerISR, .-TimerISR
 .section .data,"aw",@progbits
 	.align 2
-	.type	c.24695, @object
-	.size	c.24695, 4
-c.24695:
+	.type	c.24677, @object
+	.size	c.24677, 4
+c.24677:
 	.word	-4
 .section .debug_frame,"",@progbits
 .Lframe0:
@@ -241,7 +254,7 @@ c.24695:
 	.uaword	0x14f
 	.byte	0x5
 	.byte	0x3
-	.uaword	c.24695
+	.uaword	c.24677
 	.uleb128 0xc
 	.uaword	.LBB2
 	.uaword	.LBE2

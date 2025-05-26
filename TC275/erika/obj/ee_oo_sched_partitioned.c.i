@@ -1733,6 +1733,7 @@ OsEE_bool
 );
 # 213 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_scheduler_types.h"
 typedef OsEE_SN * OsEE_RQ;
+<<<<<<< Updated upstream
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
@@ -1762,6 +1763,11 @@ uint8_t osEE_assert_range(OsEE_reg id,
 uint8_t osEE_assert_last(void);
 # 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 # 56 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_conf.h" 2
+=======
+# 64 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_api.h" 2
+# 66 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee.h" 2
+# 56 "C:\\SHIPAR~1\\TC275\\erika\\inc/ee_conf.h" 2
+>>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_kernel_types.h" 1

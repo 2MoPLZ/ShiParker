@@ -33370,6 +33370,7 @@ typedef OsEE_SN * OsEE_RQ;
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
+<<<<<<< Updated upstream
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
 # 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
@@ -33395,6 +33396,9 @@ uint8_t osEE_assert_range(OsEE_reg id,
 # 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_last(void);
 # 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+=======
+
+>>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
@@ -33442,9 +33446,16 @@ double getUltrasonic(struct Ultrasonic* ultrasonic);
 void sendTrigger(struct Ultrasonic* ultrasonic);
 long measureEchoTick(struct Ultrasonic* ultrasonic);
 double calculateDistanceCm(long elapsedTicks);
+<<<<<<< Updated upstream
 # 10 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\bsw.c" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h" 1
 # 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
+=======
+# 10 "C:\\SHIPAR~1\\TC275\\bsw.c" 2
+# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 1
+# 25 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
+extern volatile boolean g_isRecieved;
+>>>>>>> Stashed changes
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);

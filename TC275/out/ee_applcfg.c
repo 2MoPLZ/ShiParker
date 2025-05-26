@@ -543,7 +543,7 @@ static VAR(OsEE_CounterDB, OS_CONST)
   {
     /* .p_count_cb      = */ &osEE_counter_cb_array[0U],
     /* .info            = */ {
-      /* .maxallowedvalue = */ (50U),
+      /* .maxallowedvalue = */ (70U),
       /* .ticksperbase    = */ (1U)
     }  }
 };

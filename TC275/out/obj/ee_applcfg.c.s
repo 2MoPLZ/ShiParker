@@ -114,7 +114,7 @@ osEE_counter_db_ptr_array:
 	.size	osEE_counter_db_array, 12
 osEE_counter_db_array:
 	.word	osEE_counter_cb_array
-	.word	50
+	.word	70
 	.word	1
 	.local	osEE_counter_cb_array
 .section .bss,"aw",@nobits

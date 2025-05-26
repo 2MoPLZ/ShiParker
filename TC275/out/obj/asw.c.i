@@ -2005,6 +2005,7 @@ typedef OsEE_SN * OsEE_RQ;
 # 64 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_api.h" 2
 # 66 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
 
+<<<<<<< Updated upstream
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h" 1
 # 117 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 1
@@ -2030,6 +2031,9 @@ uint8_t osEE_assert_range(OsEE_reg id,
 # 259 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee_assert.h"
 uint8_t osEE_assert_last(void);
 # 68 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\inc/ee.h" 2
+=======
+
+>>>>>>> Stashed changes
 
 
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\out/ee_declcfg.h" 1
@@ -33424,12 +33428,22 @@ void printfSerial(const char *fmt,...);
 void initPeripheralsAndERU(void);
 void initADC(void);
 uint16 readADCValue(uint8 channel);
+<<<<<<< Updated upstream
 # 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\asw.c" 2
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h" 1
 # 16 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
 # 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
 # 17 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h" 2
 # 25 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\uart_Driver.h"
+=======
+# 2 "C:\\SHIPAR~1\\TC275\\asw.c" 2
+# 1 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 1
+# 16 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
+# 1 "C:\\SHIPAR~1\\TC275\\illd\\src\\ConfigurationIsr.h" 1
+# 17 "C:\\SHIPAR~1\\TC275\\uart_Driver.h" 2
+# 25 "C:\\SHIPAR~1\\TC275\\uart_Driver.h"
+extern volatile boolean g_isRecieved;
+>>>>>>> Stashed changes
 extern struct ParkingSystemPacket g_RecievedParkingSystemPacket;
 
 void initUartDriver(void);

@@ -2,43 +2,152 @@
 .section .text,"ax",@progbits
 .Ltext0:
 	.align 1
+<<<<<<< Updated upstream
 	.type	osEE_shutdown_os, @function
 osEE_shutdown_os:
 .LFB100:
 	.file 1 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_kernel.h"
 	.loc 1 714 0
+=======
+	.type	osEE_begin_primitive, @function
+osEE_begin_primitive:
+.LFB83:
+	.file 1 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_kernel.h"
+	.loc 1 253 0
+.LBB457:
+.LBB458:
+.LBB459:
+.LBB460:
+.LBB461:
+	.file 2 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_hal_internal.h"
+	.loc 2 259 0
+#APP
+	# 259 "C:\SHIPAR~1\TC275\erika\src\ee_hal_internal.h" 1
+	mfcr %d2, LO:65068
+	# 0 "" 2
+>>>>>>> Stashed changes
 .LVL0:
-	mov.aa	%a14, %SP
-.LCFI0:
-	.loc 1 715 0
-	ld.a	%a15, [%a4]0
+#NO_APP
+.LBE461:
+.LBE460:
+.LBE459:
+	.loc 2 365 0
+	and	%d15, %d2, 255
 .LVL1:
-	.loc 1 716 0
-	ld.bu	%d15, [%a15] 16
+	ge.u	%d15, %d15, 17
 .LVL2:
+	jnz	%d15, .L2
+.LBB462:
+	.loc 2 366 0
+	mov	%d15, %d2
+.LVL3:
+	mov	%d3, 17
+	insert	%d15, %d15, %d3, 0, 8
+.LVL4:
+.LBB463:
+.LBB464:
+	.loc 2 265 0
+#APP
+	# 265 "C:\SHIPAR~1\TC275\erika\src\ee_hal_internal.h" 1
+	mtcr LO:65068, %d15
+	isync
+	# 0 "" 2
+.LVL5:
+#NO_APP
+.L2:
+.LBE464:
+.LBE463:
+.LBE462:
+.LBE458:
+.LBE457:
+	.loc 1 255 0
+	ret
+.LFE83:
+	.size	osEE_begin_primitive, .-osEE_begin_primitive
+	.align 1
+	.type	osEE_end_primitive, @function
+osEE_end_primitive:
+.LFB84:
+	.loc 1 262 0
+.LVL6:
+.LBB465:
+.LBB466:
+.LBB467:
+.LBB468:
+.LBB469:
+	.loc 2 259 0
+#APP
+	# 259 "C:\SHIPAR~1\TC275\erika\src\ee_hal_internal.h" 1
+	mfcr %d2, LO:65068
+	# 0 "" 2
+.LVL7:
+#NO_APP
+	and	%d3, %d2, 255
+.LVL8:
+.LBE469:
+.LBE468:
+.LBE467:
+	.loc 2 383 0
+	and	%d15, %d4, 255
+	jeq	%d3, %d15, .L4
+.LVL9:
+	insert	%d2, %d2, %d15, 0, 8
+.LVL10:
+.LBB470:
+.LBB471:
+	.loc 2 265 0
+#APP
+	# 265 "C:\SHIPAR~1\TC275\erika\src\ee_hal_internal.h" 1
+	mtcr LO:65068, %d2
+	isync
+	# 0 "" 2
+.LVL11:
+#NO_APP
+.L4:
+	ret
+.LBE471:
+.LBE470:
+.LBE466:
+.LBE465:
+.LFE84:
+	.size	osEE_end_primitive, .-osEE_end_primitive
+	.align 1
+	.type	osEE_shutdown_os.constprop.15, @function
+osEE_shutdown_os.constprop.15:
+.LFB154:
+	.loc 1 709 0
+.LVL12:
+	.loc 1 715 0
+	movh.a	%a15, hi:osEE_cdb_var
+	lea	%a2, [%a15] lo:osEE_cdb_var
+	ld.a	%a15, [%a15] lo:osEE_cdb_var
+.LVL13:
 	.loc 1 718 0
 	mov	%d2, 3
-	st.b	[%a15] 16, %d2
+	.loc 1 716 0
+	ld.bu	%d15, [%a15] 16
+.LVL14:
 	.loc 1 720 0
 	st.b	[%a15] 18, %d4
+	.loc 1 718 0
+	st.b	[%a15] 16, %d2
 	.loc 1 722 0
-	jne	%d15, 2, .L2
+	jne	%d15, 2, .L7
 	.loc 1 723 0
-	ld.a	%a4, [%a4] 4
-.LVL3:
+	ld.a	%a4, [%a2] 4
 	call	osEE_idle_task_terminate
-.LVL4:
-.L2:
-.L3:
-	.loc 1 729 0 discriminator 1
-	j	.L3
-.LFE100:
-	.size	osEE_shutdown_os, .-osEE_shutdown_os
+.LVL15:
+.L7:
+.L8:
+	j	.L8
+.LFE154:
+	.size	osEE_shutdown_os.constprop.15, .-osEE_shutdown_os.constprop.15
 	.align 1
 	.global	DisableAllInterrupts
 	.type	DisableAllInterrupts, @function
 DisableAllInterrupts:
 .LFB109:
+<<<<<<< Updated upstream
 	.file 2 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
 	.loc 2 64 0
 	mov.aa	%a14, %SP
@@ -51,18 +160,29 @@ DisableAllInterrupts:
 .LBB743:
 	.file 3 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_hal_internal.h"
 	.loc 3 276 0
+=======
+	.file 3 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
+	.loc 3 64 0
+	.loc 3 66 0
+	movh.a	%a15, hi:osEE_cdb_var
+	ld.a	%a15, [%a15] lo:osEE_cdb_var
+.LVL16:
+.LBB472:
+.LBB473:
+	.loc 2 276 0
+>>>>>>> Stashed changes
 #APP
 	# 276 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	disable
 	# 0 "" 2
-.LVL6:
+.LVL17:
 #NO_APP
-.LBE743:
-.LBE742:
-	.loc 2 73 0
+.LBE473:
+.LBE472:
+	.loc 3 73 0
 	mov	%d15, 1
 	st.b	[%a15] 30, %d15
-.LVL7:
+.LVL18:
 	ret
 .LFE109:
 	.size	DisableAllInterrupts, .-DisableAllInterrupts
@@ -71,32 +191,30 @@ DisableAllInterrupts:
 	.type	EnableAllInterrupts, @function
 EnableAllInterrupts:
 .LFB110:
-	.loc 2 83 0
-	mov.aa	%a14, %SP
-.LCFI2:
-	.loc 2 90 0
+	.loc 3 83 0
+	.loc 3 90 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL8:
-	.loc 2 96 0
+.LVL19:
+	.loc 3 96 0
 	ld.bu	%d15, [%a15] 30
-	jz	%d15, .L5
-	.loc 2 97 0
+	jz	%d15, .L10
+	.loc 3 97 0
 	mov	%d15, 0
 	st.b	[%a15] 30, %d15
-.LBB744:
-.LBB745:
-	.loc 3 282 0
+.LBB474:
+.LBB475:
+	.loc 2 282 0
 #APP
 	# 282 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	enable
 	# 0 "" 2
-.LVL9:
+.LVL20:
 #NO_APP
-.L5:
+.L10:
 	ret
-.LBE745:
-.LBE744:
+.LBE475:
+.LBE474:
 .LFE110:
 	.size	EnableAllInterrupts, .-EnableAllInterrupts
 	.align 1
@@ -104,73 +222,68 @@ EnableAllInterrupts:
 	.type	SuspendAllInterrupts, @function
 SuspendAllInterrupts:
 .LFB112:
-	.loc 2 133 0
-	mov.aa	%a14, %SP
-.LCFI3:
-	.loc 2 135 0
+	.loc 3 133 0
+	.loc 3 135 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL10:
-.LBB757:
-.LBB758:
-	.loc 2 113 0
+.LVL21:
+.LBB487:
+.LBB488:
+	.loc 3 113 0
 	ld.bu	%d15, [%a15] 28
-	jnz	%d15, .L8
-.LBB759:
-.LBB760:
-.LBB761:
-.LBB762:
-.LBB763:
-.LBB764:
-	.loc 3 259 0
+	jnz	%d15, .L16
+.LBB489:
+.LBB490:
+.LBB491:
+.LBB492:
+.LBB493:
+.LBB494:
+	.loc 2 259 0
 #APP
 	# 259 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d15, LO:65068
 	# 0 "" 2
-.LVL11:
+.LVL22:
 #NO_APP
-.LBE764:
-.LBE763:
-.LBE762:
-.LBB765:
-.LBB766:
-	.loc 3 276 0
+.LBE494:
+.LBE493:
+.LBE492:
+.LBB495:
+.LBB496:
+	.loc 2 276 0
 #APP
 	# 276 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	disable
 	# 0 "" 2
 #NO_APP
-.LBE766:
-.LBE765:
-.LBE761:
-.LBE760:
-	.loc 2 115 0
+.LBE496:
+.LBE495:
+.LBE491:
+.LBE490:
+	.loc 3 115 0
 	st.w	[%a15] 20, %d15
-	.loc 2 116 0
+	.loc 3 116 0
 	ld.bu	%d15, [%a15] 28
-.LVL12:
-	add	%d15, 1
-	st.b	[%a15] 28, %d15
-	ret
-.LVL13:
-.L8:
-.LBE759:
-	.loc 2 117 0
+.LVL23:
+	j	.L19
+.LVL24:
+.L16:
+.LBE489:
+	.loc 3 117 0
 	eq	%d2, %d15, 255
-	jnz	%d2, .L10
-	.loc 2 118 0
+	jnz	%d2, .L18
+.L19:
+	.loc 3 118 0
 	add	%d15, 1
 	st.b	[%a15] 28, %d15
 	ret
-.L10:
-	.loc 2 123 0
-	movh.a	%a4, hi:osEE_cdb_var
-	lea	%a4, [%a4] lo:osEE_cdb_var
+.L18:
+	.loc 3 123 0
 	mov	%d4, 25
-	j	osEE_shutdown_os
-.LVL14:
-.LBE758:
-.LBE757:
+	j	osEE_shutdown_os.constprop.15
+.LVL25:
+.LBE488:
+.LBE487:
 .LFE112:
 	.size	SuspendAllInterrupts, .-SuspendAllInterrupts
 	.align 1
@@ -178,42 +291,40 @@ SuspendAllInterrupts:
 	.type	ResumeAllInterrupts, @function
 ResumeAllInterrupts:
 .LFB113:
-	.loc 2 153 0
-	mov.aa	%a14, %SP
-.LCFI4:
-	.loc 2 155 0
+	.loc 3 153 0
+	.loc 3 155 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL15:
-	.loc 2 161 0
+.LVL26:
+	.loc 3 161 0
 	ld.bu	%d15, [%a15] 28
-	jz	%d15, .L11
-	.loc 2 162 0
+	jz	%d15, .L20
+	.loc 3 162 0
 	add	%d15, -1
 	and	%d15, 255
 	st.b	[%a15] 28, %d15
-	.loc 2 164 0
-	jnz	%d15, .L11
-.LVL16:
-.LBB767:
-.LBB768:
-.LBB769:
-.LBB770:
-	.loc 3 265 0
+	.loc 3 164 0
+	jnz	%d15, .L20
+.LVL27:
+.LBB497:
+.LBB498:
+.LBB499:
+.LBB500:
+	.loc 2 265 0
 	ld.w	%d15, [%a15] 20
 #APP
 	# 265 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mtcr LO:65068, %d15
 	isync
 	# 0 "" 2
-.LVL17:
+.LVL28:
 #NO_APP
-.L11:
+.L20:
 	ret
-.LBE770:
-.LBE769:
-.LBE768:
-.LBE767:
+.LBE500:
+.LBE499:
+.LBE498:
+.LBE497:
 .LFE113:
 	.size	ResumeAllInterrupts, .-ResumeAllInterrupts
 	.align 1
@@ -221,34 +332,33 @@ ResumeAllInterrupts:
 	.type	SuspendOSInterrupts, @function
 SuspendOSInterrupts:
 .LFB114:
-	.loc 2 179 0
-	mov.aa	%a14, %SP
-.LCFI5:
-	.loc 2 181 0
+	.loc 3 179 0
+	.loc 3 181 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL18:
-	.loc 2 187 0
+.LVL29:
+	.loc 3 187 0
 	ld.bu	%d15, [%a15] 29
-	jnz	%d15, .L14
-.LBB771:
-.LBB772:
-.LBB773:
-.LBB774:
-.LBB775:
-.LBB776:
-	.loc 3 259 0
+	jnz	%d15, .L25
+.LBB501:
+.LBB502:
+.LBB503:
+.LBB504:
+.LBB505:
+.LBB506:
+	.loc 2 259 0
 #APP
 	# 259 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d2, LO:65068
 	# 0 "" 2
-.LVL19:
+.LVL30:
 #NO_APP
-.LBE776:
-.LBE775:
-.LBE774:
-	.loc 3 365 0
+.LBE506:
+.LBE505:
+.LBE504:
+	.loc 2 365 0
 	and	%d15, %d2, 255
+<<<<<<< Updated upstream
 .LVL20:
 	ge.u	%d15, %d15, 100
 .LVL21:
@@ -258,49 +368,57 @@ SuspendOSInterrupts:
 	mov	%d15, %d2
 .LVL22:
 	mov	%d3, 100
+=======
+.LVL31:
+	ge.u	%d15, %d15, 17
+.LVL32:
+	jnz	%d15, .L26
+.LBB507:
+	.loc 2 366 0
+	mov	%d15, %d2
+.LVL33:
+	mov	%d3, 17
+>>>>>>> Stashed changes
 	insert	%d15, %d15, %d3, 0, 8
-.LVL23:
-.LBB778:
-.LBB779:
-	.loc 3 265 0
+.LVL34:
+.LBB508:
+.LBB509:
+	.loc 2 265 0
 #APP
 	# 265 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mtcr LO:65068, %d15
 	isync
 	# 0 "" 2
-.LVL24:
+.LVL35:
 #NO_APP
-.L15:
-.LBE779:
-.LBE778:
-.LBE777:
-.LBE773:
-.LBE772:
-	.loc 2 189 0
+.L26:
+.LBE509:
+.LBE508:
+.LBE507:
+.LBE503:
+.LBE502:
+	.loc 3 189 0
 	st.w	[%a15] 24, %d2
-	.loc 2 190 0
+	.loc 3 190 0
 	ld.bu	%d15, [%a15] 29
-.LVL25:
-	add	%d15, 1
-	st.b	[%a15] 29, %d15
-.LBE771:
-	ret
-.LVL26:
-.L14:
-	.loc 2 191 0
+.LVL36:
+	j	.L29
+.LVL37:
+.L25:
+.LBE501:
+	.loc 3 191 0
 	eq	%d2, %d15, 255
-	jnz	%d2, .L17
-	.loc 2 192 0
+	jnz	%d2, .L28
+.L29:
+	.loc 3 192 0
 	add	%d15, 1
 	st.b	[%a15] 29, %d15
 	ret
-.L17:
-	.loc 2 197 0
-	movh.a	%a4, hi:osEE_cdb_var
-	lea	%a4, [%a4] lo:osEE_cdb_var
+.L28:
+	.loc 3 197 0
 	mov	%d4, 25
-	j	osEE_shutdown_os
-.LVL27:
+	j	osEE_shutdown_os.constprop.15
+.LVL38:
 .LFE114:
 	.size	SuspendOSInterrupts, .-SuspendOSInterrupts
 	.align 1
@@ -308,67 +426,68 @@ SuspendOSInterrupts:
 	.type	ResumeOSInterrupts, @function
 ResumeOSInterrupts:
 .LFB115:
-	.loc 2 211 0
-	mov.aa	%a14, %SP
-.LCFI6:
-	.loc 2 213 0
+	.loc 3 211 0
+	.loc 3 213 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL28:
-	.loc 2 219 0
+.LVL39:
+	.loc 3 219 0
 	ld.bu	%d15, [%a15] 29
-	jz	%d15, .L18
-	.loc 2 220 0
+	jz	%d15, .L30
+	.loc 3 220 0
 	add	%d15, -1
 	and	%d15, 255
 	st.b	[%a15] 29, %d15
-	.loc 2 222 0
-	jnz	%d15, .L18
-	.loc 2 223 0
+	.loc 3 222 0
+	jnz	%d15, .L30
+	.loc 3 223 0
 	ld.w	%d2, [%a15] 24
-.LVL29:
-.LBB780:
-.LBB781:
-.LBB782:
-.LBB783:
-.LBB784:
-	.loc 3 259 0
+.LVL40:
+.LBB510:
+.LBB511:
+.LBB512:
+.LBB513:
+.LBB514:
+	.loc 2 259 0
 #APP
+<<<<<<< Updated upstream
 	# 259 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mfcr %d3, LO:65068
+=======
+	# 259 "C:\SHIPAR~1\TC275\erika\src\ee_hal_internal.h" 1
+	mfcr %d15, LO:65068
+>>>>>>> Stashed changes
 	# 0 "" 2
-.LVL30:
+.LVL41:
 #NO_APP
-	mov	%d15, %d3
-.LVL31:
-	and	%d3, %d3, 255
-.LVL32:
-.LBE784:
-.LBE783:
-.LBE782:
-	.loc 3 383 0
+	and	%d3, %d15, 255
+.LVL42:
+.LBE514:
+.LBE513:
+.LBE512:
+	.loc 2 383 0
 	and	%d2, %d2, 255
-.LVL33:
-	jeq	%d3, %d2, .L18
-.LVL34:
+.LVL43:
+	jeq	%d3, %d2, .L30
+.LVL44:
 	insert	%d15, %d15, %d2, 0, 8
-.LVL35:
-.LBB785:
-.LBB786:
-	.loc 3 265 0
+.LVL45:
+.LBB515:
+.LBB516:
+	.loc 2 265 0
 #APP
 	# 265 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mtcr LO:65068, %d15
 	isync
 	# 0 "" 2
-.LVL36:
+.LVL46:
 #NO_APP
-.L18:
+.L30:
 	ret
-.LBE786:
-.LBE785:
-.LBE781:
-.LBE780:
+.LBE516:
+.LBE515:
+.LBE511:
+.LBE510:
 .LFE115:
 	.size	ResumeOSInterrupts, .-ResumeOSInterrupts
 	.align 1
@@ -376,6 +495,7 @@ ResumeOSInterrupts:
 	.type	StartOS, @function
 StartOS:
 .LFB116:
+<<<<<<< Updated upstream
 	.loc 2 237 0
 .LVL37:
 	mov.aa	%a14, %SP
@@ -441,47 +561,93 @@ StartOS:
 	jnz	%d15, .L23
 	.loc 2 264 0
 	call	osEE_cpu_startos
+=======
+	.loc 3 237 0
+>>>>>>> Stashed changes
 .LVL47:
-	.loc 2 268 0
-	mov	%d5, 24
-	.loc 2 264 0
-	jz	%d2, .L23
-	j	.L33
+	.loc 3 246 0
+	movh.a	%a15, hi:osEE_cdb_var
+	.loc 3 237 0
+	mov	%d8, %d4
 .LVL48:
-.L29:
-.LBB796:
-	.loc 2 528 0
+	.loc 3 246 0
+	lea	%a12, [%a15] lo:osEE_cdb_var
+	ld.a	%a15, [%a15] lo:osEE_cdb_var
+.LVL49:
+	.loc 3 247 0
+	call	osEE_begin_primitive
+.LVL50:
+	mov	%d15, %d2
+.LVL51:
+	.loc 3 254 0
+	ld.bu	%d2, [%a15] 16
+.LVL52:
+	.loc 3 258 0
+	mov	%d9, 1
+	.loc 3 254 0
+	jnz	%d2, .L36
+	.loc 3 264 0
+	call	osEE_cpu_startos
+.LVL53:
+	.loc 3 268 0
+	mov	%d9, 24
+	.loc 3 264 0
+	jz	%d2, .L36
+.LBB522:
+	.loc 3 300 0
+	mov	%d15, 1
+.LVL54:
+	st.b	[%a15] 16, %d15
+	.loc 3 527 0
+	ld.bu	%d15, [%a15] 16
+	.loc 3 301 0
+	st.b	[%a15] 17, %d8
+	.loc 3 280 0
+	ld.a	%a12, [%a12] 4
+.LVL55:
+	.loc 3 527 0
+	jne	%d15, 1, .L41
+	.loc 3 528 0
 	mov	%d15, 2
 	st.b	[%a15] 16, %d15
-.L30:
-.LVL49:
-	.loc 2 537 0
+.L41:
+.LVL56:
+	.loc 3 537 0
 	ld.bu	%d15, [%a15] 16
+<<<<<<< Updated upstream
 	jne	%d15, 2, .L25
 .LVL50:
 .LBB797:
 .LBB798:
 	.file 4 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_std_change_context.h"
+=======
+	jne	%d15, 2, .L38
+.LVL57:
+.LBB523:
+.LBB524:
+	.file 4 "C:\\SHIPAR~1\\TC275\\erika\\src\\ee_std_change_context.h"
+>>>>>>> Stashed changes
 	.loc 4 150 0
-	mov.aa	%a4, %a12
 	ld.a	%a5, [%a12] 4
+	mov.aa	%a4, %a12
 	mov.aa	%a6, %a5
 	call	osEE_hal_save_ctx_and_ready2stacked
-.LVL51:
-.LBE798:
-.LBE797:
-	.loc 2 539 0
+.LVL58:
+.LBE524:
+.LBE523:
+	.loc 3 539 0
 	mov.aa	%a4, %a12
 	call	osEE_task_end
-.LVL52:
-.L25:
-.LBB799:
-.LBB800:
-	.loc 3 276 0
+.LVL59:
+.L38:
+.LBB525:
+.LBB526:
+	.loc 2 276 0
 #APP
 	# 276 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	disable
 	# 0 "" 2
+<<<<<<< Updated upstream
 .LVL53:
 #NO_APP
 .L26:
@@ -532,32 +698,24 @@ StartOS:
 	and	%d3, %d8, 255
 	jne	%d4, %d3, .L27
 	j	.L34
+=======
+>>>>>>> Stashed changes
 .LVL60:
-.L33:
-.LBE803:
-.LBE802:
-.LBE801:
-.LBB809:
-	.loc 2 280 0
-	movh.a	%a2, hi:osEE_cdb_var
-	lea	%a2, [%a2] lo:osEE_cdb_var
-	ld.a	%a12, [%a2] 4
+#NO_APP
+.L39:
+.LBE526:
+.LBE525:
+	.loc 3 545 0 discriminator 1
+	j	.L39
 .LVL61:
-	.loc 2 300 0
-	mov	%d15, 1
-	st.b	[%a15] 16, %d15
-	.loc 2 301 0
-	st.b	[%a15] 17, %d9
+.L36:
+.LBE522:
+	.loc 3 578 0
+	mov	%d4, %d15
+	call	osEE_end_primitive
 .LVL62:
-	.loc 2 527 0
-	ld.bu	%d15, [%a15] 16
-	jne	%d15, 1, .L30
-	j	.L29
-.LVL63:
-.L34:
-.LBE809:
-	.loc 2 582 0
-	mov	%d2, %d5
+	.loc 3 582 0
+	mov	%d2, %d9
 	ret
 .LFE116:
 	.size	StartOS, .-StartOS
@@ -566,24 +724,21 @@ StartOS:
 	.type	GetActiveApplicationMode, @function
 GetActiveApplicationMode:
 .LFB117:
-	.loc 2 589 0
-	mov.aa	%a14, %SP
-.LCFI8:
-	.loc 2 598 0
+	.loc 3 589 0
+	.loc 3 598 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL64:
-	.loc 2 604 0
-	ld.bu	%d15, [%a15] 16
-	.loc 2 607 0
+.LVL63:
+	.loc 3 607 0
 	mov	%d2, 255
-	.loc 2 604 0
-	jz	%d15, .L36
-	.loc 2 605 0
+	.loc 3 604 0
+	ld.bu	%d15, [%a15] 16
+	jz	%d15, .L48
+	.loc 3 605 0
 	ld.bu	%d2, [%a15] 17
-.LVL65:
-.L36:
-	.loc 2 613 0
+.LVL64:
+.L48:
+	.loc 3 613 0
 	ret
 .LFE117:
 	.size	GetActiveApplicationMode, .-GetActiveApplicationMode
@@ -592,11 +747,30 @@ GetActiveApplicationMode:
 	.type	ActivateTask, @function
 ActivateTask:
 .LFB118:
-	.loc 2 620 0
+	.loc 3 620 0
+.LVL65:
+	movh.a	%a15, hi:osEE_kdb_var
+	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 655 0
+	ld.w	%d2, [%a15] 8
+	.loc 3 656 0
+	mov	%d15, 3
+	.loc 3 655 0
+	jge.u	%d4, %d2, .L52
+.LBB527:
+	.loc 3 660 0
+	ld.a	%a2, [%a15] 4
+	addsc.a	%a2, %a2, %d4, 2
+	ld.a	%a12, [%a2]0
 .LVL66:
-	mov.aa	%a14, %SP
-.LCFI9:
+	.loc 3 662 0
+	ld.bu	%d2, [%a12] 20
+	jge.u	%d2, 2, .L52
+.LBB528:
+	.loc 3 663 0
+	call	osEE_begin_primitive
 .LVL67:
+<<<<<<< Updated upstream
 .LBB810:
 .LBB811:
 	.loc 1 276 0
@@ -671,15 +845,25 @@ ActivateTask:
 	mov.aa	%a4, %a15
 	call	osEE_task_activated
 .LVL75:
+=======
+	.loc 3 665 0
+	mov.aa	%a4, %a12
+	.loc 3 663 0
+>>>>>>> Stashed changes
 	mov	%d8, %d2
-.LVL76:
-	.loc 2 667 0
-	jnz	%d2, .L41
-	.loc 2 668 0
-	movh.a	%a4, hi:osEE_kdb_var
-	lea	%a4, [%a4] lo:osEE_kdb_var
-	mov.aa	%a5, %a15
+.LVL68:
+	.loc 3 665 0
+	call	osEE_task_activated
+.LVL69:
+	mov	%d15, %d2
+.LVL70:
+	.loc 3 667 0
+	jnz	%d2, .L53
+	.loc 3 668 0
+	mov.aa	%a4, %a15
+	mov.aa	%a5, %a12
 	call	osEE_scheduler_task_activated
+<<<<<<< Updated upstream
 .LVL77:
 .L41:
 .LBB823:
@@ -728,6 +912,19 @@ ActivateTask:
 .LBE812:
 	.loc 2 692 0
 	mov	%d2, %d8
+=======
+.LVL71:
+.L53:
+	.loc 3 671 0
+	mov	%d4, %d8
+	call	osEE_end_primitive
+.LVL72:
+.L52:
+.LBE528:
+.LBE527:
+	.loc 3 692 0
+	mov	%d2, %d15
+>>>>>>> Stashed changes
 	ret
 .LFE118:
 	.size	ActivateTask, .-ActivateTask
@@ -736,80 +933,73 @@ ActivateTask:
 	.type	ChainTask, @function
 ChainTask:
 .LFB119:
-	.loc 2 699 0
-.LVL84:
-	mov.aa	%a14, %SP
-.LCFI10:
-	.loc 2 711 0
-	movh.a	%a15, hi:osEE_cdb_var
-	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL85:
-	.loc 2 713 0
-	ld.w	%d3, [%a15]0
-.LVL86:
-.LBB863:
-.LBB864:
-	.loc 1 276 0
-	movh.a	%a2, hi:osEE_kdb_var
-	lea	%a2, [%a2] lo:osEE_kdb_var
-	ld.w	%d15, [%a2] 8
-.LBE864:
-.LBE863:
-	.loc 2 746 0
-	mov	%d2, 3
-	.loc 2 745 0
-	jge.u	%d4, %d15, .L57
-.LBB865:
-	.loc 2 749 0
-	movh.a	%a2, hi:osEE_kdb_var
-	lea	%a2, [%a2] lo:osEE_kdb_var
-	ld.a	%a2, [%a2] 4
+	.loc 3 699 0
+.LVL73:
+	.loc 3 711 0
+	movh.a	%a14, hi:osEE_cdb_var
+	movh.a	%a13, hi:osEE_kdb_var
+	ld.a	%a15, [%a14] lo:osEE_cdb_var
+.LVL74:
+	lea	%a13, [%a13] lo:osEE_kdb_var
+	.loc 3 745 0
+	ld.w	%d2, [%a13] 8
+	.loc 3 713 0
+	ld.w	%d9, [%a15]0
+.LVL75:
+	.loc 3 746 0
+	mov	%d15, 3
+	.loc 3 745 0
+	jge.u	%d4, %d2, .L69
+.LBB529:
+	.loc 3 749 0
+	ld.a	%a2, [%a13] 4
 	addsc.a	%a2, %a2, %d4, 2
 	ld.a	%a12, [%a2]0
-.LVL87:
-	.loc 2 771 0
-	ld.bu	%d15, [%a12] 20
-	jge.u	%d15, 2, .L57
-.LBB866:
-	.loc 2 775 0
+.LVL76:
+	.loc 3 771 0
+	ld.bu	%d2, [%a12] 20
+	jge.u	%d2, 2, .L69
+.LBB530:
+	.loc 3 775 0
 	ld.bu	%d15, [%a15] 28
-	jz	%d15, .L47
-	.loc 2 776 0
+	jz	%d15, .L58
+	.loc 3 776 0
 	mov	%d15, 0
 	st.b	[%a15] 28, %d15
-.LVL88:
-.LBB867:
-.LBB868:
-.LBB869:
-.LBB870:
-	.loc 3 265 0
+.LVL77:
+.LBB531:
+.LBB532:
+.LBB533:
+.LBB534:
+	.loc 2 265 0
 	ld.w	%d15, [%a15] 20
 #APP
 	# 265 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mtcr LO:65068, %d15
 	isync
 	# 0 "" 2
-.LVL89:
+.LVL78:
 #NO_APP
-.L47:
-.LBE870:
-.LBE869:
-.LBE868:
-.LBE867:
-	.loc 2 779 0
+.L58:
+.LBE534:
+.LBE533:
+.LBE532:
+.LBE531:
+	.loc 3 779 0
 	ld.bu	%d15, [%a15] 30
-	jz	%d15, .L48
-	.loc 2 780 0
+	jz	%d15, .L59
+	.loc 3 780 0
 	mov	%d15, 0
 	st.b	[%a15] 30, %d15
-.LBB871:
-.LBB872:
-	.loc 3 282 0
+.LBB535:
+.LBB536:
+	.loc 2 282 0
 #APP
 	# 282 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	enable
 	# 0 "" 2
 #NO_APP
+<<<<<<< Updated upstream
 .L48:
 .LBE872:
 .LBE871:
@@ -860,31 +1050,45 @@ ChainTask:
 .LBE874:
 .LBE873:
 	.loc 2 787 0
+=======
+.L59:
+.LBE536:
+.LBE535:
+	.loc 3 785 0
+	call	osEE_begin_primitive
+.LVL79:
+	.loc 3 787 0
+>>>>>>> Stashed changes
 	mov.d	%d15, %a12
-.LVL96:
-	jne	%d15, %d3, .L50
-.LVL97:
-	.loc 2 789 0
+	.loc 3 785 0
+	mov	%d8, %d2
+.LVL80:
+	.loc 3 787 0
+	jne	%d15, %d9, .L60
+.LVL81:
+	.loc 3 789 0
 	ld.a	%a15, [%a12] 12
-.LVL98:
+.LVL82:
 	mov	%d15, 5
-.LVL99:
+.LVL83:
 	st.b	[%a15] 2, %d15
-.LVL100:
-	j	.L51
-.LVL101:
-.L50:
-	.loc 2 792 0
+.LVL84:
+	j	.L61
+.LVL85:
+.L60:
+	.loc 3 792 0
 	mov.aa	%a4, %a12
 	call	osEE_task_activated
-.LVL102:
-	.loc 2 793 0
-	jnz	%d2, .L52
-	.loc 2 794 0
-	movh.a	%a4, hi:osEE_kdb_var
-	lea	%a4, [%a4] lo:osEE_kdb_var
+.LVL86:
+	mov	%d15, %d2
+.LVL87:
+	.loc 3 793 0
+	jnz	%d2, .L62
+	.loc 3 794 0
+	mov.aa	%a4, %a13
 	mov.aa	%a5, %a12
 	call	osEE_scheduler_task_insert
+<<<<<<< Updated upstream
 .LVL103:
 	j	.L51
 .LVL104:
@@ -913,20 +1117,35 @@ ChainTask:
 .LBE882:
 .LBB892:
 .LBB893:
+=======
+.LVL88:
+	j	.L61
+.LVL89:
+.L62:
+	.loc 3 802 0
+	mov	%d4, %d8
+	call	osEE_end_primitive
+.LVL90:
+.LBE530:
+	j	.L69
+.LVL91:
+.L61:
+.LBB541:
+.LBB537:
+.LBB538:
+>>>>>>> Stashed changes
 	.loc 1 172 0
-	movh.a	%a15, hi:osEE_cdb_var
-.LVL107:
-	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL108:
-.LBE893:
-.LBE892:
-.LBB894:
-.LBB895:
-	.loc 4 141 0
+	ld.a	%a15, [%a14] lo:osEE_cdb_var
 	ld.a	%a15, [%a15]0
+.LBE538:
+.LBE537:
+.LBB539:
+.LBB540:
+	.loc 4 141 0
 	ld.a	%a4, [%a15] 4
 	mov.a	%a5, 0
 	j	osEE_hal_terminate_ctx
+<<<<<<< Updated upstream
 .LVL109:
 .L52:
 .LBE895:
@@ -963,6 +1182,16 @@ ChainTask:
 .LBE866:
 .LBE865:
 	.loc 2 822 0
+=======
+.LVL92:
+.L69:
+.LBE540:
+.LBE539:
+.LBE541:
+.LBE529:
+	.loc 3 822 0
+	mov	%d2, %d15
+>>>>>>> Stashed changes
 	ret
 .LFE119:
 	.size	ChainTask, .-ChainTask
@@ -971,56 +1200,55 @@ ChainTask:
 	.type	TerminateTask, @function
 TerminateTask:
 .LFB120:
-	.loc 2 829 0
-	mov.aa	%a14, %SP
-.LCFI11:
-	.loc 2 840 0
+	.loc 3 829 0
+	.loc 3 840 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL115:
-	.loc 2 842 0
-	ld.a	%a2, [%a15]0
-.LVL116:
-.LBB915:
-	.loc 2 902 0
+.LVL93:
+	.loc 3 842 0
+	ld.a	%a12, [%a15]0
+.LVL94:
+.LBB542:
+	.loc 3 902 0
 	ld.bu	%d15, [%a15] 28
-	jz	%d15, .L59
-	.loc 2 903 0
+	jz	%d15, .L73
+	.loc 3 903 0
 	mov	%d15, 0
 	st.b	[%a15] 28, %d15
-.LVL117:
-.LBB916:
-.LBB917:
-.LBB918:
-.LBB919:
-	.loc 3 265 0
+.LVL95:
+.LBB543:
+.LBB544:
+.LBB545:
+.LBB546:
+	.loc 2 265 0
 	ld.w	%d15, [%a15] 20
 #APP
 	# 265 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	mtcr LO:65068, %d15
 	isync
 	# 0 "" 2
-.LVL118:
+.LVL96:
 #NO_APP
-.L59:
-.LBE919:
-.LBE918:
-.LBE917:
-.LBE916:
-	.loc 2 906 0
+.L73:
+.LBE546:
+.LBE545:
+.LBE544:
+.LBE543:
+	.loc 3 906 0
 	ld.bu	%d15, [%a15] 30
-	jz	%d15, .L60
-	.loc 2 907 0
+	jz	%d15, .L74
+	.loc 3 907 0
 	mov	%d15, 0
 	st.b	[%a15] 30, %d15
-.LBB920:
-.LBB921:
-	.loc 3 282 0
+.LBB547:
+.LBB548:
+	.loc 2 282 0
 #APP
 	# 282 "C:\Users\USER\Desktop\AUTODR~1\TC275\erika\src\ee_hal_internal.h" 1
 	enable
 	# 0 "" 2
 #NO_APP
+<<<<<<< Updated upstream
 .L60:
 .LBE921:
 .LBE920:
@@ -1070,14 +1298,24 @@ TerminateTask:
 .LBE922:
 .LBB931:
 .LBB932:
+=======
+.L74:
+.LBE548:
+.LBE547:
+	.loc 3 912 0
+	call	osEE_begin_primitive
+.LVL97:
+.LBB549:
+.LBB550:
+>>>>>>> Stashed changes
 	.loc 4 141 0
-	ld.a	%a4, [%a2] 4
+	ld.a	%a4, [%a12] 4
 	mov.a	%a5, 0
 	j	osEE_hal_terminate_ctx
-.LVL125:
-.LBE932:
-.LBE931:
-.LBE915:
+.LVL98:
+.LBE550:
+.LBE549:
+.LBE542:
 .LFE120:
 	.size	TerminateTask, .-TerminateTask
 	.align 1
@@ -1085,22 +1323,20 @@ TerminateTask:
 	.type	Schedule, @function
 Schedule:
 .LFB121:
-	.loc 2 944 0
-	mov.aa	%a14, %SP
-.LCFI12:
-.LVL126:
-	.loc 2 952 0
+	.loc 3 944 0
+.LVL99:
+	.loc 3 952 0
 	movh.a	%a15, hi:osEE_cdb_var
-	.loc 2 953 0
+	.loc 3 953 0
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
 	ld.a	%a15, [%a15]0
-.LVL127:
-	.loc 2 954 0
+.LVL100:
+	.loc 3 954 0
 	ld.a	%a12, [%a15] 12
-.LVL128:
-	.loc 2 1003 0
-	ld.bu	%d2, [%a12] 1
+.LVL101:
+	.loc 3 1003 0
 	ld.bu	%d15, [%a15] 29
+<<<<<<< Updated upstream
 	jne	%d2, %d15, .L63
 .LBB933:
 .LBB934:
@@ -1154,9 +1390,27 @@ Schedule:
 .LVL135:
 	st.b	[%a12] 1, %d15
 	.loc 2 1011 0
+=======
+	ld.bu	%d2, [%a12] 1
+	jne	%d2, %d15, .L82
+.LBB551:
+	.loc 3 1006 0
+	call	osEE_begin_primitive
+.LVL102:
+	mov	%d15, %d2
+.LVL103:
+	.loc 3 1009 0
+	ld.bu	%d2, [%a15] 28
+.LVL104:
+	.loc 3 1011 0
+>>>>>>> Stashed changes
 	movh.a	%a4, hi:osEE_kdb_var
+	.loc 3 1009 0
+	st.b	[%a12] 1, %d2
+	.loc 3 1011 0
 	lea	%a4, [%a4] lo:osEE_kdb_var
 	call	osEE_scheduler_task_preemption_point
+<<<<<<< Updated upstream
 .LVL136:
 	.loc 2 1013 0
 	ld.bu	%d15, [%a15] 29
@@ -1206,6 +1460,21 @@ Schedule:
 .LBE943:
 .LBE933:
 	.loc 2 1037 0
+=======
+.LVL105:
+	.loc 3 1013 0
+	ld.bu	%d2, [%a15] 29
+	.loc 3 1016 0
+	mov	%d4, %d15
+	.loc 3 1013 0
+	st.b	[%a12] 1, %d2
+	.loc 3 1016 0
+	call	osEE_end_primitive
+.LVL106:
+.L82:
+.LBE551:
+	.loc 3 1037 0
+>>>>>>> Stashed changes
 	mov	%d2, 0
 	ret
 .LFE121:
@@ -1215,35 +1484,27 @@ Schedule:
 	.type	GetResource, @function
 GetResource:
 .LFB122:
-	.loc 2 1045 0
-.LVL144:
-	mov.aa	%a14, %SP
-.LCFI13:
-.LVL145:
-	.loc 2 1055 0
+	.loc 3 1045 0
+.LVL107:
+	.loc 3 1055 0
 	movh.a	%a15, hi:osEE_cdb_var
-	.loc 2 1057 0
+	.loc 3 1057 0
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-	ld.a	%a4, [%a15]0
-.LVL146:
-.LBB951:
-.LBB952:
-	.loc 1 291 0
+	ld.a	%a14, [%a15]0
+.LVL108:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1083 0
 	ld.w	%d15, [%a15] 16
-.LBE952:
-.LBE951:
-	.loc 2 1084 0
+	.loc 3 1084 0
 	mov	%d2, 3
-	.loc 2 1083 0
-	jge.u	%d4, %d15, .L67
-.LBB953:
-	.loc 2 1088 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1083 0
+	jge.u	%d4, %d15, .L84
+.LBB552:
+	.loc 3 1088 0
 	ld.a	%a15, [%a15] 12
 	addsc.a	%a15, %a15, %d4, 2
+<<<<<<< Updated upstream
 	ld.a	%a3, [%a15]0
 .LVL147:
 	.loc 2 1090 0
@@ -1310,26 +1571,42 @@ GetResource:
 	.loc 2 1118 0
 	jge.u	%d4, %d15, .L69
 	.loc 2 1119 0
+=======
+	ld.a	%a12, [%a15]0
+.LVL109:
+	.loc 3 1092 0
+	ld.a	%a15, [%a14] 12
+	.loc 3 1090 0
+	ld.a	%a13, [%a12]0
+.LVL110:
+	.loc 3 1094 0
+	ld.bu	%d15, [%a12] 4
+.LVL111:
+	.loc 3 1096 0
+	ld.bu	%d8, [%a15] 1
+.LVL112:
+	.loc 3 1098 0
+	call	osEE_begin_primitive
+.LVL113:
+	.loc 3 1118 0
+	jge.u	%d8, %d15, .L85
+.LBB553:
+.LBB554:
+	.loc 2 326 0
+	extr	%d3, %d15, 0, 8
+.LBE554:
+.LBE553:
+	.loc 3 1119 0
+>>>>>>> Stashed changes
 	st.b	[%a15] 1, %d15
-.LVL159:
-.LBB963:
-.LBB964:
-	.loc 3 326 0
-	extr	%d5, %d15, 0, 8
-	.loc 3 328 0
-	ne	%d7, %d15, 255
-.LVL160:
-	.loc 3 333 0
-	and	%d15, %d15, 127
-.LVL161:
-	.loc 3 332 0
-	add	%d15, 1
-	.loc 3 330 0
-	andn	%d6, %d2, ~(-257)
-	andn	%d3, %d2, ~(-256)
-	or	%d3, %d15
-	.loc 3 327 0
+.LVL114:
+.LBB558:
+.LBB557:
+	.loc 2 326 0
+	jltz	%d3, .L86
+	.loc 2 327 0
 	andn	%d2, %d2, ~(-256)
+<<<<<<< Updated upstream
 .LVL162:
 	sel	%d3, %d7, %d3, %d6
 	lt	%d5, %d5, 0
@@ -1384,20 +1661,60 @@ GetResource:
 .LBE966:
 .LBE965:
 	.loc 2 1127 0
+=======
+.LVL115:
+	j	.L85
+.LVL116:
+.L86:
+	.loc 2 328 0
+	ne	%d3, %d15, 255
+	jnz	%d3, .L87
+	.loc 2 330 0
+	andn	%d2, %d2, ~(-257)
+.LVL117:
+	j	.L85
+.LVL118:
+.L87:
+.LBB555:
+.LBB556:
+	.loc 2 303 0
+	and	%d15, %d15, 127
+.LVL119:
+.LBE556:
+.LBE555:
+	.loc 2 333 0
+	andn	%d2, %d2, ~(-256)
+.LVL120:
+	add	%d15, 1
+	.loc 2 332 0
+	or	%d2, %d15
+.LVL121:
+.L85:
+.LBE557:
+.LBE558:
+	.loc 3 1125 0
+	mov	%d4, %d2
+	.loc 3 1123 0
+	st.a	[%a13] 8, %a14
+	.loc 3 1125 0
+	call	osEE_end_primitive
+.LVL122:
+	.loc 3 1127 0
+>>>>>>> Stashed changes
 	ld.w	%d15, [%a15] 4
-.LVL171:
-	st.w	[%a2]0, %d15
-	.loc 2 1128 0
-	st.b	[%a2] 4, %d4
-	.loc 2 1129 0
-	st.a	[%a15] 4, %a3
-.LVL172:
-	.loc 2 1131 0
+	.loc 3 1128 0
+	st.b	[%a13] 4, %d8
+	.loc 3 1127 0
+	st.w	[%a13]0, %d15
+	.loc 3 1129 0
+	st.a	[%a15] 4, %a12
+.LVL123:
+	.loc 3 1131 0
 	mov	%d2, 0
-.LVL173:
-.L67:
-.LBE953:
-	.loc 2 1149 0
+.LVL124:
+.L84:
+.LBE552:
+	.loc 3 1149 0
 	ret
 .LFE122:
 	.size	GetResource, .-GetResource
@@ -1406,41 +1723,42 @@ GetResource:
 	.type	ReleaseResource, @function
 ReleaseResource:
 .LFB123:
-	.loc 2 1156 0
-.LVL174:
-	mov.aa	%a14, %SP
-.LCFI14:
-.LVL175:
-	.loc 2 1165 0
+	.loc 3 1156 0
+.LVL125:
+	movh.a	%a12, hi:osEE_kdb_var
+	lea	%a12, [%a12] lo:osEE_kdb_var
+	.loc 3 1165 0
 	movh.a	%a15, hi:osEE_cdb_var
-	.loc 2 1166 0
+	.loc 3 1191 0
+	ld.w	%d15, [%a12] 16
+	.loc 3 1166 0
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-	ld.a	%a3, [%a15]0
-.LVL176:
-.LBB973:
-.LBB974:
-	.loc 1 291 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
-	ld.w	%d15, [%a15] 16
-.LBE974:
-.LBE973:
-	.loc 2 1192 0
+	ld.a	%a14, [%a15]0
+.LVL126:
+	.loc 3 1192 0
 	mov	%d2, 3
-	.loc 2 1191 0
-	jge.u	%d4, %d15, .L75
-.LBB975:
-	.loc 2 1196 0
-	ld.a	%a15, [%a3] 12
-.LVL177:
-	.loc 2 1198 0
-	movh.a	%a2, hi:osEE_kdb_var
-	lea	%a2, [%a2] lo:osEE_kdb_var
-	ld.a	%a2, [%a2] 12
+	.loc 3 1191 0
+	jge.u	%d4, %d15, .L90
+.LBB559:
+	.loc 3 1198 0
+	ld.a	%a2, [%a12] 12
+	.loc 3 1196 0
+	ld.a	%a15, [%a14] 12
+.LVL127:
+	.loc 3 1198 0
 	addsc.a	%a2, %a2, %d4, 2
-	.loc 2 1200 0
+	.loc 3 1200 0
 	ld.a	%a2, [%a2]0
+	ld.a	%a13, [%a2]0
+.LVL128:
+.LBB560:
+	.loc 3 1215 0
+	call	osEE_begin_primitive
+.LVL129:
+	.loc 3 1218 0
+	ld.a	%a2, [%a15] 4
 	ld.a	%a2, [%a2]0
+<<<<<<< Updated upstream
 .LVL178:
 .LBB976:
 .LBB977:
@@ -1503,77 +1821,79 @@ ReleaseResource:
 	ld.bu	%d3, [%a2] 4
 .LVL187:
 	.loc 2 1224 0
+=======
+	ld.w	%d15, [%a2]0
+	st.w	[%a15] 4, %d15
+	.loc 3 1220 0
+	jz	%d15, .L91
+.LBB561:
+	.loc 3 1222 0
+	ld.bu	%d3, [%a13] 4
+.LVL130:
+	j	.L102
+.LVL131:
+.L91:
+.LBE561:
+.LBB562:
+	.loc 3 1228 0
+	ld.bu	%d3, [%a14] 29
+.L102:
+.LVL132:
+.LBB563:
+.LBB564:
+	.loc 2 326 0
+	extr	%d15, %d3, 0, 8
+.LBE564:
+.LBE563:
+	.loc 3 1230 0
+>>>>>>> Stashed changes
 	st.b	[%a15] 1, %d3
-.LVL188:
-.LBB987:
-.LBB988:
-	.loc 3 326 0
-	extr	%d4, %d3, 0, 8
-.LVL189:
-	.loc 3 328 0
-	ne	%d6, %d3, 255
-	.loc 3 333 0
-	and	%d3, %d3, 127
-.LVL190:
-	.loc 3 332 0
-	add	%d3, 1
-	.loc 3 330 0
-	andn	%d5, %d15, ~(-257)
-	andn	%d2, %d15, ~(-256)
-	or	%d2, %d3
-	.loc 3 327 0
-	andn	%d15, %d15, ~(-256)
-.LVL191:
-	sel	%d2, %d6, %d2, %d5
-	lt	%d4, %d4, 0
-	sel	%d15, %d4, %d2, %d15
-	j	.L79
-.LVL192:
-.L77:
-.LBE988:
-.LBE987:
-.LBE986:
-.LBB989:
-	.loc 2 1228 0
-	ld.bu	%d5, [%a3] 29
-.LVL193:
-	.loc 2 1230 0
-	st.b	[%a15] 1, %d5
-.LVL194:
-.LBB990:
-.LBB991:
-	.loc 3 326 0
-	extr	%d6, %d5, 0, 8
-	.loc 3 328 0
-	ne	%d4, %d5, 255
-.LVL195:
-	.loc 3 333 0
-	and	%d5, %d5, 127
-.LVL196:
-	.loc 3 332 0
-	add	%d5, 1
-	.loc 3 330 0
-	andn	%d2, %d15, ~(-257)
-	andn	%d3, %d15, ~(-256)
-	or	%d3, %d5
-	.loc 3 327 0
-	andn	%d5, %d15, ~(-256)
-	sel	%d3, %d4, %d3, %d2
-	lt	%d15, %d6, 0
-.LVL197:
-	sel	%d15, %d15, %d3, %d5
-.L79:
-.LVL198:
-.LBE991:
-.LBE990:
-.LBE989:
-	.loc 2 1234 0
+.LVL133:
+.LBB568:
+.LBB567:
+	.loc 2 326 0
+	jltz	%d15, .L95
+	.loc 2 327 0
+	andn	%d15, %d2, ~(-256)
+.LVL134:
+	j	.L93
+.LVL135:
+.L95:
+	.loc 2 328 0
+	ne	%d15, %d3, 255
+	jnz	%d15, .L96
+	.loc 2 330 0
+	andn	%d15, %d2, ~(-257)
+.LVL136:
+	j	.L93
+.LVL137:
+.L96:
+.LBB565:
+.LBB566:
+	.loc 2 303 0
+	and	%d15, %d3, 127
+.LBE566:
+.LBE565:
+	.loc 2 333 0
+	andn	%d2, %d2, ~(-256)
+.LVL138:
+	add	%d15, 1
+	.loc 2 332 0
+	or	%d15, %d2
+.LVL139:
+.L93:
+.LBE567:
+.LBE568:
+.LBE562:
+	.loc 3 1234 0
 	mov	%d2, 0
-	st.w	[%a2] 8, %d2
-	.loc 2 1237 0
-	movh.a	%a4, hi:osEE_kdb_var
-	lea	%a4, [%a4] lo:osEE_kdb_var
+	.loc 3 1237 0
+	mov.aa	%a4, %a12
+	.loc 3 1234 0
+	st.w	[%a13] 8, %d2
+	.loc 3 1237 0
 	call	osEE_scheduler_task_preemption_point
+<<<<<<< Updated upstream
 .LVL199:
 .LBB992:
 .LBB993:
@@ -1619,12 +1939,20 @@ ReleaseResource:
 .LBE993:
 .LBE992:
 	.loc 2 1241 0
+=======
+.LVL140:
+	.loc 3 1239 0
+	mov	%d4, %d15
+	call	osEE_end_primitive
+.LVL141:
+	.loc 3 1241 0
+>>>>>>> Stashed changes
 	mov	%d2, 0
-.LVL207:
-.L75:
-.LBE976:
-.LBE975:
-	.loc 2 1259 0
+.LVL142:
+.L90:
+.LBE560:
+.LBE559:
+	.loc 3 1259 0
 	ret
 .LFE123:
 	.size	ReleaseResource, .-ReleaseResource
@@ -1633,13 +1961,17 @@ ReleaseResource:
 	.type	ShutdownOS, @function
 ShutdownOS:
 .LFB124:
-	.loc 2 1267 0
-.LVL208:
-	mov.aa	%a14, %SP
-.LCFI15:
-	.loc 2 1275 0
+	.loc 3 1267 0
+.LVL143:
+	.loc 3 1267 0
+	mov	%d15, %d4
+	.loc 3 1276 0
+	call	osEE_begin_primitive
+.LVL144:
+	.loc 3 1277 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
+<<<<<<< Updated upstream
 .LVL209:
 .LBB1000:
 .LBB1001:
@@ -1746,6 +2078,24 @@ ShutdownOS:
 .LBE1010:
 .LBE1009:
 	.loc 2 1327 0
+=======
+	ld.bu	%d3, [%a15] 16
+.LVL145:
+	.loc 3 1305 0
+	add	%d3, -1
+.LVL146:
+	jge.u	%d3, 2, .L104
+	.loc 3 1308 0
+	mov	%d4, %d15
+	j	osEE_shutdown_os.constprop.15
+.LVL147:
+.L104:
+	.loc 3 1324 0
+	mov	%d4, %d2
+	call	osEE_end_primitive
+.LVL148:
+	.loc 3 1327 0
+>>>>>>> Stashed changes
 	mov	%d2, 7
 	ret
 .LFE124:
@@ -1755,88 +2105,75 @@ ShutdownOS:
 	.type	GetTaskID, @function
 GetTaskID:
 .LFB125:
-	.loc 2 1334 0
-.LVL227:
-	mov.aa	%a14, %SP
-.LCFI16:
-	.loc 2 1343 0
+	.loc 3 1334 0
+.LVL149:
+	.loc 3 1343 0
 	movh.a	%a15, hi:osEE_cdb_var
-	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LVL228:
-	.loc 2 1374 0
+	ld.a	%a2, [%a15] lo:osEE_cdb_var
+.LVL150:
+	.loc 3 1374 0
 	mov	%d2, 14
-	.loc 2 1373 0
-	jz.a	%a4, .L90
-.LVL229:
-.LBB1017:
-	.loc 2 1379 0
-	ld.a	%a2, [%a15]0
-.LVL230:
-	.loc 2 1389 0
-	ld.bu	%d15, [%a2] 20
-	jge.u	%d15, 2, .L91
-	.loc 2 1391 0
-	ld.w	%d2, [%a2] 16
-.LVL231:
-	j	.L92
-.LVL232:
-.L91:
-	.loc 2 1377 0
-	mov	%d2, -1
-	.loc 2 1392 0
-	jne	%d15, 2, .L92
-.LBB1018:
-	.loc 2 1396 0
-	ld.a	%a15, [%a15] 12
-.LVL233:
+	.loc 3 1373 0
+	jz.a	%a4, .L106
+.LVL151:
+.LBB569:
+	.loc 3 1379 0
+	ld.a	%a15, [%a2]0
+.LVL152:
+	.loc 3 1389 0
+	ld.bu	%d2, [%a15] 20
+	jge.u	%d2, 2, .L107
+	.loc 3 1391 0
+	ld.w	%d15, [%a15] 16
+.LVL153:
+	j	.L108
+.LVL154:
+.L107:
+	.loc 3 1377 0
+	mov	%d15, -1
+	.loc 3 1392 0
+	jne	%d2, 2, .L108
+.LBB570:
+	.loc 3 1396 0
+	ld.a	%a15, [%a2] 12
+.LVL155:
+.L110:
+.LBB571:
+	.loc 3 1405 0
 	ld.a	%a15, [%a15]0
-.LVL234:
-	.loc 2 1398 0
-	jz.a	%a15, .L92
-.LBB1019:
-	.loc 2 1400 0
+.LVL156:
+.LBE571:
+	.loc 3 1398 0
+	jz.a	%a15, .L115
+.LBB572:
+	.loc 3 1400 0
 	ld.a	%a2, [%a15] 4
-.LVL235:
-	.loc 2 1401 0
+.LVL157:
+	.loc 3 1401 0
 	ld.bu	%d15, [%a2] 20
-	jge.u	%d15, 2, .L94
-	j	.L93
-.L95:
-.LVL236:
-	.loc 2 1400 0
-	ld.a	%a2, [%a15] 4
-	.loc 2 1401 0
-	ld.bu	%d15, [%a2] 20
-	jge.u	%d15, 2, .L94
-.LVL237:
-.L93:
-	.loc 2 1402 0
-	ld.w	%d2, [%a2] 16
-.LVL238:
-	.loc 2 1403 0
-	j	.L92
-.LVL239:
-.L94:
-	.loc 2 1405 0
-	ld.a	%a15, [%a15]0
-.LVL240:
-.LBE1019:
-	.loc 2 1398 0
-	jnz.a	%a15, .L95
-.LBE1018:
-	.loc 2 1377 0
-	mov	%d2, -1
-.LVL241:
-.L92:
-	.loc 2 1413 0
-	st.w	[%a4]0, %d2
-.LVL242:
-	.loc 2 1414 0
+	jge.u	%d15, 2, .L110
+	.loc 3 1402 0
+	ld.w	%d15, [%a2] 16
+.LVL158:
+	.loc 3 1403 0
+	j	.L108
+.LVL159:
+.L115:
+.LBE572:
+.LBE570:
+	.loc 3 1377 0
+	mov	%d15, -1
+.LVL160:
+.L108:
+	.loc 3 1413 0
+	st.w	[%a4]0, %d15
+.LVL161:
+	.loc 3 1414 0
 	mov	%d2, 0
-.LVL243:
-.L90:
-.LBE1017:
-	.loc 2 1431 0
+.LVL162:
+.L106:
+.LBE569:
+	.loc 3 1431 0
 	ret
 .LFE125:
 	.size	GetTaskID, .-GetTaskID
@@ -1845,104 +2182,78 @@ GetTaskID:
 	.type	GetTaskState, @function
 GetTaskState:
 .LFB126:
-	.loc 2 1439 0
-.LVL244:
-	mov.aa	%a14, %SP
-.LCFI17:
-.LVL245:
-	.loc 2 1480 0
+	.loc 3 1439 0
+.LVL163:
+	.loc 3 1480 0
 	mov	%d2, 14
-	.loc 2 1479 0
-	jz.a	%a4, .L101
-.LVL246:
-.LBB1020:
-.LBB1021:
-	.loc 1 276 0
+	.loc 3 1479 0
+	jz.a	%a4, .L117
+.LVL164:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1482 0
 	ld.w	%d15, [%a15] 8
-.LBE1021:
-.LBE1020:
-	.loc 2 1483 0
+	.loc 3 1483 0
 	mov	%d2, 3
-	.loc 2 1482 0
-	jge.u	%d4, %d15, .L101
-.LVL247:
-.LBB1022:
-	.loc 2 1487 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1482 0
+	jge.u	%d4, %d15, .L117
+.LVL165:
+.LBB573:
+	.loc 3 1487 0
 	ld.a	%a15, [%a15] 4
+	.loc 3 1511 0
+	mov	%d2, 0
+	.loc 3 1487 0
 	addsc.a	%a15, %a15, %d4, 2
-	.loc 2 1490 0
+	.loc 3 1490 0
 	ld.a	%a15, [%a15]0
 	ld.a	%a15, [%a15] 12
-	.loc 2 1491 0
+	.loc 3 1491 0
 	ld.bu	%d15, [%a15] 2
-	.loc 2 1511 0
-	mov	%d2, 0
-	.loc 2 1491 0
-	jge.u	%d15, 6, .L101
-	movh.a	%a15, hi:.L103
-	lea	%a15, [%a15] lo:.L103
+	jge.u	%d15, 6, .L117
+	movh.a	%a15, hi:.L119
+	lea	%a15, [%a15] lo:.L119
 	addsc.a	%a15, %a15, %d15, 2
 	ji	%a15
 	.align 2
 	.align 2
-.L103:
+.L119:
 	.code32
-	j	.L102
+	j	.L118
 	.code32
-	j	.L104
+	j	.L120
 	.code32
-	j	.L104
+	j	.L120
 	.code32
-	j	.L105
+	j	.L121
 	.code32
-	j	.L106
+	j	.L122
 	.code32
-	j	.L106
-.L102:
-	.loc 2 1493 0
+	j	.L122
+.L118:
+	.loc 3 1493 0
 	mov	%d15, 0
-	st.b	[%a4]0, %d15
-.LVL248:
-	.loc 2 1511 0
-	mov	%d2, 0
-	.loc 2 1494 0
-	ret
-.LVL249:
-.L104:
-	.loc 2 1497 0
+	j	.L127
+.L120:
+	.loc 3 1497 0
 	mov	%d15, 1
-	st.b	[%a4]0, %d15
-.LVL250:
-	.loc 2 1511 0
-	mov	%d2, 0
-	.loc 2 1498 0
-	ret
-.LVL251:
-.L105:
-	.loc 2 1500 0
+	j	.L127
+.L121:
+	.loc 3 1500 0
 	mov	%d15, 3
-	st.b	[%a4]0, %d15
-.LVL252:
-	.loc 2 1511 0
-	mov	%d2, 0
-	.loc 2 1501 0
-	ret
-.LVL253:
-.L106:
-	.loc 2 1504 0
+	j	.L127
+.L122:
+	.loc 3 1504 0
 	mov	%d15, 4
+.L127:
 	st.b	[%a4]0, %d15
-.LVL254:
-	.loc 2 1511 0
+.LVL166:
+	.loc 3 1511 0
 	mov	%d2, 0
-.LVL255:
-.L101:
-.LBE1022:
-	.loc 2 1529 0
+.LVL167:
+.L117:
+.LBE573:
+	.loc 3 1529 0
 	ret
 .LFE126:
 	.size	GetTaskState, .-GetTaskState
@@ -1951,29 +2262,22 @@ GetTaskState:
 	.type	SetRelAlarm, @function
 SetRelAlarm:
 .LFB127:
-	.loc 2 1539 0
-.LVL256:
-	mov.aa	%a14, %SP
-.LCFI18:
-.LVL257:
-.LBB1023:
-.LBB1024:
-	.loc 1 868 0
+	.loc 3 1539 0
+.LVL168:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
-	ld.w	%d15, [%a15] 32
-.LBE1024:
-.LBE1023:
-	.loc 2 1576 0
-	mov	%d2, 3
-	.loc 2 1575 0
-	jge.u	%d4, %d15, .L111
-.LBB1025:
-	.loc 2 1580 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1575 0
+	ld.w	%d2, [%a15] 32
+	.loc 3 1576 0
+	mov	%d8, 3
+	.loc 3 1575 0
+	jge.u	%d4, %d2, .L129
+.LBB574:
+	.loc 3 1580 0
 	ld.a	%a15, [%a15] 28
+	mov	%e8, %d5, %d6
 	addsc.a	%a15, %a15, %d4, 2
+<<<<<<< Updated upstream
 	ld.a	%a5, [%a15]0
 .LVL258:
 	.loc 2 1582 0
@@ -2078,6 +2382,40 @@ SetRelAlarm:
 .LBE1026:
 .LBE1025:
 	.loc 2 1621 0
+=======
+	ld.a	%a15, [%a15]0
+.LVL169:
+	.loc 3 1582 0
+	ld.a	%a12, [%a15] 4
+.LVL170:
+.LBB575:
+	.loc 3 1597 0
+	call	osEE_begin_primitive
+.LVL171:
+	.loc 3 1599 0
+	mov	%e4, %d8, %d9
+	mov.aa	%a4, %a12
+	mov.aa	%a5, %a15
+	.loc 3 1597 0
+	mov	%d15, %d2
+.LVL172:
+	.loc 3 1599 0
+	call	osEE_alarm_set_rel
+.LVL173:
+	.loc 3 1601 0
+	mov	%d4, %d15
+	.loc 3 1599 0
+	mov	%d8, %d2
+.LVL174:
+	.loc 3 1601 0
+	call	osEE_end_primitive
+.LVL175:
+.L129:
+.LBE575:
+.LBE574:
+	.loc 3 1621 0
+	mov	%d2, %d8
+>>>>>>> Stashed changes
 	ret
 .LFE127:
 	.size	SetRelAlarm, .-SetRelAlarm
@@ -2086,29 +2424,22 @@ SetRelAlarm:
 	.type	SetAbsAlarm, @function
 SetAbsAlarm:
 .LFB128:
-	.loc 2 1630 0
-.LVL275:
-	mov.aa	%a14, %SP
-.LCFI19:
-.LVL276:
-.LBB1044:
-.LBB1045:
-	.loc 1 868 0
+	.loc 3 1630 0
+.LVL176:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
-	ld.w	%d15, [%a15] 32
-.LBE1045:
-.LBE1044:
-	.loc 2 1667 0
-	mov	%d2, 3
-	.loc 2 1666 0
-	jge.u	%d4, %d15, .L116
-.LBB1046:
-	.loc 2 1671 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1666 0
+	ld.w	%d2, [%a15] 32
+	.loc 3 1667 0
+	mov	%d8, 3
+	.loc 3 1666 0
+	jge.u	%d4, %d2, .L132
+.LBB576:
+	.loc 3 1671 0
 	ld.a	%a15, [%a15] 28
+	mov	%e8, %d5, %d6
 	addsc.a	%a15, %a15, %d4, 2
+<<<<<<< Updated upstream
 	ld.a	%a5, [%a15]0
 .LVL277:
 	.loc 2 1673 0
@@ -2213,6 +2544,40 @@ SetAbsAlarm:
 .LBE1047:
 .LBE1046:
 	.loc 2 1711 0
+=======
+	ld.a	%a15, [%a15]0
+.LVL177:
+	.loc 3 1673 0
+	ld.a	%a12, [%a15] 4
+.LVL178:
+.LBB577:
+	.loc 3 1687 0
+	call	osEE_begin_primitive
+.LVL179:
+	.loc 3 1689 0
+	mov	%e4, %d8, %d9
+	mov.aa	%a4, %a12
+	mov.aa	%a5, %a15
+	.loc 3 1687 0
+	mov	%d15, %d2
+.LVL180:
+	.loc 3 1689 0
+	call	osEE_alarm_set_abs
+.LVL181:
+	.loc 3 1691 0
+	mov	%d4, %d15
+	.loc 3 1689 0
+	mov	%d8, %d2
+.LVL182:
+	.loc 3 1691 0
+	call	osEE_end_primitive
+.LVL183:
+.L132:
+.LBE577:
+.LBE576:
+	.loc 3 1711 0
+	mov	%d2, %d8
+>>>>>>> Stashed changes
 	ret
 .LFE128:
 	.size	SetAbsAlarm, .-SetAbsAlarm
@@ -2221,29 +2586,21 @@ SetAbsAlarm:
 	.type	CancelAlarm, @function
 CancelAlarm:
 .LFB129:
-	.loc 2 1718 0
-.LVL294:
-	mov.aa	%a14, %SP
-.LCFI20:
-.LVL295:
-.LBB1065:
-.LBB1066:
-	.loc 1 868 0
+	.loc 3 1718 0
+.LVL184:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1754 0
 	ld.w	%d15, [%a15] 32
-.LBE1066:
-.LBE1065:
-	.loc 2 1755 0
-	mov	%d2, 3
-	.loc 2 1754 0
-	jge.u	%d4, %d15, .L121
-.LBB1067:
-	.loc 2 1758 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1755 0
+	mov	%d8, 3
+	.loc 3 1754 0
+	jge.u	%d4, %d15, .L135
+.LBB578:
+	.loc 3 1758 0
 	ld.a	%a15, [%a15] 28
 	addsc.a	%a15, %a15, %d4, 2
+<<<<<<< Updated upstream
 	ld.a	%a4, [%a15]0
 .LVL296:
 .LBB1068:
@@ -2339,6 +2696,33 @@ CancelAlarm:
 .LBE1077:
 .LBE1067:
 	.loc 2 1781 0
+=======
+	ld.a	%a15, [%a15]0
+.LVL185:
+	.loc 3 1760 0
+	call	osEE_begin_primitive
+.LVL186:
+	.loc 3 1762 0
+	mov.aa	%a4, %a15
+	.loc 3 1760 0
+	mov	%d15, %d2
+.LVL187:
+	.loc 3 1762 0
+	call	osEE_alarm_cancel
+.LVL188:
+	.loc 3 1764 0
+	mov	%d4, %d15
+	.loc 3 1762 0
+	mov	%d8, %d2
+.LVL189:
+	.loc 3 1764 0
+	call	osEE_end_primitive
+.LVL190:
+.L135:
+.LBE578:
+	.loc 3 1781 0
+	mov	%d2, %d8
+>>>>>>> Stashed changes
 	ret
 .LFE129:
 	.size	CancelAlarm, .-CancelAlarm
@@ -2347,34 +2731,27 @@ CancelAlarm:
 	.type	GetAlarm, @function
 GetAlarm:
 .LFB130:
-	.loc 2 1789 0
-.LVL310:
-	mov.aa	%a14, %SP
-.LCFI21:
-.LVL311:
-.LBB1085:
-.LBB1086:
-	.loc 1 868 0
+	.loc 3 1789 0
+.LVL191:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
-	ld.w	%d15, [%a15] 32
-.LBE1086:
-.LBE1085:
-	.loc 2 1826 0
-	mov	%d2, 3
-	.loc 2 1825 0
-	jge.u	%d4, %d15, .L126
-	.loc 2 1829 0
-	mov	%d2, 14
-	.loc 2 1828 0
-	jz.a	%a4, .L126
-.LBB1087:
-	.loc 2 1833 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1825 0
+	ld.w	%d2, [%a15] 32
+	.loc 3 1826 0
+	mov	%d15, 3
+	.loc 3 1825 0
+	jge.u	%d4, %d2, .L138
+	.loc 3 1829 0
+	mov	%d15, 14
+	.loc 3 1828 0
+	jz.a	%a4, .L138
+.LBB579:
+	.loc 3 1833 0
 	ld.a	%a15, [%a15] 28
+	mov.aa	%a12, %a4
 	addsc.a	%a15, %a15, %d4, 2
 	ld.a	%a15, [%a15]0
+<<<<<<< Updated upstream
 .LVL312:
 .LBB1088:
 .LBB1089:
@@ -2424,9 +2801,21 @@ GetAlarm:
 .LBE1089:
 .LBE1088:
 	.loc 2 1837 0
+=======
+.LVL192:
+	.loc 3 1835 0
+	call	osEE_begin_primitive
+.LVL193:
+	.loc 3 1837 0
+>>>>>>> Stashed changes
 	mov.aa	%a4, %a15
-.LVL319:
+	mov.aa	%a5, %a12
+	.loc 3 1835 0
+	mov	%d8, %d2
+.LVL194:
+	.loc 3 1837 0
 	call	osEE_alarm_get
+<<<<<<< Updated upstream
 .LVL320:
 .LBB1097:
 .LBB1098:
@@ -2472,6 +2861,21 @@ GetAlarm:
 .LBE1097:
 .LBE1087:
 	.loc 2 1857 0
+=======
+.LVL195:
+	.loc 3 1839 0
+	mov	%d4, %d8
+	.loc 3 1837 0
+	mov	%d15, %d2
+.LVL196:
+	.loc 3 1839 0
+	call	osEE_end_primitive
+.LVL197:
+.L138:
+.LBE579:
+	.loc 3 1857 0
+	mov	%d2, %d15
+>>>>>>> Stashed changes
 	ret
 .LFE130:
 	.size	GetAlarm, .-GetAlarm
@@ -2480,48 +2884,38 @@ GetAlarm:
 	.type	GetAlarmBase, @function
 GetAlarmBase:
 .LFB131:
-	.loc 2 1865 0
-.LVL327:
-	mov.aa	%a14, %SP
-.LCFI22:
-.LVL328:
-.LBB1105:
-.LBB1106:
-	.loc 1 868 0
+	.loc 3 1865 0
+.LVL198:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1901 0
 	ld.w	%d15, [%a15] 32
-.LBE1106:
-.LBE1105:
-	.loc 2 1902 0
+	.loc 3 1902 0
 	mov	%d2, 3
-	.loc 2 1901 0
-	jge.u	%d4, %d15, .L132
-	.loc 2 1905 0
+	.loc 3 1901 0
+	jge.u	%d4, %d15, .L143
+	.loc 3 1905 0
 	mov	%d2, 14
-	.loc 2 1904 0
-	jz.a	%a4, .L132
-.LVL329:
-.LBB1107:
-	.loc 2 1909 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 1904 0
+	jz.a	%a4, .L143
+.LVL199:
+.LBB580:
+	.loc 3 1909 0
 	ld.a	%a15, [%a15] 28
 	addsc.a	%a15, %a15, %d4, 2
-	.loc 2 1913 0
+	.loc 3 1913 0
 	ld.a	%a15, [%a15]0
+	.loc 3 1915 0
 	ld.a	%a15, [%a15] 4
-.LVL330:
-	.loc 2 1915 0
 	ld.d	%e2, [%a15] 4
 	st.d	[%a4]0, %e2
-.LVL331:
-	.loc 2 1917 0
+.LVL200:
+	.loc 3 1917 0
 	mov	%d2, 0
-.LVL332:
-.L132:
-.LBE1107:
-	.loc 2 1935 0
+.LVL201:
+.L143:
+.LBE580:
+	.loc 3 1935 0
 	ret
 .LFE131:
 	.size	GetAlarmBase, .-GetAlarmBase
@@ -2530,12 +2924,11 @@ GetAlarmBase:
 	.type	WaitEvent, @function
 WaitEvent:
 .LFB132:
-	.loc 2 1945 0
-.LVL333:
-	mov.aa	%a14, %SP
-.LCFI23:
-	.loc 2 1950 0
+	.loc 3 1945 0
+.LVL202:
+	.loc 3 1950 0
 	movh.a	%a15, hi:osEE_cdb_var
+<<<<<<< Updated upstream
 	ld.a	%a12, [%a15] lo:osEE_cdb_var
 .LVL334:
 	.loc 2 1952 0
@@ -2592,32 +2985,55 @@ WaitEvent:
 .LBE1110:
 .LBE1109:
 	.loc 2 2008 0
+=======
+	ld.a	%a13, [%a15] lo:osEE_cdb_var
+	lea	%a14, [%a15] lo:osEE_cdb_var
+.LVL203:
+	.loc 3 1952 0
+	ld.a	%a12, [%a13]0
+.LVL204:
+	.loc 3 1945 0
+	mov	%d8, %d4
+	.loc 3 1954 0
+	ld.a	%a15, [%a12] 12
+.LVL205:
+.LBB581:
+	.loc 3 2004 0
+	call	osEE_begin_primitive
+.LVL206:
+	.loc 3 2008 0
+>>>>>>> Stashed changes
 	ld.w	%d15, [%a15] 12
-.LVL343:
-	and	%d15, %d4
-	jnz	%d15, .L137
-	.loc 2 2010 0
-	st.w	[%a15] 8, %d4
-	.loc 2 2013 0
-	movh.a	%a4, hi:osEE_cdb_var
-	lea	%a4, [%a4] lo:osEE_cdb_var
-	lea	%a5, [%a12] 4
+	.loc 3 2004 0
+	mov	%d9, %d2
+.LVL207:
+	.loc 3 2008 0
+	and	%d15, %d8
+	jnz	%d15, .L148
+	.loc 3 2013 0
+	mov.aa	%a4, %a14
+	lea	%a5, [%a13] 4
+	.loc 3 2010 0
+	st.w	[%a15] 8, %d8
+	.loc 3 2013 0
 	call	osEE_scheduler_core_pop_running
-.LVL344:
-	.loc 2 2012 0
+.LVL208:
+	.loc 3 2019 0
+	ld.a	%a5, [%a13]0
+	.loc 3 2015 0
+	mov	%d2, 3
+	.loc 3 2012 0
 	st.a	[%a15] 16, %a2
-	.loc 2 2015 0
-	mov	%d15, 3
-	st.b	[%a15] 2, %d15
-.LVL345:
-	.loc 2 2019 0
-	mov.aa	%a4, %a13
-	ld.a	%a5, [%a12]0
+	.loc 3 2015 0
+	st.b	[%a15] 2, %d2
+.LVL209:
+	.loc 3 2019 0
+	mov.aa	%a4, %a12
 	call	osEE_change_context_from_running
-.LVL346:
-	.loc 2 2022 0
-	mov	%d15, 0
+.LVL210:
+	.loc 3 2022 0
 	st.w	[%a15] 8, %d15
+<<<<<<< Updated upstream
 .LVL347:
 .L137:
 .LBB1118:
@@ -2664,6 +3080,16 @@ WaitEvent:
 .LBE1118:
 .LBE1108:
 	.loc 2 2047 0
+=======
+.LVL211:
+.L148:
+	.loc 3 2030 0
+	mov	%d4, %d9
+	call	osEE_end_primitive
+.LVL212:
+.LBE581:
+	.loc 3 2047 0
+>>>>>>> Stashed changes
 	mov	%d2, 0
 	ret
 .LFE132:
@@ -2673,24 +3099,20 @@ WaitEvent:
 	.type	SetEvent, @function
 SetEvent:
 .LFB133:
-	.loc 2 2055 0
-.LVL354:
-	mov.aa	%a14, %SP
-.LCFI24:
-	sub.a	%SP, 8
-.LVL355:
-.LBB1126:
-.LBB1127:
-	.loc 1 276 0
+	.loc 3 2055 0
+.LVL213:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
-	ld.w	%d15, [%a15] 8
-.LBE1127:
-.LBE1126:
-	.loc 2 2103 0
-	jlt.u	%d4, %d15, .L140
-	.loc 2 2104 0
+	.loc 3 2103 0
+	ld.w	%d2, [%a15] 8
+	.loc 3 2055 0
+	sub.a	%SP, 8
+.LCFI0:
+	.loc 3 2103 0
+	jlt.u	%d4, %d2, .L150
+	.loc 3 2104 0
 	mov	%d15, 3
+<<<<<<< Updated upstream
 	st.b	[%a14] -1, %d15
 	j	.L141
 .L140:
@@ -2752,21 +3174,43 @@ SetEvent:
 .LBE1129:
 	.loc 2 2113 0
 	lea	%a5, [%a14] -1
+=======
+	st.b	[%SP] 7, %d15
+	j	.L151
+.L150:
+.LBB582:
+	.loc 3 2109 0
+	ld.a	%a2, [%a15] 4
+	mov	%d8, %d5
+	addsc.a	%a2, %a2, %d4, 2
+	ld.a	%a12, [%a2]0
+.LVL214:
+	.loc 3 2111 0
+	call	osEE_begin_primitive
+.LVL215:
+	.loc 3 2113 0
+	mov.aa	%a4, %a12
+	mov	%d4, %d8
+	lea	%a5, [%SP] 7
+	.loc 3 2111 0
+	mov	%d15, %d2
+.LVL216:
+	.loc 3 2113 0
+>>>>>>> Stashed changes
 	call	osEE_task_event_set_mask
-.LVL364:
-	.loc 2 2115 0
-	jz.a	%a2, .L143
-	.loc 2 2117 0
-	movh.a	%a4, hi:osEE_kdb_var
-	lea	%a4, [%a4] lo:osEE_kdb_var
+.LVL217:
+	.loc 3 2115 0
+	jz.a	%a2, .L153
+	.loc 3 2117 0
+	mov.aa	%a4, %a15
 	mov.aa	%a5, %a2
 	call	osEE_scheduler_task_unblocked
-.LVL365:
-	jz	%d2, .L143
-	.loc 2 2119 0
-	movh.a	%a4, hi:osEE_kdb_var
-	lea	%a4, [%a4] lo:osEE_kdb_var
+.LVL218:
+	jz	%d2, .L153
+	.loc 3 2119 0
+	mov.aa	%a4, %a15
 	call	osEE_scheduler_task_preemption_point
+<<<<<<< Updated upstream
 .LVL366:
 .L143:
 .LBB1138:
@@ -2814,6 +3258,18 @@ SetEvent:
 .LBE1128:
 	.loc 2 2141 0
 	ld.bu	%d2, [%a14] -1
+=======
+.LVL219:
+.L153:
+	.loc 3 2122 0
+	mov	%d4, %d15
+	call	osEE_end_primitive
+.LVL220:
+.L151:
+.LBE582:
+	.loc 3 2141 0
+	ld.bu	%d2, [%SP] 7
+>>>>>>> Stashed changes
 	ret
 .LFE133:
 	.size	SetEvent, .-SetEvent
@@ -2822,48 +3278,41 @@ SetEvent:
 	.type	GetEvent, @function
 GetEvent:
 .LFB134:
-	.loc 2 2149 0
-.LVL373:
-	mov.aa	%a14, %SP
-.LCFI25:
-.LVL374:
-.LBB1146:
-.LBB1147:
-	.loc 1 276 0
+	.loc 3 2149 0
+.LVL221:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2202 0
 	ld.w	%d15, [%a15] 8
-.LBE1147:
-.LBE1146:
-	.loc 2 2203 0
+	.loc 3 2203 0
 	mov	%d2, 3
-	.loc 2 2202 0
-	jge.u	%d4, %d15, .L146
-.LVL375:
-.LBB1148:
-	.loc 2 2207 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2202 0
+	jge.u	%d4, %d15, .L159
+.LVL222:
+.LBB583:
+	.loc 3 2207 0
 	ld.a	%a15, [%a15] 4
+	.loc 3 2221 0
+	mov	%d2, 14
+	.loc 3 2207 0
 	addsc.a	%a15, %a15, %d4, 2
-	.loc 2 2209 0
+	.loc 3 2209 0
 	ld.a	%a15, [%a15]0
 	ld.a	%a15, [%a15] 12
-.LVL376:
-	.loc 2 2221 0
-	mov	%d2, 14
-	.loc 2 2220 0
-	jz.a	%a4, .L146
-	.loc 2 2225 0
+.LVL223:
+	.loc 3 2220 0
+	jz.a	%a4, .L159
+.LVL224:
+	.loc 3 2225 0
 	ld.w	%d15, [%a15] 12
-	st.w	[%a4]0, %d15
-.LVL377:
-	.loc 2 2227 0
+	.loc 3 2227 0
 	mov	%d2, 0
-.LVL378:
-.L146:
-.LBE1148:
-	.loc 2 2247 0
+	.loc 3 2225 0
+	st.w	[%a4]0, %d15
+.LVL225:
+.L159:
+.LBE583:
+	.loc 3 2247 0
 	ret
 .LFE134:
 	.size	GetEvent, .-GetEvent
@@ -2872,18 +3321,19 @@ GetEvent:
 	.type	ClearEvent, @function
 ClearEvent:
 .LFB135:
-	.loc 2 2254 0
-.LVL379:
-	mov.aa	%a14, %SP
-.LCFI26:
-.LVL380:
-	.loc 2 2263 0
+	.loc 3 2254 0
+.LVL226:
+	.loc 3 2263 0
 	movh.a	%a15, hi:osEE_cdb_var
-	.loc 2 2265 0
+	.loc 3 2265 0
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
-	.loc 2 2267 0
+	.loc 3 2267 0
 	ld.a	%a15, [%a15]0
+	.loc 3 2254 0
+	mov	%d15, %d4
+	.loc 3 2267 0
 	ld.a	%a15, [%a15] 12
+<<<<<<< Updated upstream
 .LVL381:
 .LBB1149:
 .LBB1150:
@@ -2984,6 +3434,24 @@ ClearEvent:
 .LBE1159:
 .LBE1149:
 	.loc 2 2326 0
+=======
+.LVL227:
+.LBB584:
+	.loc 3 2301 0
+	call	osEE_begin_primitive
+.LVL228:
+	.loc 3 2305 0
+	ld.w	%d4, [%a15] 12
+	andn	%d4, %d4, %d15
+	st.w	[%a15] 12, %d4
+.LVL229:
+	.loc 3 2308 0
+	mov	%d4, %d2
+	call	osEE_end_primitive
+.LVL230:
+.LBE584:
+	.loc 3 2326 0
+>>>>>>> Stashed changes
 	mov	%d2, 0
 	ret
 .LFE135:
@@ -2993,46 +3461,37 @@ ClearEvent:
 	.type	GetCounterValue, @function
 GetCounterValue:
 .LFB136:
-	.loc 2 2336 0
-.LVL398:
-	mov.aa	%a14, %SP
-.LCFI27:
-.LVL399:
-.LBB1167:
-.LBB1168:
-	.loc 1 744 0
+	.loc 3 2336 0
+.LVL231:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2374 0
 	ld.w	%d15, [%a15] 24
-.LBE1168:
-.LBE1167:
-	.loc 2 2375 0
+	.loc 3 2375 0
 	mov	%d2, 3
-	.loc 2 2374 0
-	jge.u	%d4, %d15, .L153
-	.loc 2 2378 0
+	.loc 3 2374 0
+	jge.u	%d4, %d15, .L165
+	.loc 3 2378 0
 	mov	%d2, 14
-	.loc 2 2377 0
-	jz.a	%a4, .L153
-.LVL400:
-.LBB1169:
-	.loc 2 2382 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2377 0
+	jz.a	%a4, .L165
+.LVL232:
+.LBB585:
+	.loc 3 2382 0
 	ld.a	%a15, [%a15] 20
+	.loc 3 2409 0
+	mov	%d2, 0
+	.loc 3 2382 0
 	addsc.a	%a15, %a15, %d4, 2
-	.loc 2 2407 0
+	.loc 3 2407 0
 	ld.a	%a15, [%a15]0
 	ld.a	%a15, [%a15]0
 	ld.w	%d15, [%a15] 4
 	st.w	[%a4]0, %d15
-.LVL401:
-	.loc 2 2409 0
-	mov	%d2, 0
-.LVL402:
-.L153:
-.LBE1169:
-	.loc 2 2428 0
+.LVL233:
+.L165:
+.LBE585:
+	.loc 3 2428 0
 	ret
 .LFE136:
 	.size	GetCounterValue, .-GetCounterValue
@@ -3041,76 +3500,67 @@ GetCounterValue:
 	.type	GetElapsedValue, @function
 GetElapsedValue:
 .LFB137:
-	.loc 2 2437 0
-.LVL403:
-	mov.aa	%a14, %SP
-.LCFI28:
-.LVL404:
-.LBB1170:
-.LBB1171:
-	.loc 1 744 0
+	.loc 3 2437 0
+.LVL234:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2474 0
 	ld.w	%d15, [%a15] 24
-.LBE1171:
-.LBE1170:
-	.loc 2 2475 0
+	.loc 3 2475 0
 	mov	%d2, 3
-	.loc 2 2474 0
-	jge.u	%d4, %d15, .L157
-	.loc 2 2477 0
-	mov.d	%d2, %a4
-	mov.d	%d3, %a5
-	eq	%d15, %d2, 0
-	or.eq	%d15, %d3, 0
-	.loc 2 2478 0
+	.loc 3 2474 0
+	jge.u	%d4, %d15, .L170
+	.loc 3 2477 0
+	mov.d	%d3, %a4
+	mov.d	%d5, %a5
+	eq	%d15, %d3, 0
+	or.eq	%d15, %d5, 0
+	.loc 3 2478 0
 	mov	%d2, 14
-	.loc 2 2477 0
-	jnz	%d15, .L157
-.LBB1172:
-	.loc 2 2482 0
-	movh.a	%a15, hi:osEE_kdb_var
-	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2477 0
+	jnz	%d15, .L170
+.LBB586:
+	.loc 3 2482 0
 	ld.a	%a15, [%a15] 20
+	.loc 3 2484 0
+	ld.w	%d15, [%a4]0
+	.loc 3 2482 0
 	addsc.a	%a15, %a15, %d4, 2
 	ld.a	%a15, [%a15]0
-.LVL405:
-	.loc 2 2484 0
-	ld.w	%d15, [%a4]0
-.LVL406:
-.LBB1173:
-	.loc 2 2509 0
+.LVL235:
+.LBB587:
+	.loc 3 2509 0
 	ld.a	%a2, [%a15]0
 	ld.w	%d2, [%a2] 4
-.LVL407:
-	.loc 2 2517 0
-	jlt.u	%d2, %d15, .L158
-	.loc 2 2517 0 is_stmt 0 discriminator 1
+.LVL236:
+	.loc 3 2517 0
+	jlt.u	%d2, %d15, .L171
+	.loc 3 2517 0 is_stmt 0 discriminator 1
 	sub	%d15, %d2, %d15
-.LVL408:
-	j	.L159
-.LVL409:
-.L158:
+.LVL237:
+	j	.L172
+.LVL238:
+.L171:
 	ld.w	%d3, [%a15] 4
 	add	%d3, %d2
 	add	%d3, 1
-	.loc 2 2517 0 discriminator 2
+	.loc 3 2517 0 discriminator 2
 	sub	%d15, %d3, %d15
-.LVL410:
-.L159:
-	.loc 2 2515 0 is_stmt 1
+.LVL239:
+.L172:
+	.loc 3 2515 0 is_stmt 1
 	st.w	[%a5]0, %d15
-.LVL411:
-	.loc 2 2524 0
+.LVL240:
+	.loc 3 2524 0
 	st.w	[%a4]0, %d2
-.LVL412:
-	.loc 2 2526 0
+.LVL241:
+	.loc 3 2526 0
 	mov	%d2, 0
-.LVL413:
-.L157:
-.LBE1173:
-.LBE1172:
-	.loc 2 2546 0
+.LVL242:
+.L170:
+.LBE587:
+.LBE586:
+	.loc 3 2546 0
 	ret
 .LFE137:
 	.size	GetElapsedValue, .-GetElapsedValue
@@ -3119,21 +3569,15 @@ GetElapsedValue:
 	.type	IncrementCounter, @function
 IncrementCounter:
 .LFB138:
-	.loc 2 2553 0
-.LVL414:
-	mov.aa	%a14, %SP
-.LCFI29:
-.LVL415:
-.LBB1174:
-.LBB1175:
-	.loc 1 744 0
+	.loc 3 2553 0
+.LVL243:
 	movh.a	%a15, hi:osEE_kdb_var
 	lea	%a15, [%a15] lo:osEE_kdb_var
+	.loc 3 2592 0
 	ld.w	%d15, [%a15] 24
-.LBE1175:
-.LBE1174:
-	.loc 2 2593 0
+	.loc 3 2593 0
 	mov	%d2, 3
+<<<<<<< Updated upstream
 	.loc 2 2592 0
 	jge.u	%d4, %d15, .L163
 .LBB1176:
@@ -3192,24 +3636,43 @@ IncrementCounter:
 .LBE1179:
 .LBE1178:
 	.loc 2 2622 0
+=======
+	.loc 3 2592 0
+	jge.u	%d4, %d15, .L176
+.LBB588:
+	.loc 3 2597 0
+	ld.a	%a2, [%a15] 20
+	addsc.a	%a2, %a2, %d4, 2
+	ld.a	%a12, [%a2]0
+.LVL244:
+.LBB589:
+	.loc 3 2617 0
+	call	osEE_begin_primitive
+.LVL245:
+	.loc 3 2622 0
+	mov.aa	%a4, %a12
+	.loc 3 2617 0
+	mov	%d15, %d2
+.LVL246:
+	.loc 3 2622 0
+>>>>>>> Stashed changes
 	call	osEE_counter_increment
-.LVL423:
-.LBB1187:
-.LBB1188:
+.LVL247:
+.LBB590:
+.LBB591:
 	.loc 1 172 0
-	movh.a	%a15, hi:osEE_cdb_var
-	ld.a	%a15, [%a15] lo:osEE_cdb_var
-.LBE1188:
-.LBE1187:
-	.loc 2 2626 0
-	ld.a	%a15, [%a15]0
-	ld.bu	%d15, [%a15] 20
-.LVL424:
-	jge.u	%d15, 2, .L165
-	.loc 2 2627 0
-	movh.a	%a4, hi:osEE_kdb_var
-	lea	%a4, [%a4] lo:osEE_kdb_var
+	movh.a	%a2, hi:osEE_cdb_var
+	ld.a	%a2, [%a2] lo:osEE_cdb_var
+.LBE591:
+.LBE590:
+	.loc 3 2626 0
+	ld.a	%a2, [%a2]0
+	ld.bu	%d2, [%a2] 20
+	jge.u	%d2, 2, .L177
+	.loc 3 2627 0
+	mov.aa	%a4, %a15
 	call	osEE_scheduler_task_preemption_point
+<<<<<<< Updated upstream
 .LVL425:
 .L165:
 .LBB1189:
@@ -3255,12 +3718,21 @@ IncrementCounter:
 .LBE1190:
 .LBE1189:
 	.loc 2 2632 0
+=======
+.LVL248:
+.L177:
+	.loc 3 2630 0
+	mov	%d4, %d15
+	call	osEE_end_primitive
+.LVL249:
+	.loc 3 2632 0
+>>>>>>> Stashed changes
 	mov	%d2, 0
-.LVL432:
-.L163:
-.LBE1177:
-.LBE1176:
-	.loc 2 2650 0
+.LVL250:
+.L176:
+.LBE589:
+.LBE588:
+	.loc 3 2650 0
 	ret
 .LFE138:
 	.size	IncrementCounter, .-IncrementCounter
@@ -3269,28 +3741,25 @@ IncrementCounter:
 	.type	GetISRID, @function
 GetISRID:
 .LFB139:
-	.loc 2 3316 0
-	mov.aa	%a14, %SP
-.LCFI30:
-.LBB1197:
-.LBB1198:
+	.loc 3 3316 0
+.LBB592:
+.LBB593:
 	.loc 1 172 0
 	movh.a	%a15, hi:osEE_cdb_var
 	ld.a	%a15, [%a15] lo:osEE_cdb_var
 	ld.a	%a15, [%a15]0
-.LBE1198:
-.LBE1197:
-	.loc 2 3321 0
-	ld.bu	%d15, [%a15] 20
-	.loc 2 3324 0
+.LBE593:
+.LBE592:
+	.loc 3 3324 0
 	mov	%d2, -1
-	.loc 2 3321 0
-	jne	%d15, 2, .L169
-	.loc 2 3322 0
+	.loc 3 3321 0
+	ld.bu	%d15, [%a15] 20
+	jne	%d15, 2, .L180
+	.loc 3 3322 0
 	ld.w	%d2, [%a15] 16
-.LVL433:
-.L169:
-	.loc 2 3328 0
+.LVL251:
+.L180:
+	.loc 3 3328 0
 	ret
 .LFE139:
 	.size	GetISRID, .-GetISRID
@@ -3313,374 +3782,270 @@ GetISRID:
 	.uaword	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.uaword	.Lframe0
-	.uaword	.LFB100
-	.uaword	.LFE100-.LFB100
-	.byte	0x4
-	.uaword	.LCFI0-.LFB100
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB83
+	.uaword	.LFE83-.LFB83
 	.align 2
 .LEFDE0:
 .LSFDE2:
 	.uaword	.LEFDE2-.LASFDE2
 .LASFDE2:
 	.uaword	.Lframe0
-	.uaword	.LFB109
-	.uaword	.LFE109-.LFB109
-	.byte	0x4
-	.uaword	.LCFI1-.LFB109
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB84
+	.uaword	.LFE84-.LFB84
 	.align 2
 .LEFDE2:
 .LSFDE4:
 	.uaword	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.uaword	.Lframe0
-	.uaword	.LFB110
-	.uaword	.LFE110-.LFB110
-	.byte	0x4
-	.uaword	.LCFI2-.LFB110
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB154
+	.uaword	.LFE154-.LFB154
 	.align 2
 .LEFDE4:
 .LSFDE6:
 	.uaword	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.uaword	.Lframe0
-	.uaword	.LFB112
-	.uaword	.LFE112-.LFB112
-	.byte	0x4
-	.uaword	.LCFI3-.LFB112
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB109
+	.uaword	.LFE109-.LFB109
 	.align 2
 .LEFDE6:
 .LSFDE8:
 	.uaword	.LEFDE8-.LASFDE8
 .LASFDE8:
 	.uaword	.Lframe0
-	.uaword	.LFB113
-	.uaword	.LFE113-.LFB113
-	.byte	0x4
-	.uaword	.LCFI4-.LFB113
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB110
+	.uaword	.LFE110-.LFB110
 	.align 2
 .LEFDE8:
 .LSFDE10:
 	.uaword	.LEFDE10-.LASFDE10
 .LASFDE10:
 	.uaword	.Lframe0
-	.uaword	.LFB114
-	.uaword	.LFE114-.LFB114
-	.byte	0x4
-	.uaword	.LCFI5-.LFB114
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB112
+	.uaword	.LFE112-.LFB112
 	.align 2
 .LEFDE10:
 .LSFDE12:
 	.uaword	.LEFDE12-.LASFDE12
 .LASFDE12:
 	.uaword	.Lframe0
-	.uaword	.LFB115
-	.uaword	.LFE115-.LFB115
-	.byte	0x4
-	.uaword	.LCFI6-.LFB115
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB113
+	.uaword	.LFE113-.LFB113
 	.align 2
 .LEFDE12:
 .LSFDE14:
 	.uaword	.LEFDE14-.LASFDE14
 .LASFDE14:
 	.uaword	.Lframe0
-	.uaword	.LFB116
-	.uaword	.LFE116-.LFB116
-	.byte	0x4
-	.uaword	.LCFI7-.LFB116
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB114
+	.uaword	.LFE114-.LFB114
 	.align 2
 .LEFDE14:
 .LSFDE16:
 	.uaword	.LEFDE16-.LASFDE16
 .LASFDE16:
 	.uaword	.Lframe0
-	.uaword	.LFB117
-	.uaword	.LFE117-.LFB117
-	.byte	0x4
-	.uaword	.LCFI8-.LFB117
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB115
+	.uaword	.LFE115-.LFB115
 	.align 2
 .LEFDE16:
 .LSFDE18:
 	.uaword	.LEFDE18-.LASFDE18
 .LASFDE18:
 	.uaword	.Lframe0
-	.uaword	.LFB118
-	.uaword	.LFE118-.LFB118
-	.byte	0x4
-	.uaword	.LCFI9-.LFB118
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB116
+	.uaword	.LFE116-.LFB116
 	.align 2
 .LEFDE18:
 .LSFDE20:
 	.uaword	.LEFDE20-.LASFDE20
 .LASFDE20:
 	.uaword	.Lframe0
-	.uaword	.LFB119
-	.uaword	.LFE119-.LFB119
-	.byte	0x4
-	.uaword	.LCFI10-.LFB119
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB117
+	.uaword	.LFE117-.LFB117
 	.align 2
 .LEFDE20:
 .LSFDE22:
 	.uaword	.LEFDE22-.LASFDE22
 .LASFDE22:
 	.uaword	.Lframe0
-	.uaword	.LFB120
-	.uaword	.LFE120-.LFB120
-	.byte	0x4
-	.uaword	.LCFI11-.LFB120
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB118
+	.uaword	.LFE118-.LFB118
 	.align 2
 .LEFDE22:
 .LSFDE24:
 	.uaword	.LEFDE24-.LASFDE24
 .LASFDE24:
 	.uaword	.Lframe0
-	.uaword	.LFB121
-	.uaword	.LFE121-.LFB121
-	.byte	0x4
-	.uaword	.LCFI12-.LFB121
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB119
+	.uaword	.LFE119-.LFB119
 	.align 2
 .LEFDE24:
 .LSFDE26:
 	.uaword	.LEFDE26-.LASFDE26
 .LASFDE26:
 	.uaword	.Lframe0
-	.uaword	.LFB122
-	.uaword	.LFE122-.LFB122
-	.byte	0x4
-	.uaword	.LCFI13-.LFB122
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB120
+	.uaword	.LFE120-.LFB120
 	.align 2
 .LEFDE26:
 .LSFDE28:
 	.uaword	.LEFDE28-.LASFDE28
 .LASFDE28:
 	.uaword	.Lframe0
-	.uaword	.LFB123
-	.uaword	.LFE123-.LFB123
-	.byte	0x4
-	.uaword	.LCFI14-.LFB123
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB121
+	.uaword	.LFE121-.LFB121
 	.align 2
 .LEFDE28:
 .LSFDE30:
 	.uaword	.LEFDE30-.LASFDE30
 .LASFDE30:
 	.uaword	.Lframe0
-	.uaword	.LFB124
-	.uaword	.LFE124-.LFB124
-	.byte	0x4
-	.uaword	.LCFI15-.LFB124
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB122
+	.uaword	.LFE122-.LFB122
 	.align 2
 .LEFDE30:
 .LSFDE32:
 	.uaword	.LEFDE32-.LASFDE32
 .LASFDE32:
 	.uaword	.Lframe0
-	.uaword	.LFB125
-	.uaword	.LFE125-.LFB125
-	.byte	0x4
-	.uaword	.LCFI16-.LFB125
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB123
+	.uaword	.LFE123-.LFB123
 	.align 2
 .LEFDE32:
 .LSFDE34:
 	.uaword	.LEFDE34-.LASFDE34
 .LASFDE34:
 	.uaword	.Lframe0
-	.uaword	.LFB126
-	.uaword	.LFE126-.LFB126
-	.byte	0x4
-	.uaword	.LCFI17-.LFB126
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB124
+	.uaword	.LFE124-.LFB124
 	.align 2
 .LEFDE34:
 .LSFDE36:
 	.uaword	.LEFDE36-.LASFDE36
 .LASFDE36:
 	.uaword	.Lframe0
-	.uaword	.LFB127
-	.uaword	.LFE127-.LFB127
-	.byte	0x4
-	.uaword	.LCFI18-.LFB127
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB125
+	.uaword	.LFE125-.LFB125
 	.align 2
 .LEFDE36:
 .LSFDE38:
 	.uaword	.LEFDE38-.LASFDE38
 .LASFDE38:
 	.uaword	.Lframe0
-	.uaword	.LFB128
-	.uaword	.LFE128-.LFB128
-	.byte	0x4
-	.uaword	.LCFI19-.LFB128
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB126
+	.uaword	.LFE126-.LFB126
 	.align 2
 .LEFDE38:
 .LSFDE40:
 	.uaword	.LEFDE40-.LASFDE40
 .LASFDE40:
 	.uaword	.Lframe0
-	.uaword	.LFB129
-	.uaword	.LFE129-.LFB129
-	.byte	0x4
-	.uaword	.LCFI20-.LFB129
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB127
+	.uaword	.LFE127-.LFB127
 	.align 2
 .LEFDE40:
 .LSFDE42:
 	.uaword	.LEFDE42-.LASFDE42
 .LASFDE42:
 	.uaword	.Lframe0
-	.uaword	.LFB130
-	.uaword	.LFE130-.LFB130
-	.byte	0x4
-	.uaword	.LCFI21-.LFB130
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB128
+	.uaword	.LFE128-.LFB128
 	.align 2
 .LEFDE42:
 .LSFDE44:
 	.uaword	.LEFDE44-.LASFDE44
 .LASFDE44:
 	.uaword	.Lframe0
-	.uaword	.LFB131
-	.uaword	.LFE131-.LFB131
-	.byte	0x4
-	.uaword	.LCFI22-.LFB131
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB129
+	.uaword	.LFE129-.LFB129
 	.align 2
 .LEFDE44:
 .LSFDE46:
 	.uaword	.LEFDE46-.LASFDE46
 .LASFDE46:
 	.uaword	.Lframe0
-	.uaword	.LFB132
-	.uaword	.LFE132-.LFB132
-	.byte	0x4
-	.uaword	.LCFI23-.LFB132
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB130
+	.uaword	.LFE130-.LFB130
 	.align 2
 .LEFDE46:
 .LSFDE48:
 	.uaword	.LEFDE48-.LASFDE48
 .LASFDE48:
 	.uaword	.Lframe0
-	.uaword	.LFB133
-	.uaword	.LFE133-.LFB133
-	.byte	0x4
-	.uaword	.LCFI24-.LFB133
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB131
+	.uaword	.LFE131-.LFB131
 	.align 2
 .LEFDE48:
 .LSFDE50:
 	.uaword	.LEFDE50-.LASFDE50
 .LASFDE50:
 	.uaword	.Lframe0
-	.uaword	.LFB134
-	.uaword	.LFE134-.LFB134
-	.byte	0x4
-	.uaword	.LCFI25-.LFB134
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB132
+	.uaword	.LFE132-.LFB132
 	.align 2
 .LEFDE50:
 .LSFDE52:
 	.uaword	.LEFDE52-.LASFDE52
 .LASFDE52:
 	.uaword	.Lframe0
-	.uaword	.LFB135
-	.uaword	.LFE135-.LFB135
+	.uaword	.LFB133
+	.uaword	.LFE133-.LFB133
 	.byte	0x4
-	.uaword	.LCFI26-.LFB135
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LCFI0-.LFB133
+	.byte	0xe
+	.uleb128 0x8
 	.align 2
 .LEFDE52:
 .LSFDE54:
 	.uaword	.LEFDE54-.LASFDE54
 .LASFDE54:
 	.uaword	.Lframe0
-	.uaword	.LFB136
-	.uaword	.LFE136-.LFB136
-	.byte	0x4
-	.uaword	.LCFI27-.LFB136
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB134
+	.uaword	.LFE134-.LFB134
 	.align 2
 .LEFDE54:
 .LSFDE56:
 	.uaword	.LEFDE56-.LASFDE56
 .LASFDE56:
 	.uaword	.Lframe0
-	.uaword	.LFB137
-	.uaword	.LFE137-.LFB137
-	.byte	0x4
-	.uaword	.LCFI28-.LFB137
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB135
+	.uaword	.LFE135-.LFB135
 	.align 2
 .LEFDE56:
 .LSFDE58:
 	.uaword	.LEFDE58-.LASFDE58
 .LASFDE58:
 	.uaword	.Lframe0
-	.uaword	.LFB138
-	.uaword	.LFE138-.LFB138
-	.byte	0x4
-	.uaword	.LCFI29-.LFB138
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB136
+	.uaword	.LFE136-.LFB136
 	.align 2
 .LEFDE58:
 .LSFDE60:
 	.uaword	.LEFDE60-.LASFDE60
 .LASFDE60:
 	.uaword	.Lframe0
-	.uaword	.LFB139
-	.uaword	.LFE139-.LFB139
-	.byte	0x4
-	.uaword	.LCFI30-.LFB139
-	.byte	0xd
-	.uleb128 0x1e
+	.uaword	.LFB137
+	.uaword	.LFE137-.LFB137
 	.align 2
 .LEFDE60:
+.LSFDE62:
+	.uaword	.LEFDE62-.LASFDE62
+.LASFDE62:
+	.uaword	.Lframe0
+	.uaword	.LFB138
+	.uaword	.LFE138-.LFB138
+	.align 2
+.LEFDE62:
+.LSFDE64:
+	.uaword	.LEFDE64-.LASFDE64
+.LASFDE64:
+	.uaword	.Lframe0
+	.uaword	.LFB139
+	.uaword	.LFE139-.LFB139
+	.align 2
+.LEFDE64:
 .section .text,"ax",@progbits
 .Letext0:
 	.file 5 "c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\lib\\gcc\\tricore\\4.9.4\\include\\stddef.h"
@@ -3694,13 +4059,17 @@ GetISRID:
 	.file 13 "C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_scheduler.h"
 .section .debug_info,"",@progbits
 .Ldebug_info0:
+<<<<<<< Updated upstream
 	.uaword	0x4d97
+=======
+	.uaword	0x3bc9
+>>>>>>> Stashed changes
 	.uahalf	0x3
 	.uaword	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
 	.ascii	"GNU C 4.9."
-	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -O1 -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
+	.string	"4 build on 2019-06-07 -mlicense-dir=c:\\hightec\\toolchains\\tricore\\v4.9.3.0-infineon-1.0\\bin\\../lib/gcc/tricore/4.9.4/../../../../licenses -mcpu=tc27xx -g -Os -fno-common -fshort-enums -fstrict-volatile-bitfields -finline-functions -fzero-initialized-in-bss"
 	.byte	0x1
 	.string	"C:\\Users\\USER\\Desktop\\AUTODR~1\\TC275\\erika\\src\\ee_oo_api_osek.c"
 	.uaword	.Ltext0
@@ -5211,59 +5580,114 @@ GetISRID:
 	.uleb128 0x11
 	.uaword	0x15e6
 	.uleb128 0x1a
-	.string	"osEE_tc_get_icr"
+	.string	"osEE_lock_core"
+	.byte	0xc
+	.byte	0xce
+	.byte	0x1
 	.byte	0x3
+	.uaword	0x1746
+	.uleb128 0x1b
+	.uaword	.LASF10
+	.byte	0xc
+	.byte	0xce
+	.uaword	0x1746
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x174b
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x1593
+	.uleb128 0x1c
+	.string	"osEE_unlock_core"
+	.byte	0xc
+	.uahalf	0x10b
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1779
+	.uleb128 0x1d
+	.uaword	.LASF10
+	.byte	0xc
+	.uahalf	0x10b
+	.uaword	0x1746
+	.byte	0
+	.uleb128 0x1e
+	.string	"osEE_tc_get_icr"
+	.byte	0x2
 	.uahalf	0x100
 	.byte	0x1
 	.uaword	0x3a3
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x176e
 	.uleb128 0x1b
+=======
+	.uaword	0x17b2
+	.uleb128 0x1f
+>>>>>>> Stashed changes
 	.string	"icr"
-	.byte	0x3
+	.byte	0x2
 	.uahalf	0x102
+<<<<<<< Updated upstream
 	.uaword	0x3a3
 	.uleb128 0x1c
 	.uleb128 0x1b
+=======
+	.uaword	0x390
+	.uleb128 0x20
+	.uleb128 0x1f
+>>>>>>> Stashed changes
 	.string	"reg"
-	.byte	0x3
+	.byte	0x2
 	.uahalf	0x103
 	.uaword	0x28d
 	.byte	0
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x21
 	.string	"osEE_hal_disableIRQ"
-	.byte	0x3
+	.byte	0x2
 	.uahalf	0x112
 	.byte	0x1
 	.byte	0x3
-	.uleb128 0x1e
+	.uleb128 0x1c
 	.string	"osEE_tc_set_icr"
-	.byte	0x3
+	.byte	0x2
 	.uahalf	0x107
 	.byte	0x1
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x17af
 	.uleb128 0x1f
+=======
+	.uaword	0x17f3
+	.uleb128 0x22
+>>>>>>> Stashed changes
 	.string	"icr"
-	.byte	0x3
+	.byte	0x2
 	.uahalf	0x107
 	.uaword	0x3a3
 	.byte	0
-	.uleb128 0x1a
+	.uleb128 0x1e
 	.string	"OSEE_ISR2_VIRT_TO_HW_PRIO"
-	.byte	0x3
+	.byte	0x2
 	.uahalf	0x12d
 	.byte	0x1
 	.uaword	0x1a9
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x17e4
 	.uleb128 0x20
 	.uaword	.LASF10
 	.byte	0x3
+=======
+	.uaword	0x1828
+	.uleb128 0x1d
+	.uaword	.LASF11
+	.byte	0x2
+>>>>>>> Stashed changes
 	.uahalf	0x12d
 	.uaword	0x52a
 	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x21
 	.string	"osEE_get_curr_core"
 	.byte	0xc
@@ -5369,11 +5793,15 @@ GetISRID:
 	.uaword	0x1800
 	.byte	0
 	.uleb128 0x22
+=======
+	.uleb128 0x1a
+>>>>>>> Stashed changes
 	.string	"osEE_orti_trace_service_entry"
 	.byte	0x1
 	.byte	0x88
 	.byte	0x1
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x1987
 	.uleb128 0x23
 	.uaword	.LASF9
@@ -5385,15 +5813,39 @@ GetISRID:
 	.byte	0x1
 	.byte	0x8b
 	.uaword	0x1987
+=======
+	.uaword	0x1866
+	.uleb128 0x1b
+	.uaword	.LASF9
+	.byte	0x1
+	.byte	0x8a
+	.uaword	0x1866
+	.uleb128 0x1b
+	.uaword	.LASF12
+	.byte	0x1
+	.byte	0x8b
+	.uaword	0x1871
+>>>>>>> Stashed changes
 	.byte	0
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x186c
 	.uleb128 0x11
+	.uaword	0x1550
+	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0xde7
 	.uleb128 0x22
+=======
+	.uaword	0xdd4
+	.uleb128 0x1a
+>>>>>>> Stashed changes
 	.string	"osEE_orti_trace_service_exit"
 	.byte	0x1
 	.byte	0x94
 	.byte	0x1
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x19c9
 	.uleb128 0x23
 	.uaword	.LASF9
@@ -5529,12 +5981,79 @@ GetISRID:
 	.byte	0x4
 	.uaword	0x171f
 	.uleb128 0x1a
+=======
+	.uaword	0x18b3
+	.uleb128 0x1b
+	.uaword	.LASF9
+	.byte	0x1
+	.byte	0x96
+	.uaword	0x1866
+	.uleb128 0x1b
+	.uaword	.LASF12
+	.byte	0x1
+	.byte	0x97
+	.uaword	0x1871
+	.byte	0
+	.uleb128 0x23
+	.string	"osEE_get_curr_core"
+	.byte	0xc
+	.byte	0x72
+	.byte	0x1
+	.uaword	0x174b
+	.byte	0x3
+	.uleb128 0x1e
+	.string	"osEE_hal_begin_nested_primitive"
+	.byte	0x2
+	.uahalf	0x169
+	.byte	0x1
+	.uaword	0x27a
+	.byte	0x3
+	.uaword	0x191d
+	.uleb128 0x1f
+	.string	"icr"
+	.byte	0x2
+	.uahalf	0x16b
+	.uaword	0x390
+	.uleb128 0x20
+	.uleb128 0x1f
+	.string	"icr_temp"
+	.byte	0x2
+	.uahalf	0x16e
+	.uaword	0x390
+	.byte	0
+	.byte	0
+	.uleb128 0x1c
+	.string	"osEE_hal_end_nested_primitive"
+	.byte	0x2
+	.uahalf	0x17a
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1970
+	.uleb128 0x1d
+	.uaword	.LASF13
+	.byte	0x2
+	.uahalf	0x17a
+	.uaword	0x27a
+	.uleb128 0x1f
+	.string	"flags_icr"
+	.byte	0x2
+	.uahalf	0x17c
+	.uaword	0x390
+	.uleb128 0x1f
+	.string	"icr"
+	.byte	0x2
+	.uahalf	0x17d
+	.uaword	0x390
+	.byte	0
+	.uleb128 0x1e
+>>>>>>> Stashed changes
 	.string	"osEE_is_valid_tid"
 	.byte	0x1
 	.uahalf	0x10b
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x1b9c
 	.uleb128 0x20
 	.uaword	.LASF16
@@ -5542,11 +6061,21 @@ GetISRID:
 	.uahalf	0x10d
 	.uaword	0x1b5d
 	.uleb128 0x1f
+=======
+	.uaword	0x19a9
+	.uleb128 0x1d
+	.uaword	.LASF14
+	.byte	0x1
+	.uahalf	0x10d
+	.uaword	0x19a9
+	.uleb128 0x22
+>>>>>>> Stashed changes
 	.string	"tid"
 	.byte	0x1
 	.uahalf	0x10e
 	.uaword	0x4f2
 	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x21
 	.string	"osEE_get_curr_task"
 	.byte	0x1
@@ -5555,12 +6084,19 @@ GetISRID:
 	.uaword	0x111c
 	.byte	0x3
 	.uleb128 0x1a
+=======
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x170c
+	.uleb128 0x1e
+>>>>>>> Stashed changes
 	.string	"osEE_is_valid_res_id"
 	.byte	0x1
 	.uahalf	0x11a
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x1bf7
 	.uleb128 0x20
 	.uaword	.LASF16
@@ -5568,16 +6104,26 @@ GetISRID:
 	.uahalf	0x11c
 	.uaword	0x1b5d
 	.uleb128 0x1f
+=======
+	.uaword	0x19ee
+	.uleb128 0x1d
+	.uaword	.LASF14
+	.byte	0x1
+	.uahalf	0x11c
+	.uaword	0x19a9
+	.uleb128 0x22
+>>>>>>> Stashed changes
 	.string	"res_id"
 	.byte	0x1
 	.uahalf	0x11d
 	.uaword	0x796
 	.byte	0
-	.uleb128 0x1a
-	.string	"osEE_hal_prepare_ipl"
-	.byte	0x3
-	.uahalf	0x143
+	.uleb128 0x1c
+	.string	"osEE_call_startup_hook"
 	.byte	0x1
+	.uahalf	0x14f
+	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x28d
 	.byte	0x3
 	.uaword	0x1c45
@@ -5596,10 +6142,20 @@ GetISRID:
 	.byte	0x3
 	.uahalf	0x145
 	.uaword	0x28d
-	.byte	0
-	.uleb128 0x1a
-	.string	"osEE_is_valid_alarm_id"
+=======
+	.byte	0x3
+	.uaword	0x1a1c
+	.uleb128 0x1d
+	.uaword	.LASF9
 	.byte	0x1
+	.uahalf	0x151
+	.uaword	0x1866
+>>>>>>> Stashed changes
+	.byte	0
+	.uleb128 0x1c
+	.string	"osEE_call_shutdown_hook"
+	.byte	0x1
+<<<<<<< Updated upstream
 	.uahalf	0x35b
 	.byte	0x1
 	.uaword	0x269
@@ -5665,12 +6221,67 @@ GetISRID:
 	.uaword	0x1ced
 	.byte	0
 	.uleb128 0x1a
+=======
+	.uahalf	0x1c3
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1a57
+	.uleb128 0x1d
+	.uaword	.LASF9
+	.byte	0x1
+	.uahalf	0x1c5
+	.uaword	0x1866
+	.uleb128 0x1d
+	.uaword	.LASF15
+	.byte	0x1
+	.uahalf	0x1c6
+	.uaword	0xa19
+	.byte	0
+	.uleb128 0x1c
+	.string	"osEE_call_error_hook"
+	.byte	0x1
+	.uahalf	0x1e0
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1a8f
+	.uleb128 0x1d
+	.uaword	.LASF9
+	.byte	0x1
+	.uahalf	0x1e2
+	.uaword	0x1866
+	.uleb128 0x1d
+	.uaword	.LASF15
+	.byte	0x1
+	.uahalf	0x1e3
+	.uaword	0xa19
+	.byte	0
+	.uleb128 0x1c
+	.string	"osEE_set_service_id"
+	.byte	0x1
+	.uahalf	0x1f8
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1ac6
+	.uleb128 0x1d
+	.uaword	.LASF9
+	.byte	0x1
+	.uahalf	0x1fa
+	.uaword	0x1866
+	.uleb128 0x1d
+	.uaword	.LASF12
+	.byte	0x1
+	.uahalf	0x1fb
+	.uaword	0xdd4
+	.byte	0
+	.uleb128 0x1e
+>>>>>>> Stashed changes
 	.string	"osEE_is_valid_counter_id"
 	.byte	0x1
 	.uahalf	0x2df
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x1d61
 	.uleb128 0x20
 	.uaword	.LASF16
@@ -5678,16 +6289,26 @@ GetISRID:
 	.uahalf	0x2e1
 	.uaword	0x1b5d
 	.uleb128 0x1f
+=======
+	.uaword	0x1b0d
+	.uleb128 0x1d
+	.uaword	.LASF14
+	.byte	0x1
+	.uahalf	0x2e1
+	.uaword	0x19a9
+	.uleb128 0x22
+>>>>>>> Stashed changes
 	.string	"counter_id"
 	.byte	0x1
 	.uahalf	0x2e2
 	.uaword	0x6d7
 	.byte	0
-	.uleb128 0x24
-	.string	"osEE_shutdown_os"
+	.uleb128 0x1e
+	.string	"osEE_is_valid_alarm_id"
 	.byte	0x1
-	.uahalf	0x2c5
+	.uahalf	0x35b
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	.LFB100
 	.uaword	.LFE100
 	.byte	0x1
@@ -6607,12 +7228,56 @@ GetISRID:
 	.byte	0
 	.uleb128 0x11
 	.uaword	0x1b5d
+=======
+	.uaword	0x256
+	.byte	0x3
+	.uaword	0x1b50
+	.uleb128 0x1d
+	.uaword	.LASF14
+	.byte	0x1
+	.uahalf	0x35d
+	.uaword	0x19a9
+>>>>>>> Stashed changes
 	.uleb128 0x22
+	.string	"alarm_id"
+	.byte	0x1
+	.uahalf	0x35e
+	.uaword	0x771
+	.byte	0
+	.uleb128 0x1c
+	.string	"osEE_stack_monitoring"
+	.byte	0x1
+	.uahalf	0x3ed
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1b7d
+	.uleb128 0x1d
+	.uaword	.LASF10
+	.byte	0x1
+	.uahalf	0x3ef
+	.uaword	0x174b
+	.byte	0
+	.uleb128 0x1e
+	.string	"osEE_hal_suspendIRQ"
+	.byte	0x2
+	.uahalf	0x11e
+	.byte	0x1
+	.uaword	0x27a
+	.byte	0x3
+	.uaword	0x1bac
+	.uleb128 0x1f
+	.string	"icr"
+	.byte	0x2
+	.uahalf	0x120
+	.uaword	0x390
+	.byte	0
+	.uleb128 0x1a
 	.string	"osEE_hal_terminate_activation"
 	.byte	0x4
 	.byte	0x87
 	.byte	0x1
 	.byte	0x3
+<<<<<<< Updated upstream
 	.uaword	0x26d0
 	.uleb128 0x44
 	.string	"p_to_term"
@@ -6620,6 +7285,15 @@ GetISRID:
 	.byte	0x89
 	.uaword	0x26d0
 	.uleb128 0x44
+=======
+	.uaword	0x1bf6
+	.uleb128 0x24
+	.string	"p_to_term"
+	.byte	0x4
+	.byte	0x89
+	.uaword	0x1bf6
+	.uleb128 0x24
+>>>>>>> Stashed changes
 	.string	"kernel_cb"
 	.byte	0x4
 	.byte	0x8a
@@ -6627,11 +7301,968 @@ GetISRID:
 	.byte	0
 	.uleb128 0xd
 	.byte	0x4
+<<<<<<< Updated upstream
 	.uaword	0x4c9
+=======
+	.uaword	0x4b6
+	.uleb128 0x21
+	.string	"osEE_hal_enableIRQ"
+	.byte	0x2
+	.uahalf	0x118
+	.byte	0x1
+	.byte	0x3
+	.uleb128 0x1c
+	.string	"osEE_hal_resumeIRQ"
+	.byte	0x2
+	.uahalf	0x125
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1c4b
+	.uleb128 0x1d
+	.uaword	.LASF13
+	.byte	0x2
+	.uahalf	0x125
+	.uaword	0x27a
+	.uleb128 0x1f
+	.string	"icr"
+	.byte	0x2
+	.uahalf	0x127
+	.uaword	0x390
+	.byte	0
+	.uleb128 0x21
+	.string	"osEE_shutdown_os_extra"
+	.byte	0x1
+	.uahalf	0x283
+	.byte	0x1
+	.byte	0x3
+	.uleb128 0x23
+	.string	"osEE_get_kernel"
+	.byte	0xc
+	.byte	0x55
+	.byte	0x1
+	.uaword	0x19a9
+	.byte	0x3
+	.uleb128 0x23
+	.string	"osEE_get_curr_task"
+	.byte	0x1
+	.byte	0xa7
+	.byte	0x1
+	.uaword	0x1109
+	.byte	0x3
+	.uleb128 0x1e
+	.string	"osEE_hal_prepare_ipl"
+	.byte	0x2
+	.uahalf	0x143
+	.byte	0x1
+	.uaword	0x27a
+	.byte	0x3
+	.uaword	0x1ceb
+	.uleb128 0x1d
+	.uaword	.LASF13
+	.byte	0x2
+	.uahalf	0x143
+	.uaword	0x27a
+	.uleb128 0x1d
+	.uaword	.LASF11
+	.byte	0x2
+	.uahalf	0x143
+	.uaword	0x517
+	.uleb128 0x1f
+	.string	"ret_flags"
+	.byte	0x2
+	.uahalf	0x145
+	.uaword	0x27a
+	.byte	0
+	.uleb128 0x1e
+	.string	"osEE_alarm_get_trigger_db"
+	.byte	0x1
+	.uahalf	0x369
+	.byte	0x1
+	.uaword	0x1d20
+	.byte	0x3
+	.uaword	0x1d20
+	.uleb128 0x1d
+	.uaword	.LASF16
+	.byte	0x1
+	.uahalf	0x36b
+	.uaword	0x1d26
+	.byte	0
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x1428
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x143f
+	.uleb128 0x1c
+	.string	"osEE_shutdown_os"
+	.byte	0x1
+	.uahalf	0x2c5
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x1d78
+	.uleb128 0x1d
+	.uaword	.LASF10
+	.byte	0x1
+	.uahalf	0x2c7
+	.uaword	0x174b
+	.uleb128 0x1d
+	.uaword	.LASF15
+	.byte	0x1
+	.uahalf	0x2c8
+	.uaword	0xa19
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x1
+	.uahalf	0x2cb
+	.uaword	0x1d78
+	.uleb128 0x25
+	.uaword	.LASF7
+	.byte	0x1
+	.uahalf	0x2cc
+	.uaword	0x1d7d
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x158d
+	.uleb128 0x11
+	.uaword	0xf7b
+	.uleb128 0x1a
+	.string	"osEE_suspend_all_interrupts"
+	.byte	0x3
+	.byte	0x6b
+	.byte	0x1
+	.byte	0x1
+	.uaword	0x1dcb
+	.uleb128 0x1b
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0x6d
+	.uaword	0x1746
+	.uleb128 0x1b
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0x6e
+	.uaword	0x1d78
+	.uleb128 0x20
+	.uleb128 0x26
+	.uaword	.LASF13
+	.byte	0x3
+	.byte	0x72
+	.uaword	0x1dcb
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x27a
+	.uleb128 0x27
+	.string	"osEE_begin_primitive"
+	.byte	0x1
+	.byte	0xf9
+	.byte	0x1
+	.uaword	0x27a
+	.uaword	.LFB83
+	.uaword	.LFE83
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x1e82
+	.uleb128 0x28
+	.uaword	0x18cf
+	.uaword	.LBB457
+	.uaword	.LBE457
+	.byte	0x1
+	.byte	0xfe
+	.uleb128 0x29
+	.uaword	.LBB458
+	.uaword	.LBE458
+	.uleb128 0x2a
+	.uaword	0x18fd
+	.uaword	.LLST0
+	.uleb128 0x2b
+	.uaword	0x1779
+	.uaword	.LBB459
+	.uaword	.LBE459
+	.byte	0x2
+	.uahalf	0x16b
+	.uaword	0x1e52
+	.uleb128 0x29
+	.uaword	.LBB460
+	.uaword	.LBE460
+	.uleb128 0x2c
+	.uaword	0x1797
+	.uleb128 0x29
+	.uaword	.LBB461
+	.uaword	.LBE461
+	.uleb128 0x2d
+	.uaword	0x17a4
+	.byte	0x1
+	.byte	0x52
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x29
+	.uaword	.LBB462
+	.uaword	.LBE462
+	.uleb128 0x2a
+	.uaword	0x190a
+	.uaword	.LLST1
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB463
+	.uaword	.LBE463
+	.byte	0x2
+	.uahalf	0x171
+	.uleb128 0x2f
+	.uaword	0x17e6
+	.uaword	.LLST2
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x30
+	.string	"osEE_end_primitive"
+	.byte	0x1
+	.uahalf	0x102
+	.byte	0x1
+	.uaword	.LFB84
+	.uaword	.LFE84
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x1f39
+	.uleb128 0x31
+	.uaword	.LASF13
+	.byte	0x1
+	.uahalf	0x104
+	.uaword	0x27a
+	.byte	0x1
+	.byte	0x54
+	.uleb128 0x2e
+	.uaword	0x191d
+	.uaword	.LBB465
+	.uaword	.LBE465
+	.byte	0x1
+	.uahalf	0x107
+	.uleb128 0x32
+	.uaword	0x1945
+	.byte	0x1
+	.byte	0x54
+	.uleb128 0x29
+	.uaword	.LBB466
+	.uaword	.LBE466
+	.uleb128 0x2c
+	.uaword	0x1951
+	.uleb128 0x2a
+	.uaword	0x1963
+	.uaword	.LLST3
+	.uleb128 0x2b
+	.uaword	0x1779
+	.uaword	.LBB467
+	.uaword	.LBE467
+	.byte	0x2
+	.uahalf	0x17d
+	.uaword	0x1f1c
+	.uleb128 0x29
+	.uaword	.LBB468
+	.uaword	.LBE468
+	.uleb128 0x2c
+	.uaword	0x1797
+	.uleb128 0x29
+	.uaword	.LBB469
+	.uaword	.LBE469
+	.uleb128 0x2a
+	.uaword	0x17a4
+	.uaword	.LLST4
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB470
+	.uaword	.LBE470
+	.byte	0x2
+	.uahalf	0x181
+	.uleb128 0x2f
+	.uaword	0x17e6
+	.uaword	.LLST5
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x33
+	.uaword	0x1d2c
+	.uaword	.LFB154
+	.uaword	.LFE154
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x1f73
+	.uleb128 0x2f
+	.uaword	0x1d53
+	.uaword	.LLST6
+	.uleb128 0x2d
+	.uaword	0x1d5f
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x2d
+	.uaword	0x1d6b
+	.byte	0x1
+	.byte	0x5f
+	.uleb128 0x34
+	.uaword	0x1d47
+	.uleb128 0x35
+	.uaword	.LVL15
+	.uaword	0x3869
+	.byte	0
+	.uleb128 0x36
+	.byte	0x1
+	.string	"DisableAllInterrupts"
+	.byte	0x3
+	.byte	0x3c
+	.byte	0x1
+	.uaword	.LFB109
+	.uaword	.LFE109
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x1fc4
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0x41
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0x42
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x38
+	.uaword	0x17b2
+	.uaword	.LBB472
+	.uaword	.LBE472
+	.byte	0x3
+	.byte	0x44
+	.byte	0
+	.uleb128 0x36
+	.byte	0x1
+	.string	"EnableAllInterrupts"
+	.byte	0x3
+	.byte	0x4f
+	.byte	0x1
+	.uaword	.LFB110
+	.uaword	.LFE110
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x2014
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0x59
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0x5a
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x38
+	.uaword	0x1bfc
+	.uaword	.LBB474
+	.uaword	.LBE474
+	.byte	0x3
+	.byte	0x62
+	.byte	0
+	.uleb128 0x36
+	.byte	0x1
+	.string	"SuspendAllInterrupts"
+	.byte	0x3
+	.byte	0x81
+	.byte	0x1
+	.uaword	.LFB112
+	.uaword	.LFE112
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x20fa
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0x86
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0x87
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x28
+	.uaword	0x1d82
+	.uaword	.LBB487
+	.uaword	.LBE487
+	.byte	0x3
+	.byte	0x8d
+	.uleb128 0x34
+	.uaword	0x1da7
+	.uleb128 0x32
+	.uaword	0x1db2
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x39
+	.uaword	.LBB489
+	.uaword	.LBE489
+	.uaword	0x20e9
+	.uleb128 0x2c
+	.uaword	0x1dbe
+	.uleb128 0x28
+	.uaword	0x1b7d
+	.uaword	.LBB490
+	.uaword	.LBE490
+	.byte	0x3
+	.byte	0x72
+	.uleb128 0x29
+	.uaword	.LBB491
+	.uaword	.LBE491
+	.uleb128 0x2c
+	.uaword	0x1b9f
+	.uleb128 0x2b
+	.uaword	0x1779
+	.uaword	.LBB492
+	.uaword	.LBE492
+	.byte	0x2
+	.uahalf	0x120
+	.uaword	0x20d6
+	.uleb128 0x29
+	.uaword	.LBB493
+	.uaword	.LBE493
+	.uleb128 0x2c
+	.uaword	0x1797
+	.uleb128 0x29
+	.uaword	.LBB494
+	.uaword	.LBE494
+	.uleb128 0x2a
+	.uaword	0x17a4
+	.uaword	.LLST7
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x3a
+	.uaword	0x17b2
+	.uaword	.LBB495
+	.uaword	.LBE495
+	.byte	0x2
+	.uahalf	0x121
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL25
+	.uaword	0x1f39
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x49
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x36
+	.byte	0x1
+	.string	"ResumeAllInterrupts"
+	.byte	0x3
+	.byte	0x95
+	.byte	0x1
+	.uaword	.LFB113
+	.uaword	.LFE113
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x2179
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0x9a
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0x9b
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x28
+	.uaword	0x1c15
+	.uaword	.LBB497
+	.uaword	.LBE497
+	.byte	0x3
+	.byte	0xa5
+	.uleb128 0x2f
+	.uaword	0x1c32
+	.uaword	.LLST8
+	.uleb128 0x29
+	.uaword	.LBB498
+	.uaword	.LBE498
+	.uleb128 0x2c
+	.uaword	0x1c3e
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB499
+	.uaword	.LBE499
+	.byte	0x2
+	.uahalf	0x129
+	.uleb128 0x34
+	.uaword	0x17e6
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x36
+	.byte	0x1
+	.string	"SuspendOSInterrupts"
+	.byte	0x3
+	.byte	0xaf
+	.byte	0x1
+	.uaword	.LFB114
+	.uaword	.LFE114
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x2269
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0xb4
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0xb5
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x39
+	.uaword	.LBB501
+	.uaword	.LBE501
+	.uaword	0x2259
+	.uleb128 0x26
+	.uaword	.LASF13
+	.byte	0x3
+	.byte	0xbc
+	.uaword	0x1dcb
+	.uleb128 0x28
+	.uaword	0x18cf
+	.uaword	.LBB502
+	.uaword	.LBE502
+	.byte	0x3
+	.byte	0xbc
+	.uleb128 0x29
+	.uaword	.LBB503
+	.uaword	.LBE503
+	.uleb128 0x2a
+	.uaword	0x18fd
+	.uaword	.LLST9
+	.uleb128 0x2b
+	.uaword	0x1779
+	.uaword	.LBB504
+	.uaword	.LBE504
+	.byte	0x2
+	.uahalf	0x16b
+	.uaword	0x2229
+	.uleb128 0x29
+	.uaword	.LBB505
+	.uaword	.LBE505
+	.uleb128 0x2c
+	.uaword	0x1797
+	.uleb128 0x29
+	.uaword	.LBB506
+	.uaword	.LBE506
+	.uleb128 0x2a
+	.uaword	0x17a4
+	.uaword	.LLST10
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x29
+	.uaword	.LBB507
+	.uaword	.LBE507
+	.uleb128 0x2a
+	.uaword	0x190a
+	.uaword	.LLST11
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB508
+	.uaword	.LBE508
+	.byte	0x2
+	.uahalf	0x171
+	.uleb128 0x2f
+	.uaword	0x17e6
+	.uaword	.LLST12
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL38
+	.uaword	0x1f39
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x1
+	.byte	0x49
+	.byte	0
+	.byte	0
+	.uleb128 0x36
+	.byte	0x1
+	.string	"ResumeOSInterrupts"
+	.byte	0x3
+	.byte	0xcf
+	.byte	0x1
+	.uaword	.LFB115
+	.uaword	.LFE115
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x232b
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0xd4
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0xd5
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+	.uleb128 0x28
+	.uaword	0x191d
+	.uaword	.LBB510
+	.uaword	.LBE510
+	.byte	0x3
+	.byte	0xdf
+	.uleb128 0x2f
+	.uaword	0x1945
+	.uaword	.LLST13
+	.uleb128 0x29
+	.uaword	.LBB511
+	.uaword	.LBE511
+	.uleb128 0x2c
+	.uaword	0x1951
+	.uleb128 0x2a
+	.uaword	0x1963
+	.uaword	.LLST14
+	.uleb128 0x2b
+	.uaword	0x1779
+	.uaword	.LBB512
+	.uaword	.LBE512
+	.byte	0x2
+	.uahalf	0x17d
+	.uaword	0x230e
+	.uleb128 0x29
+	.uaword	.LBB513
+	.uaword	.LBE513
+	.uleb128 0x2c
+	.uaword	0x1797
+	.uleb128 0x29
+	.uaword	.LBB514
+	.uaword	.LBE514
+	.uleb128 0x2a
+	.uaword	0x17a4
+	.uaword	.LLST15
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB515
+	.uaword	.LBE515
+	.byte	0x2
+	.uahalf	0x181
+	.uleb128 0x2f
+	.uaword	0x17e6
+	.uaword	.LLST16
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x1a
+	.string	"osEE_idle_task_start"
+	.byte	0x4
+	.byte	0x91
+	.byte	0x1
+	.byte	0x3
+	.uaword	0x2355
+	.uleb128 0x1b
+	.uaword	.LASF17
+	.byte	0x4
+	.byte	0x93
+	.uaword	0x1109
+	.byte	0
+	.uleb128 0x3d
+	.byte	0x1
+	.string	"StartOS"
+	.byte	0x3
+	.byte	0xe9
+	.byte	0x1
+	.uaword	0xa19
+	.uaword	.LFB116
+	.uaword	.LFE116
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x245e
+	.uleb128 0x3e
+	.string	"Mode"
+	.byte	0x3
+	.byte	0xeb
+	.uaword	0x4cc
+	.uaword	.LLST17
+	.uleb128 0x3f
+	.string	"ev"
+	.byte	0x3
+	.byte	0xee
+	.uaword	0xa19
+	.uaword	.LLST18
+	.uleb128 0x3f
+	.string	"real_mode"
+	.byte	0x3
+	.byte	0xef
+	.uaword	0x4cc
+	.uaword	.LLST19
+	.uleb128 0x26
+	.uaword	.LASF10
+	.byte	0x3
+	.byte	0xf5
+	.uaword	0x1746
+	.uleb128 0x37
+	.uaword	.LASF9
+	.byte	0x3
+	.byte	0xf6
+	.uaword	0x1d78
+	.byte	0x1
+	.byte	0x6f
+>>>>>>> Stashed changes
 	.uleb128 0x40
+	.uaword	.LASF13
+	.byte	0x3
+	.byte	0xf7
+	.uaword	0x1dcb
+	.uaword	.LLST20
+	.uleb128 0x39
+	.uaword	.LBB522
+	.uaword	.LBE522
+	.uaword	0x243b
+	.uleb128 0x41
+	.uaword	.LASF17
+	.byte	0x3
+	.uahalf	0x118
+	.uaword	0x245e
+	.uaword	.LLST21
+	.uleb128 0x2b
+	.uaword	0x232b
+	.uaword	.LBB523
+	.uaword	.LBE523
+	.byte	0x3
+	.uahalf	0x21a
+	.uaword	0x241a
+	.uleb128 0x2f
+	.uaword	0x2349
+	.uaword	.LLST22
+	.uleb128 0x3b
+	.uaword	.LVL58
+	.uaword	0x3892
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.uleb128 0x3a
+	.uaword	0x17b2
+	.uaword	.LBB525
+	.uaword	.LBE525
+	.byte	0x3
+	.uahalf	0x21e
+	.uleb128 0x3b
+	.uaword	.LVL59
+	.uaword	0x38d0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.uleb128 0x35
+	.uaword	.LVL50
+	.uaword	0x1dd0
+	.uleb128 0x35
+	.uaword	.LVL53
+	.uaword	0x38ee
+	.uleb128 0x3b
+	.uaword	.LVL62
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x1109
+	.uleb128 0x42
+	.byte	0x1
+	.string	"GetActiveApplicationMode"
+	.byte	0x3
+	.uahalf	0x249
+	.byte	0x1
+	.uaword	0x4cc
+	.uaword	.LFB117
+	.uaword	.LFE117
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x24be
+	.uleb128 0x43
+	.uaword	.LASF8
+	.byte	0x3
+	.uahalf	0x24e
+	.uaword	0x4cc
+	.byte	0x1
+	.byte	0x52
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x250
+	.uaword	0x1746
+	.uleb128 0x43
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x256
+	.uaword	0x24be
+	.byte	0x1
+	.byte	0x6f
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x1866
+	.uleb128 0x42
+	.byte	0x1
+	.string	"ActivateTask"
+	.byte	0x3
+	.uahalf	0x268
+	.byte	0x1
+	.uaword	0xa19
+	.uaword	.LFB118
+	.uaword	.LFE118
+	.byte	0x1
+	.byte	0x9c
+	.byte	0x1
+	.uaword	0x25a8
+	.uleb128 0x44
+	.uaword	.LASF18
+	.byte	0x3
+	.uahalf	0x26a
+	.uaword	0x4df
+	.uaword	.LLST23
+	.uleb128 0x45
+	.string	"ev"
+	.byte	0x3
+	.uahalf	0x26d
+	.uaword	0xa19
+	.uaword	.LLST24
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x26e
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x270
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x276
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB527
+	.uaword	.LBE527
+	.uleb128 0x41
+	.uaword	.LASF19
+	.byte	0x3
+	.uahalf	0x294
+	.uaword	0x245e
+	.uaword	.LLST25
+	.uleb128 0x29
+	.uaword	.LBB528
+	.uaword	.LBE528
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x297
+	.uaword	0x1dcb
+	.uaword	.LLST26
+	.uleb128 0x35
+	.uaword	.LVL67
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL69
+	.uaword	0x3909
+	.uaword	0x257b
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.uleb128 0x46
+	.uaword	.LVL71
+	.uaword	0x3931
+	.uaword	0x2595
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x65
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL72
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x78
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x19a9
+	.uleb128 0x42
 	.byte	0x1
 	.string	"ChainTask"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x2b7
 	.byte	0x1
 	.uaword	0xa2c
@@ -6640,17 +8271,29 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x2996
 	.uleb128 0x25
+=======
+	.uaword	0x2732
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF18
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x2b9
+<<<<<<< Updated upstream
 	.uaword	0x4f2
 	.uaword	.LLST38
 	.uleb128 0x42
+=======
+	.uaword	0x4df
+	.uaword	.LLST27
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x2bc
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST39
 	.uleb128 0x41
@@ -6879,40 +8522,173 @@ GetISRID:
 	.uaword	.LVL109
 	.uaword	0x4b36
 	.uleb128 0x36
+=======
+	.uaword	0xa19
+	.uaword	.LLST28
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x2bd
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x2bf
+	.uaword	0x1746
+	.uleb128 0x41
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x2c7
+	.uaword	0x1d78
+	.uaword	.LLST29
+	.uleb128 0x43
+	.uaword	.LASF6
+	.byte	0x3
+	.uahalf	0x2c9
+	.uaword	0x245e
+	.byte	0x1
+	.byte	0x59
+	.uleb128 0x29
+	.uaword	.LBB529
+	.uaword	.LBE529
+	.uleb128 0x41
+	.uaword	.LASF19
+	.byte	0x3
+	.uahalf	0x2ed
+	.uaword	0x245e
+	.uaword	.LLST30
+	.uleb128 0x47
+	.uaword	.Ldebug_ranges0+0
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x304
+	.uaword	0x27a
+	.uaword	.LLST31
+	.uleb128 0x2b
+	.uaword	0x1c15
+	.uaword	.LBB531
+	.uaword	.LBE531
+	.byte	0x3
+	.uahalf	0x309
+	.uaword	0x2696
+	.uleb128 0x2f
+	.uaword	0x1c32
+	.uaword	.LLST32
+	.uleb128 0x29
+	.uaword	.LBB532
+	.uaword	.LBE532
+	.uleb128 0x2c
+	.uaword	0x1c3e
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB533
+	.uaword	.LBE533
+	.byte	0x2
+	.uahalf	0x129
+	.uleb128 0x34
+	.uaword	0x17e6
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x3a
+	.uaword	0x1bfc
+	.uaword	.LBB535
+	.uaword	.LBE535
+	.byte	0x3
+	.uahalf	0x30d
+	.uleb128 0x3a
+	.uaword	0x1c81
+	.uaword	.LBB537
+	.uaword	.LBE537
+	.byte	0x3
+	.uahalf	0x31f
+	.uleb128 0x2b
+	.uaword	0x1bac
+	.uaword	.LBB539
+	.uaword	.LBE539
+	.byte	0x3
+	.uahalf	0x31f
+	.uaword	0x26e8
+	.uleb128 0x34
+	.uaword	0x1bd3
+	.uleb128 0x2f
+	.uaword	0x1be4
+	.uaword	.LLST33
+	.uleb128 0x3b
+	.uaword	.LVL92
+	.uaword	0x3968
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x1
 	.byte	0x30
 	.byte	0
 	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x43
 	.uaword	.LVL102
 	.uaword	0x4ad7
 	.uaword	0x2983
 	.uleb128 0x36
+=======
+	.uleb128 0x35
+	.uaword	.LVL79
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL86
+	.uaword	0x3909
+	.uaword	0x2705
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x64
 	.byte	0x2
 	.byte	0x7f
 	.sleb128 0
 	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x35
 	.uaword	.LVL103
 	.uaword	0x4b62
 	.uleb128 0x36
+=======
+	.uleb128 0x46
+	.uaword	.LVL88
+	.uaword	0x3994
+	.uaword	0x271f
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x2
-	.byte	0x7f
+	.byte	0x8c
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8d
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL90
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x78
 	.sleb128 0
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x42
 	.byte	0x1
 	.string	"TerminateTask"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x339
 	.byte	0x1
 	.uaword	0xa2c
@@ -6921,11 +8697,17 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x2b25
 	.uleb128 0x1b
+=======
+	.uaword	0x2830
+	.uleb128 0x1f
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x33e
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uleb128 0x41
 	.uaword	.LASF13
@@ -6933,16 +8715,30 @@ GetISRID:
 	.uahalf	0x340
 	.uaword	0x1ced
 	.uleb128 0x26
+=======
+	.uaword	0xa19
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x340
+	.uaword	0x1746
+	.uleb128 0x43
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x348
+<<<<<<< Updated upstream
 	.uaword	0x1dcc
+=======
+	.uaword	0x1d78
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6f
-	.uleb128 0x3f
+	.uleb128 0x43
 	.uaword	.LASF6
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x34a
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uaword	.LLST55
 	.uleb128 0x31
@@ -7062,18 +8858,84 @@ GetISRID:
 	.uaword	.LVL125
 	.uaword	0x4b36
 	.uleb128 0x36
+=======
+	.uaword	0x245e
+	.byte	0x1
+	.byte	0x6c
+	.uleb128 0x29
+	.uaword	.LBB542
+	.uaword	.LBE542
+	.uleb128 0x25
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x383
+	.uaword	0x27a
+	.uleb128 0x2b
+	.uaword	0x1c15
+	.uaword	.LBB543
+	.uaword	.LBE543
+	.byte	0x3
+	.uahalf	0x388
+	.uaword	0x27e4
+	.uleb128 0x2f
+	.uaword	0x1c32
+	.uaword	.LLST34
+	.uleb128 0x29
+	.uaword	.LBB544
+	.uaword	.LBE544
+	.uleb128 0x2c
+	.uaword	0x1c3e
+	.uleb128 0x2e
+	.uaword	0x17cc
+	.uaword	.LBB545
+	.uaword	.LBE545
+	.byte	0x2
+	.uahalf	0x129
+	.uleb128 0x34
+	.uaword	0x17e6
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x3a
+	.uaword	0x1bfc
+	.uaword	.LBB547
+	.uaword	.LBE547
+	.byte	0x3
+	.uahalf	0x38c
+	.uleb128 0x2b
+	.uaword	0x1bac
+	.uaword	.LBB549
+	.uaword	.LBE549
+	.byte	0x3
+	.uahalf	0x393
+	.uaword	0x2825
+	.uleb128 0x32
+	.uaword	0x1bd3
+	.byte	0x1
+	.byte	0x6c
+	.uleb128 0x48
+	.uaword	0x1be4
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL98
+	.uaword	0x3968
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x1
 	.byte	0x30
 	.byte	0
 	.byte	0
+	.uleb128 0x35
+	.uaword	.LVL97
+	.uaword	0x1dd0
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x42
 	.byte	0x1
 	.string	"Schedule"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x3ac
 	.byte	0x1
 	.uaword	0xa2c
@@ -7082,44 +8944,67 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x2ce6
+=======
+	.uaword	0x28d1
+>>>>>>> Stashed changes
 	.uleb128 0x49
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x3b1
 	.uaword	0xa2c
 	.byte	0
-	.uleb128 0x41
-	.uaword	.LASF13
-	.byte	0x2
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
 	.uahalf	0x3b2
+<<<<<<< Updated upstream
 	.uaword	0x1ced
 	.uleb128 0x41
+=======
+	.uaword	0x1746
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x3b8
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uleb128 0x26
+=======
+	.uaword	0x24be
+	.uleb128 0x43
+>>>>>>> Stashed changes
 	.uaword	.LASF6
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x3b9
+<<<<<<< Updated upstream
 	.uaword	0x23fe
+=======
+	.uaword	0x245e
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6f
 	.uleb128 0x4a
 	.string	"p_tcb"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x3ba
+<<<<<<< Updated upstream
 	.uaword	0x2ce6
+=======
+	.uaword	0x28d1
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6c
-	.uleb128 0x31
-	.uaword	.LBB933
-	.uaword	.LBE933
+	.uleb128 0x29
+	.uaword	.LBB551
+	.uaword	.LBE551
 	.uleb128 0x41
-	.uaword	.LASF11
-	.byte	0x2
+	.uaword	.LASF13
+	.byte	0x3
 	.uahalf	0x3ee
+<<<<<<< Updated upstream
 	.uaword	0x1ec0
 	.uleb128 0x32
 	.uaword	0x1a18
@@ -7250,9 +9135,34 @@ GetISRID:
 	.uleb128 0x11
 	.uaword	0x1105
 	.uleb128 0x40
+=======
+	.uaword	0x1dcb
+	.uaword	.LLST35
+	.uleb128 0x35
+	.uaword	.LVL102
+	.uaword	0x1dd0
+	.uleb128 0x35
+	.uaword	.LVL105
+	.uaword	0x39c8
+	.uleb128 0x3b
+	.uaword	.LVL106
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x10f2
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"GetResource"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x411
 	.byte	0x1
 	.uaword	0xa2c
@@ -7261,17 +9171,28 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x2f66
+=======
+	.uaword	0x2a1d
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"ResID"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x413
+<<<<<<< Updated upstream
 	.uaword	0x796
 	.uaword	.LLST70
 	.uleb128 0x42
+=======
+	.uaword	0x783
+	.uaword	.LLST36
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x416
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST71
 	.uleb128 0x41
@@ -7485,27 +9406,137 @@ GetISRID:
 	.uaword	0x17a2
 	.uaword	.LLST89
 	.byte	0
+=======
+	.uaword	0xa19
+	.uaword	.LLST37
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x417
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x419
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x41f
+	.uaword	0x24be
+	.uleb128 0x43
+	.uaword	.LASF6
+	.byte	0x3
+	.uahalf	0x421
+	.uaword	0x245e
+	.byte	0x1
+	.byte	0x6e
+	.uleb128 0x29
+	.uaword	.LBB552
+	.uaword	.LBE552
+	.uleb128 0x41
+	.uaword	.LASF20
+	.byte	0x3
+	.uahalf	0x440
+	.uaword	0x2a1d
+	.uaword	.LLST38
+	.uleb128 0x41
+	.uaword	.LASF21
+	.byte	0x3
+	.uahalf	0x442
+	.uaword	0x2a28
+	.uaword	.LLST39
+	.uleb128 0x41
+	.uaword	.LASF22
+	.byte	0x3
+	.uahalf	0x444
+	.uaword	0x28d1
+	.uaword	.LLST40
+	.uleb128 0x45
+	.string	"reso_prio"
+	.byte	0x3
+	.uahalf	0x446
+	.uaword	0x2a33
+	.uaword	.LLST41
+	.uleb128 0x41
+	.uaword	.LASF4
+	.byte	0x3
+	.uahalf	0x448
+	.uaword	0x2a33
+	.uaword	.LLST42
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x44a
+	.uaword	0x27a
+	.uaword	.LLST43
+	.uleb128 0x4c
+	.uaword	0x1c9d
+	.uaword	.LBB553
+	.uaword	.Ldebug_ranges0+0x18
+	.byte	0x3
+	.uahalf	0x460
+	.uaword	0x2a09
+	.uleb128 0x2f
+	.uaword	0x1ccc
+	.uaword	.LLST44
+	.uleb128 0x2f
+	.uaword	0x1cc0
+	.uaword	.LLST45
+	.uleb128 0x47
+	.uaword	.Ldebug_ranges0+0x18
+	.uleb128 0x2a
+	.uaword	0x1cd8
+	.uaword	.LLST46
+	.uleb128 0x2e
+	.uaword	0x17f3
+	.uaword	.LBB555
+	.uaword	.LBE555
+	.byte	0x2
+	.uahalf	0x14d
+	.uleb128 0x34
+	.uaword	0x181b
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.byte	0
+	.uleb128 0x35
+	.uaword	.LVL113
+	.uaword	0x1dd0
+	.uleb128 0x35
+	.uaword	.LVL122
+	.uaword	0x1e82
 	.byte	0
 	.byte	0
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x2f6b
+=======
+	.uaword	0x2a22
+>>>>>>> Stashed changes
 	.uleb128 0xd
 	.byte	0x4
 	.uaword	0x1051
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x2f76
+=======
+	.uaword	0x2a2d
+>>>>>>> Stashed changes
 	.uleb128 0xd
 	.byte	0x4
 	.uaword	0x103a
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x52a
 	.uleb128 0x40
+=======
+	.uaword	0x517
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"ReleaseResource"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x480
 	.byte	0x1
 	.uaword	0xa2c
@@ -7514,17 +9545,28 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x3259
+=======
+	.uaword	0x2bba
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"ResID"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x482
+<<<<<<< Updated upstream
 	.uaword	0x796
 	.uaword	.LLST90
 	.uleb128 0x42
+=======
+	.uaword	0x783
+	.uaword	.LLST47
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x485
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST91
 	.uleb128 0x41
@@ -7655,9 +9697,70 @@ GetISRID:
 	.uaword	.LBE986
 	.uaword	0x315c
 	.uleb128 0x3f
+=======
+	.uaword	0xa19
+	.uaword	.LLST48
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x486
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x487
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x48d
+	.uaword	0x24be
+	.uleb128 0x43
+	.uaword	.LASF6
+	.byte	0x3
+	.uahalf	0x48e
+	.uaword	0x245e
+	.byte	0x1
+	.byte	0x6e
+	.uleb128 0x29
+	.uaword	.LBB559
+	.uaword	.LBE559
+	.uleb128 0x41
+	.uaword	.LASF22
+	.byte	0x3
+	.uahalf	0x4ac
+	.uaword	0x28d1
+	.uaword	.LLST49
+	.uleb128 0x25
+	.uaword	.LASF20
+	.byte	0x3
+	.uahalf	0x4ae
+	.uaword	0x2a1d
+	.uleb128 0x41
+	.uaword	.LASF21
+	.byte	0x3
+	.uahalf	0x4b0
+	.uaword	0x2a28
+	.uaword	.LLST50
+	.uleb128 0x29
+	.uaword	.LBB560
+	.uaword	.LBE560
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x4bf
+	.uaword	0x27a
+	.uaword	.LLST51
+	.uleb128 0x39
+	.uaword	.LBB561
+	.uaword	.LBE561
+	.uaword	0x2b20
+	.uleb128 0x41
+>>>>>>> Stashed changes
 	.uaword	.LASF3
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x4c6
+<<<<<<< Updated upstream
 	.uaword	0x2f7c
 	.uaword	.LLST101
 	.uleb128 0x38
@@ -7685,9 +9788,20 @@ GetISRID:
 	.uaword	.LBE989
 	.uaword	0x31ac
 	.uleb128 0x3f
+=======
+	.uaword	0x2a33
+	.uaword	.LLST52
+	.byte	0
+	.uleb128 0x39
+	.uaword	.LBB562
+	.uaword	.LBE562
+	.uaword	0x2b8a
+	.uleb128 0x41
+>>>>>>> Stashed changes
 	.uaword	.LASF2
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x4cc
+<<<<<<< Updated upstream
 	.uaword	0x2f7c
 	.uaword	.LLST104
 	.uleb128 0x38
@@ -7767,10 +9881,68 @@ GetISRID:
 	.uleb128 0x37
 	.uaword	0x17a2
 	.uaword	.LLST111
+=======
+	.uaword	0x2a33
+	.uaword	.LLST53
+	.uleb128 0x4d
+	.uaword	0x1c9d
+	.uaword	.LBB563
+	.uaword	.Ldebug_ranges0+0x30
+	.byte	0x3
+	.uahalf	0x4cf
+	.uleb128 0x2f
+	.uaword	0x1ccc
+	.uaword	.LLST54
+	.uleb128 0x2f
+	.uaword	0x1cc0
+	.uaword	.LLST55
+	.uleb128 0x47
+	.uaword	.Ldebug_ranges0+0x30
+	.uleb128 0x2a
+	.uaword	0x1cd8
+	.uaword	.LLST56
+	.uleb128 0x2e
+	.uaword	0x17f3
+	.uaword	.LBB565
+	.uaword	.LBE565
+	.byte	0x2
+	.uahalf	0x14d
+	.uleb128 0x2f
+	.uaword	0x181b
+	.uaword	.LLST57
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
+	.uleb128 0x35
+	.uaword	.LVL129
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL140
+	.uaword	0x39c8
+	.uaword	0x2ba7
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL141
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+>>>>>>> Stashed changes
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x27
 	.uaword	.LVL199
 	.uaword	0x4b96
@@ -7778,9 +9950,12 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x40
+=======
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"ShutdownOS"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x4ef
 	.byte	0x1
 	.uaword	0xa2c
@@ -7789,6 +9964,7 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x3416
 	.uleb128 0x25
 	.uaword	.LASF12
@@ -7796,14 +9972,34 @@ GetISRID:
 	.uahalf	0x4f1
 	.uaword	0xa2c
 	.uaword	.LLST112
+=======
+	.uaword	0x2c59
+	.uleb128 0x44
+	.uaword	.LASF15
+	.byte	0x3
+	.uahalf	0x4f1
+	.uaword	0xa19
+	.uaword	.LLST58
+>>>>>>> Stashed changes
 	.uleb128 0x49
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x4f4
 	.uaword	0xa2c
 	.byte	0x7
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x4f5
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x4fb
+	.uaword	0x24be
 	.uleb128 0x41
 	.uaword	.LASF13
+<<<<<<< Updated upstream
 	.byte	0x2
 	.uahalf	0x4f5
 	.uaword	0x1ced
@@ -7820,9 +10016,17 @@ GetISRID:
 	.uahalf	0x4fc
 	.uaword	0x1ec0
 	.uleb128 0x3f
+=======
+	.byte	0x3
+	.uahalf	0x4fc
+	.uaword	0x1dcb
+	.uaword	.LLST59
+	.uleb128 0x41
+>>>>>>> Stashed changes
 	.uaword	.LASF7
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x4fd
+<<<<<<< Updated upstream
 	.uaword	0x1dd1
 	.uaword	.LLST113
 	.uleb128 0x32
@@ -7930,8 +10134,29 @@ GetISRID:
 	.uleb128 0x33
 	.uaword	0x1760
 	.uaword	.LLST121
+=======
+	.uaword	0x1d7d
+	.uaword	.LLST60
+	.uleb128 0x35
+	.uaword	.LVL144
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL147
+	.uaword	0x1f39
+	.uaword	0x2c4f
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+>>>>>>> Stashed changes
 	.byte	0
+	.uleb128 0x35
+	.uaword	.LVL148
+	.uaword	0x1e82
 	.byte	0
+<<<<<<< Updated upstream
 	.byte	0
 	.uleb128 0x38
 	.uaword	0x1788
@@ -7951,9 +10176,12 @@ GetISRID:
 	.uaword	0x1d61
 	.byte	0
 	.uleb128 0x40
+=======
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"GetTaskID"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x532
 	.byte	0x1
 	.uaword	0xa2c
@@ -7962,18 +10190,24 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x34dd
 	.uleb128 0x4c
+=======
+	.uaword	0x2d1c
+	.uleb128 0x31
+>>>>>>> Stashed changes
 	.uaword	.LASF18
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x534
 	.uaword	0x511
 	.byte	0x1
 	.byte	0x64
-	.uleb128 0x42
+	.uleb128 0x45
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x537
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST123
 	.uleb128 0x41
@@ -7982,57 +10216,111 @@ GetISRID:
 	.uahalf	0x539
 	.uaword	0x1ced
 	.uleb128 0x3f
+=======
+	.uaword	0xa19
+	.uaword	.LLST61
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x539
+	.uaword	0x1746
+	.uleb128 0x41
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x53f
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uaword	.LLST124
 	.uleb128 0x31
 	.uaword	.LBB1017
 	.uaword	.LBE1017
 	.uleb128 0x42
+=======
+	.uaword	0x24be
+	.uaword	.LLST62
+	.uleb128 0x29
+	.uaword	.LBB569
+	.uaword	.LBE569
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"tid"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x561
+<<<<<<< Updated upstream
 	.uaword	0x4f2
 	.uaword	.LLST125
 	.uleb128 0x3f
+=======
+	.uaword	0x4df
+	.uaword	.LLST63
+	.uleb128 0x41
+>>>>>>> Stashed changes
 	.uaword	.LASF1
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x563
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uaword	.LLST126
 	.uleb128 0x31
 	.uaword	.LBB1018
 	.uaword	.LBE1018
 	.uleb128 0x42
+=======
+	.uaword	0x245e
+	.uaword	.LLST64
+	.uleb128 0x29
+	.uaword	.LBB570
+	.uaword	.LBE570
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"p_sn"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x574
+<<<<<<< Updated upstream
 	.uaword	0x34dd
 	.uaword	.LLST127
 	.uleb128 0x31
 	.uaword	.LBB1019
 	.uaword	.LBE1019
 	.uleb128 0x42
+=======
+	.uaword	0x2d1c
+	.uaword	.LLST65
+	.uleb128 0x47
+	.uaword	.Ldebug_ranges0+0x48
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"p_searched_tdb"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x578
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uaword	.LLST128
+=======
+	.uaword	0x245e
+	.uaword	.LLST66
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0xd
 	.byte	0x4
+<<<<<<< Updated upstream
 	.uaword	0x34e3
 	.uleb128 0x11
 	.uaword	0xedc
 	.uleb128 0x40
+=======
+	.uaword	0x2d22
+	.uleb128 0x11
+	.uaword	0xec9
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"GetTaskState"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x59a
 	.byte	0x1
 	.uaword	0xa2c
@@ -8041,32 +10329,38 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x35ab
 	.uleb128 0x4c
+=======
+	.uaword	0x2dc7
+	.uleb128 0x31
+>>>>>>> Stashed changes
 	.uaword	.LASF18
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x59c
 	.uaword	0x4f2
 	.byte	0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.string	"State"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x59d
 	.uaword	0x6b8
 	.byte	0x1
 	.byte	0x64
 	.uleb128 0x4a
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x5a0
 	.uaword	0xa2c
 	.byte	0x1
 	.byte	0x52
-	.uleb128 0x41
-	.uaword	.LASF16
-	.byte	0x2
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
 	.uahalf	0x5a1
+<<<<<<< Updated upstream
 	.uaword	0x2681
 	.uleb128 0x41
 	.uaword	.LASF13
@@ -8074,9 +10368,19 @@ GetISRID:
 	.uahalf	0x5a3
 	.uaword	0x1ced
 	.uleb128 0x41
+=======
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x5a3
+	.uaword	0x1746
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x5a9
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uleb128 0x32
 	.uaword	0x1b63
@@ -8095,23 +10399,44 @@ GetISRID:
 	.uaword	.LBB1022
 	.uaword	.LBE1022
 	.uleb128 0x41
+=======
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB573
+	.uaword	.LBE573
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF1
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x5cf
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uleb128 0x1b
+=======
+	.uaword	0x245e
+	.uleb128 0x1f
+>>>>>>> Stashed changes
 	.string	"local_state"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x5d2
+<<<<<<< Updated upstream
 	.uaword	0x35ab
 	.byte	0
 	.byte	0
 	.uleb128 0x11
 	.uaword	0x689
 	.uleb128 0x40
+=======
+	.uaword	0x2dc7
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x676
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"SetRelAlarm"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x5fd
 	.byte	0x1
 	.uaword	0xa2c
@@ -8120,29 +10445,51 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x37f7
 	.uleb128 0x25
+=======
+	.uaword	0x2ee0
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF23
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x5ff
+<<<<<<< Updated upstream
 	.uaword	0x784
 	.uaword	.LLST130
+=======
+	.uaword	0x771
+	.uaword	.LLST67
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"increment"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x600
+<<<<<<< Updated upstream
 	.uaword	0x6eb
 	.uaword	.LLST131
+=======
+	.uaword	0x6d8
+	.uaword	.LLST68
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"cycle"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x601
+<<<<<<< Updated upstream
 	.uaword	0x6eb
 	.uaword	.LLST132
 	.uleb128 0x4a
+=======
+	.uaword	0x6d8
+	.uaword	.LLST69
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x604
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.byte	0x1
 	.byte	0x52
@@ -8322,31 +10669,109 @@ GetISRID:
 	.uaword	.LVL268
 	.uaword	0x4bcf
 	.uleb128 0x36
+=======
+	.uaword	0xa19
+	.uaword	.LLST70
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x606
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x608
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x60e
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB574
+	.uaword	.LBE574
+	.uleb128 0x41
+	.uaword	.LASF16
+	.byte	0x3
+	.uahalf	0x62c
+	.uaword	0x2ee0
+	.uaword	.LLST71
+	.uleb128 0x41
+	.uaword	.LASF5
+	.byte	0x3
+	.uahalf	0x62e
+	.uaword	0x2ee5
+	.uaword	.LLST72
+	.uleb128 0x29
+	.uaword	.LBB575
+	.uaword	.LBE575
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x63d
+	.uaword	0x1dcb
+	.uaword	.LLST73
+	.uleb128 0x35
+	.uaword	.LVL171
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL173
+	.uaword	0x3a01
+	.uaword	0x2ecd
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x55
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x56
-	.uleb128 0x36
+	.byte	0x2
+	.byte	0x78
+	.sleb128 0
+	.uleb128 0x3c
 	.byte	0x1
 	.byte	0x54
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
+	.byte	0x2
+	.byte	0x79
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x65
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL175
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x1cc3
 	.uleb128 0x11
 	.uaword	0x12de
 	.uleb128 0x40
+=======
+	.uaword	0x1d26
+	.uleb128 0x11
+	.uaword	0x12cb
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"SetAbsAlarm"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x658
 	.byte	0x1
 	.uaword	0xa2c
@@ -8355,29 +10780,51 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x3a44
 	.uleb128 0x25
+=======
+	.uaword	0x2ffa
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF23
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x65a
+<<<<<<< Updated upstream
 	.uaword	0x784
 	.uaword	.LLST145
+=======
+	.uaword	0x771
+	.uaword	.LLST74
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"start"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x65b
+<<<<<<< Updated upstream
 	.uaword	0x6eb
 	.uaword	.LLST146
+=======
+	.uaword	0x6d8
+	.uaword	.LLST75
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"cycle"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x65c
+<<<<<<< Updated upstream
 	.uaword	0x6eb
 	.uaword	.LLST147
 	.uleb128 0x4a
+=======
+	.uaword	0x6d8
+	.uaword	.LLST76
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x65f
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.byte	0x1
 	.byte	0x52
@@ -8557,27 +11004,98 @@ GetISRID:
 	.uaword	.LVL287
 	.uaword	0x4c06
 	.uleb128 0x36
+=======
+	.uaword	0xa19
+	.uaword	.LLST77
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x661
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x663
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x669
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB576
+	.uaword	.LBE576
+	.uleb128 0x41
+	.uaword	.LASF16
+	.byte	0x3
+	.uahalf	0x687
+	.uaword	0x2ee0
+	.uaword	.LLST78
+	.uleb128 0x41
+	.uaword	.LASF5
+	.byte	0x3
+	.uahalf	0x689
+	.uaword	0x2ee5
+	.uaword	.LLST79
+	.uleb128 0x29
+	.uaword	.LBB577
+	.uaword	.LBE577
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x697
+	.uaword	0x1dcb
+	.uaword	.LLST80
+	.uleb128 0x35
+	.uaword	.LVL179
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL181
+	.uaword	0x3a38
+	.uaword	0x2fe7
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x55
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x56
-	.uleb128 0x36
+	.byte	0x2
+	.byte	0x78
+	.sleb128 0
+	.uleb128 0x3c
 	.byte	0x1
 	.byte	0x54
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
+	.byte	0x2
+	.byte	0x79
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x65
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL183
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x42
 	.byte	0x1
 	.string	"CancelAlarm"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6b2
 	.byte	0x1
 	.uaword	0xa2c
@@ -8586,17 +11104,29 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x3c3a
 	.uleb128 0x25
+=======
+	.uaword	0x30ba
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF23
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6b4
+<<<<<<< Updated upstream
 	.uaword	0x784
 	.uaword	.LLST160
 	.uleb128 0x4a
+=======
+	.uaword	0x771
+	.uaword	.LLST81
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6b7
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.byte	0x1
 	.byte	0x52
@@ -8769,9 +11299,70 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x40
+=======
+	.uaword	0xa19
+	.uaword	.LLST82
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x6b9
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x6bb
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x6c1
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB578
+	.uaword	.LBE578
+	.uleb128 0x41
+	.uaword	.LASF16
+	.byte	0x3
+	.uahalf	0x6de
+	.uaword	0x2ee0
+	.uaword	.LLST83
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x6e0
+	.uaword	0x1dcb
+	.uaword	.LLST84
+	.uleb128 0x35
+	.uaword	.LVL186
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL188
+	.uaword	0x3a6f
+	.uaword	0x30a8
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL190
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.byte	0
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"GetAlarm"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6f8
 	.byte	0x1
 	.uaword	0xa2c
@@ -8780,23 +11371,40 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x3e4c
 	.uleb128 0x25
+=======
+	.uaword	0x318e
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF23
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6fa
+<<<<<<< Updated upstream
 	.uaword	0x784
 	.uaword	.LLST172
+=======
+	.uaword	0x771
+	.uaword	.LLST85
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"Tick"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6fb
+<<<<<<< Updated upstream
 	.uaword	0x6fc
 	.uaword	.LLST173
 	.uleb128 0x4a
+=======
+	.uaword	0x6e9
+	.uaword	.LLST86
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x6fe
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.byte	0x1
 	.byte	0x52
@@ -8967,25 +11575,76 @@ GetISRID:
 	.uaword	.LVL320
 	.uaword	0x4c64
 	.uleb128 0x36
+=======
+	.uaword	0xa19
+	.uaword	.LLST87
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x700
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x702
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0x708
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB579
+	.uaword	.LBE579
+	.uleb128 0x41
+	.uaword	.LASF16
+	.byte	0x3
+	.uahalf	0x729
+	.uaword	0x2ee0
+	.uaword	.LLST88
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0x72b
+	.uaword	0x1dcb
+	.uaword	.LLST89
+	.uleb128 0x35
+	.uaword	.LVL193
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL195
+	.uaword	0x3a96
+	.uaword	0x317c
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x64
-	.uleb128 0x36
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.uleb128 0x3c
 	.byte	0x1
 	.byte	0x64
 	.byte	0x2
 	.byte	0x8f
 	.sleb128 0
 	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL197
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x78
+	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.byte	0
+	.uleb128 0x42
 	.byte	0x1
 	.string	"GetAlarmBase"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x744
 	.byte	0x1
 	.uaword	0xa2c
@@ -8994,25 +11653,31 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x3f1f
 	.uleb128 0x4c
+=======
+	.uaword	0x323c
+	.uleb128 0x31
+>>>>>>> Stashed changes
 	.uaword	.LASF23
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x746
 	.uaword	0x784
 	.byte	0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.string	"Info"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x747
 	.uaword	0x765
 	.byte	0x1
 	.byte	0x64
-	.uleb128 0x42
+	.uleb128 0x45
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x74a
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST185
 	.uleb128 0x41
@@ -9026,9 +11691,25 @@ GetISRID:
 	.uahalf	0x74e
 	.uaword	0x1ced
 	.uleb128 0x41
+=======
+	.uaword	0xa19
+	.uaword	.LLST90
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x74c
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x74e
+	.uaword	0x1746
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x754
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uleb128 0x32
 	.uaword	0x1c45
@@ -9053,14 +11734,32 @@ GetISRID:
 	.uahalf	0x775
 	.uaword	0x37f7
 	.uleb128 0x1b
+=======
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB580
+	.uaword	.LBE580
+	.uleb128 0x25
+	.uaword	.LASF16
+	.byte	0x3
+	.uahalf	0x775
+	.uaword	0x2ee0
+	.uleb128 0x1f
+>>>>>>> Stashed changes
 	.string	"p_trigger_db"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x777
+<<<<<<< Updated upstream
 	.uaword	0x3f1f
 	.uleb128 0x3f
+=======
+	.uaword	0x323c
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF5
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x779
+<<<<<<< Updated upstream
 	.uaword	0x37fc
 	.uaword	.LLST186
 	.byte	0
@@ -9068,9 +11767,17 @@ GetISRID:
 	.uleb128 0x11
 	.uaword	0x1cbd
 	.uleb128 0x40
+=======
+	.uaword	0x2ee5
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x1d20
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"WaitEvent"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x795
 	.byte	0x1
 	.uaword	0xa2c
@@ -9079,28 +11786,43 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x410c
+=======
+	.uaword	0x3319
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"Mask"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x797
+<<<<<<< Updated upstream
 	.uaword	0x7ab
 	.uaword	.LLST187
+=======
+	.uaword	0x798
+	.uaword	.LLST91
+>>>>>>> Stashed changes
 	.uleb128 0x49
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x79a
 	.uaword	0xa2c
 	.byte	0
-	.uleb128 0x41
-	.uaword	.LASF13
-	.byte	0x2
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
 	.uahalf	0x79c
+<<<<<<< Updated upstream
 	.uaword	0x1ced
 	.uleb128 0x26
+=======
+	.uaword	0x1746
+	.uleb128 0x43
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x79e
+<<<<<<< Updated upstream
 	.uaword	0x1dcc
 	.byte	0x1
 	.byte	0x6c
@@ -9109,22 +11831,37 @@ GetISRID:
 	.byte	0x2
 	.uahalf	0x7a0
 	.uaword	0x23fe
+=======
+	.uaword	0x1d78
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6d
-	.uleb128 0x26
+	.uleb128 0x43
+	.uaword	.LASF6
+	.byte	0x3
+	.uahalf	0x7a0
+	.uaword	0x245e
+	.byte	0x1
+	.byte	0x6c
+	.uleb128 0x43
 	.uaword	.LASF22
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x7a2
+<<<<<<< Updated upstream
 	.uaword	0x2ce6
+=======
+	.uaword	0x28d1
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6f
-	.uleb128 0x31
-	.uaword	.LBB1108
-	.uaword	.LBE1108
+	.uleb128 0x29
+	.uaword	.LBB581
+	.uaword	.LBE581
 	.uleb128 0x41
-	.uaword	.LASF11
-	.byte	0x2
+	.uaword	.LASF13
+	.byte	0x3
 	.uahalf	0x7d4
+<<<<<<< Updated upstream
 	.uaword	0x1ec0
 	.uleb128 0x32
 	.uaword	0x1a18
@@ -9255,28 +11992,65 @@ GetISRID:
 	.uaword	0x4c8d
 	.uaword	0x40fa
 	.uleb128 0x36
+=======
+	.uaword	0x1dcb
+	.uaword	.LLST92
+	.uleb128 0x35
+	.uaword	.LVL206
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL208
+	.uaword	0x3abf
+	.uaword	0x32f3
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x2
-	.byte	0x8c
+	.byte	0x8d
 	.sleb128 4
+<<<<<<< Updated upstream
 	.byte	0
 	.uleb128 0x35
 	.uaword	.LVL346
 	.uaword	0x4ccc
 	.uleb128 0x36
+=======
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x64
 	.byte	0x2
-	.byte	0x8d
+	.byte	0x8e
+	.sleb128 0
+	.byte	0
+	.uleb128 0x46
+	.uaword	.LVL210
+	.uaword	0x3afe
+	.uaword	0x3307
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL212
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x79
 	.sleb128 0
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x42
 	.byte	0x1
 	.string	"SetEvent"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x802
 	.byte	0x1
 	.uaword	0xa2c
@@ -9285,31 +12059,47 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4346
 	.uleb128 0x25
+=======
+	.uaword	0x342b
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF18
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x804
+<<<<<<< Updated upstream
 	.uaword	0x4f2
 	.uaword	.LLST194
+=======
+	.uaword	0x4df
+	.uaword	.LLST93
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"Mask"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x805
+<<<<<<< Updated upstream
 	.uaword	0x7ab
 	.uaword	.LLST195
+=======
+	.uaword	0x798
+	.uaword	.LLST94
+>>>>>>> Stashed changes
 	.uleb128 0x4a
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x808
 	.uaword	0xa2c
 	.byte	0x2
-	.byte	0x8e
+	.byte	0x91
 	.sleb128 -1
-	.uleb128 0x41
-	.uaword	.LASF16
-	.byte	0x2
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
 	.uahalf	0x80a
+<<<<<<< Updated upstream
 	.uaword	0x2681
 	.uleb128 0x41
 	.uaword	.LASF13
@@ -9333,21 +12123,45 @@ GetISRID:
 	.uaword	.LBB1128
 	.uaword	.LBE1128
 	.uleb128 0x42
+=======
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x80c
+	.uaword	0x1746
+	.uleb128 0x29
+	.uaword	.LBB582
+	.uaword	.LBE582
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"p_sn"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x83b
+<<<<<<< Updated upstream
 	.uaword	0xefa
 	.uaword	.LLST197
 	.uleb128 0x42
+=======
+	.uaword	0xee7
+	.uaword	.LLST95
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"p_tdb_waking_up"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x83d
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uaword	.LLST198
+=======
+	.uaword	0x245e
+	.uaword	.LLST96
+>>>>>>> Stashed changes
 	.uleb128 0x41
-	.uaword	.LASF11
-	.byte	0x2
+	.uaword	.LASF13
+	.byte	0x3
 	.uahalf	0x83f
+<<<<<<< Updated upstream
 	.uaword	0x1ec0
 	.uleb128 0x32
 	.uaword	0x1a18
@@ -9475,31 +12289,83 @@ GetISRID:
 	.uaword	0x4d02
 	.uaword	0x4332
 	.uleb128 0x36
+=======
+	.uaword	0x1dcb
+	.uaword	.LLST97
+	.uleb128 0x35
+	.uaword	.LVL215
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL217
+	.uaword	0x3b34
+	.uaword	0x33f1
+	.uleb128 0x3c
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x65
 	.byte	0x2
-	.byte	0x8e
+	.byte	0x91
 	.sleb128 -1
-	.uleb128 0x36
+	.uleb128 0x3c
 	.byte	0x1
 	.byte	0x54
-	.byte	0x3
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
+	.byte	0x2
+	.byte	0x78
+	.sleb128 0
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
 	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x27
 	.uaword	.LVL365
 	.uaword	0x4d3f
 	.uleb128 0x27
 	.uaword	.LVL366
 	.uaword	0x4b96
+=======
+	.uleb128 0x46
+	.uaword	.LVL218
+	.uaword	0x3b71
+	.uaword	0x3405
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
+	.byte	0
+	.uleb128 0x46
+	.uaword	.LVL219
+	.uaword	0x39c8
+	.uaword	0x3419
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
+	.byte	0
+	.uleb128 0x3b
+	.uaword	.LVL220
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.byte	0
+	.uleb128 0x42
 	.byte	0x1
 	.string	"GetEvent"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x860
 	.byte	0x1
 	.uaword	0xa2c
@@ -9508,25 +12374,31 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4405
 	.uleb128 0x4c
+=======
+	.uaword	0x34c9
+	.uleb128 0x31
+>>>>>>> Stashed changes
 	.uaword	.LASF18
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x862
 	.uaword	0x4f2
 	.byte	0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.string	"Event"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x863
 	.uaword	0x7c1
 	.byte	0x1
 	.byte	0x64
-	.uleb128 0x42
+	.uleb128 0x45
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x866
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST208
 	.uleb128 0x41
@@ -9557,14 +12429,38 @@ GetISRID:
 	.uaword	.LBB1148
 	.uaword	.LBE1148
 	.uleb128 0x1b
+=======
+	.uaword	0xa19
+	.uaword	.LLST98
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x868
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x86a
+	.uaword	0x1746
+	.uleb128 0x29
+	.uaword	.LBB583
+	.uaword	.LBE583
+	.uleb128 0x1f
+>>>>>>> Stashed changes
 	.string	"p_tdb_event"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x89f
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uleb128 0x42
+=======
+	.uaword	0x245e
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"p_tcb_event"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8a1
+<<<<<<< Updated upstream
 	.uaword	0x4405
 	.uaword	.LLST209
 	.byte	0
@@ -9577,9 +12473,23 @@ GetISRID:
 	.uleb128 0x11
 	.uaword	0x10f4
 	.uleb128 0x40
+=======
+	.uaword	0x34c9
+	.uaword	.LLST99
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uaword	0x34ce
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0x34d4
+	.uleb128 0x11
+	.uaword	0x10e1
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"ClearEvent"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8ca
 	.byte	0x1
 	.uaword	0xa2c
@@ -9588,48 +12498,77 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x45d8
+=======
+	.uaword	0x3579
+>>>>>>> Stashed changes
 	.uleb128 0x4b
 	.string	"Mask"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8cc
+<<<<<<< Updated upstream
 	.uaword	0x7ab
 	.uaword	.LLST210
+=======
+	.uaword	0x798
+	.uaword	.LLST100
+>>>>>>> Stashed changes
 	.uleb128 0x49
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8cf
 	.uaword	0xa2c
 	.byte	0
-	.uleb128 0x41
-	.uaword	.LASF13
-	.byte	0x2
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
 	.uahalf	0x8d1
+<<<<<<< Updated upstream
 	.uaword	0x1ced
 	.uleb128 0x41
+=======
+	.uaword	0x1746
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8d7
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uleb128 0x41
+=======
+	.uaword	0x24be
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF6
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8d9
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uleb128 0x26
+=======
+	.uaword	0x245e
+	.uleb128 0x43
+>>>>>>> Stashed changes
 	.uaword	.LASF22
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x8db
+<<<<<<< Updated upstream
 	.uaword	0x2ce6
+=======
+	.uaword	0x28d1
+>>>>>>> Stashed changes
 	.byte	0x1
 	.byte	0x6f
-	.uleb128 0x31
-	.uaword	.LBB1149
-	.uaword	.LBE1149
+	.uleb128 0x29
+	.uaword	.LBB584
+	.uaword	.LBE584
 	.uleb128 0x41
-	.uaword	.LASF11
-	.byte	0x2
+	.uaword	.LASF13
+	.byte	0x3
 	.uahalf	0x8fd
+<<<<<<< Updated upstream
 	.uaword	0x1ec0
 	.uleb128 0x32
 	.uaword	0x1a18
@@ -9754,9 +12693,22 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x40
+=======
+	.uaword	0x1dcb
+	.uaword	.LLST101
+	.uleb128 0x35
+	.uaword	.LVL228
+	.uaword	0x1dd0
+	.uleb128 0x35
+	.uaword	.LVL230
+	.uaword	0x1e82
+	.byte	0
+	.byte	0
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"GetCounterValue"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x91b
 	.byte	0x1
 	.uaword	0xa2c
@@ -9765,25 +12717,31 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x468a
 	.uleb128 0x4c
+=======
+	.uaword	0x360a
+	.uleb128 0x31
+>>>>>>> Stashed changes
 	.uaword	.LASF24
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x91d
 	.uaword	0x6d7
 	.byte	0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.string	"Value"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x91e
 	.uaword	0x6fc
 	.byte	0x1
 	.byte	0x64
-	.uleb128 0x42
+	.uleb128 0x45
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x921
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST220
 	.uleb128 0x41
@@ -9797,9 +12755,25 @@ GetISRID:
 	.uahalf	0x925
 	.uaword	0x1ced
 	.uleb128 0x41
+=======
+	.uaword	0xa19
+	.uaword	.LLST102
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x923
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x925
+	.uaword	0x1746
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x92b
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uleb128 0x32
 	.uaword	0x1d1a
@@ -9819,16 +12793,27 @@ GetISRID:
 	.uaword	.LBB1169
 	.uaword	.LBE1169
 	.uleb128 0x41
+=======
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB585
+	.uaword	.LBE585
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF5
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x94e
+<<<<<<< Updated upstream
 	.uaword	0x37fc
+=======
+	.uaword	0x2ee5
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x42
 	.byte	0x1
 	.string	"GetElapsedValue"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x97f
 	.byte	0x1
 	.uaword	0xa2c
@@ -9837,32 +12822,38 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4796
 	.uleb128 0x4c
+=======
+	.uaword	0x36f5
+	.uleb128 0x31
+>>>>>>> Stashed changes
 	.uaword	.LASF24
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x981
 	.uaword	0x6d7
 	.byte	0x1
 	.byte	0x54
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.string	"Value"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x982
 	.uaword	0x6fc
 	.byte	0x1
 	.byte	0x64
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.string	"ElapsedValue"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x983
 	.uaword	0x6fc
 	.byte	0x1
 	.byte	0x65
-	.uleb128 0x42
+	.uleb128 0x45
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x986
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST221
 	.uleb128 0x41
@@ -9876,9 +12867,25 @@ GetISRID:
 	.uahalf	0x98a
 	.uaword	0x1ced
 	.uleb128 0x41
+=======
+	.uaword	0xa19
+	.uaword	.LLST103
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x988
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x98a
+	.uaword	0x1746
+	.uleb128 0x25
+>>>>>>> Stashed changes
 	.uaword	.LASF9
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x990
+<<<<<<< Updated upstream
 	.uaword	0x245e
 	.uleb128 0x32
 	.uaword	0x1d1a
@@ -9898,35 +12905,67 @@ GetISRID:
 	.uaword	.LBB1172
 	.uaword	.LBE1172
 	.uleb128 0x3f
+=======
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB586
+	.uaword	.LBE586
+	.uleb128 0x41
+>>>>>>> Stashed changes
 	.uaword	.LASF5
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x9b2
+<<<<<<< Updated upstream
 	.uaword	0x37fc
 	.uaword	.LLST222
 	.uleb128 0x42
+=======
+	.uaword	0x2ee5
+	.uaword	.LLST104
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"local_value"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x9b4
+<<<<<<< Updated upstream
 	.uaword	0x4796
 	.uaword	.LLST223
 	.uleb128 0x31
 	.uaword	.LBB1173
 	.uaword	.LBE1173
 	.uleb128 0x42
+=======
+	.uaword	0x36f5
+	.uaword	.LLST105
+	.uleb128 0x29
+	.uaword	.LBB587
+	.uaword	.LBE587
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"local_curr_value"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x9cd
+<<<<<<< Updated upstream
 	.uaword	0x4796
 	.uaword	.LLST224
+=======
+	.uaword	0x36f5
+	.uaword	.LLST106
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.byte	0
 	.uleb128 0x11
+<<<<<<< Updated upstream
 	.uaword	0x6eb
 	.uleb128 0x40
+=======
+	.uaword	0x6d8
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"IncrementCounter"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x9f5
 	.byte	0x1
 	.uaword	0xa2c
@@ -9935,17 +12974,29 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x49bb
 	.uleb128 0x25
+=======
+	.uaword	0x37ed
+	.uleb128 0x44
+>>>>>>> Stashed changes
 	.uaword	.LASF24
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x9f7
+<<<<<<< Updated upstream
 	.uaword	0x6d7
 	.uaword	.LLST225
 	.uleb128 0x42
+=======
+	.uaword	0x6c4
+	.uaword	.LLST107
+	.uleb128 0x45
+>>>>>>> Stashed changes
 	.string	"ev"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0x9fa
+<<<<<<< Updated upstream
 	.uaword	0xa2c
 	.uaword	.LLST226
 	.uleb128 0x41
@@ -10104,8 +13155,75 @@ GetISRID:
 	.uleb128 0x33
 	.uaword	0x1760
 	.uaword	.LLST236
+=======
+	.uaword	0xa19
+	.uaword	.LLST108
+	.uleb128 0x25
+	.uaword	.LASF14
+	.byte	0x3
+	.uahalf	0x9fc
+	.uaword	0x25a8
+	.uleb128 0x25
+	.uaword	.LASF10
+	.byte	0x3
+	.uahalf	0x9fe
+	.uaword	0x1746
+	.uleb128 0x25
+	.uaword	.LASF9
+	.byte	0x3
+	.uahalf	0xa04
+	.uaword	0x24be
+	.uleb128 0x29
+	.uaword	.LBB588
+	.uaword	.LBE588
+	.uleb128 0x41
+	.uaword	.LASF5
+	.byte	0x3
+	.uahalf	0xa25
+	.uaword	0x2ee5
+	.uaword	.LLST109
+	.uleb128 0x29
+	.uaword	.LBB589
+	.uaword	.LBE589
+	.uleb128 0x41
+	.uaword	.LASF13
+	.byte	0x3
+	.uahalf	0xa39
+	.uaword	0x1dcb
+	.uaword	.LLST110
+	.uleb128 0x3a
+	.uaword	0x1c81
+	.uaword	.LBB590
+	.uaword	.LBE590
+	.byte	0x3
+	.uahalf	0xa42
+	.uleb128 0x35
+	.uaword	.LVL245
+	.uaword	0x1dd0
+	.uleb128 0x46
+	.uaword	.LVL247
+	.uaword	0x3ba8
+	.uaword	0x37c6
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8c
+	.sleb128 0
+>>>>>>> Stashed changes
 	.byte	0
+	.uleb128 0x46
+	.uaword	.LVL248
+	.uaword	0x39c8
+	.uaword	0x37da
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x64
+	.byte	0x2
+	.byte	0x8f
+	.sleb128 0
 	.byte	0
+<<<<<<< Updated upstream
 	.byte	0
 	.uleb128 0x38
 	.uaword	0x1788
@@ -10116,10 +13234,22 @@ GetISRID:
 	.uleb128 0x37
 	.uaword	0x17a2
 	.uaword	.LLST237
+=======
+	.uleb128 0x3b
+	.uaword	.LVL249
+	.uaword	0x1e82
+	.uleb128 0x3c
+	.byte	0x1
+	.byte	0x54
+	.byte	0x2
+	.byte	0x7f
+	.sleb128 0
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 	.byte	0
 	.byte	0
+<<<<<<< Updated upstream
 	.uleb128 0x27
 	.uaword	.LVL423
 	.uaword	0x4d76
@@ -10130,9 +13260,12 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x40
+=======
+	.uleb128 0x42
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"GetISRID"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0xcf0
 	.byte	0x1
 	.uaword	0x502
@@ -10141,58 +13274,78 @@ GetISRID:
 	.byte	0x1
 	.byte	0x9c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4a0b
+=======
+	.uaword	0x383d
+>>>>>>> Stashed changes
 	.uleb128 0x4a
 	.string	"isr_id"
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0xcf5
 	.uaword	0x502
 	.byte	0x1
 	.byte	0x52
-	.uleb128 0x41
+	.uleb128 0x25
 	.uaword	.LASF1
-	.byte	0x2
+	.byte	0x3
 	.uahalf	0xcf7
+<<<<<<< Updated upstream
 	.uaword	0x23fe
 	.uleb128 0x34
 	.uaword	0x1b9c
 	.uaword	.LBB1197
 	.uaword	.LBE1197
 	.byte	0x2
+=======
+	.uaword	0x245e
+	.uleb128 0x3a
+	.uaword	0x1c81
+	.uaword	.LBB592
+	.uaword	.LBE592
+	.byte	0x3
+>>>>>>> Stashed changes
 	.uahalf	0xcf7
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.string	"osEE_kdb_var"
 	.byte	0xc
 	.byte	0x42
 	.uaword	0x171f
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.string	"osEE_cdb_var"
 	.byte	0xc
 	.byte	0x5b
 	.uaword	0x15a6
 	.byte	0x1
 	.byte	0x1
-	.uleb128 0x4f
+	.uleb128 0x50
 	.byte	0x1
 	.string	"osEE_idle_task_terminate"
 	.byte	0x4
 	.byte	0x9b
 	.byte	0x1
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4a60
 	.uleb128 0x50
 	.uaword	0x111c
+=======
+	.uaword	0x3892
+	.uleb128 0x51
+	.uaword	0x1109
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.byte	0x1
 	.string	"osEE_hal_save_ctx_and_ready2stacked"
 	.byte	0x4
 	.byte	0x68
 	.byte	0x1
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4a9e
 	.uleb128 0x50
 	.uaword	0x111c
@@ -10200,19 +13353,35 @@ GetISRID:
 	.uaword	0x4c3
 	.uleb128 0x50
 	.uaword	0x4c3
+=======
+	.uaword	0x38d0
+	.uleb128 0x51
+	.uaword	0x1109
+	.uleb128 0x51
+	.uaword	0x4b0
+	.uleb128 0x51
+	.uaword	0x4b0
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.byte	0x1
 	.string	"osEE_task_end"
 	.byte	0x1
 	.byte	0xbf
 	.byte	0x1
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4abc
 	.uleb128 0x50
 	.uaword	0x23fe
 	.byte	0
+=======
+	.uaword	0x38ee
+>>>>>>> Stashed changes
 	.uleb128 0x51
+	.uaword	0x245e
+	.byte	0
+	.uleb128 0x52
 	.byte	0x1
 	.string	"osEE_cpu_startos"
 	.byte	0x1
@@ -10220,7 +13389,7 @@ GetISRID:
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x1
-	.uleb128 0x52
+	.uleb128 0x53
 	.byte	0x1
 	.string	"osEE_task_activated"
 	.byte	0x1
@@ -10228,11 +13397,17 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xa2c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4aff
 	.uleb128 0x50
 	.uaword	0x111c
+=======
+	.uaword	0x3931
+	.uleb128 0x51
+	.uaword	0x1109
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.byte	0x1
 	.string	"osEE_scheduler_task_activated"
 	.byte	0xd
@@ -10240,26 +13415,42 @@ GetISRID:
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4b36
 	.uleb128 0x50
 	.uaword	0x1b5d
 	.uleb128 0x50
 	.uaword	0x111c
+=======
+	.uaword	0x3968
+	.uleb128 0x51
+	.uaword	0x19a9
+	.uleb128 0x51
+	.uaword	0x1109
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.byte	0x1
 	.string	"osEE_hal_terminate_ctx"
 	.byte	0x4
 	.byte	0x77
 	.byte	0x1
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4b62
 	.uleb128 0x50
 	.uaword	0x4c3
 	.uleb128 0x50
 	.uaword	0xf00
+=======
+	.uaword	0x3994
+	.uleb128 0x51
+	.uaword	0x4b0
+	.uleb128 0x51
+	.uaword	0xeed
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.byte	0x1
 	.string	"osEE_scheduler_task_insert"
 	.byte	0xd
@@ -10267,13 +13458,21 @@ GetISRID:
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4b96
 	.uleb128 0x50
 	.uaword	0x1b5d
 	.uleb128 0x50
 	.uaword	0x111c
+=======
+	.uaword	0x39c8
+	.uleb128 0x51
+	.uaword	0x19a9
+	.uleb128 0x51
+	.uaword	0x1109
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.byte	0x1
 	.string	"osEE_scheduler_task_preemption_point"
 	.byte	0xd
@@ -10281,11 +13480,17 @@ GetISRID:
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4bcf
 	.uleb128 0x50
 	.uaword	0x1b5d
+=======
+	.uaword	0x3a01
+	.uleb128 0x51
+	.uaword	0x19a9
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.byte	0x1
 	.string	"osEE_alarm_set_rel"
 	.byte	0x1
@@ -10293,6 +13498,7 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xa2c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4c06
 	.uleb128 0x50
 	.uaword	0x12de
@@ -10302,8 +13508,19 @@ GetISRID:
 	.uaword	0x6eb
 	.uleb128 0x50
 	.uaword	0x6eb
+=======
+	.uaword	0x3a38
+	.uleb128 0x51
+	.uaword	0x12cb
+	.uleb128 0x51
+	.uaword	0x1d26
+	.uleb128 0x51
+	.uaword	0x6d8
+	.uleb128 0x51
+	.uaword	0x6d8
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.byte	0x1
 	.string	"osEE_alarm_set_abs"
 	.byte	0x1
@@ -10311,6 +13528,7 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xa2c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4c3d
 	.uleb128 0x50
 	.uaword	0x12de
@@ -10320,8 +13538,19 @@ GetISRID:
 	.uaword	0x6eb
 	.uleb128 0x50
 	.uaword	0x6eb
+=======
+	.uaword	0x3a6f
+	.uleb128 0x51
+	.uaword	0x12cb
+	.uleb128 0x51
+	.uaword	0x1d26
+	.uleb128 0x51
+	.uaword	0x6d8
+	.uleb128 0x51
+	.uaword	0x6d8
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.byte	0x1
 	.string	"osEE_alarm_cancel"
 	.byte	0x1
@@ -10329,11 +13558,17 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xa2c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4c64
 	.uleb128 0x50
 	.uaword	0x1cc3
+=======
+	.uaword	0x3a96
+	.uleb128 0x51
+	.uaword	0x1d26
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.byte	0x1
 	.string	"osEE_alarm_get"
 	.byte	0x1
@@ -10341,13 +13576,21 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xa2c
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4c8d
 	.uleb128 0x50
 	.uaword	0x1cc3
 	.uleb128 0x50
 	.uaword	0x710
+=======
+	.uaword	0x3abf
+	.uleb128 0x51
+	.uaword	0x1d26
+	.uleb128 0x51
+	.uaword	0x6fd
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.byte	0x1
 	.string	"osEE_scheduler_core_pop_running"
 	.byte	0xd
@@ -10355,6 +13598,7 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xefa
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4cc6
 	.uleb128 0x50
 	.uaword	0x1800
@@ -10365,19 +13609,39 @@ GetISRID:
 	.byte	0x4
 	.uaword	0xeeb
 	.uleb128 0x4f
+=======
+	.uaword	0x3af8
+	.uleb128 0x51
+	.uaword	0x174b
+	.uleb128 0x51
+	.uaword	0x3af8
+	.byte	0
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0xed8
+	.uleb128 0x50
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"osEE_change_context_from_running"
 	.byte	0x1
 	.byte	0x58
 	.byte	0x1
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4d02
 	.uleb128 0x50
 	.uaword	0x111c
 	.uleb128 0x50
 	.uaword	0x111c
+=======
+	.uaword	0x3b34
+	.uleb128 0x51
+	.uaword	0x1109
+	.uleb128 0x51
+	.uaword	0x1109
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.byte	0x1
 	.string	"osEE_task_event_set_mask"
 	.byte	0x1
@@ -10385,6 +13649,7 @@ GetISRID:
 	.byte	0x1
 	.uaword	0xefa
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4d39
 	.uleb128 0x50
 	.uaword	0x111c
@@ -10397,6 +13662,20 @@ GetISRID:
 	.byte	0x4
 	.uaword	0xa2c
 	.uleb128 0x52
+=======
+	.uaword	0x3b6b
+	.uleb128 0x51
+	.uaword	0x1109
+	.uleb128 0x51
+	.uaword	0x798
+	.uleb128 0x51
+	.uaword	0x3b6b
+	.byte	0
+	.uleb128 0xd
+	.byte	0x4
+	.uaword	0xa19
+	.uleb128 0x53
+>>>>>>> Stashed changes
 	.byte	0x1
 	.string	"osEE_scheduler_task_unblocked"
 	.byte	0xd
@@ -10404,21 +13683,34 @@ GetISRID:
 	.byte	0x1
 	.uaword	0x269
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uaword	0x4d76
 	.uleb128 0x50
 	.uaword	0x1b5d
 	.uleb128 0x50
 	.uaword	0xefa
+=======
+	.uaword	0x3ba8
+	.uleb128 0x51
+	.uaword	0x19a9
+	.uleb128 0x51
+	.uaword	0xee7
+>>>>>>> Stashed changes
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.byte	0x1
 	.string	"osEE_counter_increment"
 	.byte	0x1
 	.uahalf	0x304
 	.byte	0x1
 	.byte	0x1
+<<<<<<< Updated upstream
 	.uleb128 0x50
 	.uaword	0x12de
+=======
+	.uleb128 0x51
+	.uaword	0x12cb
+>>>>>>> Stashed changes
 	.byte	0
 	.byte	0
 .section .debug_abbrev,"",@progbits
@@ -10734,11 +14026,9 @@ GetISRID:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x20
 	.uleb128 0xb
 	.uleb128 0x1
@@ -10746,26 +14036,21 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x1b
-	.uleb128 0x34
+	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x1c
-	.uleb128 0xb
-	.byte	0x1
-	.byte	0
-	.byte	0
-	.uleb128 0x1d
 	.uleb128 0x2e
-	.byte	0
+	.byte	0x1
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
@@ -10776,6 +14061,21 @@ GetISRID:
 	.uleb128 0xc
 	.uleb128 0x20
 	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x1d
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x1e
@@ -10789,6 +14089,8 @@ GetISRID:
 	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
 	.uleb128 0x20
 	.uleb128 0xb
 	.uleb128 0x1
@@ -10796,7 +14098,7 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x1f
-	.uleb128 0x5
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
@@ -10809,16 +14111,8 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x20
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
 	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
-	.uleb128 0x13
+	.byte	0x1
 	.byte	0
 	.byte	0
 	.uleb128 0x21
@@ -10829,70 +14123,58 @@ GetISRID:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x20
 	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x22
-	.uleb128 0x2e
-	.byte	0x1
+	.uleb128 0x5
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x20
-	.uleb128 0xb
-	.uleb128 0x1
+	.uleb128 0x5
+	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x23
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x24
 	.uleb128 0x2e
-	.byte	0x1
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x40
-	.uleb128 0xa
-	.uleb128 0x2117
-	.uleb128 0xc
-	.uleb128 0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x20
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x24
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x25
-	.uleb128 0x5
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -10902,8 +14184,6 @@ GetISRID:
 	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x26
@@ -10914,6 +14194,157 @@ GetISRID:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x27
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x28
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x29
+	.uleb128 0xb
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.byte	0
+	.byte	0
+	.uleb128 0x2a
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x2b
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2c
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2d
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x2e
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0x5
+	.byte	0
+	.byte	0
+	.uleb128 0x2f
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x30
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
 	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
@@ -10921,7 +14352,40 @@ GetISRID:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x27
+	.uleb128 0x32
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x33
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x34
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x35
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -10930,7 +14394,7 @@ GetISRID:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x28
+	.uleb128 0x36
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10955,20 +14419,7 @@ GetISRID:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x29
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x37
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -10983,7 +14434,7 @@ GetISRID:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x38
 	.uleb128 0x1d
 	.byte	0
 	.uleb128 0x31
@@ -10998,38 +14449,7 @@ GetISRID:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x2d
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0xa
-	.byte	0
-	.byte	0
-	.uleb128 0x2e
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x2f
+	.uleb128 0x39
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x11
@@ -11040,49 +14460,7 @@ GetISRID:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x30
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.byte	0
-	.byte	0
-	.uleb128 0x32
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x33
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x34
+	.uleb128 0x3a
 	.uleb128 0x1d
 	.byte	0
 	.uleb128 0x31
@@ -11097,7 +14475,7 @@ GetISRID:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x3b
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -11106,7 +14484,7 @@ GetISRID:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x3c
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -11115,31 +14493,7 @@ GetISRID:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x37
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x38
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0x5
-	.byte	0
-	.byte	0
-	.uleb128 0x39
+	.uleb128 0x3d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11166,7 +14520,7 @@ GetISRID:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3a
+	.uleb128 0x3e
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -11181,7 +14535,7 @@ GetISRID:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x3b
+	.uleb128 0x3f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -11196,42 +14550,7 @@ GetISRID:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x3c
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x3d
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0xa
-	.byte	0
-	.byte	0
-	.uleb128 0x3e
-	.uleb128 0xb
-	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x6
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -11239,38 +14558,11 @@ GetISRID:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x40
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x1
-	.uleb128 0x40
-	.uleb128 0xa
-	.uleb128 0x2117
-	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x41
@@ -11284,9 +14576,68 @@ GetISRID:
 	.uleb128 0x5
 	.uleb128 0x49
 	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
 	.byte	0
 	.byte	0
 	.uleb128 0x42
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x1
+	.uleb128 0x40
+	.uleb128 0xa
+	.uleb128 0x2117
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x43
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0xa
+	.byte	0
+	.byte	0
+	.uleb128 0x44
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x45
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -11301,7 +14652,7 @@ GetISRID:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -11310,51 +14661,6 @@ GetISRID:
 	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x44
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x45
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x52
-	.uleb128 0x1
-	.uleb128 0x55
-	.uleb128 0x6
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0x5
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x46
-	.uleb128 0x1d
-	.byte	0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x52
-	.uleb128 0x1
-	.uleb128 0x55
-	.uleb128 0x6
-	.uleb128 0x58
-	.uleb128 0xb
-	.uleb128 0x59
-	.uleb128 0x5
 	.byte	0
 	.byte	0
 	.uleb128 0x47
@@ -11419,21 +14725,38 @@ GetISRID:
 	.byte	0
 	.byte	0
 	.uleb128 0x4c
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x49
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
 	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0xa
+	.uleb128 0x52
+	.uleb128 0x1
+	.uleb128 0x55
+	.uleb128 0x6
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0x5
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x4d
+	.uleb128 0x1d
+	.byte	0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x52
+	.uleb128 0x1
+	.uleb128 0x55
+	.uleb128 0x6
+	.uleb128 0x58
+	.uleb128 0xb
+	.uleb128 0x59
+	.uleb128 0x5
+	.byte	0
+	.byte	0
+	.uleb128 0x4e
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -11448,7 +14771,7 @@ GetISRID:
 	.uleb128 0xa
 	.byte	0
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -11465,7 +14788,7 @@ GetISRID:
 	.uleb128 0xc
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11484,35 +14807,16 @@ GetISRID:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x51
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x51
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0xc
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0xc
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0xc
-	.byte	0
-	.byte	0
 	.uleb128 0x52
 	.uleb128 0x2e
-	.byte	0x1
+	.byte	0
 	.uleb128 0x3f
 	.uleb128 0xc
 	.uleb128 0x3
@@ -11527,8 +14831,6 @@ GetISRID:
 	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0xc
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x53
@@ -11541,7 +14843,7 @@ GetISRID:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0xc
 	.uleb128 0x49
@@ -11565,6 +14867,27 @@ GetISRID:
 	.uleb128 0x5
 	.uleb128 0x27
 	.uleb128 0xc
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0xc
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x55
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0xc
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x27
+	.uleb128 0xc
 	.uleb128 0x3c
 	.uleb128 0xc
 	.byte	0
@@ -11573,144 +14896,188 @@ GetISRID:
 .section .debug_loc,"",@progbits
 .Ldebug_loc0:
 .LLST0:
-	.uaword	.LVL0-.Ltext0
-	.uaword	.LVL3-.Ltext0
+	.uaword	.LVL1-.Ltext0
+	.uaword	.LVL2-.Ltext0
 	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL3-.Ltext0
-	.uaword	.LFE100-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x64
-	.byte	0x9f
+	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST1:
-	.uaword	.LVL0-.Ltext0
-	.uaword	.LVL4-1-.Ltext0
+	.uaword	.LVL4-.Ltext0
+	.uaword	.LFE83-.Ltext0
 	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL4-1-.Ltext0
-	.uaword	.LFE100-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
+	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST2:
-	.uaword	.LVL11-.Ltext0
-	.uaword	.LVL12-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL12-.Ltext0
-	.uaword	.LVL13-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 20
-	.uaword	0
-	.uaword	0
-.LLST3:
-	.uaword	.LVL16-.Ltext0
-	.uaword	.LVL17-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 20
-	.uaword	0
-	.uaword	0
-.LLST4:
-	.uaword	.LVL20-.Ltext0
-	.uaword	.LVL21-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST5:
-	.uaword	.LVL19-.Ltext0
-	.uaword	.LVL26-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST6:
-	.uaword	.LVL23-.Ltext0
-	.uaword	.LVL25-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST7:
-	.uaword	.LVL23-.Ltext0
-	.uaword	.LVL24-.Ltext0
+	.uaword	.LVL4-.Ltext0
+	.uaword	.LVL5-.Ltext0
 	.uahalf	0x3
 	.byte	0x5f
 	.byte	0x93
 	.uleb128 0x4
 	.uaword	0
 	.uaword	0
-.LLST8:
-	.uaword	.LVL29-.Ltext0
-	.uaword	.LVL33-.Ltext0
+.LLST3:
+	.uaword	.LVL8-.Ltext0
+	.uaword	.LVL9-.Ltext0
+	.uahalf	0x5
+	.byte	0x52
+	.byte	0x93
+	.uleb128 0x1
+	.byte	0x93
+	.uleb128 0x3
+	.uaword	.LVL9-.Ltext0
+	.uaword	.LVL10-.Ltext0
+	.uahalf	0x5
+	.byte	0x54
+	.byte	0x93
+	.uleb128 0x1
+	.byte	0x93
+	.uleb128 0x3
+	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL11-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
-	.uaword	.LVL33-.Ltext0
-	.uaword	.LVL36-.Ltext0
+	.uaword	0
+	.uaword	0
+.LLST4:
+	.uaword	.LVL7-.Ltext0
+	.uaword	.LVL10-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST5:
+	.uaword	.LVL10-.Ltext0
+	.uaword	.LVL11-.Ltext0
+	.uahalf	0x3
+	.byte	0x52
+	.byte	0x93
+	.uleb128 0x4
+	.uaword	0
+	.uaword	0
+.LLST6:
+	.uaword	.LVL12-.Ltext0
+	.uaword	.LVL15-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x54
+	.uaword	.LVL15-1-.Ltext0
+	.uaword	.LFE154-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST7:
+	.uaword	.LVL22-.Ltext0
+	.uaword	.LVL23-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL23-.Ltext0
+	.uaword	.LVL24-.Ltext0
 	.uahalf	0x2
 	.byte	0x8f
-	.sleb128 24
+	.sleb128 20
+	.uaword	0
+	.uaword	0
+.LLST8:
+	.uaword	.LVL27-.Ltext0
+	.uaword	.LVL28-.Ltext0
+	.uahalf	0x2
+	.byte	0x8f
+	.sleb128 20
 	.uaword	0
 	.uaword	0
 .LLST9:
+	.uaword	.LVL31-.Ltext0
 	.uaword	.LVL32-.Ltext0
-	.uaword	.LVL34-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL34-.Ltext0
-	.uaword	.LVL35-.Ltext0
-	.uahalf	0x5
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL35-.Ltext0
-	.uaword	.LVL36-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST10:
 	.uaword	.LVL30-.Ltext0
-	.uaword	.LVL32-.Ltext0
+	.uaword	.LVL37-.Ltext0
 	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL32-.Ltext0
-	.uaword	.LVL35-.Ltext0
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST11:
+	.uaword	.LVL34-.Ltext0
+	.uaword	.LVL36-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
-.LLST11:
+.LLST12:
+	.uaword	.LVL34-.Ltext0
 	.uaword	.LVL35-.Ltext0
-	.uaword	.LVL36-.Ltext0
 	.uahalf	0x3
 	.byte	0x5f
 	.byte	0x93
 	.uleb128 0x4
 	.uaword	0
 	.uaword	0
-.LLST12:
-	.uaword	.LVL37-.Ltext0
-	.uaword	.LVL47-1-.Ltext0
+.LLST13:
+	.uaword	.LVL40-.Ltext0
+	.uaword	.LVL43-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL43-.Ltext0
+	.uaword	.LVL46-.Ltext0
+	.uahalf	0x2
+	.byte	0x8f
+	.sleb128 24
+	.uaword	0
+	.uaword	0
+.LLST14:
+	.uaword	.LVL42-.Ltext0
+	.uaword	.LVL44-.Ltext0
+	.uahalf	0x5
+	.byte	0x5f
+	.byte	0x93
+	.uleb128 0x1
+	.byte	0x93
+	.uleb128 0x3
+	.uaword	.LVL44-.Ltext0
+	.uaword	.LVL45-.Ltext0
+	.uahalf	0x5
+	.byte	0x52
+	.byte	0x93
+	.uleb128 0x1
+	.byte	0x93
+	.uleb128 0x3
+	.uaword	.LVL45-.Ltext0
+	.uaword	.LVL46-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	0
+	.uaword	0
+.LLST15:
+	.uaword	.LVL41-.Ltext0
+	.uaword	.LVL45-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	0
+	.uaword	0
+.LLST16:
+	.uaword	.LVL45-.Ltext0
+	.uaword	.LVL46-.Ltext0
+	.uahalf	0x3
+	.byte	0x5f
+	.byte	0x93
+	.uleb128 0x4
+	.uaword	0
+	.uaword	0
+.LLST17:
+	.uaword	.LVL47-.Ltext0
+	.uaword	.LVL50-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL47-1-.Ltext0
+	.uaword	.LVL50-1-.Ltext0
 	.uaword	.LFE116-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -11719,173 +15086,108 @@ GetISRID:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-.LLST13:
-	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL54-.Ltext0
+.LLST18:
+	.uaword	.LVL47-.Ltext0
+	.uaword	.LVL61-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL54-.Ltext0
-	.uaword	.LVL60-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	.LVL60-.Ltext0
-	.uaword	.LVL63-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL63-.Ltext0
-	.uaword	.LFE116-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	0
-	.uaword	0
-.LLST14:
-	.uaword	.LVL38-.Ltext0
-	.uaword	.LVL47-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL47-1-.Ltext0
+	.uaword	.LVL61-.Ltext0
 	.uaword	.LFE116-.Ltext0
 	.uahalf	0x1
 	.byte	0x59
 	.uaword	0
 	.uaword	0
-.LLST15:
-	.uaword	.LVL41-.Ltext0
-	.uaword	.LVL42-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST16:
-	.uaword	.LVL44-.Ltext0
-	.uaword	.LVL46-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST17:
-	.uaword	.LVL44-.Ltext0
-	.uaword	.LVL45-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST18:
-	.uaword	.LVL48-.Ltext0
-	.uaword	.LVL54-.Ltext0
-	.uahalf	0x1
-	.byte	0x6c
-	.uaword	.LVL61-.Ltext0
-	.uaword	.LVL63-.Ltext0
-	.uahalf	0x1
-	.byte	0x6c
-	.uaword	0
-	.uaword	0
 .LLST19:
-	.uaword	.LVL50-.Ltext0
-	.uaword	.LVL52-.Ltext0
+	.uaword	.LVL48-.Ltext0
+	.uaword	.LVL50-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x6c
+	.byte	0x54
+	.uaword	.LVL50-1-.Ltext0
+	.uaword	.LFE116-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
 	.uaword	0
 	.uaword	0
 .LLST20:
-	.uaword	.LVL54-.Ltext0
-	.uaword	.LVL60-.Ltext0
+	.uaword	.LVL51-.Ltext0
+	.uaword	.LVL52-.Ltext0
 	.uahalf	0x1
-	.byte	0x58
-	.uaword	.LVL63-.Ltext0
+	.byte	0x52
+	.uaword	.LVL52-.Ltext0
+	.uaword	.LVL54-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL61-.Ltext0
 	.uaword	.LFE116-.Ltext0
 	.uahalf	0x1
-	.byte	0x58
+	.byte	0x5f
+	.uaword	0
+	.uaword	0
+.LLST21:
+	.uaword	.LVL55-.Ltext0
+	.uaword	.LVL61-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
 	.uaword	0
 	.uaword	0
 .LLST22:
-	.uaword	.LVL54-.Ltext0
-	.uaword	.LVL55-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL55-.Ltext0
-	.uaword	.LVL56-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL59-.Ltext0
-	.uaword	.LVL60-.Ltext0
-	.uahalf	0x5
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL63-.Ltext0
-	.uaword	.LFE116-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST23:
-	.uaword	.LVL55-.Ltext0
-	.uaword	.LVL56-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST24:
-	.uaword	.LVL54-.Ltext0
-	.uaword	.LVL55-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
 	.uaword	.LVL57-.Ltext0
 	.uaword	.LVL59-.Ltext0
 	.uahalf	0x1
+	.byte	0x6c
+	.uaword	0
+	.uaword	0
+.LLST23:
+	.uaword	.LVL65-.Ltext0
+	.uaword	.LVL67-1-.Ltext0
+	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL59-.Ltext0
-	.uaword	.LVL60-.Ltext0
+	.uaword	.LVL67-1-.Ltext0
+	.uaword	.LFE118-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST24:
+	.uaword	.LVL70-.Ltext0
+	.uaword	.LVL71-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL71-1-.Ltext0
+	.uaword	.LFE118-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST25:
 	.uaword	.LVL66-.Ltext0
-	.uaword	.LVL75-1-.Ltext0
+	.uaword	.LVL72-.Ltext0
 	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL75-1-.Ltext0
-	.uaword	.LFE118-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
+	.byte	0x6c
 	.uaword	0
 	.uaword	0
 .LLST26:
-	.uaword	.LVL76-.Ltext0
-	.uaword	.LVL77-1-.Ltext0
+	.uaword	.LVL68-.Ltext0
+	.uaword	.LVL69-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
-	.uaword	.LVL77-1-.Ltext0
-	.uaword	.LFE118-.Ltext0
+	.uaword	.LVL69-1-.Ltext0
+	.uaword	.LVL72-.Ltext0
 	.uahalf	0x1
 	.byte	0x58
 	.uaword	0
 	.uaword	0
 .LLST27:
-	.uaword	.LVL67-.Ltext0
-	.uaword	.LVL75-1-.Ltext0
+	.uaword	.LVL73-.Ltext0
+	.uaword	.LVL79-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL75-1-.Ltext0
-	.uaword	.LFE118-.Ltext0
+	.uaword	.LVL79-1-.Ltext0
+	.uaword	.LFE119-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -11894,99 +15196,125 @@ GetISRID:
 	.uaword	0
 	.uaword	0
 .LLST28:
-	.uaword	.LVL68-.Ltext0
-	.uaword	.LVL83-.Ltext0
+	.uaword	.LVL84-.Ltext0
+	.uaword	.LVL85-.Ltext0
+	.uahalf	0x2
+	.byte	0x30
+	.byte	0x9f
+	.uaword	.LVL87-.Ltext0
+	.uaword	.LVL88-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL88-1-.Ltext0
+	.uaword	.LVL89-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL89-.Ltext0
+	.uaword	.LVL90-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL90-1-.Ltext0
+	.uaword	.LVL91-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL91-.Ltext0
+	.uaword	.LVL92-.Ltext0
+	.uahalf	0x2
+	.byte	0x30
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST29:
+	.uaword	.LVL74-.Ltext0
+	.uaword	.LVL82-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	.LVL85-.Ltext0
+	.uaword	.LVL91-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	.LVL92-.Ltext0
+	.uaword	.LFE119-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
-.LLST29:
-	.uaword	.LVL70-.Ltext0
-	.uaword	.LVL71-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
 .LLST30:
-	.uaword	.LVL69-.Ltext0
+	.uaword	.LVL76-.Ltext0
+	.uaword	.LVL81-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
+	.uaword	.LVL81-.Ltext0
 	.uaword	.LVL83-.Ltext0
 	.uahalf	0x1
-	.byte	0x59
+	.byte	0x5f
+	.uaword	.LVL83-.Ltext0
+	.uaword	.LVL85-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
+	.uaword	.LVL85-.Ltext0
+	.uaword	.LVL87-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL87-.Ltext0
+	.uaword	.LVL92-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
 	.uaword	0
 	.uaword	0
 .LLST31:
-	.uaword	.LVL73-.Ltext0
-	.uaword	.LVL79-.Ltext0
+	.uaword	.LVL80-.Ltext0
+	.uaword	.LVL86-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x5f
+	.byte	0x52
+	.uaword	.LVL86-1-.Ltext0
+	.uaword	.LVL92-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
 	.uaword	0
 	.uaword	0
 .LLST32:
-	.uaword	.LVL73-.Ltext0
-	.uaword	.LVL74-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
+	.uaword	.LVL77-.Ltext0
+	.uaword	.LVL78-.Ltext0
+	.uahalf	0x2
+	.byte	0x8f
+	.sleb128 20
 	.uaword	0
 	.uaword	0
 .LLST33:
-	.uaword	.LVL77-.Ltext0
-	.uaword	.LVL83-.Ltext0
-	.uahalf	0x1
-	.byte	0x59
+	.uaword	.LVL91-.Ltext0
+	.uaword	.LVL92-.Ltext0
+	.uahalf	0x2
+	.byte	0x30
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST34:
+	.uaword	.LVL95-.Ltext0
+	.uaword	.LVL96-.Ltext0
+	.uahalf	0x2
+	.byte	0x8f
+	.sleb128 20
 	.uaword	0
 	.uaword	0
 .LLST35:
-	.uaword	.LVL80-.Ltext0
-	.uaword	.LVL81-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL81-.Ltext0
-	.uaword	.LVL82-.Ltext0
-	.uahalf	0x5
-	.byte	0x59
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL82-.Ltext0
-	.uaword	.LVL83-.Ltext0
+	.uaword	.LVL103-.Ltext0
+	.uaword	.LVL104-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL104-.Ltext0
+	.uaword	.LVL106-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST36:
-	.uaword	.LVL78-.Ltext0
-	.uaword	.LVL80-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL80-.Ltext0
-	.uaword	.LVL82-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST37:
-	.uaword	.LVL82-.Ltext0
-	.uaword	.LVL83-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST38:
-	.uaword	.LVL84-.Ltext0
-	.uaword	.LVL102-1-.Ltext0
+	.uaword	.LVL107-.Ltext0
+	.uaword	.LVL113-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL102-1-.Ltext0
-	.uaword	.LFE119-.Ltext0
+	.uaword	.LVL113-1-.Ltext0
+	.uaword	.LFE122-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -11994,60 +15322,122 @@ GetISRID:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
+.LLST37:
+	.uaword	.LVL123-.Ltext0
+	.uaword	.LVL124-.Ltext0
+	.uahalf	0x2
+	.byte	0x30
+	.byte	0x9f
+	.uaword	.LVL124-.Ltext0
+	.uaword	.LFE122-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST38:
+	.uaword	.LVL109-.Ltext0
+	.uaword	.LVL124-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
+	.uaword	0
+	.uaword	0
 .LLST39:
-	.uaword	.LVL100-.Ltext0
-	.uaword	.LVL101-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL102-.Ltext0
-	.uaword	.LVL103-1-.Ltext0
+	.uaword	.LVL110-.Ltext0
+	.uaword	.LVL124-.Ltext0
 	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL104-.Ltext0
-	.uaword	.LVL106-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL106-.Ltext0
-	.uaword	.LVL109-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL109-.Ltext0
-	.uaword	.LVL114-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
+	.byte	0x6d
 	.uaword	0
 	.uaword	0
 .LLST40:
-	.uaword	.LVL85-.Ltext0
-	.uaword	.LVL98-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL101-.Ltext0
-	.uaword	.LVL106-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	.LVL109-.Ltext0
-	.uaword	.LFE119-.Ltext0
+	.uaword	.LVL110-.Ltext0
+	.uaword	.LVL124-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST41:
-	.uaword	.LVL86-.Ltext0
-	.uaword	.LVL102-1-.Ltext0
+	.uaword	.LVL111-.Ltext0
+	.uaword	.LVL113-1-.Ltext0
+	.uahalf	0x2
+	.byte	0x8c
+	.sleb128 4
+	.uaword	.LVL113-1-.Ltext0
+	.uaword	.LVL119-.Ltext0
 	.uahalf	0x1
-	.byte	0x53
+	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST42:
-	.uaword	.LVL86-.Ltext0
-	.uaword	.LVL102-1-.Ltext0
+	.uaword	.LVL112-.Ltext0
+	.uaword	.LVL113-1-.Ltext0
+	.uahalf	0x2
+	.byte	0x8f
+	.sleb128 1
+	.uaword	.LVL113-1-.Ltext0
+	.uaword	.LVL124-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	0
+	.uaword	0
+.LLST43:
+	.uaword	.LVL113-.Ltext0
+	.uaword	.LVL115-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL116-.Ltext0
+	.uaword	.LVL117-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL118-.Ltext0
+	.uaword	.LVL120-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL121-.Ltext0
+	.uaword	.LVL122-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST44:
+	.uaword	.LVL114-.Ltext0
+	.uaword	.LVL119-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	0
+	.uaword	0
+.LLST45:
+	.uaword	.LVL114-.Ltext0
+	.uaword	.LVL115-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL116-.Ltext0
+	.uaword	.LVL117-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL118-.Ltext0
+	.uaword	.LVL120-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST46:
+	.uaword	.LVL115-.Ltext0
+	.uaword	.LVL116-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL117-.Ltext0
+	.uaword	.LVL118-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST47:
+	.uaword	.LVL125-.Ltext0
+	.uaword	.LVL129-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL102-1-.Ltext0
-	.uaword	.LFE119-.Ltext0
+	.uaword	.LVL129-1-.Ltext0
+	.uaword	.LFE123-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -12055,514 +15445,528 @@ GetISRID:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-.LLST43:
-	.uaword	.LVL87-.Ltext0
-	.uaword	.LVL97-.Ltext0
-	.uahalf	0x1
-	.byte	0x6c
-	.uaword	.LVL97-.Ltext0
-	.uaword	.LVL99-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL99-.Ltext0
-	.uaword	.LVL101-.Ltext0
-	.uahalf	0x1
-	.byte	0x6c
-	.uaword	.LVL101-.Ltext0
-	.uaword	.LVL104-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL104-.Ltext0
-	.uaword	.LVL109-.Ltext0
-	.uahalf	0x1
-	.byte	0x6c
-	.uaword	.LVL109-.Ltext0
-	.uaword	.LVL111-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL111-.Ltext0
-	.uaword	.LVL114-.Ltext0
-	.uahalf	0x1
-	.byte	0x6c
-	.uaword	0
-	.uaword	0
-.LLST44:
-	.uaword	.LVL88-.Ltext0
-	.uaword	.LVL89-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 20
-	.uaword	0
-	.uaword	0
-.LLST45:
-	.uaword	.LVL91-.Ltext0
-	.uaword	.LVL92-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST46:
-	.uaword	.LVL90-.Ltext0
-	.uaword	.LVL104-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	.LVL106-.Ltext0
-	.uaword	.LVL113-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST47:
-	.uaword	.LVL94-.Ltext0
-	.uaword	.LVL96-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
 .LLST48:
-	.uaword	.LVL94-.Ltext0
-	.uaword	.LVL95-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST49:
-	.uaword	.LVL109-.Ltext0
-	.uaword	.LVL113-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST51:
-	.uaword	.LVL104-.Ltext0
-	.uaword	.LVL105-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL105-.Ltext0
-	.uaword	.LVL106-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL112-.Ltext0
-	.uaword	.LVL114-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	0
-	.uaword	0
-.LLST52:
-	.uaword	.LVL105-.Ltext0
-	.uaword	.LVL106-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST53:
-	.uaword	.LVL104-.Ltext0
-	.uaword	.LVL105-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL110-.Ltext0
-	.uaword	.LVL112-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL112-.Ltext0
-	.uaword	.LVL114-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST54:
-	.uaword	.LVL106-.Ltext0
-	.uaword	.LVL109-.Ltext0
+	.uaword	.LVL141-.Ltext0
+	.uaword	.LVL142-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST55:
-	.uaword	.LVL116-.Ltext0
-	.uaword	.LVL125-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	0
-	.uaword	0
-.LLST56:
-	.uaword	.LVL117-.Ltext0
-	.uaword	.LVL118-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 20
-	.uaword	0
-	.uaword	0
-.LLST57:
-	.uaword	.LVL120-.Ltext0
-	.uaword	.LVL121-.Ltext0
+	.uaword	.LVL142-.Ltext0
+	.uaword	.LFE123-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST58:
-	.uaword	.LVL119-.Ltext0
-	.uaword	.LVL123-.Ltext0
+.LLST49:
+	.uaword	.LVL127-.Ltext0
+	.uaword	.LVL142-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	0
+	.uaword	0
+.LLST50:
+	.uaword	.LVL128-.Ltext0
+	.uaword	.LVL142-.Ltext0
+	.uahalf	0x1
+	.byte	0x6d
+	.uaword	0
+	.uaword	0
+.LLST51:
+	.uaword	.LVL129-.Ltext0
+	.uaword	.LVL138-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL139-.Ltext0
+	.uaword	.LVL142-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
-.LLST59:
-	.uaword	.LVL123-.Ltext0
-	.uaword	.LVL124-.Ltext0
-	.uahalf	0x3
+.LLST52:
+	.uaword	.LVL130-.Ltext0
+	.uaword	.LVL131-.Ltext0
+	.uahalf	0x2
+	.byte	0x8d
+	.sleb128 4
+	.uaword	0
+	.uaword	0
+.LLST53:
+	.uaword	.LVL132-.Ltext0
+	.uaword	.LVL140-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x53
+	.uaword	0
+	.uaword	0
+.LLST54:
+	.uaword	.LVL133-.Ltext0
+	.uaword	.LVL140-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x53
+	.uaword	0
+	.uaword	0
+.LLST55:
+	.uaword	.LVL133-.Ltext0
+	.uaword	.LVL138-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST56:
+	.uaword	.LVL134-.Ltext0
+	.uaword	.LVL135-.Ltext0
+	.uahalf	0x1
 	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
+	.uaword	.LVL136-.Ltext0
+	.uaword	.LVL137-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	.LVL139-.Ltext0
+	.uaword	.LVL142-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
+	.uaword	0
+	.uaword	0
+.LLST57:
+	.uaword	.LVL138-.Ltext0
+	.uaword	.LVL139-.Ltext0
+	.uahalf	0x1
+	.byte	0x53
+	.uaword	0
+	.uaword	0
+.LLST58:
+	.uaword	.LVL143-.Ltext0
+	.uaword	.LVL144-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x54
+	.uaword	.LVL144-1-.Ltext0
+	.uaword	.LFE124-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST59:
+	.uaword	.LVL144-.Ltext0
+	.uaword	.LVL147-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL147-.Ltext0
+	.uaword	.LVL148-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
 	.uaword	0
 	.uaword	0
 .LLST60:
-	.uaword	.LVL124-.Ltext0
-	.uaword	.LVL125-1-.Ltext0
+	.uaword	.LVL145-.Ltext0
+	.uaword	.LVL146-.Ltext0
+	.uahalf	0x1
+	.byte	0x53
+	.uaword	.LVL146-.Ltext0
+	.uaword	.LVL147-1-.Ltext0
+	.uahalf	0x3
+	.byte	0x73
+	.sleb128 1
+	.byte	0x9f
+	.uaword	.LVL147-.Ltext0
+	.uaword	.LVL148-1-.Ltext0
+	.uahalf	0x3
+	.byte	0x73
+	.sleb128 1
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST61:
+	.uaword	.LVL161-.Ltext0
+	.uaword	.LVL162-.Ltext0
+	.uahalf	0x2
+	.byte	0x30
+	.byte	0x9f
+	.uaword	.LVL162-.Ltext0
+	.uaword	.LFE125-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	0
+	.uaword	0
+.LLST62:
+	.uaword	.LVL150-.Ltext0
+	.uaword	.LVL155-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
 	.uaword	0
 	.uaword	0
-.LLST61:
-	.uaword	.LVL130-.Ltext0
-	.uaword	.LVL131-.Ltext0
+.LLST63:
+	.uaword	.LVL151-.Ltext0
+	.uaword	.LVL153-.Ltext0
+	.uahalf	0x3
+	.byte	0x9
+	.byte	0xff
+	.byte	0x9f
+	.uaword	.LVL153-.Ltext0
+	.uaword	.LVL154-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST62:
-	.uaword	.LVL129-.Ltext0
-	.uaword	.LVL143-.Ltext0
+	.uaword	.LVL154-.Ltext0
+	.uaword	.LVL158-.Ltext0
+	.uahalf	0x3
+	.byte	0x9
+	.byte	0xff
+	.byte	0x9f
+	.uaword	.LVL158-.Ltext0
+	.uaword	.LVL159-.Ltext0
 	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST63:
-	.uaword	.LVL133-.Ltext0
-	.uaword	.LVL135-.Ltext0
+	.byte	0x5f
+	.uaword	.LVL159-.Ltext0
+	.uaword	.LVL160-.Ltext0
+	.uahalf	0x3
+	.byte	0x9
+	.byte	0xff
+	.byte	0x9f
+	.uaword	.LVL160-.Ltext0
+	.uaword	.LVL162-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST64:
-	.uaword	.LVL133-.Ltext0
-	.uaword	.LVL134-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST65:
-	.uaword	.LVL137-.Ltext0
-	.uaword	.LVL143-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST67:
-	.uaword	.LVL140-.Ltext0
-	.uaword	.LVL141-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL141-.Ltext0
-	.uaword	.LVL142-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL142-.Ltext0
-	.uaword	.LVL143-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST68:
-	.uaword	.LVL138-.Ltext0
-	.uaword	.LVL140-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL140-.Ltext0
-	.uaword	.LVL142-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST69:
-	.uaword	.LVL142-.Ltext0
-	.uaword	.LVL143-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST70:
-	.uaword	.LVL144-.Ltext0
-	.uaword	.LVL151-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL151-.Ltext0
-	.uaword	.LFE122-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST71:
-	.uaword	.LVL172-.Ltext0
-	.uaword	.LVL173-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL173-.Ltext0
-	.uaword	.LFE122-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST72:
-	.uaword	.LVL146-.Ltext0
-	.uaword	.LVL151-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL151-.Ltext0
-	.uaword	.LFE122-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST73:
-	.uaword	.LVL147-.Ltext0
-	.uaword	.LVL173-.Ltext0
-	.uahalf	0x1
-	.byte	0x63
-	.uaword	0
-	.uaword	0
-.LLST74:
-	.uaword	.LVL148-.Ltext0
-	.uaword	.LVL173-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	0
-	.uaword	0
-.LLST75:
-	.uaword	.LVL149-.Ltext0
-	.uaword	.LVL173-.Ltext0
+	.uaword	.LVL152-.Ltext0
+	.uaword	.LVL155-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
-.LLST76:
-	.uaword	.LVL150-.Ltext0
+.LLST65:
+	.uaword	.LVL156-.Ltext0
+	.uaword	.LVL160-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	0
+	.uaword	0
+.LLST66:
+	.uaword	.LVL157-.Ltext0
 	.uaword	.LVL159-.Ltext0
-	.uahalf	0x2
-	.byte	0x83
-	.sleb128 4
-	.uaword	.LVL159-.Ltext0
-	.uaword	.LVL161-.Ltext0
+	.uahalf	0x1
+	.byte	0x62
+	.uaword	0
+	.uaword	0
+.LLST67:
+	.uaword	.LVL168-.Ltext0
+	.uaword	.LVL171-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x54
+	.uaword	.LVL171-1-.Ltext0
+	.uaword	.LFE127-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST68:
+	.uaword	.LVL168-.Ltext0
+	.uaword	.LVL171-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x55
+	.uaword	.LVL171-1-.Ltext0
+	.uaword	.LVL175-.Ltext0
+	.uahalf	0x1
+	.byte	0x59
+	.uaword	.LVL175-.Ltext0
+	.uaword	.LFE127-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x55
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST69:
+	.uaword	.LVL168-.Ltext0
+	.uaword	.LVL171-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x56
+	.uaword	.LVL171-1-.Ltext0
+	.uaword	.LVL174-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	.LVL174-.Ltext0
+	.uaword	.LFE127-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x56
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST70:
+	.uaword	.LVL174-.Ltext0
+	.uaword	.LVL175-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL175-1-.Ltext0
+	.uaword	.LFE127-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	0
+	.uaword	0
+.LLST71:
+	.uaword	.LVL169-.Ltext0
+	.uaword	.LVL175-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	0
+	.uaword	0
+.LLST72:
+	.uaword	.LVL170-.Ltext0
+	.uaword	.LVL175-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
+	.uaword	0
+	.uaword	0
+.LLST73:
+	.uaword	.LVL172-.Ltext0
+	.uaword	.LVL173-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL173-1-.Ltext0
+	.uaword	.LVL175-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
+	.uaword	0
+	.uaword	0
+.LLST74:
+	.uaword	.LVL176-.Ltext0
+	.uaword	.LVL179-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x54
+	.uaword	.LVL179-1-.Ltext0
+	.uaword	.LFE128-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST75:
+	.uaword	.LVL176-.Ltext0
+	.uaword	.LVL179-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x55
+	.uaword	.LVL179-1-.Ltext0
+	.uaword	.LVL183-.Ltext0
+	.uahalf	0x1
+	.byte	0x59
+	.uaword	.LVL183-.Ltext0
+	.uaword	.LFE128-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x55
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST76:
+	.uaword	.LVL176-.Ltext0
+	.uaword	.LVL179-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x56
+	.uaword	.LVL179-1-.Ltext0
+	.uaword	.LVL182-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	.LVL182-.Ltext0
+	.uaword	.LFE128-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x56
+	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST77:
-	.uaword	.LVL151-.Ltext0
-	.uaword	.LVL159-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 1
-	.uaword	.LVL159-.Ltext0
-	.uaword	.LVL173-.Ltext0
+	.uaword	.LVL182-.Ltext0
+	.uaword	.LVL183-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x54
+	.byte	0x52
+	.uaword	.LVL183-1-.Ltext0
+	.uaword	.LFE128-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
 	.uaword	0
 	.uaword	0
 .LLST78:
-	.uaword	.LVL163-.Ltext0
-	.uaword	.LVL173-.Ltext0
+	.uaword	.LVL177-.Ltext0
+	.uaword	.LVL183-.Ltext0
 	.uahalf	0x1
-	.byte	0x53
+	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST79:
-	.uaword	.LVL153-.Ltext0
-	.uaword	.LVL154-.Ltext0
+	.uaword	.LVL178-.Ltext0
+	.uaword	.LVL183-.Ltext0
 	.uahalf	0x1
-	.byte	0x53
+	.byte	0x6c
 	.uaword	0
 	.uaword	0
 .LLST80:
-	.uaword	.LVL152-.Ltext0
-	.uaword	.LVL162-.Ltext0
+	.uaword	.LVL180-.Ltext0
+	.uaword	.LVL181-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST81:
-	.uaword	.LVL156-.Ltext0
-	.uaword	.LVL158-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	0
-	.uaword	0
-.LLST82:
-	.uaword	.LVL156-.Ltext0
-	.uaword	.LVL157-.Ltext0
-	.uahalf	0x3
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST83:
-	.uaword	.LVL159-.Ltext0
-	.uaword	.LVL161-.Ltext0
+	.uaword	.LVL181-1-.Ltext0
+	.uaword	.LVL183-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
-.LLST84:
-	.uaword	.LVL159-.Ltext0
-	.uaword	.LVL162-.Ltext0
+.LLST81:
+	.uaword	.LVL184-.Ltext0
+	.uaword	.LVL186-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x54
+	.uaword	.LVL186-1-.Ltext0
+	.uaword	.LFE129-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST82:
+	.uaword	.LVL189-.Ltext0
+	.uaword	.LVL190-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
+	.uaword	.LVL190-1-.Ltext0
+	.uaword	.LFE129-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	0
+	.uaword	0
+.LLST83:
+	.uaword	.LVL185-.Ltext0
+	.uaword	.LVL190-.Ltext0
+	.uahalf	0x1
+	.byte	0x6f
+	.uaword	0
+	.uaword	0
+.LLST84:
+	.uaword	.LVL187-.Ltext0
+	.uaword	.LVL188-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL188-1-.Ltext0
+	.uaword	.LVL190-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST85:
-	.uaword	.LVL164-.Ltext0
-	.uaword	.LVL173-.Ltext0
+	.uaword	.LVL191-.Ltext0
+	.uaword	.LVL193-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x53
+	.byte	0x54
+	.uaword	.LVL193-1-.Ltext0
+	.uaword	.LFE130-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x54
+	.byte	0x9f
+	.uaword	0
+	.uaword	0
+.LLST86:
+	.uaword	.LVL191-.Ltext0
+	.uaword	.LVL193-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x64
+	.uaword	.LVL193-1-.Ltext0
+	.uaword	.LVL197-.Ltext0
+	.uahalf	0x1
+	.byte	0x6c
+	.uaword	.LVL197-.Ltext0
+	.uaword	.LFE130-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x64
+	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST87:
-	.uaword	.LVL167-.Ltext0
-	.uaword	.LVL168-.Ltext0
-	.uahalf	0x5
-	.byte	0x55
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL168-.Ltext0
-	.uaword	.LVL169-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL169-.Ltext0
-	.uaword	.LVL170-.Ltext0
+	.uaword	.LVL196-.Ltext0
+	.uaword	.LVL197-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL197-1-.Ltext0
+	.uaword	.LFE130-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST88:
-	.uaword	.LVL165-.Ltext0
-	.uaword	.LVL167-.Ltext0
+	.uaword	.LVL192-.Ltext0
+	.uaword	.LVL197-.Ltext0
 	.uahalf	0x1
-	.byte	0x55
-	.uaword	.LVL167-.Ltext0
-	.uaword	.LVL169-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
+	.byte	0x6f
 	.uaword	0
 	.uaword	0
 .LLST89:
-	.uaword	.LVL169-.Ltext0
-	.uaword	.LVL170-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
+	.uaword	.LVL194-.Ltext0
+	.uaword	.LVL195-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL195-1-.Ltext0
+	.uaword	.LVL197-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
 	.uaword	0
 	.uaword	0
 .LLST90:
-	.uaword	.LVL174-.Ltext0
-	.uaword	.LVL189-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL189-.Ltext0
-	.uaword	.LVL192-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	.LVL192-.Ltext0
-	.uaword	.LVL195-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL195-.Ltext0
-	.uaword	.LFE123-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST91:
-	.uaword	.LVL206-.Ltext0
-	.uaword	.LVL207-.Ltext0
+	.uaword	.LVL200-.Ltext0
+	.uaword	.LVL201-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL207-.Ltext0
-	.uaword	.LFE123-.Ltext0
+	.uaword	.LVL201-.Ltext0
+	.uaword	.LFE131-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST92:
-	.uaword	.LVL176-.Ltext0
-	.uaword	.LVL199-1-.Ltext0
+.LLST91:
+	.uaword	.LVL202-.Ltext0
+	.uaword	.LVL206-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x63
+	.byte	0x54
+	.uaword	.LVL206-1-.Ltext0
+	.uaword	.LFE132-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	0
+	.uaword	0
+.LLST92:
+	.uaword	.LVL207-.Ltext0
+	.uaword	.LVL208-1-.Ltext0
+	.uahalf	0x1
+	.byte	0x52
+	.uaword	.LVL208-1-.Ltext0
+	.uaword	.LFE132-.Ltext0
+	.uahalf	0x1
+	.byte	0x59
 	.uaword	0
 	.uaword	0
 .LLST93:
-	.uaword	.LVL176-.Ltext0
-	.uaword	.LVL189-.Ltext0
+	.uaword	.LVL213-.Ltext0
+	.uaword	.LVL215-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL189-.Ltext0
-	.uaword	.LVL192-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	.LVL192-.Ltext0
-	.uaword	.LVL195-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL195-.Ltext0
-	.uaword	.LFE123-.Ltext0
+	.uaword	.LVL215-1-.Ltext0
+	.uaword	.LFE133-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
 	.uleb128 0x1
@@ -12571,1335 +15975,150 @@ GetISRID:
 	.uaword	0
 	.uaword	0
 .LLST94:
-	.uaword	.LVL177-.Ltext0
-	.uaword	.LVL207-.Ltext0
+	.uaword	.LVL213-.Ltext0
+	.uaword	.LVL215-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x6f
+	.byte	0x55
+	.uaword	.LVL215-1-.Ltext0
+	.uaword	.LVL220-.Ltext0
+	.uahalf	0x1
+	.byte	0x58
+	.uaword	.LVL220-.Ltext0
+	.uaword	.LFE133-.Ltext0
+	.uahalf	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x55
+	.byte	0x9f
 	.uaword	0
 	.uaword	0
 .LLST95:
-	.uaword	.LVL178-.Ltext0
-	.uaword	.LVL199-1-.Ltext0
+	.uaword	.LVL217-.Ltext0
+	.uaword	.LVL218-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x62
 	.uaword	0
 	.uaword	0
 .LLST96:
-	.uaword	.LVL198-.Ltext0
-	.uaword	.LVL203-.Ltext0
+	.uaword	.LVL214-.Ltext0
+	.uaword	.LVL220-.Ltext0
 	.uahalf	0x1
-	.byte	0x5f
+	.byte	0x6c
 	.uaword	0
 	.uaword	0
 .LLST97:
-	.uaword	.LVL180-.Ltext0
-	.uaword	.LVL181-.Ltext0
+	.uaword	.LVL216-.Ltext0
+	.uaword	.LVL217-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
+	.uaword	.LVL217-1-.Ltext0
+	.uaword	.LVL220-.Ltext0
+	.uahalf	0x1
+	.byte	0x5f
 	.uaword	0
 	.uaword	0
 .LLST98:
-	.uaword	.LVL179-.Ltext0
-	.uaword	.LVL191-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL192-.Ltext0
-	.uaword	.LVL197-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST99:
-	.uaword	.LVL183-.Ltext0
-	.uaword	.LVL185-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST100:
-	.uaword	.LVL183-.Ltext0
-	.uaword	.LVL184-.Ltext0
-	.uahalf	0x3
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST101:
-	.uaword	.LVL187-.Ltext0
-	.uaword	.LVL188-.Ltext0
-	.uahalf	0x2
-	.byte	0x82
-	.sleb128 4
-	.uaword	.LVL188-.Ltext0
-	.uaword	.LVL190-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	0
-	.uaword	0
-.LLST102:
-	.uaword	.LVL188-.Ltext0
-	.uaword	.LVL190-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	0
-	.uaword	0
-.LLST103:
-	.uaword	.LVL188-.Ltext0
-	.uaword	.LVL191-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST104:
-	.uaword	.LVL193-.Ltext0
-	.uaword	.LVL194-.Ltext0
-	.uahalf	0x2
-	.byte	0x83
-	.sleb128 29
-	.uaword	.LVL194-.Ltext0
-	.uaword	.LVL196-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	0
-	.uaword	0
-.LLST105:
-	.uaword	.LVL194-.Ltext0
-	.uaword	.LVL196-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	0
-	.uaword	0
-.LLST106:
-	.uaword	.LVL194-.Ltext0
-	.uaword	.LVL197-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST107:
-	.uaword	.LVL199-.Ltext0
-	.uaword	.LVL203-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST109:
-	.uaword	.LVL202-.Ltext0
-	.uaword	.LVL204-.Ltext0
-	.uahalf	0x5
-	.byte	0x55
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL204-.Ltext0
-	.uaword	.LVL205-.Ltext0
-	.uahalf	0x5
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL205-.Ltext0
-	.uaword	.LVL206-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	0
-	.uaword	0
-.LLST110:
-	.uaword	.LVL200-.Ltext0
-	.uaword	.LVL202-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	.LVL202-.Ltext0
-	.uaword	.LVL205-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	0
-	.uaword	0
-.LLST111:
-	.uaword	.LVL205-.Ltext0
-	.uaword	.LVL206-.Ltext0
-	.uahalf	0x3
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST112:
-	.uaword	.LVL208-.Ltext0
-	.uaword	.LVL219-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL219-1-.Ltext0
-	.uaword	.LVL219-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	.LVL219-.Ltext0
-	.uaword	.LFE124-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	0
-	.uaword	0
-.LLST113:
-	.uaword	.LVL216-.Ltext0
-	.uaword	.LVL217-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	.LVL217-.Ltext0
-	.uaword	.LVL218-.Ltext0
-	.uahalf	0x3
-	.byte	0x7f
-	.sleb128 1
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST114:
-	.uaword	.LVL211-.Ltext0
-	.uaword	.LVL212-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST115:
-	.uaword	.LVL210-.Ltext0
-	.uaword	.LVL219-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL219-.Ltext0
-	.uaword	.LVL223-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST116:
-	.uaword	.LVL214-.Ltext0
-	.uaword	.LVL216-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST117:
-	.uaword	.LVL214-.Ltext0
-	.uaword	.LVL215-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST118:
-	.uaword	.LVL219-.Ltext0
-	.uaword	.LVL223-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST120:
-	.uaword	.LVL222-.Ltext0
-	.uaword	.LVL224-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
 	.uaword	.LVL224-.Ltext0
 	.uaword	.LVL225-.Ltext0
-	.uahalf	0x5
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL225-.Ltext0
-	.uaword	.LVL226-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST121:
-	.uaword	.LVL220-.Ltext0
-	.uaword	.LVL222-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL222-.Ltext0
-	.uaword	.LVL225-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST122:
-	.uaword	.LVL225-.Ltext0
-	.uaword	.LVL226-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST123:
-	.uaword	.LVL242-.Ltext0
-	.uaword	.LVL243-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL243-.Ltext0
-	.uaword	.LFE125-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST124:
-	.uaword	.LVL228-.Ltext0
-	.uaword	.LVL233-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	0
-	.uaword	0
-.LLST125:
-	.uaword	.LVL229-.Ltext0
-	.uaword	.LVL231-.Ltext0
-	.uahalf	0x3
-	.byte	0x9
-	.byte	0xff
-	.byte	0x9f
-	.uaword	.LVL231-.Ltext0
-	.uaword	.LVL232-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL232-.Ltext0
-	.uaword	.LVL238-.Ltext0
-	.uahalf	0x3
-	.byte	0x9
-	.byte	0xff
-	.byte	0x9f
-	.uaword	.LVL238-.Ltext0
-	.uaword	.LVL239-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	.LVL239-.Ltext0
-	.uaword	.LVL241-.Ltext0
-	.uahalf	0x3
-	.byte	0x9
-	.byte	0xff
-	.byte	0x9f
-	.uaword	.LVL241-.Ltext0
-	.uaword	.LVL243-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST126:
-	.uaword	.LVL230-.Ltext0
-	.uaword	.LVL235-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	0
-	.uaword	0
-.LLST127:
-	.uaword	.LVL234-.Ltext0
-	.uaword	.LVL241-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	0
-	.uaword	0
-.LLST128:
-	.uaword	.LVL235-.Ltext0
-	.uaword	.LVL236-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	.LVL236-.Ltext0
-	.uaword	.LVL237-.Ltext0
-	.uahalf	0x2
-	.byte	0x8f
-	.sleb128 4
-	.uaword	.LVL237-.Ltext0
-	.uaword	.LVL241-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	0
-	.uaword	0
-.LLST129:
-	.uaword	.LVL246-.Ltext0
-	.uaword	.LVL255-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	0
-	.uaword	0
-.LLST130:
-	.uaword	.LVL256-.Ltext0
-	.uaword	.LVL266-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL266-.Ltext0
-	.uaword	.LFE127-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST131:
-	.uaword	.LVL256-.Ltext0
-	.uaword	.LVL267-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	.LVL267-.Ltext0
-	.uaword	.LVL268-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL268-1-.Ltext0
-	.uaword	.LFE127-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST132:
-	.uaword	.LVL256-.Ltext0
-	.uaword	.LVL268-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x56
-	.uaword	.LVL268-1-.Ltext0
-	.uaword	.LFE127-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x56
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST133:
-	.uaword	.LVL257-.Ltext0
-	.uaword	.LVL266-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL266-.Ltext0
-	.uaword	.LFE127-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST134:
-	.uaword	.LVL258-.Ltext0
-	.uaword	.LVL268-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	0
-	.uaword	0
-.LLST135:
-	.uaword	.LVL259-.Ltext0
-	.uaword	.LVL268-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	0
-	.uaword	0
-.LLST136:
-	.uaword	.LVL261-.Ltext0
-	.uaword	.LVL262-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST137:
-	.uaword	.LVL260-.Ltext0
-	.uaword	.LVL274-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST138:
-	.uaword	.LVL264-.Ltext0
-	.uaword	.LVL270-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST139:
-	.uaword	.LVL264-.Ltext0
-	.uaword	.LVL265-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST140:
-	.uaword	.LVL268-.Ltext0
-	.uaword	.LVL274-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST142:
-	.uaword	.LVL271-.Ltext0
-	.uaword	.LVL272-.Ltext0
-	.uahalf	0x5
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL272-.Ltext0
-	.uaword	.LVL273-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL273-.Ltext0
-	.uaword	.LVL274-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST143:
-	.uaword	.LVL269-.Ltext0
-	.uaword	.LVL271-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL271-.Ltext0
-	.uaword	.LVL273-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST144:
-	.uaword	.LVL273-.Ltext0
-	.uaword	.LVL274-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST145:
-	.uaword	.LVL275-.Ltext0
-	.uaword	.LVL285-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL285-.Ltext0
-	.uaword	.LFE128-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST146:
-	.uaword	.LVL275-.Ltext0
-	.uaword	.LVL286-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	.LVL286-.Ltext0
-	.uaword	.LVL287-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL287-1-.Ltext0
-	.uaword	.LFE128-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST147:
-	.uaword	.LVL275-.Ltext0
-	.uaword	.LVL287-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x56
-	.uaword	.LVL287-1-.Ltext0
-	.uaword	.LFE128-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x56
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST148:
-	.uaword	.LVL276-.Ltext0
-	.uaword	.LVL285-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL285-.Ltext0
-	.uaword	.LFE128-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST149:
-	.uaword	.LVL277-.Ltext0
-	.uaword	.LVL287-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	0
-	.uaword	0
-.LLST150:
-	.uaword	.LVL278-.Ltext0
-	.uaword	.LVL287-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	0
-	.uaword	0
-.LLST151:
-	.uaword	.LVL280-.Ltext0
-	.uaword	.LVL281-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST152:
-	.uaword	.LVL279-.Ltext0
-	.uaword	.LVL293-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST153:
-	.uaword	.LVL283-.Ltext0
-	.uaword	.LVL289-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST154:
-	.uaword	.LVL283-.Ltext0
-	.uaword	.LVL284-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST155:
-	.uaword	.LVL287-.Ltext0
-	.uaword	.LVL293-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST157:
-	.uaword	.LVL290-.Ltext0
-	.uaword	.LVL291-.Ltext0
-	.uahalf	0x5
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL291-.Ltext0
-	.uaword	.LVL292-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL292-.Ltext0
-	.uaword	.LVL293-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST158:
-	.uaword	.LVL288-.Ltext0
-	.uaword	.LVL290-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL290-.Ltext0
-	.uaword	.LVL292-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST159:
-	.uaword	.LVL292-.Ltext0
-	.uaword	.LVL293-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST160:
-	.uaword	.LVL294-.Ltext0
-	.uaword	.LVL303-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL303-1-.Ltext0
-	.uaword	.LFE129-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST161:
-	.uaword	.LVL295-.Ltext0
-	.uaword	.LVL303-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL303-1-.Ltext0
-	.uaword	.LFE129-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST162:
-	.uaword	.LVL296-.Ltext0
-	.uaword	.LVL303-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	0
-	.uaword	0
-.LLST163:
-	.uaword	.LVL298-.Ltext0
-	.uaword	.LVL299-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST164:
-	.uaword	.LVL297-.Ltext0
-	.uaword	.LVL309-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST165:
-	.uaword	.LVL301-.Ltext0
-	.uaword	.LVL305-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST166:
-	.uaword	.LVL301-.Ltext0
-	.uaword	.LVL302-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST167:
-	.uaword	.LVL303-.Ltext0
-	.uaword	.LVL309-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST169:
-	.uaword	.LVL306-.Ltext0
-	.uaword	.LVL307-.Ltext0
-	.uahalf	0x5
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL307-.Ltext0
-	.uaword	.LVL308-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL308-.Ltext0
-	.uaword	.LVL309-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST170:
-	.uaword	.LVL304-.Ltext0
-	.uaword	.LVL306-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL306-.Ltext0
-	.uaword	.LVL308-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST171:
-	.uaword	.LVL308-.Ltext0
-	.uaword	.LVL309-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST172:
-	.uaword	.LVL310-.Ltext0
-	.uaword	.LVL320-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL320-1-.Ltext0
-	.uaword	.LFE130-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST173:
-	.uaword	.LVL310-.Ltext0
-	.uaword	.LVL319-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	.LVL319-.Ltext0
-	.uaword	.LVL320-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x65
-	.uaword	.LVL320-1-.Ltext0
-	.uaword	.LFE130-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x64
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST174:
-	.uaword	.LVL311-.Ltext0
-	.uaword	.LVL320-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL320-1-.Ltext0
-	.uaword	.LFE130-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST175:
-	.uaword	.LVL312-.Ltext0
-	.uaword	.LVL326-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	0
-	.uaword	0
-.LLST176:
-	.uaword	.LVL314-.Ltext0
-	.uaword	.LVL315-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST177:
-	.uaword	.LVL313-.Ltext0
-	.uaword	.LVL326-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST178:
-	.uaword	.LVL317-.Ltext0
-	.uaword	.LVL322-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST179:
-	.uaword	.LVL317-.Ltext0
-	.uaword	.LVL318-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST180:
-	.uaword	.LVL320-.Ltext0
-	.uaword	.LVL326-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST182:
-	.uaword	.LVL323-.Ltext0
-	.uaword	.LVL324-.Ltext0
-	.uahalf	0x5
-	.byte	0x54
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL324-.Ltext0
-	.uaword	.LVL325-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL325-.Ltext0
-	.uaword	.LVL326-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST183:
-	.uaword	.LVL321-.Ltext0
-	.uaword	.LVL323-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL323-.Ltext0
-	.uaword	.LVL325-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST184:
-	.uaword	.LVL325-.Ltext0
-	.uaword	.LVL326-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST185:
-	.uaword	.LVL331-.Ltext0
-	.uaword	.LVL332-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL332-.Ltext0
-	.uaword	.LFE131-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST186:
-	.uaword	.LVL330-.Ltext0
-	.uaword	.LVL332-.Ltext0
-	.uahalf	0x1
-	.byte	0x6f
-	.uaword	0
-	.uaword	0
-.LLST187:
-	.uaword	.LVL333-.Ltext0
-	.uaword	.LVL344-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL344-1-.Ltext0
-	.uaword	.LFE132-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST188:
-	.uaword	.LVL338-.Ltext0
-	.uaword	.LVL339-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST189:
-	.uaword	.LVL341-.Ltext0
-	.uaword	.LVL343-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST190:
-	.uaword	.LVL341-.Ltext0
-	.uaword	.LVL342-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST191:
-	.uaword	.LVL350-.Ltext0
-	.uaword	.LVL351-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL351-.Ltext0
-	.uaword	.LVL352-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL352-.Ltext0
-	.uaword	.LVL353-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST192:
-	.uaword	.LVL348-.Ltext0
-	.uaword	.LVL350-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL350-.Ltext0
-	.uaword	.LVL352-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST193:
-	.uaword	.LVL352-.Ltext0
-	.uaword	.LVL353-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST194:
-	.uaword	.LVL354-.Ltext0
-	.uaword	.LVL363-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL363-.Ltext0
-	.uaword	.LFE133-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST195:
-	.uaword	.LVL354-.Ltext0
-	.uaword	.LVL364-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x55
-	.uaword	.LVL364-1-.Ltext0
-	.uaword	.LFE133-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x55
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST196:
-	.uaword	.LVL355-.Ltext0
-	.uaword	.LVL363-.Ltext0
-	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL363-.Ltext0
-	.uaword	.LFE133-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST197:
-	.uaword	.LVL364-.Ltext0
-	.uaword	.LVL365-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x62
-	.uaword	0
-	.uaword	0
-.LLST198:
-	.uaword	.LVL356-.Ltext0
-	.uaword	.LVL364-1-.Ltext0
-	.uahalf	0x1
-	.byte	0x64
-	.uaword	0
-	.uaword	0
-.LLST199:
-	.uaword	.LVL358-.Ltext0
-	.uaword	.LVL359-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST200:
-	.uaword	.LVL357-.Ltext0
-	.uaword	.LVL372-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST201:
-	.uaword	.LVL361-.Ltext0
-	.uaword	.LVL368-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST202:
-	.uaword	.LVL361-.Ltext0
-	.uaword	.LVL362-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST203:
-	.uaword	.LVL366-.Ltext0
-	.uaword	.LVL372-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST205:
-	.uaword	.LVL369-.Ltext0
-	.uaword	.LVL370-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL370-.Ltext0
-	.uaword	.LVL371-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL371-.Ltext0
-	.uaword	.LVL372-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST206:
-	.uaword	.LVL367-.Ltext0
-	.uaword	.LVL369-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL369-.Ltext0
-	.uaword	.LVL371-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST207:
-	.uaword	.LVL371-.Ltext0
-	.uaword	.LVL372-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST208:
-	.uaword	.LVL377-.Ltext0
-	.uaword	.LVL378-.Ltext0
-	.uahalf	0x2
-	.byte	0x30
-	.byte	0x9f
-	.uaword	.LVL378-.Ltext0
+	.uaword	.LVL225-.Ltext0
 	.uaword	.LFE134-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST209:
-	.uaword	.LVL376-.Ltext0
-	.uaword	.LVL378-.Ltext0
+.LLST99:
+	.uaword	.LVL223-.Ltext0
+	.uaword	.LVL225-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
-.LLST210:
-	.uaword	.LVL379-.Ltext0
-	.uaword	.LVL389-.Ltext0
+.LLST100:
+	.uaword	.LVL226-.Ltext0
+	.uaword	.LVL228-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL389-.Ltext0
+	.uaword	.LVL228-1-.Ltext0
 	.uaword	.LFE135-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
-	.uaword	0
-	.uaword	0
-.LLST211:
-	.uaword	.LVL383-.Ltext0
-	.uaword	.LVL384-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
 	.uaword	0
 	.uaword	0
-.LLST212:
-	.uaword	.LVL382-.Ltext0
-	.uaword	.LVL394-.Ltext0
+.LLST101:
+	.uaword	.LVL228-.Ltext0
+	.uaword	.LVL230-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST213:
-	.uaword	.LVL386-.Ltext0
-	.uaword	.LVL388-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST214:
-	.uaword	.LVL386-.Ltext0
-	.uaword	.LVL387-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST215:
-	.uaword	.LVL390-.Ltext0
-	.uaword	.LVL394-.Ltext0
-	.uahalf	0x1
-	.byte	0x52
-	.uaword	0
-	.uaword	0
-.LLST217:
-	.uaword	.LVL393-.Ltext0
-	.uaword	.LVL395-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL395-.Ltext0
-	.uaword	.LVL396-.Ltext0
-	.uahalf	0x5
-	.byte	0x52
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL396-.Ltext0
-	.uaword	.LVL397-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST218:
-	.uaword	.LVL391-.Ltext0
-	.uaword	.LVL393-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL393-.Ltext0
-	.uaword	.LVL396-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST219:
-	.uaword	.LVL396-.Ltext0
-	.uaword	.LVL397-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST220:
-	.uaword	.LVL401-.Ltext0
-	.uaword	.LVL402-.Ltext0
+.LLST102:
+	.uaword	.LVL232-.Ltext0
+	.uaword	.LVL233-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL402-.Ltext0
+	.uaword	.LVL233-.Ltext0
 	.uaword	.LFE136-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST221:
-	.uaword	.LVL412-.Ltext0
-	.uaword	.LVL413-.Ltext0
+.LLST103:
+	.uaword	.LVL241-.Ltext0
+	.uaword	.LVL242-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL413-.Ltext0
+	.uaword	.LVL242-.Ltext0
 	.uaword	.LFE137-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST222:
-	.uaword	.LVL405-.Ltext0
-	.uaword	.LVL413-.Ltext0
+.LLST104:
+	.uaword	.LVL235-.Ltext0
+	.uaword	.LVL242-.Ltext0
 	.uahalf	0x1
 	.byte	0x6f
 	.uaword	0
 	.uaword	0
-.LLST223:
-	.uaword	.LVL406-.Ltext0
-	.uaword	.LVL408-.Ltext0
+.LLST105:
+	.uaword	.LVL235-.Ltext0
+	.uaword	.LVL237-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
-	.uaword	.LVL408-.Ltext0
-	.uaword	.LVL409-.Ltext0
+	.uaword	.LVL237-.Ltext0
+	.uaword	.LVL238-.Ltext0
 	.uahalf	0x2
 	.byte	0x84
 	.sleb128 0
-	.uaword	.LVL409-.Ltext0
-	.uaword	.LVL410-.Ltext0
+	.uaword	.LVL238-.Ltext0
+	.uaword	.LVL239-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
-	.uaword	.LVL410-.Ltext0
-	.uaword	.LVL411-.Ltext0
+	.uaword	.LVL239-.Ltext0
+	.uaword	.LVL240-.Ltext0
 	.uahalf	0x2
 	.byte	0x84
 	.sleb128 0
 	.uaword	0
 	.uaword	0
-.LLST224:
-	.uaword	.LVL407-.Ltext0
-	.uaword	.LVL413-.Ltext0
+.LLST106:
+	.uaword	.LVL236-.Ltext0
+	.uaword	.LVL242-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST225:
-	.uaword	.LVL414-.Ltext0
-	.uaword	.LVL423-1-.Ltext0
+.LLST107:
+	.uaword	.LVL243-.Ltext0
+	.uaword	.LVL245-1-.Ltext0
 	.uahalf	0x1
 	.byte	0x54
-	.uaword	.LVL423-1-.Ltext0
+	.uaword	.LVL245-1-.Ltext0
 	.uaword	.LFE138-.Ltext0
 	.uahalf	0x4
 	.byte	0xf3
@@ -13908,117 +16127,34 @@ GetISRID:
 	.byte	0x9f
 	.uaword	0
 	.uaword	0
-.LLST226:
-	.uaword	.LVL431-.Ltext0
-	.uaword	.LVL432-.Ltext0
+.LLST108:
+	.uaword	.LVL249-.Ltext0
+	.uaword	.LVL250-.Ltext0
 	.uahalf	0x2
 	.byte	0x30
 	.byte	0x9f
-	.uaword	.LVL432-.Ltext0
+	.uaword	.LVL250-.Ltext0
 	.uaword	.LFE138-.Ltext0
 	.uahalf	0x1
 	.byte	0x52
 	.uaword	0
 	.uaword	0
-.LLST227:
-	.uaword	.LVL415-.Ltext0
-	.uaword	.LVL423-1-.Ltext0
+.LLST109:
+	.uaword	.LVL244-.Ltext0
+	.uaword	.LVL250-.Ltext0
 	.uahalf	0x1
-	.byte	0x54
-	.uaword	.LVL423-1-.Ltext0
-	.uaword	.LFE138-.Ltext0
-	.uahalf	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x54
-	.byte	0x9f
+	.byte	0x6c
 	.uaword	0
 	.uaword	0
-.LLST228:
-	.uaword	.LVL416-.Ltext0
-	.uaword	.LVL423-1-.Ltext0
+.LLST110:
+	.uaword	.LVL246-.Ltext0
+	.uaword	.LVL247-1-.Ltext0
 	.uahalf	0x1
-	.byte	0x64
-	.uaword	0
-	.uaword	0
-.LLST229:
-	.uaword	.LVL418-.Ltext0
-	.uaword	.LVL419-.Ltext0
+	.byte	0x52
+	.uaword	.LVL247-1-.Ltext0
+	.uaword	.LVL250-.Ltext0
 	.uahalf	0x1
 	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST230:
-	.uaword	.LVL417-.Ltext0
-	.uaword	.LVL432-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST231:
-	.uaword	.LVL421-.Ltext0
-	.uaword	.LVL424-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST232:
-	.uaword	.LVL421-.Ltext0
-	.uaword	.LVL422-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
-	.uaword	0
-	.uaword	0
-.LLST233:
-	.uaword	.LVL425-.Ltext0
-	.uaword	.LVL432-.Ltext0
-	.uahalf	0x1
-	.byte	0x58
-	.uaword	0
-	.uaword	0
-.LLST235:
-	.uaword	.LVL428-.Ltext0
-	.uaword	.LVL429-.Ltext0
-	.uahalf	0x5
-	.byte	0x53
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL429-.Ltext0
-	.uaword	.LVL430-.Ltext0
-	.uahalf	0x5
-	.byte	0x58
-	.byte	0x93
-	.uleb128 0x1
-	.byte	0x93
-	.uleb128 0x3
-	.uaword	.LVL430-.Ltext0
-	.uaword	.LVL431-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST236:
-	.uaword	.LVL426-.Ltext0
-	.uaword	.LVL428-.Ltext0
-	.uahalf	0x1
-	.byte	0x53
-	.uaword	.LVL428-.Ltext0
-	.uaword	.LVL430-.Ltext0
-	.uahalf	0x1
-	.byte	0x5f
-	.uaword	0
-	.uaword	0
-.LLST237:
-	.uaword	.LVL430-.Ltext0
-	.uaword	.LVL431-.Ltext0
-	.uahalf	0x3
-	.byte	0x5f
-	.byte	0x93
-	.uleb128 0x4
 	.uaword	0
 	.uaword	0
 .section .debug_aranges,"",@progbits
@@ -14035,24 +16171,36 @@ GetISRID:
 	.uaword	0
 .section .debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.uaword	.LBB796-.Ltext0
-	.uaword	.LBE796-.Ltext0
-	.uaword	.LBB809-.Ltext0
-	.uaword	.LBE809-.Ltext0
+	.uaword	.LBB530-.Ltext0
+	.uaword	.LBE530-.Ltext0
+	.uaword	.LBB541-.Ltext0
+	.uaword	.LBE541-.Ltext0
 	.uaword	0
 	.uaword	0
-	.uaword	.LBB882-.Ltext0
-	.uaword	.LBE882-.Ltext0
-	.uaword	.LBB896-.Ltext0
-	.uaword	.LBE896-.Ltext0
+	.uaword	.LBB553-.Ltext0
+	.uaword	.LBE553-.Ltext0
+	.uaword	.LBB558-.Ltext0
+	.uaword	.LBE558-.Ltext0
+	.uaword	0
+	.uaword	0
+	.uaword	.LBB563-.Ltext0
+	.uaword	.LBE563-.Ltext0
+	.uaword	.LBB568-.Ltext0
+	.uaword	.LBE568-.Ltext0
+	.uaword	0
+	.uaword	0
+	.uaword	.LBB571-.Ltext0
+	.uaword	.LBE571-.Ltext0
+	.uaword	.LBB572-.Ltext0
+	.uaword	.LBE572-.Ltext0
 	.uaword	0
 	.uaword	0
 .section .debug_line,"",@progbits
 .Ldebug_line0:
 .section .debug_str,"",@progbits
-.LASF17:
+.LASF16:
 	.string	"p_alarm_db"
-.LASF10:
+.LASF11:
 	.string	"virt_prio"
 .LASF24:
 	.string	"CounterID"
@@ -14062,9 +16210,9 @@ GetISRID:
 	.string	"p_tdb_act"
 .LASF20:
 	.string	"p_reso_db"
-.LASF14:
+.LASF12:
 	.string	"service_id"
-.LASF13:
+.LASF10:
 	.string	"p_cdb"
 .LASF0:
 	.string	"p_next"
@@ -14074,13 +16222,13 @@ GetISRID:
 	.string	"p_curr"
 .LASF5:
 	.string	"p_counter_db"
-.LASF15:
+.LASF17:
 	.string	"p_idle_tdb"
 .LASF22:
 	.string	"p_curr_tcb"
 .LASF7:
 	.string	"os_status"
-.LASF11:
+.LASF13:
 	.string	"flags"
 .LASF3:
 	.string	"prev_prio"
@@ -14092,11 +16240,11 @@ GetISRID:
 	.string	"AlarmID"
 .LASF8:
 	.string	"app_mode"
-.LASF12:
+.LASF15:
 	.string	"Error"
 .LASF2:
 	.string	"dispatch_prio"
-.LASF16:
+.LASF14:
 	.string	"p_kdb"
 .LASF18:
 	.string	"TaskID"
@@ -14118,6 +16266,6 @@ GetISRID:
 	.extern	osEE_task_end,STT_FUNC,0
 	.extern	osEE_hal_save_ctx_and_ready2stacked,STT_FUNC,0
 	.extern	osEE_cpu_startos,STT_FUNC,0
-	.extern	osEE_cdb_var,STT_OBJECT,8
 	.extern	osEE_idle_task_terminate,STT_FUNC,0
+	.extern	osEE_cdb_var,STT_OBJECT,8
 	.ident	"GCC: (HighTec Release HDP-v4.9.3.0-infineon-1.0-fb21a99) 4.9.4 build on 2019-06-07"
