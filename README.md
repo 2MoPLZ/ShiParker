@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/550bef4d-3263-478e-8b0e-86e872fcba07)# 자율주행 프로젝트
+# 자율주행 프로젝트
 
 ## 팀원
 
