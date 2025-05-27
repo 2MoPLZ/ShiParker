@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "bsw.h": "c",
+        "shiparker_app.h": "c",
+<<<<<<< HEAD
+        "motor_driver.h": "c",
+        "steering_pid.h": "c"
+=======
+        "uart_driver.h": "c",
+        "configurationisr.h": "c"
+>>>>>>> TC275
+    }
+}
