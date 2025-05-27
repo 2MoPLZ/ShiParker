@@ -15,11 +15,11 @@
 
 ## Description
 
-TC275 (RTOS):
+`TC275 (RTOS)` :
 PID 제어 알고리즘을 기반으로 자율 주행 차량의 동작을 구현합니다.
 초음파 센서와 홀 센서로부터 입력을 받아 모터를 제어합니다.
 
-Raspberry Pi:
+[`Raspberry Pi (System)`](./System/README.md) : 
 MQTT 브로커 역할을 수행하며, 실시간 데이터 표시 및 시스템 모니터링을 위한 UI를 구동합니다.
 ## 브랜치 구조
 
