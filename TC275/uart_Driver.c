@@ -73,16 +73,16 @@ void sendPacket(const struct ParkingSystemPacket *packet)
     //              packet->car_current_position.y,
     //              packet->car_target_position.x,
     //              packet->car_target_position.y);
-    printfSerial("\n[send| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
-                 "tx:%d ty:%d]",
-                 packet->start_byte,
-                 packet->car_status,
-                 packet->car_command,
-                 packet->crc,
-                 packet->car_current_position.x,
-                 packet->car_current_position.y,
-                 packet->car_target_position.x,
-                 packet->car_target_position.y);
+    // printfSerial("\n[send| start:%02x status:%d command:%d crc:%d cx:%d cy:%d "
+    //              "tx:%d ty:%d]",
+    //              packet->start_byte,
+    //              packet->car_status,
+    //              packet->car_command,
+    //              packet->crc,
+    //              packet->car_current_position.x,
+    //              packet->car_current_position.y,
+    //              packet->car_target_position.x,
+    //              packet->car_target_position.y);
     IfxAsclin_Asc_write(&g_AsclinStm.drivers.asc,
                         &buf,
                         &g_AsclinStm.count,
