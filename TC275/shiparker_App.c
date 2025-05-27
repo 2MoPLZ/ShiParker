@@ -7,6 +7,8 @@ const volatile double motor_power_normal    = 50.0L;
 const volatile double Kp_rad_to_delta_power = 120.0L;
 /// 바퀴 둘레 22cm -> 홀센서 값 5
 
+const volatile double error_target_position = 5.0L;
+
 boolean                           g_isAppRunning;
 static struct ParkingSystemPacket carStatusPacket = {};
 static CAR_STATUS_TYPE            carStatus;
@@ -49,8 +51,8 @@ void startShiParkerApp(void)
     motor_stop(INDEX_FR);
     motor_stop(INDEX_RL);
     motor_stop(INDEX_RR);
-    SetRelAlarm(AppAlarm, 0, APP_CYCLE_TICK);
-    SetRelAlarm(PacketSendAlarm, 0, SENDPACKET_DEFAULT_CYCLE_TICK);
+    SetRelAlarm(AppAlarm, 2, APP_CYCLE_TICK);
+    SetRelAlarm(PacketSendAlarm, 1, SENDPACKET_DEFAULT_CYCLE_TICK);
 }
 
 void exitShiParkerApp(){
@@ -191,13 +193,26 @@ TASK(ShiParkerAppTask)
 
 TASK(AvoidObstacleTask)
 {
+    volatile double dx = 0;
+    volatile double dy = 0;
+
+    dx = fabs(targetPosition.x - currentPosition.x);
+    dy = fabs(targetPosition.y - currentPosition.y);
+
     if (g_isAppRunning == FALSE)
         TerminateTask();
     double dist = getUltrasonic(&g_Ultrasonic_FRONT);
     // printDouble("frontUltra:",dist);
     if (dist > 0 && dist < FRONT_OBSTACLE_THRESHOLD)
     {
-        handleError(ERROR_CODE_OBSTACLE);
+        if(currentDirection == 0 && dy > error_target_position)
+        {
+            handleError(ERROR_CODE_OBSTACLE);
+        }
+        else if(currentDirection == 1 && dx > error_target_position)
+        {
+            handleError(ERROR_CODE_OBSTACLE);
+        }
     }
 }
 
