@@ -1,28 +1,35 @@
-# 자율주행 프로젝트
+![image](https://github.com/user-attachments/assets/550bef4d-3263-478e-8b0e-86e872fcba07)# 자율주행 프로젝트
 
 ## 팀원
 
 | 김민 | 김준혁 | 류병민 | 이윤기 | 오동걸 | 호세헌 |
 |:----:|:------:|:------:|:------:|:------:|:------:|
 | <img src="https://github.com/min-kim-oss.png" style="width:100px; height:100px;"> | <img src="https://github.com/knujhk.png" style="width:100px; height:100px;"> | <img src="https://github.com/bmryu0501.png" style="width:100px; height:100px;"> | <img src="https://github.com/yg654.png" style="width:100px; height:100px;"> | <img src="https://github.com/fepick.png" style="width:100px; height:100px;"> | <img src="https://github.com/seheonnn.png" style="width:100px; height:100px;"> |
-| Lead<br/>TC275 | STM32 Actuator | STM32 Main | STM32 Actuator | TC275 | Arduino <br/> Server |
+| Lead<br/> PID 제어 알고리즘 | 모터 드라이버 | HARA, KANO | FSM | 홀센서 드라이버 | ESP32, System |
 | [min-kim-oss](https://github.com/min-kim-oss) | [knujhk](https://github.com/knujhk) | [bmryu0501](https://github.com/bmryu0501) | [yg654](https://github.com/yg654) | [fepick](https://github.com/fepick) | [seheonnn](https://github.com/seheonnn) |
 
 ## 아키텍처
+<img width="821" alt="HW" src="https://github.com/user-attachments/assets/811c8175-b273-472b-9620-8774ef405755" />
+<img width="821" alt="FSM" src="https://github.com/user-attachments/assets/956aa789-f2be-4fc5-b0a9-0dd1f27a33e1" />
 
 
 ## Description
 
+TC275 (RTOS):
+PID 제어 알고리즘을 기반으로 자율 주행 차량의 동작을 구현합니다.
+초음파 센서와 홀 센서로부터 입력을 받아 모터를 제어합니다.
 
+Raspberry Pi:
+MQTT 브로커 역할을 수행하며, 실시간 데이터 표시 및 시스템 모니터링을 위한 UI를 구동합니다.
 ## 브랜치 구조
 
 ```
 main
 └── develop
-    ├── STM32_main
+    ├── TC275
     │   ├── feat/#이슈번호
     │   └── fix/#이슈번호
-    ├── STM32_act
+    ├── System
     │   ├── feat/#이슈번호
     │   └── fix/#이슈번호
     ├── Arduino
