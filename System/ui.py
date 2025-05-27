@@ -5,6 +5,7 @@ import paho.mqtt.client as mqtt
 import csv
 from datetime import datetime
 import os
+import time
 
 LOG_FILE = "mqtt_log.csv"
 
@@ -15,8 +16,11 @@ completed_vehicles = 0
 current_vehicle_index = -1 
 
 vehicle_targets = {
-    '00': (60.00, 80.00),
-    '01': (80.00, 30.00),
+    '00': (0, 10000),
+    '01': (0, 10000),
+    # 
+    # '00': (45, 80),
+    # '01': (45, 10000), 
     # 차량 ID : (target_x, target_y)
 }
 
@@ -30,7 +34,7 @@ status_map = {
     6: "ERROR_HARDWARE"
 }
 
-MQTT_BROKER = "localhost"
+MQTT_BROKER = "192.168.7.242"
 MQTT_PORT = 1883
 
 def log_mqtt_message(vehicle_id, topic, message, direction):
@@ -102,18 +106,21 @@ def send_start_command_to_next():
         command_topic = f"vehicle-{vehicle_id}/command"
         target_topic = f"vehicle-{vehicle_id}/target_position"
         
-        mqtt_client.publish(command_topic, "1")
-        log_mqtt_message(vehicle_id, command_topic, "1", "send")
-        print(f"[MQTT] START sent to {command_topic}")
-        
-        target = vehicle_targets.get(vehicle_id)
-        if target:
-            target_payload = f"{target[0]} {target[1]}"
-            mqtt_client.publish(target_topic, target_payload)
-            log_mqtt_message(vehicle_id, target_topic, target_payload, "send")
-            print(f"[MQTT] Target position sent to {target_topic} -> {target_payload}")
-        else:
-            print(f"[WARN] No target defined for vehicle-{vehicle_id}")
+        for i in range(3):
+            mqtt_client.publish(command_topic, "1")
+            log_mqtt_message(vehicle_id, command_topic, "1", "send")
+            print(f"[MQTT] START sent to {command_topic} (#{i+1})")
+
+            target = vehicle_targets.get(vehicle_id)
+            if target:
+                target_payload = f"{target[0]} {target[1]}"
+                mqtt_client.publish(target_topic, target_payload)
+                log_mqtt_message(vehicle_id, target_topic, target_payload, "send")
+                print(f"[MQTT] Target position sent to {target_topic} -> {target_payload} (#{i+1})")
+            else:
+                print(f"[WARN] No target defined for vehicle-{vehicle_id}")
+
+            time.sleep(0.5)
     else:
         print("All vehicles have been started and terminated.")
 

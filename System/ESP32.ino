@@ -2,32 +2,32 @@
 #include <PubSubClient.h>
 
 // WiFi 설정
-const char* ssid = "Seheon의 iPhone";
-const char* password = "1q2w3e4r%";
+const char* ssid = "kim";
+const char* password = "12345678";
 
 // MQTT 설정
-const char* mqtt_server = "172.20.10.2";
+const char* mqtt_server = "192.168.7.242";
 const int mqtt_port = 1883;
-const char* mqtt_client_id = "vehicle-00";  // 이 ESP32는 vehicle-00
+const char* mqtt_client_id = "vehicle-00"; 
 
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-HardwareSerial& uart = Serial2; // UART2 사용
+HardwareSerial& uart = Serial2; 
 
 typedef struct __attribute__((__packed__)) ParkingSystemPacket {
   uint8_t start_byte;       // 0xAA
   uint8_t car_status;       
-  double car_current_x;     
-  double car_current_y;
-  double car_target_x;
-  double car_target_y;
+  int car_current_x;     
+  int car_current_y;
+  int car_target_x;
+  int car_target_y;
   uint8_t car_command;      
   uint8_t crc;              // checksum
 } ParkingSystemPacket;
 
 ParkingSystemPacket currentPacket = {
-  0xAA, 0, 0.0, 0.0, 0.0, 0.0, 0, 0
+  0xAA, 0, 0, 0, 0, 0, 0, 0
 };
 
 uint8_t calculate_checksum(const uint8_t* data, size_t length) {
@@ -47,6 +47,50 @@ void initWiFi() {
   Serial.println("\n[WiFi] Connected: " + WiFi.localIP().toString());
 }
 
+// void mqttCallback(char* topic, byte* payload, unsigned int length) {
+//   String topicStr = String(topic);
+//   Serial.print("[MQTT] Received Message [");
+//   Serial.print(topic);
+//   Serial.print("]: ");
+//   for (int i = 0; i < length; i++) {
+//     Serial.print((char)payload[i]);
+//   }
+//   Serial.println();
+
+
+//   if (topicStr == String(mqtt_client_id) + "/command") {
+//     int command = atoi((char*)payload);
+//     Serial.print("[CMD] Received command: ");
+//     Serial.println(command);
+//     currentPacket.car_command = command;
+
+//     uint8_t* ptr = (uint8_t*)&currentPacket;
+//     currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+//     uart.write(ptr, sizeof(ParkingSystemPacket));
+//     Serial.println("[UART] SEND (crc : " + String(currentPacket.crc) + ")");
+//   }
+
+//   delay(1000);
+
+//   if (topicStr == String(mqtt_client_id) + "/target_position") {
+//     String payload_str;
+//     for (unsigned int i = 0; i < length; ++i) payload_str += (char)payload[i];
+//     float x, y;
+//     if (sscanf(payload_str.c_str(), "%f %f", &x, &y) == 2) {
+//       currentPacket.car_target_x = x;
+//       currentPacket.car_target_y = y;
+//       uint8_t* ptr = (uint8_t*)&currentPacket;
+//       currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+//       uart.write(ptr, sizeof(ParkingSystemPacket));
+//       Serial.println("[MQTT] Received target_position: " + String(x) + ", " + String(y));
+//     } else {
+//       Serial.println("[WARN] target_position error: " + payload_str);
+//     }
+//   }
+// }
+
+bool wait_target = false;
+
 void mqttCallback(char* topic, byte* payload, unsigned int length) {
   String topicStr = String(topic);
   Serial.print("[MQTT] Received Message [");
@@ -63,25 +107,42 @@ void mqttCallback(char* topic, byte* payload, unsigned int length) {
     Serial.println(command);
     currentPacket.car_command = command;
 
-    uint8_t* ptr = (uint8_t*)&currentPacket;
-    currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
-    uart.write(ptr, sizeof(ParkingSystemPacket));
-    Serial.println("[UART] SEND (crc : " + String(currentPacket.crc) + ")");
+    if (command == 1) {
+      wait_target = true;
+      Serial.println("[INFO] START command received. Waiting for target_position...");
+    } else {
+      uint8_t* ptr = (uint8_t*)&currentPacket;
+      currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+      uart.write(ptr, sizeof(ParkingSystemPacket));
+      Serial.println("[UART] SEND (crc : " + String(currentPacket.crc) + ")");
+    }
   }
 
-  else if (topicStr == String(mqtt_client_id) + "/target_position") {
-    String payload_str;
-    for (unsigned int i = 0; i < length; ++i) payload_str += (char)payload[i];
-    float x, y;
-    if (sscanf(payload_str.c_str(), "%f %f", &x, &y) == 2) {
-      currentPacket.car_target_x = x;
-      currentPacket.car_target_y = y;
-      Serial.println("[MQTT] Received target_position: " + String(x) + ", " + String(y));
+  if (topicStr == String(mqtt_client_id) + "/target_position") {
+    if (wait_target) {
+      String payload_str;
+      for (unsigned int i = 0; i < length; ++i) payload_str += (char)payload[i];
+      float x, y;
+      if (sscanf(payload_str.c_str(), "%f %f", &x, &y) == 2) {
+        currentPacket.car_target_x = x;
+        currentPacket.car_target_y = y;
+        Serial.println("[MQTT] Received target_position: " + String(x) + ", " + String(y));
+
+        uint8_t* ptr = (uint8_t*)&currentPacket;
+        currentPacket.crc = calculate_checksum(ptr, sizeof(ParkingSystemPacket) - 1);
+        uart.write(ptr, sizeof(ParkingSystemPacket));
+        Serial.println("[UART] SEND START + target_position (crc : " + String(currentPacket.crc) + ")");
+
+        wait_target = false; 
+      } else {
+        Serial.println("[WARN] target_position parse error");
+      }
     } else {
-      Serial.println("[WARN] target_position error: " + payload_str);
+      Serial.println("[INFO] target_position received but START command was not set. Ignored.");
     }
   }
 }
+
 
 void reconnectMQTT() {
   while (!client.connected()) {
