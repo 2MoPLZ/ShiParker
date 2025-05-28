@@ -29,13 +29,7 @@ main
     ├── TC275
     │   ├── feat/#이슈번호
     │   └── fix/#이슈번호
-    ├── System
-    │   ├── feat/#이슈번호
-    │   └── fix/#이슈번호
-    ├── Arduino
-    │   ├── feat/#이슈번호
-    │   └── fix/#이슈번호
-    └── TC275
+    └──  System
         ├── feat/#이슈번호
         └── fix/#이슈번호
 ```
